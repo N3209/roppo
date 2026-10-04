@@ -293,6 +293,20 @@
     </div>
     <div id="add-results" class="add-results"></div>
 
+    <div id="missing-box" hidden>
+      <p class="note-label" style="margin-top:16px">
+        ほかの端末にあって、この端末に無い法令　<span id="missing-count" class="count"></span>
+      </p>
+      <p class="hint" style="margin:0 0 8px">
+        同期したときに分かった目録です。法令そのものは同期しないので、
+        ここから取り込みます。
+      </p>
+      <div class="row">
+        <button type="button" id="missing-all" class="mini">e-Gov のものをまとめて取り込む</button>
+      </div>
+      <div id="missing-list" class="add-results"></div>
+    </div>
+
     <p class="note-label" style="margin-top:16px">ファイルから取り込む</p>
     <p class="hint" style="margin:0 0 8px">
       e-Gov に無い法令（最高裁判所規則など）を、法令標準XMLのファイルから取り込みます。

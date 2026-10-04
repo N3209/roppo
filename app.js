@@ -22,7 +22,7 @@ const API = 'https://laws.e-gov.go.jp/api/2';
  * 画面に出しておけば一目で分かる。publish.js が sw.js と食い違っていないかを
  * 確かめるので、片方だけ上げ忘れることはない。
  */
-const APP_VERSION = 'v99';
+const APP_VERSION = 'v100';
 
 /* ---------------------------------------------------------------- 小道具 */
 
@@ -714,6 +714,16 @@ const TABLE_LIKE = new Set([
 function renderLaw(lawEl) {
   const out = [];
   const index = [];
+  const bodies = new Map();   // アンカー → 突き合わせ用の本文（下の pushBody）
+  /*
+   * 附則と別表の見分け。版をまたいで突き合わせるときに使う。
+   *
+   * S1 / S2 や AP1 / AP2 は「XMLに出てきた順」で振っている。手前に附則が
+   * 1本増えると番号がずれるので、順番を手掛かりにしてはいけない。
+   * 改正法令番号（AmendLawNum）や題名を持っておき、それで対応づける。
+   * どちらも無い・重なるときは「分からない」として扱う（推測しない）。
+   */
+  const scopes = new Map();   // scope → { kind, label, amend, title }
   const toc = [];             // { id, level, title, first, last }
   const tocStack = [];
   let hseq = 0;
@@ -729,6 +739,45 @@ function renderLaw(lawEl) {
     const t = String(text).replace(/\s+/g, '');
     if (t) index.push({ anchor, text: t, norm: normalize(t) });
   }
+
+  /*
+   * 突き合わせ用の本文。版をまたいで「同じ条文か」を見るのに使う。
+   *
+   * 索引（検索用）とは別に持つ。索引は条には見出しと条番号しか入れておらず、
+   * 号には号番号（「一」）が混ざっている。番号は改正で動くので、番号混じりの
+   * 文字列で突き合わせると、第二号が第一号に繰り上がっただけで別物に見える。
+   *
+   *   caption  見出し。見出しだけの改正も拾えるように分けて持つ
+   *   own      その単位自身の文。番号ラベルと、下位の単位の文を除く
+   *   parts    下位の単位の sig を順に並べたもの
+   *   sig      突き合わせに使う文字列
+   *
+   * parts は区切り文字でつなぐ。ただつなぐと、項の境目が動いただけの改正を
+   * 見逃す（「abcdefgh ijklmnop」と「abcdefghi jklmnop」が同じ文字列になる）。
+   */
+  const SEP = '\u0001';
+  const squash = t => String(t == null ? '' : t).replace(/\s+/g, '');
+
+  function pushBody(anchor, caption, own, parts) {
+    const rec = {
+      caption: squash(caption),
+      own: squash(own),
+      parts,
+      sig: [squash(caption), squash(own), ...parts].join(SEP),
+    };
+    bodies.set(anchor, rec);
+    return rec.sig;
+  }
+
+  /*
+   * 号と細分の番号ラベル。突き合わせ用の本文から除く。
+   * スキーマは Subitem10 まであるので、数えて作る。
+   */
+  const ITEM_LABELS = new Set(['ItemTitle']);
+  for (let i = 1; i <= 10; i++) ITEM_LABELS.add('Subitem' + i + 'Title');
+
+  // 項自身の文から除くもの。項番号・項見出しと、自分のアンカーを持つ号。
+  const PARA_OWN_SKIP = new Set(['ParagraphNum', 'ParagraphCaption', 'Item']);
 
   /* --- 表・別表・図など --- */
 
@@ -814,6 +863,8 @@ function renderLaw(lawEl) {
     renderItemNode(item, 0, anchor);
     // 号の索引にはイ・ロ以下の本文も含める（細分には別アンカーを与えない）
     pushIndex(anchor, plainText(item));
+    // 突き合わせ用は、号番号と細分の記号（イ・ロ）を除く
+    return pushBody(anchor, '', plainText(item, ITEM_LABELS), []);
   }
 
   /**
@@ -834,8 +885,9 @@ function renderLaw(lawEl) {
     else if (pnum) out.push(`<span class="para-num">${esc(pnum)}</span>　`);
     if (sent) out.push(inlineHTML(sent, { scope, self: anchor }));
 
+    const itemSigs = [];
     for (const ch of p.children) {
-      if (ch.tagName === 'Item') renderItem(ch, art, par);
+      if (ch.tagName === 'Item') itemSigs.push(renderItem(ch, art, par));
       else if (!HANDLED_BY_PARENT.has(ch.tagName)) renderBlock(ch, null);
     }
     out.push('</div>');
@@ -843,7 +895,9 @@ function renderLaw(lawEl) {
     // 項の索引には号・細分・表まで含める。項番号だけは除く。
     const text = plainText(p, new Set(['ParagraphNum']));
     pushIndex(anchor, text);
-    return text;
+    void text;
+    // 突き合わせ用は、項自身の文（柱書）と号の sig を分けて持つ
+    return pushBody(anchor, pcap, plainText(p, PARA_OWN_SKIP), itemSigs);
   }
 
   function renderArticle(articleEl) {
@@ -862,9 +916,10 @@ function renderLaw(lawEl) {
     out.push(`<div class="article" data-anchor="${esc(anchor)}">`);
     if (caption) out.push(`<div class="article-caption">${esc(caption)}</div>`);
 
+    const paraSigs = [];
     paras.forEach((p, i) => {
       const lead = (i === 0 && title) ? `<span class="article-title">${esc(title)}</span>　` : '';
-      renderParagraph(p, art, i, lead);
+      paraSigs.push(renderParagraph(p, art, i, lead));
     });
 
     for (const ch of articleEl.children) {
@@ -876,9 +931,13 @@ function renderLaw(lawEl) {
       const txt = plainText(articleEl, new Set(['ArticleTitle', 'ArticleCaption']));
       out.push(`<div class="para">${title ? `<span class="article-title">${esc(title)}</span>　` : ''}${esc(txt.trim())}</div>`);
       pushIndex(anchor, (caption || '') + txt);
+      // 条番号（ArticleTitle）は除く。番号は改正で動く
+      pushBody(anchor, caption, txt, []);
     } else {
       // 条の索引は見出しだけ。本文は項の索引が持つので重複させない。
       pushIndex(anchor, (caption || '') + (title || ''));
+      // 突き合わせ用は、見出しと項の sig。条自身の文は持たない
+      pushBody(anchor, caption, '', paraSigs);
     }
     out.push('</div>');
   }
@@ -929,9 +988,10 @@ function renderLaw(lawEl) {
   /* --- 全体 --- */
 
   const body = lawEl.querySelector('LawBody');
-  if (!body) return { html: '', index, toc };
+  if (!body) return { html: '', index, bodies, scopes, toc };
 
   let sn = 0, apn = 0;
+  scopes.set('M', { kind: 'main', label: '', amend: '', title: '本則' });
   for (const ch of body.children) {
     const tag = ch.tagName;
     if (tag === 'LawTitle' || tag === 'TOC') continue;           // 題名は見出し欄、目次は省略
@@ -956,6 +1016,7 @@ function renderLaw(lawEl) {
       const label = textOf(ch, 'SupplProvisionLabel');
       const amend = ch.getAttribute('AmendLawNum');
       const title = (label || '附則') + (amend ? '（' + amend + '）' : '');
+      scopes.set(scope, { kind: 'suppl', label: label || '', amend: amend || '', title });
       const id = pushToc({ level: 0, title, kind: 'suppl' });
       out.push(`<div class="suppl-label" id="${id}">${esc(label || '附則')}${amend ? '　' + esc(amend) : ''}</div>`);
       renderBlocks(ch);
@@ -966,18 +1027,22 @@ function renderLaw(lawEl) {
       scope = 'M';
       const anchor = 'AP' + apn;
       const t = Array.from(ch.children).find(c => /Title$/.test(c.tagName));
+      const aptitle = t ? t.textContent.trim() : '';
+      scopes.set(anchor, { kind: 'appdx', label: aptitle, amend: '', title: aptitle || ('別表' + apn) });
       const id = pushToc({ level: 0, title: (t ? t.textContent.trim() : '別表' + apn), kind: 'appdx' });
       out.push(`<div class="appdx" id="${id}" data-anchor="${esc(anchor)}">`);
       renderBlock(ch);
       out.push('</div>');
       pushIndex(anchor, plainText(ch));
+      // 題名は別に持つ（題名だけの改正も拾えるように）
+      pushBody(anchor, aptitle, plainText(ch, new Set(t ? [t.tagName] : [])), []);
       continue;
     }
     scope = 'M';
     renderBlock(ch);                          // MainProvision はここを通る
   }
 
-  return { html: out.join(''), index, toc };
+  return { html: out.join(''), index, bodies, scopes, toc };
 }
 
 /* --------------------------------------------------- アンカー → XML要素 */
@@ -5501,6 +5566,8 @@ async function syncOnce(remote, opts) {
   gen += 1;
   const snap = buildSnapshot({
     notes: merged.notes, ranges: merged.ranges, order: merged.lawOrder,
+    // 目録は突き合わせない。置くときに、この端末がいま持っているものを書く
+    laws: state.laws,
     datasetId, writerId: deviceId, generation: gen,
   });
   try {
@@ -5510,6 +5577,22 @@ async function syncOnce(remote, opts) {
     out.why = '取り込みましたが、置けませんでした: ' + (e && e.message ? e.message : e);
     return out;
   }
+  /*
+   * ほかの端末の目録を覚えておく。
+   *
+   * 「どの端末に何が入っているか」は、次に同期するまで変わらない。
+   * 覚えておけば、通信できないときにも見られる。
+   */
+  try {
+    const inv = {};
+    for (const s2 of incoming) {
+      if (s2.writerId === deviceId) continue;
+      const list = (s2.records && s2.records.laws) || null;
+      if (list) inv[s2.writerId] = { at: Date.now(), laws: list };
+    }
+    if (Object.keys(inv).length) await store.putMeta(LAW_INV_KEY, inv);
+  } catch (e) { /* 覚えられなくても同期は済んでいる */ }
+
   // 5. 置けた世代だけを確認済みにする
   try {
     await store.putMeta(GENERATION_KEY, gen);
@@ -5765,6 +5848,277 @@ async function showLastSync() {
       : new Date(at).toLocaleString('ja-JP'));
 }
 
+/* --------------------------------- 版をまたいで注釈を写す（突き合わせ） */
+
+/*
+ * 改正前の版に付けた注釈を、改正後の版の「正しい位置」へ写すための突き合わせ。
+ *
+ * 番号ではなく本文で突き合わせる。番号は改正で動く（条が削除されれば以降が
+ * 繰り上がる）が、本文は動かない。
+ *
+ * 決め方は上から下へ。本則・附則・別表の対応を決め、その中で条、その中で項、
+ * その中で号を決める。親が決まるまで子を探さない。こうしないと
+ *   ・本則の項が附則の項に「移った」ことになる
+ *   ・別の条に同じ文言の号があると、そちらに吸われる
+ * という事故が起きる（最初に書いた版はどちらも起きた）。
+ *
+ * 対応を確かと見るのは、その本文が **旧版と新版の両方で、その親の中で
+ * ただ一つ** のときだけ。片方にしか一意性を求めないと
+ *   旧第5条と旧第20条が同文 → 第5条だけ削除 → 第5条の注釈が第20条へ
+ * という誤りが起きる（最初の版で起きた）。両側に求めれば「分からない」に
+ * 落ちる。分からないものは利用者に選ばせる。黙って決めない。
+ *
+ * 文字数の下限は置かない。探す範囲を親の中に閉じ、両側の一意性を求めるので、
+ * 短い本文でも誤って吸われない。「削除」のように同じ文が並ぶ場合は一意で
+ * なくなるので、自動では決まらない。
+ */
+
+/** アンカーの深さ。条=2、項=3、号=4。別表（AP1）=1。 */
+const depthOf = a => String(a).split('/').length;
+
+/** アンカーの scope（M / S1 / AP1）。 */
+const scopeOf = a => String(a).split('/')[0];
+
+/** すぐ上の住所。号→項、項→条。条や別表には無い。 */
+const upOf = a => {
+  const p = String(a).split('/');
+  return p.length > 2 ? p.slice(0, -1).join('/') : '';
+};
+
+/*
+ * 突き合わせで使う「親」。
+ *
+ * すぐ上の住所が実在すればそれ。無ければ scope。
+ * 附則直下の項（S1//3）は条を持たないので、親は附則そのものになる。
+ */
+function parentFor(anchor, bodies) {
+  const up = upOf(anchor);
+  if (up && bodies.has(up)) return up;
+  return scopeOf(anchor);
+}
+
+/*
+ * 附則と別表の対応を決める。
+ *
+ * S1 / AP1 は出現順なので、番号では対応づけない。手前に附則が1本増えると
+ * 番号がずれる。改正法令番号があればそれで、無ければ題名で対応づける。
+ * どちらも無い・重なるときは対応させない（推測しない）。
+ */
+function matchScopes(fromScopes, toScopes) {
+  const pairs = new Map();
+  const used = new Set();
+  const keyOf = v => (v.amend ? 'a:' + v.amend
+    : ((v.label || v.title) ? 't:' + (v.label || v.title) : ''));
+
+  if (fromScopes.has('M') && toScopes.has('M')) { pairs.set('M', 'M'); used.add('M'); }
+
+  const byKey = new Map();
+  for (const [sc, v] of toScopes) {
+    if (sc === 'M') continue;
+    const k = keyOf(v);
+    if (!k) continue;
+    if (byKey.has(k)) byKey.set(k, null);        // 重なった手掛かりは使えない
+    else byKey.set(k, sc);
+  }
+
+  for (const [sc, v] of fromScopes) {
+    if (sc === 'M') continue;
+    const k = keyOf(v);
+    if (!k) continue;
+    const to = byKey.get(k);
+    if (!to || used.has(to)) continue;
+    const tv = toScopes.get(to);
+    if (!tv || tv.kind !== v.kind) continue;     // 附則と別表を混ぜない
+    pairs.set(sc, to);
+    used.add(to);
+  }
+  return pairs;
+}
+
+/** その親の下にある、同じ深さの住所。 */
+function kidsOf(bodies, parent, depth) {
+  const out = [];
+  for (const a of bodies.keys()) {
+    if (depthOf(a) !== depth) continue;
+    if (parentFor(a, bodies) !== parent) continue;
+    out.push(a);
+  }
+  return out;
+}
+
+/*
+ * ある深さの対応を決める。親の対応が決まっているものだけを見る。
+ * 本文が両側でただ一つのときに結ぶ。
+ */
+function matchLevel(fb, tb, depth, pairs) {
+  const got = new Map();
+  const byParent = new Map();
+  for (const a of fb.keys()) {
+    if (depthOf(a) !== depth) continue;
+    const p = parentFor(a, fb);
+    if (!byParent.has(p)) byParent.set(p, []);
+    byParent.get(p).push(a);
+  }
+
+  for (const [fromParent, kids] of byParent) {
+    const toParent = pairs.get(fromParent);
+    if (toParent === undefined) continue;        // 親が決まっていない
+    const theirs = kidsOf(tb, toParent, depth);
+
+    const mine = new Map();
+    for (const a of kids) {
+      const sig = (fb.get(a) || {}).sig;
+      if (sig === undefined) continue;
+      mine.set(sig, (mine.get(sig) || 0) + 1);
+    }
+    const theirsBySig = new Map();
+    for (const a of theirs) {
+      const sig = (tb.get(a) || {}).sig;
+      if (sig === undefined) continue;
+      if (!theirsBySig.has(sig)) theirsBySig.set(sig, []);
+      theirsBySig.get(sig).push(a);
+    }
+
+    for (const a of kids) {
+      const sig = (fb.get(a) || {}).sig;
+      if (sig === undefined) continue;
+      if (mine.get(sig) !== 1) continue;         // 旧版の中で一意でない
+      const cand = theirsBySig.get(sig) || [];
+      if (cand.length !== 1) continue;           // 新版の中で一意でない
+      got.set(a, cand[0]);
+    }
+  }
+  return got;
+}
+
+/**
+ * 写す計画を立てる。DBも時計も触らない。
+ *
+ *   same      対応先が同じ住所
+ *   moved     対応先が別の住所（番号が動いた）
+ *   ambiguous 親は決まったが、同じ本文が新版の中に2か所以上ある
+ *   changed   親は決まり、同じ番号の相手も居るが、本文が違う
+ *   gone      親は決まったが、同じ番号の相手も、同じ本文も無い
+ *   unknown   親の対応が決まらない（附則の対応が付かない、など）
+ */
+function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
+  notes, ranges, fromLawId, toLawId }) {
+  const fb = fromBodies || new Map();
+  const tb = toBodies || new Map();
+
+  const scopePairs = matchScopes(fromScopes || new Map(), toScopes || new Map());
+
+  // 親から子へ。scope を親として置いてから、条・項・号を順に決める
+  const pairs = new Map(scopePairs);
+  for (const d of [2, 3, 4]) {
+    for (const [a, b] of matchLevel(fb, tb, d, pairs)) pairs.set(a, b);
+  }
+
+  // 注釈の付いている住所を集める
+  const at = new Map();
+  const want = anchor => {
+    if (!at.has(anchor)) at.set(anchor, { anchor, notes: [], ranges: [] });
+    return at.get(anchor);
+  };
+  for (const n of notes || []) {
+    if (isTomb(n) || n.lawId !== fromLawId) continue;
+    want(n.anchor).notes.push(n);
+  }
+  for (const r of ranges || []) {
+    if (isTomb(r) || r.lawId !== fromLawId) continue;
+    want(r.anchor).ranges.push(r);
+  }
+
+  const items = [];
+  for (const got of at.values()) {
+    const anchor = got.anchor;
+    const from = fb.get(anchor);
+    const decided = pairs.get(anchor);
+    let kind, target = '', cands = [];
+
+    if (decided !== undefined) {
+      kind = decided === anchor ? 'same' : 'moved';
+      target = decided;
+    } else {
+      /*
+       * 対応が決まらなかった。親が決まっているなら、その親の中で候補を探す。
+       * 決まらなかった理由（同文が複数／本文が変わった／無い）を分ける。
+       */
+      const toParent = pairs.get(parentFor(anchor, fb));
+      if (toParent === undefined) {
+        kind = 'unknown';
+      } else {
+        const sig = from && from.sig;
+        const kids = kidsOf(tb, toParent, depthOf(anchor));
+        const found = sig === undefined ? []
+          : kids.filter(a => (tb.get(a) || {}).sig === sig);
+
+        /*
+         * 旧版の側でも一意か。ここを見ないと、
+         *   旧第5条と旧第20条が同文 → 第5条だけ削除
+         * のとき、第5条の注釈が「唯一残った同文」である第20条へ移ってしまう。
+         * 「削除された」と「移って残った」は、本文だけでは区別できない。
+         * 候補として見せるにとどめ、利用者に決めてもらう。
+         */
+        const mine = sig === undefined ? 0
+          : kidsOf(fb, parentFor(anchor, fb), depthOf(anchor))
+            .filter(a => (fb.get(a) || {}).sig === sig).length;
+
+        // 同じ番号の相手（住所の最後だけ差し替えたもの）
+        const tail = String(anchor).split('/').slice(1).join('/');
+        const sameNum = depthOf(anchor) === 2 ? toParent + '/' + tail
+          : toParent + '/' + String(anchor).split('/').pop();
+
+        if (found.length > 1) { kind = 'ambiguous'; cands = found.slice(); }
+        else if (found.length === 1 && mine === 1) { kind = 'moved'; target = found[0]; }
+        else if (found.length === 1) { kind = 'ambiguous'; cands = found.slice(); }
+        else if (tb.has(sameNum)) { kind = 'changed'; target = sameNum; }
+        else kind = 'gone';
+      }
+    }
+
+    items.push({
+      anchor, kind, to: target, cands,
+      oldBody: from || null,
+      newBody: target ? (tb.get(target) || null) : null,
+      notes: got.notes, ranges: got.ranges,
+      fromLawId, toLawId,
+    });
+  }
+
+  /*
+   * 多対一を落とす。
+   *
+   * 両側の一意性を求めているので対応表では起きないが、候補から拾った moved では
+   * 2つの旧住所が同じ新住所を指しうる。どちらが正しいか決められないので、
+   * 両方とも「分からない」に落とす。処理順で勝たせない。
+   */
+  const claim = new Map();
+  for (const it of items) {
+    if (!it.to) continue;
+    if (!claim.has(it.to)) claim.set(it.to, []);
+    claim.get(it.to).push(it);
+  }
+  for (const [to, list] of claim) {
+    if (list.length < 2) continue;
+    for (const it of list) {
+      it.kind = 'ambiguous';
+      it.cands = [to];
+      it.to = '';
+      it.newBody = null;
+    }
+  }
+
+  items.sort((a, b) => cmpKey(anchorSortKey(a.anchor), anchorSortKey(b.anchor)));
+  for (const it of items) {
+    it.cands.sort((x, y) => cmpKey(anchorSortKey(x), anchorSortKey(y)));
+  }
+
+  const counts = { same: 0, moved: 0, ambiguous: 0, changed: 0, gone: 0, unknown: 0 };
+  for (const it of items) counts[it.kind]++;
+  return { items, counts, scopePairs, pairs };
+}
+
 /* ------------------------------------- 固定版の注釈を元の法令へ移す */
 
 /*
@@ -5967,6 +6321,8 @@ const SYNC_SCHEMA = 1;
 const DATASET_KEY = 'roppo.datasetId';
 const GENERATION_KEY = 'roppo.generation';
 const LAST_SEEN_KEY = 'roppo.lastSeen';
+// ほかの端末が持っている法令の目録。writerId → { at, laws }
+const LAW_INV_KEY = 'lawInventory';
 const LAST_SYNC_KEY = 'roppo.lastSyncAt';
 
 /*
@@ -6011,7 +6367,27 @@ async function adoptDatasetId(foreign) {
 }
 
 /** いま持っているものを、そのまま1つの塊にする。DBは読むだけ。 */
-function buildSnapshot({ notes, ranges, order, datasetId, writerId, generation }) {
+/*
+ * その端末が持っている法令の目録。XMLは入れない。
+ *
+ * 法令XMLは同期しない（数MBあるし、e-Gov から取り直せる）。しかし
+ * 「どの端末に何が入っているか」を知る手段がどこにも無かったので、
+ * 端末ごとに突き合わせるのが手作業になっていた。名前と住所だけなら軽い。
+ *
+ * これは注釈と違って、突き合わせる記録ではない。「いまこの端末はこれを
+ * 持っている」という、その時点の事実である。だから版も墓石も持たない。
+ * 端末ごとに最新の塊のものを見ればよい。
+ */
+function lawInventory(laws) {
+  return (laws || []).map(l => ({
+    lawId: l.lawId,
+    lawTitle: l.lawTitle || '',
+    lawNum: l.lawNum || '',
+    source: l.source || 'egov',          // 'file' ならファイルから取り込んだもの
+  })).filter(x => x.lawId);
+}
+
+function buildSnapshot({ notes, ranges, order, laws, datasetId, writerId, generation }) {
   return {
     format: SYNC_FORMAT,
     schemaVersion: SYNC_SCHEMA,
@@ -6022,6 +6398,11 @@ function buildSnapshot({ notes, ranges, order, datasetId, writerId, generation }
       notes: notes || [],
       ranges: ranges || [],
       lawOrder: order || { ids: [], updatedAt: 0, version: {} },
+      /*
+       * 目録。古い版のアプリはこの欄を読まないので、足しても壊れない
+       * （schemaVersion は上げない）。
+       */
+      laws: lawInventory(laws),
     },
   };
 }
@@ -6119,6 +6500,22 @@ function validateSnapshot(o) {
     if (!Array.isArray(r.lawOrder.ids)) return no('並び順の形が違う');
     if (!r.lawOrder.ids.every(x => typeof x === 'string')) return no('並び順に法令でないものがある');
     if (!okVv(r.lawOrder.version)) return no('並び順の版の形が違う');
+  }
+  /*
+   * 法令の目録。無くてもよい（この欄を持たない版が置いた塊も読む）。
+   * あるなら形を検める。ここが壊れていても注釈は読めるので、弾かずに
+   * 落とす方が親切……ではない。読めないものを黙って無視すると、
+   * 「ほかの端末に無い」と嘘を言うことになる。弾く。
+   */
+  if (r.laws !== undefined) {
+    if (!Array.isArray(r.laws)) return no('法令の目録の形が違う');
+    for (const l of r.laws) {
+      if (!l || typeof l !== 'object' || Array.isArray(l)) return no('法令の目録に中身のないものがある');
+      if (typeof l.lawId !== 'string' || !l.lawId) return no('法令の目録に住所の無いものがある');
+      if (!okStr(l.lawTitle) || !okStr(l.lawNum) || !okStr(l.source)) {
+        return no('法令の目録の中身が文字列でない: ' + l.lawId);
+      }
+    }
   }
   return { ok: true, why: '', snapshot: o };
 }
@@ -6616,6 +7013,114 @@ function openExportDialog() {
   $('#dlg-export').showModal();
 }
 
+/* ------------------------------------------- ほかの端末にある法令 */
+
+/*
+ * ほかの端末が持っていて、この端末に無い法令を挙げる。
+ *
+ * 法令XMLは同期しない（数MBあるし、e-Gov から取り直せる）。しかし
+ * 「どの端末に何が入っているか」を知る手段が無く、端末ごとに目で
+ * 突き合わせるのが手作業になっていた。目録だけは同期に載せてあるので、
+ * それを突き合わせて出す。
+ *
+ * ファイルから取り込んだもの（最高裁判所規則など）は e-Gov に無いので、
+ * ここからは取り込めない。そう書いて、ファイルの取り込みへ案内する。
+ */
+async function missingLaws() {
+  let inv = {};
+  try {
+    const rec = await store.getMeta(LAW_INV_KEY);
+    inv = (rec && rec.value) || {};
+  } catch (e) { return []; }
+
+  const have = new Set(state.laws.map(l => l.lawId));
+  const out = new Map();
+  for (const [writer, got] of Object.entries(inv)) {
+    for (const l of (got && got.laws) || []) {
+      if (!l || !l.lawId || have.has(l.lawId)) continue;
+      if (!out.has(l.lawId)) out.set(l.lawId, { ...l, writers: [] });
+      out.get(l.lawId).writers.push(writer);
+    }
+  }
+  return [...out.values()]
+    .sort((a, b) => String(a.lawTitle).localeCompare(String(b.lawTitle), 'ja'));
+}
+
+/** 目録から1本取り込む。e-Gov のものだけ。 */
+async function takeMissing(l) {
+  const xml = await apiFetchLaw(l.lawId);
+  await store.putLaw({
+    lawId: l.lawId, lawTitle: l.lawTitle, lawNum: l.lawNum,
+    xml, savedAt: Date.now(),
+  });
+  state.indexCache.delete(l.lawId);
+}
+
+async function renderMissing() {
+  const box = $('#missing-box');
+  const list = $('#missing-list');
+  if (!box || !list) return;
+  const miss = await missingLaws();
+  box.hidden = !miss.length;
+  if (!miss.length) return;
+
+  $('#missing-count').textContent = miss.length + '件';
+  const egov = miss.filter(l => l.source !== 'file');
+  const btnAll = $('#missing-all');
+  if (btnAll) {
+    btnAll.hidden = !egov.length;
+    btnAll.textContent = 'e-Gov のものをまとめて取り込む（' + egov.length + '件）';
+  }
+
+  list.innerHTML = '';
+  for (const l of miss) {
+    const fromFile = l.source === 'file';
+    const d = document.createElement('div');
+    d.className = 'r';
+    d.innerHTML = `<div class="info"><div class="name">${esc(l.lawTitle || l.lawId)}</div>`
+      + `<div class="sub">${esc(l.lawNum || '')}`
+      + (fromFile ? '　ファイルから取り込んだもの。e-Gov には無い' : '')
+      + `</div></div>`
+      + (fromFile ? '<button disabled>ファイルから</button>' : '<button>取り込む</button>');
+    const btn = d.querySelector('button');
+    if (!fromFile) {
+      btn.onclick = async () => {
+        btn.disabled = true; btn.textContent = '取得中…';
+        try {
+          await takeMissing(l);
+          await refreshLawList();
+          btn.textContent = '取込済';
+          toast(`「${l.lawTitle || l.lawId}」を取り込みました`);
+          await renderMissing();
+        } catch (err) {
+          btn.disabled = false; btn.textContent = '再試行';
+          toast(err.message);
+        }
+      };
+    }
+    list.appendChild(d);
+  }
+}
+
+/** e-Gov から取れるものをまとめて取り込む。 */
+async function takeAllMissing() {
+  const miss = (await missingLaws()).filter(l => l.source !== 'file');
+  if (!miss.length) return;
+  const btn = $('#missing-all');
+  let done = 0;
+  const failed = [];
+  for (const l of miss) {
+    if (btn) btn.textContent = '取得中… ' + (done + failed.length + 1) + '/' + miss.length;
+    try { await takeMissing(l); done++; }
+    catch (e) { failed.push((l.lawTitle || l.lawId) + '：' + e.message); }
+  }
+  await refreshLawList();
+  await renderMissing();
+  toast(done + '件を取り込みました'
+    + (failed.length ? '　※' + failed.length + '件は取り込めませんでした' : ''));
+  if (failed.length) console.warn('取り込めなかったもの', failed);
+}
+
 /* ---------------------------------------------------------- 法令の追加 */
 
 async function searchAndShow() {
@@ -6868,7 +7373,12 @@ function wire() {
   wireLawDrag();
   wireView();
 
-  const openAdd = () => { $('#dlg-add').showModal(); $('#add-query').focus(); };
+  const openAdd = () => {
+    $('#dlg-add').showModal();
+    $('#add-query').focus();
+    renderMissing();                    // 同期で分かった目録から、足りないものを出す
+  };
+  $('#missing-all').onclick = () => takeAllMissing();
   $('#btn-add-law').onclick = openAdd;
   document.addEventListener('click', e => {
     if (e.target && e.target.id === 'btn-add-law-2') openAdd();
