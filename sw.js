@@ -15,7 +15,7 @@
  *   ・有効な版のキャッシュを裏で書き換えない
  *   ・必須のファイルが1つでも取れなければ、その版は入れない
  *
- * 裏で書き換えると、新しい index.html と古い app.js のような組み合わせが
+ * 裏で書き換えると、新しい index.html と古い view.js のような組み合わせが
  * できる。HTML の構造と JS の期待がずれると、起動そのものが壊れる。
  * 必須ファイルの取りこぼしを許すと、中途半端な版が有効になり、
  * activate が動いていた古い版を消してしまう。オフラインで開けなくなる。
@@ -24,14 +24,22 @@
  * 抱えたまま読み込み直すことになるため、断りなしには行わない。
  */
 
-const VERSION = 'v100';
+const VERSION = 'v101';
 const CACHE = 'roppo-shell-' + VERSION;
 
 // 欠けると起動しないもの。全部そろって初めてこの版を入れる。
 const REQUIRED = [
   './',
   './index.html',
-  './app.js',
+  './core.js',
+  './render.js',
+  './annot.js',
+  './find.js',
+  './sync.js',
+  './view.js',
+  './version-migration.js',
+  './version-migration-view.js',
+  './boot.js',
   './style.css',
   './manifest.webmanifest',
 ];

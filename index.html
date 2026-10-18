@@ -371,19 +371,60 @@
     <p class="hint" style="margin:0 0 10px">
       e-Gov が持っている版の一覧です。まだ施行されていない改正も含みます。
       選ぶと別の法令として取り込むので、いま読んでいる版はそのまま残ります。
+      下段の「改正法」は<strong>この法令を改正した法律</strong>の名前なので、
+      ほかの法律の名前が出ることがあります。
     </p>
     <!--
-      並ぶ名前は「この法令を改正した法律」である。破産法なら
-      「民事訴訟法等の一部を改正する法律」のように別の法律の名前が並ぶ。
-      説明が無いと、別の法令の情報が出ているようにしか見えない。
+      行の主役はこの法令の版（法令名）で、その下に「改正した法律」を薄く添える。
+      改正法の名前を主役にしていたときは、刑法の版に「日本国の自衛隊と…協定の
+      実施に関する法律」が並ぶので、別の法令が混ざっているようにしか見えなかった。
     -->
     <div class="rev-head">
       <span class="rv-date">施行日</span>
-      <span class="rv-title">改正した法律</span>
+      <span class="rv-title">版（下段は改正した法律）</span>
       <span class="rv-state">状態</span>
     </div>
     <div id="rev-list" class="rev-list"></div>
     <menu class="dlg-actions"><button value="close">閉じる</button></menu>
+  </form>
+</dialog>
+
+<!--
+  改正後の版へ注釈を写す。3段を1つのダイアログで切り替える
+  （写し先を選ぶ → 計画を見て選ぶ → 結果）。中身は
+  version-migration-view.js が入れる。
+-->
+<dialog id="dlg-vmig">
+  <form method="dialog" class="dlg-form">
+    <h2>注釈を写す　<span id="vmig-law" class="count"></span></h2>
+
+    <div id="vmig-step1">
+      <p class="hint" style="margin:0 0 10px">
+        この版に付けた注釈を、別の版の<strong>正しい位置</strong>へ写します。
+        番号ではなく本文で突き合わせるので、改正で条が増減していても追えます。
+        写すだけなので、この版の注釈はそのまま残ります。
+      </p>
+      <div class="sub-head">写し先を選ぶ</div>
+      <div id="vmig-peers" class="vmig-peers"></div>
+      <div id="vmig-undo-box" class="note-dup" hidden style="margin:12px 0 0"></div>
+    </div>
+
+    <div id="vmig-step2" hidden>
+      <div id="vmig-sum" class="vmig-sum"></div>
+      <div id="vmig-list" class="vmig-list"></div>
+    </div>
+
+    <div id="vmig-step3" hidden>
+      <div id="vmig-result"></div>
+      <button type="button" id="vmig-result-undo" class="mini" hidden
+              style="margin-top:10px">この写しを取り消す</button>
+    </div>
+
+    <menu class="dlg-actions">
+      <button type="button" id="vmig-back" class="mini" hidden>写し先を選び直す</button>
+      <button type="button" id="vmig-go" class="primary" hidden>写す</button>
+      <button value="close">閉じる</button>
+    </menu>
   </form>
 </dialog>
 
@@ -402,6 +443,14 @@
 <div id="tip" class="tip" hidden></div>
 <div id="toast" class="toast" hidden></div>
 
-<script src="app.js"></script>
+<script src="core.js"></script>
+<script src="render.js"></script>
+<script src="annot.js"></script>
+<script src="find.js"></script>
+<script src="sync.js"></script>
+<script src="view.js"></script>
+<script src="version-migration.js"></script>
+<script src="version-migration-view.js"></script>
+<script src="boot.js"></script>
 </body>
 </html>

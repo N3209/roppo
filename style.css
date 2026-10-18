@@ -229,12 +229,70 @@ body { display: flex; flex-direction: column; overflow: hidden; }
 
 .rev-list button[disabled] { cursor: default; opacity: .75; }
 .rev-list .rv-date { flex: none; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.rev-list .rv-title { flex: 1; min-width: 0; font-size: 12px; color: var(--fg-dim);
+/*
+ * 版の名前を上、改正した法律を下に重ねる。改正法の名前は長いもの
+ * （「日本国の自衛隊と…協定の実施に関する法律」）があるので、
+ * 1行に収めて省略する。全体はボタンの title で読める。
+ */
+.rev-list .rv-title { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.rev-list .rv-name { font-size: 13px; color: var(--fg);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rev-list .rv-amend { font-size: 11px; color: var(--fg-faint);
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rev-list .rv-state { flex: none; font-size: 11px; font-family: var(--font-ui); }
 .rev-list .rv-state.now { color: var(--accent); font-weight: 700; }
 .rev-list .rv-state.future { color: #b3261e; font-weight: 700; }
 .rev-list .rv-state.past { color: var(--fg-faint); }
+
+/*
+ * 改正後の版へ注釈を写す画面。
+ *
+ * 段1（写し先）は版の一覧に似せる。段2（計画）は1件ずつ札で出す。
+ * 判定で左の色が変わる。選べないもの（無くなった・分からない）は薄くする。
+ */
+.vmig-peers button {
+  display: flex; align-items: baseline; gap: 9px; width: 100%; text-align: left;
+  border: 1px solid var(--line); background: var(--bg-elev); color: var(--fg);
+  border-radius: 9px; padding: 9px 11px; margin-bottom: 6px; cursor: pointer; font: inherit;
+}
+.vmig-peers .vmig-peer-name { flex: 1; min-width: 0; font-size: 13px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vmig-peers .vmig-peer-date { flex: none; font-size: 11px; color: var(--fg-dim);
+  font-variant-numeric: tabular-nums; }
+.vmig-peers .vmig-peer-kind { flex: none; font-size: 11px; color: var(--fg-faint);
+  font-family: var(--font-ui); }
+
+.vmig-sum { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  padding: 0 0 8px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.vmig-sum .vmig-counts { flex: 1; min-width: 0; font-size: 12px; color: var(--fg-dim); }
+.vmig-sum .vmig-picked { flex: none; font-size: 12px; }
+
+.vmig-list { max-height: 52vh; overflow-y: auto; }
+.vmig-row { border: 1px solid var(--line); border-left-width: 3px;
+  border-radius: 9px; padding: 8px 10px; margin-bottom: 6px; background: var(--bg-elev); }
+.vmig-row.k-same { border-left-color: var(--accent); }
+.vmig-row.k-moved { border-left-color: var(--accent); }
+.vmig-row.k-ambiguous { border-left-color: #b3261e; }
+.vmig-row.k-changed { border-left-color: #b3261e; }
+.vmig-row.k-gone, .vmig-row.k-unknown { border-left-color: var(--line); opacity: .7; }
+
+.vmig-head { display: flex; align-items: baseline; gap: 8px; }
+.vmig-anchor { flex: 1; min-width: 0; font-size: 13px; font-weight: 700;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vmig-kind { flex: none; font-size: 11px; font-family: var(--font-ui); color: var(--fg-dim); }
+.vmig-why { font-size: 11px; color: var(--fg-faint); margin-top: 2px; }
+.vmig-what { font-size: 12px; color: var(--fg-dim); margin-top: 3px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vmig-pick { margin-top: 6px; font-size: 12px; }
+.vmig-pick select { font: inherit; font-size: 12px; max-width: 100%; }
+.vmig-check { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.vmig-none { color: var(--fg-faint); }
+.vmig-rmove { font-size: 11px; margin-top: 3px; }
+.vmig-rmove.ok { color: var(--fg-dim); }
+.vmig-rmove.ng { color: #b3261e; }
+
+.vmig-done { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.vmig-skip { font-size: 12px; color: var(--fg-dim); margin-top: 3px; }
 
 /*
  * 二度続けて押すと画面が拡大してしまうのを止める。
