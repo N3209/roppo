@@ -253,11 +253,21 @@ async function takePackRule(entry, opts) {
  * （訂正版を出しても旧版の記載を消さない、という取り決め）。相手が持って
  * いるのはその中の1つなので、住所で引き当てる。
  */
-async function takePack(l) {
+async function takePack(l, rules) {
   const sum = String(l.lawId || '').startsWith(PACK_PREFIX)
     ? String(l.lawId).slice(PACK_PREFIX.length) : '';
   if (!sum) throw new Error('パックの住所ではありません');
-  const { rules } = await fetchPackManifest();
+  /*
+   * 一覧は呼び側から渡せる。
+   *
+   * pack.json は 474KB ある。まとめて取り込むときに1本ごとに取り直すと、
+   * 10本で 4.7MB、103本で 48MB を重ねて取ることになる。まとめる側が1回だけ
+   * 取って渡す（takeAllMissing）。
+   *
+   * 中に持ち回さないのは意図である。持つと、パックを差し替えたあとも古い一覧を
+   * 使う。渡されたときだけ使い、渡されなければ取りに行く。
+   */
+  if (!rules) rules = (await fetchPackManifest()).rules;
   const entry = rules.find(r => r.sha256 === sum);
   if (!entry) {
     throw new Error('この配布の規則パックに見つかりません'

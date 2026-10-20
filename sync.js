@@ -984,11 +984,29 @@ async function takeAllMissing() {
   const btn = $('#missing-all');
   let done = 0;
   const failed = [];
+
+  /*
+   * パックの一覧は1回だけ取る。
+   *
+   * pack.json は 474KB ある。takePack に任せると1本ごとに取り直すので、
+   * 10本で 4.7MB を重ねて取ることになる。
+   *
+   * ここで落ちてもパック以外は続ける。e-Gov のものが取れない理由にはならない。
+   */
+  let packRules = null;
+  let packErr = '';
+  if (miss.some(l => lawOrigin(l) === 'pack')) {
+    try { packRules = (await fetchPackManifest()).rules; }
+    catch (e) { packErr = e.message; }
+  }
+
   for (const l of miss) {
     if (btn) btn.textContent = '取得中… ' + (done + failed.length + 1) + '/' + miss.length;
     try {
-      if (lawOrigin(l) === 'pack') await takePack(l);
-      else await takeMissing(l);
+      if (lawOrigin(l) === 'pack') {
+        if (!packRules) throw new Error(packErr || '規則パックが読めません');
+        await takePack(l, packRules);
+      } else await takeMissing(l);
       done++;
     } catch (e) { failed.push((l.lawTitle || l.lawId) + '：' + e.message); }
   }
