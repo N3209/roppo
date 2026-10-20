@@ -96,15 +96,32 @@ const VM_KINDS = {
  * 「未施行」の帯とは別に出す。改正前の版は施行日が過ぎているので未施行の
  * 帯が出ない。出ない帯にボタンを足しても押せない。
  */
-function paintVersionMigrationNote(note, rec) {
+function paintVersionMigrationNote(note, rec, opts) {
+  const o = opts || {};
   const peers = versionPeers(rec.lawId);
   const n = countVersionNotes(rec.lawId);
+  const canMove = n && peers.length;
+
+  /*
+   * 黙っていてよいときは帯を出さない（quiet）。
+   *
+   * 固定版は「固定した版です」自体が読む人に要る情報なので、いつでも出す。
+   * パックは普段読む版なので、写せるものがあるときだけ出す。ヘッダーは開く
+   * たびに目に入る一等地で、前にここへ「このアプリについて」を置いて絞り込みの
+   * 入力欄を 38px 狭めた。
+   */
+  if (o.quiet && !canMove && !o.prefix) {
+    note.hidden = true;
+    note.innerHTML = '';
+    return;
+  }
   note.hidden = false;
   const head = n
     ? 'この版に付けた注釈 ' + n + '件を、別の版の正しい位置へ写せます'
     : 'この版に注釈はまだありません';
-  note.innerHTML = '<span>固定した版です。' + esc(head) + '</span>'
-    + (n && peers.length
+  note.innerHTML = (o.prefix || '')
+    + '<span>' + esc(o.lead || '固定した版です。') + esc(head) + '</span>'
+    + (canMove
       ? '<button type="button" class="mini vmig-open">注釈を写す</button>'
       : n ? '<span class="warn">写し先になる版が手元にありません</span>' : '');
   const b = note.querySelector('.vmig-open');
@@ -144,7 +161,8 @@ function versionPeers(lawId) {
   const base = baseLawIdOf(lawId);
   const self = state.laws.find(l => l.lawId === lawId);
   const workId = self && self.workId;
-  const list = state.laws.filter(l => l.lawId !== lawId && l.source !== 'file'
+  // 出どころは lawOrigin で見る。ファイルから入れたものは版の関係を保証できない
+  const list = state.laws.filter(l => l.lawId !== lawId && lawOrigin(l) !== 'file'
     && (l.lawId === base || l.revisionOf === base
       || (!!workId && l.workId === workId)));
   return list.sort((a, b) => {

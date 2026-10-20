@@ -218,7 +218,14 @@ function renderLawList() {
     li.dataset.lawId = l.lawId;
     li.innerHTML = '<span class="grip" title="つまんで並べ替え">⠿</span>'
       + `<span class="law-name" title="${esc(l.lawTitle)}">${esc(l.lawTitle)}</span>`
-      + (l.source === 'file' ? '<span class="src-badge">取り込み</span>' : '')
+      /*
+       * 出どころの印。e-Gov のものには付けない（それが既定だから）。
+       * パックにも付ける。103本のうち何本かを入れると一覧に混ざるので、
+       * 出典が違うものがどれかは見えていた方がよい。
+       */
+      + (lawOrigin(l) === 'file' ? '<span class="src-badge">取り込み</span>'
+        : lawOrigin(l) === 'pack' ? '<span class="src-badge">規則パック</span>'
+          : lawOrigin(l) === 'unknown' ? '<span class="src-badge">出どころ不明</span>' : '')
       + (isUnenforced(l) ? '<span class="rev-badge">未施行</span>' : '')
       + (a ? `<span class="amend-dot ${a.kind === 'upcoming' ? 'upcoming' : ''}" title="${esc(amendTitle(a))}　押すと版を選べます"></span>` : '')
       + `<button class="del" title="削除">×</button>`;
@@ -402,8 +409,24 @@ function packNoteHTML(rec) {
 }
 
 function sourceNoteHTML(rec) {
-  if (rec.source === 'pack') return packNoteHTML(rec);
-  if (rec.source === 'file') {
+  /*
+   * 出どころは lawOrigin で見る（core.js）。
+   *
+   * 前は「pack → file → それ以外は e-Gov」と書いていたので、知らない出どころが
+   * e-Gov の出典になっていた。lawOrigin で「unknown を e-Gov に寄せない」と
+   * 決めたのに、表示側に届いていなかった（Codex の指摘3）。
+   * 出どころを偽るのは、このアプリで一番やってはいけないことである。
+   */
+  const origin = lawOrigin(rec);
+  if (origin === 'pack') return packNoteHTML(rec);
+  if (origin === 'unknown') {
+    return '<div class="source-note">'
+      + '出どころが分かりません（この版では扱えない形で記録されています）。'
+      + 'アプリを更新してから開き直してください。'
+      + ' <button type="button" class="about-link" data-about="1">このアプリについて</button>'
+      + '</div>';
+  }
+  if (origin === 'file') {
     return '<div class="source-note">ファイルから取り込んだものです。'
       + '出典は取り込んだ人が把握してください。'
     + ' <button type="button" class="about-link" data-about="1">このアプリについて</button>'
@@ -456,11 +479,12 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
    * 自分で起こしたデータ（ファイル・パック）は施行日を持たない。
    * 来歴があれば「施行日は不明」より具体的なことが言える。
    */
-  if (rec.source === 'file' || rec.source === 'pack') {
+  const org = lawOrigin(rec);
+  if (org === 'file' || org === 'pack') {
     const prov0 = rec.provenance || {};
     pane.meta.textContent = [rec.lawNum, prov0['反映'] || '']
       .filter(Boolean).join('　/　')
-      || (rec.source === 'pack' ? '規則パック　施行日は不明'
+      || (org === 'pack' ? '規則パック　施行日は不明'
         : '取り込んだデータ　施行日は不明');
   } else {
     pane.meta.textContent = [
@@ -482,7 +506,7 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
     : '';
 
   const note = $('.law-note', pane.root);
-  if (rec.source === 'file') {
+  if (org === 'file') {
     note.hidden = false;
     /*
      * 帯は短くする。重なりの詳しい話が要るのは、その位置に注釈を付けようと
@@ -520,7 +544,7 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
         ? '<span class="warn" title="' + esc(dups.join('、')) + '">'
           + where + '位置の重なりが ' + dups.length + '件</span>'
         : '');
-  } else if (rec.source === 'pack') {
+  } else if (org === 'pack') {
     /*
      * パックの帯は、読み方が変わることだけ出す。
      *
@@ -533,12 +557,28 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
      * 推測で書かない方針）、未施行の帯（law-warn）が出る経路が無い。
      */
     const nyf = rec.notYetInForce || [];
-    note.hidden = !nyf.length;
-    note.innerHTML = nyf.length
+    const warn = nyf.length
       ? '<span class="warn" title="' + esc(nyf.join('　')) + '">未施行の改正があります'
         + (nyf.length > 1 ? '（' + nyf.length + '件）' : '')
         + '　本文の末尾に書いています</span>'
       : '';
+    /*
+     * 注釈を写す入口も、ここから出す。
+     *
+     * パックの住所は pack-<sha256> で、訂正版は別の住所になる。新旧が別の法令
+     * として並ぶので、固定版と同じように注釈を写す必要がある。
+     *
+     * versionPeers は workId で束ねられるようにしてあったが、呼ぶ場所を作って
+     * いなかった。固定版の枝（下の rec.revisionOf）でしか
+     * paintVersionMigrationNote を呼んでおらず、パックの記録は revisionOf を
+     * 持たないので、画面から辿れる場所がどこにも無かった。関数の試験は通って
+     * いたが押せなかった（Codex の指摘2）。
+     *
+     * quiet にしてあるので、写せるものが無く未施行でもないときは帯が出ない。
+     */
+    paintVersionMigrationNote(note, rec, {
+      quiet: true, prefix: warn, lead: 'パックの版です。',
+    });
   } else if (rec.revisionOf) {
     /*
      * 固定版を開いている。注釈を別の版へ写す入口を出す。
@@ -792,8 +832,13 @@ function syncTopbarLaw() {
   if (!el) return;
   const rec = P().current;
   $('.tl-name', el).textContent = (rec && rec.lawTitle) || '';
+  /*
+   * 施行日。e-Gov のものだけが持つ。
+   * 自分で起こしたデータ（ファイル・パック）は「不明」と出す。空欄にすると
+   * 「無い」のか「分からない」のか区別が付かない。
+   */
   $('.tl-date', el).textContent = !rec ? ''
-    : rec.source === 'file' ? '施行日不明'
+    : lawOrigin(rec) !== 'egov' ? '施行日不明'
     : rec.enforcementDate ? '施行 ' + rec.enforcementDate : '';
 
   const dot = $('.tl-dot', el);
@@ -1734,10 +1779,16 @@ async function checkAmendment(law) {
 
 /* 全法令ぶん。1日に1度でよいので、呼び出し側で間隔を見る。 */
 async function checkAmendments(loud) {
-  // 固定版（`<法令ID>@<版ID>`）は e-Gov の法令IDではないので問い合わせない。
-  // その版はその版として固定したものなので、新しい版を知らせる意味もない。
-  // 取り込んだものは e-Gov に無いので、問い合わせても答えが返らない
-  const targets = state.laws.filter(l => !l.revisionOf && l.source !== 'file');
+  /*
+   * 固定版（`<法令ID>@<版ID>`）は e-Gov の法令IDではないので問い合わせない。
+   * その版はその版として固定したものなので、新しい版を知らせる意味もない。
+   *
+   * 出どころが e-Gov のものだけに問い合わせる。前は「file でなければ」と
+   * 書いていたので、規則パックのものが pack-<sha256> を e-Gov に投げていた。
+   * 「取り込んだものは e-Gov に無いので答えが返らない」という理由がそのまま
+   * パックにも当てはまるのに、条件がそれを拾えていなかった（Codex の指摘3）。
+   */
+  const targets = state.laws.filter(l => !l.revisionOf && lawOrigin(l) === 'egov');
   if (!targets.length) { if (loud) toast('取り込んだ法令がありません'); return; }
   let behind = 0, upcoming = 0, failed = 0;
 
@@ -1799,7 +1850,8 @@ function isUnenforced(rec) {
  */
 function amendOf(law) {
   const rec = typeof law === 'string' ? state.laws.find(l => l.lawId === law) : law;
-  if (!rec || rec.revisionOf || rec.source === 'file') return null;   // 固定版・取り込みには出さない
+  // 固定版と、e-Gov 以外から来たものには出さない（問い合わせていないので判定が無い）
+  if (!rec || rec.revisionOf || lawOrigin(rec) !== 'egov') return null;
   const a = amendState[rec.lawId];
   if (!a || !a.kind || a.kind === 'none') return null;
   if ((a.rev || '') !== (rec.lawRevisionId || '')) return null;   // 確かめた版と違う
@@ -1819,6 +1871,21 @@ function amendOf(law) {
 let revToken = 0;      // 開き直したとき、前の応答で上書きしないための印
 
 async function openRevisions(lawId) {
+  /*
+   * 版の一覧は e-Gov に問い合わせる。それ以外の出どころでは開かない。
+   *
+   * 狭い画面では題名を押すとここへ来るので、規則パックを読んでいるときに
+   * 押すと pack-<sha256> を e-Gov に投げていた（Codex の指摘3）。
+   */
+  {
+    const r0 = state.laws.find(l => l.lawId === lawId);
+    if (r0 && lawOrigin(r0) !== 'egov') {
+      toast(lawOrigin(r0) === 'pack'
+        ? '規則パックのものは e-Gov に版がありません。新しい版はパックの一覧から取り込みます'
+        : '取り込んだものは e-Gov に無いので、版を選べません');
+      return;
+    }
+  }
   const law = state.laws.find(l => l.lawId === lawId);
   if (!law) return;
 
