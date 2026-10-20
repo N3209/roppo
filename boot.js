@@ -55,5 +55,12 @@
     refreshEmptyPane();
   }
   checkAmendmentsIfStale();     // 通信できるときだけ、1日に1度
+  /*
+   * 規則パックの新しい版も、1日に1度だけ確かめる。
+   *
+   * e-Gov の方と別の歯止めにしてある（読みに行く先が違うので、片方が圏外でも
+   * もう片方は確かめられる）。pack.json を1枚読めば103本ぶんの鎖が揃う。
+   */
+  checkPackVersionsIfStale();
   window.addEventListener('pagehide', rememberPos);
 })();

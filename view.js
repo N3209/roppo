@@ -557,11 +557,19 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
      * 推測で書かない方針）、未施行の帯（law-warn）が出る経路が無い。
      */
     const nyf = rec.notYetInForce || [];
-    const warn = nyf.length
+    const warn = (nyf.length
       ? '<span class="warn" title="' + esc(nyf.join('　')) + '">未施行の改正があります'
         + (nyf.length > 1 ? '（' + nyf.length + '件）' : '')
         + '　本文の末尾に書いています</span>'
-      : '';
+      : '')
+      /*
+       * 置き換えられた版を開いている、と分かっているとき。
+       *
+       * 取り込んだ時点ではこの版が鎖の先端なので、記録には書けない。
+       * 1日に1度 pack.json を読んで確かめている（pack.js の
+       * checkPackVersionsIfStale）。確かめられていないときは何も出ない。
+       */
+      + packNewerNote(rec);
     /*
      * 注釈を写す入口も、ここから出す。
      *

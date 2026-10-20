@@ -77,6 +77,7 @@ async function fetchPackManifest() {
   const rules = (json && json.rules) || [];
   if (!rules.length) throw new Error('pack.json に規則が1本も入っていません');
   return {
+    superseded: supersededMap(rules),
     packVersion: json.packVersion || '',
     /*
      * パックを組んだ日。版の番号だけでは、どのくらい前のものか分からない。
@@ -86,6 +87,97 @@ async function fetchPackManifest() {
     note: json.note || '',
     rules,
   };
+}
+
+/*
+ * 置き換えの鎖を組み、同時に検める。
+ *
+ * パックの住所は中身のハッシュから作るので、同じ規則の新旧は別の法令として
+ * 並ぶ。workId は「同じ規則の版だ」と言うだけで、どちらが新しいかは言わない。
+ * 順番を与えるのが supersedes（この版はあの版を置き換えた）である。
+ *
+ * 鎖が壊れていると、どの版が現行かが決められない。だから一覧を出す前に検める。
+ * 落ちたら一覧を出さない。「ほかは大丈夫」と言える根拠が無い状態で103本を
+ * 並べると、間違った版を取り込ませることになる。
+ *
+ * 作る側（build_pack.py と verify_pack.py）も同じことを検めている。重なって
+ * いるが無駄ではない。片方の道具が壊れたときに、もう片方で気づける。
+ *
+ * 検める順に意味がある。**原因が分かる検査を、症状が出る検査より先に置く。**
+ * 「同じ版を2つが置き換えている」を先に見ないと、「置き換えられていない版が
+ * 2本ある」という症状だけが出て、何が起きたのか分からない。
+ */
+function supersededMap(rules) {
+  const bySha = new Map();
+  for (const r of rules) if (r.sha256) bySha.set(r.sha256, r);
+
+  const out = new Map();                 // 置き換えられた sha256 → 置き換えた行
+  const name = r => (r && (r.lawTitle || r.workId)) || '?';
+  const cut = s => String(s || '').slice(0, 12) + '…';
+
+  for (const r of rules) {
+    if (!r.supersedes) continue;
+    const old = bySha.get(r.supersedes);
+
+    // 1 指す先が目録にある（旧版の記載は消さない取り決めなので、無ければ壊れ）
+    if (!old) {
+      throw new Error('規則パックの目録が壊れています：'
+        + name(r) + ' が置き換えたとする版（' + cut(r.supersedes)
+        + '）が目録にありません');
+    }
+    // 2 指された行の workId が同じ（違えば別の規則を置き換えている）
+    if ((old.workId || '') !== (r.workId || '')) {
+      throw new Error('規則パックの目録が壊れています：'
+        + name(r) + ' が別の規則の版を置き換えています（'
+        + (r.workId || '?') + ' → ' + (old.workId || '?') + '）');
+    }
+    // 3 同じ版を2つが置き換えていない（枝分かれ。症状より原因を先に言う）
+    if (out.has(r.supersedes)) {
+      throw new Error('規則パックの目録が壊れています：'
+        + (r.workId || '?') + ' で、同じ版（' + cut(r.supersedes)
+        + '）を2つが置き換えています');
+    }
+    /*
+     * 4 法改正なら施行日がある。
+     *
+     * 「法改正の版は施行日を過ぎてから出す。訂正には enforcedOn を書かない」
+     * という取り決めがある。無いものが来たら、取り決めが変わったか目録が
+     * 壊れたかである。画面の言い方がこの欄で決まるので、黙って通さない。
+     */
+    const c = r.correction || {};
+    if (c.kind === '法改正' && !c.enforcedOn) {
+      throw new Error('規則パックの目録が壊れています：'
+        + name(r) + ' が法改正の版なのに施行日（enforcedOn）がありません');
+    }
+    if (c.kind === '訂正' && c.enforcedOn) {
+      throw new Error('規則パックの目録が壊れています：'
+        + name(r) + ' が訂正なのに施行日（enforcedOn）を持っています');
+    }
+
+    out.set(r.supersedes, r);
+  }
+
+  /*
+   * 4 workId ごとに、置き換えられていない版がちょうど1本。
+   *
+   * 0本なら鎖が輪になっている。2本以上なら、上の3を通り抜けた形の枝分かれ
+   * （別々の版から分かれた）である。
+   */
+  const byWork = new Map();
+  for (const r of rules) {
+    const w = r.workId || '';
+    if (!byWork.has(w)) byWork.set(w, []);
+    byWork.get(w).push(r);
+  }
+  for (const [w, list] of byWork) {
+    const tips = list.filter(r => !out.has(r.sha256));
+    if (tips.length !== 1) {
+      throw new Error('規則パックの目録が壊れています：' + (w || '?')
+        + ' で、置き換えられていない版が ' + tips.length + '本あります'
+        + '（1本であるべきです）');
+    }
+  }
+  return out;
 }
 
 /** バイト列の sha256 を16進で。crypto.subtle は https と localhost で使える。 */
@@ -277,6 +369,118 @@ async function takePack(l, rules) {
   return takePackRule(entry, { defer: true });
 }
 
+/*
+ * パックの新しい版が出ていないか。
+ *
+ * 取り込んだ時点では、その版が鎖の先端である。置き換えられるのは後から
+ * 新しい pack.json が届いたときなので、記録には書けない。だから確かめに行く。
+ *
+ * e-Gov の改正確認（checkAmendments）と同じ構えにしてある。違いは、
+ * **1回の読み出しで全部分かる**ことである。e-Gov は法令ごとに問い合わせるが、
+ * パックは pack.json を1枚読めば103本ぶんの鎖が揃う。
+ *
+ * 圏外なら黙って諦める。確かめられなかったことを「新しい版は無い」と
+ * 読み替えてはいけないので、前の判定をそのまま残す。
+ */
+let packNewer = {};        // lawId → 置き換えた側の行
+
+async function checkPackVersions() {
+  const mine = state.laws.filter(l => lawOrigin(l) === 'pack');
+  if (!mine.length) return 0;
+  const { superseded } = await fetchPackManifest();
+  let found = 0;
+  for (const l of mine) {
+    const by = superseded.get(l.packSha256);
+    if (by) { packNewer[l.lawId] = by; found++; }
+    else delete packNewer[l.lawId];
+  }
+  // 手元に無くなった法令の判定は捨てる
+  const have = new Set(mine.map(l => l.lawId));
+  for (const id of Object.keys(packNewer)) if (!have.has(id)) delete packNewer[id];
+  return found;
+}
+
+/* 1日に1度だけ、静かに確かめる。e-Gov の方と同じ歯止めを別に持つ。 */
+function checkPackVersionsIfStale() {
+  let at = 0;
+  try { at = Number(localStorage.getItem('roppo.packCheckedAt')) || 0; } catch (e) { /* 任意 */ }
+  if (Date.now() - at < 24 * 60 * 60 * 1000) return;
+  checkPackVersions().then(found => {
+    try { localStorage.setItem('roppo.packCheckedAt', String(Date.now())); } catch (e) { /* 任意 */ }
+    if (!found) return;
+    /*
+     * 開いている面の帯を描き直す。
+     *
+     * 帯を描くのは openLaw の中なので、開き直して描かせる。読んでいる位置は
+     * 渡して保つ（finishImport は 0 を渡すが、あちらは取り込み直した直後なので
+     * 先頭に戻ってよい。こちらは読んでいる最中に起きる）。
+     */
+    for (const pane of livePanes()) {
+      if (!pane.current || !packNewer[pane.current.lawId]) continue;
+      const top = pane.el ? pane.el.scrollTop : 0;
+      openLaw(pane.current.lawId, null, top, pane).catch(() => { /* 開けなければ放っておく */ });
+    }
+  }).catch(() => { /* 圏外なら黙って諦める。前の判定を残す */ });
+}
+
+/*
+ * 新しい版について言うこと。
+ *
+ * 新しい版が出る理由は2つあり、**逆の行動を促す。**
+ *
+ *   訂正      変換の誤りを直した。旧版は誤り      → 早く入れ替えるべき
+ *   法改正     法令そのものが変わった              → 施行日前の版は読んではいけない
+ *
+ * 見分けるのは correction.enforcedOn の有無である。文は読まない。文から
+ * 判定すると、書き方が変わった日に黙って逆のことを言う。
+ *
+ * XML化の側が「法改正の版は施行日以後にしか出さない」と決めたので、出ている
+ * ものは常に現行として扱える（未施行の版は一覧に出ない）。だから「◯◯から
+ * 施行されます」ではなく「新しい版があります」で足りる。
+ *
+ * @param newer 置き換えた側の行
+ */
+function newerNote(newer) {
+  const c = newer.correction || {};
+  /*
+   * kind を見る。無ければ enforcedOn の有無で代える。
+   *
+   * kind は後から足してもらった欄なので、古い pack.json にはない。
+   * 「法改正には enforcedOn を必ず付け、訂正には書かない」という取り決めが
+   * あるので、代えが効く。どちらにしても文は読まない。
+   */
+  const kind = c.kind || (c.enforcedOn ? '法改正' : '訂正');
+  const parts = [];
+  if (kind === '法改正') {
+    parts.push('新しい版があります');
+    if (c.reason) parts.push(c.reason);
+    if (c.enforcedOn) parts.push(c.enforcedOn + ' 施行');
+  } else {
+    parts.push('訂正版があります');
+    if (c.reason) parts.push(c.reason);
+    if (c.where) parts.push(c.where);
+    const at = c.publishedAt || (newer.verification || {}).checkedAt;
+    if (at) parts.push(at + ' に直しました');
+  }
+  return parts.join('　');
+}
+
+/*
+ * 取り込んでいる版が置き換えられていると分かっているときに出す帯。
+ *
+ * 分かっていないとき（まだ確かめていない・圏外）は何も出さない。確かめて
+ * いないことを「新しい版は無い」と読み替えてはいけない。
+ */
+function packNewerNote(rec) {
+  const by = packNewer[rec.lawId];
+  if (!by) return '';
+  const owned = state.laws.some(l => l.lawId === PACK_PREFIX + by.sha256);
+  return '<span class="warn" title="' + esc(newerNote(by)) + '">'
+    + esc(newerNote(by))
+    + (owned ? '' : '　規則パックから取り込めます')
+    + '</span>';
+}
+
 /* ------------------------------------------------------- 追加の画面の一覧 */
 
 /*
@@ -342,15 +546,26 @@ function renderPackList() {
      */
     const kind = (r.source && r.source.kind) || '';
     const nyf = ((r.legalVersion || {}).amendmentsNotYetInForce || []).length;
+    /*
+     * 置き換えられた版は、隠さずに印を付けて残す。
+     *
+     * 隠すと、その版をすでに取り込んでいる人が「新しい版がある」と気づけない。
+     * 一覧に出ているからこそ、本文の末尾で知らせたことと繋がる（XML化の側の
+     * 言うとおりで、こちらの当初案より良い）。
+     *
+     * ただし取り込みはさせない。古い版を新しく取り込む理由が無い。
+     */
+    const by = (got.superseded || new Map()).get(r.sha256);
     d.innerHTML = '<div class="info"><div class="name">' + esc(r.lawTitle || r.workId)
       + '</div><div class="sub">' + esc(r.lawNum || '')
       + (kind ? '　' + esc(kind) : '')
       + (nyf ? '　未施行の改正あり' : '')
+      + (by ? '<br><span class="old-ver">置き換えられた版　' + esc(newerNote(by)) + '</span>' : '')
       + '</div></div>'
-      + '<button ' + (owned ? 'disabled' : '') + '>'
-      + (owned ? '取込済' : '取り込む') + '</button>';
+      + '<button ' + (owned || by ? 'disabled' : '') + '>'
+      + (by ? '古い版' : owned ? '取込済' : '取り込む') + '</button>';
     const btn = d.querySelector('button');
-    if (!owned) {
+    if (!owned && !by) {
       btn.onclick = async () => {
         btn.disabled = true;
         btn.textContent = '取得中…';
