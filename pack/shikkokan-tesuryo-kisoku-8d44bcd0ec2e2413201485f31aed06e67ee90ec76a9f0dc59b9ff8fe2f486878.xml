@@ -1,0 +1,2107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/20260701sikkoukantesuuryoukisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「同八年六月一〇日同第一〇号」（令和八年六月一〇日最高裁判所規則第一〇号）
+  範囲: 本則48条（削除条の範囲を1要素として数える）、附則72本（抄を含む）、本文中の表3点。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。改正規則（平成十五年規則第四号）の本文抄の見出しはPDFで「附則」の文字を欠くが（紙面で確認）、印字のまま附則として収録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="41" Num="15" PromulgateMonth="12" PromulgateDay="28" LawType="Rule">
+  <LawNum>昭和四十一年十二月二十八日最高裁判所規則第十五号</LawNum>
+  <LawBody>
+    <LawTitle>執行官の手数料及び費用に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（目的）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、執行官法（昭和四十一年法律第百十一号。以下「法」という。）の規定により、執行官の受ける手数料及び職務の執行に要する費用の額等について定めることを目的とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（定義）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則において「休日」とは、日曜日その他の一般の休日をいい、「夜間」とは、午後七時から翌日の午前七時までをいう。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則において「臨場前中止」とは、次の各号の一に該当した後、執行官が職務を行うべき場所に臨む前に、法第八条第二項第二号に掲げる事由により、事務の実施を取りやめたことをいう。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>職務を行うべき期日を当事者の双方又は一方に通知したとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>売却又は内覧の実施の日時及び場所が公告されたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>執行官が職務を行うべき場所に臨むため出発したとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則において「臨場後中止」とは、執行官が職務を行なうべき場所に臨んだ後に、法第八条第二項第二号に掲げる事由により、事務の実施を取りやめたことをいう。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則において「中止」とは、臨場前中止及び臨場後中止をいう。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則において「基本執務時間」とは、その執務に要した時間のうちの最初の一時間をいう。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（文書の送達）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>文書の送達（法第八条第一項第一号）の手数料の額は、一件につき千八百円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の事務の実施が、申出に基づき、休日又は夜間に行われたときは、前項の手数料の額に二千四百円を加算する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前二項の規定は、法第八条第二項第一号の場合についても、適用があるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3_2">
+        <ArticleCaption>（訴えの提起前における証拠収集の処分）</ArticleCaption>
+        <ArticleTitle>第三条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟法（平成八年法律第百九号）第百三十二条の四第一項第四号の処分による物の形状、占有関係その他の現況の調査（法第八条第一項第一号の二）の手数料の額は、二万六千五百円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の現況の調査を行うべき場所に臨んだ場合において、執行官の責めに帰することができない事由によつて同項の現況の調査を実施することができなかつたとき（法第八条第二項第一号）の手数料の額は、九千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3_3">
+        <ArticleCaption>（査証の援助）</ArticleCaption>
+        <ArticleTitle>第三条の三</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特許法（昭和三十四年法律第百二十一号）第百五条の二の二第三項の規定による援助（法第八条第一項第一号の三）の手数料の額は、一万一千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の援助を行うべき場所に臨んだ場合において、執行官の責めに帰することができない事由によつて同項の援助を実施することができなかつたとき（法第八条第二項第一号）の手数料の額は、四千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の援助を命じた裁判所は、査証の実施に必要な事項についての協議の状況その他の事情により、第一項又は前項の手数料の額（第三十二条又は第三十三条の規定の適用がある場合にあつては、これらの規定による加算後の額）に、それぞれ第一項又は前項に定める金額の範囲内の額を加算することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（差押え等）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>差押え又は仮差押えの執行（法第八条第一項第二号）の手数料の額は、この規則に別段の定めがある場合を除き、執行すべき債権の額に応じて、それぞれ次の表に定める額とする。執行すべき債権の額が定まつていない場合の手数料の額は、一万五千五百円とする。</Sentence>
+          </ParagraphSentence>
+          <TableStruct>
+            <Table>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>執行すべき債権の額</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>手数料の額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>二十万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>四千円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>二十万円を超え五十万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>六千五百円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>五十万円を超え百万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>八千円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>百万円を超え三百万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>一万五百円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>三百万円を超え千万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>一万三千円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>千万円を超えるもの</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>一万五千五百円</Sentence>
+                </TableColumn>
+              </TableRow>
+            </Table>
+          </TableStruct>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する事務に着手し、その目的を達することができない場合の手数料の額は、三千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（事件の併合等）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法（昭和五十四年法律第四号）第百二十五条第二項（これを準用し、又はその例による場合を含む。）の規定による手続に係る事務を実施する場合（法第八条第一項第三号）又は仮差押えにより保全された債権に基づいて差押えをする場合の手数料の額は、執行すべき債権の額が二十万円以下のときは三千円、その他のときは前条第一項に定める額の二分の一とする。ただし、差押えに係らない物を同時に差し押さえた場合は、前条第一項に定める額による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（換価のための引渡し）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>換価のために動産（民事執行法第百二十二条第一項に規定する動産をいう。第八条第三項、第十二条から第十四条まで及び第二十五条において同じ。）の引渡しを受ける場合（法第八条第一項第四号）の手数料の額は、四千円とする。ただし、引渡しを受けた際直ちに換価を行つたときは、第八条又は第九条の手数料のみを受ける。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項本文に規定する事務に着手し、その目的を達することができない場合の手数料の額は、二千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（配当要求）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>配当要求に係る事務（法第八条第一項第五号）の手数料の額は、千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（売却の実施等）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>売却の実施（法第八条第一項第六号）の手数料の額は、売却金額に応じて、それぞれ次の表に定める額とする。</Sentence>
+          </ParagraphSentence>
+          <TableStruct>
+            <Table>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>売却金額</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>手数料の額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>一万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>千七百円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>一万円を超え五万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>三千円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>五万円を超え十万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>四千円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>十万円を超え五百万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>四千円に十万円を超える部分が十万円に達するごとに千八百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>五百万円を超え千万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>九万二千二百円に五百万円を超える部分が十万円に達するごとに千三百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>千万円を超え三千万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>十五万七千二百円に千万円を超える部分が十万円に達するごとに九百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>三千万円を超え五千万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>三十三万七千二百円に三千万円を超える部分が十万円に達するごとに六百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>五千万円を超え一億円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>四十五万七千二百円に五千万円を超える部分が十万円に達するごとに四百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>一億円を超え三億円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>六十五万七千二百円に一億円を超える部分が百万円に達するごとに二千円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>三億円を超え五億円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>百五万七千二百円に三億円を超える部分が百万円に達するごとに千円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>五億円を超え十億円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>百二十五万七千二百円に五億円を超える部分が百万円に達するごとに五百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>十億円を超えるもの</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>百五十万七千二百円に十億円を超える部分が千万円に達するごとに千五百円を加算した額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn colspan="2">
+                  <Sentence>備考売却金額が十万円を超え一億円以下の場合において、その金額に十万円に達しない端数があるときは、これを十万円とみなして手数料の額を算定するものとする。</Sentence>
+                </TableColumn>
+              </TableRow>
+            </Table>
+          </TableStruct>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>売却を実施した場合において、適法な買受けの申出がないときは、その手数料の額は、千七百円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前二項の規定は、執行官以外の者に動産の売却を実施させた場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（手形の支払のための提示等）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>手形、小切手その他の金銭の支払を目的とする有価証券について支払のための提示又は支払の請求をする場合（法第八条第一項第六号）の手数料の額は、三千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する事務を行つた場合において、支払があつたときは、その金額に応じて、前項の額に第二十三条第一項の表に定める手数料の額を加算する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="10">
+        <ArticleCaption>（動産の引渡し）</ArticleCaption>
+        <ArticleTitle>第十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>動産（有価証券を含み、人の居住する船舶等を除く。）を債務者から取り上げて債権者に引き渡す場合（法第八条第一項第七号）の手数料の額は、八千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="11">
+        <ArticleCaption>（不動産の引渡し等）</ArticleCaption>
+        <ArticleTitle>第十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>不動産又は人の居住する船舶等について債務者の占有を解いて債権者にその占有を取得させる場合（法第八条第一項第八号）の手数料の額は、一万七千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="12">
+        <ArticleCaption>（点検）</ArticleCaption>
+        <ArticleTitle>第十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>差押え又は仮差押えの執行をした動産その他執行官の保管している物を債務者その他の者に保管させた場合におけるその状況の点検（法第八条第一項第九号）の手数料の額は、三千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="13">
+        <ArticleCaption>（差押物の引渡命令の執行）</ArticleCaption>
+        <ArticleTitle>第十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第百二十七条第一項（これを準用し、又はその例による場合を含む。）の規定による決定により動産を取り上げる場合（法第八条第一項第十号）の手数料の額は、八千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="14">
+        <ArticleCaption>（執行処分の取消しによる物の引渡し）</ArticleCaption>
+        <ArticleTitle>第十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>差押え又は仮差押えの執行をした動産その他執行官の保管している物を執行処分の取消しとして債務者その他これを受け取る権利を有する者に引き渡す場合（法第八条第一項第十一号）の手数料の額は、三千円とする。ただし、通知により引き渡す場合の手数料の額は、六百円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="15">
+        <ArticleCaption>（民事執行法の規定による援助）</ArticleCaption>
+        <ArticleTitle>第十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第六条第二項又は第九十六条第二項（これらを準用し、又はその例による場合を含む。）の規定により援助をする場合（法第八条第一項第十二号）の手数料の額は、一万千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="16">
+        <ArticleCaption>（財産の封印）</ArticleCaption>
+        <ArticleTitle>第十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>破産法（平成十六年法律第七十五号）第百五十五条第一項の規定による財産の封印をする場合（法第八条第一項第十三号）の手数料の額は、八千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の封印を除去する場合（法第八条第一項第十三号）の手数料の額は、前項に定める額の二分の一とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="17">
+        <ArticleCaption>（拒絶証書の作成等）</ArticleCaption>
+        <ArticleTitle>第十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>拒絶証書の作成（法第八条第一項第十四号）又は債務者が抵当証券の所持人に対して支払をしない旨の証明（同項第十五号）の手数料の額は、一件につき七千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="18">
+        <ArticleCaption>（現況調査）</ArticleCaption>
+        <ArticleTitle>第十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>不動産又は船舶の形状、占有関係その他の現況の調査（法第八条第一項第十六号）の手数料の額は、四万三千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>現況調査を命じた裁判所は、不動産又は船舶の状況その他の事情により、別に最高裁判所が定める基準による額を前項の額に加算して手数料の額を定めることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="19">
+        <ArticleCaption>（差押不動産等の保全処分）</ArticleCaption>
+        <ArticleTitle>第十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第五十五条第一項（第二号又は第三号に係る部分に限る。）、第六十八条の二第一項、第七十七条第一項（第二号又は第三号に係る部分に限る。）又は第百八十七条第一項（同法第五十五条第一項第二号又は第三号に掲げる保全処分又は公示保全処分を命ずる場合に限る。）（これらを準用し、又はその例による場合を含む。）の規定による決定により不動産に対する占有を解いて保管する場合又は保管のため申立人にその占有を取得させる場合（法第八条第一項第十七号）の手数料の額は、一万千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第六十八条の二第一項の規定による決定により保管のため申立人に不動産の占有を取得させた場合におけるその保管状況の点検の手数料の額は、三千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、第一項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="19_2">
+        <ArticleCaption>（内覧の実施）</ArticleCaption>
+        <ArticleTitle>第十九条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>内覧の実施（法第八条第一項第十七号の二）の手数料の額は、二万二千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="20">
+        <ArticleCaption>（船舶国籍証書等の取上げ）</ArticleCaption>
+        <ArticleTitle>第二十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>船舶の国籍を証する文書その他の船舶の航行のために必要な文書を取り上げる場合（法第八条第一項第十八号）の手数料の額は、一万七千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="21">
+        <ArticleCaption>（航空機登録証明書等の取上げ）</ArticleCaption>
+        <ArticleTitle>第二十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条の規定は、航空機登録証明書その他の航空機の運航のために必要な文書を取り上げる場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="22">
+        <ArticleCaption>（自動車の引渡し等）</ArticleCaption>
+        <ArticleTitle>第二十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行規則（昭和五十四年最高裁判所規則第五号）の規定により次の各号に掲げる物の引渡しを受ける場合の手数料の額は、当該各号に定める額とする。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>自動車又は建設機械 八千円</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>小型船舶 一万千円</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行規則の規定により次の各号に掲げる物を回送する場合の手数料の額は、当該各号に定める額とする。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>自動車又は建設機械 八千円</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>小型船舶 一万千円</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、第一項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="23">
+        <ArticleCaption>（任意の弁済金の受領等）</ArticleCaption>
+        <ArticleTitle>第二十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>債務者が任意の弁済として支払つた金銭を受領し、これを債権者に交付する場合の手数料の額は、その金額に応じて、それぞれ次の表に定める額とする。</Sentence>
+          </ParagraphSentence>
+          <TableStruct>
+            <Table>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>弁済金額</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>手数料の額</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>十万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>五百円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>十万円を超え五十万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>千円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>五十万円を超え百万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>千五百円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>百万円を超え三百万円以下</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>二千五百円</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>三百万円を超えるもの</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>四千円</Sentence>
+                </TableColumn>
+              </TableRow>
+            </Table>
+          </TableStruct>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>債務者が任意の履行として給付した金銭以外の物を受領し、これを債権者に交付する場合の手数料の額は、二千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="24">
+        <ArticleCaption>（手形等の引受けのための提示）</ArticleCaption>
+        <ArticleTitle>第二十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第九条第一項の規定は、同項の有価証券を引受けのため提示する場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="25">
+        <ArticleCaption>（見分の立会い）</ArticleCaption>
+        <ArticleTitle>第二十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>売却すべき動産を一般の見分に供する場合において、その見分に立ち会うときの手数料の額は、四千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="26">
+        <ArticleCaption>（配当の実施）</ArticleCaption>
+        <ArticleTitle>第二十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>配当を実施する場合の手数料の額は、三千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="26_2">
+        <ArticleCaption>（明渡しの催告）</ArticleCaption>
+        <ArticleTitle>第二十六条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第百六十八条の二第一項の規定による明渡しの催告をする場合の手数料の額は、一万千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="26_3">
+        <ArticleCaption>（子の監護を解くために必要な行為）</ArticleCaption>
+        <ArticleTitle>第二十六条の三</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第百七十五条第一項又は第二項（国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成二十五年法律第四十八号）第百四十条第一項において準用する場合を含む。）の規定による子の監護を解くために必要な行為をする場合の手数料の額は、二万八千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する事務に着手し、民事執行規則第百六十三条第二号又は第三号（国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則（平成二十五年最高裁判所規則第五号）第九十一条第一項において準用する場合を含む。）に掲げる事由によつてその目的を達することができない場合の手数料の額は、八千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する場合を除き、第一項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="27">
+        <ArticleCaption>（告知書等の送付）</ArticleCaption>
+        <ArticleTitle>第二十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>告知書又は催告書の送付（法附則第九条）の手数料の額は、一件につき千八百円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の事務の実施が、申出に基づき、休日又は夜間に行われたときは、前項の手数料の額に二千四百円を加算する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前二項の規定は、法附則第九条第二項において準用する法第八条第二項第一号の場合についても、適用があるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="28">
+        <ArticleCaption>（類似する事務の手数料）</ArticleCaption>
+        <ArticleTitle>第二十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第一条第一号に掲げる事務で、第三条から前条までに該当しないものについては、類似する事務について定める手数料と同額の手数料を受ける。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="29">
+        <ArticleCaption>（代替執行）</ArticleCaption>
+        <ArticleTitle>第二十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第百七十一条第一項の規定による決定に基づく執行（法第八条第一項第二十号）及びその例による仮処分その他の保全処分の執行の手数料の額は、一万七千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="30">
+        <ArticleCaption>（保全処分の執行）</ArticleCaption>
+        <ArticleTitle>第三十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>仮処分その他の保全処分の執行で、第三条から前条までのいずれにも該当しないものの手数料の額は、一万千円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条第二項の規定は、前項に規定する事務について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="31">
+        <ArticleCaption>（中止の場合における差押え等の手数料）</ArticleCaption>
+        <ArticleTitle>第三十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>中止の場合における第四条第一項、第五条、第六条第一項、第八条第一項、第九条第一項、第十条第一項、第十一条第一項、第十二条、第十三条第一項、第十四条から第十七条まで、第十九条第一項、第十九条の二第一項、第二十条第一項（第二十一条において準用する場合を含む。）、第二十二条第一項各号若しくは第二項各号、第二十四条から第二十六条の二第一項まで、第二十六条の三第一項、第二十八条、第二十九条第一項又は前条第一項の手数料の額は、臨場前中止の場合においては九百円とし、臨場後中止の場合においては千七百円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="32">
+        <ArticleCaption>（長時間の執務）</ArticleCaption>
+        <ArticleTitle>第三十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第三条の二第一項、第三条の三第一項、第四条から第六条まで、第十条から第十六条まで、第十九条から第二十二条まで、第二十五条から第二十六条の三まで又は第二十八条から第三十条までに係る執務が基本執務時間を超えるときは、これらの規定に定める手数料の額に、基本執務時間を超える部分が一時間に達するごとに、その手数料の額の十分の三を加算する。ただし、執務時間が基本執務時間を超える場合において、その時間に一時間に達しない端数があるときは、これを一時間とみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="33">
+        <ArticleCaption>（休日等の執務）</ArticleCaption>
+        <ArticleTitle>第三十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条に掲げる規定に係る執務が基本執務時間を超えない場合において、その全部又は一部が休日又は夜間に行われたときは、各執務の手数料の額にその二分の一を加算する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条に掲げる規定に係る執務が基本執務時間を超える場合において、基本執務時間内の執務の全部又は一部が休日又は夜間に行われたときは、各執務の手数料の額にその二分の一を加算し、基本執務時間を超えた執務の全部又は一部が休日又は夜間に行われたときは、その休日又は夜間にわたつた時間に係る前条の加算額にその二分の一を加算する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第三条の二第一項、第三条の三第一項、第四条第一項、第五条、第六条第一項、第十条第一項、第十一条第一項、第十二条、第十三条第一項、第十四条から第十七条まで、第十九条第一項、第十九条の二第一項、第二十条第一項、第二十一条、第二十二条第一項若しくは第二項、第二十四条から第二十六条の二第一項まで、第二十六条の三第一項、第二十八条、第二十九条第一項又は第三十条第一項に定める事務の臨場後中止の場合において、職務を行うための臨場が休日又は夜間に行われたときは、各事務の臨場後中止の場合について定める手数料の額にその二分の一を加算する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="33_2">
+        <ArticleCaption>（その他の加算）</ArticleCaption>
+        <ArticleTitle>第三十三条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条、第十条、第十一条、第十三条、第十九条から第二十二条まで（第十九条第二項及び第二十二条第二項を除く。）、第二十六条の二、第二十六条の三、第二十九条又は第三十条に係る執務が次の各号に掲げる事由に該当するときは、各執務の手数料の額に、それぞれ当該各号に定める額を加算する。ただし、第四条第一項、第十条第一項、第十一条第一項、第十三条第一項、第十九条第一項、第十九条の二第一項、第二十条第一項、第二十一条、第二十二条第一項、第二十六条の二第一項、第二十六条の三第一項、第二十九条第一項又は第三十条第一項に規定する事務に着手し、その目的を達することができない場合においては、その加算して得た額は、これらの規定に定める手数料の額を超えることができない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>民事執行法第六条第一項（これを準用する場合を含む。）又は国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十条第二項の警察上の援助を受けたとき 各執務の手数料の額の十分の四</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>民事執行法第七条（これを準用する場合を含む。以下この号及び第五号において同じ。）に規定する立会人を立ち会わせたとき（前号、次号又は第五号（未成年者の心理に関する専門的な知見を有する者を同条の規定により立ち会わせたときに限る。）に該当するときを除く。） 各執務の手数料の額の十分の二</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>差押え、引渡し又は立入りに当たり、閉鎖した戸又は金庫その他の容器を開くため、執行官規則（昭和四十一年最高裁判所規則第十号）第十二条の技術者を使用したとき 各執務の手数料の額の十分の三</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>第十一条第一項、第十九条第一項又は第三十条第一項に規定する事務に関し、不動産又は人の居住する船舶等の占有者が住居の確保に係る支援その他の必要な支援を受けることができるようにするため、民事執行法第十八条第一項（これを準用する場合を含む。）の援助を受けたとき 各執務の手数料の額の十分の四</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>第二十六条の三第一項に規定する事務に関し、未成年者の心理に関する専門的な知見を有する者を民事執行法第七条の規定により立ち会わせ、若しくは執行官規則第十二条の規定により使用し、又は国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十二条の規定による立会いその他の必要な協力を受けたとき 各執務の手数料の額の十分の四</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="34">
+        <ArticleCaption>（記録等の閲覧）</ArticleCaption>
+        <ArticleTitle>第三十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十七条第三項に定める手数料の額は、一回につき百五十円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="35">
+        <ArticleCaption>（書記料）</ArticleCaption>
+        <ArticleTitle>第三十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事執行法第百六十一条第六項（これを準用し、又はその例による場合を含む。）に規定する証書の作成の費用（法第十条第一項第十号）及び法第十八条第二項に定める書記料の額は、用紙一枚につき百五十円とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="36">
+        <ArticleCaption>（旅費）</ArticleCaption>
+        <ArticleTitle>第三十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>執行官の旅費（法第十条第一項第十一号）は、一キロメートルにつき三十七円以内の割合において所属の地方裁判所が定める額による。ただし、一キロメートルに満たないときも、一キロメートルとみなして算定する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>公務上の必要又は天災その他やむを得ない事情により前項に定める割合によつて算定した額の旅費で旅行の実費を支弁することができない場合には、同項の規定にかかわらず、執行官の旅費は、実費額の範囲内において所属の地方裁判所が定める額による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="37">
+        <ArticleCaption>（宿泊料）</ArticleCaption>
+        <ArticleTitle>第三十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>執行官の宿泊料（法第十条第一項第十一号）は、一般職の職員の給与に関する法律（昭和二十五年法律第九十五号。第四十条第二項において「給与法」という。）第六条第一項第一号イに規定する行政職俸給表（一）による職務の級が五級である者について国家公務員等の旅費に関する法律（昭和二十五年法律第百十四号。第四十条第二項において「旅費法」という。）及び国家公務員等の旅費に関する法律施行令（令和六年政令第三百六号。同項において「旅費法施行令」という。）第九条本文の規定により算定した宿泊費の額と同額とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="38">
+        <ArticleCaption>（立会人の日当等）</ArticleCaption>
+        <ArticleTitle>第三十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>立会人の日当（法第十条第一項第三号）は、五千八百二十円以内とし、執行官が状況により額を定めて支給する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>立会人の旅費（法第十条第一項第三号）については、立会人を一キロメートル以上の地から呼んだ場合に支給するものとし、民事訴訟費用等に関する法律（昭和四十六年法律第四十号）及び民事訴訟費用等に関する規則（昭和四十六年最高裁判所規則第五号）の規定中証人の旅費に関する規定を準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="39">
+        <ArticleCaption>（法第十条第一項第十二号の最高裁判所で定める費用）</ArticleCaption>
+        <ArticleTitle>第三十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十条第一項第十二号の最高裁判所で定める費用は、次のとおりとする。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>評価人の日当、旅費、宿泊料及び報酬</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>執行裁判所に差し出すべき届書の作成の費用</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>入札又は競り売り以外の方法による売却に必要な費用</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="40">
+        <ArticleCaption>（評価人の日当等）</ArticleCaption>
+        <ArticleTitle>第四十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一号の日当は、八千三百五十円以内とし、執行官が状況により額を定めて支給する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一号の宿泊料は、評価を行うため宿泊を要した場合に支給するものとし、その額は、給与法第六条第一項第一号イに規定する行政職俸給表（一）による職務の級が二級である者について旅費法及び旅費法施行令第九条本文の規定により算定した宿泊費の額の範囲内において執行官が定める。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一号の報酬は、実費の額による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第三十八条第二項の規定は、前条第一号の旅費について準用する。この場合において、同項中「証人」とあるのは、「鑑定人」と読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="41">
+        <ArticleCaption>（届書作成費用）</ArticleCaption>
+        <ArticleTitle>第四十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第三十五条の規定は、第三十九条第二号の費用について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="42">
+        <ArticleCaption>（入札又は競り売り以外の方法による売却費用）</ArticleCaption>
+        <ArticleTitle>第四十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第三十九条第三号の費用の額は、実費の額による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、執行官法の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>自動車強制執行等に関する執行吏手数料等規則（昭和二十七年最高裁判所規則第七号）及び航空機強制執行等に関する執行吏手数料等規則（昭和二十八年最高裁判所規則第十八号）は、廃止する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四三年四月三〇日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十三年五月七日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四四年五月一六日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十四年五月二十三日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四四年九月一〇日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十四年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に、完了し、又は続行することを要しないこととなつた各個の事務及びこの規則の施行前に着手されこの規則の施行の際まだ完了していない各個の事務に係る手数料及び費用の額については、なお従前の例による。この規則の施行前に中止の場合に該当した各個の事務に係る手数料の額についても、同様とする。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四五年五月一五日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十五年五月二十二日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四六年三月二九日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十六年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四六年六月一四日最高裁判所規則第七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に、完了し、又は続行することを要しないこととなつた各個の事務及びこの規則の施行前に着手されこの規則の施行の際まだ完了していない各個の事務に係る手数料及び費用の額については、なお従前の例による。この規則の施行前に執行官法（昭和四十一年法律第百十一号）第八条第二項各号に掲げる場合に該当した各個の事務に係る手数料及び費用の額についても、同様とする。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四七年六月二四日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十七年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四七年一〇月三〇日最高裁判所規則第一一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十七年十一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に、完了し、又は続行することを要しないこととなつた各個の事務及びこの規則の施行前に着手されこの規則の施行の際まだ完了していない各個の事務に係る手数料の額については、なお従前の例による。この規則の施行前に執行官法（昭和四十一年法律第百十一号）第八条第二項各号に掲げる場合に該当した各個の事務に係る手数料の額についても、同様とする。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四八年六月一一日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十八年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四九年九月一四日最高裁判所規則第七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十九年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に、完了し、又は続行することを要しないこととなつた各個の事務及びこの規則の施行前に着手されこの規則の施行の際まだ完了していない各個の事務に係る手数料の額については、なお従前の例による。この規則の施行前に執行官法（昭和四十一年法律第百十一号）第八条第二項各号に掲げる場合に該当した各個の事務に係る手数料の額についても、同様とする。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五〇年一一月一五日最高裁判所規則第七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五一年五月一五日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十一年六月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五一年六月一六日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十一年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五二年六月一三日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十二年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五二年七月一五日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十二年八月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の際まだ完了していない事務に係る手数料及び費用の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五三年六月一三日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十三年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五四年三月三一日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十四年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五四年六月一八日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十四年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五四年九月二〇日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十四年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の際まだ完了していない事務に係る手数料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五五年五月六日最高裁判所規則第三号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事執行法（昭和五十四年法律第四号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="3">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>３</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に申し立てられた民事執行の事件に関し執行官が受ける手数料及び支払又は償還を受ける費用の額については、次項及び第五項に規定するものを除き、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="4">
+        <ParagraphNum>４</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>第七条の規定による改正後の執行官の手数料及び費用に関する規則（以下「新手数料等規則」という。）第六条第二項、第九条、第二十九条第二項及び第三十条第二項の規定に係る執務に相当する次に掲げる法律又は最高裁判所規則の規定によりこの規則の施行後に行つた執務は、民事執行法又は民事執行規則（昭和五十四年最高裁判所規則第五号）の相当規定によつてした執務とみなし、新手数料等規則の規定を適用する。</Sentence>
+        </ParagraphSentence>
+        <Item Num="1">
+          <ItemTitle>一</ItemTitle>
+          <ItemSentence>
+            <Sentence>民事執行法附則第三条の規定による改正前の民事訴訟法（明治二十三年法律第二十九号）</Sentence>
+          </ItemSentence>
+        </Item>
+        <Item Num="2">
+          <ItemTitle>二</ItemTitle>
+          <ItemSentence>
+            <Sentence>民事執行法附則第二条の規定による廃止前の競売法（明治三十一年法律第十五号）</Sentence>
+          </ItemSentence>
+        </Item>
+        <Item Num="3">
+          <ItemTitle>三</ItemTitle>
+          <ItemSentence>
+            <Sentence>民事執行規則附則第二条の規定による廃止前の同条各号に掲げる最高裁判所規則</Sentence>
+          </ItemSentence>
+        </Item>
+        <Item Num="4">
+          <ItemTitle>四</ItemTitle>
+          <ItemSentence>
+            <Sentence>民事執行規則附則第三条の規定による改正前の執行官手続規則</Sentence>
+          </ItemSentence>
+        </Item>
+      </Paragraph>
+      <Paragraph Num="5">
+        <ParagraphNum>５</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>新手数料等規則第三十二条に掲げる規定（第六条第二項、第二十九条第二項及び第三十条第二項を除く。）に係る執務に相当する前項各号に掲げる法律又は最高裁判所規則の規定によりこの規則の施行後に行つた執務が基本執務時間を超えるときは、当該執務を民事執行法又は民事執行規則の相当規定によつてした執務とみなし、新手数料等規則第三十二条の規定を適用する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五五年六月一六日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十五年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五六年六月一五日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五七年六月一四日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十七年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因の生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五八年九月二二日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十八年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の際まだ完了していない事務に係る手数料及び費用の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五九年六月一八日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十九年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和六〇年六月一七日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和六十年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和六〇年一二月二一日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日等）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。ただし、第六条の規定は、昭和六十一年一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="3">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>３</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給又は償還を受ける原因となる事実の生じた保護司及び児童委員の旅費、執行官の宿泊料並びに民事調停委員及び家事調停委員の旅費、日当及び宿泊料については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和六一年六月一六日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和六十一年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和六二年六月一五日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和六十二年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和六二年一二月九日最高裁判所規則第九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和六十三年一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前にした売却の実施の手数料の額は、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和六三年六月一三日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和六十三年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成元年六月一四日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成元年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二年四月二四日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した費用については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二年六月一三日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成二年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二年一〇月二四日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成二年十一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の際まだ完了していない事務に係る手数料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成三年六月一二日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成三年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成四年六月一〇日最高裁判所規則第七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成四年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成五年六月一〇日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成五年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成六年六月三〇日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成六年九月一日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成七年六月七日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成七年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年六月六日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成八年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年七月一五日最高裁判所規則第四号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事執行法の一部を改正する法律（平成八年法律第百八号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成九年二月二七日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成九年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に完了していない事務（売却の実施に係る事務を除く。）に係る手数料及びこの規則の施行前にした売却の実施の手数料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成九年六月五日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成九年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一〇年六月一日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一〇年一一月一九日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、競売手続の円滑化等を図るための関係法律の整備に関する法律（平成十年法律第百二十八号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一一年六月九日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十一年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一一年六月一五日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十一年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に完了していない現況の調査の手数料及びこの規則の施行前にした売却の実施の手数料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一二年六月九日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十二年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一二年七月一二日最高裁判所規則第九号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十三年一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一四年二月一五日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十四年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>（平成一五年二月一九日最高裁判所規則第四号）抄</SupplProvisionLabel>
+      <Paragraph Num="3">
+        <ParagraphCaption>（執行官の手数料及び費用に関する規則の一部改正に伴う経過措置）</ParagraphCaption>
+        <ParagraphNum>３</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前にされた更生手続開始の申立てに係る更生事件における執行官が受ける手数料の額については、前条の規定による改正後の執行官の手数料及び費用に関する規則第十六条第一項の規定にかかわらず、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年二月一九日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、会社更生法（平成十四年法律第百五十四号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年六月一六日最高裁判所規則第一三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十五年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年一一月一二日最高裁判所規則第一九号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事訴訟法等の一部を改正する法律（平成十五年法律第百八号。次項において「法」という。）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年一一月一二日最高裁判所規則第二二号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、担保物権及び民事執行制度の改善のための民法等の一部を改正する法律（平成十五年法律第百三十四号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一六年六月九日最高裁判所規則第一〇号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一六年一〇月六日最高裁判所規則第一五号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、破産法（平成十六年法律第七十五号。附則第七条において「新破産法」という。）及び破産法の施行に伴う関係法律の整備等に関する法律（平成十六年法律第七十六号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="6">
+        <ParagraphCaption>（執行官の手数料及び費用に関する規則の一部改正に伴う経過措置）</ParagraphCaption>
+        <ParagraphNum>６</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前にされた破産の申立て又はこの規則の施行前に職権でされた破産の宣告に係る破産事件における執行官が受ける手数料の額については、第七条の規定による改正後の執行官の手数料及び費用に関する規則第十六条第一項の規定にかかわらず、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年二月八日最高裁判所規則第二号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、会社法（平成十七年法律第八十六号）の施行の日（次項において「施行日」という。）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（執行官の手数料及び費用に関する規則の一部改正に伴う経過措置）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>会社法の施行に伴う関係法律の整備等に関する法律（平成十七年法律第八十七号）第六十四条の規定による改正前の商法（明治三十二年法律第四十八号）第三百九十条第二項（同法又は他の法律において準用する場合を含む。）の規定による財産の調査等に関する援助をする場合（施行日前に当該援助をした場合を含む。）において執行官が受ける手数料の額については、第一条の規定による改正後の執行官の手数料及び費用に関する規則第十六条第一項の規定にかかわらず、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年三月二二日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十八年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給又は償還を受ける原因となる事実の生じた保護司及び児童委員の旅費、執行官の宿泊料並びに民事調停委員及び家事調停委員の旅費、日当及び宿泊料については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二五年一一月一三日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成二十五年法律第四十八号）の施行の日〔平成二六年四月一日〕から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和元年七月九日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和元年八月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和元年一一月二七日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事執行法及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律の一部を改正する法律（令和元年法律第二号。以下「民事執行法等改正法」という。）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和二年一月一〇日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事執行法及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律の一部を改正する法律（令和元年法律第二号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に完了していない執行官の事務（売却の実施に係る事務を除く。）に係る手数料及びこの規則の施行前にした売却の実施の手数料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和二年四月二二日最高裁判所規則第七号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、特許法等の一部を改正する法律（令和元年法律第三号）附則第一条第三号に掲げる規定の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年六月一日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和五年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年六月一二日最高裁判所規則第一二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年三月三日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、国家公務員等の旅費に関する法律の一部を改正する法律（令和六年法律第二十二号）の施行の日（令和七年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた旅費、日当及び宿泊料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年六月一一日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和七年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和八年六月一〇日最高裁判所規則第一〇号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和八年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

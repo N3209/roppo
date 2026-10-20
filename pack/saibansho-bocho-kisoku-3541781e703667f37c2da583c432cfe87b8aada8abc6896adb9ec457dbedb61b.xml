@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/saibansyoboutyoukisoku.pdf
+  取得: 2026-10-18
+  反映: PDFに改正履歴の記載なし。掲載された附則の最後は「附則」
+  範囲: 本則3条（削除条の範囲を1要素として数える）、附則1本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="27" Num="21" PromulgateMonth="9" PromulgateDay="1" LawType="Rule">
+  <LawNum>昭和二十七年九月一日最高裁判所規則第二十一号</LawNum>
+  <LawBody>
+    <LawTitle>裁判所傍聴規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判長又は一人の裁判官（以下「裁判長」という。）は、法廷における秩序を維持するため必要があると認めるときは、傍聴につき次に掲げる処置をとることができる。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>傍聴席に相応する数の傍聴券を発行し、その所持者に限り傍聴を許すこと。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>裁判所職員に傍聴人の被服又は所持品を検査させ、危険物その他法廷において所持するのを相当でないと思料する物の持込みを禁じさせること。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>前号の処置に従わない者、児童、相当な衣服を着用しない者及び法廷において裁判所又は裁判官の職務の執行を妨げ又は不当の行状をすることを疑うに足りる顕著な事情が認められる者の入廷を禁ずること。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>傍聴人は、入廷又は退廷に際し、裁判長の命令及び裁判長の命を受けた裁判所職員の指示に従わなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>傍聴人は、法廷において、次に掲げる事項を守らなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>静粛を旨とし、けん騒にわたる行為をしないこと。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>不体裁な行状をしないこと。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>みだりに自席を離れないこと。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>裁判長の命ずること及び裁判長の命を受けた裁判所職員の指示することに従うこと。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

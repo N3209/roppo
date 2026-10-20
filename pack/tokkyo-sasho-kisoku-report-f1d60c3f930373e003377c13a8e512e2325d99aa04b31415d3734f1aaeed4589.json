@@ -1,0 +1,198 @@
+{
+ "workId": "tokkyo-sasho-kisoku",
+ "file": "tokkyo-sasho-kisoku-d7ab1c6a616a2550959b6f59db257e3d71fb76c3f07aff9bc3fdc1617c60d9cd.xml",
+ "sha256": "d7ab1c6a616a2550959b6f59db257e3d71fb76c3f07aff9bc3fdc1617c60d9cd",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2020/20200422sasyoukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "385812e7b1df30ee960aafce2c32fe8578642105b9c1b11b59df6d8051ded397",
+  "pages": 3,
+  "law_num": "令和二年四月二十二日最高裁判所規則第七号",
+  "main_articles": 8,
+  "counts": {
+   "Article": 11,
+   "Paragraph": 26,
+   "Item": 8,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2666,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 2,
+  "kept_spaces": 2,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "quoted-provision-line",
+    "（査証の援助）"
+   ],
+   [
+    "quoted-provision-line",
+    "第三条の三 特許法（昭和三十四年法律第百"
+   ],
+   [
+    "quoted-provision-line",
+    "援助（法第八条第一項第一号の三）の手数料"
+   ],
+   [
+    "quoted-provision-line",
+    "２ 前項の援助を行うべき場所に臨んだ場合"
+   ],
+   [
+    "quoted-provision-line",
+    "事由によつて同項の援助を実施することがで"
+   ],
+   [
+    "quoted-provision-line",
+    "料の額は、四千円とする。"
+   ],
+   [
+    "quoted-provision-line",
+    "３ 第一項の援助を命じた裁判所は、査証の"
+   ],
+   [
+    "quoted-provision-line",
+    "事情により、第一項又は前項の手数料の額（"
+   ],
+   [
+    "quoted-provision-line",
+    "合にあつては、これらの規定による加算後の"
+   ],
+   [
+    "quoted-provision-line",
+    "範囲内の額を加算することができる。"
+   ],
+   [
+    "quoted-provision-line",
+    "第三十二条及び第三十三条第三項中「第三条"
+   ],
+   [
+    "quoted-provision-line",
+    "を加える。"
+   ],
+   [
+    "quoted-amendment-item",
+    "リ 特許法（昭和三十四年法律第百二十一号"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則"
+  ]
+ },
+ "independentCount": {
+  "title": "特許法による査証の手続等に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 12,
+    "xml": 11,
+    "diff": -1,
+    "explained_by_registered_exceptions": -1
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 17,
+    "xml": 15,
+    "diff": -2,
+    "explained_by_registered_exceptions": -2
+   },
+   "Item": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 1,
+    "xml": 0,
+    "diff": -1,
+    "explained_by_registered_exceptions": -1
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {
+   "Article": 1,
+   "ExplicitParagraph": 2,
+   "Item": 0,
+   "Subitem1": 0
+  },
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "特許法による査証の手続等に関する規則",
+  "units": 46,
+  "pdf_lines": 97,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 31,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 1,
+   "quoted_provision_lines": 12
+  },
+  "pdf_body_from_line": 4
+ },
+ "tables": {
+  "title": "特許法による査証の手続等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和2年4月22日 本紙第236号",
+   "rule": "令和2年最高裁判所規則第7号",
+   "title": "特許法による査証の手続等に関する規則",
+   "year": 2020,
+   "no": 7,
+   "url": "https://www.kanpo.go.jp/old/20200422/20200422h00236/20200422h002360003f.html",
+   "found_by": "官報"
+  },
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

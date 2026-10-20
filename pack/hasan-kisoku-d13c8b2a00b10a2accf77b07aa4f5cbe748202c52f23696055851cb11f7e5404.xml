@@ -1,0 +1,3514 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/080521hasannkisoku.pdf
+  取得: 2026-10-06
+  反映: PDF冒頭の改正履歴の最後は「令和七年八月二九日同第一〇号」
+  範囲: 本則98条（削除条の範囲を1要素として数える）、附則8本（抄を含む）、別表1点、本文中の表2点。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。PDFの誤字の訂正・文中の空白の除去あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。文中の空白2か所（紙面で字間のない、元の改行の跡）を除去し別ファイルに記録。38ページ先頭の表の行は紙面で確認のうえ縦結合の下の新しい行とした。附則（平成十七年規則第一号）第一条の各号はPDFで「１２３」と印字されており、号として収録し号名は印字のまま。PDFの誤りを確認のうえ訂正（第六十二条「は、法第百九十一条第一項の配当の手続及び同条第二項の規定による弁済金の交付の手続につ」→「は法第百九十一条第一項の配当の手続及び同条第二項の規定による弁済金の交付の手続につ」。根拠は corrections.py と作業メモ）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="16" Num="14" PromulgateMonth="10" PromulgateDay="6" LawType="Rule">
+  <LawNum>平成十六年十月六日最高裁判所規則第十四号</LawNum>
+  <LawBody>
+    <LawTitle>破産規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条―第十二条の十一）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 破産手続の開始</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 破産手続開始の申立て</SectionTitle>
+          <ArticleRange>（第十三条―第十八条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 破産手続開始の決定</SectionTitle>
+          <ArticleRange>（第十九条―第二十二条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 破産手続の機関</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 破産管財人</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 破産管財人の選任及び監督</SubsectionTitle>
+            <ArticleRange>（第二十三条・第二十四条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 破産管財人の権限等</SubsectionTitle>
+            <ArticleRange>（第二十五条―第二十八条）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 保全管理人</SectionTitle>
+          <ArticleRange>（第二十九条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 破産債権</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 破産債権者の権利</SectionTitle>
+          <ArticleRange>（第三十条・第三十一条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 破産債権の届出</SectionTitle>
+          <ArticleRange>（第三十二条―第三十六条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 破産債権の調査及び確定</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 通則</SubsectionTitle>
+            <ArticleRange>（第三十七条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 書面による破産債権の調査</SubsectionTitle>
+            <ArticleRange>（第三十八条―第四十一条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="3">
+            <SubsectionTitle>第三款 期日における破産債権の調査</SubsectionTitle>
+            <ArticleRange>（第四十二条―第四十四条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="4">
+            <SubsectionTitle>第四款 破産債権の確定</SubsectionTitle>
+            <ArticleRange>（第四十五条）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+        <TOCSection Num="4">
+          <SectionTitle>第四節 債権者集会及び債権者委員会</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 債権者集会</SubsectionTitle>
+            <ArticleRange>（第四十五条の二―第四十八条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 債権者委員会</SubsectionTitle>
+            <ArticleRange>（第四十九条）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="5">
+        <ChapterTitle>第五章 財団債権</ChapterTitle>
+        <ArticleRange>（第五十条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="6">
+        <ChapterTitle>第六章 破産財団の管理</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 破産者の財産状況の調査</SectionTitle>
+          <ArticleRange>（第五十一条―第五十四条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 否認権</SectionTitle>
+          <ArticleRange>（第五十五条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="7">
+        <ChapterTitle>第七章 破産財団の換価</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <ArticleRange>（第五十六条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 担保権の消滅</SectionTitle>
+          <ArticleRange>（第五十七条―第六十二条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="8">
+        <ChapterTitle>第八章 配当</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <ArticleRange>（第六十三条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 最後配当</SectionTitle>
+          <ArticleRange>（第六十四条・第六十五条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 簡易配当</SectionTitle>
+          <ArticleRange>（第六十六条・第六十七条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="4">
+          <SectionTitle>第四節 中間配当</SectionTitle>
+          <ArticleRange>（第六十八条・第六十九条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="9">
+        <ChapterTitle>第九章 破産手続の終了</ChapterTitle>
+        <ArticleRange>（第七十条・第七十一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="10">
+        <ChapterTitle>第十章 外国倒産処理手続がある場合の特則</ChapterTitle>
+        <ArticleRange>（第七十二条・第七十三条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="11">
+        <ChapterTitle>第十一章 免責手続及び復権</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 免責手続</SectionTitle>
+          <ArticleRange>（第七十四条―第七十六条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 復権</SectionTitle>
+          <ArticleRange>（第七十七条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="12">
+        <ChapterTitle>第十二章 雑則</ChapterTitle>
+        <ArticleRange>（第七十八条―第八十六条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（申立て等の方式）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>破産手続等（破産法（平成十六年法律第七十五号。以下「法」という。）第三条に規定する破産手続等をいう。以下同じ。）に関する申立て、届出、申出及び裁判所に対する報告は、特別の定めがある場合を除き、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定にかかわらず、特別の定めがある場合を除き、破産管財人（法第二条第十二項に規定する破産管財人をいう。以下同じ。）が期日においてする前項の申立ては、口頭ですることができる。ただし、次に掲げる申立てについては、この限りでない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第百五十六条第一項の規定による破産財団に属する財産の引渡命令の申立て</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第百七十三条第一項に規定する否認の請求</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第百七十七条第一項の規定による役員の財産に対する保全処分の申立て</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第百七十八条第一項の規定による役員責任査定決定の申立て</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二百四十四条の十一第三項において準用する法第百七十七条第一項の規定による受託者等又は会計監査人の財産に対する保全処分の申立て</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二百四十四条の十一第三項において準用する法第百七十八条第一項の規定による受託者等又は会計監査人の責任に基づく損失のてん補又は原状の回復の請求権の査定の裁判の申立て</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の規定にかかわらず、裁判所は、破産手続等の円滑な進行を図るために必要があると認めるときは、特別の定めがある場合を除き、口頭で同項の報告をすることを許可することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（申立書の記載事項等）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>破産手続等に関する申立書（破産手続開始の申立書（法第二十一条第一項に規定する破産手続開始の申立書をいう。以下同じ。）を除く。）には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>当事者の氏名又は名称及び住所並びに法定代理人の氏名及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>申立ての趣旨</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立書には、同項各号に掲げる事項を記載するほか、次に掲げる事項を記載するものとする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>申立てを理由づける具体的な事実</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>立証を要する事由ごとの証拠</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>申立人又は代理人の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の申立書には、立証を要する事由についての証拠書類の写しを添付するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第百二十五条第一項に規定する破産債権査定申立て、法第百七十三条第一項に規定する否認の請求、法第百七十八条第一項の規定による役員責任査定決定の申立て又は法第二百四十四条の十一第三項において準用する法第百七十八条第一項の規定による受託者等若しくは会計監査人の責任に基づく損失のてん補若しくは原状の回復の請求権の査定の裁判の申立てをする者は、当該申立てをする際、申立書及び証拠書類の写しを相手方に送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所（破産裁判所（法第二条第三項に規定する破産裁判所をいう。以下同じ。）を含む。）は、必要があると認めるときは、破産手続開始の申立てその他の破産手続等に関する申立てをした者に対し、破産財団（法第二条第十四項に規定する破産財団をいう。以下同じ。）に属する財産（破産手続開始前にあっては、債務者の財産）に関する権利で登記又は登録がされたものについての登記事項証明書又は登録原簿に記載されている事項を証明した書面を提出させることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（電磁的方法による情報の提供等）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所（破産裁判所を含む。以下この項において同じ。）は、書面を裁判所に提出した者又は提出しようとする者が当該書面に記録されている情報の内容を記録した電磁的記録（電子的方式、磁気的方式その他人の知覚によっては認識することができない方式で作られる記録であって、電子計算機による情報処理の用に供されるものをいう。以下同じ。）を有している場合において、必要があると認めるときは、その者に対し、当該電磁的記録に記録された情報を電磁的方法（電子情報処理組織を使用する方法その他の情報通信の技術を利用する方法をいう。第四十六条第一項第二号において同じ。）であって裁判所の定めるものにより裁判所に提供することを求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、利害関係人の閲覧に供するため必要があると認めるときは、書面を裁判所に提出した者又は提出しようとする者に対し、その写しを提出することを求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（調書）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>破産手続等における調書（口頭弁論の調書を除く。）は、特別の定めがある場合を除き、作成することを要しない。ただし、裁判長が作成を命じたときは、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（即時抗告に係る事件記録の送付・法第九条）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>即時抗告があった場合において、裁判所が破産手続等に係る事件の記録を送付する必要がないと認めたときは、破産裁判所の裁判所書記官は、抗告事件の記録のみを抗告裁判所の裁判所書記官に送付すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定により抗告事件の記録が送付された場合において、抗告裁判所が破産手続等に係る事件の記録が必要であると認めたときは、抗告裁判所の裁判所書記官は、速やかに、その送付を破産裁判所の裁判所書記官に求めなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（公告事務の取扱者・法第十条）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>公告に関する事務は、裁判所書記官が取り扱う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（破産管財人による通知事務等の取扱い）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、破産手続（法第二条第一項に規定する破産手続をいう。以下同じ。）の円滑な進行を図るために必要があるときは、破産管財人の同意を得て、破産管財人に書面の送付その他通知に関する事務を取り扱わせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="8">
+          <ArticleCaption>（通知等を受けるべき場所の届出）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>破産債権者（法第二条第六項に規定する破産債権者をいう。以下同じ。）が第三十二条第二項第二号又は第三十五条第一項第二号に規定する通知又は期日の呼出し（以下この条において「通知等」という。）を受けるべき場所を届け出たときは、破産手続及び免責手続（法第三条に規定する免責手続をいう。以下同じ。）において、当該破産債権者に対して書面を送付する方法によってする通知等は、当該届出に係る場所（当該破産債権者が第三十三条第一項の規定により通知等を受けるべき場所の変更を届け出た場合にあっては、当該変更後の場所）においてする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項に規定する通知等を受けるべき場所の届出をしない破産債権者が法第十三条において準用する民事訴訟法（平成八年法律第百九号）第百四条第一項の規定により送達を受けるべき場所を届け出たときは、当該破産債権者に対する前項に規定する通知等は、当該届出に係る場所においてする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項又は前項の規定により破産債権者に対してされた通知等が到達しなかったときは、当該破産債権者に対し、その後の通知等をすることを要しない。ただし、法第百九十七条第一項（法第二百九条第三項において準用する場合を含む。）、第二百一条第七項、第二百四条第二項及び第二百十一条の規定による通知については、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所又は裁判所書記官が前項本文の規定により破産債権者に対する通知等をしないときは、裁判所書記官は、当該破産債権者に対してされた通知等が到達しなかった旨を記録上明らかにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleCaption>（官庁等への通知）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>官庁その他の機関の許可（免許、登録その他の許可に類する行政処分を含む。以下この項において同じ。）がなければ開始することができない事業を営む法人について破産手続開始の決定があったときは、裁判所書記官は、その旨を当該機関に通知しなければならない。官庁その他の機関の許可がなければ設立することができない法人について破産手続開始の決定があったときも、同様とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定は、破産手続開始の決定の取消し若しくは破産手続廃止の決定が確定した場合又は破産手続終結の決定があった場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleCaption>（事件に関する文書の閲覧等・法第十一条）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十一条の規定は、この規則（この規則において準用する他の規則を含む。）の規定に基づき、裁判所に提出され、又は裁判所が作成した文書その他の物件について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十一条第一項又は前項に規定する文書その他の物件の閲覧若しくは謄写、その正本、謄本若しくは抄本の交付又はその複製の請求は、当該請求に係る文書その他の物件を特定するに足りる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三条第二項の規定により書面の写しが提出された場合には、当該書面の閲覧又は謄写は、提出された写しによってさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第十二条の十一において準用する民事訴訟規則（平成八年最高裁判所規則第五号）第三十四条第三項本文、第五項本文若しくは第七項又は第五十二条の二十第三項、第五項本文若しくは第六項の規定により文書その他の物件から秘密記載部分又は秘匿事項記載部分を除いたものが提出された場合には、当該文書その他の物件の閲覧、謄写又は複製は、その提出されたものによってさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第十二条の十一において準用する民事訴訟規則第五十二条の二十二第一項の規定により、法第十三条において準用する民事訴訟法第百三十三条第二項の規定による届出に係る書面（以下この項において「秘匿事項届出書面」という。）から法第十三条において準用する民事訴訟法第百三十三条の四第一項の取消し又は同条第二項の許可の裁判に係る部分以外の部分（秘匿事項又は秘匿事項を推知することができる事項が記載された部分に限る。）を除いたものが提出された場合には、秘匿事項届出書面の閲覧又は謄写は、その提出されたものによってさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="11">
+          <ArticleCaption>（支障部分の閲覧等の制限の申立ての方式等・法第十二条）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十二条第一項の申立ては、支障部分（同項に規定する支障部分をいう。以下この条において同じ。）を特定してしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立ては、当該申立てに係る文書その他の物件の提出の際にしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の申立てをするときは、当該申立てに係る文書その他の物件から支障部分を除いたものをも作成し、裁判所に提出しなければならない。ただし、同項の申立てに係る支障部分が当該申立てに係る文書その他の物件の全部であるときは、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十二条第一項の規定による決定においては、支障部分を特定しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の決定があったときは、第一項の申立てをした者は、遅滞なく、当該申立てに係る文書その他の物件から当該決定により特定された支障部分を除いたものを作成し、裁判所に提出しなければならない。ただし、当該申立てにより特定された支障部分と当該決定により特定された支障部分とが同一である場合は、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十二条第一項の規定による決定の一部を取り消す決定が確定したときは、第一項の申立てをした者は、遅滞なく、当該申立てに係る文書その他の物件から当該法第十二条第一項の規定による決定において特定された支障部分のうち当該決定の一部を取り消す決定に係る部分以外の部分を除いたものを作成し、裁判所に提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="7">
+            <ParagraphNum>７</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条第三項の規定は、第三項本文、第五項本文又は前項の規定により文書その他の物件から支障部分を除いたものが提出された場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（催告）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>催告は、これを受けるべき者の所在が明らかでないとき、又はその者が外国に在るときは、催告すべき事項を公告してすれば足りる。この場合において、その公告は、催告すべき事項を記載した書面を裁判所の掲示場その他裁判所内の公衆の見やすい場所に掲示して行う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定による催告は、公告をした日から一週間を経過した時にその効力を生ずる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_2">
+          <ArticleCaption>（送達すべき書類の提出に代えて調書を作成した場合に送達すべき書類）</ArticleCaption>
+          <ArticleTitle>第十二条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>送達すべき書類の提出に代えて調書を作成したときは、その調書の謄本又は抄本を交付して送達をする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_3">
+          <ArticleCaption>（呼出状の公示送達）</ArticleCaption>
+          <ArticleTitle>第十二条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>呼出状の公示送達は、呼出状を掲示場に掲示してする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_4">
+          <ArticleCaption>（決定及び命令の方式）</ArticleCaption>
+          <ArticleTitle>第十二条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定書及び命令書には、決定又は命令をした裁判官が記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_5">
+          <ArticleCaption>（申立書の却下の命令に対する即時抗告等）</ArticleCaption>
+          <ArticleTitle>第十二条の五</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>申立書の却下の命令に対し即時抗告をするときは、抗告状には、却下された申立書を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定は、抗告状却下の命令に対し即時抗告をする場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_6">
+          <ArticleCaption>（証人の宣誓）</ArticleCaption>
+          <ArticleTitle>第十二条の六</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、証人に宣誓書を朗読させ、かつ、これに署名させなければならない。証人が宣誓書を朗読することができないときは、裁判長は、裁判所書記官にこれを朗読させなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、相当と認めるときは、前項前段の規定にかかわらず、同項前段に規定する署名に代えて、宣誓書に宣誓の趣旨を理解した旨の記載をさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前二項の宣誓書には、良心に従って真実を述べ、何事も隠さず、また、何事も付け加えないことを誓う旨を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_7">
+          <ArticleCaption>（鑑定人の宣誓）</ArticleCaption>
+          <ArticleTitle>第十二条の七</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>鑑定人の宣誓書には、良心に従って誠実に鑑定をすることを誓う旨を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>鑑定人の宣誓は、宣誓書を裁判所に提出する方式によってもさせることができる。この場合における裁判長による宣誓の趣旨の説明及び虚偽鑑定の罰の告知は、これらの事項を記載した書面を鑑定人に送付する方法によって行う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_8">
+          <ArticleCaption>（受命裁判官等の証拠調べの調書）</ArticleCaption>
+          <ArticleTitle>第十二条の八</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>受命裁判官又は受託裁判官の所属する裁判所の裁判所書記官は、第十二条の十一において読み替えて準用する民事訴訟規則第百四十二条の調書に同条の文書の写しを添付することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_9">
+          <ArticleCaption>（更正決定の方式）</ArticleCaption>
+          <ArticleTitle>第十二条の九</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>更正決定は、裁判書の原本及び正本に付記しなければならない。ただし、裁判所は、相当と認めるときは、裁判書の原本及び正本への付記に代えて、決定書を作成し、その正本を当事者に送達することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_10">
+          <ArticleCaption>（特別抗告等を提起する場合における費用の予納）</ArticleCaption>
+          <ArticleTitle>第十二条の十</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十三条において準用する民事訴訟法第三百三十六条第一項の抗告を提起するときは、抗告状の送達に必要な費用のほか、抗告提起通知書及び抗告理由書の送達、裁判の告知並びに抗告裁判所が記録の送付を受けた旨の通知に必要な費用の概算額を予納しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定は、法第十三条において準用する民事訴訟法第三百三十七条第二項の申立てをする場合について準用する。この場合において、前項中「抗告提起通知書」とあるのは、「抗告許可申立て通知書」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_11">
+          <ArticleCaption>（民事訴訟規則の準用・法第十三条）</ArticleCaption>
+          <ArticleTitle>第十二条の十一</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>特別の定めがある場合を除き、破産手続等に関しては、その性質に反しない限り、民事訴訟規則第一編から第四編までの規定（同規則第一条第三項、第一条の二、第四条第三項及び第四項、第十四条第二項から第四項まで、第十五条第二項及び第三項、第十八条第二項及び第三項、第二十三条第三項、第二十四条第三項から第五項まで、第二十五条第二項、第二十六条後段、第三十三条の三、第三十三条の四第二項から第四項まで、第三十三条の五、第三十四条第八項から第十一項まで、第一編第五章第四節第三款、第四十六条第一項、第四十七条第三項及び第四項、第四十七条の二第四項及び第五項、第五十一条第三項から第七項まで、第一編第七章、第五十二条の二十第七項から第九項まで、第五十二条の二十二第二項及び第三項、第五十二条の二十三、第五十三条第四項第二号、第五十五条第三項から第六項まで、第五十五条の二、第六十三条の二、第七十六条の二第一項後段、第八十一条第二項、第八十二条第三項及び第四項、第百五条の二、第百五条の三、第百八条第二項、第百十二条第三項及び第四項、第百二十四条第四項、第百三十一条、第百三十二条第三項、第百三十五条の二、第百三十七条第三項及び第四項、第百四十三条第三項、第百四十九条の二第三項、第百四十九条の三、第百五十一条の二、第百八十九条第四項並びに第二百十一条第二項及び第三項の規定を除く。）を準用する。この場合において、別表の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句に読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 破産手続の開始</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 破産手続開始の申立て</SectionTitle>
+          <Article Num="13">
+            <ArticleCaption>（破産手続開始の申立書の記載事項・法第二十条）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十条第一項の最高裁判所規則で定める事項は、次に掲げるものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立人の氏名又は名称及び住所並びに法定代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者の氏名又は名称及び住所並びに法定代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続開始の原因となる事実</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産手続開始の申立書には、前項各号に掲げる事項を記載するほか、次に掲げる事項を記載するものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者の収入及び支出の状況並びに資産及び負債（債権者の数を含む。）の状況</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続開始の原因となる事実が生ずるに至った事情</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者の財産に関してされている他の手続又は処分で申立人に知れているもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者について現に係属する破産事件（法第二条第二項に規定する破産事件をいう。以下同じ。）、再生事件又は更生事件（会社更生法（平成十四年法律第百五十四号）第二条第三項に規定する更生事件又は金融機関等の更生手続の特例等に関する法律（平成八年法律第九十五号）第四条第三項若しくは第百六十九条第三項に規定する更生事件をいう。）があるときは、当該事件が係属する裁判所及び当該事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第五条第三項から第七項までに規定する破産事件等があるときは、当該破産事件等が係属する裁判所、当該破産事件等の表示及び当該破産事件等における破産者（法第二条第四項に規定する破産者をいう。以下同じ。）若しくは債務者、再生債務者又は更生会社若しくは開始前会社（金融機関等の更生手続の特例等に関する法律第四条第三項に規定する更生事件にあっては、当該更生事件における更生協同組織金融機関又は開始前協同組織金融機関）の氏名又は名称</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者について外国倒産処理手続（法第二百四十五条第一項に規定する外国倒産処理手続をいう。以下同じ。）があるときは、当該外国倒産処理手続の概要</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者について次のイ又はロに掲げる者があるときは、それぞれ当該イ又はロに定める事項</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>債務者の使用人その他の従業者の過半数で組織する労働組合 当該労働組合の名称、主たる事務所の所在地、組合員の数及び代表者の氏名</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>債務者の使用人その他の従業者の過半数を代表する者 当該者の氏名及び住所</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+              <Item Num="8">
+                <ItemTitle>八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者について第九条第一項の規定による通知をすべき機関があるときは、その機関の名称及び所在地</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="9">
+                <ItemTitle>九</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立人又は代理人の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（破産手続開始の申立書の添付書類等・法第二十条）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十条第二項の最高裁判所規則で定める事項は、次に掲げる債権を有する者の氏名又は名称及び住所並びにその有する債権及び担保権の内容とする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続開始の決定がされたとすれば破産債権（法第二条第五項に規定する破産債権をいう。以下同じ。）となるべき債権であって、次号及び第三号に掲げる請求権に該当しないもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>租税等の請求権（法第九十七条第四号に規定する租税等の請求権をいう。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者の使用人の給料の請求権及び退職手当の請求権</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>民事再生法（平成十一年法律第二百二十五号）第二百五十二条第六項、会社更生法第二百五十四条第六項又は金融機関等の更生手続の特例等に関する法律第百五十八条の十第六項若しくは第三百三十一条の十第六項に規定する共益債権</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>債権者が破産手続開始の申立てをするときは、前項に規定する事項を記載した債権者一覧表を裁判所に提出するものとする。ただし、当該債権者においてこれを作成することが著しく困難である場合は、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産手続開始の申立書には、次に掲げる書類を添付するものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者が個人であるときは、その住民票の写しであって、本籍（本籍のない者及び本籍の明らかでない者については、その旨）の記載が省略されていないもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者が法人であるときは、その登記事項証明書</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>限定責任信託に係る信託財産について破産手続開始の申立てをするときは、限定責任信託の登記に係る登記事項証明書</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続開始の申立ての日の直近において法令の規定に基づき作成された債務者の貸借対照表及び損益計算書</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者が個人であるときは、次のイ及びロに掲げる書面</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>破産手続開始の申立ての日前一月間の債務者の収入及び支出を記載した書面</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>所得税法（昭和四十年法律第三十三号）第二条第一項第三十七号に規定する確定申告書の写し、同法第二百二十六条の規定により交付される源泉徴収票の写しその他の債務者の収入の額を明らかにする書面</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務者の財産目録</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="15">
+            <ArticleCaption>（破産手続開始の申立人に対する資料の提出の求め）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、破産手続開始の申立てをした者又はしようとする者に対し、破産手続開始の申立書及び法又はこの規則の規定により当該破産手続開始の申立書に添付し又は提出すべき書類のほか、破産手続開始の決定がされたとすれば破産債権となるべき債権及び破産財団に属すべき財産の状況に関する資料その他破産手続の円滑な進行を図るために必要な資料の提出を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（破産手続開始の申立書の補正処分の方式・法第二十一条）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十一条第一項の処分は、これを記載した書面を作成し、その書面に処分をした裁判所書記官が記名押印してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleCaption>（裁判所書記官の事実調査）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、相当と認めるときは、破産手続開始の原因となる事実又は法第三十条第一項各号に掲げる事由に係る事実の調査を裁判所書記官に命じて行わせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（費用の予納・法第二十二条）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十二条第一項の金額は、破産財団となるべき財産及び債務者の負債（債権者の数を含む。）の状況その他の事情を考慮して定める。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産手続開始の決定があるまでの間において、予納した費用が不足するときは、裁判所は、申立人に、更に予納させることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 破産手続開始の決定</SectionTitle>
+          <Article Num="19">
+            <ArticleCaption>（破産手続開始の決定の裁判書等・法第三十条）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産手続開始の申立てについての裁判は、裁判書を作成してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産手続開始の決定の裁判書には、決定の年月日時を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（破産手続開始の決定と同時に定めるべき事項等・法第三十一条）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十一条第一項の規定により同項各号の期間又は期日を定める場合には、特別の事情がある場合を除き、第一号及び第三号の期間はそれぞれ当該各号に定める範囲内で定め、第二号及び第四号の期日はそれぞれ当該各号に定める日とするものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権の届出をすべき期間 破産手続開始の決定の日から二週間以上四月以下（知れている破産債権者で日本国内に住所、居所、営業所又は事務所がないものがある場合には、四週間以上四月以下）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>財産状況報告集会（法第三十一条第一項第二号に規定する財産状況報告集会をいう。第五十四条第一項において同じ。）の期日 破産手続開始の決定の日から三月以内の日</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権の調査をするための期間 その期間の初日と第一号の期間の末日との間には一週間以上二月以下の期間を置き、一週間以上三週間以下</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権の調査をするための期日 第一号の期間の末日から一週間以上二月以内の日</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項（第二号を除く。）の規定は、法第三十一条第三項の規定により同項に規定する期間又は期日を定める場合について準用する。この場合において、前項第一号中「破産手続開始の決定の日」とあるのは、「法第三十一条第三項の規定による定めをした日」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第三十一条第五項の決定をしたときは、破産管財人が、日刊新聞紙に掲載し、又はインターネットを利用する等の方法であって裁判所の定めるものにより、次に掲げる事項を破産債権者が知ることができる状態に置く措置を執るものとすることができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十二条第四項本文及び第五項本文において準用する同条第三項第一号、第三十三条第三項本文並びに第百三十九条第三項本文の規定により通知すべき事項の内容</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債権者集会の期日</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="21">
+            <ArticleCaption>（破産財団に属しない財産の範囲の拡張の申立ての方式・法第三十四条）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第四項の申立てに係る申立書には、破産手続開始の時において破産者が有していた財産のうち、次に掲げるものの表示及び価額を記載した書面を添付するものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第四項の申立てに係るもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第三項各号に掲げるもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前二号に掲げるもののほか、裁判所が定めるもの</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（破産者等の引致・法第三十八条等）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）中勾（こう）引に関する規定は、法第三十八条第一項及び第二項（これらの規定を法第三十九条、第二百三十条第三項及び第二百四十四条の六第三項において準用する場合を含む。）の規定による引致について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 破産手続の機関</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 破産管財人</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 破産管財人の選任及び監督</SubsectionTitle>
+            <Article Num="23">
+              <ArticleCaption>（破産管財人の選任等・法第七十四条）</ArticleCaption>
+              <ArticleTitle>第二十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、破産管財人を選任するに当たっては、その職務を行うに適した者を選任するものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法人が破産管財人に選任された場合には、当該法人は、役員又は職員のうち破産管財人の職務を行うべき者を指名し、指名された者の氏名を裁判所に届け出なければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所書記官は、破産管財人に対し、その選任を証する書面を交付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="4">
+                <ParagraphNum>４</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所書記官は、破産管財人があらかじめその職務のために使用する印鑑を裁判所に提出した場合において、当該破産管財人が破産財団に属する不動産についての権利に関する登記を申請するために登記所に提出する印鑑の証明を請求したときは、当該破産管財人に係る前項に規定する書面に、当該請求に係る印鑑が裁判所に提出された印鑑と相違ないことを証明する旨をも記載して、これを交付するものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="5">
+                <ParagraphNum>５</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>破産管財人は、正当な理由があるときは、裁判所の許可を得て辞任することができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="24">
+              <ArticleCaption>（破産管財人に対する監督等・法第七十五条）</ArticleCaption>
+              <ArticleTitle>第二十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、報告書の提出を促すことその他の破産管財人に対する監督に関する事務を裁判所書記官に命じて行わせることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 破産管財人の権限等</SubsectionTitle>
+            <Article Num="25">
+              <ArticleCaption>（裁判所の許可を要しない行為・法第七十八条）</ArticleCaption>
+              <ArticleTitle>第二十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十八条第三項第一号の最高裁判所規則で定める額は、百万円とする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="26">
+              <ArticleCaption>（進行協議等）</ArticleCaption>
+              <ArticleTitle>第二十六条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所と破産管財人は、破産手続の円滑な進行を図るために必要があるときは、破産財団に属する財産の管理及び処分の方針その他破産手続の進行に関し必要な事項についての協議を行うものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>破産管財人は、破産手続開始の申立てをした者に対し、破産債権及び破産財団に属する財産の状況に関する資料の提出又は情報の提供その他の破産手続の円滑な進行のために必要な協力を求めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="27">
+              <ArticleCaption>（破産管財人の報酬等・法第八十七条）</ArticleCaption>
+              <ArticleTitle>第二十七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、破産管財人又は破産管財人代理の報酬を定めるに当たっては、その職務と責任にふさわしい額を定めるものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="28">
+              <ArticleCaption>（破産管財人の計算についての異議の方式・法第八十九条）</ArticleCaption>
+              <ArticleTitle>第二十八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第八十九条第三項の規定による異議の申述は、書面でしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 保全管理人</SectionTitle>
+          <Article Num="29">
+            <ArticleCaption>（破産管財人に関する規定の準用）</ArticleCaption>
+            <ArticleTitle>第二十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前節（前条を除く。）の規定は保全管理人（法第二条第十三項に規定する保全管理人をいう。第七十八条において同じ。）について、第二十七条の規定は保全管理人代理について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 破産債権</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 破産債権者の権利</SectionTitle>
+          <Article Num="30">
+            <ArticleCaption>（破産債権者が外国で受けた弁済の通知等・法第百九条）</ArticleCaption>
+            <ArticleTitle>第三十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>届出をした破産債権者は、法第百九条に規定する弁済を受けた場合には、速やかに、その旨及び当該弁済の内容を裁判所に届け出るとともに、破産管財人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="31">
+            <ArticleCaption>（代理委員の権限の証明等・法第百十条）</ArticleCaption>
+            <ArticleTitle>第三十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>代理委員の権限は、書面で証明しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産債権者は、代理委員を解任したときは、遅滞なく、裁判所にその旨を届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 破産債権の届出</SectionTitle>
+          <Article Num="32">
+            <ArticleCaption>（破産債権の届出の方式・法第百十一条）</ArticleCaption>
+            <ArticleTitle>第三十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百十一条第一項第四号の最高裁判所規則で定める額は、千円とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百十一条第一項第五号の最高裁判所規則で定める事項は、次に掲げるものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権者及び代理人の氏名又は名称及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続及び免責手続において書面を送付する方法によってする通知又は期日の呼出しを受けるべき場所（日本国内に限る。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行力ある債務名義又は終局判決のある破産債権であるときは、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権に関し破産手続開始当時訴訟が係属するときは、その訴訟が係属する裁判所、当事者の氏名又は名称及び事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産債権の届出書には、破産債権者の郵便番号、電話番号（ファクシミリの番号を含む。）その他破産手続等における通知、送達又は期日の呼出しを受けるために必要な事項として裁判所が定めるものを記載するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の届出書には、次に掲げる書面を添付しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権に関する証拠書類の写し</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権が執行力ある債務名義又は終局判決のあるものであるときは、執行力ある債務名義の写し（債務名義に係る電磁的記録が裁判所の使用に係る電子計算機（入出力装置を含む。）に備えられたファイル（以下この号において単に「ファイル」という。）に記録されたものである場合にあっては、当該電磁的記録に記録されている事項を出力することにより作成した書面、債務名義が電磁的記録をもって作成された執行証書（民事執行法（昭和五十四年法律第四号）第二十二条第五号に規定する執行証書をいう。）である場合にあっては、公証人法（明治四十一年法律第五十三号）第四十三条第一項第二号の書面（公正証書に記録されている事項の全部を出力したものに限る。））又は判決書の写し若しくは電子判決書（民事訴訟法第二百五十二条第一項に規定する電子判決書（同法第二百五十三条第二項の規定によりファイルに記録されたものに限る。）をいう。）に記録されている事項を出力することにより作成した書面</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産債権者が代理人をもって破産債権の届出をするときは、代理権を証する書面</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、破産債権の届出をしようとする破産債権者に対し、第三項の届出書の写しを提出することを求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="33">
+            <ArticleCaption>（届出事項の変更）</ArticleCaption>
+            <ArticleTitle>第三十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産債権者は、その有する破産債権について、届け出た事項の変更（破産債権の消滅を含む。以下この条において同じ。）であって他の破産債権者の利益を害しないものが生じた場合には、遅滞なく、当該変更の内容及び原因を裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第五項の規定は、前項の規定による届出をする場合の届出書について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、第一項に規定する変更が生じたことを知っている場合には、当該変更の内容及び原因を裁判所に届け出なければならない。この場合においては、届出書に、証拠書類の写しを添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項又は前項の規定による届出があった場合には、裁判所書記官は、当該届出の内容を破産債権者表に記載するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="34">
+            <ArticleCaption>（一般調査期間経過後又は一般調査期日終了後の届出等の方式・法第百十二条）</ArticleCaption>
+            <ArticleTitle>第三十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百十二条第一項の規定による届出をするときは、破産債権の届出書には、同項の事由及びその事由が消滅した日をも記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百十二条第三項の規定による届出をするときは、破産債権の届出書には、当該届出をする破産債権が生じた日をも記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百十二条第四項の変更の届出書には、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>変更の内容及び原因</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第百十二条第四項の事由及びその事由が消滅した日</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十二条第四項第一号及び第五項並びに前条第四項の規定は、前項の届出書について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="35">
+            <ArticleCaption>（届出名義の変更の方式・法第百十三条）</ArticleCaption>
+            <ArticleTitle>第三十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>届出名義の変更の届出書には、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>届出名義の変更を受けようとする者の氏名又は名称及び住所並びに代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続及び免責手続において書面を送付する方法によってする通知又は期日の呼出しを受けるべき場所（日本国内に限る。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>取得した権利並びにその取得の日及び原因</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十二条第三項、第四項（第二号を除く。）及び第五項並びに第三十三条第四項の規定は、前項の届出書について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="36">
+            <ArticleCaption>（租税等の請求権等の届出の方式・法第百十四条）</ArticleCaption>
+            <ArticleTitle>第三十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百十四条の最高裁判所規則で定める事項は、次に掲げるものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>届出に係る請求権を有する者の名称及び住所並びに代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>破産手続開始当時届出に係る請求権に関する訴訟又は行政庁に係属する事件があるときは、その訴訟又は事件が係属する裁判所又は行政庁、当事者の氏名又は名称及び事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>優先的破産債権（法第九十八条第一項に規定する優先的破産債権をいう。第六十八条第二項において同じ。）であるときは、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>劣後的破産債権（法第九十九条第一項に規定する劣後的破産債権をいう。第六十八条第二項において同じ。）又は約定劣後破産債権（法第九十九条第二項に規定する約定劣後破産債権をいう。第六十八条第二項において同じ。）であるときは、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 破産債権の調査及び確定</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 通則</SubsectionTitle>
+            <Article Num="37">
+              <ArticleCaption>（破産債権者表の記載事項・法第百十五条）</ArticleCaption>
+              <ArticleTitle>第三十七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百十五条第二項の最高裁判所規則で定める事項は、次に掲げるものとする。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>破産債権者の氏名又は名称及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>執行力ある債務名義又は終局判決のある破産債権であるときは、その旨</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 書面による破産債権の調査</SubsectionTitle>
+            <Article Num="38">
+              <ArticleCaption>（認否の変更の方式等・法第百十七条）</ArticleCaption>
+              <ArticleTitle>第三十八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>破産管財人は、認否書の提出後に法第百十七条第一項各号に掲げる事項についての認否を認める旨に変更する場合には、当該変更の内容を記載した書面を裁判所に提出するとともに、当該変更に係る破産債権を有する破産債権者に対し、その旨を通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="39">
+              <ArticleCaption>（書面による異議の方式等・法第百十八条等）</ArticleCaption>
+              <ArticleTitle>第三十九条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出をした破産債権者が法第百十八条第一項又は第百十九条第五項の規定により書面で異議を述べるときは、当該書面には、異議の内容のほか、異議の理由を記載しなければならない。破産者が法第百十八条第二項又は第百十九条第五項の規定により書面で異議を述べる場合についても、同様とする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所書記官は、前項前段に規定する異議があったときは、当該異議に係る破産債権を有する破産債権者に対し、その旨を通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前条の規定は、届出をした破産債権者が第一項前段に規定する異議を撤回する場合及び破産者が同項後段に規定する異議を撤回する場合について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="40">
+              <ArticleCaption>（送達に関する書面の作成・法第百十八条等）</ArticleCaption>
+              <ArticleTitle>第四十条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>書類を通常の取扱いによる郵便に付し、又は法第百十八条第四項に規定する信書便の役務を利用して送付する方法により同条第三項（法第百十九条第六項において準用する場合を含む。）の規定による送達をしたときは、裁判所書記官は、送達を受けるべき者の氏名、あて先及び発送の年月日を記載した書面を作成しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="41">
+              <ArticleCaption>（特別調査期間に関する費用の予納を命ずる処分の方式・法第百二十条）</ArticleCaption>
+              <ArticleTitle>第四十一条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百二十条第一項の規定による処分は、これを記載した書面を作成し、その書面に処分をした裁判所書記官が記名押印してしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="3">
+            <SubsectionTitle>第三款 期日における破産債権の調査</SubsectionTitle>
+            <Article Num="42">
+              <ArticleCaption>（認否予定書の提出）</ArticleCaption>
+              <ArticleTitle>第四十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、一般調査期日（法第百十二条第一項に規定する一般調査期日をいう。以下この款において同じ。）を定めた場合には、破産管財人に対し、法第百二十一条第一項に規定する破産債権について、法第百十七条第一項各号に掲げる事項についての認否の予定を記載した書面の提出を命ずることができる。この場合において、破産管財人は、法第百二十一条第七項に規定する破産債権についても、法第百十七条第一項各号に掲げる事項についての認否の予定を当該書面に記載することができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項前段の規定は、特別調査期日（法第百二十二条第一項に規定する特別調査期日をいう。以下この款において同じ。）を定めた場合における同条第一項及び同条第二項において準用する法第百十九条第二項に規定する破産債権について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="43">
+              <ArticleCaption>（期日における認否等の方式等・法第百二十一条等）</ArticleCaption>
+              <ArticleTitle>第四十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出をした破産債権者が法第百二十一条第二項（同条第七項及び法第百二十二条第二項において準用する場合を含む。）の規定により異議を述べるときは、異議の内容のほか、異議の理由を述べなければならない。破産者が法第百二十一条第四項（同条第七項及び法第百二十二条第二項において準用する場合を含む。）の規定により異議を述べる場合についても、同様とする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項前段の規定は法第百二十一条第二項の代理人について、前項後段の規定は同条第三項ただし書の代理人について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百二十一条第二項及び同条第三項ただし書の代理人の権限は、書面で証明しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="4">
+                <ParagraphNum>４</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>破産管財人は、一般調査期日又は特別調査期日において、届出をした破産債権者であって当該一般調査期日又は特別調査期日に出頭しないものが有する破産債権について、法第百十七条第一項各号に掲げる事項について認めない旨の認否をしたときは、その旨を当該届出をした破産債権者に通知しなければならない。ただし、当該届出をした破産債権者が当該認否の内容を知っていることが明らかであるときは、この限りでない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="5">
+                <ParagraphNum>５</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所書記官は、一般調査期日又は特別調査期日において、届出をした破産債権者であって当該一般調査期日又は特別調査期日に出頭しないものが有する破産債権について、第一項前段（第二項において準用する場合を含む。）に規定する異議があったときは、その旨を当該届出をした破産債権者に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="43_2">
+              <ArticleCaption>（映像等の送受信による通話の方法による一般調査期日又は特別調査期日・法第百二十一条の二等）</ArticleCaption>
+              <ArticleTitle>第四十三条の二</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百二十一条の二第一項に規定する方法によって一般調査期日における手続を行うときは、裁判所は、次に掲げる事項を確認しなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>通話者</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>通話者の所在する場所の状況が当該方法によって手続を実施するために適切なものであること。</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の手続を行い、かつ、裁判長が裁判所書記官に一般調査期日の調書の作成を命じたときは、同項の方法による手続を行った旨及び同項第二号に掲げる事項をその調書に記載させなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前二項の規定は、法第百二十二条第二項において準用する法第百二十一条の二第一項に規定する方法によって特別調査期日における手続を行う場合について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="44">
+              <ArticleCaption>（書面による破産債権の調査に関する規定の準用）</ArticleCaption>
+              <ArticleTitle>第四十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第三十八条の規定は、破産管財人が一般調査期日又は特別調査期日において述べた法第百十七条第一項各号に掲げる事項についての認否を認める旨に変更する場合並びに届出をした破産債権者が第四十三条第一項前段（同条第二項において準用する場合を含む。）に規定する異議を撤回する場合及び破産者が同条第一項後段（同条第二項において準用する場合を含む。）に規定する異議を撤回する場合について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第三十九条第一項前段の規定は、破産者が法第百二十三条第一項の規定により書面で異議を述べる場合について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第四十条の規定は、書類を通常の取扱いによる郵便に付し、又は同条に規定する信書便の役務を利用して送付する方法により法第百二十一条第九項若しくは第十項（法第百二十二条第二項において準用する場合を含む。）又は法第百二十二条第二項において準用する法第百十九条第六項において準用する法第百十八条第三項の規定による送達をした場合について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="4">
+                <ParagraphNum>４</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第四十一条の規定は、法第百二十二条第二項において準用する法第百二十条第一項の規定による処分について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="4">
+            <SubsectionTitle>第四款 破産債権の確定</SubsectionTitle>
+            <Article Num="45">
+              <ArticleCaption>（破産債権の確定に関する訴訟の目的の価額・法第百二十六条等）</ArticleCaption>
+              <ArticleTitle>第四十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>破産債権の確定に関する訴訟の目的の価額は、配当の予定額を標準として、受訴裁判所が定める。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="45_2">
+              <ArticleCaption>（映像等の送受信による通話の方法による債権者集会・法第百三十六条の二）</ArticleCaption>
+              <ArticleTitle>第四十五条の二</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百三十六条の二第一項に規定する方法によって債権者集会の期日における手続を行うときは、裁判所は、次に掲げる事項を確認しなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>通話者</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>通話者の所在する場所の状況が当該方法によって手続を実施するために適切なものであること。</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の手続を行い、かつ、裁判長が裁判所書記官に債権者集会の期日の調書の作成を命じたときは、同項の方法による手続を行った旨及び同項第二号に掲げる事項をその調書に記載させなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+        <Section Num="4">
+          <SectionTitle>第四節 債権者集会及び債権者委員会</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 債権者集会</SubsectionTitle>
+            <Article Num="46">
+              <ArticleCaption>（議決権行使の方法等・法第百三十九条）</ArticleCaption>
+              <ArticleTitle>第四十六条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百三十九条第二項第二号の最高裁判所規則で定める方法は、次に掲げるものとする。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>書面</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>電磁的方法であって、別に最高裁判所が定めるもの</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>議決権者は、書面等投票（法第百三十九条第二項第二号に規定する書面等投票をいう。）をするには、裁判所の定めるところによらなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百三十九条第二項第二号の期間は、特別の事情がある場合を除き、同条第一項の決議に付する旨の決定の日から起算して二週間以上三月以下の範囲内で定めるものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="47">
+              <ArticleCaption>（議決権額等を定める決定の変更の申立ての方式・法第百四十条）</ArticleCaption>
+              <ArticleTitle>第四十七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>債権者集会の期日においてする法第百四十条第三項の申立ては、口頭ですることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="48">
+              <ArticleCaption>（代理権の証明・法第百四十三条）</ArticleCaption>
+              <ArticleTitle>第四十八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百四十三条の代理人の権限は、書面で証明しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 債権者委員会</SubsectionTitle>
+            <Article Num="49">
+              <ArticleCaption>（債権者委員会の委員の人数等・法第百四十四条）</ArticleCaption>
+              <ArticleTitle>第四十九条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百四十四条第一項第一号の最高裁判所規則で定める人数は、十人とする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>債権者委員会（法第百四十四条第二項に規定する債権者委員会をいう。以下この条において同じ。）は、これを構成する委員のうち連絡を担当する者を指名し、その旨を裁判所に届け出るとともに、破産管財人に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>債権者委員会は、これを構成する委員又はその運営に関する定めについて変更が生じたときは、遅滞なく、その旨を裁判所に届け出なければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+      </Chapter>
+      <Chapter Num="5">
+        <ChapterTitle>第五章 財団債権</ChapterTitle>
+        <Article Num="50">
+          <ArticleCaption>（財団債権の申出）</ArticleCaption>
+          <ArticleTitle>第五十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>財団債権者（法第二条第八項に規定する財団債権者をいう。）は、破産手続開始の決定があったことを知ったときは、速やかに、財団債権（法第二条第七項に規定する財団債権をいう。）を有する旨を破産管財人に申し出るものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一条第一項の規定は、前項の規定による申出については、適用しない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="6">
+        <ChapterTitle>第六章 破産財団の管理</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 破産者の財産状況の調査</SectionTitle>
+          <Article Num="51">
+            <ArticleCaption>（破産財団に属する金銭等の保管方法）</ArticleCaption>
+            <ArticleTitle>第五十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、破産手続開始後遅滞なく、破産財団に属する財産のうち金銭及び有価証券についての保管方法を定め、その保管方法を裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、前項の規定により届け出た保管方法を変更したときは、遅滞なく、変更後の保管方法を裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="52">
+            <ArticleCaption>（貸借対照表の作成等の省略・法第百五十三条）</ArticleCaption>
+            <ArticleTitle>第五十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百五十三条第三項の最高裁判所規則で定める額は、千万円とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="53">
+            <ArticleCaption>（封印等の方式・法第百五十五条）</ArticleCaption>
+            <ArticleTitle>第五十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官、執行官又は公証人は、法第百五十五条第一項の規定による封印又は封印の除去（以下この条において「封印等」という。）をしたときは、調書を作成しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の調書には、封印等をした日時及び場所並びに封印等をした財産の表示を記載し、封印等をした裁判所書記官、執行官又は公証人が記名押印をしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、裁判所書記官が封印等をした場合を除き、第一項の調書の写しを裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、法第百五十五条第二項の規定により破産財団に関する帳簿を閉鎖するときは、当該帳簿にこれを閉鎖した旨を記載し、記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項及び第二項の規定は、裁判所書記官が法第百五十五条第二項の規定により破産財団に関する帳簿を閉鎖した場合について準用する。この場合において、第二項中「封印等をした財産」とあるのは、「閉鎖した破産財団に関する帳簿」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="54">
+            <ArticleCaption>（財産状況報告集会の期日を定めない場合の措置等・法第百五十七条）</ArticleCaption>
+            <ArticleTitle>第五十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第三十一条第四項の規定により財産状況報告集会の期日を定めない場合には、破産管財人の意見を聴いて、破産管財人が法第百五十七条第一項の報告書（以下この条及び第八十四条において「財産状況報告書」という。）を提出すべき期間を定めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項の規定により定めた期間内に破産管財人が財産状況報告書を提出しないときは、破産管財人に対し、その理由を記載した書面の提出を命ずることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項に規定する場合には、破産管財人は、裁判所に提出した財産状況報告書の要旨を知れている破産債権者に周知させるため、財産状況報告書の要旨を記載した書面の送付、適当な場所における財産状況報告書の備置きその他の適当な措置を執らなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 否認権</SectionTitle>
+          <Article Num="55">
+            <ArticleCaption>（否認権のための保全処分に係る手続の続行の方式等・法第百七十二条）</ArticleCaption>
+            <ArticleTitle>第五十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、法第百七十二条第一項の規定により法第百七十一条第一項（同条第七項において準用する場合を含む。）の規定による保全処分に係る手続を続行するときは、その旨を裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、前項の届出があったときは、遅滞なく、その旨を当該保全処分の申立人及びその相手方に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、前項の規定により同項の相手方に対する通知をする場合において、法第百七十二条第三項の規定による担保の変換がされているときは、当該変換された担保の内容をも通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、第一項の届出があった場合において、当該保全処分について法第百七十一条第四項（同条第七項において準用する場合を含む。）の即時抗告に係る手続が係属しているときは、当該届出があった旨を抗告裁判所に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第四条の規定は、法第百七十二条第四項において準用する民事保全法（平成元年法律第九十一号）第三十七条第三項、第三十八条第一項又は第三十九条第一項の規定による保全取消しの申立て及び同法第四十一条第一項の規定による保全抗告についての手続における審尋の調書については、適用しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事保全規則（平成二年最高裁判所規則第三号）第四条第一項及び第二項の規定は法第百七十二条第四項において準用する民事保全法第十八条に規定する保全命令の申立ての取下げについて、同規則第二十八条の規定は法第百七十二条第四項において準用する民事保全法第三十七条第一項の申立てについて、同規則第四条第一項及び第三項、第七条、第八条第二項及び第三項、第九条、第十条並びに第二十九条の規定は前項に規定する保全取消しの申立てについての手続について、同規則第四条第一項及び第三項、第七条、第八条第二項及び第三項、第九条、第十条並びに第三十条の規定は前項に規定する保全抗告についての手続について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="7">
+        <ChapterTitle>第七章 破産財団の換価</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <Article Num="56">
+            <ArticleCaption>（任意売却等に関する担保権者への通知）</ArticleCaption>
+            <ArticleTitle>第五十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、法第六十五条第二項に規定する担保権であって登記がされたものの目的である不動産の任意売却をしようとするときは、任意売却の二週間前までに、当該担保権を有する者に対し、任意売却をする旨及び任意売却の相手方の氏名又は名称を通知しなければならない。破産者が法人である場合において、破産管財人が当該不動産につき権利の放棄をしようとするときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 担保権の消滅</SectionTitle>
+          <Article Num="57">
+            <ArticleCaption>（担保権消滅の許可の申立ての方式・法第百八十六条）</ArticleCaption>
+            <ArticleTitle>第五十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十六条第三項に規定する申立書には、同項各号に掲げる事項のほか、財産の任意売却に関する交渉の経過を記載するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の申立書には、法第百八十六条第四項に規定する書面のほか、同条第三項第三号の売却の相手方が個人であるときはその住民票の写しを、法人であるときはその登記事項証明書を添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、必要があると認めるときは、法第百八十六条第一項の申立てをした破産管財人に対し、同条第三項第一号の財産の価額に関する資料の提出を命ずることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="58">
+            <ArticleCaption>（担保権消滅の許可の申立書の送達等・法第百八十六条）</ArticleCaption>
+            <ArticleTitle>第五十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>すべての被申立担保権者（法第百八十六条第五項に規定する被申立担保権者をいう。以下この節において同じ。）に対し同項の規定による送達がされたときは、裁判所書記官は、その旨及びすべての被申立担保権者に対する送達が終了した日を破産管財人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十六条第一項の申立てをした破産管財人は、前項に規定する日までに移転その他の事由により同条第三項に規定する申立書に記載された同項第四号の担保権を新たに有することとなった者があることを知ったときは、直ちに、その旨を裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十六条第一項の申立てが取り下げられたときは、裁判所書記官は、同条第五項の規定による送達を受けた被申立担保権者に対し、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="59">
+            <ArticleCaption>（買受けの申出の方式等・法第百八十八条等）</ArticleCaption>
+            <ArticleTitle>第五十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十八条第二項の書面には、同項各号に掲げる事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>買受けの申出（法第百八十八条第一項に規定する買受けの申出をいう。以下この節において同じ。）をした者の氏名又は名称及び住所並びに代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>買受希望者（法第百八十八条第二項第一号に規定する買受希望者をいう。以下この節において同じ。）の住所並びに法定代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前二号に規定する者の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の書面には、次に掲げる書面を添付しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>買受希望者が個人であるときは、その住民票の写し</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>買受希望者が法人であるときは、その登記事項証明書</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前項の書面に記載された買受けの申出の額（法第百八十八条第二項第二号に規定する買受けの申出の額をいう。次条第一項において同じ。）で法第百八十六条第三項第一号の財産を買い受ける旨を記載した買受希望者の作成に係る書面</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>買受けの申出をする者が代理人をもって買受けの申出をする場合には、第一項の書面に、代理権を証する書面を添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十八条第七項又は第百八十九条第三項の規定による買受けの申出の撤回は、書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="60">
+            <ArticleCaption>（買受けの申出の保証の額及び提供方法等・法第百八十八条）</ArticleCaption>
+            <ArticleTitle>第六十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十八条第五項の最高裁判所規則で定める額は、買受けの申出の額の十分の二に相当する額（その額に一円に満たない端数があるときは、これを切り捨てるものとする。）とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百八十八条第五項の最高裁判所規則で定める方法は、同条第二項の書面に次の各号に掲げる書面のいずれかを添付する方法とする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>買受希望者が破産管財人の預金口座又は貯金口座に一定の額の金銭を振り込んだ旨の金融機関の証明書</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>買受希望者が銀行、保険会社、株式会社商工組合中央金庫、農林中央金庫、全国を地区とする信用金庫連合会、信用金庫又は労働金庫（以下この項において「銀行等」という。）との間において次に掲げる要件を満たす支払保証委託契約を締結したことを証する文書</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>銀行等は、買受希望者のために、法第百九十条第一項第二号の規定による金銭の納付又は同条第六項の規定による法第百八十九条第一項の許可の決定を取り消す決定があったときは一定の額の金銭を破産管財人に支払うものであること。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第百八十六条第一項の申立てについての裁判（当該買受希望者を当該許可に係る売却の相手方とする法第百八十九条第一項の許可の決定を除く。）が確定した時に契約の効力が消滅するものであること。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="3">
+                  <Subitem1Title>ハ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第百八十八条第十項の規定による法第百八十六条第一項の申立ての取下げがあった場合、法第百八十八条第七項若しくは第百八十九条第三項の規定による買受けの申出の撤回があった場合又は次項の規定により保証の変換がされた場合を除き、契約の変更又は解除をすることができないものであること。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>買受希望者は、破産管財人との契約により、前項各号のいずれかに掲げる書面を添付する方法により提供した保証を、同項各号に掲げる他の書面を添付する方法により提供する保証に変換することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、法第百八十八条第九項の規定により法第百八十七条第一項の期間（同条第二項の規定により伸長されたときは、その伸長された期間）内にされた買受けの申出に係る法第百八十八条第二項の書面を裁判所に提出するときは、第二項の規定により添付された同項各号に掲げる書面の写しを裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="61">
+            <ArticleCaption>（金銭の納付に関する通知等・法第百九十条）</ArticleCaption>
+            <ArticleTitle>第六十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、法第百九十条第一項の期限が定められたときは、これを同項の売却の相手方に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、法第百九十条第一項第二号の規定による金銭の納付があったときは、その旨を破産管財人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百九十条第五項の規定による消滅した担保権に係る登記又は登録の抹消の嘱託書には、法第百八十九条第一項の許可の決定の裁判書の謄本を添付しなければならない。この場合においては、当該裁判書の謄本以外の不動産登記法（平成十六年法律第百二十三号）第六十一条に規定する登記原因を証する情報を記載した書面を添付することを要しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="62">
+            <ArticleCaption>（配当等の手続・法第百九十一条）</ArticleCaption>
+            <ArticleTitle>第六十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事執行規則（昭和五十四年最高裁判所規則第五号）第十二条、第五十九条（第一項後段を除く。）、第六十条、第六十一条及び第六十二条の二から第六十二条の四までの規定は法第百九十一条第一項の配当の手続及び同条第二項の規定による弁済金の交付の手続について、同規則第六十条の二の規定は法第百九十一条第一項の配当の手続について準用する。この場合において、同規則第十二条第一項、第五十九条第一項、第六十条、第六十条の二第一項及び第六十二条の四中「執行裁判所」とあるのは「裁判所」と、同規則第五十九条第一項中「不動産の代金」とあり、同条第二項中「代金」とあり、及び同規則第六十一条中「売却代金」とあるのは「破産法第百八十六条第一項第一号に規定する売得金の額（同法第百八十八条第八項に規定する届出がされなかった場合であって同号に掲げる場合にあっては、その売得金の額から同号に規定する組入金の額を控除した額）に相当する金銭」と、同規則第五十九条第三項及び第六十一条中「各債権者及び債務者」とあるのは「被申立担保権者及び破産管財人」と、同規則第六十条中「各債権者」とあり、及び同規則第六十二条の四中「債権者」とあるのは「被申立担保権者」と、同規則第六十条中「附帯の債権の額並びに執行費用」とあるのは「附帯の債権」と、同規則第六十二条の二第二号及び第六十二条の三第一項第二号中「債務者」とあるのは「破産者」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十二条の十一の規定にかかわらず、民事訴訟規則第四条第五項の規定は、前項において準用する民事執行規則第五十九条第三項の規定による通知については、準用しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="8">
+        <ChapterTitle>第八章 配当</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <Article Num="63">
+            <ArticleCaption>（配当実施の報告）</ArticleCaption>
+            <ArticleTitle>第六十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、配当をしたときは、遅滞なく、その旨を裁判所に書面で報告しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定による報告書には、各届出をした破産債権者に対する配当額の支払を証する書面の写しを添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 最後配当</SectionTitle>
+          <Article Num="64">
+            <ArticleCaption>（配当の通知の到達に係る届出の方式・法第百九十七条）</ArticleCaption>
+            <ArticleTitle>第六十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百九十七条第三項の規定による届出をする場合の届出書には、同条第一項の規定による通知の方法及びその通知を発した日をも記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="65">
+            <ArticleCaption>（配当表に対する異議に関する通知・法第二百条）</ArticleCaption>
+            <ArticleTitle>第六十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、法第二百条第一項の規定による異議の申立てがあったときは、遅滞なく、その旨を破産管財人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 簡易配当</SectionTitle>
+          <Article Num="66">
+            <ArticleCaption>（簡易配当についての異議の方式等・法第二百四条等）</ArticleCaption>
+            <ArticleTitle>第六十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二百四条第一項第二号に規定する異議の申述は、書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の異議の申述があったことにより法第二百四条第一項第二号の規定による許可をすることができないこととなったときは、裁判所書記官は、遅滞なく、その旨を破産管財人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の規定は、法第二百六条後段に規定する異議の申述について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="67">
+            <ArticleCaption>（最後配当に関する規定の準用）</ArticleCaption>
+            <ArticleTitle>第六十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>簡易配当（法第二百四条第一項に規定する簡易配当をいう。）については、前節の規定を準用する。この場合において、第六十四条中「法第百九十七条第三項」とあるのは「法第二百四条第四項」と、「同条第一項」とあるのは「同条第二項」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="4">
+          <SectionTitle>第四節 中間配当</SectionTitle>
+          <Article Num="68">
+            <ArticleCaption>（配当率の報告・法第二百十一条）</ArticleCaption>
+            <ArticleTitle>第六十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>破産管財人は、法第二百十一条の規定により配当率を定めたときは、遅滞なく、その旨を裁判所に書面で報告しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定による報告書には、優先的破産債権、劣後的破産債権及び約定劣後破産債権をそれぞれ他の破産債権と区分し、優先的破産債権については法第九十八条第二項に規定する優先順位に従い、配当率を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="69">
+            <ArticleCaption>（最後配当に関する規定の準用）</ArticleCaption>
+            <ArticleTitle>第六十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>中間配当（法第二百九条第一項に規定する中間配当をいう。）については、第二節の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="9">
+        <ChapterTitle>第九章 破産手続の終了</ChapterTitle>
+        <Article Num="70">
+          <ArticleCaption>（同時廃止決定の取消決定が確定した場合に定めるべき事項等・法第二百十六条）</ArticleCaption>
+          <ArticleTitle>第七十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二十条の規定は、法第二百十六条第一項の規定による破産手続廃止の決定を取り消す決定が確定した場合について準用する。この場合において、第二十条第一項第一号及び第二号並びに第二項中「破産手続開始の決定の日」とあるのは、「法第二百十六条第一項の規定による破産手続廃止の決定を取り消す決定が確定した日」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="71">
+          <ArticleCaption>（破産手続廃止についての意見申述の方式・法第二百十七条等）</ArticleCaption>
+          <ArticleTitle>第七十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百十八条第四項の規定により届出をした破産債権者が意見を述べるときは、当該意見の申述は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百十七条第一項後段又は第二項前段の規定により破産債権者が意見を述べるときは、意見の理由をも述べなければならない。法第二百十八条第四項の規定により届出をした破産債権者が意見を述べるときも、同様とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="10">
+        <ChapterTitle>第十章 外国倒産処理手続がある場合の特則</ChapterTitle>
+        <Article Num="72">
+          <ArticleCaption>（外国管財人の資格等の証明・法第二百四十六条等）</ArticleCaption>
+          <ArticleTitle>第七十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>外国管財人（法第二百四十五条第一項に規定する外国管財人をいう。）の資格は、債務者若しくは破産者についての外国倒産処理手続が係属する裁判所又は認証の権限を有する者の認証を受けた書面で証明しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百四十七条第一項ただし書の権限は、書面で証明しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前二項の書面には、その訳文を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="73">
+          <ArticleCaption>（外国倒産処理手続への参加・法第二百四十七条）</ArticleCaption>
+          <ArticleTitle>第七十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>破産管財人は、法第二百四十七条第二項の規定により、同項に規定する届出をした破産債権者を代理して破産者についての外国倒産処理手続に参加したときは、その旨を当該届出をした破産債権者に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百四十七条第二項に規定する届出をした破産債権者は、破産者についての外国倒産処理手続に参加したときは、その旨を破産管財人に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="11">
+        <ChapterTitle>第十一章 免責手続及び復権</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 免責手続</SectionTitle>
+          <Article Num="74">
+            <ArticleCaption>（免責手続において提出すべき書面の記載事項等・法第二百四十八条等）</ArticleCaption>
+            <ArticleTitle>第七十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>免責許可の申立書（破産手続開始の申立ての後に免責許可の申立てをする場合の申立書に限る。）その他の免責手続において当事者又は利害関係人が裁判所に提出すべき書面には、破産事件の表示を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二百四十八条第二項の規定による申立てをするときは、免責許可の申立書には、同項の事由及びその事由が消滅した日をも記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二百四十八条第三項の最高裁判所規則で定める事項は、破産手続開始の決定がされたとすれば破産債権となるべき債権（破産手続開始の決定後に免責許可の申立てをする場合にあっては、破産債権）であって第十四条第一項第二号又は第三号に掲げる請求権に該当しないものを有する者の氏名又は名称及び住所並びにその有する債権及び担保権の内容とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="75">
+            <ArticleCaption>（免責についての調査・法第二百五十条）</ArticleCaption>
+            <ArticleTitle>第七十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、免責許可の申立てをした者に対し、法第二百五十二条第一項各号に掲げる事由の有無又は同条第二項の規定による免責許可の決定をするかどうかの判断に当たって考慮すべき事情についての調査のために必要な資料の提出を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、相当と認めるときは、前項に規定する事由又は事情に係る事実の調査を裁判所書記官に命じて行わせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="76">
+            <ArticleCaption>（免責についての意見申述の方式・法第二百五十一条）</ArticleCaption>
+            <ArticleTitle>第七十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二百五十一条第一項に規定する意見の申述は、期日においてする場合を除き、書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の意見の申述は、法第二百五十二条第一項各号に掲げる事由に該当する具体的な事実を明らかにしてしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 復権</SectionTitle>
+          <Article Num="77">
+            <ArticleCaption>（復権の申立てについての意見申述の方式・法第二百五十六条）</ArticleCaption>
+            <ArticleTitle>第七十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二百五十六条第三項の規定による意見の申述は、書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第七十一条第二項前段の規定は、前項の意見の申述について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="12">
+        <ChapterTitle>第十二章 雑則</ChapterTitle>
+        <Article Num="78">
+          <ArticleCaption>（法人の破産手続に関する登記の嘱託書の添付書面・法第二百五十七条）</ArticleCaption>
+          <ArticleTitle>第七十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次の表の上欄に掲げる登記の嘱託書には、それぞれ同表の下欄に掲げる書面を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+            <TableStruct>
+              <Table>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>項</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>上欄</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>下欄</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>一</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十七条第一項（同条第八項において準用する場合を含む。）の破産手続開始の登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>イ破産手続開始の決定の裁判書の謄本</Sentence>
+                    <Sentence>ロ破産管財人がそれぞれ単独にその職務を行い、又は職務を分掌することについて法第七十六条第一項ただし書の許可があったときは、当該許可の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>二</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十七条第三項（同条第八項において準用する場合を含む。）において準用する同条第一項の規定による登記（特定の破産管財人について、その氏名若しくは名称又は住所の変更があった場合の登記を除く。）の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十七条第二項（同条第八項において準用する場合を含む。）に規定する事項を変更する旨の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>三</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十七条第四項（同条第八項において準用する場合を含む。）の保全管理命令の登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>イ保全管理命令の裁判書の謄本</Sentence>
+                    <Sentence>ロ保全管理人がそれぞれ単独にその職務を行い、又は職務を分掌することについて法第九十六条第一項において準用する法第七十六条第一項ただし書の許可があったときは、当該許可の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>四</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十七条第六項（同条第八項において準用する場合を含む。）において準用する同条第四項の規定による登記（特定の保全管理人について、その氏名若しくは名称又は住所の変更があった場合の登記を除く。）の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>イ保全管理命令を変更し、又は取り消す旨の決定があったときは、当該決定の裁判書の謄本</Sentence>
+                    <Sentence>ロ保全管理人がそれぞれ単独にその職務を行い、又は職務を分掌することについて法第九十六条第一項において準用する法第七十六条第一項ただし書の許可があったときは、当該許可の決定の裁判書の謄本</Sentence>
+                    <Sentence>ハロの許可を変更し、又は取り消す旨の決定があったときは、当該決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>五</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十七条第七項（同条第八項において準用する場合を含む。）において準用する同条第一項の規定による登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>破産手続開始の決定を取り消す決定、破産手続廃止の決定又は破産手続終結の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+              </Table>
+            </TableStruct>
+          </Paragraph>
+        </Article>
+        <Article Num="79">
+          <ArticleCaption>（個人の破産手続に関する登記等の嘱託書の添付書面・法第二百五十八条）</ArticleCaption>
+          <ArticleTitle>第七十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次の表の上欄に掲げる登記又は登記の抹消の嘱託書には、それぞれ同表の下欄に掲げる書面を添付しなければならない。この場合においては、第六十一条第三項後段の規定を準用する。</Sentence>
+            </ParagraphSentence>
+            <TableStruct>
+              <Table>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>項</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>上欄</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>下欄</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>一</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第一項の破産手続開始の登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>破産手続開始の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>二</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第二項において準用する同条第一項の規定による登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>破産手続開始の決定を取り消す決定、破産手続廃止の決定又は破産手続終結の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>三</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第三項前段の規定による破産手続開始の登記の抹消の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第三十四条第四項の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>四</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第三項後段の規定による破産手続開始の登記の抹消の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第三項後段の申立てがされたことを証する書面</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>五</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第四項において準用する同条第一項第二号の規定による登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>破産手続開始の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>六</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第四項において準用する同条第二項において準用する同条第一項第二号の規定による登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>破産手続開始の決定を取り消す決定、破産手続廃止の決定又は破産手続終結の決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>七</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第四項において準用する同条第三項後段の規定による破産手続開始の登記の抹消の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第四項において準用する同条第三項後段の申立てがされたことを証する書面</Sentence>
+                  </TableColumn>
+                </TableRow>
+                <TableRow>
+                  <TableColumn>
+                    <Sentence>八</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>法第二百五十八条第五項において準用する同条第一項第二号の規定による登記の嘱託書</Sentence>
+                  </TableColumn>
+                  <TableColumn>
+                    <Sentence>保全管理命令、保全管理命令を変更する決定又は保全管理命令を取り消す決定の裁判書の謄本</Sentence>
+                  </TableColumn>
+                </TableRow>
+              </Table>
+            </TableStruct>
+          </Paragraph>
+        </Article>
+        <Article Num="80">
+          <ArticleCaption>（保全処分に関する登記の嘱託書の添付書面・法第二百五十九条）</ArticleCaption>
+          <ArticleTitle>第八十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百五十九条第一項の保全処分の登記の嘱託書には、同項各号に規定する保全処分の裁判書の謄本を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百五十九条第二項において準用する同条第一項の規定による登記の嘱託書には、同項に規定する保全処分を変更し、若しくは取り消す旨の決定の裁判書の謄本又は当該保全処分が効力を失ったことを証する書面を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="81">
+          <ArticleCaption>（否認の登記の抹消の嘱託書の添付書面等・法第二百六十条）</ArticleCaption>
+          <ArticleTitle>第八十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百六十条第四項前段の否認の登記の抹消の嘱託書には、破産手続開始の決定を取り消す決定、破産手続廃止の決定又は破産手続終結の決定の裁判書の謄本を添付しなければならない。この場合においては、第六十一条第三項後段の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百六十条第四項前段に規定する場合には、破産管財人は、速やかに、同条第一項の規定による否認の登記に関する登記事項証明書を裁判所に提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百六十条第四項後段の否認の登記の抹消の嘱託書には、同項後段の申立てがされたことを証する書面を添付しなければならない。この場合においては、第六十一条第三項後段の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立てに係る申立書には、第二項に規定する登記事項証明書を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="82">
+          <ArticleCaption>（登録のある権利への準用・法第二百六十二条）</ArticleCaption>
+          <ArticleTitle>第八十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前三条の規定は、登録のある権利について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="83">
+          <ArticleCaption>（責任制限手続の廃止の場合の措置・法第二百六十四条）</ArticleCaption>
+          <ArticleTitle>第八十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二百六十四条第一項の規定により同項に規定する期間又は期日を定める場合には、特別の事情がある場合を除き、第一号及び第二号に掲げる期間はそれぞれ当該各号に定める範囲内で定め、第三号に掲げる期日は同号に定める日とするものとする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>債権の届出をすべき期間 責任制限手続（法第二十四条第一項第五号に規定する責任制限手続をいう。）について責任制限手続廃止の決定が確定した日から一週間以上二月以下（知れている制限債権者で日本国内に住所、居所、営業所又は事務所がないものがある場合には、三週間以上二月以下）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>債権の調査をするための期間 その期間の初日と前号の期間の末日との間には一週間以上二月以下の期間を置き、一週間以上三週間以下</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>債権の調査をするための期日 第一号の期間の末日から一週間以上二月以内の日</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定は、法第二百六十四条第六項において準用する法第三十一条第三項の規定により法第二百六十四条第一項に規定する期間及び期日を定める場合について準用する。この場合において、前項第一号中「責任制限手続（法第二十四条第一項第五号に規定する責任制限手続をいう。）について責任制限手続廃止の決定が確定した日」とあるのは、「法第二百六十四条第六項において準用する法第三十一条第三項の規定による定めをした日」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="84">
+          <ArticleCaption>（農水産業協同組合の破産手続における機構に対する財産状況の周知）</ArticleCaption>
+          <ArticleTitle>第八十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>農水産業協同組合（農水産業協同組合の再生手続の特例等に関する法律（平成十二年法律第九十五号）第二条第一項に規定する農水産業協同組合をいう。）の破産手続においては、破産管財人は、裁判所に提出した財産状況報告書の要旨を農水産業協同組合貯金保険機構に知らせるため、当該財産状況報告書の要旨を記載した書面の農水産業協同組合貯金保険機構に対する送付その他の適当な措置を執らなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="85">
+          <ArticleCaption>（農水産業協同組合の破産手続における参加の届出の方式等）</ArticleCaption>
+          <ArticleTitle>第八十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三十二条第三項及び第四項（第二号を除く。）、第三十三条第四項並びに第三十五条第一項の規定は、農水産業協同組合の再生手続の特例等に関する法律第三十九条第一項の規定による参加の届出について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="86">
+          <ArticleCaption>（農水産業協同組合の破産手続における異議の通知の特例）</ArticleCaption>
+          <ArticleTitle>第八十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>農水産業協同組合の再生手続の特例等に関する法律第四十条に規定する機構代理貯金者に対しては、第三十九条第二項並びに第四十三条第四項本文及び第五項の規定による通知をすることを要しない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日（平成一七年一月一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（外国倒産処理手続がある場合の破産手続に関する臨時措置規則の廃止）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>外国倒産処理手続がある場合の破産手続に関する臨時措置規則（平成十二年最高裁判所規則第十八号）は、廃止する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（経過措置）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前にされた破産の申立て又はこの規則の施行前に職権でされた破産の宣告に係る破産事件については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前にされた破産の申立て又はこの規則の施行前に職権でされた破産の宣告に係る破産者の免責に関する事件については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前にされた復権の申立てに係る事件については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成一七年一月一一日最高裁判所規則第一号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事関係手続の改善のための民事訴訟法等の一部を改正する法律（平成十六年法律第百五十二号）の施行の日から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>１</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則目次の改正規定（「第二百三十八条」を「第二百三十七条」に改める部分、「第二百三十九条」を「第二百三十八条」に改める部分及び「第二百四十条」を「第二百三十九条」に改める部分を除く。）、同規則第一編第五章第二節の節名の改正規定、同節中第三十四条の二の前に款名を付する改正規定及び同節中第三十四条の十の次に一款を加える改正規定 裁判所法等の一部を改正する法律（平成十六年法律第百二十号）の施行の日（平成十七年四月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>２</ItemTitle>
+            <ItemSentence>
+              <Sentence>第九条中民事訴訟費用等に関する規則別表第二の五の項ホの改正規定 行政事件訴訟法の一部を改正する法律（平成十六年法律第八十四号）の施行の日（平成十七年四月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>３</ItemTitle>
+            <ItemSentence>
+              <Sentence>附則第六条の規定 破産規則（平成十六年最高裁判所規則第十四号）の施行の日（平成十七年一月一日）又はこの規則の施行の日のいずれか遅い日</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（破産規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>破産規則の一部を次のように改正する。第六十二条第一項中「及び執行費用」を「の額並びに執行費用」に改める。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成一七年二月九日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、不動産登記法（平成十六年法律第百二十三号）の施行の日（平成十七年三月七日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成一九年四月一一日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、信託法（平成十八年法律第百八号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成二〇年六月六日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、株式会社商工組合中央金庫法（平成十九年法律第七十四号）の施行の日（平成二十年十月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和四年一一月七日最高裁判所規則第一七号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下この条において「改正法」という。）附則第一条第二号に掲げる規定の施行の日（令和五年二月二〇日）から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則第三十二条、第七十七条、第七十八条、第九十六条及び第百六十三条第一項の改正規定、第十四条の規定、第十八条中労働審判規則第三十七条の改正規定（「第七十七条」を「第七十七条前段」に改める部分に限る。）、第二十条中非訟事件手続規則第二十一条及び第五十条の改正規定、第二十一条中家事事件手続規則第三十三条及び第百二十六条第二項の改正規定並びに第二十二条中国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第二十三条及び第五十三条第一項の改正規定 改正法附則第一条第三号に掲げる規定の施行の日（令和五年三月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則目次の改正規定（「第三十一条」を「第三十条の二」に改める部分に限る。）及び同規則第一編第五章第一節中第三十一条の前に二条を加える改正規定、第三条の規定、第六条の規定、第七条中民事執行規則第十五条の二の改正規定、第八条中民事保全規則第六条の改正規定、第十条中民事再生規則第十一条の改正規定、第十二条中外国倒産処理手続の承認援助に関する規則第十二条の改正規定、第十三条中会社更生規則第十条の改正規定、第十六条の規定、第十七条中破産規則第十二条の改正規定並びに第二十三条の規定 改正法附則第一条第四号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>第十五条の規定 改正法附則第一条第五号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。）の施行の日（令和八年五月二一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和七年八月二九日最高裁判所規則第一〇号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事関係手続等における情報通信技術の活用等の推進を図るための関係法律の整備に関する法律（令和五年法律第五十三号）附則第二号に掲げる規定の施行の日（令和七年一〇月一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <AppdxTable>
+      <AppdxTableTitle>別表</AppdxTableTitle>
+      <RelatedArticleNum>（第十二条の十一関係）</RelatedArticleNum>
+      <TableStruct>
+        <Table>
+          <TableRow>
+            <TableColumn>
+              <Sentence>上欄</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>中欄</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>下欄</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第一条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書を作成し、記名押印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第十五条第一項及び第二十三条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面又は電磁的記録により</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面で</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第十五条第四項及び第二百十一条第四項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二十三条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>又は電磁的記録が私人により作成されたもの</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>が私文書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二十四条第二項、第二十五条第一項及び第三項並びに第二十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>資料</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二十五条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し、又は記録した書面又は電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載した書面</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二十六条前段</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録した電磁的記録を作成し、これをファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載した書面を作成し、当該書面に記名押印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十条の二第二項、第六十六条第一項、第六十七条第一項及び第三項、第六十九条並びに第七十六条の二第一項前段</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>に係る電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十条の二第二項、第三十四条の七第二項、第六十六条第一項、第百二十二条の二第二項及び第百二十二条の三第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十四条の七第二項、第七十二条、第七十六条、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二項、第百四十二条及び第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第四十七条第一項及び第四十七条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類又は電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第四十七条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類又は電磁的記録の相手方</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類の相手方</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>書類又は電磁的記録について直送（当事者が前条（書類又は電磁的記録の送付）第二項又は第三項の方法により相手方に対して直接送付すること</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類について直送（当事者の相手方に対する直接の送付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第四十八条第一項及び第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>交付又は電磁的記録の提供</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>交付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第五十条の二</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子決定書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、決定に係るものをいう。第六十七条（口頭弁論に係る電子調書の実質的記録事項等）第一項第七号及び第百六十条（判決の更正決定等の方式）第一項において同じ。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>決定書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書に記録させる</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書に記載させる</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十六条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>裁判長は、前項の電子調書の内容を確認するとともに、これを確認したことを当該電子調書上明らかにする措置を講じなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前項の調書には、裁判所書記官が記名押印し、裁判長が認印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第六十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該電子調書に記録するとともに、当該電子調書の内容を確認し、かつ、これを確認したことを当該電子調書上明らかにする措置を講じなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>付記して認印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記録すれば</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載すれば</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録し</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第一項第六号及び同条第二項並びに第百八十四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第一項第七号</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子決定書又は電子命令書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、命令に係るものをいう。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載する</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第四項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録した電磁的記録を作成し、これをファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書に記載しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第六十八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の録音又は録画により作成された電磁的記録をファイル</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>を録音テープ又はビデオテープ（これらに準ずる方法により一定の事項を記録することができる物を含む。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書の記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書の記載</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前条第一項（第三号に係る部分に限る。）の規定により電子調書に記録すべき事項を記録した電磁的記録を作成し、ファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証人等の陳述を記載した書面を作成しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第六十九条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>他の電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面、写真、録音テープ、ビデオテープその他裁判所において適当と認めるもの</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>これをファイルに記録して電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>破産手続等に係る事件の記録に添付して調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第七十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記に係る電磁的記録（以下「電子速記録」という。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子速記録を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録を</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第七十二条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子速記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>ファイルに記録して</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>破産手続等に係る事件の記録に添付して</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該陳述の録音により作成された電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>録音テープ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条の二第一項前段</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録した電磁的記録を作成し、これをファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載した調書を作成し、記名押印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第八十条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第四項の規定は答弁書について、第五十五条（訴状の添付書類等）第三項及び第四項の規定は前項の書証の写しの添付</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第四項（第一号に係る部分に限る。）の規定は、答弁書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し、尋問事項書を添付しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の作成に用いる場合</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>への添付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録させなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載させなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節（証人尋問）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節及び破産規則第十二条の六</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="3">
+              <Sentence>第百三十四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百八条（電子呼出状の記録事項等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>破産規則第十二条の十一において読み替えて準用する第百八条第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二項、第四項及び第五項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第二項及び第五項並びに同規則第十二条の六第一項及び第二項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十二条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録すべき</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載すべき</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>裁判所書記官は、法</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>法</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>画像情報を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>原本、謄本又は抄本は、</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第二項及び第百五十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百四十二条（受命裁判官等の証拠調べの電子調書）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>破産規則第十二条の十一において読み替えて準用する第百四十二条及び同規則第十二条の八</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書について</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書について</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第一項から第三項まで及び第百三十七条の二から前条まで</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>から前条まで（第百三十七条第三項及び第四項並びに第百四十三条第三項を除く。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の規定</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>及び破産規則第十二条の八の規定</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十九条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>最高裁判所の細則で定めるところにより、当該申出に係る電磁的記録の複製を第五十二条の十（電子情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該電磁的記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電磁的記録をいう</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面をいう</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第一項及び第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子証拠説明書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証拠説明書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第二項及び第百四十九条の四</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録を記録した記録媒体</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十九条の四</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>提出等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>提出等）並びに破産規則第十二条の八</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>読み替える</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、破産規則第十二条の八中「同条の文書の写し」とあるのは「第十二条の十一において読み替えて準用する同規則第百四十九条の二第一項の電磁的記録を記録した記録媒体」と読み替える</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百八十四条及び第百八十九条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子判決書又は電子判決書に代わる電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>判決書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百八十九条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子上告提起通知書（上告の提起があった旨を通知するために裁判所書記官が作成する電磁的記録をいう。以下同じ。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>上告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百八十九条第二項及び第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子上告提起通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>上告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百九十四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>による電子上告提起通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>による上告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百九十五条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>被上告人（当該書面の送達について法第百九条の二（電子情報処理組織による送達）第一項ただし書の届出をしている者を除く。）の数の副本（法第百三十二条の十（電子情報処理組織による申立て等）第一項の規定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>被上告人の数に六を加えた数の副本</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百九十九条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子上告提起通知書」とあるのは「電子上告受理申立て通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>上告提起通知書」とあるのは「上告受理申立て通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二百九条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子上告提起通知書」とあるのは「電子抗告許可申立て通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>上告提起通知書」とあるのは「抗告許可申立て通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二百十条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子抗告提起通知書（法第三百三十条の抗告又は法第三百三十六条第一項の抗告があった旨を通知するために裁判所書記官が作成する電磁的記録をいう。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>抗告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第二百十条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子抗告提起通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>抗告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子抗告許可申立て通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>抗告許可申立て通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+        </Table>
+      </TableStruct>
+    </AppdxTable>
+  </LawBody>
+</Law>

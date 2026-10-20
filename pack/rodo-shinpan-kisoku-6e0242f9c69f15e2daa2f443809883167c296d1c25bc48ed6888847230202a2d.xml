@@ -1,0 +1,1141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/080521roudoushinnpannkisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和６年９月１７日最高裁判所規則第１４号」
+  範囲: 本則39条（削除条の範囲を1要素として数える）、附則4本（抄を含む）、別表1点。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。14ページ先頭の表の行は紙面で確認のうえ縦結合の下の新しい行とした（verification/boundary/）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="17" Num="2" PromulgateMonth="1" PromulgateDay="11" LawType="Rule">
+  <LawNum>平成十七年一月十一日最高裁判所規則第二号</LawNum>
+  <LawBody>
+    <LawTitle>労働審判規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（趣旨）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判法（平成十六年法律第四十五号。以下「法」という。）による労働審判手続については、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（当事者の責務）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者は、早期に主張及び証拠の提出をし、労働審判手続の計画的かつ迅速な進行に努め、信義に従い誠実に労働審判手続を追行しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（管轄の合意の方式・法第二条）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条第一項の合意は、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>削除</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（代理人の許可の申立ての方式・法第四条）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第四条第一項ただし書の規定による許可の申立ては、代理人となるべき者の氏名、住所、職業及び本人との関係並びに当該申立ての理由を記載した書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の書面には、本人と代理人となるべき者との関係を証する文書を添付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6:8">
+        <ArticleTitle>第六条から第八条まで</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>削除</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（労働審判手続の申立書の記載事項等・法第五条）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判手続の申立書には、申立ての趣旨及び理由並びに第三十七条において準用する非訟事件手続規則（平成二十四年最高裁判所規則第七号）第一条第一項各号に掲げる事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>予想される争点及び当該争点に関連する重要な事実</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>予想される争点ごとの証拠</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>当事者間においてされた交渉（あっせんその他の手続においてされたものを含む。）その他の申立てに至る経緯の概要</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の申立書に記載する申立ての理由は、申立てを特定するのに必要な事実及び申立てを理由づける具体的な事実を含むものでなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>予想される争点についての証拠書類があるときは、その写しを第一項の申立書に添付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立書を提出するには、これと同時に、相手方の数に三を加えた数の当該申立書の写し及び相手方の数と同数の前項の証拠書類の写しを提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="10">
+        <ArticleCaption>（労働審判手続の申立書の写し等の送付・法第五条）</ArticleCaption>
+        <ArticleTitle>第十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、法第六条の規定により労働審判手続の申立てを却下する場合を除き、前条第四項の規定により提出された申立書の写し及び証拠書類の写し（これとともに提出された証拠説明書を含む。）を相手方に送付しなければならない。ただし、労働審判手続の期日を経ないで法第二十四条第一項の規定により労働審判事件を終了させる場合は、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="11">
+        <ArticleTitle>第十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>削除</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="12">
+        <ArticleCaption>（労働審判員の除斥及び回避・法第十一条）</ArticleCaption>
+        <ArticleTitle>第十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判員の除斥及び回避については、非訟事件手続規則第八条から第十条までの規定（忌避に関する部分を除く。）を準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="13">
+        <ArticleCaption>（労働審判手続の第一回の期日の指定・法第十四条）</ArticleCaption>
+        <ArticleTitle>第十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判官は、特別の事由がある場合を除き、労働審判手続の申立てがされた日から四十日以内の日に労働審判手続の第一回の期日を指定しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="14">
+        <ArticleCaption>（答弁書の提出期限）</ArticleCaption>
+        <ArticleTitle>第十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判官は、答弁書の提出をすべき期限を定めなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の期限は、答弁書に記載された事項について申立人が前条の期日（以下「第一回期日」という。）までに準備をするのに必要な期間をおいたものでなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="15">
+        <ArticleCaption>（呼出状の記載事項）</ArticleCaption>
+        <ArticleTitle>第十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者に対する第一回期日の呼出状には、第一回期日の前にあらかじめ主張、証拠の申出及び証拠調べに必要な準備をすべき旨を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>相手方に対する前項の呼出状には、同項に規定する事項のほか、前条第一項の期限までに答弁書を提出すべき旨を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="16">
+        <ArticleCaption>（答弁書の提出等）</ArticleCaption>
+        <ArticleTitle>第十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>相手方は、第十四条第一項の期限までに、第三十七条において準用する非訟事件手続規則第一条第一項各号に掲げる事項のほか、次に掲げる事項を記載した答弁書を提出しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立ての趣旨に対する答弁</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第九条第一項の申立書に記載された事実に対する認否</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>答弁を理由づける具体的な事実</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>予想される争点及び当該争点に関連する重要な事実</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>予想される争点ごとの証拠</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>当事者間においてされた交渉（あっせんその他の手続においてされたものを含む。）その他の申立てに至る経緯の概要</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>予想される争点についての証拠書類があるときは、その写しを答弁書に添付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>答弁書を提出するには、これと同時に、その写し三通を提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="17">
+        <ArticleCaption>（答弁に対する反論）</ArticleCaption>
+        <ArticleTitle>第十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>相手方の答弁に対する反論（これに対する再反論等を含む。以下この項において同じ。）を要する場合には、労働審判手続の期日において口頭でするものとする。この場合において、反論をする者は、口頭での主張を補充する書面（以下「補充書面」という。）を提出することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>補充書面を提出するには、これと同時に、その写し三通を提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="18">
+        <ArticleCaption>（労働審判手続の申立書等の記載の方法）</ArticleCaption>
+        <ArticleTitle>第十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第九条第一項の申立書、答弁書又は補充書面は、できる限り、申立て又は答弁を理由づける事実についての主張とそれ以外の事実についての主張とを区別して、簡潔に記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="19">
+        <ArticleCaption>（補充書面の提出等の期限）</ArticleCaption>
+        <ArticleTitle>第十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判官は、補充書面の提出又は証拠の申出をすべき期限を定めることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="20">
+        <ArticleCaption>（書類の送付）</ArticleCaption>
+        <ArticleTitle>第二十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>直送（当事者の相手方に対する直接の送付をいう。以下同じ。）その他の送付は、送付すべき書類の写しの交付又はその書類のファクシミリを利用しての送信によってする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所が当事者その他の関係人に対し送付すべき書類の送付に関する事務は、裁判所書記官が取り扱う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者が次に掲げる書面を提出するときは、これについて直送をしなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>答弁書</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>補充書面</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立ての趣旨又は理由の変更を記載した書面</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>第三十五条第一項の書面</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者が直送をしなければならない書類について、直送を困難とする事由その他相当とする事由があるときは、当該当事者は、裁判所に対し、当該書類の相手方への送付を裁判所書記官に行わせるよう申し出ることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者から前項の書類の直送を受けた相手方は、当該書類を受領した旨を記載した書面について直送をするとともに、当該書面を裁判所に提出しなければならない。ただし、同項の書類の直送をした当事者が、受領した旨を相手方が記載した当該書類を裁判所に提出したときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="21">
+        <ArticleCaption>（労働審判手続の期日における手続等・法第十五条）</ArticleCaption>
+        <ArticleTitle>第二十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判委員会は、第一回期日において、当事者の陳述を聴いて争点及び証拠の整理をし、第一回期日において行うことが可能な証拠調べを実施する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判官は、第一回期日において審理を終結できる場合又は第一回期日において法第二十四条第一項の規定により労働審判事件を終了させる場合を除き、次回期日を指定し、当該期日に行う手続及び当該期日までに準備すべきことを当事者との間で確認するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="22">
+        <ArticleCaption>（調停）</ArticleCaption>
+        <ArticleTitle>第二十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判委員会は、審理の終結に至るまで、労働審判手続の期日において調停を行うことができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所書記官は、前項の調停において当事者間に合意が成立したときは、当該合意の内容並びに当事者の氏名又は名称及び住所並びに代理人の氏名を、調書に記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="23">
+        <ArticleCaption>（手続の併合についての意見聴取）</ArticleCaption>
+        <ArticleTitle>第二十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判委員会は、手続の併合を命ずるときは、あらかじめ当事者の意見を聴かなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="24">
+        <ArticleCaption>（利害関係人の参加についての意見聴取）</ArticleCaption>
+        <ArticleTitle>第二十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判委員会は、労働審判手続の結果について利害関係を有する者が労働審判手続に参加することを許可し、又は当該者を労働審判手続に参加させる場合には、あらかじめ当事者の意見を聴かなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="25">
+        <ArticleCaption>（調書の記載事項・法第十四条）</ArticleCaption>
+        <ArticleTitle>第二十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判手続の調書には、次に掲げる事項を記載し、裁判所書記官が記名押印し、労働審判官が認印しなければならない。労働審判官に支障があるときは、裁判所書記官がその旨を記載すれば足りる。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>事件の表示</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>労働審判官、労働審判員及び裁判所書記官の氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>出頭した当事者及び代理人の氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>期日の日時及び場所</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立ての趣旨又は理由の変更及び申立ての取下げ</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>証拠調べの概要</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="7">
+            <ItemTitle>七</ItemTitle>
+            <ItemSentence>
+              <Sentence>審理の終結</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="8">
+            <ItemTitle>八</ItemTitle>
+            <ItemSentence>
+              <Sentence>労働審判官が記載を命じた事項</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="26">
+        <ArticleCaption>（申立ての趣旨又は理由の変更）</ArticleCaption>
+        <ArticleTitle>第二十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>申立ての趣旨又は理由の変更を記載した書面を提出するには、これと同時に、その写し三通を提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判委員会は、申立ての趣旨又は理由を変更することにより三回以内の期日において審理を終結することが困難になると認めるときは、その変更を許さないことができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判手続の期日において申立人が口頭で申立ての趣旨又は理由の変更をした場合（相手方が出頭した労働審判手続の期日においてした場合を除く。）は、労働審判委員会がその変更を許さないときを除き、裁判所は、その期日の調書の謄本を相手方に送付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="27">
+        <ArticleCaption>（主張及び証拠の提出の時期）</ArticleCaption>
+        <ArticleTitle>第二十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者は、やむを得ない事由がある場合を除き、労働審判手続の第二回の期日が終了するまでに、主張及び証拠書類の提出を終えなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="27_2">
+        <ArticleCaption>（証拠調べ・法第十七条第二項）</ArticleCaption>
+        <ArticleTitle>第二十七条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>証拠調べについては、民事訴訟規則（平成八年最高裁判所規則第五号）第二編第三章の規定（同規則第九十九条第二項、第百条、第百一条、第百四条から第百五条の三まで、第百五条の五、第百八条第二項、第百十一条、第百十二条第三項及び第四項、第百十三条、第百十四条、第百二十一条、第百二十四条第四項、第百二十五条、第百三十一条、第百三十二条第三項、第百三十二条の三、第百三十五条の二、第百三十七条第三項及び第四項、第百三十九条、第百四十二条、第百四十三条第三項、第百四十九条の二第三項、第百四十九条の三並びに第百五十一条の二の規定を除く。）を準用する。この場合において、別表の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句に読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>当事者が前項において準用する民事訴訟規則第九十九条第一項の証拠の申出を記載した書面を裁判所に提出する場合には、当該書面について直送をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="27_3">
+        <ArticleCaption>（証人の宣誓）</ArticleCaption>
+        <ArticleTitle>第二十七条の三</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判官は、証人に宣誓書を朗読させ、かつ、これに署名させなければならない。証人が宣誓書を朗読することができないときは、労働審判官は、裁判所書記官にこれを朗読させなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判官は、相当と認めるときは、前項前段の規定にかかわらず、同項前段に規定する署名に代えて、宣誓書に宣誓の趣旨を理解した旨の記載をさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前二項の宣誓書には、良心に従って真実を述べ、何事も隠さず、また、何事も付け加えないことを誓う旨を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="27_4">
+        <ArticleCaption>（鑑定人の宣誓）</ArticleCaption>
+        <ArticleTitle>第二十七条の四</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>鑑定人の宣誓書には、良心に従って誠実に鑑定をすることを誓う旨を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>鑑定人の宣誓は、宣誓書を裁判所に提出する方式によってもさせることができる。この場合における労働審判官による宣誓の趣旨の説明及び虚偽鑑定の罰の告知は、これらの事項を記載した書面を鑑定人に送付する方法によって行う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="28">
+        <ArticleCaption>（審判書・法第二十条）</ArticleCaption>
+        <ArticleTitle>第二十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十条第三項の審判書には、主文及び理由の要旨を記載するほか、次に掲げる事項を記載し、労働審判委員会を構成する労働審判官及び労働審判員が記名押印しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>事件の表示</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>当事者の氏名又は名称及び住所並びに代理人の氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>審判の年月日</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>裁判所の表示</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の労働審判員が審判書に記名押印することに支障があるときは、労働審判官が審判書にその事由を付記して記名押印しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="29">
+        <ArticleCaption>（審判書の送達・法第二十条）</ArticleCaption>
+        <ArticleTitle>第二十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十条第四項の規定による審判書の送達は、審判書の正本によってする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則第一編第五章第四節の規定（同規則第四十一条、第四十二条及び第一編第五章第四節第三款から第五款までの規定を除く。）は、法第二十条第四項の規定による送達について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="30">
+        <ArticleCaption>（審判書に代わる調書の記載事項・法第二十条）</ArticleCaption>
+        <ArticleTitle>第三十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十条第七項の調書には、次に掲げる事項を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>主文及び理由の要旨</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>当事者の氏名又は名称及び住所並びに代理人の氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>第二十五条各号に掲げる事項</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="31">
+        <ArticleCaption>（異議の申立ての方式等・法第二十一条）</ArticleCaption>
+        <ArticleTitle>第三十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十一条第一項の異議の申立ては、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十一条第三項の規定により労働審判が効力を失ったときは、裁判所書記官は、異議の申立てをしていない当事者に対し、遅滞なく、その旨を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="32">
+        <ArticleCaption>（訴状とみなす書面・法第二十二条）</ArticleCaption>
+        <ArticleTitle>第三十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十二条第一項（法第二十三条第二項及び第二十四条第二項において準用する場合を含む。）の規定により訴えの提起があったものとみなされたときは、民事訴訟規則第五十六条から第五十八条までの規定の適用については、第九条第一項の申立書、第二十六条第一項の書面及び労働審判手続の期日において口頭で申立ての趣旨又は理由の変更がされた場合におけるその期日の調書を訴状とみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="33">
+        <ArticleCaption>（労働審判事件の終了の場合の処置・法第二十四条）</ArticleCaption>
+        <ArticleTitle>第三十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十四条第一項の規定により労働審判事件が終了したときは、裁判所書記官は、その旨及び終了の年月日を記録上明らかにしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する場合においては、裁判所書記官は、当事者に対し、遅滞なく、その旨を通知しなければならない。ただし、労働審判手続の期日において労働審判事件を終了した場合に、その期日に出頭していた当事者については、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="34">
+        <ArticleCaption>（申立ての取下げがあった場合の取扱い・法第二十四条の二等）</ArticleCaption>
+        <ArticleTitle>第三十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判手続の申立てが取り下げられた場合（相手方が出頭した労働審判手続の期日においてされた場合を除く。）は、裁判所書記官は、第九条第四項の申立書の写しの送付を受けた相手方に対し、その旨を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="35">
+        <ArticleCaption>（費用の負担等の申立ての方式等・法第二十五条等）</ArticleCaption>
+        <ArticleTitle>第三十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二十五条の申立ては、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則第一編第四章第一節の規定（同規則第二十四条第三項から第五項まで、第二十五条第二項及び第二十六条後段の規定を除く。）は、労働審判事件に関する手続の費用の負担について準用する。この場合において、同規則第二十四条第二項、第二十五条第一項及び第三項並びに第二十七条中「資料」とあるのは「書面」と、同規則第二十四条第二項中「第四十七条の二（書類又は電磁的記録の直送）第一項」とあるのは「労働審判規則（平成十七年最高裁判所規則第二号）第二十条第一項」と、同規則第二十五条第一項中「記載し、又は記録した書面又は電磁的記録」とあるのは「記載した書面」と、同規則第二十六条前段中「記録した電磁的記録を作成し、これをファイルに記録しなければ」とあるのは「記載した書面を作成し、当該書面に記名押印しなければ」と読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="36">
+        <ArticleCaption>（閲覧等の制限の申立ての方式等・法第二十六条）</ArticleCaption>
+        <ArticleTitle>第三十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則第三十四条（第八項から第十一項までを除く。）の規定は、法第二十六条第二項において準用する民事訴訟法（平成八年法律第百九号）第九十二条（第九項及び第十項を除く。）の規定による秘密記載部分の閲覧等について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項において準用する民事訴訟規則第三十四条第三項本文、第五項本文又は第七項の規定により文書その他の物件から秘密記載部分を除いたものが提出された場合には、当該文書その他の物件の閲覧、謄写又は複製は、その提出されたものによってさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="36_2">
+        <ArticleCaption>（当事者に対する住所、氏名等の秘匿・法第二十八条の二）</ArticleCaption>
+        <ArticleTitle>第三十六条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>労働審判手続における申立てその他の申述については、民事訴訟規則第一編第八章の規定（同規則第五十二条の二十第七項から第九項まで、第五十二条の二十二第二項及び第三項並びに第五十二条の二十三の規定を除く。）を準用する。この場合において、同規則第五十二条の二十一第一項中「この規則の規定（第五十二条の十九（秘匿事項届出書面の記載事項等）第一項を除く。次項において同じ。）」とあるのは「労働審判規則第三十七条において準用する非訟事件手続規則（平成二十四年最高裁判所規則第七号）の規定」と、同条第二項中「この規則」とあるのは「労働審判規則第三十七条において準用する非訟事件手続規則」と読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項において準用する民事訴訟規則第五十二条の二十第三項、第五項本文又は第六項の規定により文書その他の物件から秘匿事項記載部分を除いたものが提出された場合には、当該文書その他の物件の閲覧、謄写又は複製は、その提出されたものによってさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項において準用する民事訴訟規則第五十二条の二十二第一項の規定により、法第二十八条の二において準用する民事訴訟法第百三十三条第二項の規定による届出に係る書面（以下この項において「秘匿事項届出書面」という。）から法第二十八条の二において読み替えて準用する民事訴訟法第百三十三条の四第一項の取消し又は同条第二項の許可の裁判に係る部分以外の部分（秘匿事項又は秘匿事項を推知することができる事項が記載された部分に限る。）を除いたものが提出された場合には、秘匿事項届出書面の閲覧又は謄写は、その提出されたものによってさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="37">
+        <ArticleCaption>（非訟事件手続規則の準用）</ArticleCaption>
+        <ArticleTitle>第三十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特別の定めがある場合を除いて、労働審判事件に関しては、非訟事件手続規則の規定（同規則第八条から第十一条までの規定中忌避に関する部分並びに同規則第十五条、第二十一条（民事訴訟規則第七十七条前段を準用する部分を除く。）、第二章第八節、第三章第三節及び第五十条の規定を除く。）を準用する。この場合において、非訟事件手続規則第二条第一項第二号中「非訟事件手続法（平成二十三年法律第五十一号。以下「法」という。）第四十二条の二」とあるのは、「労働審判法（平成十六年法律第四十五号）第二十八条の二」と読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日〔平成１８年４月１日〕から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（民事訴訟費用等に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟費用等に関する規則（昭和四十六年最高裁判所規則第五号）の一部を次のように改正する。第二条の二第二項第二号を次のように改める。二 別表第二の一の項に掲げる申立てに係る事件のうち労働審判法（平成十六年法律第四十五号）第二十二条第一項（同法第二十三条第二項及び第二十四条第二項において準用する場合を含む。）の規定により労働審判手続の申立ての時に訴えの提起があつたものとみなされた事件及び同表の四の項イに掲げる申立てに係る事件 千円</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成二四年七月一七日最高裁判所規則第九号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、非訟事件手続法（平成二十三年法律第五十一号）の施行の日〔平成２５年１月１日〕から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和四年一一月七日最高裁判所規則第一七号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下この条において「改正法」という。）附則第一条第二号に掲げる規定の施行の日〔令和５年２月２０日〕から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則第三十二条、第七十七条、第七十八条、第九十六条及び第百六十三条第一項の改正規定、第十四条の規定、第十八条中労働審判規則第三十七条の改正規定（「第七十七条」を「第七十七条前段」に改める部分に限る。）、第二十条中非訟事件手続規則第二十一条及び第五十条の改正規定、第二十一条中家事事件手続規則第三十三条及び第百二十六条第二項の改正規定並びに第二十二条中国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第二十三条及び第五十三条第一項の改正規定 改正法附則第一条第三号に掲げる規定の施行の日〔令和５年３月１日〕</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（調書の記載等に関する経過措置）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前に行われた非訟事件手続法（平成二十三年法律第五十一号）第四十七条第一項の規定（他の法律において準用する場合を含む。）による非訟事件の手続の期日における手続（証拠調べを除く。）の記録については、第二十条の規定による改正後の非訟事件手続規則第四十二条第二項（他の最高裁判所規則において準用する場合を含む。）の規定にかかわらず、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日〔令和８年５月２１日〕（以下「施行日」という。）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <AppdxTable>
+      <AppdxTableTitle>別表</AppdxTableTitle>
+      <RelatedArticleNum>（第二十七条の二関係）</RelatedArticleNum>
+      <TableStruct>
+        <Table>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百五条の四第三項、第百二十三条第四項、第百三十二条の五第三項及び第百三十三条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する。この場合において、同条第二項中「口頭弁論に係る電子調書に記録しなければ」とあるのは「記録上明らかにしなければ」と読み替えるものとする</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し、尋問事項書を添付しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十六条第三項及び第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の作成に用いる場合</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>への添付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十八条第二項、第百二十二条の二第二項及び第百二十二条の三第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書に</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録上</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録させなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>明らかにさせなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十二条の二第二項及び第百二十二条の三第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>明らかにしなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節（証人尋問）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節及び労働審判規則第二十七条の三</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十九条の二</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>口頭弁論若しくは弁論準備手続の期日又は進行協議期日</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>労働審判手続の期日</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="5">
+              <Sentence>第百三十四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百八条（電子呼出状の記録事項等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>労働審判規則第二十七条の二第一項において読み替えて準用する第百八条第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二項、第四項及び第五項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第二項及び第五項並びに同規則第二十七条の三第一項及び第二項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>、第百二十一条（傍聴人の退廷）及び</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>及び</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>、第百二十五条（受命裁判官等の権限）の規定は受命裁判官又は受託裁判官が鑑定人に意見を述べさせる場合について準用する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百三十七条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>同項の写し</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>文書の写し（労働審判規則第九条第四項の規定により提出された証拠書類の写しを除く。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>証拠説明書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証拠説明書（労働審判規則第九条第四項の証拠書類の写しとともに提出されたものを除く。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第九十九条（証拠の申出）第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>労働審判規則第二十七条の二第二項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>裁判所書記官は、法</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>法</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>画像情報を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>原本、謄本又は抄本は、</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十六条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、第百四十二条（受命裁判官等の証拠調べの電子調書）の規定は、法第二百二十九条第二項において準用する法第二百十九条（書証の申出）、第二百二十三条第一項及び第二百二十六条（文書送付の嘱託）の規定により提出され、又は送付された文書その他の物件の取調べを受命裁判官又は受託裁判官にさせる場合における電子調書について準用する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第一項から第三項まで及び第百三十七条の二から前条まで</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>から前条まで（第百三十七条第三項及び第四項、第百三十九条、第百四十二条並びに第百四十三条第三項を除く。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十九条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>最高裁判所の細則で定めるところにより、当該申出に係る電磁的記録の複製を第五十二条の十（電子情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該電磁的記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電磁的記録をいう</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面をいう</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第一項及び第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子証拠説明書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証拠説明書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録を記録した記録媒体</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="4">
+              <Sentence>第百四十九条の四</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>から第百三十九条まで</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、第百三十八条</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十二条（受命裁判官等の証拠調べの電子調書）、第百四十五条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百四十五条</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>文書の写し」とあるのは「電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>文書の写し」とあるのは「電磁的記録を記録した記録媒体</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百三十九条中「書証の写し」とあるのは「電磁的記録の複製」と、第百四十八条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百四十八条</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百五十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、第百四十二条（受命裁判官等の証拠調べの電子調書）の規定は、提示又は送付に係る検証の目的の検証を受命裁判官又は受託裁判官にさせる場合における電子調書について準用する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する</Sentence>
+            </TableColumn>
+          </TableRow>
+        </Table>
+      </TableStruct>
+    </AppdxTable>
+  </LawBody>
+</Law>

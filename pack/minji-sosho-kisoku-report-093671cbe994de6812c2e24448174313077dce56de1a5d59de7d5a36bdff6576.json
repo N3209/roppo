@@ -1,0 +1,364 @@
+{
+ "workId": "minji-sosho-kisoku",
+ "file": "minji-sosho-kisoku-6a24f56873f0f67eca6c81976d95d9cee9b244fdc53f12c52222ad84ad52d64c.xml",
+ "sha256": "6a24f56873f0f67eca6c81976d95d9cee9b244fdc53f12c52222ad84ad52d64c",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521minnsokisoku.pdf",
+  "fetched": "2026-10-06",
+  "sha256": "11dd9ccd54ebd1ee39690893c9792df878253f322ee9a7faf77eb0eab7bf37b5",
+  "pages": 63,
+  "law_num": "平成八年十二月十七日最高裁判所規則第五号",
+  "main_articles": 316,
+  "counts": {
+   "Article": 366,
+   "Paragraph": 738,
+   "Item": 152,
+   "Subitem1": 0,
+   "SupplProvision": 21,
+   "AppdxTable": 0,
+   "Table": 1
+  },
+  "matching_characters": 90983,
+  "dropped_notes": 10,
+  "long_vowel_fixes": 31,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 24,
+  "table_pages": [
+   62
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成九年七月二九日最高裁判所規則第五号）",
+   "附則（平成一三年一〇月三日最高裁判所規則第八号）",
+   "附則（平成一五年一一月一二日最高裁判所規則第一九号）抄",
+   "附則（平成一五年一一月一二日最高裁判所規則第二三号）抄",
+   "附則（平成一五年一一月一二日最高裁判所規則第二四号）抄",
+   "附則（平成一六年一〇月六日最高裁判所規則第一六号）",
+   "附則（平成一七年一月一一日最高裁判所規則第一号）抄",
+   "附則（平成一七年二月九日最高裁判所規則第六号）",
+   "附則（平成一八年二月八日最高裁判所規則第二号）抄",
+   "附則（平成一九年一二月二七日最高裁判所規則第一七号）",
+   "附則（平成一九年一二月二七日最高裁判所規則第一七号）",
+   "附則（平成二〇年六月六日最高裁判所規則第八号）",
+   "附則（平成二〇年一〇月一日最高裁判所規則第一〇号）",
+   "附則（平成二三年九月二七日最高裁判所規則第三号）",
+   "附則（平成二七年六月二九日最高裁判所規則第六号）抄",
+   "附則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附則（令和五年九月一九日最高裁判所規則第四号）抄",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "〔令和七年一二月二六日最高裁判所規則第一七号抄〕",
+   "附 則〔令和七年一二月二六日最高裁判所規則第一七号〕"
+  ]
+ },
+ "independentCount": {
+  "title": "民事訴訟規則",
+  "extractor": [
+   {
+    "page": 62,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 316,
+    "xml": 316,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 65,
+    "body": 65
+   },
+   "Article": {
+    "pdf_lines": 366,
+    "xml": 366,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 362,
+    "xml": 362,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 152,
+    "xml": 152,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 21,
+    "xml": 21,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "民事訴訟規則",
+  "units": 1327,
+  "pdf_lines": 2949,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 962,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 70
+ },
+ "tables": {
+  "title": "民事訴訟規則",
+  "xml_tables": 1,
+  "pdf_fragments": 1,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 2,
+    "equal": 2,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成15年11月12日 号外第260号",
+    "rule": "平成15年最高裁判所規則第19号",
+    "title": "民事訴訟規則及び執行官の手数料及び費用に関する規則の一部を改正する規則",
+    "year": 2003,
+    "no": 19,
+    "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成15年11月12日 号外第260号",
+    "rule": "平成15年最高裁判所規則第23号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2003,
+    "no": 23,
+    "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600011f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成15年11月12日 号外第260号",
+    "rule": "平成15年最高裁判所規則第24号",
+    "title": "人事訴訟規則",
+    "year": 2003,
+    "no": 24,
+    "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600013f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成16年10月6日 号外第221号",
+    "rule": "平成16年最高裁判所規則第16号",
+    "title": "民事訴訟規則の一部を改正する規則",
+    "year": 2004,
+    "no": 16,
+    "url": "https://www.kanpo.go.jp/old/20041006/20041006g00221/20041006g002210019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年1月11日 号外第3号",
+    "rule": "平成17年最高裁判所規則第1号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2005,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年2月9日 本紙第4030号",
+    "rule": "平成17年最高裁判所規則第6号",
+    "title": "不動産登記法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2005,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20050209/20050209h04030/20050209h040300003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年2月8日 本紙第4272号",
+    "rule": "平成18年最高裁判所規則第2号",
+    "title": "会社法及び会社法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備等に関する規則",
+    "year": 2006,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20060208/20060208h04272/20060208h042720004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年12月27日 本紙第4738号",
+    "rule": "平成19年最高裁判所規則第17号",
+    "title": "民事訴訟規則の一部を改正する規則",
+    "year": 2007,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20071227/20071227h04738/20071227h047380002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月1日 号外第216号",
+    "rule": "平成20年最高裁判所規則第10号",
+    "title": "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則",
+    "year": 2008,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20081001/20081001g00216/20081001g002160004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成23年9月27日 本紙第5647号",
+    "rule": "平成23年最高裁判所規則第3号",
+    "title": "民事訴訟規則の一部を改正する規則",
+    "year": 2011,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20110927/20110927h05647/20110927h056470002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年6月29日 号外第145号",
+    "rule": "平成27年最高裁判所規則第6号",
+    "title": "民事訴訟規則の一部を改正する規則",
+    "year": 2015,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20150629/20150629g00145/20150629g001450005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年9月19日 本紙第1064号",
+    "rule": "令和5年最高裁判所規則第4号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20230919/20230919h01064/20230919h010640002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年6月6日 本紙第4844号",
+    "rule": "平成20年最高裁判所規則第8号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2008,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20080606/20080606h04844/20080606h048440001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20041006",
+    "no": 15,
+    "explained_by_neighbour": [
+     "民事訴訟規則の一部を改正する規則（同一六）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 9,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 11,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 12,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 13,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20150629",
+    "no": 5,
+    "explained_by_neighbour": [
+     "民事訴訟規則の一部を改正する規則（同六）"
+    ]
+   }
+  ]
+ }
+}

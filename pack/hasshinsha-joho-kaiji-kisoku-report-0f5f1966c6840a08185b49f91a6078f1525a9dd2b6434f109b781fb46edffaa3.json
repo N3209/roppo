@@ -1,0 +1,179 @@
+{
+ "workId": "hasshinsha-joho-kaiji-kisoku",
+ "file": "hasshinsha-joho-kaiji-kisoku-3a108092d18f76157f1646a7e43e094a35ddbbe7103be1224ff5837c4b380fbe.xml",
+ "sha256": "3a108092d18f76157f1646a7e43e094a35ddbbe7103be1224ff5837c4b380fbe",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521hasshinnsyajyouhoukaijimeireikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "a59707863cec3553b40d45752eee8686902d22637ff860de615994789f9cf89e",
+  "pages": 3,
+  "law_num": "令和四年三月十五日最高裁判所規則第十一号",
+  "main_articles": 10,
+  "counts": {
+   "Article": 13,
+   "Paragraph": 23,
+   "Item": 7,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 3942,
+  "dropped_notes": 3,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 5,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-article",
+    "2"
+   ],
+   [
+    "excerpt-first-paragraph",
+    "3"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附 則（令和七年二月三日最高裁判所規則第一号）"
+  ]
+ },
+ "independentCount": {
+  "title": "発信者情報開示命令事件手続規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "発信者情報開示命令事件手続規則",
+  "units": 45,
+  "pdf_lines": 136,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 28,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "発信者情報開示命令事件手続規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和4年3月15日 本紙第694号",
+   "rule": "令和4年最高裁判所規則第11号",
+   "title": "発信者情報開示命令事件手続規則",
+   "year": 2022,
+   "no": 11,
+   "url": "https://www.kanpo.go.jp/old/20220315/20220315h00694/20220315h006940001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年2月3日 本紙第1397号",
+    "rule": "令和7年最高裁判所規則第1号",
+    "title": "発信者情報開示命令事件手続規則の一部を改正する規則",
+    "year": 2025,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20250203/20250203h01397/20250203h013970002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

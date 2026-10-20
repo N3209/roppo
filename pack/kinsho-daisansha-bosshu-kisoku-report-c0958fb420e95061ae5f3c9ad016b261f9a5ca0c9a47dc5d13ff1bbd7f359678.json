@@ -1,0 +1,189 @@
+{
+ "workId": "kinsho-daisansha-bosshu-kisoku",
+ "file": "kinsho-daisansha-bosshu-kisoku-9d18cfd4847d63992991802bfab1b24a12da9cc1b51395d9ae14274eb1a05ea8.xml",
+ "sha256": "9d18cfd4847d63992991802bfab1b24a12da9cc1b51395d9ae14274eb1a05ea8",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2024/20240701kinshouhoukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "e092c51437e8c48aba05c3c8a3234ee8cdb17f510e5f2fb7512f849f8f2e831a",
+  "pages": 2,
+  "law_num": "平成二十六年九月二十四日最高裁判所規則第六号",
+  "main_articles": 0,
+  "counts": {
+   "Article": 0,
+   "Paragraph": 4,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 1
+  },
+  "matching_characters": 1121,
+  "dropped_notes": 2,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   2
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和三年四月二六日最高裁判所規則第二号）",
+   "附則（令和六年七月一日最高裁判所規則第一三号）"
+  ]
+ },
+ "independentCount": {
+  "title": "金融商品取引法等による第三者の財産等の没収手続に関する規則",
+  "extractor": [
+   {
+    "page": 2,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "金融商品取引法等による第三者の財産等の没収手続に関する規則",
+  "units": 3,
+  "pdf_lines": 22,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 1,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 22
+ },
+ "tables": {
+  "title": "金融商品取引法等による第三者の財産等の没収手続に関する規則",
+  "xml_tables": 1,
+  "pdf_fragments": 1,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 18,
+    "equal": 18,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成26年9月24日 本紙第6380号",
+   "rule": "平成26年最高裁判所規則第6号",
+   "title": "金融商品取引法等による第三者の財産等の没収手続に関する規則",
+   "year": 2014,
+   "no": 6,
+   "url": "https://www.kanpo.go.jp/old/20140924/20140924h06380/20140924h063800001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和3年4月26日 本紙第481号",
+    "rule": "令和3年最高裁判所規則第2号",
+    "title": "金融商品取引法等による第三者の財産等の没収手続に関する規則の一部を改正する規則",
+    "year": 2021,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20210426/20210426h00481/20210426h004810002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年7月1日 本紙第1254号",
+    "rule": "令和6年最高裁判所規則第13号",
+    "title": "金融商品取引法等による第三者の財産等の没収手続に関する規則の一部を改正する規則",
+    "year": 2024,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20240701/20240701h01254/20240701h012540002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20210426",
+    "no": 1,
+    "explained_by_neighbour": [
+     "金融商品取引法等による第三者の財産等の没収手続に関する規則の一部を改正する規則（同二）"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "workId": "saibankan-bungen-kisoku",
+ "file": "saibankan-bungen-kisoku-7b20b30fa071465e9f8c1335b25f42125b235e6884869e5eba5038920f5258b7.xml",
+ "sha256": "7b20b30fa071465e9f8c1335b25f42125b235e6884869e5eba5038920f5258b7",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file5/saibankannobungenjikentetudukikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "359ba3e56703da5d478e0669850e235349c2e4adea16c6643126e243840f5c7d",
+  "pages": 2,
+  "law_num": "昭和二十三年六月七日最高裁判所規則第六号",
+  "main_articles": 9,
+  "counts": {
+   "Article": 11,
+   "Paragraph": 17,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 966,
+  "dropped_notes": 3,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [
+   "事件（以下分限事件という｡）の申立ては、書面をも"
+  ],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "unnumbered-paragraph",
+    "2"
+   ],
+   [
+    "unnumbered-paragraph",
+    "3"
+   ],
+   [
+    "unnumbered-paragraph",
+    "2"
+   ],
+   [
+    "unnumbered-paragraph",
+    "2"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二四年七月一日最高裁判所規則第一三号）",
+   "附則（平成二四年七月一七日最高裁判所規則第九号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "裁判官の分限事件手続規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "裁判官の分限事件手続規則",
+  "units": 20,
+  "pdf_lines": 47,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 22,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 6
+ },
+ "tables": {
+  "title": "裁判官の分限事件手続規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20120717",
+    "no": 8,
+    "explained_by_neighbour": [
+     "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則（同九）"
+    ]
+   }
+  ]
+ }
+}

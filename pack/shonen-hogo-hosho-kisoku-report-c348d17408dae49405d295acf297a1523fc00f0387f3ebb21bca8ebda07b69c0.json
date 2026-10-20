@@ -1,0 +1,164 @@
+{
+ "workId": "shonen-hogo-hosho-kisoku",
+ "file": "shonen-hogo-hosho-kisoku-fc07692ca6bbad4942186597bb78baf64d4d302b678dbdeaac44840e1dec8cf1.xml",
+ "sha256": "fc07692ca6bbad4942186597bb78baf64d4d302b678dbdeaac44840e1dec8cf1",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521shounenhoshoukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "eb7ba9d73cd7949c2f8731d4faa9552cd99879deb1aa9f39c10f6b02a03aaecf",
+  "pages": 3,
+  "law_num": "平成四年七月二十日最高裁判所規則第八号",
+  "main_articles": 10,
+  "counts": {
+   "Article": 14,
+   "Paragraph": 31,
+   "Item": 11,
+   "Subitem1": 0,
+   "SupplProvision": 6,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 3189,
+  "dropped_notes": 10,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附則（平成一三年二月一九日最高裁判所規則第一号）",
+   "附則（平成二三年一二月二日最高裁判所規則第五号）抄",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附則（令和七年一二月二六日最高裁判所規則第一七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "少年の保護事件に係る補償に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "少年の保護事件に係る補償に関する規則",
+  "units": 59,
+  "pdf_lines": 135,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 34,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "少年の保護事件に係る補償に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成23年12月2日 本紙第5692号",
+    "rule": "平成23年最高裁判所規則第5号",
+    "title": "民法等の一部を改正する法律の施行に伴う関係規則の整備に関する規則",
+    "year": 2011,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20111202/20111202h05692/20111202h056920001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

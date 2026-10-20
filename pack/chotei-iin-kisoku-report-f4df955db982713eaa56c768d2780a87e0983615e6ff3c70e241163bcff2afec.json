@@ -1,0 +1,238 @@
+{
+ "workId": "chotei-iin-kisoku",
+ "file": "chotei-iin-kisoku-a7ca04796fa7af892af054dad855655e5b709268d85d62fac4c33096afb45b9e.xml",
+ "sha256": "a7ca04796fa7af892af054dad855655e5b709268d85d62fac4c33096afb45b9e",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2025/20250601minjicyouteiiinoyobikajicyouteiiinkisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "81d84a068c31a5cc35b532ea503cfd3995e7c35073fe674c8c95790acc83a6c0",
+  "pages": 5,
+  "law_num": "昭和四十九年七月十三日最高裁判所規則第五号",
+  "main_articles": 7,
+  "counts": {
+   "Article": 10,
+   "Paragraph": 34,
+   "Item": 7,
+   "Subitem1": 0,
+   "SupplProvision": 13,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2803,
+  "dropped_notes": 5,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 8,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-paragraph-gap",
+    "1->3"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則抄",
+   "附則 （昭和五〇年九月二〇日最高裁判所規則第三号）",
+   "附則 （昭和五〇年一一月一五日最高裁判所規則第七号）",
+   "附則 （昭和五四年三月三一日最高裁判所規則第一号）",
+   "附則 （昭和六〇年一二月二一日最高裁判所規則第六号） 抄",
+   "附則 （平成二年四月二四日最高裁判所規則第二号）",
+   "附則 （平成六年九月一日最高裁判所規則第八号）",
+   "附則 （平成一二年一月七日最高裁判所規則第一号） 抄",
+   "附則 （平成一八年三月二二日最高裁判所規則第五号）",
+   "附則 （平成二四年七月一七日最高裁判所規則第九号） 抄",
+   "附則 （令和四年二月二一日最高裁判所規則第五号）",
+   "附則（令和七年二月十二日最高裁判所規則第三号）抄",
+   "附則 （令和七年三月三日最高裁判所規則第五号）"
+  ]
+ },
+ "independentCount": {
+  "title": "民事調停委員及び家事調停委員規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 21,
+    "xml": 21,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "民事調停委員及び家事調停委員規則",
+  "units": 64,
+  "pdf_lines": 125,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 20,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 16
+ },
+ "tables": {
+  "title": "民事調停委員及び家事調停委員規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成18年3月22日 号外第60号",
+    "rule": "平成18年最高裁判所規則第5号",
+    "title": "少年法による調査及び観察のための援助費用に関する規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20060322/20060322g00060/20060322g000600003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年2月21日 号外第36号",
+    "rule": "令和4年最高裁判所規則第5号",
+    "title": "民事調停委員及び家事調停委員規則及び専門委員規則の一部を改正する規則",
+    "year": 2022,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20220221/20220221g00036/20220221g000360002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年2月12日 号外第28号",
+    "rule": "令和7年最高裁判所規則第3号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20250212/20250212g00028/20250212g000280007f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年3月3日 号外第42号",
+    "rule": "令和7年最高裁判所規則第5号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20250303/20250303g00042/20250303g000420002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20060322",
+    "no": 4,
+    "explained_by_neighbour": [
+     "少年法による調査及び観察のための援助費用に関する規則等の一部を改正する規則（同五）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 2,
+    "explained_by_neighbour": [
+     "民事調停委員及び家事調停委員規則及び専門委員規則の一部を改正する規則（同五）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 3,
+    "explained_by_neighbour": [
+     "民事調停委員及び家事調停委員規則及び専門委員規則の一部を改正する規則（同五）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 4,
+    "explained_by_neighbour": [
+     "民事調停委員及び家事調停委員規則及び専門委員規則の一部を改正する規則（同五）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 6,
+    "explained_by_neighbour": [
+     "民事調停委員及び家事調停委員規則及び専門委員規則の一部を改正する規則（同五）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 7,
+    "explained_by_neighbour": [
+     "民事調停委員及び家事調停委員規則及び専門委員規則の一部を改正する規則（同五）"
+    ]
+   }
+  ]
+ }
+}

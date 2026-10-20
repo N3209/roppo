@@ -1,0 +1,243 @@
+{
+ "workId": "hanzai-higaisha-hogo-kisoku",
+ "file": "hanzai-higaisha-hogo-kisoku-da0753aee13cd67785bb57159177edc793abf692f6ceea5a270c5903ebb73721.xml",
+ "sha256": "da0753aee13cd67785bb57159177edc793abf692f6ceea5a270c5903ebb73721",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/hanzaihigaisyakisoku.20260521.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "f9bb83df2e4d8674b24783287de6d1d5d281422536fd794980742525d0d31e6c",
+  "pages": 28,
+  "law_num": "平成十二年九月二十七日最高裁判所規則第十三号",
+  "main_articles": 56,
+  "counts": {
+   "Article": 60,
+   "Paragraph": 136,
+   "Item": 33,
+   "Subitem1": 0,
+   "SupplProvision": 10,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 16930,
+  "dropped_notes": 72,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 1,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [
+   {
+    "kind": "caption-article",
+    "parts": [
+     "（民事訴訟規則の準用）",
+     "第五十三条 特別の定めがある場合を除き、損害賠償命令事件に"
+    ]
+   }
+  ],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-paragraph-gap",
+    "1->3"
+   ],
+   [
+    "suppl-paragraph-caption",
+    "1"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則 抄",
+   "附則（平成一九年一二月七日最高裁判所規則第一五号）",
+   "附則（平成二〇年五月二一日最高裁判所規則第六号）抄",
+   "附則（平成二〇年一〇月二一日最高裁判所規則第一七号）抄",
+   "附則（平成二五年一〇月一六日最高裁判所規則第四号）",
+   "附則（平成二八年一〇月一八日最高裁判所規則第六号）抄",
+   "附則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附則（令和五年一二月二五日最高裁判所規則第一〇号）抄",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附則（令和七年一二月二六日最高裁判所規則第一七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "犯罪被害者等の権利利益の保護を図るための刑事手続に付随する措置に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 56,
+    "xml": 56,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 11,
+    "body": 11
+   },
+   "Article": {
+    "pdf_lines": 60,
+    "xml": 60,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 72,
+    "xml": 72,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 33,
+    "xml": 33,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "犯罪被害者等の権利利益の保護を図るための刑事手続に付随する措置に関する規則",
+  "units": 249,
+  "pdf_lines": 762,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 181,
+  "accounted": {
+   "caption_then_unit_on_one_line": 1,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 38
+ },
+ "tables": {
+  "title": "犯罪被害者等の権利利益の保護を図るための刑事手続に付随する措置に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成20年10月21日 本紙第4937号",
+    "rule": "平成20年最高裁判所規則第17号",
+    "title": "犯罪被害者等の権利利益の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20081021/20081021h04937/20081021h049370002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成25年11月1日 本紙第6163号",
+    "rule": "平成25年最高裁判所規則第4号",
+    "title": "犯罪被害者等の権利利益の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2013,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20131101/20131101h06163/20131101h061630004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成28年10月18日 本紙第6880号",
+    "rule": "平成28年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則の一部を改正する規則",
+    "year": 2016,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20161018/20161018h06880/20161018h068800002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年12月25日 号外第270号",
+    "rule": "令和5年最高裁判所規則第10号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20231225/20231225g00270/20231225g002700005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年12月7日 号外第279号",
+    "rule": "平成19年最高裁判所規則第15号",
+    "title": "刑事訴訟規則及び犯罪被害者等の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20071207/20071207g00279/20071207g002790017f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成20年5月21日 号外第104号",
+    "rule": "平成20年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び犯罪被害者等の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20080521/20080521g00104/20080521g001040004f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

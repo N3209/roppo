@@ -1,0 +1,582 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/file4/gyouhukuiinnkai_kisoku_kisokusyuuyou.pdf
+  取得: 2026-10-18
+  反映: PDFに改正履歴の記載なし。掲載された附則の最後は「附 則」
+  範囲: 本則23条（削除条の範囲を1要素として数える）、附則1本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。文中の空白の除去あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。文中の空白4か所（紙面で字間のない、元の改行の跡）を除去し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="28" Num="2" PromulgateMonth="3" PromulgateDay="24" LawType="Rule">
+  <LawNum>平成二十八年三月二十四日最高裁判所規則第二号</LawNum>
+  <LawBody>
+    <LawTitle>最高裁判所行政不服審査委員会規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条・第二条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 最高裁判所行政不服審査委員会への諮問</ChapterTitle>
+        <ArticleRange>（第三条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 裁決</ChapterTitle>
+        <ArticleRange>（第四条・第五条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 最高裁判所行政不服審査委員会</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 設置及び組織</SectionTitle>
+          <ArticleRange>（第六条―第十一条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 調査審議の手続</SectionTitle>
+          <ArticleRange>（第十二条―第二十三条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（目的）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則は、裁判所における行政不服審査法（平成二十六年法律第六十八号。以下「法」という。）に基づく審査請求に係る事件について、審理手続及び裁決の一層の公正性を確保するため、最高裁判所又は最高裁判所長官の諮問に応じ、審査請求に係る事件について調査審議するための機関として、最高裁判所に、最高裁判所行政不服審査委員会を設置するとともに、その組織及び調査審議の手続並びに同委員会への諮問等について定めることを目的とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（定義）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則において、次の各号に掲げる用語の意義は、当該各号に定めるところによる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>処分 法第一条第二項に規定する行政庁の処分その他公権力の行使に当たる行為をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>処分庁等 法第四条第一号に規定する処分庁等をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>参加人 法第十三条第一項又は第二項の規定により当該審査請求に参加する者をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>審理関係人 法第二十八条に規定する審査請求人、参加人及び処分庁等をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>意見書 法第三十条第二項に規定する審査請求に係る事件に関する意見を記載した書面をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>口頭意見陳述 法第三十一条第一項本文の規定による意見の陳述をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>事件記録 法第四十一条第三項に規定する事件記録をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="8">
+              <ItemTitle>八</ItemTitle>
+              <ItemSentence>
+                <Sentence>審理員意見書 法第四十二条第一項に規定する審査庁がすべき裁決に関する意見書をいう。</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 最高裁判所行政不服審査委員会への諮問</ChapterTitle>
+        <Article Num="3">
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>最高裁判所又は最高裁判所長官（以下「審査庁」という。）は、法第四十二条第二項の規定により審理員意見書の提出を受けたときは、次の各号のいずれかに該当する場合を除き、最高裁判所行政不服審査委員会に諮問しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>審査請求に係る処分をしようとするときに法律又は政令に法第九条第一項各号に掲げる機関又はこれらの機関に類するものとして政令で定めるもの（以下「審議会等」という。）の議を経るべき旨又は経ることができる旨の定めがあり、かつ、当該議を経て当該処分がされた場合</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>裁決をしようとするときに法律又は政令に法第九条第一項各号に掲げる機関又はこれらの機関に類するものとして政令で定めるものの議を経るべき旨又は経ることができる旨の定めがあり、かつ、当該議を経て裁決をしようとする場合</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十六条第三項又は第四十九条第四項の規定により審議会等の議を経て裁決をしようとする場合</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>審査請求人から、最高裁判所行政不服審査委員会への諮問を希望しない旨の申出がされている場合（参加人から、最高裁判所行政不服審査委員会に諮問しないことについて反対する旨の申出がされている場合を除く。）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>審査請求が、最高裁判所行政不服審査委員会によって、国民の権利利益及び司法行政の運営に対する影響の程度その他当該事件の性質を勘案して、諮問を要しないものと認められたものである場合</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>審査請求が不適法であり、却下する場合</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十六条第一項の規定により審査請求に係る処分（法令に基づく申請を却下し、又は棄却する処分及び事実上の行為を除く。）の全部を取り消し、又は法第四十七条第一号若しくは第二号の規定により審査請求に係る事実上の行為の全部を撤廃すべき旨を命じ、若しくは撤廃することとする場合（当該処分の全部を取り消すこと又は当該事実上の行為の全部を撤廃すべき旨を命じ、若しくは撤廃することについて反対する旨の意見書が提出されている場合及び口頭意見陳述においてその旨の意見が述べられている場合を除く。）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="8">
+              <ItemTitle>八</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十六条第二項各号又は第四十九条第三項各号に定める措置（法令に基づく申請の全部を認容すべき旨を命じ、又は認容するものに限る。）をとることとする場合（当該申請の全部を認容することについて反対する旨の意見書が提出されている場合及び口頭意見陳述においてその旨の意見が述べられている場合を除く。）</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定による諮問は、審理員意見書及び事件記録の写しを添えてしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の規定により諮問をした審査庁は、審理関係人（当該審査庁が処分庁等である場合にあっては、審査請求人及び参加人）に対し、当該諮問をした旨を通知するとともに、審理員意見書の写しを送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 裁決</ChapterTitle>
+        <Article Num="4">
+          <ArticleCaption>（裁決の時期）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審査庁は、最高裁判所行政不服審査委員会から諮問に対する答申を受けたときは、遅滞なく、裁決をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（裁決の方式）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審査庁は、法第五十条の規定により裁決をする場合において、その主文が最高裁判所行政不服審査委員会の答申書と異なる内容であるときは、異なることとなった理由を裁決書に記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 最高裁判所行政不服審査委員会</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 設置及び組織</SectionTitle>
+          <Article Num="6">
+            <ArticleCaption>（設置）</ArticleCaption>
+            <ArticleTitle>第六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三条の規定による諮問に応じ、審査請求に係る事件について調査審議するため、最高裁判所に、最高裁判所行政不服審査委員会（以下「審査委員会」という。）を置く。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="7">
+            <ArticleCaption>（組織）</ArticleCaption>
+            <ArticleTitle>第七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、委員三人をもって組織する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員は、非常勤とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="8">
+            <ArticleCaption>（委員）</ArticleCaption>
+            <ArticleTitle>第八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員は、審査委員会の権限に属する事項に関し公正な判断をすることができ、かつ、法律又は行政に関して優れた識見を有する者のうちから、最高裁判所が任命する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員の任期は、三年とする。ただし、補欠の委員の任期は、前任者の残任期間とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員は、再任されることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員の任期が満了したときは、当該委員は、後任者が任命されるまで引き続きその職務を行うものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>最高裁判所は、委員が心身の故障のために職務の執行ができないと認める場合又は委員に職務上の義務違反その他委員たるに適しない非行があると認める場合には、その委員を罷免することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員は、在任中、政党その他の政治的団体の役員となり、又は積極的に政治運動をしてはならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="9">
+            <ArticleCaption>（委員長）</ArticleCaption>
+            <ArticleTitle>第九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会に、委員長を置き、委員の互選により選任する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員長は、会務を総理し、審査委員会を代表する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員長に事故があるときは、あらかじめその指名する委員が、その職務を代理する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="10">
+            <ArticleCaption>（議事）</ArticleCaption>
+            <ArticleTitle>第十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、委員長が招集する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、委員長及び少なくとも一人の委員の出席がなければ、会議を開き、議決することができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会の議事は、出席者の過半数をもって決し、可否同数のときは、委員長の決するところによる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員は、自己の利害に関係する議事に参与することができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>委員長に事故がある場合又は前項の規定により委員長が議事に参与することができない場合における第二項及び第三項の規定の適用については、前条第三項に規定する委員は、委員長とみなす。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="11">
+            <ArticleCaption>（庶務）</ArticleCaption>
+            <ArticleTitle>第十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会の庶務は、最高裁判所事務総局総務局において処理する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 調査審議の手続</SectionTitle>
+          <Article Num="12">
+            <ArticleCaption>（審査委員会の調査権限）</ArticleCaption>
+            <ArticleTitle>第十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、必要があると認める場合には、審査請求に係る事件に関し、審査請求人、参加人又は第三条第一項の規定により審査委員会に諮問をした審査庁（以下「審査関係人」という。）にその主張を記載した書面（以下「主張書面」という。）又は資料の提出を求めること、適当と認める者にその知っている事実の陳述又は鑑定を求めることその他必要な調査をすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="13">
+            <ArticleCaption>（調査審議の手続の併合又は分離）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、必要があると認める場合には、数個の事件に係る調査審議の手続を併合し、又は併合された数個の事件に係る調査審議の手続を分離することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、前項の規定により、事件に係る調査審議の手続を併合し、又は分離したときは、審査関係人にその旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（意見の陳述）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、審査関係人の申立てがあった場合には、当該審査関係人に口頭で意見を述べる機会を与えなければならない。ただし、審査委員会が、その必要がないと認める場合には、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項本文の場合において、審査請求人又は参加人は、審査委員会の許可を得て、補佐人とともに出頭することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="15">
+            <ArticleCaption>（映像等の送受信による通話の方法による意見の陳述等）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、前条第一項本文の規定による意見の陳述の機会を与えた場合において、遠隔の地に居住する審査関係人があるとき、その他相当と認めるときは、委員及び審査関係人が映像と音声の送受信により相手の状態を相互に認識しながら通話をすることができる方法によって、調査審議を行うことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の場合には、審査関係人の意見を聴いて、当該調査審議に必要な装置が設置された場所であって審査委員会が相当と認める場所を、審査関係人ごとに指定して行う。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（主張書面等の提出）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査関係人は、審査委員会に対し、主張書面又は資料を提出することができる。この場合において、審査委員会が、主張書面又は資料を提出すべき相当の期間を定めたときは、その期間内にこれを提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleCaption>（委員による調査手続）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、必要があると認める場合には、その指名する委員に、第十二条の規定による調査をさせ、又は第十四条第一項本文の規定による審査関係人の意見の陳述を聴かせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（提出資料の閲覧等）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査関係人は、審査委員会に対し、審査委員会に提出された主張書面若しくは資料の閲覧（電磁的記録にあっては、記録された事項を審査委員会が定める方法により表示したものの閲覧）又は当該主張書面若しくは当該資料の写し若しくは当該電磁的記録に記録された事項を記載した書面の交付を求めることができる。この場合において、審査委員会は、第三者の利益を害するおそれがあると認めるとき、その他正当な理由があるときでなければ、その閲覧又は交付を拒むことができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、前項の規定による閲覧をさせ、又は同項の規定による交付をしようとするときは、当該閲覧又は交付に係る主張書面又は資料の提出人の意見を聴かなければならない。ただし、審査委員会が、その必要がないと認めるときは、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、第一項の規定による閲覧について、日時及び場所を指定することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleCaption>（交付の求め）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項の規定による交付の求めは、次に掲げる事項を記載した書面を提出してしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>交付に係る前条第一項に規定する主張書面若しくは資料（以下「対象主張書面等」という。）又は交付に係る同項に規定する電磁的記録（以下「対象電磁的記録」という。）を特定するに足りる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象主張書面等又は対象電磁的記録について求める交付の方法（次条各号に掲げる交付の方法をいう。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象主張書面等又は対象電磁的記録について第二十一条に規定する送付による交付を求める場合にあっては、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（交付の方法）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十八条第一項の規定による交付は、次の各号のいずれかの方法によってする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象主張書面等の写しの交付にあっては、当該対象主張書面等を複写機により用紙の片面又は両面に白黒又はカラーで複写したものの交付</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象電磁的記録に記録された事項を記載した書面の交付にあっては、当該事項を用紙の片面又は両面に白黒又はカラーで出力したものの交付</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="21">
+            <ArticleCaption>（送付による交付）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十八条第一項の規定による交付を受ける審査請求人又は参加人は、対象主張書面等の写し又は対象電磁的記録に記録された事項を記載した書面の送付を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（答申書の送付等）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審査委員会は、諮問に対する答申をしたときは、答申書の写しを審査請求人及び参加人に送付するとともに、答申の内容を公表するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23">
+            <ArticleCaption>（審査委員会の調査審議の手続）</ArticleCaption>
+            <ArticleTitle>第二十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>この規則に定めるもののほか、審査委員会の調査審議の手続に関し必要な事項は、委員長が審査委員会に諮って定める。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日（平成二十八年四月一日）から施行する。ただし、次条の規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（準備行為）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第八条第一項の規定による審査委員会の委員の任命に関し必要な行為は、この規則の施行の日前においても、同項の規定の例によりすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（経過措置）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所の処分又は不作為（法令に基づく申請に対して何らの処分をもしないことをいう。以下この条において同じ。）についての不服申立てであって、この規則の施行前にされた裁判所の処分又はこの規則の施行前にされた申請に係る裁判所の不作為に係るものについては、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行後最初に任命される審査委員会の委員の任期は、第八条第二項本文の規定にかかわらず、三人のうち、一人は二年、二人は三年とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する各委員の任期は、最高裁判所が定める</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

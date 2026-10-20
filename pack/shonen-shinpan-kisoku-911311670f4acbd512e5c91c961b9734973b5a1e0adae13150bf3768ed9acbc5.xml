@@ -1,0 +1,2695 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/20260521shounenshinpankisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和7年12月26日最高裁判所規則第１７号」
+  範囲: 本則102条（削除条の範囲を1要素として数える）、附則31本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFに混じった半角の読点・句点「､」「｡」1字を全角「、」「。」に統一（箇所は検証結果に記録）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="23" Num="33" PromulgateMonth="12" PromulgateDay="21" LawType="Rule">
+  <LawNum>昭和二十三年十二月二十一日最高裁判所規則第三十三号</LawNum>
+  <LawBody>
+    <LawTitle>少年審判規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条－第七条の二）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 通告、警察官の調査等</ChapterTitle>
+        <ArticleRange>（第八条－第十条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 調査及び審判</ChapterTitle>
+        <ArticleRange>（第十一条－第四十二条の三）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 抗告</ChapterTitle>
+        <ArticleRange>（第四十三条－第五十四条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="5">
+        <ChapterTitle>第五章 雑則</ChapterTitle>
+        <ArticleRange>（第五十五条－第五十八条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（この規則の解釈と運用、保護事件取扱の態度）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則は、少年の保護事件を適切に処理するため、少年法（昭和二十三年法律第百六十八号。以下法という。）の目的及び精神に従つて解釈し、運用しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>調査及び審判その他保護事件の取扱に際しては、常に懇切にして誠意ある態度をもつて少年の情操の保護に心がけ、おのずから少年及び保護者等の信頼を受けるように努めなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（決定書）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定をするときは、裁判官が、決定書を作つてこれに署名押印しなければならない。合議体で決定をする場合において、決定書に署名押印できない裁判官があるときは、他の裁判官の一人（当該署名押印できない裁判官が裁判長以外の裁判官である場合は、裁判長）が、その事由を付記して署名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定により署名押印すべき場合には、署名押印に代えて記名押印することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次の各号に掲げる決定を除く決定の決定書には、第一項の規定による署名押印又は前項の規定による記名押印に代えて押印することができる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>事件を終局させる決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第五条第二項及び第三項、第十七条第一項及び第三項ただし書、第十七条の二第四項前段（第十七条の三第二項において準用する場合を含む。）において準用する法第三十三条、第十七条の四第一項本文、第二十二条の二第一項（法において準用し、又はその例による場合を含む。次項第五号において同じ。）、第二十四条の二、第二十五条、第三十二条の四第三項並びに第三十四条ただし書（第三十五条第二項前段において準用する場合を含む。）の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>第四十六条の三第七項の決定</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定書には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>主文</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>理由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>少年の氏名及び年齢</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>少年の職業、住居及び本籍</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該審級において法第二十二条の二第一項の決定をした事件を終局させる決定の決定書においては、同項の決定をした旨及び当該決定に係る事件を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次の各号に掲げる決定を除く決定の決定書には、前項第二号及び第四号に掲げる事項の記載を省略することができる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第十七条第一項第二号及び第三項ただし書の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十条第一項、第二十四条、第二十四条の二、第六十二条第一項及び第六十四条の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十七条の二第一項及び第二項本文の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第三十三条（第十七条の二第四項前段（第十七条の三第二項において準用する場合を含む。）及び第三十五条第二項前段において準用する場合を含む。）の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十二条の二第一項の決定（以下「検察官関与決定」という。）をした事件についての保護処分に付さない決定</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定書には、記録中の書類の記載を引用することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="7">
+            <ParagraphNum>７</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、相当と認めるときは、決定を調書に記載させて決定書に代えることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（決定の告知）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次に掲げる決定を告知するには、裁判長が、審判期日において言い渡さなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十四条第一項及び第六十四条第一項の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>検察官関与決定をした事件についての法第二十三条の決定</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次に掲げる決定を告知するには、裁判長が、少年の面前で言い渡さなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第十七条第一項（次項第一号の場合を除く。）、第十七条の四第一項本文（次項第二号の場合を除く。）、第二十三条（前項第二号の場合を除く。）及び第二十五条の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第十七条第一項第二号の措置がとられている事件についての法第二十条第一項及び第六十二条第一項の決定</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次に掲げる決定を告知するには、当該決定をする裁判官が、少年の面前で言い渡さなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第十七条第十項の規定による同条第一項の決定</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第十七条の四第二項の規定による同条第一項本文の決定</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定は、前三項の場合を除いては、相当と認める方法によつて告知する。法第二十三条第二項及び第三項（第一項第二号の場合を除く。）並びに第二十五条の決定について、第二項第一号の規定によることができないとき又はこれによることが相当でないと認めるときも、同様である。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十九条の決定は、前項の規定によることができないときは、告知することを要しない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官は、第一項から第四項までの場合には告知の方法、場所及び年月日を、前項の場合には告知しなかつた旨を決定書又は決定を記載した調書に付記して押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（決定と同行状の執行指揮）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十七条第一項第二号、第十七条の四第一項本文、第二十四条第一項第二号及び第三号、第二十六条の二本文、第二十七条の二第五項本文並びに第六十四条第一項第三号の決定並びに同行状は、決定をし又は同行状を発した家庭裁判所の裁判官の指揮によつて執行する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の指揮は、決定書の原本、決定書若しくは決定を記載した調書の謄本若しくは抄本又は同行状に押印して行うものとする。但し、急速を要するときは、少年の氏名及び年齢、決定の主文、告知の年月日、裁判所並びに裁判官の氏名を記載した書面に押印して行うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（決定の通知）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、検察官、司法警察員、警察官、都道府県知事又は児童相談所長から送致を受けた事件について法第十八条、第十九条、第二十条第一項、第二十三条、第二十四条第一項、第六十二条第一項又は第六十四条第一項の決定をしたときは、その旨を送致をした者に通知しなければならない。保護観察所長から更生保護法（平成十九年法律第八十八号）第六十八条第一項の規定による通告を受けた事件について法第二十四条第一項の決定をしたときも、同様とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第五十五条の規定によつて移送を受けた事件については、前項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、法第二十七条及び第二十七条の二第一項の規定により保護処分を取り消したときは、その旨を保護処分を執行している保護観察所、児童自立支援施設、児童養護施設又は少年院の長に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（書類の作成者、調書への引用）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護事件に関する書類は、特別の定のある場合を除いては、裁判所書記官が作成する。但し、家庭裁判所調査官の調査その他についての書類は、家庭裁判所調査官が自ら作成することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>調書には、書面、写真その他適当と認めるものを引用し、記録に添附してその一部とすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6_2">
+          <ArticleCaption>（事件の関係人等に対する通知）</ArticleCaption>
+          <ArticleTitle>第六条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則の規定により裁判所又は裁判長が行う通知は、裁判所書記官にさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官は、裁判所若しくは裁判長又は裁判所書記官が法又はこの規則の規定による通知をしたときは、その旨を記録上明らかにしておかなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、この規則の規定による通知をしたときは、その旨を記録上明らかにしておかなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（記録、証拠物の閲覧、謄写）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護事件の記録又は証拠物は、法第五条の二第一項の規定による場合又は当該記録若しくは証拠物を保管する裁判所の許可を受けた場合を除いては、閲覧又は謄写することができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>付添人（法第六条の三の規定により選任された者を除く。以下同じ。）は、前項の規定にかかわらず、審判開始の決定があつた後は、保護事件の記録又は証拠物を閲覧することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、次の各号に掲げる場合には、付添人と少年との関係その他の事情を考慮し、付添人が前項の規定により当該記録又は証拠物を閲覧するに当たり、付添人に対し、当該各号に定める事項であつて裁判所が指定するものについて、少年若しくは保護者に知らせてはならない旨の条件を付し、又は少年若しくは保護者に知らせる時期若しくは方法を指定することができる。ただし、付添人による審判の準備その他の審判の準備の上での支障を生ずるおそれがある場合は、この限りでない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第三条第一項第一号に掲げる少年に係る事件であつて刑事訴訟法（昭和二十三年法律第百三十一号）第二百七十一条の二第一項第一号イ若しくはロに規定する罪のもの又は法第三条第一項第二号に掲げる少年に係る事件であつて刑事訴訟法第二百七十一条の二第一項第一号イ若しくはロに規定する罪に係る刑罰法令に触れるものについて、保護事件の記録又は証拠物に、当該事件の被害者の個人特定事項（氏名及び住所その他の個人を特定させることとなる事項をいう。以下同じ。）が記載され又は記録されている部分がある場合において、相当と認めるとき 当該個人特定事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号に掲げる場合のほか、保護事件の記録又は証拠物に、閲覧させることにより人の身体若しくは財産に害を加え若しくは人を畏怖させ若しくは困惑させる行為又は人の名誉若しくは社会生活の平穏を著しく害する行為がなされるおそれがある事項が記載され又は記録されている部分があると認める場合において、相当と認めるとき 当該事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、前項本文の場合において、同項本文の規定による措置によつては同項第二号に規定する行為を防止できないおそれがあると認めるときは、付添人による審判の準備その他の審判の準備の上での支障を生ずるおそれがあるときを除き、付添人が第二項の規定により当該記録又は証拠物を閲覧するについて、これらのうち前項第一号又は第二号に規定する部分であつて裁判所が指定するものの閲覧を禁ずることができる。この場合において、閲覧を禁じた部分にその人の氏名又は住居が記載され又は記録されている場合であつて、付添人の請求があるときは、付添人に対し、氏名にあつてはこれに代わる呼称を、住居にあつてはこれに代わる連絡先を知らせなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、前二項の規定による措置をとるには、あらかじめ、付添人の意見を聴かなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、第三項又は第四項の規定による措置をとるときは、付添人にその旨を通知しなければならない。この通知をするには、第三項の規定による措置にあつては裁判所が指定する事項を、第四項の規定による措置にあつては裁判所が指定する部分を特定してこれをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="7">
+            <ParagraphNum>７</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、第三項の規定により付した条件に付添人が違反したとき、又は同項の規定による時期若しくは方法の指定に付添人が従わなかつたときは、弁護士である付添人については当該弁護士の所属する弁護士会又は日本弁護士連合会に通知し、適当な処置をとるべきことを請求することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="8">
+            <ParagraphNum>８</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定による請求を受けた者は、そのとつた処置をその請求をした裁判所に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7_2">
+          <ArticleCaption>（記録の閲覧又は謄写の申出の際に明らかにすべき事項・法第五条の二）</ArticleCaption>
+          <ArticleTitle>第七条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第五条の二第一項の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人の氏名、名称又は商号及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>閲覧又は謄写を求める記録を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人が法第五条の二第一項の申出をすることができる者であることの基礎となるべき事実</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>閲覧又は謄写を求める理由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 通告、警察官の調査等</ChapterTitle>
+        <Article Num="8">
+          <ArticleCaption>（家庭裁判所への送致の方式）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官、司法警察員、警察官、都道府県知事又は児童相談所長が事件を家庭裁判所に送致するには、次に掲げる事項を記載した送致書によらなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>少年及び保護者の氏名、年齢、職業及び住居（保護者が法人である場合においては、その名称又は商号及び主たる事務所又は本店の所在地）並びに少年の本籍</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>審判に付すべき事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>その他参考となる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の場合において書類、証拠物その他参考となる資料があるときは、あわせて送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>送致書には、少年の処遇に関して、意見をつけることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、家庭裁判所から送致を受けた事件を更に家庭裁判所に送致する場合には、送致書にその理由を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護観察所長が更生保護法第六十八条第一項の規定による通告をする場合には、前四項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleCaption>（通告の方式・法第六条）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所の審判に付すべき少年を発見した者は、家庭裁判所に通告するには、審判に付すべき事由のほか、なるべく、少年及び保護者の氏名、年齢、職業及び住居（保護者が法人である場合においては、その名称又は商号及び主たる事務所又は本店の所在地）並びに少年の本籍を明らかにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の通告は、書面又は口頭ですることができる。口頭の通告があつた場合には、家庭裁判所調査官又は裁判所書記官は、これを調書に記載する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の場合には、前条第三項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9_2">
+          <ArticleCaption>（押収、捜索、検証、鑑定嘱託等・法第六条の五）</ArticleCaption>
+          <ArticleTitle>第九条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）中、司法警察職員の行う押収（刑事訴訟法第百二条の二第一項に規定する電磁的記録提供命令（同項第一号イに掲げる方法による提供を命ずるものに限る。）を含む。）、捜索、同項に規定する電磁的記録提供命令（同号ロに掲げる方法による提供を命ずるものに限る。）、検証及び鑑定の嘱託に関する規定（同規則第百五十八条の二から第百五十八条の八までを除く。）は、法第六条の五第一項の規定による押収、捜索、電磁的記録提供命令、検証及び鑑定の嘱託について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9_3">
+          <ArticleCaption>（報告の方式・法第七条）</ArticleCaption>
+          <ArticleTitle>第九条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官が法第七条第一項の規定により報告するには、次に掲げる事項を記載した報告書によらなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>少年及び保護者の氏名、年齢、職業及び住居（保護者が法人である場合においては、その名称又は商号及び主たる事務所又は本店の所在地）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>審判に付すべき事由の要旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>その他参考となる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleCaption>（家庭裁判所調査官の報告前の調査・法第七条）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、法第七条第二項の調査をするについては、報告をするに必要な限度に止め、深入りしないように注意しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 調査及び審判</ChapterTitle>
+        <Article Num="11">
+          <ArticleCaption>（調査の方針・法第九条）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判に付すべき少年については、家庭及び保護者の関係、境遇、経歴、教育の程度及び状況、不良化の経過、性行、事件の関係、心身の状況等審判及び処遇上必要な事項の調査を行うものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家族及び関係人の経歴、教育の程度、性行及び遺伝関係等についても、できる限り、調査を行うものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年を少年鑑別所に送致するときは、少年鑑別所に対し、なるべく、鑑別上及び観護処遇上の注意その他参考となる事項を示さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（陳述録取調書の作成）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年、保護者又は参考人の陳述が事件の審判上必要であると認めるときは、これを調書に記載させ、又は記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の調書には、陳述者をして署名押印させなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、第一項の場合において相当と認めるときは、少年、保護者又は参考人の陳述の要旨を記載した書面を作成し、これを同項の調書に代えることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleCaption>（家庭裁判所調査官の調査報告・法第八条）</ArticleCaption>
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、調査の結果を書面で家庭裁判所に報告するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面には、意見をつけなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、第一項の規定による報告の前後を問わず、少年の処遇に関し、家庭裁判所に対して意見を述べなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13_2">
+          <ArticleCaption>（意見陳述の申出の際に明らかにすべき事項等・法第九条の二）</ArticleCaption>
+          <ArticleTitle>第十三条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第九条の二本文の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人の氏名、名称又は商号及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該申出に係る事件を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人が法第九条の二本文の申出をすることができる者であることの基礎となるべき事実</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第九条の二本文の申出については、弁護士でなければ代理人となることができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13_3">
+          <ArticleCaption>（意見聴取の日時等の通知・法第九条の二）</ArticleCaption>
+          <ArticleTitle>第十三条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所又は家庭裁判所調査官は、法第九条の二本文の規定により意見を聴取するときは、申出人に対し、その旨並びに意見を聴取する日時及び場所を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13_4">
+          <ArticleCaption>（意見聴取に当たつての配慮・法第九条の二）</ArticleCaption>
+          <ArticleTitle>第十三条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第九条の二本文の規定により意見を聴取するときは、申出人の心身の状態に配慮するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13_5">
+          <ArticleCaption>（意見を聴取した旨の通知・法第九条の二）</ArticleCaption>
+          <ArticleTitle>第十三条の五</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、付添人がある場合において、法第九条の二本文の規定による意見の聴取がされたときは、速やかにその旨を当該付添人に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13_6">
+          <ArticleCaption>（意見の要旨を記載した書面の作成・法第九条の二）</ArticleCaption>
+          <ArticleTitle>第十三条の六</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、審判期日外において、法第九条の二本文の規定により自ら意見を聴取したときは、裁判所書記官に命じて、当該意見の要旨を記載した書面を作成させなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、法第九条の二本文の規定により意見を聴取したときは、当該意見の要旨を記載した書面を作成しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第九条の二本文の規定による意見の陳述については、第十二条の規定は、適用しない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="14">
+          <ArticleCaption>（付添人・法第十条）</ArticleCaption>
+          <ArticleTitle>第十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>弁護士である付添人の数は、三人を超えることができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>付添人を選任するには、付添人と連署した書面を差し出すものとする。この書面には、少年と付添人との関係を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定により付添人が署名押印すべき場合には、署名押印に代えて記名押印することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>付添人の選任は、審級ごとにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護者が付添人となるには、書面でその旨を家庭裁判所に届け出るものとする。この場合には、第二項後段及び前項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>付添人の選任の許可及び付添人となることの許可は、いつでも、取り消すことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="15">
+          <ArticleCaption>（呼出状の記載要件・法第十一条）</ArticleCaption>
+          <ArticleTitle>第十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>調査又は審判のための呼出状には、本人の氏名、年齢及び住居、保護事件について呼び出す旨、出頭すべき年月日時及び場所並びに正当な理由がなく出頭しないときは同行状を発することがある旨を記載し、裁判長が、記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="16">
+          <ArticleCaption>（呼出状の送達・法第十一条）</ArticleCaption>
+          <ArticleTitle>第十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条の呼出状は、送達する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>送達については、民事訴訟の送達に関する規定（民事訴訟法（平成八年法律第百九号）第百条第二項、第百三条第二項、第百四条、第百六条第二項、第百七条第一項（第二号及び第三号に係る部分に限る。）及び第二項並びに第一編第五章第四節第三款及び第四款の規定並びに民事訴訟規則（平成八年最高裁判所規則第五号）第四十一条から第四十三条まで並びに第一編第五章第四節第三款及び第四款の規定を除く。）並びに刑事訴訟法第六十五条第二項及び第三項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="16_2">
+          <ArticleCaption>（簡易の呼出）</ArticleCaption>
+          <ArticleTitle>第十六条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>調査又は審判のための呼出は、呼出状の送達以外の相当と認める方法によつてすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="17">
+          <ArticleCaption>（同行状の記載要件等・法第十一条等）</ArticleCaption>
+          <ArticleTitle>第十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>調査又は審判のための同行状には、本人の氏名、年齢及び住居、審判に付すべき事由、同行すべき場所、有効期間及びその期間経過後は執行に着手することができず令状はこれを返還しなければならない旨並びに発付の年月日を記載し、裁判長又は同行状を発する裁判官が、記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>緊急の場合に発する同行状には、前項の記載事項のほか、特に発付を必要とする理由を具体的に記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、法第十二条第二項の規定により前項の同行状を発する場合には、その旨を同行状に記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>同行状の有効期間は、発付の日から七日とする。ただし、相当と認めるときは、七日を超える期間を定めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、同行状を発する場合において、同行状に記載する個人特定事項が次に掲げる者のものに該当すると認める場合であつて、相当と認めるときは、同行状を発すると同時に、本人に示すものとして、当該個人特定事項を明らかにしない方法により審判に付すべき事由を記載した同行状の抄本その他の同行状に代わるものを交付することができる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>次に掲げる事件の被害者</Sentence>
+              </ItemSentence>
+              <Subitem1 Num="1">
+                <Subitem1Title>イ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>法第三条第一項第一号に掲げる少年に係る事件であつて刑事訴訟法第二百七十一条の二第一項第一号イ若しくはロに規定する罪のもの又は法第三条第一項第二号に掲げる少年に係る事件であつて刑事訴訟法第二百七十一条の二第一項第一号イ若しくはロに規定する罪に係る刑罰法令に触れるもの</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="2">
+                <Subitem1Title>ロ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>イに掲げる事件のほか、法第三条第一項第一号又は第二号に掲げる少年に係る事件であつて、刑罰法令に触れる行為の態様、被害の状況その他の事情により、被害者の個人特定事項が少年又は保護者に知られることにより刑事訴訟法第二百七十一条の二第一項第一号ハ⑴又は⑵に掲げるおそれがあると認められる事件</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号に掲げる者のほか、個人特定事項が少年又は保護者に知られることにより刑事訴訟法第二百七十一条の二第一項第二号イ又はロに掲げるおそれがあると認められる者</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の同行状に代わるものには、本人の氏名、年齢及び住居、同項の規定により当該個人特定事項を明らかにしない方法により記載した審判に付すべき事由、当該同行状に代わるものが同項の規定によるものである旨、同行すべき場所、同行状の有効期間及びその期間経過後は執行に着手することができず同行状に代わるものはこれを返還しなければならない旨、同行状発付の年月日並びに同行状に記名押印した裁判長又は裁判官の氏名を記載し、裁判長又は同行状を発する裁判官が、記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="7">
+            <ParagraphNum>７</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二項の同行状と同時に交付する同行状に代わるものには、前項の記載事項のほか、特に当該同行状の発付を必要とする理由を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="8">
+            <ParagraphNum>８</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、法第十二条第二項の規定により第二項の同行状を発すると同時に同行状に代わるものを交付する場合には、法第十二条第二項の規定により第二項の同行状を発する旨を同行状に代わるものに記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="18">
+          <ArticleCaption>（同行状の執行と執行後の処置・法第十三条）</ArticleCaption>
+          <ArticleTitle>第十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>同行状を執行するには、本人に示して、できる限り速やかに指定された場所に同行しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>同行状を所持しない場合においても、急速を要するときは、前項の規定にかかわらず、少年に対し、審判に付すべき事由及び同行状が発せられている旨を告げて、その執行をすることができる。ただし、同行状は、できる限り速やかに示さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条第五項の規定による同行状に代わるものの交付があつた場合における前二項の規定の適用については、第一項中「本人に示して」とあるのは「第十七条第五項の同行状に代わるものを本人に示して」と、前項中「同行状を」とあるのは「第十七条第五項の同行状に代わるものを」と、「審判に付すべき事由及び」とあるのは「同行状に記載された個人特定事項のうち第十七条第五項の同行状に代わるものに記載がないものを明らかにしない方法により審判に付すべき事由を告げるとともに、」と、同項ただし書中「同行状」とあるのは「第十七条第五項の同行状に代わるもの」とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>同行状を執行したときは、これに執行の場所及び年月日時を記載し、執行することができなかつたときは、その事由を記載して記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>同行状は、執行したとき、又は執行することができなかつたときは、執行を指揮した裁判官に差し出さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官は、同行状を受け取つたときは、執行することができなかつた場合を除いて、裁判所書記官をして同行された年月日時を同行状に記載させなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="19">
+          <ArticleCaption>（証人尋問等・法第十四条等）</ArticleCaption>
+          <ArticleTitle>第十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>刑事訴訟規則中、裁判所の行う証人尋問、鑑定、通訳、翻訳、検証、押収（刑事訴訟法第百二条の二第一項に規定する電磁的記録提供命令（同項第一号イに掲げる方法による提供を命ずるものに限る。）を含む。）、捜索及び同項に規定する電磁的記録提供命令（同号ロに掲げる方法による提供を命ずるものに限る。）に関する規定は、保護事件の性質に反しない限り、法第十四条第一項の規定による証人尋問、鑑定、通訳及び翻訳並びに法第十五条第一項の規定による検証、押収、捜索及び電磁的記録提供命令について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="19_2">
+          <ArticleCaption>（調査の嘱託）</ArticleCaption>
+          <ArticleTitle>第十九条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、他の家庭裁判所又は簡易裁判所に事実の調査を嘱託することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="19_3">
+          <ArticleCaption>（少年鑑別所送致決定手続において少年に告知すべき事項等）</ArticleCaption>
+          <ArticleTitle>第十九条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十七条第一項第二号の措置をとるに際しては、裁判長（同条第十項の規定による場合は、当該措置をとる裁判官）は、少年に対し、あらかじめ、供述を強いられることはないこと及び付添人を選任することができることを分かりやすく説明した上、審判に付すべき事由の要旨を告げ、これについて陳述する機会を与えなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定により審判に付すべき事由の要旨を告げる場合において、当該審判に付すべき事由に含まれる個人特定事項が次に掲げる者のものに該当すると認める場合であつて、相当と認めるときは、当該個人特定事項を明らかにしない方法により審判に付すべき事由の要旨を告げることができる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>次に掲げる事件の被害者</Sentence>
+              </ItemSentence>
+              <Subitem1 Num="1">
+                <Subitem1Title>イ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>法第三条第一項第一号に掲げる少年に係る事件であつて刑事訴訟法第二百七十一条の二第一項第一号イ若しくはロに規定する罪のもの又は法第三条第一項第二号に掲げる少年に係る事件であつて刑事訴訟法第二百七十一条の二第一項第一号イ若しくはロに規定する罪に係る刑罰法令に触れるもの</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="2">
+                <Subitem1Title>ロ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>イに掲げる事件のほか、法第三条第一項第一号又は第二号に掲げる少年に係る事件であつて、刑罰法令に触れる行為の態様、被害の状況その他の事情により、被害者の個人特定事項が少年又は保護者に知られることにより刑事訴訟法第二百七十一条の二第一項第一号ハ⑴又は⑵に掲げるおそれがあると認められる事件</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号に掲げる者のほか、個人特定事項が少年又は保護者に知られることにより刑事訴訟法第二百七十一条の二第一項第二号イ又はロに掲げるおそれがあると認められる者</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="20">
+          <ArticleCaption>（観護の措置等の方式・法第十七条等）</ArticleCaption>
+          <ArticleTitle>第二十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十七条第一項第一号又は第二号の決定をするには、家庭裁判所調査官又は少年鑑別所を指定するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十七条の四第一項本文の決定をするには、少年院又は刑事施設を指定するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前二項の規定による指定は、いつでも、変更することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="21">
+          <ArticleCaption>（観護の措置の取消・法第十七条）</ArticleCaption>
+          <ArticleTitle>第二十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>観護の措置は、その必要がなくなつたときは、速やかに取り消さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="21_2">
+          <ArticleCaption>（少年鑑別所等への通知）</ArticleCaption>
+          <ArticleTitle>第二十一条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、法第十七条第一項第二号の措置がとられている事件の送致を受けたときは、その旨を少年を収容している少年鑑別所、少年院又は刑事施設に通知しなければならない。法第十七条第一項第二号の措置がとられている事件について、法第十九条第二項（第二十三条第三項において準用する場合を含む。）、第二十条第一項又は第六十二条第一項の決定をしたときも、同様である。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="22">
+          <ArticleCaption>（観護の措置に関する通知・法第十七条等）</ArticleCaption>
+          <ArticleTitle>第二十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>観護の措置をとり又はこれを取り消し若しくは変更したときはその旨を、法第十七条第一項第二号の措置がとられている事件について法第十九条第二項（第二十三条第三項において準用する場合を含む。以下この条において同じ。）、第二十条第一項又は第六十二条第一項の決定をしたときは法第四十五条第四号の規定により法第十七条第一項第二号の措置が勾留とみなされる旨を速やかに保護者及び付添人のうちそれぞれ適当と認める者に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の通知は、観護の措置をとり若しくはこれを変更した場合又は法第十七条第一項第二号の措置がとられている事件について法第十九条第二項、第二十条第一項若しくは第六十二条第一項の決定をした場合において、少年に保護者及び付添人がないときは少年の法定代理人、保佐人、配偶者、直系の親族及び兄弟姉妹のうち少年の指定する者一人に、少年にこれらの者がないときは少年の申出によりその指定する者一人に、これをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の通知は、観護の措置を取り消した場合において、少年に保護者及び付添人がないときは、少年の法定代理人、保佐人、配偶者、直系の親族及び兄弟姉妹のうち適当と認める者に、これをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="22_2">
+          <ArticleCaption>（異議の申立て・法第十七条の二）</ArticleCaption>
+          <ArticleTitle>第二十二条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十七条の二第一項本文の規定による異議の申立てがあつた場合において、必要があると認めるときは、保護事件の係属する裁判所は、保護事件の記録及び証拠物を同条第三項前段の決定をすべき裁判所（以下「異議裁判所」という。）に送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>異議裁判所は、保護事件の記録及び証拠物の送付を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>異議裁判所は、法第十七条の二第三項前段の決定をしたときは、その旨を保護事件の係属する裁判所に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第四十三条、第四十四条（同条第一項後段の規定及び同条第二項の規定中年月日の通知に係る部分を除く。）、第四十五条第二項及び第四十七条の規定は、法第十七条の二第一項本文の異議の申立てについて準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="22_3">
+          <ArticleCaption>（特別抗告・法第十七条の三）</ArticleCaption>
+          <ArticleTitle>第二十二条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条及び第四十五条第一項の規定は、法第十七条の三第一項前段において準用する法第三十五条第一項本文の抗告について準用する。この場合において、前条第四項中「第四十四条（同条第一項後段の規定及び同条第二項の規定中年月日の通知に係る部分を除く。）」とあるのは「第四十四条」と、第四十五条第一項中「速やかに記録とともに」とあるのは「速やかに」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="23">
+          <ArticleCaption>（都道府県知事等への送致の方式・法第十八条）</ArticleCaption>
+          <ArticleTitle>第二十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>事件を都道府県知事又は児童相談所長に送致する決定をするには、送致すべき都道府県知事又は児童相談所長を指定するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="24">
+          <ArticleCaption>（検察官への送致の方式・法第二十条第一項等）</ArticleCaption>
+          <ArticleTitle>第二十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>事件を検察官に送致する決定をするには、罪となるべき事実及びその事実に適用すべき罰条を示さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="24_2">
+          <ArticleCaption>（観護の措置が勾留とみなされる場合の告知等・法第四十五条第四号等）</ArticleCaption>
+          <ArticleTitle>第二十四条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十七条第一項第二号の措置がとられている事件について、法第十九条第二項（第二十三条第三項において準用する場合を含む。）、第二十条第一項又は第六十二条第一項の決定をするときは、裁判長が、あらかじめ、本人に対し、罪となるべき事実並びに刑事訴訟法第六十条第一項各号の事由がある旨及び弁護人を選任することができる旨を告げなければならない。ただし、法第二十条第一項又は第六十二条第一項の決定をする場合において、法第十条第一項の規定により選任された弁護士である付添人があるときは、弁護人を選任することができる旨は告げることを要しない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項本文の規定により罪となるべき事実を告げる場合において、当該罪となるべき事実に含まれる個人特定事項が次に掲げる者のものに該当すると認める場合であつて、相当と認めるときは、当該個人特定事項を明らかにしない方法により罪となるべき事実を告げることができる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>次に掲げる事件の被害者</Sentence>
+              </ItemSentence>
+              <Subitem1 Num="1">
+                <Subitem1Title>イ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>刑事訴訟法第二百一条の二第一項第一号イ又はロに掲げる事件</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="2">
+                <Subitem1Title>ロ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>イに掲げる事件のほか、犯行の態様、被害の状況その他の事情により、被害者の個人特定事項が本人又は保護者に知られることにより刑事訴訟法第二百一条の二第一項第一号ハ⑴又は⑵に掲げるおそれがあると認められる事件</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号に掲げる者のほか、個人特定事項が本人又は保護者に知られることにより刑事訴訟法第二百一条の二第一項第二号イ又はロに掲げるおそれがあると認められる者</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項本文の規定により弁護人を選任することができる旨を告げるに当たつては、本人は弁護士、弁護士法人（弁護士・外国法事務弁護士共同法人を含む。）又は弁護士会を指定して弁護人の選任を申し出ることができる旨及びその申出先を教示しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の裁判長は、本人に弁護人を選任することができる旨を告げる際に、本人に対し、貧困その他の事由により自ら弁護人を選任することができないときは弁護人の選任を請求することができる旨を告げなければならない。この場合においては、刑事訴訟法第二百七条第四項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前四項の規定により告知及び教示をする場合には、裁判所書記官が立ち会い、調書を作成する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="24_3">
+          <ArticleCaption>（観護の措置が勾留とみなされる場合の勾留場所・法第四十五条第四号等）</ArticleCaption>
+          <ArticleTitle>第二十四条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、あらかじめ、裁判長に対し、法第十七条第一項第二号の措置により少年鑑別所に収容されている者について法第十九条第二項（第二十三条第三項において準用する場合を含む。）、第二十条第一項又は第六十二条第一項の決定をするときは本人を他の少年鑑別所若しくは刑事施設に収容すること又は刑事収容施設及び被収容者等の処遇に関する法律（平成十七年法律第五十号）第十五条第一項の規定により留置施設に留置することに同意するよう請求することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、前項の同意があつた場合には、その同意に係る少年鑑別所若しくは刑事施設又は留置施設に本人を収容し、又は留置する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、第一項の請求をしない場合又は同項の同意がない場合には、本人が法第十七条第一項第二号の措置により収容されていた少年鑑別所に本人を収容する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="24_4">
+          <ArticleCaption>（審判開始決定の取消し）</ArticleCaption>
+          <ArticleTitle>第二十四条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十一条の決定は、いつでも、取り消すことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="25">
+          <ArticleCaption>（審判期日の指定と呼出）</ArticleCaption>
+          <ArticleTitle>第二十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判をするには、裁判長が、審判期日を定める。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判期日には、少年及び保護者を呼び出さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="25_2">
+          <ArticleCaption>（事件の併合審判）</ArticleCaption>
+          <ArticleTitle>第二十五条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>同一の少年に対する二以上の事件は、なるべく併合して審判しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="26">
+          <ArticleCaption>（保護観察所等への通知）</ArticleCaption>
+          <ArticleTitle>第二十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年の処遇に関し、保護観察官若しくは保護司又は少年鑑別所に勤務する法務技官若しくは法務教官の意見を聴くことを相当と認めるときは、保護観察所又は少年鑑別所にその旨及び意見を聴くべき日時等を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="27">
+          <ArticleCaption>（審判の場所）</ArticleCaption>
+          <ArticleTitle>第二十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判は、裁判所外においても行うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="28">
+          <ArticleCaption>（審判期日の列席者等）</ArticleCaption>
+          <ArticleTitle>第二十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判の席には、裁判官及び裁判所書記官が、列席する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官は、裁判長の許可を得た場合を除き、審判の席に出席しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年が審判期日に出頭しないときは、審判を行うことができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>付添人は、審判の席に出席することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、審判期日を付添人に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="29">
+          <ArticleCaption>（在席の許可）</ArticleCaption>
+          <ArticleTitle>第二十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、審判の席に、少年の親族、教員その他相当と認める者の在席を許すことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="29_2">
+          <ArticleCaption>（審判期日における告知等）</ArticleCaption>
+          <ArticleTitle>第二十九条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、第一回の審判期日の冒頭において、少年に対し、供述を強いられることはないことを分かりやすく説明した上、審判に付すべき事由の要旨を告げ、これについて陳述する機会を与えなければならない。この場合において、少年に付添人があるときは、当該付添人に対し、審判に付すべき事由について陳述する機会を与えなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第十九条の三第二項の規定は、前項の規定による審判に付すべき事由の要旨の告知について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="29_3">
+          <ArticleCaption>（証拠調べの申出）</ArticleCaption>
+          <ArticleTitle>第二十九条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年、保護者及び付添人は、家庭裁判所に対し、証人尋問、鑑定、検証その他の証拠調べの申出をすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="29_4">
+          <ArticleCaption>（少年本人質問）</ArticleCaption>
+          <ArticleTitle>第二十九条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>付添人は、審判の席において、裁判長に告げて、少年に発問することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="29_5">
+          <ArticleCaption>（追送書類等に関する通知）</ArticleCaption>
+          <ArticleTitle>第二十九条の五</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、法第二十一条の決定をした後、当該決定をした事件について、検察官、保護観察所長、司法警察員、警察官、都道府県知事又は児童相談所長から書類、証拠物その他参考となる資料の送付を受けたときは、速やかにその旨を付添人に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30">
+          <ArticleCaption>（意見の陳述）</ArticleCaption>
+          <ArticleTitle>第三十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年、保護者、付添人、家庭裁判所調査官、保護観察官、保護司、法務技官及び法務教官は、審判の席において、裁判長の許可を得て、意見を述べることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_2">
+          <ArticleCaption>（検察官関与決定の方式・法第二十二条の二）</ArticleCaption>
+          <ArticleTitle>第三十条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官関与決定の主文においては、審判に検察官を出席させる事件を明らかにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_3">
+          <ArticleCaption>（国選付添人の選任等・法第二十二条の三等）</ArticleCaption>
+          <ArticleTitle>第三十条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、検察官関与決定をした場合において、少年に弁護士である付添人がないときは、遅滞なく、当該少年に対し、一定の期間を定めて、弁護士である付添人を選任するかどうかについて回答を求めなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の期間内に回答がなく又は弁護士である付添人の選任がないときは、裁判長は、直ちに付添人を選任しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の三第一項若しくは第二項又は第二十二条の五第二項の規定により家庭裁判所が付すべき付添人は、当該家庭裁判所の管轄区域内に在る弁護士会に所属する弁護士の中から裁判長がこれを選任しなければならない。ただし、その管轄区域内に選任すべき事件について付添人としての活動をすることのできる弁護士がないときその他やむを得ない事情があるときは、これに隣接する他の家庭裁判所の管轄区域内に在る弁護士会に所属する弁護士その他適当な弁護士の中からこれを選任することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、前項の規定により付添人を選任したときは、直ちにその旨を少年及び保護者並びに検察官（検察官関与決定があつた事件に限る。）に通知しなければならない。この場合には、日本司法支援センターにも直ちにその旨を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の五第三項に規定する意思の明示は、書面を家庭裁判所に差し出してしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_4">
+          <ArticleCaption>（審判の準備）</ArticleCaption>
+          <ArticleTitle>第三十条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、検察官関与決定をした場合において、適当と認めるときは、検察官及び弁護士である付添人を出頭させた上、当該決定をした事件の非行事実（法第十七条第四項ただし書に規定する非行事実をいう。以下同じ。）を認定するための審判の進行に関し必要な事項について打合せを行うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の打合せは、合議体の構成員に行わせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、裁判所書記官に命じて、審判の進行に関し必要な事項について検察官又は弁護士である付添人に問合せをさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_5">
+          <ArticleCaption>（検察官による記録又は証拠物の閲覧）</ArticleCaption>
+          <ArticleTitle>第三十条の五</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、検察官関与決定があつた事件において、第七条第一項の規定にかかわらず、その非行事実の認定に資するため必要な限度で、保護事件の記録又は証拠物を閲覧することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_6">
+          <ArticleCaption>（検察官の審判への出席等）</ArticleCaption>
+          <ArticleTitle>第三十条の六</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、検察官関与決定があつた事件において、その非行事実の認定に資するため必要な限度で、審判（事件を終局させる決定の告知を行う審判を含む。）の席に出席し、並びに審判期日外における証人尋問、鑑定、通訳、翻訳、検証、押収及び捜索の手続に立ち会うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、検察官関与決定をしたときは、当該決定をした事件の非行事実を認定するための手続を行う審判期日及び当該事件を終局させる決定の告知を行う審判期日を検察官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_7">
+          <ArticleCaption>（検察官による証拠調べの申出）</ArticleCaption>
+          <ArticleTitle>第三十条の七</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、検察官関与決定があつた事件において、その非行事実の認定に資するため必要な限度で、家庭裁判所に対し、証人尋問、鑑定、検証その他の証拠調べの申出をすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_8">
+          <ArticleCaption>（検察官の尋問権等）</ArticleCaption>
+          <ArticleTitle>第三十条の八</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、検察官関与決定があつた事件において、その非行事実の認定に資するため必要な限度で、裁判長に告げて、証人、鑑定人、通訳人及び翻訳人を尋問することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、検察官関与決定があつた事件において、その非行事実の認定に資するため必要な限度で、審判の席において、裁判長に告げて、少年に発問することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_9">
+          <ArticleCaption>（検察官に対する提出書類等に関する通知等）</ArticleCaption>
+          <ArticleTitle>第三十条の九</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、検察官関与決定をした後、当該決定をした事件について、少年、保護者又は付添人から書類、証拠物その他参考となる資料の提出を受けたときは、速やかにその旨を検察官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、検察官関与決定をした場合において、当該決定をした事件について、法第九条の二本文の規定による意見の聴取がされたときは、速やかにその旨を検察官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_10">
+          <ArticleCaption>（検察官による意見の陳述）</ArticleCaption>
+          <ArticleTitle>第三十条の十</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、検察官関与決定があつた事件において、その非行事実の認定に資するため必要な限度で、審判の席において、裁判長の許可を得て、意見を述べることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_11">
+          <ArticleCaption>（傍聴の申出の際に明らかにすべき事項等・法第二十二条の四）</ArticleCaption>
+          <ArticleTitle>第三十条の十一</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の四第一項の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人の氏名、名称又は商号及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該申出に係る事件を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人が法第二十二条の四第一項の申出をすることができる者であることの基礎となるべき事実</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の四第一項の申出については、弁護士でなければ代理人となることができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_12">
+          <ArticleCaption>（傍聴の許否等の通知・法第二十二条の四）</ArticleCaption>
+          <ArticleTitle>第三十条の十二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、法第二十二条の四第一項の規定により審判の傍聴を許したときはその旨及びその審判期日を、審判の傍聴を許さないこととしたときはその旨を、速やかに、申出人並びに検察官関与決定をした場合における検察官及び少年に弁護士である付添人がある場合における当該付添人に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_13">
+          <ArticleCaption>（説明の申出の際に明らかにすべき事項等・法第二十二条の六）</ArticleCaption>
+          <ArticleTitle>第三十条の十三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の六第一項の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人の氏名、名称又は商号及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該申出に係る事件を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人が法第二十二条の六第一項の申出をすることができる者であることの基礎となるべき事実</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の六第一項の申出及び同項の規定による説明を受けることについては、弁護士でなければ代理人となることができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="30_14">
+          <ArticleCaption>（説明をさせることができる者・法第二十二条の六）</ArticleCaption>
+          <ArticleTitle>第三十条の十四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の六第一項の規定による説明は、裁判所書記官又は家庭裁判所調査官にさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="31">
+          <ArticleCaption>（適正な審判のため等の措置）</ArticleCaption>
+          <ArticleTitle>第三十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、適正な審判をするため必要があると認めるときは、発言を制止し、又は少年以外の者を退席させる等相当の措置をとることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、少年の情操を害するものと認める状況が生じたときは、その状況の継続中、少年を退席させることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="32">
+          <ArticleCaption>（裁判官の回避）</ArticleCaption>
+          <ArticleTitle>第三十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官は、審判の公平について疑を生ずべき事由があると思料するときは、職務の執行を避けなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="33">
+          <ArticleCaption>（審判調書）</ArticleCaption>
+          <ArticleTitle>第三十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判期日における手続については、審判調書を作成する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判調書には、次に掲げる事項その他審判に関する重要な事項を記載する。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>審判をした裁判所、年月日及び場所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>裁判官及び裁判所書記官並びに出席した家庭裁判所調査官、検察官、保護観察官、保護司、法務技官及び法務教官の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>少年並びに出席した保護者及び付添人の氏名（保護者が法人である場合においては、出席した代表者の氏名）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>家庭裁判所調査官、検察官、保護観察官、保護司、法務技官、法務教官、保護者及び付添人の陳述の要旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4_2">
+              <ItemTitle>四の二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第九条の二本文の規定により聴取した意見の要旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>少年の陳述の要旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>証人、鑑定人、通訳人及び翻訳人並びに参考人の供述の要旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>決定その他の処分をしたこと</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="8">
+              <ItemTitle>八</ItemTitle>
+              <ItemSentence>
+                <Sentence>裁判長が記載を命じた事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官は、裁判長の許可があるときは、審判調書の作成又は前項第一号から第七号までに掲げる記載事項の一部を省略することができる。ただし、抗告又は法第三十二条の四第一項の規定による申立て（以下「抗告受理の申立て」という。）があつた場合は、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="34">
+          <ArticleCaption>（審判調書の署名押印及び認印）</ArticleCaption>
+          <ArticleTitle>第三十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>審判調書には、裁判所書記官が署名押印し、裁判長が認印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長に差し支えがあるときは、他の裁判官の一人がその事由を付記して認印しなければならない。ただし、いずれの裁判官にも差し支えがあるときは、裁判所書記官がその事由を付記して署名押印すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項及び前項ただし書の規定により裁判所書記官が署名押印すべき場合には、署名押印に代えて記名押印することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官に差し支えがあるときは、裁判長がその事由を付記して認印すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="35">
+          <ArticleCaption>（保護処分の決定の言渡・法第二十四条等）</ArticleCaption>
+          <ArticleTitle>第三十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護処分の決定を言い渡す場合には、少年及び保護者に対し、保護処分の趣旨を懇切に説明し、これを充分に理解させるようにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の場合には、二週間以内に抗告の申立書を裁判所に差し出して抗告をすることができる旨を告げなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="36">
+          <ArticleCaption>（保護処分の決定の方式・法第二十四条等）</ArticleCaption>
+          <ArticleTitle>第三十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>罪を犯した少年の事件について保護処分の決定をするには、罪となるべき事実及びその事実に適用すべき法令を示さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="37">
+          <ArticleCaption>（各種の保護処分の形式と通知等・法第二十四条等）</ArticleCaption>
+          <ArticleTitle>第三十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十四条第一項第一号又は第六十四条第一項第一号若しくは第二号の決定をするには、保護観察をすべき保護観察所を、法第二十四条第一項第三号又は第六十四条第一項第三号の決定をするには、送致すべき少年院の種類（少年院法（平成二十六年法律第五十八号）第四条第一項第一号から第三号までに掲げるものに限る。）を指定するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十四条第一項第一号又は第六十四条第一項第一号若しくは第二号の決定をしたときは保護観察所長に、法第二十四条第一項第二号の決定をしたときは児童相談所長に、同項第三号又は第六十四条第一項第三号の決定をしたときは少年鑑別所長に、速やかにその旨を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護観察所長に前項の通知をするときは、保護観察を受けるべき者が保護観察の期間中遵守すべき特別の事項に関する意見も通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="37_2">
+          <ArticleCaption>（参考書類の送付等）</ArticleCaption>
+          <ArticleTitle>第三十七条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条第二項の通知をするときは、少年の処遇に関する意見書及び少年調査票その他少年の処遇上参考となる書類（以下参考書類という。）を送付することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>参考書類の取扱については、家庭裁判所の指示するところに従わなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所は、執務上必要があると認めるときは、いつでも、参考書類の返還を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護処分が終了し又は取り消されたときは、速やかに参考書類を家庭裁判所に返還しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="37_3">
+          <ArticleCaption>（没取の決定の執行等・法第二十四条の二）</ArticleCaption>
+          <ArticleTitle>第三十七条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>没取の決定の執行及び没取物の処分は、家庭裁判所が刑事訴訟法中没収の裁判の執行及び没収物の処分に関する規定に準じて行う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="38">
+          <ArticleCaption>（保護処分の決定後の処置）</ArticleCaption>
+          <ArticleTitle>第三十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護処分の決定をした家庭裁判所は、当該少年の動向に関心を持ち、随時、その成績を視察し、又は家庭裁判所調査官をして視察させるように努めなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護処分の決定をした家庭裁判所は、必要があると認めるときは、少年の処遇に関し、保護観察所、児童自立支援施設、児童養護施設又は少年院に勧告をすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="39">
+          <ArticleCaption>（環境調整の措置・法第二十四条等）</ArticleCaption>
+          <ArticleTitle>第三十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保護観察所長をして家庭その他の環境調整に関する措置を行わせる場合には、環境についての調査の結果を通知し、且つ必要な事項を指示しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="40">
+          <ArticleCaption>（家庭裁判所調査官の観察に付する決定の方式等・法第二十五条）</ArticleCaption>
+          <ArticleTitle>第四十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官の観察に付する決定をするには、家庭裁判所調査官を指定するものとする。この場合には、観察の期間を定めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>遵守事項を定めてその履行を命ずる場合には、その事項を具体的且つ明瞭に指示し、少年をして自発的にこれを遵守しようとする心構を持たせるように努めなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>条件をつけて保護者に引き渡す場合には、保護者に対し、少年の保護監督について必要な条件を具体的に指示しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>適当な施設、団体又は個人に補導を委託する場合には、委託を受ける者に対し、少年の補導上参考となる事項を指示しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官の観察については、第十三条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>家庭裁判所調査官の観察に付する決定は、いつでも、取り消し又は変更することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="41">
+          <ArticleCaption>（執行のための呼出状の記載要件・法第二十六条）</ArticleCaption>
+          <ArticleTitle>第四十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定の執行をするための呼出状には、本人の氏名、年齢及び住居、執行すべき決定の種類、出頭すべき年月日時及び場所並びに正当な理由がなく出頭しないときは同行状を発することがある旨を記載し、裁判長が、記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="42">
+          <ArticleCaption>（執行のための同行状の記載要件と執行・法第二十六条）</ArticleCaption>
+          <ArticleTitle>第四十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定の執行をするための同行状には、本人の氏名、年齢及び住居、執行すべき決定の種類、同行すべき場所並びに発付の年月日を記載し、裁判長又は同行状を発する裁判官が、記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、法第二十六条第六項の規定により同条第四項の同行状を発する場合には、その旨を同行状に記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の同行状の執行については、第十八条第一項、第二項及び第四項から第六項までの規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="42_2">
+          <ArticleCaption>（通知の申出の際に明らかにすべき事項等・法第三十一条の二）</ArticleCaption>
+          <ArticleTitle>第四十二条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十一条の二第一項本文の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人の氏名、名称又は商号及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該申出に係る事件を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>申出人が法第三十一条の二第一項本文の申出をすることができる者であることの基礎となるべき事実</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十一条の二第一項本文の申出及び同項本文の通知の受領については、弁護士でなければ代理人となることができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="42_3">
+          <ArticleCaption>（検察官による記録又は証拠物の閲覧・法第四十五条の三）</ArticleCaption>
+          <ArticleTitle>第四十二条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官は、家庭裁判所が少年に訴訟費用の負担を命ずる決定をした事件については、第七条第一項の規定にかかわらず、その決定を執行するため必要な限度で、保護事件の記録又は証拠物を閲覧することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 抗告</ChapterTitle>
+        <Article Num="43">
+          <ArticleCaption>（抗告申立の方式・法第三十二条）</ArticleCaption>
+          <ArticleTitle>第四十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告をするには、申立書を原裁判所に差し出すものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立書には、抗告の趣意を簡潔に明示しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="44">
+          <ArticleCaption>（収容中の少年の抗告申立て等・法第三十二条）</ArticleCaption>
+          <ArticleTitle>第四十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年鑑別所、児童自立支援施設、児童養護施設又は少年院にいる少年が抗告をするには、施設の長又はその代理者を経由して申立書を差し出すことができる。この場合において、抗告の提起期間内に申立書を施設の長又はその代理者に差し出したときは、抗告の提起期間内に抗告をしたものとみなす。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の場合には、施設の長又はその代理者は、原裁判所に申立書を送付し、且つこれを受け取つた年月日を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原裁判所は、第一項前段の少年の保護事件についてした保護処分の決定に対する抗告申立書を受け取つたときは、同項前段の場合を除き、速やかにその旨を当該少年のいる施設の長又はその代理者に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="45">
+          <ArticleCaption>（抗告申立書の送付）</ArticleCaption>
+          <ArticleTitle>第四十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原裁判所は、抗告申立書を受け取つたときは、速やかに記録とともに抗告裁判所に送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の場合には、原裁判所は、抗告申立書に意見書をつけることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="45_2">
+          <ArticleCaption>（証拠物の送付）</ArticleCaption>
+          <ArticleTitle>第四十五条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原裁判所は、必要があると認めるときは、証拠物を抗告裁判所に送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告裁判所は、証拠物の送付を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="46">
+          <ArticleCaption>（抗告の通知）</ArticleCaption>
+          <ArticleTitle>第四十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>児童自立支援施設、児童養護施設又は少年院に送致する決定に対して抗告がなされたときは、原裁判所は、遅滞なく少年のいるこれらの施設を抗告裁判所に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="46_2">
+          <ArticleCaption>（検察官に対する抗告の通知）</ArticleCaption>
+          <ArticleTitle>第四十六条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原裁判所は、検察官関与決定をした事件についてした保護処分の決定に対する抗告申立書を受け取つたときは、検察官に対し、抗告があつた旨及び抗告の趣意を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="46_3">
+          <ArticleCaption>（抗告受理の申立て・法第三十二条の四）</ArticleCaption>
+          <ArticleTitle>第四十六条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条の四第二項前段の申立書には、抗告受理の申立ての理由を具体的に記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原裁判所は、速やかに前項の申立書とともに記録を高等裁判所に送付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原裁判所は、第一項の申立書を受け取つたときは、少年及び保護者に対し、抗告受理の申立てがあつた旨及び抗告受理の申立ての理由を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>高等裁判所は、法第三十二条の四第三項の決定（以下「抗告受理決定」という。）をするときは、当該決定において、抗告受理の申立ての理由中同条第四項の規定により排除するものを明らかにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告受理決定があつたときは、抗告裁判所は、少年及び保護者に対し、その決定の内容を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第四十四条第一項前段の少年の保護事件についてされた決定に対する抗告受理の申立てに対し抗告受理決定があつたときは、抗告裁判所は、速やかにその旨を当該少年のいる施設の長又はその代理者に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="7">
+            <ParagraphNum>７</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>高等裁判所は、抗告受理の申立てがあつた場合において、抗告審として事件を受理しないときは、法第三十二条の四第五項の期間内にその旨の決定をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="8">
+            <ParagraphNum>８</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>高等裁判所は、前項の決定をしたときは、少年及び保護者に対し、その旨を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="9">
+            <ParagraphNum>９</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第四十五条第二項、第四十五条の二及び第四十六条の規定は、抗告受理の申立てがあつた場合について準用する。この場合において、第四十六条中「抗告が」とあるのは、「抗告受理の申立てが」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="46_4">
+          <ArticleCaption>（抗告審における国選付添人の選任等・法第三十二条の五等）</ArticleCaption>
+          <ArticleTitle>第四十六条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三十条の三第一項及び第二項の規定は、抗告裁判所が弁護士である付添人を付すべき場合（法第三十二条の五第二項の場合を除く。）について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条の五の規定又は法第三十二条の六において準用する法第二十二条の三第一項の規定により抗告裁判所が付すべき付添人は、当該抗告裁判所の所在地を管轄する家庭裁判所の管轄区域内に在る弁護士会に所属する弁護士の中から裁判長がこれを選任しなければならない。ただし、その管轄区域内に選任すべき事件について付添人としての活動をすることのできる弁護士がないときその他やむを得ない事情があるときは、これに隣接する他の家庭裁判所の管轄区域内に在る弁護士会に所属する弁護士その他適当な弁護士の中からこれを選任することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、前項の規定にかかわらず、抗告審の審理のため特に必要があると認めるときは、原裁判所が付した付添人であつた弁護士を付添人に選任することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三十条の三第四項の規定は、前二項の規定により裁判長が付添人を選任した場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="46_5">
+          <ArticleCaption>（準用規定）</ArticleCaption>
+          <ArticleTitle>第四十六条の五</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条に定めるもののほか、抗告審の審理については、その性質に反しない限り、家庭裁判所の審判に関する規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="47">
+          <ArticleCaption>（執行停止の決定をする裁判所・法第三十四条）</ArticleCaption>
+          <ArticleTitle>第四十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告中の事件について原決定の執行を停止する決定は、記録が抗告裁判所に到達する前は、原裁判所が、到達した後は、抗告裁判所がするものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="48">
+          <ArticleCaption>（検察官に対する決定の通知）</ArticleCaption>
+          <ArticleTitle>第四十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告裁判所は、法第二十二条の二第一項（第三十二条の六において準用する場合を含む。）の決定があつた事件について法第三十三条の決定をしたときは、その旨を検察官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="49:50">
+          <ArticleTitle>第四十九条及び第五十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="51">
+          <ArticleCaption>（決定の効力等）</ArticleCaption>
+          <ArticleTitle>第五十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告裁判所は、原決定を取り消す決定が確定した場合において、少年が児童自立支援施設、児童養護施設又は少年院にいるときは、直ちにこれらの施設の長に対し、事件の差戻し又は移送を受けた家庭裁判所にその少年を送致すべきことを命じなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の場合には、施設の長は、直ちに所属の職員をして事件の差戻し又は移送を受けた家庭裁判所に少年を送致させなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="52">
+          <ArticleCaption>（差戻し又は移送後の審判）</ArticleCaption>
+          <ArticleTitle>第五十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>抗告裁判所から差戻し又は移送を受けた事件については、更に審判をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の場合には、原決定に関与した裁判官は、審判に関与することができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="53">
+          <ArticleTitle>第五十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="54">
+          <ArticleCaption>（準用規定）</ArticleCaption>
+          <ArticleTitle>第五十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十五条第一項本文の抗告については、第四十三条から第四十六条の二まで、第四十六条の四から第四十八条まで、第五十一条及び第五十二条の規定を準用する。この場合において、第四十六条の二中「検察官関与決定をした事件についてした保護処分の決定」とあるのは「法第二十二条の二第一項（第三十二条の六において準用する場合を含む。）の決定があつた事件についてした法第三十三条の決定」と、第四十八条中「第三十二条の六」とあるのは「第三十二条の六（第三十五条第二項前段において準用する場合を含む。）」と、「第三十三条」とあるのは「第三十五条第二項前段において準用する法第三十三条」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="5">
+        <ChapterTitle>第五章 雑則</ChapterTitle>
+        <Article Num="55">
+          <ArticleTitle>第五十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="56">
+          <ArticleCaption>（連戻状の請求等）</ArticleCaption>
+          <ArticleTitle>第五十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年院法第八十九条第三項（同法第九十条第六項及び第百三十三条第三項において準用する場合を含む。）の規定による連戻状の請求は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状の請求書には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>本人の氏名、年齢及び住居又は現在地。住居及び現在地が明らかでないときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>本人を少年院に収容しておくことができる期間の最終日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき少年院その他の場所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者の官職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>三十日を超える有効期間を必要とするときは、その旨及び事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>連戻状を数通必要とするときは、その旨及び事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="8">
+              <ItemTitle>八</ItemTitle>
+              <ItemSentence>
+                <Sentence>同一事由により本人に対し前に連戻状の請求又はその発付があつたときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状の請求書には、謄本一通を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状を請求するには、連れ戻すべき事由があることを認めるべき資料を提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状の請求を受けた裁判官は、必要があると認めるときは、連戻状の請求をした少年院の長又はその少年院の職員の出頭を求めてその陳述を聴き、又はこれらの者に対し書類その他の物の提示を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="57">
+          <ArticleCaption>（連戻状の記載要件等）</ArticleCaption>
+          <ArticleTitle>第五十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状には、次に掲げる事項を記載し、裁判官が、記名押印する。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>本人の氏名、年齢及び住居又は現在地。住居及び現在地が明らかでないときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>本人を少年院に収容しておくことができる期間の最終日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき少年院その他の場所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者の官職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>有効期間</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>有効期間経過後は、連戻しに着手することができず、連戻状は返還しなければならない旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="8">
+              <ItemTitle>八</ItemTitle>
+              <ItemSentence>
+                <Sentence>発付の年月日</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状の有効期間は、発付の日から三十日とする。但し、連戻状の請求を受けた裁判官は、相当と認めるときは、三十日を超える期間を定めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状は、連戻状の請求書の謄本及びその記載を利用して作ることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状は、請求により、数通を発することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>連戻状による連戻しについては、第十八条第一項、第二項及び第四項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官が連戻状の請求を却下するには、請求書の謄本にその旨を記載し、記名押印してこれを請求者に交付すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="58">
+          <ArticleCaption>（準用規定）</ArticleCaption>
+          <ArticleTitle>第五十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>少年鑑別所法（平成二十六年法律第五十九号）第七十八条第三項（同法第七十九条第六項において準用する場合を含む。）の規定による連戻状の請求及びその請求による連戻状については、前二条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十四年一月一日（法施行の日）から、施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二四年六月一五日最高裁判所規則第一〇号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法の一部を改正する法律（昭和二十四年法律第二百十二号）施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二四年七月一日最高裁判所規則第一二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十四年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二五年四月一五日最高裁判所規則第一〇号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二五年四月二八日最高裁判所規則第一一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、裁判所法等の一部を改正する法律（昭和二十五年法律第九十六号）の公布の日から起算して三十日を経過した日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>前項に掲げる法律附則第二項の規定により裁判所事務官を兼ねて少年調査官補に任命され、且つ、現にその者の勤務する裁判所に勤務することを命ぜられたものとみなされる者の任命及び勤務裁判所の指定は、この規則第四条による改正後の同条に掲げる規則の規定によつて行われたものとみなす。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二五年一二月二八日最高裁判所規則第三五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十六年一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二七年三月一〇日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十七年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二七年七月三一日最高裁判所規則第一九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十七年八月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二八年七月二五日最高裁判所規則第一二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十八年八月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二九年五月二九日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十九年六月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和三〇年八月五日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五七年九月三日最高裁判所規則第七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事訴訟法及び民事調停法の一部を改正する法律（昭和五十七年法律第八十三号）の施行の日（昭和五十七年十月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成四年二月三日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成四年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年一二月一七日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法（平成八年法律第百九号。以下「新法」という。）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成九年七月一四日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、児童福祉法等の一部を改正する法律（平成九年法律第七十四号）の施行の日（平成十年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一三年二月一九日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法等の一部を改正する法律（平成十二年法律第百四十二号）の施行の日（平成十三年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一四年七月二九日最高裁判所規則第七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十四年九月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年五月一二日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、刑事施設及び受刑者の処遇等に関する法律（平成十七年法律第五十号）の施行の日（平成十八年五月二十四日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年七月二八日最高裁判所規則第一一号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（平成十六年法律第六十二号）附則第一条第一号に掲げる規定の施行の日（平成十八年十月二日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一九年五月二五日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、刑事施設及び受刑者の処遇等に関する法律の一部を改正する法律（平成十八年法律第五十八号）の施行の日（平成十九年六月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一九年九月二七日最高裁判所規則第一一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法等の一部を改正する法律（平成十九年法律第六十八号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年三月一二日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、更生保護法（平成十九年法律第八十八号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年一一月一一日最高裁判所規則第一八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法の一部を改正する法律（平成二十年法律第七十一号）の施行の日（平成二十年十二月十五日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二三年一二月二日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民法等の一部を改正する法律（平成二十三年法律第六十一号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二七年三月二七日最高裁判所規則第三号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年院法（平成二十六年法律第五十八号。次項において「新少年院法」という。）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二八年一〇月七日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成二十八年十二月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成三〇年一月一五日最高裁判所規則第一号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（平成二十八年法律第五十四号）附則第一条第四号に掲げる規定の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和三年一二月二二日最高裁判所規則第三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和四年四月一日から施行する。ただし、第一条中少年審判規則第二十四条の二第二項の改正規定は、外国弁護士による法律事務の取扱いに関する特別措置法の一部を改正する法律（令和二年法律第三十三号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年一二月二五日最高裁判所規則第一〇号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（令和五年法律第二十八号。以下「改正法」という。）附則第一条第四号に掲げる規定の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（秘匿措置に関する経過措置）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>刑法の一部を改正する法律（平成二十九年法律第七十二号）附則第二条第一項の規定によりなお従前の例によることとされる場合における同法による改正前の刑法（明治四十年法律第四十五号。以下この条において「従前の例による平成二十九年改正前刑法」という。）第百七十八条の二の罪若しくはその未遂罪、従前の例による平成二十九年改正前刑法第百八十一条第三項の罪若しくは従前の例による平成二十九年改正前刑法第二百四十一条の罪若しくはその未遂罪又は刑法及び刑事訴訟法の一部を改正する法律（令和五年法律第六十六号）附則第二条第一項の規定によりなお従前の例によることとされる場合における同法第一条の規定による改正前の刑法第百七十六条から第百七十八条までの罪若しくはこれらの罪の未遂罪に係る事件は、この規則の第二条の規定による改正後の少年審判規則（以下この条において「新少年審判規則」という。）第七条第三項（第一号に係る部分に限る。）、第十七条第五項（第一号イに係る部分に限る。）及び第十九条の三第二項（第一号イに係る部分に限る。）（第二十九条の二第二項において準用する場合を含む。）の規定の適用については改正法第一条の規定による改正後の刑事訴訟法（以下この条において「新刑事訴訟法」という。）第二百七十一条の二第一項第一号イに掲げる事件とみなし、新少年審判規則第二十四条の二第二項（第一号イに係る部分に限る。）の規定の適用については新刑事訴訟法第二百一条の二第一項第一号イに掲げる事件とみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（以下「施行日」という。）から施行する。ただし、第二条中民事訴訟費用等に関する規則第二条の三から第二条の五までの改正規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年一二月二六日最高裁判所規則第一七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律（令和七年法律第三十九号）附則第一条第三号に掲げる規定の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

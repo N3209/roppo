@@ -1,0 +1,1872 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/saibaninkisoku20260701.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和八年六月一〇日最高裁判所規則第一〇号」
+  範囲: 本則69条（削除条の範囲を1要素として数える）、附則14本（抄を含む）、別表1点、本文中の表1点。PDF掲載範囲（未収録：31ページの別記様式（第１２条関係）裁判員候補者名簿の書式）
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。文中の空白の除去あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。文中の空白1か所（紙面で字間のない、元の改行の跡）を除去し別ファイルに記録。収録しなかった部分：31ページ（別記様式（第１２条関係）裁判員候補者名簿の書式）。文字は別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="19" Num="7" PromulgateMonth="7" PromulgateDay="5" LawType="Rule">
+  <LawNum>平成十九年七月五日最高裁判所規則第七号</LawNum>
+  <LawBody>
+    <LawTitle>裁判員の参加する刑事裁判に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条―第五条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 裁判員</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 総則</SectionTitle>
+          <ArticleRange>（第六条―第十条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 選任</SectionTitle>
+          <ArticleRange>（第十一条―第三十七条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 解任</SectionTitle>
+          <ArticleRange>（第三十八条―第四十条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 裁判員の参加する裁判の手続</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 公判準備及び公判手続</SectionTitle>
+          <ArticleRange>（第四十一条・第四十二条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 刑事訴訟規則の適用に関する特例等</SectionTitle>
+          <ArticleRange>（第四十三条―第四十九条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 評議</ChapterTitle>
+        <ArticleRange>（第五十条・第五十一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="5">
+        <ChapterTitle>第五章 区分審理決定がされた場合の審理及び裁判の特例等</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 審理及び裁判の特例</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 区分審理決定</SubsectionTitle>
+            <ArticleRange>（第五十二条―第五十六条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 区分事件審判</SubsectionTitle>
+            <ArticleRange>（第五十七条―第五十九条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="3">
+            <SubsectionTitle>第三款 併合事件審判</SubsectionTitle>
+            <ArticleRange>（第六十条）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 選任予定裁判員</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 選任予定裁判員の選定</SubsectionTitle>
+            <ArticleRange>（第六十一条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 選任予定裁判員の選定の取消し</SubsectionTitle>
+            <ArticleRange>（第六十二条―第六十五条）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="6">
+        <ChapterTitle>第六章 裁判員等の保護のための措置</ChapterTitle>
+        <ArticleRange>（第六十六条・第六十七条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="7">
+        <ChapterTitle>第七章 補則</ChapterTitle>
+        <ArticleRange>（第六十八条・第六十九条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則は、裁判員の参加する刑事裁判に関し、刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）の特則その他の必要な事項を定めるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（裁判員裁判に関する事務の取扱支部）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判員の参加する刑事裁判に関する法律（平成十六年法律第六十三号。以下「法」という。）において定められた地方裁判所の権限に属する事務（以下「裁判員裁判に関する事務」という。）を取り扱う地方裁判所の支部は、地方裁判所及び家庭裁判所支部設置規則（昭和二十二年最高裁判所規則第十四号）第一条第二項の規定にかかわらず、別表の上欄に掲げる地方裁判所の支部に限るものとし、その取扱区域は、同表の下欄のとおりとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（対象事件からの除外についての意見の聴取・法第三条等）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三条第一項若しくは第三条の二第一項の決定又はこれらの項の請求を却下する決定をするには、あらかじめ、職権でこれをする場合には検察官及び被告人又は弁護人の意見を、請求によりこれをする場合には相手方又はその弁護人の意見を聴かなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（対象事件からの除外に関する決定の手続・法第三条等）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三条第一項及び第三条の二第一項の決定並びにこれらの項の請求を却下する決定については、刑事訴訟規則第三十三条第三項及び第四項並びに第三十四条から第三十四条の三までの規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三条第一項及び第三条の二第一項の決定並びにこれらの項の請求を却下する決定を検察官、被告人又は弁護人の面前において言い渡したときは、これらの者にはこれを送達し、又は通知することを要しない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（対象事件からの除外に関する決定に対する即時抗告・法第三条等）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三条第六項（法第三条の二第二項において準用する場合を含む。）の即時抗告については、刑事訴訟規則第二百七十一条及び第二百七十二条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 裁判員</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 総則</SectionTitle>
+          <Article Num="6">
+            <ArticleCaption>（裁判員等の旅費・法第十一条等）</ArticleCaption>
+            <ArticleTitle>第六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員、補充裁判員並びに裁判員等選任手続（法第二十七条第一項に規定する裁判員等選任手続をいう。以下同じ。）の期日に出頭した選任予定裁判員及び裁判員候補者（以下「裁判員等」と総称する。）の旅費は、鉄道賃、船賃、路程賃及び航空賃の四種とし、鉄道賃は鉄道の便のある区間の陸路旅行に、船賃は船舶の便のある区間の水路旅行に、路程賃は鉄道の便のない区間の陸路旅行又は船舶の便のない区間の水路旅行に、航空賃は航空機を利用すべき特別の事由がある場合における航空旅行について支給する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>鉄道賃及び船賃は旅行区間の路程に応ずる旅客運賃（はしけ賃及びさん橋賃を含むものとし、運賃に等級を設ける線路又は船舶による旅行の場合には、運賃の等級を三階級に区分するものについては中級の、運賃の等級を二階級に区分するものについては下級の運賃）、急行料金（特別急行列車を運行する線路のある区間の旅行で片道百キロメートル以上のものには特別急行料金、普通急行列車を運行する線路のある区間の旅行で片道五十キロメートル以上のものには普通急行料金）及び座席指定料金（座席指定料金を徴する普通急行列車を運行する線路のある区間の旅行で片道百キロメートル以上のもの又は座席指定料金を徴する船舶を運行する航路のある区間の旅行の場合の座席指定料金に限る。）によって、路程賃は一キロメートルにつき三十七円の額（一キロメートル未満の路程の端数は、これを切り捨てる。）によって、航空賃は現に支払った旅客運賃によって、それぞれ算定する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>天災その他やむを得ない事情により前項に定める額の路程賃で旅行の実費を支弁することができない場合には、同項の規定にかかわらず、路程賃の額は、実費額の範囲内において、裁判所が定める。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="7">
+            <ArticleCaption>（裁判員等の日当・法第十一条等）</ArticleCaption>
+            <ArticleTitle>第七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等の日当は、出頭又は職務及びそれらのための旅行（以下「出頭等」という。）に必要な日数に応じて支給する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>日当の額は、裁判員及び補充裁判員については一日当たり一万九百円以内において、裁判員等選任手続の期日に出頭した選任予定裁判員及び裁判員候補者については一日当たり八千七百五十円以内において、それぞれ裁判所が定める。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="8">
+            <ArticleCaption>（裁判員等の宿泊料・法第十一条等）</ArticleCaption>
+            <ArticleTitle>第八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等の宿泊料は、出頭等に必要な夜数に応じて支給する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>宿泊料の額は、一夜当たり、一般職の職員の給与に関する法律（昭和二十五年法律第九十五号）第六条第一項第一号イに規定する行政職俸給表（一）による職務の級が二級である者について国家公務員等の旅費に関する法律（昭和二十五年法律第百十四号）及び国家公務員等の旅費に関する法律施行令（令和六年政令第三百六号）第九条本文の規定により算定した宿泊費の額と同額とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="9">
+            <ArticleCaption>（旅費等の計算・法第十一条等）</ArticleCaption>
+            <ArticleTitle>第九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>旅費（航空賃を除く。）並びに日当及び宿泊料の計算上の旅行日数は、最も経済的な通常の経路及び方法によって旅行した場合の例により計算する。ただし、天災その他やむを得ない事情により最も経済的な通常の経路又は方法によって旅行し難い場合には、その現によった経路及び方法によって計算する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="10">
+            <ArticleCaption>（裁判員候補者の本籍照会の方法・法第十二条）</ArticleCaption>
+            <ArticleTitle>第十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所は、市町村（特別区を含むものとし、地方自治法（昭和二十二年法律第六十七号）第二百五十二条の十九第一項の指定都市にあっては、区又は総合区とする。以下同じ。）に対し、裁判員候補者について本籍の照会をするときには、当該市町村の選挙管理委員会が当該地方裁判所に送付する裁判員候補者予定者名簿に付して本籍を回答するよう求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 選任</SectionTitle>
+          <Article Num="11">
+            <ArticleCaption>（裁判員候補者の員数の算定及び割当て・法第二十条）</ArticleCaption>
+            <ArticleTitle>第十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所は、次年に必要な裁判員候補者の員数を算定するに当たっては、対象事件（法第二条第三項に規定する対象事件をいう。）の取扱状況、呼出しを受けた裁判員候補者の出頭状況、法第三十四条第七項の規定による不選任の決定があった裁判員候補者の数その他の裁判員及び補充裁判員の選任状況並びに裁判員候補者名簿に記載をされた者の数の状況その他の事項を考慮しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所が前項の裁判員候補者の員数をその管轄区域内の市町村に割り当てるに当たっては、各市町村の選挙管理委員会に対して選挙人名簿に登録されている者の数を照会した上で、同項の裁判員候補者の員数のうち、まず一人ずつを各市町村に割り当て、その残員数は、各市町村の選挙人名簿に登録されている者の数の当該地方裁判所の管轄区域内における選挙人名簿に登録されている者の総数に対する割合に応じて、これを各市町村に割り当てる方法によるものとする。この場合において、一人に満たない端数を生じたときは、裁判員候補者の総員数が同項の裁判員候補者の員数に満ちるまで、端数の大きい市町村から順次に、これを一人に切り上げる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所の支部において裁判員裁判に関する事務を取り扱う場合において、次年に必要な裁判員候補者の員数を算定するに当たっては、裁判員裁判に関する事務を取り扱う支部（以下「取扱支部」という。）についてはその取扱区域内において、取扱支部を除く地方裁判所については取扱支部の取扱区域を除く管轄区域内において、それぞれ第一項に規定する事項を考慮しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の場合において、裁判員候補者の員数を管轄区域内の市町村に割り当てるに当たっては、取扱支部についてはその取扱区域内の市町村において、取扱支部を除く地方裁判所については取扱支部の取扱区域を除く管轄区域内の市町村において、それぞれ第二項に規定する方法によるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="12">
+            <ArticleCaption>（裁判員候補者名簿の調製等・法第二十三条）</ArticleCaption>
+            <ArticleTitle>第十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員候補者名簿は、別記様式により調製しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所の支部において裁判員裁判に関する事務を取り扱う場合には、裁判員候補者名簿は、取扱支部及び取扱支部を除く地方裁判所に区分して調製するものとする。この場合においては、取扱支部の裁判員候補者名簿はその取扱区域内の市町村の選挙管理委員会から送付を受けた裁判員候補者予定者名簿に基づいて、取扱支部を除く地方裁判所の裁判員候補者名簿は取扱支部の取扱区域を除く管轄区域内の市町村の選挙管理委員会から送付を受けた裁判員候補者予定者名簿に基づいて、それぞれ調製するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員候補者予定者名簿及び裁判員候補者名簿は、これらに記載をされた者が自己に関する情報が記載されている部分の開示を求める場合を除いては、開示してはならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="13">
+            <ArticleCaption>（裁判員候補者名簿からの消除の方法・法第二十三条等）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所が法第二十三条第三項（法第二十四条第二項において準用する場合を含む。第十五条第一項第一号において同じ。）又は第二十九条第三項本文（法第三十八条第二項（法第四十六条第二項において準用する場合を含む。以下同じ。）、第四十七条第二項及び第九十二条第二項において準用する場合を含む。）の規定により裁判員候補者を裁判員候補者名簿から消除するに当たっては、当該裁判員候補者を消除したことが明確であり、かつ、消除された文字の字体（法第二十三条第二項（法第二十四条第二項において準用する場合を含む。）の規定により磁気ディスクをもって調製する裁判員候補者名簿にあっては、消除された記録）がなお明らかとなるような方法により行う。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（裁判員候補者の補充の場合の措置・法第二十四条）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十四条第一項の規定による補充する裁判員候補者の員数の割当てについては、第十一条第二項及び第四項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十四条第二項において読み替えて準用する法第二十三条第一項に規定する裁判員候補者名簿については、第十二条の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="15">
+            <ArticleCaption>（地方裁判所による調査）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所は、法第二十三条第一項（法第二十四条第二項において読み替えて準用する場合を含む。）の規定による裁判員候補者名簿の調製をしたときは、次に掲げる事項を調査するため、裁判員候補者に対し、調査票を用いて必要な質問をし、又は必要な資料の提出を求めることができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十三条第三項の規定により裁判員候補者名簿から消除しなければならない場合に該当するかどうか。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十六条第三項（法第二十八条第二項（法第三十八条第二項、第四十七条第二項及び第九十二条第二項において準用する場合を含む。以下この号において同じ。）、第三十八条第二項、第四十七条第二項及び第九十二条第二項において準用する場合を含む。次条及び第二十三条において同じ。）の規定により呼び出すべき裁判員候補者として選定された場合において法第二十七条第一項ただし書（法第二十八条第二項、第三十八条第二項、第四十七条第二項及び第九十二条第二項において準用する場合を含む。）の規定により呼び出すことを要しないものとされる場合に該当することとなることが見込まれるかどうか。</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定により提出された調査票及び資料については、第十二条第三項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（呼び出すべき裁判員候補者の選定録の作成・法第二十六条）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所は、法第二十六条第三項の規定により呼び出すべき裁判員候補者を選定したときは、選定録を作成しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleCaption>（裁判員等選任手続の期日の通知・法第二十七条）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日は、これを検察官及び弁護人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（呼出状の記載事項・法第二十七条）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員候補者に対する呼出状には、法第二十七条第三項に規定する事項のほか、職務従事予定期間（同条第一項（法第九十条第二項の規定により読み替えて適用する場合及び法第九十二条第二項において読み替えて準用する場合を含む。）に規定する職務従事予定期間をいう。）を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleCaption>（呼出状の発送時期）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、裁判員候補者を呼び出すときは、特段の事情のない限り、裁判員等選任手続の期日の六週間前までに呼出状を発送するようにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（呼出しの猶予期間・法第二十七条）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日と裁判員候補者に対する呼出状の送達との間には、少なくとも二週間の猶予を置かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="21">
+            <ArticleCaption>（裁判員等選任手続の期日の変更）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、検察官若しくは弁護人の請求により又は職権で、裁判員等選任手続の期日を変更することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官及び弁護人は、裁判員等選任手続の期日の変更を必要とする事由が生じたときは、直ちに、裁判所に対し、その事由及びそれが継続する見込みの期間を具体的に明らかにし、かつ、診断書その他の資料によりこれを疎明して、期日の変更を請求しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項の事由をやむを得ないものと認める場合のほかは、同項の請求を却下しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、やむを得ないと認める場合のほかは、裁判員等選任手続の期日を変更することができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日を変更するについては、あらかじめ、職権でこれをする場合には検察官及び弁護人の意見を、請求によりこれをする場合には相手方の意見を聴かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日の変更についての決定は、これを送達することを要しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="7">
+              <ParagraphNum>７</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、裁判員等選任手続の期日を変更する決定をした場合には、呼び出した選任予定裁判員又は裁判員候補者にその旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（質問票の記載事項・法第三十条）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員候補者に対する質問票には、法第三十条第一項に規定する判断に必要な質問、質問票を返送し、又は持参しなければならない旨及びその期限並びに質問票に虚偽の記載をしてはならない旨のほか、質問票に虚偽の記載をして裁判所に提出したときは罰金又は過料に処せられることがある旨を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23">
+            <ArticleCaption>（資料の提出の求め）</ArticleCaption>
+            <ArticleTitle>第二十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第二十六条第三項の規定により選定された裁判員候補者について、法第三十条第一項に規定する判断をするため、裁判員候補者に対し、必要な資料の提出を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="24">
+            <ArticleCaption>（裁判員等選任手続の期日における決定等の告知）</ArticleCaption>
+            <ArticleTitle>第二十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日においてした決定又は命令は、これを検察官、被告人又は弁護人及びその他の訴訟関係人に通知しなければならない。ただし、その期日に立ち会った訴訟関係人には通知することを要しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="25">
+            <ArticleCaption>（裁判員等選任手続調書の作成）</ArticleCaption>
+            <ArticleTitle>第二十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日における手続については、裁判員等選任手続調書を作成しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="26">
+            <ArticleCaption>（裁判員等選任手続調書の記載要件）</ArticleCaption>
+            <ArticleTitle>第二十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続調書には、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>被告事件名及び被告人の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判員等選任手続をした裁判所、年月日及び場所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判官及び裁判所書記官の官氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出席した検察官の官氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出席した被告人、弁護人及び補佐人の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出頭した選任予定裁判員又は裁判員候補者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判員候補者に対する質問及びその陳述</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="8">
+                <ItemTitle>八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判員候補者が質問に対する陳述を拒んだこと及びその理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="9">
+                <ItemTitle>九</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判長（法第二条第三項の決定があった場合において、同項に規定する合議体が構成されるまでの間は、裁判官。次項、次条第一項及び第四項、第三十一条第二項、第三十五条第一項第一号及び第二項第二号並びに第六十一条第一項第一号及び第二項第二号において同じ。）が法第三十三条の二第二項の規定による告知をしたときは、その旨及び次に掲げる事項</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>告知を受けた裁判員候補者の氏名</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>当該裁判員候補者に対して明らかにされた被害者特定事項の項目</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+              <Item Num="10">
+                <ItemTitle>十</ItemTitle>
+                <ItemSentence>
+                  <Sentence>不選任の決定の請求その他の申立て</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="11">
+                <ItemTitle>十一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十五条第一項の異議の申立て及びその理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="12">
+                <ItemTitle>十二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判員又は補充裁判員が宣誓を拒んだこと及びその理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="13">
+                <ItemTitle>十三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出頭した通訳人の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="14">
+                <ItemTitle>十四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>通訳人の宣誓の有無及び通訳人に宣誓をさせなかったときは、その理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="15">
+                <ItemTitle>十五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>通訳人の尋問及び供述</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="16">
+                <ItemTitle>十六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>通訳人が宣誓、通訳又は供述を拒んだこと及びその理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="17">
+                <ItemTitle>十七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>決定及び命令（刑事訴訟規則第二十五条第二項本文に規定する申立て、請求、尋問又は陳述に係る許可を除く。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="18">
+                <ItemTitle>十八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判員及び補充裁判員の氏名並びに公判調書、刑事訴訟規則第三十八条の調書及び検証調書に記載されるべきこれらの者の符号</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="19">
+                <ItemTitle>十九</ItemTitle>
+                <ItemSentence>
+                  <Sentence>選任予定裁判員の氏名及びその選定に係る被告事件名</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項に掲げる事項以外の事項であっても、裁判員等選任手続の期日における手続中、裁判長が訴訟関係人の請求により又は職権で記載を命じた事項は、これを裁判員等選任手続調書に記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="27">
+            <ArticleCaption>（裁判員等選任手続調書の署名押印、認印）</ArticleCaption>
+            <ArticleTitle>第二十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続調書には、裁判所書記官が署名押印し、裁判長が認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長に差し支えがあるときは、他の裁判官の一人が、その事由を付記して認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二条第三項の決定があった場合において、裁判長（同項に規定する合議体が構成されるまでの間は、裁判官）に差し支えがあるときは、裁判所書記官が、その事由を付記して署名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官に差し支えがあるときは、裁判長が、その事由を付記して認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="28">
+            <ArticleCaption>（裁判員等選任手続調書の整理）</ArticleCaption>
+            <ArticleTitle>第二十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続調書は、各裁判員等選任手続の期日後速やかに、遅くとも直後の公判期日（区分審理決定（法第七十一条第一項に規定する区分審理決定をいう。以下同じ。）がされた事件にあっては、直後に行われる区分事件審判（法第七十六条に規定する区分事件審判をいう。以下同じ。）又は併合事件審判（法第八十六条第一項に規定する併合事件審判をいう。以下同じ。）における公判期日。第三十一条第三項において同じ。）の調書の整理期限までにこれを整理しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="29">
+            <ArticleCaption>（裁判員等選任手続における陳述の録音）</ArticleCaption>
+            <ArticleTitle>第二十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日における陳述の全部又は一部については、録音装置を使用してこれを録取させることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="30">
+            <ArticleCaption>（裁判員等選任手続調書における録音体の引用）</ArticleCaption>
+            <ArticleTitle>第三十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日における選任予定裁判員及び裁判員候補者に対する質問及びその陳述並びに選任予定裁判員及び裁判員候補者の申立てを録音させた場合において、裁判所が相当と認めるときは、これらを録音したものを裁判員等選任手続調書に引用し、訴訟記録に添付して裁判員等選任手続調書の一部とすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="31">
+            <ArticleCaption>（裁判員等選任手続調書の記載に対する異議申立て）</ArticleCaption>
+            <ArticleTitle>第三十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官又は弁護人は、裁判員等選任手続調書の記載の正確性につき異議を申し立てることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の異議の申立てがあったときは、申立ての年月日及びその要旨を調書に記載しなければならない。この場合には、裁判所書記官がその申立てについての裁判長の意見を調書に記載して署名押印し、裁判長が認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の異議の申立ては、遅くとも直後の公判期日の調書の記載の正確性についての異議の申立期間の終期までにこれをしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="32">
+            <ArticleCaption>（裁判員等選任手続調書の証明力）</ArticleCaption>
+            <ArticleTitle>第三十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員等選任手続の期日における手続で裁判員等選任手続調書に記載されたものは、裁判員等選任手続調書のみによってこれを証明することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="33">
+            <ArticleCaption>（不選任の決定の請求を却下する決定に対する異議の申立ての手続・法第三十五条）</ArticleCaption>
+            <ArticleTitle>第三十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十五条第一項（法第三十八条第二項、第四十七条第二項及び第九十二条第二項において準用する場合を含む。以下この条において同じ。）の異議の申立てについては、刑事訴訟規則第二百七十一条及び第二百七十二条の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十五条第一項の異議の申立てについての決定は、これを検察官及び被告人又は弁護人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十五条第一項の異議の申立てを受けた地方裁判所が不選任の決定をしたときは、その旨を当該異議の申立てに係る裁判員候補者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="34">
+            <ArticleCaption>（理由を示さない不選任の請求の順序・法第三十六条）</ArticleCaption>
+            <ArticleTitle>第三十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、検察官及び被告人が理由を示さない不選任の請求（法第三十六条第一項に規定する理由を示さない不選任の請求をいう。以下同じ。）をするに当たっては、検察官及び被告人に対し、交互にそれぞれ一人の裁判員候補者について理由を示さない不選任の請求をする機会を与えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官及び被告人が理由を示さない不選任の請求をした場合には、相手方に対し、理由を示さない不選任の請求をした裁判員候補者を知る機会を与えなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、まず検察官に対し、理由を示さない不選任の請求をする機会を与えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、被告人が数人ある場合において、被告人に対し理由を示さない不選任の請求をする機会を与えるときは、あらかじめ定めた順序に従うものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官及び被告人は、理由を示さない不選任の請求をする機会が与えられた場合において、理由を示さない不選任の請求をしなかったときは、以後理由を示さない不選任の請求をすることができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="35">
+            <ArticleCaption>（裁判員及び補充裁判員の選任方法・法第三十七条）</ArticleCaption>
+            <ArticleTitle>第三十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、裁判員及び補充裁判員を選任する決定をするに当たっては、次の順序に従って裁判員等選任手続を行うものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判長は、裁判員等選任手続の期日に出頭した裁判員候補者のうち、質問をする必要があるすべての裁判員候補者に対し質問をする。ただし、裁判所は、法第三十四条第四項又は第七項（これらの規定を法第三十八条第二項及び第四十七条第二項において準用する場合を含む。以下この条において同じ。）の規定により不選任の決定をしなければならない裁判員候補者について、質問をする必要があるすべての裁判員候補者に対する質問を終えるまで不選任の決定をしないことが相当でないと認めるときは、その質問を終える前に不選任の決定をすることができる。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、質問をした裁判員候補者のうち、法第三十四条第四項又は第七項の規定により不選任の決定をしなければならない裁判員候補者について不選任の決定をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>検察官及び被告人は、法第三十四条第四項又は第七項の規定により不選任の決定がされなかった裁判員候補者について、理由を示さない不選任の請求をする。ただし、これらの規定により不選任の決定がされなかった裁判員候補者の員数が、選任すべき裁判員及び補充裁判員の員数並びに検察官及び被告人がそれぞれ理由を示さない不選任の請求をすることができる員数の合計数を超えるときは、あらかじめ、裁判所が、その裁判員候補者の中から、くじで、その合計数の裁判員候補者を選定することができるものとし、検察官及び被告人は、選定された裁判員候補者について、理由を示さない不選任の請求をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、不選任の決定がされなかった裁判員候補者（前号ただし書に規定する場合にあっては、同号ただし書の規定により選定された裁判員候補者のうち理由を示さない不選任の請求による不選任の決定がされなかった裁判員候補者。次号において同じ。）から、くじで、法第三十七条第一項（法第三十八条第二項において読み替えて準用する場合を含む。次項第五号において同じ。）に規定する員数の裁判員を選任する決定をする。ただし、当該裁判員候補者の員数がこれに満たないときは、その員数の裁判員を選任する決定をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、補充裁判員を置くときは、その余の不選任の決定がされなかった裁判員候補者から、くじで、法第三十七条第二項（法第三十八条第二項及び第四十七条第二項において準用する場合を含む。次項第六号において同じ。）に規定する員数の補充裁判員を裁判員に選任されるべき順序を定めて選任する決定をする。ただし、当該裁判員候補者の員数がこれに満たないときは、その員数の補充裁判員を裁判員に選任されるべき順序をくじで定めて選任する決定をする。</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、裁判員候補者の出頭状況及び質問票の記載状況等に照らし、裁判員等選任手続の期日に出頭した裁判員候補者のうち質問をする必要があるすべての裁判員候補者に対し質問をすることが、迅速に裁判員等選任手続を終えるために相当でないと認める場合には、裁判員等選任手続の期日のはじめに、次の順序に従って裁判員等選任手続を行う決定をすることができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、裁判員等選任手続の期日に出頭した裁判員候補者について、くじで、裁判員及び補充裁判員に選任されるべき順序を定める。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判長は、前号の順序に従い、質問をする必要がある裁判員候補者に対し質問をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、前号の規定により裁判員候補者が質問を受けるごとに、法第三十四条第四項又は第七項の規定により不選任の決定をしなければならないかどうかを判断し、不選任の決定をしなければならない裁判員候補者については不選任の決定をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>検察官及び被告人は、質問を受け、かつ、前号の不選任の決定がされなかった裁判員候補者の員数が、選任すべき裁判員及び補充裁判員の員数並びに検察官及び被告人がそれぞれ理由を示さない不選任の請求をすることができる員数の合計数に満ちたときは、質問を受け、かつ、同号の不選任の決定がされなかった裁判員候補者について、理由を示さない不選任の請求をする。ただし、質問をする必要があるすべての裁判員候補者に対し質問をした場合は、その合計数に満たないときであっても、検察官及び被告人は、同号の不選任の決定がされなかった裁判員候補者について、理由を示さない不選任の請求をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、質問を受け、かつ、不選任の決定がされなかった裁判員候補者から、第一号の順序に従い、法第三十七条第一項に規定する員数の裁判員を選任する決定をする。ただし、当該裁判員候補者の員数がこれに満たないときは、その員数の裁判員を選任する決定をする。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所は、補充裁判員を置くときは、質問を受け、かつ、不選任の決定がされなかったその余の裁判員候補者から、第一号の順序に従い、法第三十七条第二項に規定する員数（当該裁判員候補者の員数がこれに満たないときは、その員数）の補充裁判員を裁判員に選任されるべき順序を定めて選任する決定をする。</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、裁判員候補者の出頭状況及び質問票の記載状況等に照らし、法第三十七条第三項（法第三十八条第二項及び第四十七条第二項において準用する場合を含む。）の規定により不選任の決定がされる裁判員候補者が存すると見込まれる場合には、裁判員等選任手続の期日のはじめに、くじで、質問を受けるべき裁判員候補者を決めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="36">
+            <ArticleCaption>（裁判員及び補充裁判員に対する説明・法第三十九条）</ArticleCaption>
+            <ArticleTitle>第三十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長は、裁判員及び補充裁判員に対し、その権限及び義務のほか、事実の認定は証拠によること、被告事件について犯罪の証明をすべき者及び事実の認定に必要な証明の程度について説明する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="37">
+            <ArticleCaption>（宣誓の方式・法第三十九条）</ArticleCaption>
+            <ArticleTitle>第三十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>宣誓は、宣誓書によりこれをしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>宣誓書には、法令に従い公平誠実にその職務を行うことを誓う旨を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長は、裁判員及び補充裁判員に宣誓書を朗読させ、かつ、これに署名押印させなければならない。裁判員及び補充裁判員が宣誓書を朗読することができないときは、裁判長は、裁判所書記官にこれを朗読させなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>宣誓は、起立して厳粛にこれを行わなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>宣誓は、各別にこれをさせなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 解任</SectionTitle>
+          <Article Num="38">
+            <ArticleCaption>（裁判員又は補充裁判員の解任についての意見の聴取・法第四十一条等）</ArticleCaption>
+            <ArticleTitle>第三十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十一条第一項の請求についての決定をするには、あらかじめ、相手方又はその弁護人の意見を聴かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十三条第一項又は第三項の規定による決定をするには、あらかじめ、検察官及び被告人又は弁護人の意見を聴かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="39">
+            <ArticleCaption>（裁判員又は補充裁判員を解任する決定の告知・法第四十一条等）</ArticleCaption>
+            <ArticleTitle>第三十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判員又は補充裁判員を解任する決定は、これを当該裁判員又は補充裁判員に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="40">
+            <ArticleCaption>（解任の請求を却下する決定に対する異議の申立ての手続・法第四十二条）</ArticleCaption>
+            <ArticleTitle>第四十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十二条第一項の異議の申立てについては、刑事訴訟規則第二百七十一条及び第二百七十二条の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十二条第一項の異議の申立てについての決定は、これを検察官及び被告人又は弁護人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 裁判員の参加する裁判の手続</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 公判準備及び公判手続</SectionTitle>
+          <Article Num="41">
+            <ArticleCaption>（第一回の公判期日前の鑑定についての意見の聴取・法第五十条）</ArticleCaption>
+            <ArticleTitle>第四十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>鑑定手続実施決定（法第五十条第一項に規定する鑑定手続実施決定をいう。以下同じ。）又は同項の請求を却下する決定をするには、あらかじめ、職権でこれをする場合には検察官及び被告人又は弁護人の意見を、請求によりこれをする場合には相手方又はその弁護人の意見を聴かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="42">
+            <ArticleCaption>（立証及び弁論における配慮）</ArticleCaption>
+            <ArticleTitle>第四十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官及び弁護人は、裁判員が審理の内容を踏まえて自らの意見を形成できるよう、裁判員に分かりやすい立証及び弁論を行うように努めなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 刑事訴訟規則の適用に関する特例等</SectionTitle>
+          <Article Num="43">
+            <ArticleCaption>（刑事訴訟規則の適用に関する特例）</ArticleCaption>
+            <ArticleTitle>第四十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二条第一項の合議体で事件が取り扱われる場合における刑事訴訟規則の規定の適用については、次の表の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句とする。</Sentence>
+              </ParagraphSentence>
+              <TableStruct>
+                <Table>
+                  <TableRow>
+                    <TableColumn>
+                      <Sentence>第百六条第一項</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>裁判官</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>裁判官又は裁判官及び裁判員</Sentence>
+                    </TableColumn>
+                  </TableRow>
+                  <TableRow>
+                    <TableColumn>
+                      <Sentence>第百六十六条ただし書</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>裁判官</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>裁判官又は裁判員</Sentence>
+                    </TableColumn>
+                  </TableRow>
+                  <TableRow>
+                    <TableColumn>
+                      <Sentence>第百七十八条の十六第二項、第百八十七条の三第三項、第二百十七条の十二（第二百十七条の二十九において準用する場合を含む。）</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>合議体の構成員</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>合議体の構成員である裁判官</Sentence>
+                    </TableColumn>
+                  </TableRow>
+                  <TableRow>
+                    <TableColumn>
+                      <Sentence>第百九十九条の八、第百九十九条の九</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>裁判長又は陪席の裁判官</Sentence>
+                    </TableColumn>
+                    <TableColumn>
+                      <Sentence>裁判長、陪席の裁判官又は裁判員</Sentence>
+                    </TableColumn>
+                  </TableRow>
+                </Table>
+              </TableStruct>
+            </Paragraph>
+          </Article>
+          <Article Num="44">
+            <ArticleCaption>（証人等の尋問調書）</ArticleCaption>
+            <ArticleTitle>第四十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則第三十八条の調書には、立ち会った裁判員及び補充裁判員の氏名の記載に代えて、これらの者の第二十六条第一項第十八号の符号を記載するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則第三十八条の調書には、同条第二項（第八号を除く。）に規定する事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第一項の規定により訴訟関係人の尋問及び供述等（同項に規定する訴訟関係人の尋問及び供述等をいう。以下同じ。）を記録媒体（同項に規定する記録媒体をいう。以下同じ。）に記録したこと。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第二項の規定により証人の同意を得たこと。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第三項本文の規定により訴訟記録に添付して調書の一部とした記録媒体の種類及び数量</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六十五条第三項本文の規定により訴訟記録に添付して調書の一部とした記録媒体については、刑事訴訟規則第三十八条第三項から第五項までの規定による手続をすることを要しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六十五条第三項本文の規定により記録媒体がその一部とされた調書については、その旨を調書上明らかにしておかなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="45">
+            <ArticleCaption>（検証調書）</ArticleCaption>
+            <ArticleTitle>第四十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検証調書については、前条第一項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="46">
+            <ArticleCaption>（公判調書）</ArticleCaption>
+            <ArticleTitle>第四十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>公判調書には、刑事訴訟規則第四十四条（第一項第二十八号を除く。）に規定する事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>立ち会った裁判員及び補充裁判員の第二十六条第一項第十八号の符号</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第一項の規定により訴訟関係人の尋問及び供述等を記録媒体に記録したこと。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第二項の規定により証人の同意を得たこと。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第三項本文の規定により訴訟記録に添付して調書の一部とした記録媒体の種類及び数量</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>区分事件（法第七十二条第一項に規定する区分事件をいう。以下同じ。）の審理における証拠調べが終わった後に陳述した検察官、被告人、弁護人及び被害者参加人（刑事訴訟法（昭和二十三年法律第百三十一号）第三百十六条の三十三第三項に規定する被害者参加人をいう。）又はその委託を受けた弁護士の意見の要旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>区分事件の審理における被告人又は弁護人の最終陳述の要旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第八十七条の規定により公判手続を更新したときは、その旨並びに取り調べた書面及び物</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる事項は、公判調書に記載することを要しない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十条の規定による裁判員及び補充裁判員の立会いの許可の決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第六十五条第一項の規定による訴訟関係人の尋問及び供述等を記録媒体に記録する旨の決定</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="47">
+            <ArticleCaption>（鑑定手続実施決定があった場合の公判前整理手続調書）</ArticleCaption>
+            <ArticleTitle>第四十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>鑑定手続実施決定があった場合には、公判前整理手続調書には刑事訴訟規則第二百十七条の十五に規定する事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出頭した鑑定人の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>鑑定人の宣誓の有無及び鑑定人に宣誓をさせなかったときは、その理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>鑑定人の尋問及び供述</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>鑑定人が宣誓、鑑定又は供述を拒んだこと及びその理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="48">
+            <ArticleCaption>（訴訟関係人の尋問及び供述等を記録媒体に記録する旨の決定の告知・法第六十五条）</ArticleCaption>
+            <ArticleTitle>第四十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六十五条第一項の規定により訴訟関係人の尋問及び供述等を記録媒体に記録する旨の決定をした場合には、速やかに、その旨を検察官及び被告人又は弁護人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="49">
+            <ArticleCaption>（鑑定のための謄写）</ArticleCaption>
+            <ArticleTitle>第四十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六十五条第三項本文の規定により訴訟記録に添付して調書の一部とした記録媒体の謄写については、刑事訴訟規則第百三十四条第二項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 評議</ChapterTitle>
+        <Article Num="50">
+          <ArticleCaption>（評議における配慮）</ArticleCaption>
+          <ArticleTitle>第五十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>構成裁判官（法第六条第一項に規定する構成裁判官をいう。）は、評議において、裁判員から審理の内容を踏まえて各自の意見が述べられ、合議体の構成員の間で、充実した意見交換が行われるように配慮しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="51">
+          <ArticleCaption>（弁論終結前の評議）</ArticleCaption>
+          <ArticleTitle>第五十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、弁論終結前に評議を行うに当たっては、あらかじめ、裁判員に対し、法第六条第一項に規定する裁判員の関与する判断は、弁論終結後に行うべきものであることを説明するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="5">
+        <ChapterTitle>第五章 区分審理決定がされた場合の審理及び裁判の特例等</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 審理及び裁判の特例</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 区分審理決定</SubsectionTitle>
+            <Article Num="52">
+              <ArticleCaption>（請求の方式・法第七十一条等）</ArticleCaption>
+              <ArticleTitle>第五十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十一条第一項又は第七十二条第一項若しくは第二項の請求は、書面を差し出してこれをしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、前項の規定にかかわらず、公判前整理手続期日又は期日間整理手続期日においては、同項の請求を口頭ですることを許すことができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="53">
+              <ArticleCaption>（区分審理決定についての意見の聴取・法第七十一条）</ArticleCaption>
+              <ArticleTitle>第五十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>区分審理決定又は法第七十一条第一項の請求を却下する決定をするには、あらかじめ、職権でこれをする場合には検察官及び被告人又は弁護人の意見を、請求によりこれをする場合には相手方又はその弁護人の意見を聴かなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="54">
+              <ArticleCaption>（区分審理決定の取消し及び変更についての意見の聴取・法第七十二条）</ArticleCaption>
+              <ArticleTitle>第五十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十二条第一項若しくは第二項の決定又はこれらの項の請求を却下する決定をするには、あらかじめ、職権でこれをする場合には検察官及び被告人又は弁護人の意見を、請求によりこれをする場合には相手方又はその弁護人の意見を聴かなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="55">
+              <ArticleCaption>（審理の順序についての意見の聴取・法第七十三条）</ArticleCaption>
+              <ArticleTitle>第五十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十三条第一項又は第二項の決定をするには、あらかじめ、検察官及び被告人又は弁護人の意見を聴かなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="56">
+              <ArticleCaption>（審理の順序に関する決定の告知・法第七十三条）</ArticleCaption>
+              <ArticleTitle>第五十六条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十三条第一項又は第二項の決定をした場合には、その旨を検察官、被告人及び弁護人に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 区分事件審判</SubsectionTitle>
+            <Article Num="57">
+              <ArticleCaption>（意見陳述の時期等・法第七十七条）</ArticleCaption>
+              <ArticleTitle>第五十七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十七条第一項の規定による意見の陳述については、刑事訴訟規則第二百十一条の二から第二百十二条までの規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十七条第二項の規定による意見の陳述については、刑事訴訟規則第二百十一条から第二百十二条までの規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十七条第三項の規定による意見の陳述については、刑事訴訟規則第二百十七条の三十八及び第二百十七条の三十九の規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="58">
+              <ArticleCaption>（部分判決で有罪の言渡しをする場合の特例・法第七十八条）</ArticleCaption>
+              <ArticleTitle>第五十八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第七十八条第一項の規定により部分判決で有罪の言渡しをする場合においては、刑事訴訟規則第二百二十条の規定は、適用しない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="59">
+              <ArticleCaption>（区分事件審判に関する公判調書・法第八十二条）</ArticleCaption>
+              <ArticleTitle>第五十九条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第八十二条第一項ただし書の場合には、その公判調書の記載の正確性についての異議の申立期間との関係においては、その公判調書を整理すべき最終日にこれを整理したものとみなす。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="3">
+            <SubsectionTitle>第三款 併合事件審判</SubsectionTitle>
+            <Article Num="60">
+              <ArticleCaption>（更新の手続・法第八十七条）</ArticleCaption>
+              <ArticleTitle>第六十条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第八十七条の規定により公判手続を更新するには、法第八十六条第三項の決定があった場合を除き、次の例による。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判長は、部分判決で示された事項を明らかにしなければならない。ただし、併合事件審判をするのに明らかに必要がないと認められる事項については、この限りでない。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>区分事件審判を行った公判期日における被告人若しくは被告人以外の者の供述を録取した書面又は区分事件審判を行った公判期日における裁判所の検証の結果を記載した書面並びに区分事件審判を行った公判期日において取り調べた書面又は物については、訴訟関係人の意見を聴いた上、併合事件審判をするのに必要な範囲で、職権で証拠書類又は証拠物として取り調べなければならない。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判長は、前号に規定する書面又は物を取り調べる場合において訴訟関係人が同意したときは、その全部若しくは一部を朗読し又は示すことに代えて、相当と認める方法でこれを取り調べることができる。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判長は、取り調べた各個の証拠について訴訟関係人の意見及び弁解を聴かなければならない。この場合において、訴訟関係人の意見の陳述及び弁解は、部分判決で示された事項については、することができない。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="5">
+                  <ItemTitle>五</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判長は、前号に規定する意見の陳述及び弁解が部分判決で示された事項にわたるときは、これを制限することができる。</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 選任予定裁判員</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 選任予定裁判員の選定</SubsectionTitle>
+            <Article Num="61">
+              <ArticleCaption>（選任予定裁判員の選定方法・法第九十一条）</ArticleCaption>
+              <ArticleTitle>第六十一条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、選任予定裁判員を選定する決定をするに当たっては、各区分事件審判又は併合事件審判ごとに、次の順序に従って裁判員等選任手続を行うものとする。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判長は、裁判員等選任手続の期日に出頭した裁判員候補者のうち、質問をする必要があるすべての裁判員候補者に対し質問をする。ただし、裁判所は、法第三十四条第四項又は第七項（これらの規定を法第九十二条第二項において準用する場合を含む。以下この条において同じ。）の規定により不選任の決定をしなければならない裁判員候補者について、質問をする必要があるすべての裁判員候補者に対する質問を終えるまで不選任の決定をしないことが相当でないと認めるときは、その質問を終える前に不選任の決定をすることができる。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判所は、質問をした裁判員候補者のうち、法第三十四条第四項又は第七項の規定により不選任の決定をしなければならない裁判員候補者について不選任の決定をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>検察官及び被告人は、法第三十四条第四項又は第七項の規定により不選任の決定がされなかった裁判員候補者について、理由を示さない不選任の請求をする。ただし、これらの規定により不選任の決定がされなかった裁判員候補者の員数が、選定すべき選任予定裁判員の員数並びに検察官及び被告人がそれぞれ理由を示さない不選任の請求をすることができる員数の合計数を超えるときは、あらかじめ、裁判所が、その裁判員候補者の中から、くじで、その合計数の裁判員候補者を決めることができるものとし、検察官及び被告人は、決められた裁判員候補者について、理由を示さない不選任の請求をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判所は、不選任の決定がされなかった裁判員候補者（前号ただし書に規定する場合にあっては、同号ただし書の規定により決められた裁判員候補者のうち理由を示さない不選任の請求による不選任の決定がされなかった裁判員候補者）から、くじで、法第九十一条第一項（法第九十二条第二項において読み替えて準用する場合を含む。次項第五号において同じ。）に規定する員数の選任予定裁判員を裁判員（補充裁判員を置くときは、補充裁判員を含む。以下この号及び次項第五号において同じ。）に選任されるべき順序を定めて選定する決定をする。ただし、当該裁判員候補者の員数がこれに満たないときは、その員数の選任予定裁判員を裁判員に選任されるべき順序をくじで定めて選定する決定をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、裁判員候補者の出頭状況及び質問票の記載状況等に照らし、裁判員等選任手続の期日に出頭した裁判員候補者のうち質問をする必要があるすべての裁判員候補者に対し質問をすることが、迅速に裁判員等選任手続を終えるために相当でないと認める場合には、各区分事件審判又は併合事件審判ごとに、各裁判員等選任手続の期日のはじめに、次の順序に従って裁判員等選任手続を行う決定をすることができる。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判所は、裁判員等選任手続の期日に出頭した裁判員候補者について、くじで、選任予定裁判員に選定されるべき順序を定める。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判長は、前号の順序に従い、質問をする必要がある裁判員候補者に対し質問をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判所は、前号の規定により裁判員候補者が質問を受けるごとに、法第三十四条第四項又は第七項の規定により不選任の決定をしなければならないかどうかを判断し、不選任の決定をしなければならない裁判員候補者については不選任の決定をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>検察官及び被告人は、質問を受け、かつ、前号の不選任の決定がされなかった裁判員候補者の員数が、選定すべき選任予定裁判員の員数並びに検察官及び被告人がそれぞれ理由を示さない不選任の請求をすることができる員数の合計数に満ちたときは、質問を受け、かつ、同号の不選任の決定がされなかった裁判員候補者について、理由を示さない不選任の請求をする。ただし、質問をする必要があるすべての裁判員候補者に対し質問をした場合は、その合計数に満たないときであっても、検察官及び被告人は、同号の不選任の決定がされなかった裁判員候補者について、理由を示さない不選任の請求をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="5">
+                  <ItemTitle>五</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>裁判所は、質問を受け、かつ、不選任の決定がされなかった裁判員候補者から、第一号の順序に従い、法第九十一条第一項に規定する員数の選任予定裁判員を裁判員に選任されるべき順序を定めて選定する決定をする。ただし、当該裁判員候補者の員数がこれに満たないときは、その員数の選任予定裁判員を裁判員に選任されるべき順序を定めて選定する決定をする。</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、裁判員候補者の出頭状況及び質問票の記載状況等に照らし、法第九十一条第二項（法第九十二条第二項において準用する場合を含む。）の規定により不選任の決定がされる裁判員候補者が存すると見込まれる場合には、各区分事件審判又は併合事件審判ごとに、各裁判員等選任手続の期日のはじめに、くじで、質問を受けるべき裁判員候補者を決めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 選任予定裁判員の選定の取消し</SubsectionTitle>
+            <Article Num="62">
+              <ArticleCaption>（選任予定裁判員の選定の取消しについての意見の聴取・法第九十三条等）</ArticleCaption>
+              <ArticleTitle>第六十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第九十三条第一項の請求についての決定をするには、あらかじめ、相手方又はその弁護人の意見を聴かなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第九十五条第一項の規定による決定をするには、あらかじめ、検察官及び被告人又は弁護人の意見を聴かなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="63">
+              <ArticleCaption>（選任予定裁判員の選定を取り消す決定の告知・法第九十三条等）</ArticleCaption>
+              <ArticleTitle>第六十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>選任予定裁判員の選定を取り消す決定は、これを当該選任予定裁判員に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="64">
+              <ArticleCaption>（選定の取消しの請求を却下する決定に対する異議の申立ての手続・法第九十四条）</ArticleCaption>
+              <ArticleTitle>第六十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第九十四条第一項の異議の申立てについては、刑事訴訟規則第二百七十一条及び第二百七十二条の規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第九十四条第一項の異議の申立てについての決定は、これを検察官及び被告人又は弁護人に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="65">
+              <ArticleCaption>（資料の提出の求め・法第九十六条）</ArticleCaption>
+              <ArticleTitle>第六十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、法第九十六条第一項の申立てをした選任予定裁判員に対し、その選定の取消しの判断をするため、必要な資料の提出を求めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+      </Chapter>
+      <Chapter Num="6">
+        <ChapterTitle>第六章 裁判員等の保護のための措置</ChapterTitle>
+        <Article Num="66">
+          <ArticleCaption>（裁判員の選任及び解任等に関する書類の謄写）</ArticleCaption>
+          <ArticleTitle>第六十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十一条第二項に規定する書類のほか、法第二章第二節及び第三節並びに第五章第二節に規定する手続に関する書類（第十二条第三項及び第十五条第二項に規定するものを除く。）のうち、法第三十四条第一項（法第三十八条第二項、第四十七条第二項及び第九十二条第二項において準用する場合を含む。）の規定による質問及びこれに対する陳述並びに裁判員、補充裁判員、選任予定裁判員若しくは裁判員候補者又はこれらであった者の個人を特定するに足りる情報が記載されている部分は、謄写することができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項に規定するもののほか、裁判員、補充裁判員、選任予定裁判員又は裁判員候補者からの申立てに関する書類は、謄写することができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="67">
+          <ArticleCaption>（併合事件裁判の通知・法第百一条）</ArticleCaption>
+          <ArticleTitle>第六十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、併合事件裁判（法第百一条第二項に規定する併合事件裁判をいう。）をしたときは、速やかに、その裁判をしたことを区分事件審判に係る職務を行う裁判員又は補充裁判員の職にあった者で法第八十四条の規定によりその任務が終了したものに通知するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="7">
+        <ChapterTitle>第七章 補則</ChapterTitle>
+        <Article Num="68">
+          <ArticleCaption>（検察官及び弁護人の訴訟遅延行為に対する処置）</ArticleCaption>
+          <ArticleTitle>第六十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>刑事訴訟規則第三百三条の規定は、検察官又は弁護人が訴訟手続に関する法律又は裁判所の規則に違反し、裁判員等選任手続の迅速な進行を妨げた場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="69">
+          <ArticleCaption>（裁判員及び補充裁判員の書類）</ArticleCaption>
+          <ArticleTitle>第六十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判員及び補充裁判員が作るべき書類については、公務員以外の者が作るべき書類の例による。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+        </ParagraphSentence>
+        <Item Num="1">
+          <ItemTitle>一</ItemTitle>
+          <ItemSentence>
+            <Sentence>第二条、第十一条から第十三条まで、第十五条及び第六十六条の規定 法附則第一条第二号に掲げる規定の施行の日</Sentence>
+          </ItemSentence>
+        </Item>
+        <Item Num="2">
+          <ItemTitle>二</ItemTitle>
+          <ItemSentence>
+            <Sentence>第十条の規定 法第十二条第二項の規定の施行の日</Sentence>
+          </ItemSentence>
+        </Item>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（裁判所の非常勤職員の政治的行為制限の特例に関する規則の一部改正）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>裁判所の非常勤職員の政治的行為制限の特例に関する規則（昭和二十七年最高裁判所規則第二十五号）の一部を次のように改正する。本則中第十一号を第十二号とし、第一号から第十号までを一号ずつ繰り下げ、本則に第一号として次の一号を加える。一 裁判員及び補充裁判員</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="3">
+        <ParagraphCaption>（政治資金規正法第二十二条の九第一項第二号の非常勤職員の範囲を定める規則の一部改正）</ParagraphCaption>
+        <ParagraphNum>３</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>政治資金規正法第二十二条の九第一項第二号の非常勤職員の範囲を定める規則（平成四年最高裁判所規則第十三号）の一部を次のように改正する。本則中第十号を第十一号とし、第一号から第九号までを一号ずつ繰り下げ、本則に第一号として次の一号を加える。一 裁判員及び補充裁判員</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二○年五月二一日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二一年一月一六日最高裁判所規則第一号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成二十一年四月二十日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二七年一○月一四日最高裁判所規則第九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、裁判員の参加する刑事裁判に関する法律の一部を改正する法律（平成二十七年法律第三十七号）の施行の日（平成二十七年十二月十二日）から施行する。ただし、第十条の改正規定は、地方自治法の一部を改正する法律（平成二十六年法律第四十二号）の施行の日（平成二十八年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二八年一○月一八日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（平成二十八年法律第五十四号）附則第一条第三号に掲げる規定の施行の日（平成二十八年十二月一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成三〇年一月一五日最高裁判所規則第一号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（平成二十八年法律第五十四号）附則第一条第四号に掲げる規定の施行の日から施行する。ただし、第三条の規定は、同法の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和元年七月九日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和元年八月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年六月一日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和五年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年一二月二五日最高裁判所規則第一〇号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（令和五年法律第二十八号。以下「改正法」という。）附則第一条第四号に掲げる規定の施行の日から施行する。ただし、第一条中刑事訴訟規則目次、第八十七条及び第九十一条の改正規定並びに同規則第九十二条の二の次に一条を加える改正規定は、改正法附則第一条第五号に掲げる規定の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年六月一二日最高裁判所規則第一二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年三月三日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、国家公務員等の旅費に関する法律の一部を改正する法律（令和六年法律第二十二号）の施行の日（令和七年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた旅費、日当及び宿泊料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年六月一一日最高裁判所規則第八号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和七年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年一二月二六日最高裁判所規則第一七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律（令和七年法律第三十九号）附則第一条第三号に掲げる規定の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和八年六月一〇日最高裁判所規則第一〇号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和八年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <AppdxTable>
+      <AppdxTableTitle>別表</AppdxTableTitle>
+      <RelatedArticleNum>（第二条関係）</RelatedArticleNum>
+      <TableStruct>
+        <Table>
+          <TableRow>
+            <TableColumn>
+              <Sentence>裁判員裁判に関する事務を取り扱う地方裁判所の支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>取扱区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>東京地方裁判所立川支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>東京地方裁判所立川支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>横浜地方裁判所小田原支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>横浜地方裁判所小田原支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>静岡地方裁判所沼津支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>静岡地方裁判所沼津支部管轄区域静岡地方裁判所富士支部管轄区域静岡地方裁判所下田支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>静岡地方裁判所浜松支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>静岡地方裁判所浜松支部管轄区域静岡地方裁判所掛川支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>長野地方裁判所松本支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>長野地方裁判所松本支部管轄区域長野地方裁判所諏訪支部管轄区域長野地方裁判所飯田支部管轄区域長野地方裁判所伊那支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>大阪地方裁判所堺支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>大阪地方裁判所堺支部管轄区域大阪地方裁判所岸和田支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>神戸地方裁判所姫路支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>神戸地方裁判所姫路支部管轄区域神戸地方裁判所社支部管轄区域神戸地方裁判所龍野支部管轄区域神戸地方裁判所豊岡支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>名古屋地方裁判所岡崎支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>名古屋地方裁判所岡崎支部管轄区域名古屋地方裁判所豊橋支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>福岡地方裁判所小倉支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>福岡地方裁判所小倉支部管轄区域福岡地方裁判所行橋支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>福島地方裁判所郡山支部</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>福島地方裁判所郡山支部管轄区域福島地方裁判所白河支部管轄区域福島地方裁判所会津若松支部管轄区域福島地方裁判所いわき支部管轄区域</Sentence>
+            </TableColumn>
+          </TableRow>
+        </Table>
+      </TableStruct>
+    </AppdxTable>
+  </LawBody>
+</Law>

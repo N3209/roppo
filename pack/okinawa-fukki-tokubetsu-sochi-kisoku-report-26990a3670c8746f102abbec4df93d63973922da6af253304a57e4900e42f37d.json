@@ -1,0 +1,187 @@
+{
+ "workId": "okinawa-fukki-tokubetsu-sochi-kisoku",
+ "file": "okinawa-fukki-tokubetsu-sochi-kisoku-47bcafe464f20c041b4ff48dac29b48aa32d99664a7baa52c8cb18142606dcf4.xml",
+ "sha256": "47bcafe464f20c041b4ff48dac29b48aa32d99664a7baa52c8cb18142606dcf4",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/okinawanohukkinitomonautokubetusotinikansurukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "935a59bf7ec7e4b66b3d24ce8e5093ef0f97505ab9e8e3811511cdbc276aa935",
+  "pages": 6,
+  "law_num": "昭和四十七年五月二日最高裁判所規則第一号",
+  "main_articles": 31,
+  "counts": {
+   "Article": 32,
+   "Paragraph": 71,
+   "Item": 14,
+   "Subitem1": 0,
+   "SupplProvision": 9,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 8470,
+  "dropped_notes": 7,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和四七年六月二四日最高裁判所規則第五号）抄",
+   "附則（昭和五五年三月三一日最高裁判所規則第一号）",
+   "附則（昭和五六年三月三一日最高裁判所規則第四号）",
+   "附則（昭和五七年三月三一日最高裁判所規則第一号）",
+   "附則（平成八年十二月十七日最高裁判所規則第六号）抄",
+   "附則（平成一六年三月三一日最高裁判所規則第五号）",
+   "附則（平成一六年四月二一日最高裁判所規則第九号）",
+   "附則（平成一九年三月三一日最高裁判所規則第四号）"
+  ]
+ },
+ "independentCount": {
+  "title": "沖縄の復帰に伴う特別措置に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 31,
+    "xml": 31,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 10,
+    "body": 10
+   },
+   "Article": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 33,
+    "xml": 33,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "沖縄の復帰に伴う特別措置に関する規則",
+  "units": 127,
+  "pdf_lines": 305,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 92,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 24
+ },
+ "tables": {
+  "title": "沖縄の復帰に伴う特別措置に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成16年4月21日 本紙第3836号",
+    "rule": "平成16年最高裁判所規則第9号",
+    "title": "司法委員規則及び参与員規則の一部を改正する規則",
+    "year": 2004,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20040421/20040421h03836/20040421h038360002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成16年3月31日 特別号外第5号",
+    "rule": "平成16年最高裁判所規則第5号",
+    "title": "沖縄の復帰に伴う特別措置に関する規則の一部を改正する規則",
+    "year": 2004,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20040331/20040331t00005/20040331t000050244f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年3月31日 特別号外第9号",
+    "rule": "平成19年最高裁判所規則第4号",
+    "title": "執行官規則及び沖縄の復帰に伴う特別措置に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20070331/20070331t00009/20070331t000090242f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20040421",
+    "no": 8,
+    "explained_by_neighbour": [
+     "司法委員規則及び参与員規則の一部を改正する規則（同九）"
+    ]
+   },
+   {
+    "date": "20040331",
+    "no": 6,
+    "explained_by_neighbour": [
+     "沖縄の復帰に伴う特別措置に関する規則の一部を改正する規則（最高裁五）"
+    ]
+   }
+  ]
+ }
+}

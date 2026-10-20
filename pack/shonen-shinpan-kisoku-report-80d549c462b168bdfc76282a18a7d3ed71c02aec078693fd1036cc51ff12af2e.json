@@ -1,0 +1,317 @@
+{
+ "workId": "shonen-shinpan-kisoku",
+ "file": "shonen-shinpan-kisoku-911311670f4acbd512e5c91c961b9734973b5a1e0adae13150bf3768ed9acbc5.xml",
+ "sha256": "911311670f4acbd512e5c91c961b9734973b5a1e0adae13150bf3768ed9acbc5",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521shounenshinpankisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "a1eb64d098d15263e31f31903e41d360f18e5353d2b4a91b82c8ffe5e29b814f",
+  "pages": 20,
+  "law_num": "昭和二十三年十二月二十一日最高裁判所規則第三十三号",
+  "main_articles": 102,
+  "counts": {
+   "Article": 108,
+   "Paragraph": 272,
+   "Item": 74,
+   "Subitem1": 6,
+   "SupplProvision": 31,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 27305,
+  "dropped_notes": 107,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [
+   "法人である場合においては､出席した代表者の氏名）"
+  ],
+  "removed_spaces": 0,
+  "kept_spaces": 2,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二四年六月一五日最高裁判所規則第一〇号）",
+   "附則（昭和二四年七月一日最高裁判所規則第一二号）",
+   "附則（昭和二五年四月一五日最高裁判所規則第一〇号）",
+   "附則（昭和二五年四月二八日最高裁判所規則第一一号）",
+   "附則（昭和二五年一二月二八日最高裁判所規則第三五号）",
+   "附則（昭和二七年三月一〇日最高裁判所規則第四号）",
+   "附則（昭和二七年七月三一日最高裁判所規則第一九号）",
+   "附則（昭和二八年七月二五日最高裁判所規則第一二号）",
+   "附則（昭和二九年五月二九日最高裁判所規則第五号）",
+   "附則（昭和三〇年八月五日最高裁判所規則第八号）",
+   "附則（昭和五七年九月三日最高裁判所規則第七号）",
+   "附則（平成四年二月三日最高裁判所規則第一号）",
+   "附則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附則（平成九年七月一四日最高裁判所規則第四号）",
+   "附則（平成一三年二月一九日最高裁判所規則第一号）",
+   "附則（平成一四年七月二九日最高裁判所規則第七号）",
+   "附則（平成一八年五月一二日最高裁判所規則第六号）",
+   "附則（平成一八年七月二八日最高裁判所規則第一一号）抄",
+   "附則（平成一九年五月二五日最高裁判所規則第六号）",
+   "附則（平成一九年九月二七日最高裁判所規則第一一号）",
+   "附則（平成二〇年三月一二日最高裁判所規則第三号）",
+   "附則（平成二〇年一一月一一日最高裁判所規則第一八号）",
+   "附則（平成二三年一二月二日最高裁判所規則第五号）抄",
+   "附則（平成二七年三月二七日最高裁判所規則第三号）抄",
+   "附則（平成二八年一〇月七日最高裁判所規則第五号）",
+   "附則（平成三〇年一月一五日最高裁判所規則第一号）抄",
+   "附則（令和三年一二月二二日最高裁判所規則第三号）",
+   "附則（令和五年一二月二五日最高裁判所規則第一〇号）抄",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附則（令和七年一二月二六日最高裁判所規則第一七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "少年審判規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 102,
+    "xml": 102,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 5,
+    "body": 5
+   },
+   "Article": {
+    "pdf_lines": 108,
+    "xml": 108,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 141,
+    "xml": 141,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 74,
+    "xml": 74,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 31,
+    "xml": 31,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "少年審判規則",
+  "units": 472,
+  "pdf_lines": 1074,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 341,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 41
+ },
+ "tables": {
+  "title": "少年審判規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成18年5月12日 本紙第4335号",
+    "rule": "平成18年最高裁判所規則第6号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20060512/20060512h04335/20060512h043350002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年7月28日 号外第174号",
+    "rule": "平成18年最高裁判所規則第11号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20060728/20060728g00174/20060728g001740001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年5月25日 号外第107号",
+    "rule": "平成19年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び少年審判規則の一部を改正する規則",
+    "year": 2007,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20070525/20070525g00107/20070525g001070049f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年9月27日 本紙第4676号",
+    "rule": "平成19年最高裁判所規則第11号",
+    "title": "少年審判規則及び総合法律支援法による国選弁護人契約弁護士に係る費用の額の算定等に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20070927/20070927h04676/20070927h046760002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年3月12日 本紙第4786号",
+    "rule": "平成20年最高裁判所規則第3号",
+    "title": "少年審判規則の一部を改正する規則",
+    "year": 2008,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20080312/20080312h04786/20080312h047860002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年11月11日 本紙第4951号",
+    "rule": "平成20年最高裁判所規則第18号",
+    "title": "少年審判規則の一部を改正する規則",
+    "year": 2008,
+    "no": 18,
+    "url": "https://www.kanpo.go.jp/old/20081111/20081111h04951/20081111h049510002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成23年12月2日 本紙第5692号",
+    "rule": "平成23年最高裁判所規則第5号",
+    "title": "民法等の一部を改正する法律の施行に伴う関係規則の整備に関する規則",
+    "year": 2011,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20111202/20111202h05692/20111202h056920001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年3月27日 号外第70号",
+    "rule": "平成27年最高裁判所規則第3号",
+    "title": "少年審判規則の一部を改正する規則",
+    "year": 2015,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20150327/20150327g00070/20150327g000700004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成28年10月7日 本紙第6874号",
+    "rule": "平成28年最高裁判所規則第5号",
+    "title": "少年審判規則の一部を改正する規則",
+    "year": 2016,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20161007/20161007h06874/20161007h068740001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成30年1月15日 本紙第7181号",
+    "rule": "平成30年最高裁判所規則第1号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2018,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20180115/20180115h07181/20180115h071810001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和3年12月22日 本紙第642号",
+    "rule": "令和3年最高裁判所規則第3号",
+    "title": "少年審判規則及び刑事訴訟規則の一部を改正する規則",
+    "year": 2021,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20211222/20211222h00642/20211222h006420002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年12月25日 号外第270号",
+    "rule": "令和5年最高裁判所規則第10号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20231225/20231225g00270/20231225g002700005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20080312",
+    "no": 4,
+    "explained_by_neighbour": [
+     "少年審判規則の一部を改正する規則（最高裁三）"
+    ]
+   },
+   {
+    "date": "20081111",
+    "no": 19,
+    "explained_by_neighbour": [
+     "少年審判規則の一部を改正する規則（最高裁一八）"
+    ]
+   },
+   {
+    "date": "20150327",
+    "no": 2,
+    "explained_by_neighbour": [
+     "少年審判規則の一部を改正する規則（同三）"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/taiyo_R7_512.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和7年3月26日最高裁判所規則第７号」
+  範囲: 本則14条（削除条の範囲を1要素として数える）、附則5本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="21" Num="10" PromulgateMonth="10" PromulgateDay="30" LawType="Rule">
+  <LawNum>平成二十一年十月三十日最高裁判所規則第十号</LawNum>
+  <LawBody>
+    <LawTitle>司法修習生の修習専念資金の貸与等に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（貸与申請の方式等）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所法（昭和二十二年法律第五十九号。以下「法」という。）第六十七条の三第一項に規定する申請（以下「貸与申請」という。）は、最高裁判所の定める事項を記載した申請書（以下「貸与申請書」という。）を最高裁判所に提出してしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>貸与申請書には、第四条第一項第一号に掲げる者を保証人に立てる場合にはその者の保証書を、同項第二号に掲げる金融機関を保証人に立てる場合には当該金融機関に保証を委託する旨を記載した書面を添付するほか、最高裁判所の定める書面を添付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>貸与申請書の提出は、司法修習生の採用の申込みをした者もすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（修習専念資金の貸与の方法）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金（法第六十七条の三第一項に規定する修習専念資金をいう。以下同じ。）は、貸与申請がされた日（貸与申請書を提出した日が同項に規定する修習のため通常必要な期間として最高裁判所が定める期間（以下この項及び第七条において「通常修習期間」という。）の開始の日前であるときは、当該開始の日に貸与申請がされたものとみなす。）の属する貸与単位期間（通常修習期間をその開始の日又は各月においてその日に応当する通常修習期間内の日（その日に応当する日がない月においては、その月の末日）から各翌月の通常修習期間の開始の日に応当する日（その日に応当する日がない月においては、その月の末日）の前日（当該前日が通常修習期間内にないときは、通常修習期間の末日）までの各期間に区分した場合における当該区分による一の期間をいう。以下同じ。）の次の貸与単位期間（貸与申請がされた日が貸与単位期間の初日であるときは、当該貸与単位期間）に係る分からこれを貸与する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金は、次条の規定により各貸与単位期間ごとに定められる額の修習専念資金を、最高裁判所の定める日までに、最高裁判所の定める方法により交付して貸与するものとする。ただし、貸与申請に係る事実を確認することができない等の事情があるため、修習専念資金をその日までに交付することができないときは、その日後に交付することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（修習専念資金の額）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の額は、一貸与単位期間につき十万円（以下この条において「基本額」という。）とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けようとする者又は修習専念資金の貸与を受けている司法修習生が、次の各号のいずれかに該当する場合において、修習専念資金の額の変更を申請したときは、修習専念資金の額を一貸与単位期間につき十二万五千円に変更する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>配偶者（届出をしないが事実上婚姻関係と同様の事情にある者を含む。）がある場合</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>満二十二歳に達する日以後の最初の三月三十一日までの間にある子がある場合</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>一般職の職員の給与に関する法律（昭和二十五年法律第九十五号）第十一条第二項に規定する扶養親族（同項第一号に掲げる子を除く。）がある場合</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定による修習専念資金の額の変更を受けた者が、修習専念資金の額の基本額への変更を申請したときは、修習専念資金の額を基本額に変更する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前二項の規定による申請は、最高裁判所の定める事項を記載した申請書を最高裁判所に提出してしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一項の規定は、第二項及び第三項の規定による修習専念資金の額の変更の申請があった場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="6">
+          <ParagraphNum>６</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第二項に定める額の修習専念資金の貸与を受けている司法修習生が、同項各号に掲げる場合のいずれにも該当しないこととなったときは、当該該当しないこととなった日の属する貸与単位期間の次の貸与単位期間（その日が貸与単位期間の初日であるときは、当該貸与単位期間）以降に係る修習専念資金の額を基本額に変更する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（保証人）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けようとする者は、次に掲げるいずれかの者を保証人に立てなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>自然人二人</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>一の金融機関（最高裁判所の指定するものに限る。）</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する保証人は、修習専念資金の貸与を受けた者と連帯して債務を負担するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民法（明治二十九年法律第八十九号）第四百五十一条の規定は、修習専念資金の貸与については適用しない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（貸与申請の撤回）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>貸与申請をした者は、最高裁判所の定める撤回書を提出することにより、いつでも将来に向かって貸与申請の撤回をすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（修習専念資金の貸与の終了）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けている司法修習生について次に掲げる事由のいずれかが生じたときは、当該事由が生じた日の属する貸与単位期間の次の貸与単位期間（その日が貸与単位期間の初日であるときは、当該貸与単位期間）以降に係る修習専念資金を貸与しないものとする。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>前条の規定による撤回をしたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>法第六十八条第一項又は第二項の規定により罷免されたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>死亡したとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>第四条第一項に規定する保証人を欠くに至った後相当の期間内に同項に規定する保証人を新たに立てなかったとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>その他最高裁判所の定める事由が生じたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（修習専念資金の返還の期限等）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の返還の期限は、通常修習期間の終了した月の翌月から起算して五年を経過した後十年以内で最高裁判所の定める日とし、その返還は、年賦の均等返還の方法によるものとする。ただし、最高裁判所の定めるところにより繰上返還をすることを妨げない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="7_2">
+        <ArticleCaption>（法第六十七条の三第三項に規定する最高裁判所の定める事由）</ArticleCaption>
+        <ArticleTitle>第七条の二</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第六十七条の三第三項に規定する最高裁判所の定める事由は、次に掲げるものとする。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>修習専念資金の貸与を受けた者が給与所得（俸給、給料、賃金、歳費及び賞与並びにこれらの性質を有する給与に係る所得をいう。）以外の所得を有しない者（次号において「給与所得者」という。）である場合において、当該者の最高裁判所の定める期間における収入金額（法科大学院（学校教育法（昭和二十二年法律第二十六号）第九十九条第二項に規定する専門職大学院であって、法曹に必要な学識及び能力を培うことを目的とするものをいう。）における修学のための借入金（最高裁判所の定めるものを除く。次号において単に「借入金」という。）を当該期間中に返還したときは、その返還額を控除した残額）が三百万円以下であること（当該者について次条第二項第二号から第五号までに掲げる事由のいずれかが生じたときを除く。）。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>修習専念資金の貸与を受けた者が給与所得者以外の者である場合において、当該者の前号に規定する期間における総収入金額（借入金を当該期間中に返還したときは、その返還額を控除した残額）から必要経費を控除した残額が二百万円以下であること（当該者について次条第二項第二号から第五号までに掲げる事由のいずれかが生じたときを除く。）。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（期限の利益の喪失）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けた者は、その者について次に掲げる事由のいずれかが生じたときは、第七条の規定にかかわらず、最高裁判所の請求に基づき、その指定する日までに、返還未済額の全部を返還しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>正当な理由がなくて修習専念資金を返還すべき日までにこれを返還しなかったとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第六条第四号に掲げる事由が生じたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>次条に規定する返還明細書を提出すべき日までにこれを提出しなかったとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>その他最高裁判所の定める事由が生じたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けた者は、その者について次に掲げる事由のいずれかが生じたときは、第七条の規定にかかわらず、直ちに返還未済額の全部を返還しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>第六条第二号に掲げる事由が生じたとき（最高裁判所の定める場合を除く。）。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>強制執行を受けたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>租税その他の公課について滞納処分を受けたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>財産について競売の開始があったとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>破産手続開始の決定又は再生手続開始の決定を受けたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>その他最高裁判所の定める事由が生じたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（返還明細書の提出）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けた者は、その貸与申請に係る修習専念資金の最後の貸与単位期間の末日までに、最高裁判所の定める事項を記載した返還明細書を最高裁判所に提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定にかかわらず、第六条の規定により修習専念資金を貸与しないものとされた場合には、最高裁判所の指定する日までに、同項に規定する返還明細書を最高裁判所に提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="10">
+        <ArticleCaption>（延滞利息）</ArticleCaption>
+        <ArticleTitle>第十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>修習専念資金の貸与を受けた者は、正当な理由がなくて修習専念資金を返還すべき日までにこれを返還しなかったときは、当該返還すべき日の翌日から返還の日までの期間の日数に応じ、返還すべき額につき年十四・五パーセントの割合で計算した延滞利息を支払わなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="11">
+        <ArticleCaption>（修習専念資金の貸与及び返還に関する書面の提出）</ArticleCaption>
+        <ArticleTitle>第十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所は、修習専念資金の貸与を受け、又は受けようとする者及びその保証人又は保証人となるべき者に対し、この規則に定めるもののほか、最高裁判所の定めるところにより、修習専念資金の貸与及び返還に関し必要と認める書面の提出を求めることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="12">
+        <ArticleCaption>（電子情報処理組織を使用する方法等による申請等）</ArticleCaption>
+        <ArticleTitle>第十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>貸与申請書の提出、第三条第四項に規定する申請書の提出及び第五条に規定する撤回書の提出（以下この条において「貸与申請書等の提出」という。）については、これらの規定にかかわらず、最高裁判所の定めるところにより、最高裁判所の定める電子情報処理組織（最高裁判所若しくはこれに置かれる機関又はこれらの職員であって独立に権限を行使することを認められたものの使用に係る電子計算機（入出力装置を含む。以下同じ。）と貸与申請書等の提出をする者の使用に係る電子計算機とを電気通信回線で接続した電子情報処理組織をいう。）を使用する方法その他の情報通信技術を利用する方法であって最高裁判所が定めるものにより行うことができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の方法により行われた貸与申請書等の提出については、当該貸与申請書等の提出に関するこの規則の規定に規定する方法により行われたものとみなして、この規則の規定を適用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="13">
+        <ArticleCaption>（補則）</ArticleCaption>
+        <ArticleTitle>第十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則に定めるもののほか、修習専念資金の貸与及び返還に関し必要な事項は、最高裁判所が定める。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、裁判所法の一部を改正する法律（平成十六年法律第百六十三号）の施行の日（平成二十二年十一月一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（司法修習生の給与に関する規則の廃止）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>司法修習生の給与に関する規則（昭和五十五年最高裁判所規則第二号）は、廃止する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（司法修習生の給与に関する規則の廃止に伴う経過措置）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前に採用され、この規則の施行後も引き続き修習をする司法修習生の給与については、前条の規定による廃止前の司法修習生の給与に関する規則の規定は、この規則の施行後も、なおその効力を有する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（裁判官等の寒冷地手当に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判官等の寒冷地手当に関する規則（昭和二十四年最高裁判所規則第二十九号）の一部を次のように改正する。〔次のよう略〕</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（裁判官の報酬等の支給定日に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判官の報酬等の支給定日に関する規則（昭和三十六年最高裁判所規則第二号）の一部を次のように改正する。〔次のよう略〕</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（裁判官等の寒冷地手当に関する規則及び裁判官の報酬等の支給定日に関する規則の一部改正に伴う経過措置）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前に採用され、この規則の施行後も引き続き修習をする司法修習生の給与については、附則第四条の規定による改正後の裁判官の寒冷地手当に関する規則及び前条の規定による改正後の裁判官の報酬等の支給定日に関する規則の規定にかかわらず、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則〔平成二四年一〇月二六日最高裁判所規則第一〇号〕</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成二十四年十一月三日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則〔平成二九年八月四日最高裁判所規則第四号抄〕</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成二十九年十一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="3">
+        <ParagraphCaption>〔経過措置〕</ParagraphCaption>
+        <ParagraphNum>３</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>第二条の規定による改正後の司法修習生の修習専念資金の貸与等に関する規則の規定は、この規則の施行後に採用された司法修習生について適用し、この規則の施行前に採用された司法修習生の修習資金については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則〔令和五年一〇月二〇日最高裁判所規則第六号〕</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、令和五年十一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則〔令和七年三月二六日最高裁判所規則第七号抄〕</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、令和七年四月一日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

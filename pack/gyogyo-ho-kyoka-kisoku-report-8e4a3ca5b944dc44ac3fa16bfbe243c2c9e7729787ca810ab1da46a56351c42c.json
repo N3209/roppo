@@ -1,0 +1,160 @@
+{
+ "workId": "gyogyo-ho-kyoka-kisoku",
+ "file": "gyogyo-ho-kyoka-kisoku-ac4f8fc378f19be343965258f0d80c849b6432e43cc1eb14b685d3e61ff7565a.xml",
+ "sha256": "ac4f8fc378f19be343965258f0d80c849b6432e43cc1eb14b685d3e61ff7565a",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/toukei_siryou/kisokusyu/minzi_kisoku/minzi_kisoku_07/index.html",
+  "fetched": "2026-10-18",
+  "sha256": "c22ac3127d871664866a6c5b75ca848a96e61b5895035676977af0d0adb5e2d6",
+  "pages": 1,
+  "law_num": "昭和二十六年一月二十五日最高裁判所規則第一号",
+  "main_articles": 7,
+  "counts": {
+   "Article": 8,
+   "Paragraph": 19,
+   "Item": 8,
+   "Subitem1": 0,
+   "SupplProvision": 6,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 1185,
+  "dropped_notes": 4,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 28,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和三六年五月三一日最高裁判所規則第五号）",
+   "附則（昭和四六年六月二三日最高裁判所規則第九号）",
+   "附則（昭和五七年七月二三日最高裁判所規則第五号）",
+   "附則（平成二四年七月一七日最高裁判所規則第九号）抄",
+   "附則（令和二年九月三〇日最高裁判所規則第九号）"
+  ]
+ },
+ "independentCount": {
+  "title": "漁業法第七十一条第二項の規定による裁判所の許可等の手続に関する規則",
+  "extractor": [
+   {
+    "page": 1,
+    "html_readings_equal": true
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "漁業法第七十一条第二項の規定による裁判所の許可等の手続に関する規則",
+  "units": 36,
+  "pdf_lines": 54,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 20,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "漁業法第七十一条第二項の規定による裁判所の許可等の手続に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和2年9月30日 本紙第342号",
+    "rule": "令和2年最高裁判所規則第9号",
+    "title": "漁業法第十三条第二項の規定による裁判所の許可等の手続に関する規則の一部を改正する規則",
+    "year": 2020,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20200930/20200930h00342/20200930h003420002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

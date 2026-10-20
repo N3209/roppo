@@ -49,6 +49,10 @@
   if (first) {
     await openLaw(first);
     pushHist({ lawId: first, anchor: null, scrollTop: P().el.scrollTop });
+  } else {
+    // index.html に書いてある知らせは「通信できる」前提の文。0本で圏外の
+    // ときは押しても取れないので、いまの状態に合わせて書き直す。
+    refreshEmptyPane();
   }
   checkAmendmentsIfStale();     // 通信できるときだけ、1日に1度
   window.addEventListener('pagehide', rememberPos);

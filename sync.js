@@ -874,6 +874,31 @@ async function missingLaws() {
     .sort((a, b) => String(a.lawTitle).localeCompare(String(b.lawTitle), 'ja'));
 }
 
+/*
+ * 目録に出すときの、出どころごとの言い方（lawOrigin の値で引く）。
+ * e-Gov のものだけが押せるので、e-Gov の分は持たない。
+ */
+const MISSING_SUB = {
+  file: '　ファイルから取り込んだもの。e-Gov には無い',
+  pack: '　規則パックのもの。e-Gov には無い',
+  unknown: '　この版では扱えない出どころ。アプリを更新すること',
+};
+const MISSING_LABEL = {
+  file: 'ファイルから',
+  unknown: '扱えない',
+};
+
+/*
+ * 目録から取り直せるか。
+ *
+ * e-Gov は住所を投げれば取れる。パックは pack/ に同梱されている。
+ * ファイルから入れたものは、元のファイルを持っている人しか入れられない。
+ */
+const canTakeMissing = l => {
+  const o = lawOrigin(l);
+  return o === 'egov' || o === 'pack';
+};
+
 /** 目録から1本取り込む。e-Gov のものだけ。 */
 async function takeMissing(l) {
   const xml = await apiFetchLaw(l.lawId);
@@ -893,29 +918,46 @@ async function renderMissing() {
   if (!miss.length) return;
 
   $('#missing-count').textContent = miss.length + '件';
-  const egov = miss.filter(l => l.source !== 'file');
+  /*
+   * 出どころは lawOrigin で見る（core.js）。
+   *
+   * 前は「file でなければ e-Gov」としていた。パックのものが混じると、
+   * pack-<sha256> という住所を e-Gov に投げることになって必ず失敗する。
+   * 住所の形も e-Gov のものではないので、取り違えようがない誤りになる。
+   */
+  const can = miss.filter(l => canTakeMissing(l));
   const btnAll = $('#missing-all');
   if (btnAll) {
-    btnAll.hidden = !egov.length;
-    btnAll.textContent = 'e-Gov のものをまとめて取り込む（' + egov.length + '件）';
+    btnAll.hidden = !can.length;
+    btnAll.textContent = '取り直せるものをまとめて取り込む（' + can.length + '件）';
   }
 
   list.innerHTML = '';
   for (const l of miss) {
-    const fromFile = l.source === 'file';
+    const origin = lawOrigin(l);
+    /*
+     * 取り直せるのは e-Gov とパックのもの。ファイルから入れたものは、
+     * 元のファイルを持っている人しか入れられないので押せなくする。
+     *
+     * パックは pack/ にあるので押せる。ここがパックの「まとめて」に相当する
+     * 唯一の経路である。出るのは自分が選んだものだけなので、103本を一息に
+     * 入れる話にはならない（pack.js の openPackList の冒頭）。
+     */
+    const sub = MISSING_SUB[origin] || '';
+    const can = origin === 'egov' || origin === 'pack';
     const d = document.createElement('div');
     d.className = 'r';
     d.innerHTML = `<div class="info"><div class="name">${esc(l.lawTitle || l.lawId)}</div>`
-      + `<div class="sub">${esc(l.lawNum || '')}`
-      + (fromFile ? '　ファイルから取り込んだもの。e-Gov には無い' : '')
-      + `</div></div>`
-      + (fromFile ? '<button disabled>ファイルから</button>' : '<button>取り込む</button>');
+      + `<div class="sub">${esc(l.lawNum || '')}${sub}</div></div>`
+      + (can ? '<button>取り込む</button>'
+        : `<button disabled>${esc(MISSING_LABEL[origin] || '取り込めない')}</button>`);
     const btn = d.querySelector('button');
-    if (!fromFile) {
+    if (can) {
       btn.onclick = async () => {
         btn.disabled = true; btn.textContent = '取得中…';
         try {
-          await takeMissing(l);
+          if (origin === 'pack') await takePack(l);
+          else await takeMissing(l);
           await refreshLawList();
           btn.textContent = '取込済';
           toast(`「${l.lawTitle || l.lawId}」を取り込みました`);
@@ -930,17 +972,25 @@ async function renderMissing() {
   }
 }
 
-/** e-Gov から取れるものをまとめて取り込む。 */
+/*
+ * 取り直せるものをまとめて取り込む。ファイルから入れたものは対象外。
+ *
+ * ここに出るのは「この端末に無いが、ほかの端末が持っているもの」だけである。
+ * つまり自分が選んだぶんなので、パックの103本を一息に入れる話にはならない。
+ */
 async function takeAllMissing() {
-  const miss = (await missingLaws()).filter(l => l.source !== 'file');
+  const miss = (await missingLaws()).filter(l => canTakeMissing(l));
   if (!miss.length) return;
   const btn = $('#missing-all');
   let done = 0;
   const failed = [];
   for (const l of miss) {
     if (btn) btn.textContent = '取得中… ' + (done + failed.length + 1) + '/' + miss.length;
-    try { await takeMissing(l); done++; }
-    catch (e) { failed.push((l.lawTitle || l.lawId) + '：' + e.message); }
+    try {
+      if (lawOrigin(l) === 'pack') await takePack(l);
+      else await takeMissing(l);
+      done++;
+    } catch (e) { failed.push((l.lawTitle || l.lawId) + '：' + e.message); }
   }
   await refreshLawList();
   await renderMissing();

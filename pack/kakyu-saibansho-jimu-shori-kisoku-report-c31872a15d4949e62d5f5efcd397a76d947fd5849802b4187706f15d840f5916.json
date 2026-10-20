@@ -1,0 +1,196 @@
+{
+ "workId": "kakyu-saibansho-jimu-shori-kisoku",
+ "file": "kakyu-saibansho-jimu-shori-kisoku-88861778a3c4554a4ff63cbbb8e217bed9494b76dfebd0faf48f4dc1764d4b33.xml",
+ "sha256": "88861778a3c4554a4ff63cbbb8e217bed9494b76dfebd0faf48f4dc1764d4b33",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file5/kakyuuki-H240401.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "967bf9292365081c80fd8879f362644353162652f2ec5b0fc2f475be2eea99b1",
+  "pages": 7,
+  "law_num": "昭和二十三年八月十八日最高裁判所規則第十六号",
+  "main_articles": 31,
+  "counts": {
+   "Article": 32,
+   "Paragraph": 87,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 22,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 6505,
+  "dropped_notes": 21,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二三年一二月二八日最高裁判所規則第三八号）抄",
+   "附則（昭和二四年七月一日最高裁判所規則第一二号）",
+   "附則（昭和二五年一一月一五日最高裁判所規則第二五号）",
+   "附則（昭和二八年六月三〇日最高裁判所規則第九号）",
+   "附則（昭和二九年六月一日最高裁判所規則第八号）",
+   "附則（昭和三〇年一一月一七日最高裁判所規則第一〇号）",
+   "附則（昭和三二年六月一五日最高裁判所規則第一一号）",
+   "附則（昭和三四年一〇月一日最高裁判所規則第一二号）",
+   "附則（昭和三九年三月二六日最高裁判所規則第二号）抄",
+   "附則（昭和四〇年三月三一日最高裁判所規則第五号）",
+   "附則（昭和四一年一〇月一五日最高裁判所規則第八号）",
+   "附則（昭和四四年三月二五日最高裁判所規則第一号）",
+   "附則（昭和四四年九月一日最高裁判所規則第六号）抄",
+   "附則（昭和四八年七月一六日最高裁判所規則第五号）",
+   "附則（昭和五九年三月二九日最高裁判所規則第二号）",
+   "附則（昭和六一年一〇月三〇日最高裁判所規則第五号）",
+   "附則（昭和六三年七月二〇日最高裁判所規則第四号）",
+   "附則（平成六年六月三〇日最高裁判所規則第三号）",
+   "附則（平成一六年三月三一日最高裁判所規則第七号）抄",
+   "附則（平成一七年二月一四日最高裁判所規則第七号）",
+   "附則（平成二四年三月一二日最高裁判所規則第二号）"
+  ]
+ },
+ "independentCount": {
+  "title": "下級裁判所事務処理規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 31,
+    "xml": 31,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 38,
+    "xml": 38,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 22,
+    "xml": 22,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "下級裁判所事務処理規則",
+  "units": 92,
+  "pdf_lines": 261,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 94,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 25
+ },
+ "tables": {
+  "title": "下級裁判所事務処理規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成17年2月14日 本紙第4032号",
+    "rule": "平成17年最高裁判所規則第7号",
+    "title": "知的財産高等裁判所設置法の施行に伴う関係規則の整備に関する規則",
+    "year": 2005,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20050214/20050214h04032/20050214h040320002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成24年3月12日 本紙第5757号",
+    "rule": "平成24年最高裁判所規則第2号",
+    "title": "下級裁判所事務処理規則の一部を改正する規則",
+    "year": 2012,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20120312/20120312h05757/20120312h057570001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成16年3月31日 特別号外第5号",
+    "rule": "平成16年最高裁判所規則第7号",
+    "title": "裁判所法の一部を改正する法律の施行に伴う関係規則の整備に関する規則",
+    "year": 2004,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20040331/20040331t00005/20040331t000050245f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20120312",
+    "no": 3,
+    "explained_by_neighbour": [
+     "下級裁判所事務処理規則の一部を改正する規則（最高裁二）"
+    ]
+   },
+   {
+    "date": "20040331",
+    "no": 6,
+    "explained_by_neighbour": [
+     "裁判所法の一部を改正する法律の施行に伴う関係規則の整備に関する規則（同七）"
+    ]
+   }
+  ]
+ }
+}

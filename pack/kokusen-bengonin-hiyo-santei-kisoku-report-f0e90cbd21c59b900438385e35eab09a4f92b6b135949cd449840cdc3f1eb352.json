@@ -1,0 +1,151 @@
+{
+ "workId": "kokusen-bengonin-hiyo-santei-kisoku",
+ "file": "kokusen-bengonin-hiyo-santei-kisoku-f17b42181598a010c5e27aeb0286778fce3d7555978d1993f40ab2000e0dbf1b.xml",
+ "sha256": "f17b42181598a010c5e27aeb0286778fce3d7555978d1993f40ab2000e0dbf1b",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/kokusennbengohiyousanteikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "d2ead99e46dc55e4850e6eefa7d0ec05f6090d1d2cf5be4857e990d4ef9290d7",
+  "pages": 2,
+  "law_num": "平成十八年七月二十八日最高裁判所規則第十二号",
+  "main_articles": 9,
+  "counts": {
+   "Article": 9,
+   "Paragraph": 19,
+   "Item": 5,
+   "Subitem1": 0,
+   "SupplProvision": 2,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 1683,
+  "dropped_notes": 2,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成一九年九月二七日最高裁判所規則第一一号）"
+  ]
+ },
+ "independentCount": {
+  "title": "総合法律支援法による国選弁護人等契約弁護士に係る費用の額の算定等に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "総合法律支援法による国選弁護人等契約弁護士に係る費用の額の算定等に関する規則",
+  "units": 33,
+  "pdf_lines": 73,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 26,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "総合法律支援法による国選弁護人等契約弁護士に係る費用の額の算定等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成18年7月28日 号外第174号",
+    "rule": "平成18年最高裁判所規則第12号",
+    "title": "総合法律支援法による国選弁護人契約弁護士に係る費用の額の算定等に関する規則",
+    "year": 2006,
+    "no": 12,
+    "url": "https://www.kanpo.go.jp/old/20060728/20060728g00174/20060728g001740004f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成19年9月27日 本紙第4676号",
+    "rule": "平成19年最高裁判所規則第11号",
+    "title": "少年審判規則及び総合法律支援法による国選弁護人契約弁護士に係る費用の額の算定等に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20070927/20070927h04676/20070927h046760002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

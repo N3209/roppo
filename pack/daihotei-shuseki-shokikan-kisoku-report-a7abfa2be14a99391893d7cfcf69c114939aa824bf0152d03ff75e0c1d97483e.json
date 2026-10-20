@@ -1,0 +1,267 @@
+{
+ "workId": "daihotei-shuseki-shokikan-kisoku",
+ "file": "daihotei-shuseki-shokikan-kisoku-891a048be1babf940c77db81e8f622af31d33e5d424dd094db12fbe6fae849cb.xml",
+ "sha256": "891a048be1babf940c77db81e8f622af31d33e5d424dd094db12fbe6fae849cb",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file5/daihouteisyusekisyokikantounikansurukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "fbc1c670725bb2ffd4f711690951c7e0e09908021130cfee517d565184f42b3b",
+  "pages": 5,
+  "law_num": "昭和二十九年六月一日最高裁判所規則第九号",
+  "main_articles": 13,
+  "counts": {
+   "Article": 13,
+   "Paragraph": 72,
+   "Item": 2,
+   "Subitem1": 0,
+   "SupplProvision": 25,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 5423,
+  "dropped_notes": 14,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和三〇年三月一日最高裁判所規則第一号）",
+   "附則（昭和三四年一〇月一日最高裁判所規則第一三号）",
+   "附則（昭和三八年四月二二日最高裁判所規則第五号）",
+   "附則（昭和四〇年一月二九日最高裁判所規則第二号）抄",
+   "附則（昭和四〇年三月三一日最高裁判所規則第五号）",
+   "附則（昭和四二年六月一〇日最高裁判所規則第六号）",
+   "附則（昭和四三年四月二〇日最高裁判所規則第一号）",
+   "附則（昭和四四年九月一日最高裁判所規則第七号）抄",
+   "附則（昭和四五年五月二五日最高裁判所規則第四号）",
+   "附則（昭和五三年二月三日最高裁判所規則第一号）抄",
+   "附則（昭和五六年三月三〇日最高裁判所規則第三号）抄",
+   "附則（平成六年六月三〇日最高裁判所規則第三号）",
+   "附則（平成九年一一月二六日最高裁判所規則第六号）",
+   "附則（平成一〇年七月二七日最高裁判所規則第三号）",
+   "附則（平成一二年七月一九日最高裁判所規則第一〇号）",
+   "附則（平成一六年三月三一日最高裁判所規則第七号）抄",
+   "附則（平成一七年二月一四日最高裁判所規則第七号）",
+   "附則（平成一七年七月二七日最高裁判所規則第一一号）",
+   "附則（平成一九年三月二九日最高裁判所規則第三号）",
+   "附則（平成二〇年五月三〇日最高裁判所規則第七号）",
+   "附則（平成二二年三月一七日最高裁判所規則第二号）",
+   "附則（平成二三年七月二九日最高裁判所規則第二号）",
+   "附則（令和二年八月三日最高裁判所規則第八号）",
+   "附則（令和六年三月一日最高裁判所規則第五号）"
+  ]
+ },
+ "independentCount": {
+  "title": "大法廷首席書記官等に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 39,
+    "xml": 39,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 25,
+    "xml": 25,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "大法廷首席書記官等に関する規則",
+  "units": 94,
+  "pdf_lines": 239,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 58,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 30
+ },
+ "tables": {
+  "title": "大法廷首席書記官等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成17年2月14日 本紙第4032号",
+    "rule": "平成17年最高裁判所規則第7号",
+    "title": "知的財産高等裁判所設置法の施行に伴う関係規則の整備に関する規則",
+    "year": 2005,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20050214/20050214h04032/20050214h040320002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年7月27日 本紙第4143号",
+    "rule": "平成17年最高裁判所規則第11号",
+    "title": "大法廷首席書記官等に関する規則の一部を改正する規則",
+    "year": 2005,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20050727/20050727h04143/20050727h041430005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年3月29日 本紙第4552号",
+    "rule": "平成19年最高裁判所規則第3号",
+    "title": "大法廷首席書記官等に関する規則及び裁判官及び裁判官の秘書官以外の裁判所職員の管理職員等の範囲に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20070329/20070329h04552/20070329h045520002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年5月30日 本紙第4839号",
+    "rule": "平成20年最高裁判所規則第7号",
+    "title": "大法廷首席書記官等に関する規則等の一部を改正する規則",
+    "year": 2008,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20080530/20080530h04839/20080530h048390002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成22年3月17日 本紙第5274号",
+    "rule": "平成22年最高裁判所規則第2号",
+    "title": "大法廷首席書記官等に関する規則の一部を改正する規則",
+    "year": 2010,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20100317/20100317h05274/20100317h052740006f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成23年7月29日 本紙第5607号",
+    "rule": "平成23年最高裁判所規則第2号",
+    "title": "大法廷首席書記官等に関する規則の一部を改正する規則",
+    "year": 2011,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20110729/20110729h05607/20110729h056070002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和2年8月3日 本紙第303号",
+    "rule": "令和2年最高裁判所規則第8号",
+    "title": "大法廷首席書記官等に関する規則の一部を改正する規則",
+    "year": 2020,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20200803/20200803h00303/20200803h003030002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年3月1日 本紙第1172号",
+    "rule": "令和6年最高裁判所規則第5号",
+    "title": "大法廷首席書記官等に関する規則の一部を改正する規則",
+    "year": 2024,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20240301/20240301h01172/20240301h011720003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成16年3月31日 特別号外第5号",
+    "rule": "平成16年最高裁判所規則第7号",
+    "title": "裁判所法の一部を改正する法律の施行に伴う関係規則の整備に関する規則",
+    "year": 2004,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20040331/20040331t00005/20040331t000050245f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20240301",
+    "no": 6,
+    "explained_by_neighbour": [
+     "大法廷首席書記官等に関する規則の一部を改正する規則（最高裁五）"
+    ]
+   },
+   {
+    "date": "20240301",
+    "no": 7,
+    "explained_by_neighbour": [
+     "大法廷首席書記官等に関する規則の一部を改正する規則（最高裁五）"
+    ]
+   },
+   {
+    "date": "20240301",
+    "no": 8,
+    "explained_by_neighbour": [
+     "大法廷首席書記官等に関する規則の一部を改正する規則（最高裁五）"
+    ]
+   },
+   {
+    "date": "20040331",
+    "no": 6,
+    "explained_by_neighbour": [
+     "裁判所法の一部を改正する法律の施行に伴う関係規則の整備に関する規則（同七）"
+    ]
+   }
+  ]
+ }
+}

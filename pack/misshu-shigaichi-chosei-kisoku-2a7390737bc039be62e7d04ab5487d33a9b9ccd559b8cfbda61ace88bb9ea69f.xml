@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/20031219missyuushigaichicyouseikisoku.pdf
+  取得: 2026-10-18
+  反映: PDFに改正履歴の記載なし。掲載された附則の最後は「附則」
+  範囲: 本則4条（削除条の範囲を1要素として数える）、附則1本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="15" Num="28" PromulgateMonth="11" PromulgateDay="26" LawType="Rule">
+  <LawNum>平成十五年十一月二十六日最高裁判所規則第二十八号</LawNum>
+  <LawBody>
+    <LawTitle>密集市街地における防災街区の整備の促進に関する法律による権利の変換と強制執行等との調整に関する規則</LawTitle>
+    <MainProvision>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>密集市街地における防災街区の整備の促進に関する法律による権利の変換と強制執行等との調整に関する規則</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Article Num="1">
+        <ArticleCaption>（権利変換手続が強制競売等の手続に先行する場合における施行者への通知等）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>密集市街地における防災街区の整備の促進に関する法律（平成九年法律第四十九号。以下「法」という。）第二百一条第一項の権利変換手続開始の登記がされた宅地等（宅地（法第百十七条第四号に規定する宅地をいう。以下同じ。）、建築物（法第二条第六号に規定する建築物をいう。）又は宅地に存する既登記の借地権（同条第十四号に規定する借地権をいう。）をいう。以下同じ。）につき強制競売又は担保権の実行としての競売（その例による競売を含む。）（以下「強制競売等」という。）の開始決定に基づく登記がされた場合においては、裁判所書記官は、速やかに、強制競売等の開始決定がされた旨を当該防災街区整備事業の施行者に通知しなければならない。ただし、民事執行法（昭和五十四年法律第四号）第四十七条第一項（同項を準用し、又はその例による場合を含む。）の規定による開始決定に基づいて登記がされたときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の強制競売等の開始決定をした裁判所は、権利変換手続が終了するまで、強制競売等の手続を停止することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（強制競売等の手続が権利変換手続に先行する場合における差押債権者等への通知等）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>強制競売等の開始決定に基づく登記がされた宅地等につき法第二百一条第一項の権利変換手続開始の登記がされた旨の施行者の通知があったときは、裁判所書記官は、速やかに、その旨を差押債権者、債務者及び所有者（民事執行法第四十三条第二項（同項を準用し、又はその例による場合を含む。）の規定により不動産とみなされるものにあっては、その権利者）に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の施行者の通知を受けた裁判所は、権利変換手続が終了するまで、強制競売等の手続を停止することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（施行者に対する代金納付等の通知）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二百一条第一項の権利変換手続開始の登記がされた宅地等について、強制競売等による代金が裁判所に納付されたときは、裁判所書記官は、速やかに、その旨並びに買受人の氏名又は名称及び住所を施行者に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の宅地等について、法第二百二十七条において準用する都市再開発法（昭和四十四年法律第三十八号）第九十四条第一項の規定により裁判所に補償金等が払い渡される前に、強制競売等の手続が買受人が所有権その他の権利を取得することなく終了したときは、裁判所書記官は、速やかに、その旨を施行者に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（差押え等がある場合において補償金等が払い渡された場合の取扱い）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二百二十七条において準用する都市再開発法第九十四条第一項、第四項、第六項又は第七項の規定による補償金等の裁判所への払渡し及びその払渡しがあった場合における強制競売等又は仮差押えの執行に関しては、法に定めるもののほか、都市再開発法第九十四条第一項、第四項、第六項又は第七項の規定による補償金等の裁判所への払渡し及びその払渡しがあった場合における強制競売等又は仮差押えの執行の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、密集市街地における防災街区の整備の促進に関する法律等の一部を改正する法律（平成十五年法律第百一号）の施行の日（平成十五年十二月十九日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

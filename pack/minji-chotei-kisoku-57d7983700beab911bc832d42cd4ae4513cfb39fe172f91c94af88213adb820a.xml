@@ -1,0 +1,923 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/20260521minjityouteikisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「同六年九月一七日同第一四号」（令和六年九月一七日最高裁判所規則第一四号）
+  範囲: 本則41条（削除条の範囲を1要素として数える）、附則12本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFに混じった半角の読点・句点「､」「｡」2字を全角「、」「。」に統一（箇所は検証結果に記録）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="26" Num="8" PromulgateMonth="9" PromulgateDay="15" LawType="Rule">
+  <LawNum>昭和二十六年九月十五日最高裁判所規則第八号</LawNum>
+  <LawBody>
+    <LawTitle>民事調停規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <ArticleRange>（第一条－第二十四条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 民事調停官</SectionTitle>
+          <ArticleRange>（第二十五条・第二十六条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 特則</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 宅地建物調停</SectionTitle>
+          <ArticleRange>（第二十七条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="1_2">
+          <SectionTitle>第一節の二 農事調停</SectionTitle>
+          <ArticleRange>（第二十八条－第三十三条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 商事調停</SectionTitle>
+          <ArticleRange>（第三十四条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 鉱害調停</SectionTitle>
+          <ArticleRange>（第三十五条・第三十六条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="4">
+          <SectionTitle>第四節 公害等調停</SectionTitle>
+          <ArticleRange>（第三十七条－第三十九条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <Article Num="1">
+            <ArticleCaption>（規則の趣旨）</ArticleCaption>
+            <ArticleTitle>第一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事調停法（昭和二十六年法律第二百二十二号。以下「法」という。）による調停に関しては、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="2">
+            <ArticleCaption>（移送等における取扱い）</ArticleCaption>
+            <ArticleTitle>第二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第四条第一項ただし書、第二項ただし書又は第三項の規定による裁判をするときは、当事者の意見を聴くことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="3">
+            <ArticleCaption>（調停の申立て）</ArticleCaption>
+            <ArticleTitle>第三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四条の二第一項の申立書には、申立ての趣旨及び紛争の要点並びに第二十四条において準用する非訟事件手続規則（平成二十四年最高裁判所規則第七号）第一条第一項各号に掲げる事項を記載するほか、紛争の要点に関する証拠書類があるときは、その写しを添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="4">
+            <ArticleCaption>（民事調停委員の除斥及び回避）</ArticleCaption>
+            <ArticleTitle>第四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事調停委員の除斥及び回避については、非訟事件手続規則第八条から第十条までの規定（忌避に関する部分を除く。）を準用する。この場合において、簡易裁判所の民事調停委員の回避の許可は、その民事調停委員の所属する裁判所の裁判所法（昭和二十二年法律第五十九号）第三十七条に規定する裁判官がする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="5">
+            <ArticleCaption>（民事執行の手続の停止）</ArticleCaption>
+            <ArticleTitle>第五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停事件の係属する裁判所は、紛争の実情により事件を調停によって解決することが相当である場合において、調停の成立を不能にし又は著しく困難にするおそれがあるときは、申立てにより、担保を立てさせて、調停が終了するまで調停の目的となった権利に関する民事執行の手続を停止することを命ずることができる。ただし、裁判並びに調書その他裁判所において作成する書面の記載及び電子調書（期日又は期日外における手続の方式、内容及び経過等の記録及び公証をするために民事訴訟法（平成八年法律第百九号）第百六十条第一項（他の法令において準用する場合を含む。）その他の法令の規定により裁判所書記官が作成する電磁的記録（電子的方式、磁気的方式その他人の知覚によっては認識することができない方式で作られる記録であって、電子計算機による情報処理の用に供されるものをいう。以下この項において同じ。）をいう。）その他裁判所において作成する電磁的記録の記録に基づく民事執行の手続については、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停の係属する裁判所は、民事執行の手続を停止することを命じた場合において、必要があるときは、申立てにより、担保を立てさせ又は立てさせないで、これを続行することを命ずることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前二項の申立てをするには、その理由を疎明しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事訴訟法第七十六条、第七十七条、第七十九条及び第八十条の規定は、第一項及び第二項の担保について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項及び第二項の規定による決定に対しては、当事者は、即時抗告をすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="6">
+            <ArticleCaption>（調停前の措置をする場合の制裁の告知）</ArticleCaption>
+            <ArticleTitle>第六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、法第十二条第一項の措置をする場合には、同時にその違反に対する法律上の制裁を告知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="7">
+            <ArticleCaption>（期日の呼出状）</ArticleCaption>
+            <ArticleTitle>第七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停手続の期日の呼出状には、不出頭に対する法律上の制裁を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="8">
+            <ArticleCaption>（本人の出頭義務）</ArticleCaption>
+            <ArticleTitle>第八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会の呼出しを受けた当事者は、自ら出頭しなければならない。ただし、やむを得ない事由があるときは、代理人を出頭させることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる者以外の者を前項の代理人とするには、調停委員会の許可を受けなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>弁護士</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>司法書士法（昭和二十五年法律第百九十七号）第三条第二項に規定する司法書士（同条第一項第六号ニに掲げる手続に係る事件に限る。）</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、いつでも、前項の許可を取り消すことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="9">
+            <ArticleCaption>（期日外の準備）</ArticleCaption>
+            <ArticleTitle>第九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停に関与する者は、調停が適正かつ迅速に行われるように、調停手続の期日外において十分な準備をしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="10">
+            <ArticleCaption>（申立書の補正等の促し）</ArticleCaption>
+            <ArticleTitle>第十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停主任は、法第四条の二第一項の申立書の補正又は調停手続に必要な書類の提出を促す場合には、裁判所書記官に命じて行わせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="11">
+            <ArticleCaption>（期日調書の形式的記載事項）</ArticleCaption>
+            <ArticleTitle>第十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十二条の五の調書（次項及び次条において「期日調書」という。）には、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>調停主任又は民事調停官、民事調停委員及び裁判所書記官の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出頭した当事者、参加人、代理人、補佐人、通訳人及びその他の関係人の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>期日の日時及び場所</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>期日調書には、裁判所書記官が記名押印し、調停主任が認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の場合において、調停主任に支障があるときは、裁判所書記官がその旨を記載すれば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="12">
+            <ArticleCaption>（期日調書の実質的記載事項）</ArticleCaption>
+            <ArticleTitle>第十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>期日調書には、手続の要領を記載し、特に、次に掲げる事項を明確にしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨又は紛争の要点の変更、申立ての取下げ及び法第十六条の合意</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第十三条又は第十四条の規定による事件の終了</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>証拠調べの概要</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>調停主任が記載を命じた事項及び当事者の請求により記載を許した事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>書面を作成しないでした裁判</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="13">
+            <ArticleCaption>（事実の調査）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、相当であると認めるときは、当該調停委員会を組織する民事調停委員に事実の調査をさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停主任は、調停委員会の決議により、裁判所書記官に事実の調査をさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（意見の聴取の嘱託）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、地方裁判所又は簡易裁判所に紛争の解決に関する事件の関係人の意見の聴取を嘱託することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="15">
+            <ArticleCaption>（嘱託に係る事実の調査等の民事調停委員等による実施）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十二条において準用する非訟事件手続法（平成二十三年法律第五十一号）第五十一条第一項又は第二項の規定による嘱託を受けた裁判所は、相当であると認めるときは、民事調停委員又は裁判所書記官に当該嘱託に係る事実の調査をさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条の規定による嘱託を受けた裁判所は、相当であると認めるときは、民事調停委員に当該嘱託に係る意見の聴取をさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（調査の嘱託）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、必要な調査を官庁、公署その他適当であると認める者に嘱託することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleCaption>（調停委員会の嘱託の手続）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会がする嘱託の手続は、裁判所書記官がする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（専門的な知識経験に基づく意見の聴取）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、必要があると認めるときは、当該調停委員会を組織していない民事調停委員の専門的な知識経験に基づく意見を聴取することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会が前項の規定により意見を聴取することとしたときは、裁判所は、意見を述べるべき民事調停委員を指定する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定による指定を受けた民事調停委員は、調停委員会に出席して意見を述べるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleCaption>（調停委員会の決議）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会の決議は、過半数の意見による。可否同数のときは、調停主任の決するところによる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（評議の秘密）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会の評議は、秘密とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="21">
+            <ArticleCaption>（裁判官の調停）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六条、第八条及び第十条から第十八条まで（第十三条第一項を除く。）の規定は、裁判官だけで調停を行う場合に準用する。この場合において、第十条から第十二条までの規定中「調停主任」とあるのは、「裁判官」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（当事者に対する通知）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十三条若しくは第十四条（これらの規定を法第十五条において準用する場合を含む。）の規定により事件が終了したとき、又は法第十八条第四項の規定により決定が効力を失ったときは、裁判所書記官は、当事者に対し、遅滞なく、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停の申立ての取下げがあったときは、裁判所書記官は、その旨を相手方に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十七条の決定がされた後に調停の申立ての取下げがあった場合において、相手方が申立ての取下げに同意したときは、裁判所書記官は、その旨を申立人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23">
+            <ArticleCaption>（受訴裁判所等に対する通知）</ArticleCaption>
+            <ArticleTitle>第二十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十条第二項の規定により訴えの取下げがあったものとみなされるときは、調停事件の係属した裁判所の裁判所書記官は、受訴裁判所に対し、遅滞なく、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、法第二十条第四項において準用する同条第二項の規定により非訟事件の申立ての取下げがあったものとみなされる場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23_2">
+            <ArticleCaption>（当事者に対する住所、氏名等の秘匿）</ArticleCaption>
+            <ArticleTitle>第二十三条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停手続における申立てその他の申述については、民事訴訟規則（平成八年最高裁判所規則第五号）第一編第八章の規定（同規則第五十二条の二十第七項から第九項まで、第五十二条の二十二第二項及び第三項並びに第五十二条の二十三の規定を除く。）を準用する。この場合において、同規則第五十二条の二十一第一項中「この規則の規定（第五十二条の十九（秘匿事項届出書面の記載事項等）第一項を除く。次項において同じ。）」とあるのは「民事調停規則（昭和二十六年最高裁判所規則第八号）第二十四条において準用する非訟事件手続規則（平成二十四年最高裁判所規則第七号）の規定」と、同条第二項中「この規則」とあるのは「民事調停規則第二十四条において準用する非訟事件手続規則」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項において準用する民事訴訟規則第五十二条の二十第三項、第五項本文又は第六項の規定により文書その他の物件から秘匿事項記載部分を除いたものが提出された場合には、当該文書その他の物件の閲覧、謄写又は複製は、その提出されたものによってさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項において準用する民事訴訟規則第五十二条の二十二第一項の規定により、法第二十一条の二において準用する民事訴訟法第百三十三条第二項の規定による届出に係る書面（以下この項において「秘匿事項届出書面」という。）から法第二十一条の二において読み替えて準用する民事訴訟法第百三十三条の四第一項の取消し又は同条第二項の許可の裁判に係る部分以外の部分（秘匿事項又は秘匿事項を推知することができる事項が記載された部分に限る。）を除いたものが提出された場合には、秘匿事項届出書面の閲覧又は謄写は、その提出されたものによってさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="24">
+            <ArticleCaption>（非訟事件手続規則の準用）</ArticleCaption>
+            <ArticleTitle>第二十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>特別の定めがある場合を除いて、調停に関しては、その性質に反しない限り、非訟事件手続規則の規定（同規則第二章第八節、第四十四条及び第四十九条第二項を除く。）を準用する。この場合において、同規則第二条第一項第二号中「非訟事件手続法（平成二十三年法律第五十一号。以下「法」という。）第四十二条の二」とあるのは、「民事調停法（昭和二十六年法律第二百二十二号）第二十一条の二」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 民事調停官</SectionTitle>
+          <Article Num="25">
+            <ArticleCaption>（民事調停官の権限）</ArticleCaption>
+            <ArticleTitle>第二十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事調停官は、その取り扱う調停事件の処理について、この規則の規定（前条において準用する非訟事件手続規則の規定を含む。）及び特定調停手続規則（平成十二年最高裁判所規則第二号）の規定において裁判官が行うものとして規定されている民事調停及び特定調停に関する権限（調停主任に係るものを含む。）のほか、次に掲げる権限を行うことができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五条第一項及び第二項並びに第十八条第二項の規定において裁判所が行うものとして規定されている民事調停に関する権限</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五条第四項において準用する民事訴訟法第七十六条、第七十九条第一項、第二項及び第八十条の規定並びに民事訴訟規則第二十九条第二項において準用する同条第一項の規定において裁判所が行うものとして規定されている権限であって民事調停に関するもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前条において準用する非訟事件手続規則の規定において裁判所が行うものとして規定されている権限であって民事調停に関するもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>特定調停手続規則の規定において裁判所が行うものとして規定されている特定調停に関する権限</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="26">
+            <ArticleCaption>（民事調停官の除斥等）</ArticleCaption>
+            <ArticleTitle>第二十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事調停官の除斥、忌避及び回避については、非訟事件手続規則第八条から第十条までの規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 特則</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 宅地建物調停</SectionTitle>
+          <Article Num="27">
+            <ArticleCaption>（当事者の審尋）</ArticleCaption>
+            <ArticleTitle>第二十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、法第二十四条の三第一項の規定により調停条項を定めようとするときは、当事者を審尋しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="1_2">
+          <SectionTitle>第一節の二 農事調停</SectionTitle>
+          <Article Num="28">
+            <ArticleCaption>（小作官等に対する事件受理等の通知）</ArticleCaption>
+            <ArticleTitle>第二十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所が調停の申立てを受けたときは、裁判所書記官は、小作官又は小作主事に対し、遅滞なく、その旨を通知しなければならない。ただし、法第四条第一項本文又は第二項の規定により事件を移送する場合は、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項本文の規定は、裁判所が事件の移送を受け若しくは法第二十条第一項（同条第四項において準用する場合を含む。）の規定により事件を受理したとき、又は受訴裁判所が同条第一項の規定により若しくは非訟事件が係属している裁判所が同条第四項において準用する同条第一項の規定により事件を調停に付した上自ら処理することとしたときに準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="28_2">
+            <ArticleCaption>（音声の送受信による通話の方法による小作官等の関与・法第二十七条）</ArticleCaption>
+            <ArticleTitle>第二十八条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十七条第一項の期日において、同条第二項に規定する方法によって小作官又は小作主事に意見を述べさせるときは、調停委員会は、次に掲げる事項を確認しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>通話者</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>通話者の所在する場所の状況が当該方法によって手続を実施するために適切なものであること。</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>小作官又は小作主事に前項の意見を述べさせたときは、その旨及び同項第二号に掲げる事項を調停事件の記録上明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="29">
+            <ArticleCaption>（和解の仲介）</ArticleCaption>
+            <ArticleTitle>第二十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、紛争の実情により適当であると認めるときは、いつでも、農業委員会に和解の仲介をさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十八条第一項本文の規定は、前項の規定により和解の仲介をさせるときに準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="30">
+            <ArticleCaption>（農業委員会の紛争経過陳述）</ArticleCaption>
+            <ArticleTitle>第三十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>農業委員会は、調停委員会に対し、紛争の経過について陳述することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="31">
+            <ArticleCaption>（農業委員会等の意見聴取）</ArticleCaption>
+            <ArticleTitle>第三十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、必要があると認めるときは、農業委員会その他適当であると認める者に対し、意見を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="32">
+            <ArticleCaption>（裁判官の調停への準用）</ArticleCaption>
+            <ArticleTitle>第三十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前三条の規定は、裁判官だけで調停を行う場合に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="33">
+            <ArticleCaption>（小作官等に対する事件終了等の通知）</ArticleCaption>
+            <ArticleTitle>第三十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>事件が終了したとき、又は法第十八条第四項の規定により決定が効力を失ったときは、裁判所書記官は、小作官又は小作主事に対し、遅滞なく、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 商事調停</SectionTitle>
+          <Article Num="34">
+            <ArticleCaption>（宅地建物調停に関する規定の準用）</ArticleCaption>
+            <ArticleTitle>第三十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十七条の規定は、商事調停事件に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 鉱害調停</SectionTitle>
+          <Article Num="35">
+            <ArticleCaption>（農事調停等に関する規定の準用）</ArticleCaption>
+            <ArticleTitle>第三十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一節及び第一節の二の規定は、鉱害調停事件に準用する。この場合において、「小作官又は小作主事」とあり、及び「農業委員会」とあるのは、「経済産業局長」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="36">
+            <ArticleCaption>（小作官等の意見陳述）</ArticleCaption>
+            <ArticleTitle>第三十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>小作官又は小作主事は、調停の目的となった紛争が農地その他の農業用資産の利用関係に関連する場合においては、調停委員会に対し、意見を述べることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、裁判官だけで調停を行う場合に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="4">
+          <SectionTitle>第四節 公害等調停</SectionTitle>
+          <Article Num="37">
+            <ArticleCaption>（代表当事者の選任等）</ArticleCaption>
+            <ArticleTitle>第三十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>共同の利益を有する多数の当事者は、その中から、一人又は数人の代表当事者を選任することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>代表当事者は、これを選任した当事者のために、調停条項案の受諾、調停の申立ての取下げ、法第十七条の決定に係る行為及び代理人の選任を除き、各自調停手続に関する一切の行為をすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>代表当事者の選任は、書面で証明しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>代表当事者が選任されたときは、調停手続の期日の呼出しは、代表当事者に対してすれば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、必要があると認めるときは、当事者に対し、代表当事者の選任を勧告することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="38">
+            <ArticleCaption>（合意による暫定的措置の勧告）</ArticleCaption>
+            <ArticleTitle>第三十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調停委員会は、必要があると認めるときは、当事者に対し、調停の成立を著しく困難にし、又はその円滑な進行を妨げる行為を合意により一時停止すべきことを勧告することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="39">
+            <ArticleCaption>（裁判官の調停への準用）</ArticleCaption>
+            <ArticleTitle>第三十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十七条第五項及び前条の規定は、裁判官だけで調停を行う場合に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十六年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和三三年七月一日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和三十三年八月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則施行前にした改正前の第六条第四項の規定による即時抗告の効力については、なお、従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四六年六月一四日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日等）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十六年七月一日から施行し、第六条の規定による改正後の参与員規則第七条第二項の規定、第八条の規定による改正後の司法委員規則第六条第二項の規定、第九条の規定による改正後の調停委員規則第十条第二項の規定及び第十条の規定による改正後の鑑定委員規則第七条第二項の規定は、昭和四十七年一月一日から適用する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した参与員、人身保護法による国選代理人、司法委員、調停委員等及び鑑定委員の費用並びにこの規則の施行後昭和四十六年十二月三十一日までの間に支給原因の生じた参与員、司法委員、調停委員等及び鑑定委員の日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四九年九月一四日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十九年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五年五月六日最高裁判所規則第三号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事執行法（昭和五十四年法律第四号）の施行の日（昭和五十五年十月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成四年二月二一日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事調停法の一部を改正する法律（平成三年法律第九十一号）の施行の日（平成四年八月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年一二月一七日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法（平成八年法律第百九号。以下「新法」という。）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第六条の規定の施行前に供託された金銭又は有価証券についての相手方の権利については、同条の規定による改正後の民事調停規則第六条第四項において準用する新法第七十七条の規定にかかわらず、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一二年一二月一五日最高裁判所規則第一五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十三年一月六日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年一〇月一日最高裁判所規則第一四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十六年一月一日から施行する。ただし、第一条中民事調停規則第八条の改正規定は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二四年七月一七日最高裁判所規則第九号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、非訟事件手続法（平成二十三年法律第五十一号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和四年一一月七日最高裁判所規則第一七号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下この条において「改正法」という。）附則第一条第二号に掲げる規定の施行の日（令和五年二月二〇日）から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則第三十二条、第七十七条、第七十八条、第九十六条及び第百六十三条第一項の改正規定、第十四条の規定、第十八条中労働審判規則第三十七条の改正規定（「第七十七条」を「第七十七条前段」に改める部分に限る。）、第二十条中非訟事件手続規則第二十一条及び第五十条の改正規定、第二十一条中家事事件手続規則第三十三条及び第百二十六条第二項の改正規定並びに第二十二条中国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第二十三条及び第五十三条第一項の改正規定 改正法附則第一条第三号に掲げる規定の施行の日（令和五年三月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則目次の改正規定（「第三十一条」を「第三十条の二」に改める部分に限る。）及び同規則第一編第五章第一節中第三十一条の前に二条を加える改正規定、第三条の規定、第六条の規定、第七条中民事執行規則第十五条の二の改正規定、第八条中民事保全規則第六条の改正規定、第十条中民事再生規則第十一条の改正規定、第十二条中外国倒産処理手続の承認援助に関する規則第十二条の改正規定、第十三条中会社更生規則第十条の改正規定、第十六条の規定、第十七条中破産規則第十二条の改正規定並びに第二十三条の規定 改正法附則第一条第四号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>第十五条の規定 改正法附則第一条第五号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（調書の記載等に関する経過措置）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前に行われた非訟事件手続法（平成二十三年法律第五十一号）第四十七条第一項の規定（他の法律において準用する場合を含む。）による非訟事件の手続の期日における手続（証拠調べを除く。）の記録については、第二十条の規定による改正後の非訟事件手続規則第四十二条第二項（他の最高裁判所規則において準用する場合を含む。）の規定にかかわらず、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（以下「施行日」という。）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

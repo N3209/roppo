@@ -1,0 +1,1251 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/file2/20130701taichoukisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「同二五年三月二六日同第二号」（平成二五年三月二六日最高裁判所規則第二号）
+  範囲: 本則57条（削除条の範囲を1要素として数える）、附則10本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。本文に紛れたページ番号11行を除外。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="32" Num="12" PromulgateMonth="8" PromulgateDay="1" LawType="Rule">
+  <LawNum>昭和三十二年八月一日最高裁判所規則第十二号</LawNum>
+  <LawBody>
+    <LawTitle>滞納処分と強制執行等との手続の調整に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条－第三条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 滞納処分による差押えがされている財産に対する強制執行等</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 動産に対する強制執行等</SectionTitle>
+          <ArticleRange>（第四条－第十四条の二）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 不動産又は船舶等に対する強制執行等</SectionTitle>
+          <ArticleRange>（第十五条－第二十三条の四）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 債権又は電話加入権に対する強制執行等</SectionTitle>
+          <ArticleRange>（第二十三条の五－第二十三条の七）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 強制執行等がされている財産に対する滞納処分</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 動産に対する滞納処分</SectionTitle>
+          <ArticleRange>（第二十四条－第三十一条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 不動産又は船舶等に対する滞納処分</SectionTitle>
+          <ArticleRange>（第三十二条－第四十二条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 債権に対する滞納処分</SectionTitle>
+          <ArticleRange>（第四十三条－第四十七条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 雑則</ChapterTitle>
+        <ArticleRange>（第四十八条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>滞納処分と強制執行等との手続の調整に関する法律（昭和三十二年法律第九十四号。以下「法」という。）による手続の調整に関する事項で強制執行、仮差押えの執行又は担保権の実行としての競売（以下単に「競売」という。）に関するものについては、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（通知の方法等）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官又は執行官がこの規則の規定によつてする通知は、この規則に特別の定めがある場合のほか、相当と認める方法ですることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官又は執行官は、前項の通知をしたときは、その旨及び通知の方法を記録上明らかにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の通知は、これを受けるべき者の所在が明らかでないとき、又はその者が外国にあるときは、することを要しない。この場合においては、裁判所書記官又は執行官は、その事由を記録上明らかにしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二項の規定は、裁判所又は執行官が法又は法第三十七条の規定に基づく政令の規定による通知を受けた場合に準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 滞納処分による差押えがされている財産に対する強制執行等</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 動産に対する強制執行等</SectionTitle>
+          <Article Num="4">
+            <ArticleCaption>（差押えの管轄等）</ArticleCaption>
+            <ArticleTitle>第四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三条第二項の規定による差押えは、滞納処分による差押えがされている動産の所在地を管轄する地方裁判所の所属の執行官がする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、法第三条第二項の規定による差押をする場合において、必要があるときは、債権者の申立により、管轄区域外において職務を行うことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="5">
+            <ArticleCaption>（差押書の記載事項）</ArticleCaption>
+            <ArticleTitle>第五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三条第二項の規定により徴収職員等に交付する書面（以下「差押書」という。）には、次に掲げる事項を記載して執行官が記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>当事者の住所及び氏名又は名称並びに事件番号及び事件名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務名義の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行をすべき債権の額</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>動産の種類、材質その他の動産を特定するに足りる事項及び動産の数量</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制執行による差押えをする旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>滞納処分による差押えをした徴収職員等の属する庁その他の事務所の名称</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行官の属する裁判所の名称</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="8">
+                <ItemTitle>八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>書面を作つた年月日</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="6">
+            <ArticleCaption>（差押調書の記載事項）</ArticleCaption>
+            <ArticleTitle>第六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三条第二項の差押えをしたときに作成すべき差押調書に係る民事執行規則（昭和五十四年最高裁判所規則第五号）第十三条第一項第四号の実施した民事執行の内容の記載については、差押書を徴収職員等に交付した旨及びその方法を明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="7">
+            <ArticleCaption>（滞納処分による差押えの解除時の処置等）</ArticleCaption>
+            <ArticleTitle>第七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、法第五条第一項の規定により動産の引渡しをする旨の徴収職員等の通知を受けたときは、遅滞なく、徴収職員等から通知があつた引渡しの場所において、動産を受け取らなければならない。この場合において、徴収職員等以外の者で動産の保管をしているものから受け取るときは、その者にあてた執行官への動産の引渡しを依頼する旨の徴収職員等の書面をその者に交付するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、法第五条第一項ただし書の動産については適用しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、法第五条第一項の規定により動産の引渡しを受けたときは、速やかに、その旨を徴収職員等並びに差押債権者（民事執行法（昭和五十四年法律第四号）第百二十五条第三項前段の規定により配当要求の効力が生じた動産執行の申立てに係る債権者を含む。以下この節及び次章第一節において同じ。）及び債務者に通知しなければならない。滞納処分による差押えの際債権者及び債務者以外の第三者が占有していた動産についてその者が執行官に引き渡すことを拒んだときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、前項の規定により通知をする場合において、当該動産について徴収職員等から滞納処分による参加差押えがされている旨の通知を受けているときは、差押債権者にその旨をも通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五条第一項の規定により動産の引渡しをする旨の徴収職員等の通知があつた日の翌日以後の動産の保管の費用は、強制執行の費用とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="8">
+            <ArticleCaption>（動産の引渡しを受けた場合の調書等）</ArticleCaption>
+            <ArticleTitle>第八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五条第一項の規定により徴収職員等から動産の引渡しを受けたときに作成すべき調書に係る民事執行規則第十三条第一項第四号の実施した民事執行の内容の記載については、徴収職員等から差押物の引渡しを受けた旨及び引渡しの方法を明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事執行規則第百二条の規定は、前項の調書に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、法第五条第一項ただし書の規定により徴収職員等から差押物の引渡しを受けることができなかつたときは、その事由を記録上明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="9">
+            <ArticleCaption>（売却代金の残余の交付を受けた場合等の通知）</ArticleCaption>
+            <ArticleTitle>第九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、法第六条第一項の規定により売却代金又は有価証券の取立金の残余の交付を受けたときは、速やかに、その旨を差押債権者及び債務者に通知しなければならない。法第六条第三項の通知を受けたときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="10">
+            <ArticleTitle>第十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>削除</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="11">
+            <ArticleCaption>（差押取消書の記載事項）</ArticleCaption>
+            <ArticleTitle>第十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第七条の規定により徴収職員等に交付する書面には、次に掲げる事項を記載して執行官が記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五条第一号、第四号及び第六号から第八号までに掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制執行による差押えを取り消す旨</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="12">
+            <ArticleCaption>（強制執行続行決定の際の意見聴取の方法）</ArticleCaption>
+            <ArticleTitle>第十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第九条第二項の規定による意見の聴取は、裁判所書記官が書面を徴収職員等に送付し、期限を付してその意見を聴く方法によるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="13">
+            <ArticleCaption>（強制執行続行の決定があつた場合の処置等）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第七条第一項から第三項まで及び第五項並びに第八条の規定は、法第十条第二項において準用する法第五条第一項の規定により執行官が動産の引渡しを受ける場合に関して準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（仮差押えの執行）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第四条から第九条まで及び第十一条の規定は、滞納処分による差押えがされている動産に対する仮差押えの執行に関して準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14_2">
+            <ArticleCaption>（競売）</ArticleCaption>
+            <ArticleTitle>第十四条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第四条から第六条まで、第七条（第二項及び第三項後段を除く。）、第八条第一項及び第二項、第九条並びに第十一条から第十三条（同条において準用する第七条第二項及び第三項後段並びに第八条第三項を除く。）までの規定は、滞納処分による差押えがされている動産に対して競売が開始された場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 不動産又は船舶等に対する強制執行等</SectionTitle>
+          <Article Num="15">
+            <ArticleCaption>（強制競売開始の通知の方法）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十二条第二項の通知は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>当事者の住所及び氏名又は名称並びに事件番号及び事件名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債務名義の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行をすべき債権の額</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>不動産の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制競売の開始決定があつた旨及び決定の年月日</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所の名称</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（滞納処分による差押えが解除された場合の通知）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十四条の通知があつたときは、裁判所書記官は、速やかに、その旨を差押債権者及び債務者に通知しなければならない。この場合においては、第七条第四項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleCaption>（強制競売の申立ての取下げ等の通知の方法）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十五条の通知は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第十五条第一号、第四号及び第六号に掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制競売の申立てが取り下げられ、又は強制競売の手続を取り消す決定が効力を生じた旨及びその年月日</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（売却代金の残余の交付を受けた場合の処置）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十七条において準用する法第六条第一項の規定により裁判所が売却代金の残余の交付を受けたときは、裁判所書記官は、裁判所が交付を受けた金銭及び交付を受けた年月日を記録上明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleCaption>（売却代金の残余の交付を受けた場合の通知等）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九条及び第十二条の規定は、法第十三条第一項の不動産に関して準用する。この場合において、第九条中「執行官は、」とあるのは、「裁判所書記官は、執行裁判所が」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項において準用する第十二条の規定による書面の送付は、法第十二条第二項の通知とともにすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（強制執行続行の決定があつた場合の通知）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十六条前段の規定は、法第十七条において準用する法第九条第一項の規定により強制執行続行の決定があつた場合に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="21">
+            <ArticleCaption>（仮差押えの執行）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十五条の規定は法第十八条第一項において準用する法第十二条第二項の通知に、第十七条の規定は法第十八条第一項において準用する法第十五条の通知に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九条前段及び第十八条の規定は、法第十八条第二項の規定により裁判所が売却代金の残余の交付を受けた場合に準用する。この場合において、第九条前段中「執行官は、」とあるのは、「裁判所書記官は、裁判所が」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（船舶に対する強制執行）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十五条から第二十条までの規定は、滞納処分による差押えがされている船舶で登記されるものに対して強制執行が開始された場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の船舶について、船舶国籍証書その他の船舶の航行のために必要な文書（以下「船舶国籍証書等」という。）が執行裁判所に提出されたときは、裁判所書記官は、徴収職員等に対し、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22_2">
+            <ArticleCaption>（船舶に対する仮差押えの執行）</ArticleCaption>
+            <ArticleTitle>第二十二条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十一条の規定は、前条第一項の船舶に対して仮差押えの執行がされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、前項の船舶に対する仮差押えの執行として船舶国籍証書等を取り上げて保全執行裁判所に提出すべきことを命じられた場合において、徴収職員等が船舶国籍証書等を取り上げていることを知つたときは、その旨を保全執行裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第二項の規定は、執行官に対し船舶国籍証書等を取り上げて保全執行裁判所に提出すべきことを命ずる方法による仮差押えの執行（以下「船舶国籍証書等取上げの仮差押執行」という。）が第一項の船舶に対してされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23">
+            <ArticleCaption>（競売）</ArticleCaption>
+            <ArticleTitle>第二十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十五条から第二十条までの規定は滞納処分による差押えがされている不動産又は船舶に対して競売が開始された場合について、第二十二条第二項の規定は滞納処分による差押えがされている船舶に対して競売が開始された場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23_2">
+            <ArticleCaption>（航空機に対する強制執行等）</ArticleCaption>
+            <ArticleTitle>第二十三条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六条第二項、法第八条、法第九条、法第十条第一項、法第十二条第二項、法第十三条及び法第十五条並びに第二十二条の規定は滞納処分による差押えがされている航空機に対して強制執行又は競売が開始された場合について、法第十二条第二項、法第十五条及び法第十八条第三項並びに第二十二条の二の規定は滞納処分による差押えがされている航空機に対して仮差押えの執行がされた場合について準用する。この場合において、法第六条第二項中「執行官」とあるのは「執行裁判所」と、「売得金の交付を受けた時」とあるのは「配当要求の終期」と、第二十二条第二項中「船舶国籍証書」とあるのは「航空機登録証明書」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23_3">
+            <ArticleCaption>（自動車等に対する強制執行及び自動車等の競売）</ArticleCaption>
+            <ArticleTitle>第二十三条の三</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六条第二項、法第八条、法第九条、法第十条第一項、法第十二条第二項、法第十三条及び法第十五条並びに第十五条から第二十条までの規定は、滞納処分による差押えがされている自動車、建設機械又は小型船舶（以下「自動車等」という。）に対して強制執行又は競売が開始された場合について準用する。この場合において、法第六条第二項中「執行官」とあるのは「執行裁判所」と、「売得金の交付を受けた時」とあるのは「配当要求の終期」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>滞納処分と強制執行等との手続の調整に関する政令（昭和三十二年政令第二百四十八号。以下「政令」という。）第十二条の三第一項において準用する政令第三条第一項（政令第五条第一項において準用する場合を含む。）の規定による通知があつたときは、執行裁判所は、執行官に対し、徴収職員等から通知があつた引渡しの場所において、徴収職員等が占有をした際に次に掲げる者の占有していた自動車等の引渡しを受けるよう命じなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債権者、債務者又は所有者</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>民事執行規則第百七十六条第二項（同規則第百七十七条において準用する場合を含む。）において準用する同規則第百七十四条第二項の規定により引渡しを命じられている者</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前二号に掲げる者以外の者で執行官に対する引渡しを拒まないもの</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第七条第一項後段及び第三項後段並びに民事執行規則第九十条第一項の規定は執行官が前項の規定による命令に基づいて自動車等の引渡しを受ける場合について、同規則第八十九条第一項ただし書の規定はこの項において準用する同規則第九十条第一項の規定による届出がされている場合について準用する。この場合において、第七条第三項後段中「債権者及び債務者」とあるのは、「第二十三条の三第二項第一号又は第二号に掲げる者」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項において準用する民事執行規則第九十条第一項の規定による届出が執行裁判所にされたときは、裁判所書記官は、速やかに、徴収職員等、差押債権者、債務者及び所有者に対し、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二項の通知があつた日の翌日以後の自動車等の保管の費用は、強制執行又は競売の費用とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二項の規定による命令があつた場合における民事執行規則第九十七条（同規則第九十八条及び第百七十六条第二項（同規則第百七十七条において準用する場合を含む。）において準用する場合を含む。）において準用する民事執行法第百二十条の規定の適用については、同条中「強制競売の開始決定」とあるのは、「滞納処分と強制執行等との手続の調整に関する規則第二十三条の三第二項の規定による命令」とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="7">
+              <ParagraphNum>７</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事執行規則第九十条第一項（同規則第九十八条及び第百七十六条第二項（同規則第百七十七条において準用する場合を含む。）において準用する場合を含む。）の規定による届出が執行裁判所にされたときは、裁判所書記官は、徴収職員等に対し、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="8">
+              <ParagraphNum>８</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の自動車等について、政令第十二条の三第三項の規定による請求があつたときは、執行裁判所は、執行官に対し、自動車等を徴収職員等に引き渡すよう命じなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="9">
+              <ParagraphNum>９</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、前項の規定による命令を受けたときは、速やかに、次に掲げる事項を徴収職員等に書面で通知しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制競売又は競売の事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>自動車等の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前項の規定による命令により自動車等の引渡しをする旨及び引渡しの場所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行官以外の者で自動車等の保管をしているものに直接に徴収職員等への自動車等の引渡しをさせようとするときは、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="10">
+              <ParagraphNum>１０</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項第四号に規定する場合には、同項の規定による通知は、自動車等の保管をしている者にあてた徴収職員等への自動車等の引渡しを依頼する旨の書面を添えてしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="11">
+              <ParagraphNum>１１</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、第八項の規定による命令により自動車等の引渡しをしたとき（第九項第四号に規定する場合にあつては、同項の規定による通知を発したとき）は、その旨を執行裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23_4">
+            <ArticleCaption>（自動車等に対する仮差押えの執行）</ArticleCaption>
+            <ArticleTitle>第二十三条の四</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十二条第二項、法第十五条及び法第十八条第三項並びに第二十一条の規定は前条第一項の自動車等に対して仮差押えの執行がされた場合について、同条第二項、第五項及び第八項から第十一項までの規定は執行官に対し自動車等を取り上げて保管すべき旨を命ずる方法による仮差押えの執行（以下「自動車等取上げの仮差押執行」という。）が同条第一項の自動車等に対してされた場合について、第七条第一項後段及び第三項の規定は執行官がこの項において準用する前条第二項の規定による命令に基づいて自動車等の引渡しを受ける場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>保全執行裁判所は、前条第一項の自動車等に対して自動車等取上げの仮差押執行をした場合において、その滞納処分を知つたときは、執行官に対し、自動車等を取り上げたときはその旨を保全執行裁判所に届け出るよう命じなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、前条第一項の自動車等に対する仮差押えの執行として自動車等を取り上げて保管すべきことを命じられた場合において、徴収職員等が自動車等を占有していることを知つたときは、その旨を保全執行裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二項の規定による命令に基づいて保全執行裁判所に届出がされたときは、裁判所書記官は、徴収職員等に対し、執行官が自動車等を保管している旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 債権又は電話加入権に対する強制執行等</SectionTitle>
+          <Article Num="23_5">
+            <ArticleCaption>（債権に対する強制執行及び債権を目的とする担保権の実行又は行使）</ArticleCaption>
+            <ArticleTitle>第二十三条の五</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九条、第十二条、第十五条、第十六条前段（第二十条において準用する場合を含む。）、第十七条、第十八条及び第十九条第二項の規定は滞納処分による差押えがされている債権に対して差押命令又は差押処分が発せられた場合について、第七条第一項、第三項前段及び第五項、第八条第一項及び第二項並びに第十三条（同条において準用する第七条第二項及び第三項後段並びに第八条第三項を除く。）の規定は滞納処分による差押えがされている動産の引渡請求権に対して差押命令が発せられた場合について準用する。この場合において、第九条中「執行官は、」とあるのは「執行裁判所の裁判所書記官又は差押処分をした裁判所書記官は、執行裁判所（差押処分がされた場合にあつては、当該差押処分をした裁判所書記官）が」と、「売却代金又は有価証券の取立金」とあるのは「第三債務者からの取立金若しくは法第二十条の六第一項の規定により供託された金銭の払渡金又は売却代金」と、第十五条中「法第十二条第二項」とあるのは「法第二十条の三第二項」と、同条第五号中「強制競売の開始決定があつた」とあるのは「差押命令又は差押処分が発せられた」と、「決定」とあるのは「差押命令又は差押処分」と、同条第六号中「裁判所」とあるのは「裁判所（差押処分がされた場合にあつては、当該差押処分をした裁判所書記官の属する裁判所）」と、第十六条前段（第二十条において準用する場合を含む。）中「裁判所書記官」とあるのは「執行裁判所の裁判所書記官又は差押処分をした裁判所書記官」と、第十七条第一号中「第十五条第一号、第四号及び第六号」とあるのは「第二十三条の五第一項において読み替えて準用する第十五条第一号、第四号及び第六号」と、同条第二号中「強制競売の申立て」とあるのは「差押命令若しくは差押処分の申立て」と、「強制競売の手続を取り消す決定」とあるのは「差押命令若しくは差押処分を取り消す決定若しくは差押処分を取り消す旨の裁判所書記官の処分」と、第十八条中「裁判所」とあるのは「執行裁判所（差押処分がされた場合にあつては、当該差押処分をした裁判所書記官）」と、「売却代金」とあるのは「第三債務者からの取立金若しくは法第二十条の六第一項の規定により供託された金銭の払渡金又は売却代金」と、「裁判所書記官」とあるのは「執行裁判所の裁判所書記官又は差押処分をした裁判所書記官」と、第十九条第二項中「前項」とあるのは「第二十三条の五第一項」と、「法第十二条第二項」とあるのは「法第二十条の三第二項」と、第二十条において準用する第十六条前段中「及び債務者」とあるのは「、債務者及び第三債務者」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、滞納処分による差押え後に差押命令が発せられた動産の引渡請求権について、民事執行法第百六十三条第一項（同法第百九十三条第二項において準用する場合を含む。以下この項において同じ。）の申立てを受けた場合において、その滞納処分を知つたときは、申立てが取り下げられたとき、又は申立てを却下したときを除き、次に掲げる事項を徴収職員等に書面で通知しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制執行又は担保権の実行若しくは行使の事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>動産の引渡請求権の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>民事執行法第百六十三条第一項の申立てを受けた旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行官の属する裁判所の名称</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行官は、前項の規定による通知をした場合において、同項に規定する申立てが取り下げられたとき、又はその申立てを却下したときは、その旨を徴収職員等に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23_6">
+            <ArticleCaption>（債権に対する仮差押えの執行）</ArticleCaption>
+            <ArticleTitle>第二十三条の六</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九条前段、第十五条、第十七条及び第十八条の規定は、滞納処分による差押えがされている債権に対して仮差押えの執行がされた場合について準用する。この場合において、第九条前段中「執行官は、」とあるのは「裁判所書記官は、保全執行裁判所が」と、「売却代金又は有価証券の取立金」とあるのは「第三債務者からの取立金若しくは法第二十条の九第一項において準用する法第二十条の六第一項の規定により供託された金銭の払渡金又は売却代金」と、第十五条中「法第十二条第二項」とあるのは「法第二十条の九第一項において準用する法第二十条の三第二項」と、第十八条中「売却代金」とあるのは「第三債務者からの取立金若しくは法第二十条の九第一項において準用する法第二十条の六第一項の規定により供託された金銭の払渡金又は売却代金」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23_7">
+            <ArticleCaption>（電話加入権に対する強制執行及び電話加入権を目的とする担保権の実行）</ArticleCaption>
+            <ArticleTitle>第二十三条の七</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第七条第四項の規定は、電話加入権について法第二十条の十一第一項によりその例によることとされる第二十三条の五第一項において準用する第十六条前段の規定により通知をする場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 強制執行等がされている財産に対する滞納処分</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 動産に対する滞納処分</SectionTitle>
+          <Article Num="24">
+            <ArticleCaption>（滞納処分による差押えがあつた場合の通知）</ArticleCaption>
+            <ArticleTitle>第二十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十一条第二項の規定による差押えがあつたときは、執行官は、速やかに、その旨を差押債権者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="25">
+            <ArticleCaption>（強制執行による差押えの取消し時の処置）</ArticleCaption>
+            <ArticleTitle>第二十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十二条の動産について強制執行による差押えを取り消すべきときは、執行官は、速やかに、次に掲げる事項を徴収職員等に書面で通知しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五条第一号及び第四号に掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十三条の規定により動産の引渡しをする旨及び引渡しの場所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>執行官以外の者で動産の保管をしているものに直接に徴収職員等への動産の引渡しをさせようとするときは、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>国税若しくはその滞納処分費又は地方税その他の徴収金の交付の要求があつたときは、その交付を求めた徴収職員等の属する庁その他の事務所の名称及び所在</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項第三号の場合には、同項の通知は、動産の保管をしている者にあてた徴収職員等への動産の引渡しを依頼する旨の書面を添えてしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="26">
+            <ArticleTitle>第二十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>削除</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="27">
+            <ArticleCaption>（滞納処分続行承認の決定の請求があつた場合の処置）</ArticleCaption>
+            <ArticleTitle>第二十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十五条の請求があつたときは、裁判所書記官は、速やかに、その旨を差押債権者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="28">
+            <ArticleCaption>（滞納処分続行承認の決定があつた場合の処置）</ArticleCaption>
+            <ArticleTitle>第二十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>滞納処分続行承認の決定があつたときは、執行官は、その旨を記録上明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="29">
+            <ArticleTitle>第二十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十五条の規定は、滞納処分続行承認の決定があつた場合に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="30">
+            <ArticleCaption>（仮差押物に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第三十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第七条第一項、第三項前段及び第五項、第八条、第九条並びに第十一条の規定は、仮差押えの執行後に滞納処分による差押えをした動産に関して準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="31">
+            <ArticleCaption>（競売による差押えがされている動産に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第三十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十四条、第二十五条及び第二十七条から第二十九条までの規定は、競売による差押えがされている動産に対して滞納処分による差押えがされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 不動産又は船舶等に対する滞納処分</SectionTitle>
+          <Article Num="32">
+            <ArticleCaption>（滞納処分による差押えがされた場合の通知）</ArticleCaption>
+            <ArticleTitle>第三十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十九条第二項の通知があつたときは、裁判所書記官は、速やかに、その旨を差押債権者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="33">
+            <ArticleCaption>（強制競売の申立ての取下げ等の通知の方法）</ArticleCaption>
+            <ArticleTitle>第三十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十一条の通知は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第十五条第一号、第四号及び第六号に掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第十七条第二号に掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>国税若しくはその滞納処分費又は地方税その他の徴収金の交付の要求があつたときは、その交付を求めた徴収職員等の属する庁その他の事務所の名称及び所在</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="34">
+            <ArticleTitle>第三十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>削除</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="35">
+            <ArticleCaption>（滞納処分続行承認の決定の請求があつた場合の処置）</ArticleCaption>
+            <ArticleTitle>第三十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十七条の規定は、法第三十条の不動産に関して準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="36">
+            <ArticleCaption>（滞納処分続行承認の決定があつた場合の通知）</ArticleCaption>
+            <ArticleTitle>第三十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>滞納処分続行承認の決定があつたときは、裁判所書記官は、速やかに、第三十三条第三号に掲げる事項を徴収職員等に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="37">
+            <ArticleCaption>（仮差押不動産に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第三十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十一条第二項並びに第三十三条第一号及び第二号の規定は、仮差押えの執行後に滞納処分による差押えをした不動産に関して準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="38">
+            <ArticleCaption>（強制執行がされている船舶に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第三十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十二条、第三十三条、第三十五条及び第三十六条の規定は、強制執行がされている船舶で登記されるものに対して滞納処分による差押えがされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行裁判所は、政令第二十四条第二項の規定により船舶国籍証書等の引渡しを受けた場合において、強制競売の申立てが取り下げられ、若しくは強制競売の手続を取り消す決定が効力を生じたとき、又は滞納処分続行承認の決定をしたときは、徴収職員等に対し、船舶国籍証書等を引き渡さなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="38_2">
+            <ArticleCaption>（仮差押えの執行がされている船舶に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第三十八条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十七条の規定は、仮差押えの執行がされている船舶で登記されるものに対して滞納処分による差押えがされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="39">
+            <ArticleCaption>（競売の開始決定後の滞納処分）</ArticleCaption>
+            <ArticleTitle>第三十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十二条、第三十三条、第三十五条及び第三十六条の規定は競売の開始決定があつた不動産又は船舶に対して滞納処分による差押えがされた場合について、第三十八条第二項の規定は競売の開始決定があつた船舶に対して滞納処分による差押えがされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="40">
+            <ArticleCaption>（航空機に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第四十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十六条第一項及び第三項、法第二十七条第一項並びに法第三十一条並びに第三十八条の規定は強制執行又は競売が開始されている航空機に対して滞納処分による差押えがされた場合について、法第十八条第三項及び法第三十一条並びに第三十八条の二の規定は仮差押えの執行がされている航空機に対して滞納処分による差押えがされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="41">
+            <ArticleCaption>（強制執行又は競売が開始されている自動車等に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第四十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十六条第一項及び第三項、法第二十七条第一項並びに法第三十一条並びに第二十三条の三（第一項及び第七項を除く。）、第三十二条、第三十三条、第三十五条及び第三十六条の規定は、強制執行又は競売が開始されている自動車等に対して滞納処分による差押えがされた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執行裁判所は、政令第二十七条第一項において準用する法第五条第一項の規定により自動車等の引渡しを受けた場合において、強制競売若しくは競売の申立てが取り下げられ、若しくは強制競売若しくは競売の手続を取り消す決定が効力を生じたとき、又は滞納処分続行承認の決定をしたときは、執行官に対し、自動車等を徴収職員等に引き渡すよう命じなければならない。この場合においては、第二十三条の三第九項から第十一項までの規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="42">
+            <ArticleCaption>（仮差押えの執行がされている自動車等に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第四十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十八条第三項及び法第三十一条並びに第三十七条の規定は仮差押えの執行がされている自動車等に対して滞納処分による差押えがされた場合について、第二十三条の三第二項、第五項及び第八項から第十一項までの規定は自動車等取上げの仮差押執行がされている自動車等に対して滞納処分による差押えがされた場合について、第七条第一項後段及び第三項前段の規定は執行官がこの条において準用する第二十三条の三第二項の規定による命令に基づいて自動車等の引渡しを受ける場合について準用する。この場合において、同項中「徴収職員等が占有をした際に次に掲げる者の占有していた自動車等」とあるのは、「自動車等」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 債権に対する滞納処分</SectionTitle>
+          <Article Num="43">
+            <ArticleCaption>（第三債務者の事情届の方式等）</ArticleCaption>
+            <ArticleTitle>第四十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十六条の六第二項の規定による届出は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制執行事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制執行による差押えをした債権者及び債務者の氏名又は名称</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>滞納処分による差押えをした徴収職員等の属する庁その他の事務所の名称及び所在</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>供託の事由及び供託した金額</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の書面には、供託書正本を添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十六条の六第三項の規定による通知は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第十五条第一号から第三号までに掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債権の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>差押命令又は差押処分が効力を生じた年月日</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第三債務者から供託の事情の届出があつた旨並びに供託の金額及び年月日</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所（差押処分がされている場合にあつては、当該差押処分をした裁判所書記官の属する裁判所）の名称</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="44">
+            <ArticleCaption>（供託書正本等の引渡し）</ArticleCaption>
+            <ArticleTitle>第四十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十六条の十一において準用する法第三十一条に規定する場合において、供託書正本又は債権証書が執行裁判所（差押処分がされている場合にあつては、当該差押処分をした裁判所書記官）に提出されているときは、執行裁判所の裁判所書記官又は差押処分をした裁判所書記官は、これらを徴収職員等に引き渡さなければならない。滞納処分続行承認の決定があつた場合において、供託書正本又は債権証書が執行裁判所（差押処分がされている場合にあつては、当該差押処分をした裁判所書記官）に提出されているときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="45">
+            <ArticleCaption>（滞納処分続行承認の決定の請求があつた場合の処置等の規定の準用）</ArticleCaption>
+            <ArticleTitle>第四十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十七条、第三十二条、第三十三条及び第三十六条の規定は強制執行による差押えがされている債権に対して滞納処分による差押えがされた場合について、第二十五条（第一項第四号を除く。）（第二十九条において準用する場合を含む。）の規定は強制執行による差押えがされている動産の引渡請求権に対して滞納処分による差押えがされた場合において、執行官が滞納処分を知つたときについて準用する。この場合において、第三十二条中「法第二十九条第二項」とあるのは「法第三十六条の三第二項」と、「裁判所書記官」とあるのは「執行裁判所の裁判所書記官又は差押処分をした裁判所書記官」と、第三十三条第一号中「第十五条第一号、第四号及び第六号」とあるのは「第二十三条の五第一項において読み替えて準用する第十五条第一号、第四号及び第六号」と、同条第二号中「第十七条第二号」とあるのは「第二十三条の五第一項において読み替えて準用する第十七条第二号」と、第三十六条中「速やかに」とあるのは「速やかに、その旨を第三債務者に通知するとともに」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="46">
+            <ArticleCaption>（仮差押えの執行がされている債権に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第四十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九条前段、第十七条及び第十八条の規定は、仮差押えの執行がされている債権に対して滞納処分による差押えがされた場合について準用する。この場合においては、第二十三条の六後段の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="47">
+            <ArticleCaption>（担保権の実行又は行使による差押えがされている債権に対する滞納処分）</ArticleCaption>
+            <ArticleTitle>第四十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第四十三条から第四十五条まで（同条後段を除く。）の規定は、担保権の実行又は行使による差押えがされている債権に対して滞納処分による差押えがされた場合について準用する。この場合において、第四十三条第三項第三号中「差押命令又は差押処分」とあるのは「差押命令」と、同項第五号中「裁判所（差押処分がされている場合にあつては、当該差押処分をした裁判所書記官の属する裁判所）」とあるのは「裁判所」と、第四十四条中「執行裁判所（差押処分がされている場合にあつては、当該差押処分をした裁判所書記官）」とあるのは「執行裁判所」と、「執行裁判所の裁判所書記官又は差押処分をした裁判所書記官」とあるのは「裁判所書記官」と、第四十五条において準用する第三十二条中「法第二十九条第二項」とあるのは「法第三十六条の十三において準用する法第三十六条の三第二項」と、第四十五条において準用する第三十六条中「速やかに」とあるのは「速やかに、その旨を第三債務者に通知するとともに」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 雑則</ChapterTitle>
+        <Article Num="48">
+          <ArticleCaption>（租税条約等の実施に伴う所得税法、法人税法及び地方税法の特例等に関する法律第十一条第五項に規定する場合の特則）</ArticleCaption>
+          <ArticleTitle>第四十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>租税条約等の実施に伴う所得税法、法人税法及び地方税法の特例等に関する法律（昭和四十四年法律第四十六号）第十一条第五項に規定する場合における第二十三条の二、第二十三条の三第一項、第二十三条の四第一項、第四十条及び第四十二条の規定の適用については、第二十三条の二中「法第六条第二項、」とあるのは「租税条約等の実施に伴う所得税法、法人税法及び地方税法の特例等に関する法律（昭和四十四年法律第四十六号。以下「租税条約等実施特例法」という。）第十一条第五項の規定により読み替えて適用される法第六条第二項、」と、「法第十八条第三項」とあるのは「租税条約等実施特例法第十一条第五項の規定により読み替えて適用される法第十八条第三項」と、「、法第六条第二項」とあるのは「、租税条約等実施特例法第十一条第五項の規定により読み替えて適用される法第六条第二項」と、第二十三条の三第一項中「法第六条第二項」とあるのは「租税条約等実施特例法第十一条第五項の規定により読み替えて適用される法第六条第二項」と、第二十三条の四第一項、第四十条及び第四十二条中「法第十八条第三項」とあるのは「租税条約等実施特例法第十一条第五項の規定により読み替えて適用される法第十八条第三項」とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和三十二年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和三四年一二月一五日最高裁判所規則第一九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和三十五年一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四一年一二月二〇日最高裁判所規則第一一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、執行官法の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五五年五月六日最高裁判所規則第三号抄）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事執行法（昭和五十四年法律第四号）の施行の日（昭和五十五年十月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五五年九月一七日最高裁判所規則第六号抄）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十五年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則による改正後の滞納処分と強制執行等との手続の調整に関する規則の規定は、滞納処分とこの規則の施行後に申し立てられた民事執行との手続の調整について）適用する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二年五月一六日最高裁判所規則第三号抄）</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一〇年一一月一九日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、競売手続の円滑化等を図るための関係法律の整備に関する法律（平成十年法律第百二十八号）の施行の日（平成十年十二月十六日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（滞納処分と強制執行等との手続の調整に関する規則の一部改正に伴う経過措置）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前にされた強制執行続行の決定の申請については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一四年二月一五日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成一四年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一七年一月一一日最高裁判所規則第一号抄）</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事関係手続の改善のための民事訴訟法等の一部を改正する法律（平成十六年法律第百五十二号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二五年三月二六日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、租税特別措置法等の一部を改正する法律（平成二十四年法律第十六号）附則第一条第六号に掲げる規定の施行の日（平成二十五年七月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

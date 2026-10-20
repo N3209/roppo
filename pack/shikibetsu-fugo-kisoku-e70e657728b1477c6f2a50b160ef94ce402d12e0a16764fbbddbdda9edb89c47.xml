@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/080521shikibetufugoukisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和7年8月29日最高裁判所規則第11号」
+  範囲: 本則4条（削除条の範囲を1要素として数える）、附則1本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Reiwa" Year="6" Num="15" PromulgateMonth="9" PromulgateDay="17" LawType="Rule">
+  <LawNum>令和六年九月十七日最高裁判所規則第十五号</LawNum>
+  <LawBody>
+    <LawTitle>民事事件等に関する手続において用いる識別符号の付与等に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（識別符号の付与の方法）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事事件、行政事件及び家事事件に関する手続において、民事訴訟法（平成八年法律第百九号）、民事訴訟規則（平成八年最高裁判所規則第五号）その他の法令に定める電子情報処理組織（民事訴訟法第八編第二章の規定による督促手続に関する規則（平成十八年最高裁判所規則第十号）で定める電子情報処理組織を除く。）を使用して、裁判所との間で電磁的記録（電子的方式、磁気的方式その他人の知覚によっては認識することができない方式で作られる記録であって、電子計算機による情報処理の用に供されるものをいう。次条第二項において同じ。）の送受信をしようとする者は、あらかじめ、次に掲げる事項をその使用に係る電子計算機（入出力装置を含む。第三条及び第四条第三号において同じ。）から入力して送信する方法により最高裁判所に届け出なければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>氏名及び住所（法人又は法人でない社団若しくは財団で代表者若しくは管理人の定めがあるものにあっては、その名称、代表者又は管理人の氏名及び主たる事務所の所在地）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>電話番号</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>電子メールアドレス（特定電子メールの送信の適正化等に関する法律（平成十四年法律第二十六号）第二条第一号に規定する電子メール（最高裁判所の細則で定める通信方式を用いるものに限る。）の利用者を識別するための文字、番号、記号その他の符号をいう。）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>生年月日（法人又は法人でない社団若しくは財団で代表者若しくは管理人の定めがあるものにあっては代表者又は管理人の生年月日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>その他必要な事項として最高裁判所が定める事項</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定による届出を行う者（法人又は法人でない社団若しくは財団で代表者若しくは管理人の定めがあるものにあっては、その代表者又は管理人をいう。以下この項において同じ。）は、個人番号カード（行政手続における特定の個人を識別するための番号の利用等に関する法律（平成二十五年法律第二十七号）第二条第七項に規定する個人番号カードをいう。）に記録された署名用電子証明書（電子署名等に係る地方公共団体情報システム機構の認証業務に関する法律（平成十四年法律第百五十三号）第三条第一項に規定する署名用電子証明書をいう。）を送信しなければならない。ただし、最高裁判所が定める方法により前項の規定による届出を行う者を確認するための措置を講ずる場合は、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所は、第一項の規定による届出を受理したとき（次条第二項に規定する場合を除く。）は、当該届出をした者に対し、識別符号を付与するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（弁護士等に対する識別符号の付与の方法）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>弁護士又は司法書士その他の隣接法律専門職者（総合法律支援法（平成十六年法律第七十四号）第一条に規定する隣接法律専門職者をいう。）のうち最高裁判所が定める者（以下この条及び第四条第五号において「弁護士等」という。）が、その業務として前条第一項の規定による届出をする場合には、弁護士等であることを証明しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所は、前項に規定する場合において、当該届出を受理したときは、当該届出をした弁護士等に対し、弁護士等の業務として前条第一項の電磁的記録の送受信をするための識別符号を付与するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（届出事項の変更等）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一条第三項又は前条第二項の規定により識別符号を付与された者は、第一条第一項の電子計算機において暗証符号を設定し、遅滞なく、設定した暗証符号を当該電子計算機から入力して送信する方法により最高裁判所に届け出なければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一条第三項又は前条第二項の規定により識別符号を付与された者は、第一条第一項各号に掲げる事項に変更があったとき、前項の規定により設定した暗証符号を変更するとき又は識別符号の使用を廃止するときは、遅滞なく、その旨を第一条第一項の電子計算機から入力して送信する方法により最高裁判所に届け出なければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（識別符号の使用の停止）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所は、次に掲げる場合には、第一条第三項又は第二条第二項の規定により付与された識別符号の使用を停止することができる。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>当該識別符号を付与された者が偽りその他不正な手段により当該識別符号の付与を受けたものであるとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>当該識別符号を付与された者以外の者が当該識別符号を不正に取得したとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>当該識別符号を付与された者が裁判所の使用に係る電子計算機に対して不正アクセス行為の禁止等に関する法律（平成十一年法律第百二十八号）第二条第四項に規定する不正アクセス行為をしたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条第三項の規定により当該識別符号を付与された者が一年間当該識別符号を使用しなかったとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>第二条第二項の規定により当該識別符号を付与された者が法令の規定により弁護士等の業務を行うことができなくなったとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>前各号に掲げる場合のほか、当該識別符号を付与された者が第一条第一項の電子情報処理組織の使用を継続することが適当でないと認める特別の事情があるとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の日から別に最高裁判所規則で定める日までの間における第一条第二項の規定の適用については、同項中「個人番号カード（行政手続における特定の個人を識別するための番号の利用等に関する法律（平成二十五年法律第二十七号）第二条第七項に規定する個人番号カードをいう。）に記録された署名用電子証明書（電子署名等に係る地方公共団体情報システム機構の認証業務に関する法律（平成十四年法律第百五十三号）第三条第一項に規定する署名用電子証明書をいう。）を送信しなければならない。ただし、最高裁判所」とあるのは「最高裁判所」と、「講ずる場合は、この限りでない」とあるのは「講じなければならない」とする。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="3">
+        <ParagraphNum>３</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う民事訴訟手続における申立てその他の申述等に関する規則（令和四年最高裁判所規則第一号）第二条第二項に規定する最高裁判所の細則で定めるところにより付与された識別符号は、第一条第三項又は第二条第二項の規定により付与された識別符号とみなす。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

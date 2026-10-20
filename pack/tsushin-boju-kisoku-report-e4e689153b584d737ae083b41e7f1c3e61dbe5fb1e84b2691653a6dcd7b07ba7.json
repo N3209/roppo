@@ -1,0 +1,147 @@
+{
+ "workId": "tsushin-boju-kisoku",
+ "file": "tsushin-boju-kisoku-3459a790b18e07ea2aac6bc5f8ed00f4305e90fd8f73684684d13fff4aff63ba.xml",
+ "sha256": "3459a790b18e07ea2aac6bc5f8ed00f4305e90fd8f73684684d13fff4aff63ba",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file5/tuusinboujukisoku010601.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "2b0ca7ce811e1b4beaf8c1bcb63f59db88e66f201f74425b708e9ceb9ffabd9d",
+  "pages": 6,
+  "law_num": "平成十二年三月十五日最高裁判所規則第六号",
+  "main_articles": 18,
+  "counts": {
+   "Article": 19,
+   "Paragraph": 40,
+   "Item": 35,
+   "Subitem1": 0,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 5013,
+  "dropped_notes": 16,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（平成一二年一二月一五日最高裁判所規則第一五号）",
+   "附 則（平成三〇年一月一五日最高裁判所規則第一号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "犯罪捜査のための通信傍受に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 18,
+    "xml": 18,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 4,
+    "body": 4
+   },
+   "Article": {
+    "pdf_lines": 19,
+    "xml": 19,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 19,
+    "xml": 19,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 35,
+    "xml": 35,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "犯罪捜査のための通信傍受に関する規則",
+  "units": 99,
+  "pdf_lines": 210,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 55,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 12
+ },
+ "tables": {
+  "title": "犯罪捜査のための通信傍受に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成30年1月15日 本紙第7181号",
+    "rule": "平成30年最高裁判所規則第1号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2018,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20180115/20180115h07181/20180115h071810001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

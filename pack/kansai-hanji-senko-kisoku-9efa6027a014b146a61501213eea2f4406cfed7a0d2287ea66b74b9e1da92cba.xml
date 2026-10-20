@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/kansaihanjisenkou.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「平成15年2月19日最高裁判所規則第５号」
+  範囲: 本則26条（削除条の範囲を1要素として数える）、附則3本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="22" Num="2" PromulgateMonth="9" PromulgateDay="19" LawType="Rule">
+  <LawNum>昭和二十二年九月十九日最高裁判所規則第二号</LawNum>
+  <LawBody>
+    <LawTitle>簡易裁判所判事選考規則</LawTitle>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 簡易裁判所判事選考委員会</ChapterTitle>
+        <Article Num="1">
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>簡易裁判所判事選考委員会は、最高裁判所の監督に属し、簡易裁判所判事の任命に関する裁判所法第四十五条第一項の選考を行う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、委員九人でこれを組織し、そのうち一人を委員長とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員は、次に掲げる者をもってこれに充てることとし、最高裁判所長官が、これを委嘱する。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>裁判官 三人</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>検察官 一人</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>弁護士 二人</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>学識経験のある者 三人</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会の委員長は、最高裁判所長官が、これを委嘱する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員長は、会務を総理する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員長に事故のあるときは、委員長の指名する委員が、その職務を代理する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>最高裁判所が委員会に対し第一条の選考を行うべきことを命じたときは、委員会は、簡易裁判所判事推薦委員会が推薦した者の中から、簡易裁判所判事の候補者を選考しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、前項の場合において、必要があると認めるときは、同項の規定にかかわらず、簡易裁判所判事推薦委員会が推薦した者以外の者の中から、簡易裁判所判事の候補者を選考することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、前二項の規定により、簡易裁判所判事の候補者を選考したときは、速やかに、その氏名、選考の理由及び選考の日を最高裁判所に報告しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、委員長が、これを招集する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員長は、会議の議長となり、議事を整理する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会の会議は、秘密とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="8">
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、五人以上の委員が出席しなければ、会議を開くことができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会の議事は、出席した委員長及びその他の委員の過半数によりこれを決する。可否同数のときは、委員長が、これを決する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、適当と認めるときは、委員でない者の出席を求めてその説明又は意見を聴くことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会の選考は、選考の日から一年を経過したときは、その効力を失う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="11">
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員の任期は、三年とする。ただし、再任を妨げない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会に幹事一人を置く。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>幹事は、最高裁判所の裁判所事務官の中から、委員長が、これを委嘱する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>幹事は、委員長の命を受けて、庶務を掌る。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会に書記を置く。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>書記は、委員長及び幹事の命を受けて、庶務に従事する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条第二項の規定は、書記にこれを準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="14">
+          <ArticleTitle>第十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則に定めるものの外、委員会に関し必要な事項は、委員会がこれを定める。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 簡易裁判所判事推薦委員会</ChapterTitle>
+        <Article Num="15">
+          <ArticleTitle>第十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>各地方裁判所に、簡易裁判所判事推薦委員会を置く。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="16">
+          <ArticleTitle>第十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、当該地方裁判所の所長の監督に属し、簡易裁判所判事として適当と認める者を簡易裁判所判事選考委員会に推薦する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="17">
+          <ArticleTitle>第十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は、委員八人でこれを組織する。但し、東京地方裁判所の委員会については、委員の数を十二人とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="18">
+          <ArticleTitle>第十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員は、左に掲げる者を以てこれに充てる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該地方裁判所の所長</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該地方裁判所の判事で前号に該当しない者 二人</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2_2">
+              <ItemTitle>二の二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該地方裁判所の所在地を管轄する家庭裁判所の所長</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該地方裁判所に対応する地方検察庁の検事正</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該地方裁判所の管轄区域内の弁護士会の会長</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>学識経験のある者 二人</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条但書の委員会については、前項第二号及び第五号の委員は、これらの各号の規定にかかわらず、その員数を各々三人とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項第二号及び第五号の委員は、当該地方裁判所の所長が、これを委嘱する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>④</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>地方裁判所長は、前項の規定により委員を委嘱したときは、速やかに、当該地方裁判所の所在地を管轄する高等裁判所の長官を経て、最高裁判所にこれを報告しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="19">
+          <ArticleTitle>第十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会に委員長一人を置き、地方裁判所長たる委員を以てこれに充てる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第四条第二項及び第三項の規定は、前項の委員長にこれを準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="20">
+          <ArticleTitle>第二十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会は何時でも、簡易裁判所判事として適当と認める者を、当該地方裁判所の所在地を管轄する高等裁判所の長官を経て、簡易裁判所判事選考委員会に推薦することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の高等裁判所長官は、委員会の推薦に意見を附することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="21">
+          <ArticleTitle>第二十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第十七条但書の委員会は、七人以上、その他の委員会は、五人以上の委員が出席しなければ、会議を開くことができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="22">
+          <ArticleTitle>第二十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>高等裁判所長官又はその指名する高等裁判所判事は、何時でも、当該高等裁判所の管轄区域内の地方裁判所の委員会に出席して意見を述べることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="23">
+          <ArticleTitle>第二十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第十八条第一項第二号及び第五号の委員の任期は、三年とする。但し、再任を妨げない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="24">
+          <ArticleTitle>第二十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会に幹事一人を置く。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>幹事は、当該地方裁判所の裁判官又は裁判所事務官の中から、委員長が、これを委嘱する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>幹事は、委員長の命を受けて、庶務を掌る。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="25">
+          <ArticleTitle>第二十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>委員会に書記を置く。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>②</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>書記は、当該地方裁判所の裁判所事務官の中から、委員長が、これを委嘱する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>③</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>書記は、委員長及び幹事の命を受けて、庶務に従事する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="26">
+          <ArticleTitle>第二十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第六条、第七条、第八条第二項、第九条及び第十四条の規定は、この章の委員会にこれを準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から、これを施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二三年一二月二八日最高裁判所規則第三八号）抄</SupplProvisionLabel>
+      <Article Num="8">
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、昭和二十四年一月一日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年二月一九日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の際現に改正前の簡易裁判所判事選考規則第三条第一項第四号又は第５号の委員に委嘱されている者は、改正後の簡易裁判所判事選考規則第三条の規程により同条第三号又は第四号の委員に委嘱されたものとみなす。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

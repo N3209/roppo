@@ -1,0 +1,176 @@
+{
+ "workId": "tobo-hanzainin-hikiwatashi-kisoku",
+ "file": "tobo-hanzainin-hikiwatashi-kisoku-e5867802bae1a13fd504ebe4f66bb283a2d851ab5bda38eef155586be2cb387d.xml",
+ "sha256": "e5867802bae1a13fd504ebe4f66bb283a2d851ab5bda38eef155586be2cb387d",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2022/toubouhanzaininhikiwatashikisoku20220221.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "3ae5ce8cb89003e118ea64949263b3ec5861003744ae9ab61678917aaef99e64",
+  "pages": 3,
+  "law_num": "昭和二十八年七月二十二日最高裁判所規則第十一号",
+  "main_articles": 29,
+  "counts": {
+   "Article": 29,
+   "Paragraph": 53,
+   "Item": 31,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 4276,
+  "dropped_notes": 9,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 1,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和三九年五月二九日最高裁判所規則第五号）",
+   "附則（平成一八年五月一二日最高裁判所規則第六号）",
+   "附則（令和四年二月二一日最高裁判所規則第十号）"
+  ]
+ },
+ "independentCount": {
+  "title": "逃亡犯罪人引渡法による審査等の手続に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 29,
+    "xml": 29,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 29,
+    "xml": 29,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 22,
+    "xml": 22,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 31,
+    "xml": 31,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "逃亡犯罪人引渡法による審査等の手続に関する規則",
+  "units": 115,
+  "pdf_lines": 179,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 76,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "逃亡犯罪人引渡法による審査等の手続に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成18年5月12日 本紙第4335号",
+    "rule": "平成18年最高裁判所規則第6号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20060512/20060512h04335/20060512h043350002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年2月21日 号外第36号",
+    "rule": "令和4年最高裁判所規則第10号",
+    "title": "逃亡犯罪人引渡法による審査等の手続に関する規則の一部を改正する規則",
+    "year": 2022,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20220221/20220221g00036/20220221g000360003f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20220221",
+    "no": 7,
+    "explained_by_neighbour": [
+     "逃亡犯罪人引渡法による審査等の手続に関する規則の一部を改正する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 8,
+    "explained_by_neighbour": [
+     "逃亡犯罪人引渡法による審査等の手続に関する規則の一部を改正する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 9,
+    "explained_by_neighbour": [
+     "逃亡犯罪人引渡法による審査等の手続に関する規則の一部を改正する規則（同一〇）"
+    ]
+   }
+  ]
+ }
+}

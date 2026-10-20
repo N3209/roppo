@@ -1,0 +1,449 @@
+{
+ "workId": "jinji-sosho-kisoku",
+ "file": "jinji-sosho-kisoku-9750c03bdee82a049f444608d5506d3547153b27f0a752e3a2baab102c100de1.xml",
+ "sha256": "9750c03bdee82a049f444608d5506d3547153b27f0a752e3a2baab102c100de1",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521jinsokisoku.pdf",
+  "fetched": "2026-10-02",
+  "sha256": "7e39f7036325a4088bc39d8770b5b071d343ec8d14feb5729420751564ed0137",
+  "pages": 22,
+  "law_num": "平成十五年十一月十二日最高裁判所規則第二十四号",
+  "main_articles": 55,
+  "counts": {
+   "Article": 64,
+   "Paragraph": 93,
+   "Item": 10,
+   "Subitem1": 0,
+   "SupplProvision": 9,
+   "AppdxTable": 2,
+   "Table": 2
+  },
+  "matching_characters": 18168,
+  "dropped_notes": 38,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 3,
+  "table_pages": [
+   13,
+   14,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 14,
+    "skipped_empty_top_rows": 1
+   },
+   {
+    "page": 14,
+    "before": [
+     "十",
+     "実親子関係の存在の確認の訴え",
+     "子が死亡した後に訴えの提起があった場合におけるその相続人（子の直系卑属及び子の配偶者で直系卑属又は直系尊属とともに相続したものを除く。）又は父若しくは母が死亡した後に訴えの提起があった"
+    ],
+    "added": [
+     "",
+     "",
+     "場合におけるその相続人（当該父又は母の配偶者で直系卑属とともに相続したものを除く。）"
+    ]
+   },
+   {
+    "page": 16,
+    "before": [
+     "第三十二条第四項、第三十四条の七第二項、第七十二条、第七十六条、第九十一条第二項、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条",
+     "電子調書",
+     "調書"
+    ],
+    "added": [
+     "の三第二項、第百四十二条及び第百四十六条第一項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 17,
+    "before": [
+     "第五十条の二",
+     "電子決定書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、決定に係るものをいう。第六十七条（口頭弁論に係る電子調書の実質的記録事項等）第一項第七号及び",
+     "決定書"
+    ],
+    "added": [
+     "",
+     "第百六十条（判決の更正決定等の方式）第一項において同じ。）",
+     ""
+    ]
+   },
+   {
+    "page": 20,
+    "before": [
+     "第百四十六条第二項及び第百五十一条",
+     "第百四十二条（受命裁判官等の証拠調べの電子調書）",
+     "人事訴訟規則第十八条（民事訴訟規則の適用関係）第二項において読み替えて適用する第百四十二条（受命裁判官等の証拠調べの電子"
+    ],
+    "added": [
+     "",
+     "",
+     "調書）及び同規則第十八条の九（受命裁判官等の証拠調べの調書）"
+    ]
+   },
+   {
+    "page": 21,
+    "before": [
+     null,
+     "読み替える",
+     "、人事訴訟規則第十八条の九中「同条の文書の写し」とあるのは「同項において読み替えて適用する同規則第百四十九条の二（電磁的記録に記録された情報の内容に係る証拠調べの申出の方式等）第一項の電磁的記録を記録した記録媒体」と"
+    ],
+    "added": [
+     "",
+     "",
+     "読み替える"
+    ]
+   },
+   {
+    "page": 22,
+    "before": [
+     "第百九十五条",
+     "被上告人（当該書面の送達について法第百九条の二（電子情報処理組織による送達）第一項ただし書の届出をしている者を除く。）の数の副本（法第百三十二条の十",
+     "被上告人の数に六を加えた数の副本"
+    ],
+    "added": [
+     "",
+     "（電子情報処理組織による申立て等）第一項の規定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表第一"
+   ],
+   [
+    "appdx",
+    "別表第二"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則 抄",
+   "附則（平成一七年二月七日最高裁判所規則第四号）",
+   "附則（平成一八年一二月六日最高裁判所規則第一三号）",
+   "附則（平成二四年七月一七日最高裁判所規則第九号） 抄",
+   "附則（平成二七年六月二九日最高裁判所規則第六号） 抄",
+   "附則（平成二七年八月三日最高裁判所規則第八号）",
+   "附則（令和四年一一月七日最高裁判所規則第一七号） 抄",
+   "附則（令和五年一一月二二日最高裁判所規則第七号）",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "人事訴訟規則",
+  "extractor": [
+   {
+    "page": 13,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 14,
+    "tables": 2,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 15,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 16,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 17,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 18,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 19,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 20,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 21,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 22,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 55,
+    "xml": 55,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 14,
+    "body": 14
+   },
+   "Article": {
+    "pdf_lines": 64,
+    "xml": 64,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 26,
+    "xml": 26,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "人事訴訟規則",
+  "units": 189,
+  "pdf_lines": 476,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 135,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 26
+ },
+ "tables": {
+  "title": "人事訴訟規則",
+  "xml_tables": 2,
+  "pdf_fragments": 11,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 18,
+    "equal": 18,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 94,
+    "equal": 94,
+    "joins": 5,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成15年11月12日 号外第260号",
+   "rule": "平成15年最高裁判所規則第24号",
+   "title": "人事訴訟規則",
+   "year": 2003,
+   "no": 24,
+   "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600013f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成17年2月7日 本紙第4028号",
+    "rule": "平成17年最高裁判所規則第4号",
+    "title": "家事審判規則及び人事訴訟規則の一部を改正する規則",
+    "year": 2005,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20050207/20050207h04028/20050207h040280001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年12月6日 本紙第4478号",
+    "rule": "平成18年最高裁判所規則第13号",
+    "title": "特別家事審判規則及び人事訴訟規則の一部を改正する規則",
+    "year": 2006,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20061206/20061206h04478/20061206h044780005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年6月29日 号外第145号",
+    "rule": "平成27年最高裁判所規則第6号",
+    "title": "民事訴訟規則の一部を改正する規則",
+    "year": 2015,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20150629/20150629g00145/20150629g001450005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年8月3日 本紙第6587号",
+    "rule": "平成27年最高裁判所規則第8号",
+    "title": "人事訴訟規則の一部を改正する規則",
+    "year": 2015,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20150803/20150803h06587/20150803h065870001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年11月22日 本紙第1108号",
+    "rule": "令和5年最高裁判所規則第7号",
+    "title": "人事訴訟規則及び家事事件手続規則の一部を改正する規則",
+    "year": 2023,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20231122/20231122h01108/20231122h011080002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20050207",
+    "no": 5,
+    "explained_by_neighbour": [
+     "家事審判規則及び人事訴訟規則の一部を改正する規則（最高裁四）"
+    ]
+   },
+   {
+    "date": "20150629",
+    "no": 5,
+    "explained_by_neighbour": [
+     "民事訴訟規則の一部を改正する規則（同六）"
+    ]
+   },
+   {
+    "date": "20150803",
+    "no": 7,
+    "explained_by_neighbour": [
+     "人事訴訟規則の一部を改正する規則（同八）"
+    ]
+   }
+  ]
+ }
+}

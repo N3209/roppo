@@ -1,0 +1,374 @@
+{
+ "workId": "gaikoku-tosan-shonin-enjo-kisoku",
+ "file": "gaikoku-tosan-shonin-enjo-kisoku-4ed128a26e2614c5ce06a057c41f5ba6558c8a489c5d9a18bff247d63818b2d0.xml",
+ "sha256": "4ed128a26e2614c5ce06a057c41f5ba6558c8a489c5d9a18bff247d63818b2d0",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521gaikoukutousannsyori.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "128b21de25e5ae062b2cc5ba4845268dc378f35eb6092e0bb03e09ead52c9a71",
+  "pages": 26,
+  "law_num": "平成十二年十二月二十七日最高裁判所規則第十七号",
+  "main_articles": 54,
+  "counts": {
+   "Article": 59,
+   "Paragraph": 122,
+   "Item": 79,
+   "Subitem1": 8,
+   "SupplProvision": 9,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 23333,
+  "dropped_notes": 32,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 352,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 245,
+  "kept_spaces": 17,
+  "table_pages": [
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [
+   {
+    "kind": "text-caption",
+    "parts": [
+     "る事由",
+     "（費用の予納・法第二十条）"
+    ]
+   },
+   {
+    "kind": "suppl-text",
+    "parts": [
+     "附則（平成一七年二月九日最高裁判所規則第六号）",
+     "この規則は、不動産登記法（平成十六年法律第百"
+    ]
+   }
+  ],
+  "table_page_joins": [
+   {
+    "page": 21,
+    "before": [
+     "第十五条第四項及び第",
+     "前三項",
+     "第一項"
+    ],
+    "added": [
+     "二百十一条第四項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 22,
+    "before": [
+     null,
+     "書類又は電磁的記録について直送（当事者が前条（書類又は電磁的",
+     "書類について直送（当事者の相手方に対する直接の送付"
+    ],
+    "added": [
+     "",
+     "記録の送付）第二項又は第三項の方法により相手方に対して直接送付すること",
+     ""
+    ]
+   },
+   {
+    "page": 24,
+    "before": [
+     null,
+     "記録しなければ",
+     "記載し、尋問事項書を添付しなけ"
+    ],
+    "added": [
+     "",
+     "",
+     "れば"
+    ]
+   },
+   {
+    "page": 25,
+    "before": [
+     "第百四十九条の二第一項",
+     "最高裁判所の細則で定めるところにより、当該申出に係る電磁的記",
+     "当該電磁的記録"
+    ],
+    "added": [
+     "",
+     "録の複製を第五十二条の十（電子情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製",
+     ""
+    ]
+   },
+   {
+    "page": 26,
+    "before": [
+     "第百九十五条",
+     "被上告人（当該書面の送達について法第百九条の二（電子情報処理組織による送達）第一項ただし書",
+     "被上告人の数に六を加えた数の副本"
+    ],
+    "added": [
+     "",
+     "の届出をしている者を除く。）の数の副本（法第百三十二条の十（電子情報処理組織による申立て等）第一項の規定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [
+   {
+    "page": 22,
+    "pdfplumber": "電子決定書又は電子命令書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、命令に係るものをいう。",
+    "assigned": "電子決定書又は電子命令書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、命令に係るものをいう。）"
+   },
+   {
+    "page": 22,
+    "pdfplumber": "書面）",
+    "assigned": "書面"
+   }
+  ],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-paragraph-gap",
+    "1->3"
+   ],
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成一五年二月一九日最高裁判所規則第四号）",
+   "附則（平成一五年三月一九日最高裁判所規則第七号）",
+   "附則（平成一五年一一月一二日最高裁判所規則第二二号）抄",
+   "附則（平成一六年一〇月六日最高裁判所規則第一五号）抄",
+   "附則（平成一七年二月九日最高裁判所規則第六号）",
+   "附則（平成一八年二月八日最高裁判所規則第二号）抄",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月十七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "外国倒産処理手続の承認援助に関する規則",
+  "extractor": [
+   {
+    "page": 20,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 21,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 22,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 23,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 24,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 25,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 26,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 54,
+    "xml": 54,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 7,
+    "body": 7
+   },
+   "Article": {
+    "pdf_lines": 59,
+    "xml": 59,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 59,
+    "xml": 59,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 79,
+    "xml": 79,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "外国倒産処理手続の承認援助に関する規則",
+  "units": 282,
+  "pdf_lines": 636,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 163,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0,
+   "caption_at_line_end": 3
+  },
+  "pdf_body_from_line": 22
+ },
+ "tables": {
+  "title": "外国倒産処理手続の承認援助に関する規則",
+  "xml_tables": 1,
+  "pdf_fragments": 7,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 68,
+    "equal": 68,
+    "joins": 5,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成15年11月12日 号外第260号",
+    "rule": "平成15年最高裁判所規則第22号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2003,
+    "no": 22,
+    "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600006f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成16年10月6日 号外第221号",
+    "rule": "平成16年最高裁判所規則第15号",
+    "title": "民事再生規則等の一部を改正する規則",
+    "year": 2004,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20041006/20041006g00221/20041006g002210010f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年2月9日 本紙第4030号",
+    "rule": "平成17年最高裁判所規則第6号",
+    "title": "不動産登記法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2005,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20050209/20050209h04030/20050209h040300003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年2月8日 本紙第4272号",
+    "rule": "平成18年最高裁判所規則第2号",
+    "title": "会社法及び会社法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備等に関する規則",
+    "year": 2006,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20060208/20060208h04272/20060208h042720004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "workId": "keiji-sosho-kisoku-seko-kisoku",
+ "file": "keiji-sosho-kisoku-seko-kisoku-e296ec4ede72591c2b34421ebec867e678a2dec82e7aa3681e2240297f119791.xml",
+ "sha256": "e296ec4ede72591c2b34421ebec867e678a2dec82e7aa3681e2240297f119791",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2023/keijisosyoukisokusekoukisoku.20240215.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "f49e2fa9c8ee9033ec06a1b3565e254a17a3f516ddf9f2fa93c217baff292607",
+  "pages": 2,
+  "law_num": "昭和二十三年十二月二十三日最高裁判所規則第三十四号",
+  "main_articles": 3,
+  "counts": {
+   "Article": 6,
+   "Paragraph": 11,
+   "Item": 6,
+   "Subitem1": 8,
+   "SupplProvision": 5,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 1821,
+  "dropped_notes": 1,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 60,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二四年七月一日最高裁判所規則第一二号）",
+   "附則（昭和二五年一二月二〇日最高裁判所規則第二九号）",
+   "附則（令和五年九月一九日最高裁判所規則第四号）",
+   "附則（令和五年一二月二五日最高裁判所規則第一〇号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "刑事訴訟規則施行規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "刑事訴訟規則施行規則",
+  "units": 30,
+  "pdf_lines": 70,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 8,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 8
+ },
+ "tables": {
+  "title": "刑事訴訟規則施行規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和5年9月19日 本紙第1064号",
+    "rule": "令和5年最高裁判所規則第4号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20230919/20230919h01064/20230919h010640002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年12月25日 号外第270号",
+    "rule": "令和5年最高裁判所規則第10号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20231225/20231225g00270/20231225g002700005f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

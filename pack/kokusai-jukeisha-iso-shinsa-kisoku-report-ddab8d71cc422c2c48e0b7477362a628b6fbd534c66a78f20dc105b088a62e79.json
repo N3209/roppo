@@ -1,0 +1,137 @@
+{
+ "workId": "kokusai-jukeisha-iso-shinsa-kisoku",
+ "file": "kokusai-jukeisha-iso-shinsa-kisoku-d841e513a29d66d03d446c96d4242e5a33b8c2723081e6cf5288efb7a1e8006a.xml",
+ "sha256": "d841e513a29d66d03d446c96d4242e5a33b8c2723081e6cf5288efb7a1e8006a",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/jyukeisyaisoushinnsa.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "046ee06a65a782208f24f55d7ac44df945a08e53a37ee327571f961a87069557",
+  "pages": 1,
+  "law_num": "平成十五年一月二十九日最高裁判所規則第一号",
+  "main_articles": 6,
+  "counts": {
+   "Article": 6,
+   "Paragraph": 9,
+   "Item": 6,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 937,
+  "dropped_notes": 1,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [
+   {
+    "page": 1,
+    "first_cell": "添付ファイル１",
+    "why": "添付ファイルの表示（一太郎形式の元ファイル名。規則の本文ではない）"
+   }
+  ],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則"
+  ]
+ },
+ "independentCount": {
+  "title": "国際受刑者移送法による東京地方裁判所の審査の手続に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "国際受刑者移送法による東京地方裁判所の審査の手続に関する規則",
+  "units": 21,
+  "pdf_lines": 42,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 14,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 5
+ },
+ "tables": {
+  "title": "国際受刑者移送法による東京地方裁判所の審査の手続に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

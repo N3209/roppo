@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/2020/20200422sasyoukisoku.pdf
+  取得: 2026-10-18
+  反映: PDFに改正履歴の記載なし。掲載された附則の最後は「附 則」
+  範囲: 本則8条（削除条の範囲を1要素として数える）、附則1本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。文中の空白の除去あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。文中の空白2か所（紙面で字間のない、元の改行の跡）を除去し別ファイルに記録。附則第二条（執行官の手数料及び費用に関する規則の一部改正）が「第三条の二の次に次の一条を加える。」として引用する「（査証の援助）第三条の三 …」（３項）は、改正される規則の条であり、この規則の附則の条ではない。紙面で確認し quoted_provisions に登録。改め文の文として残す（2026-10-20。アプリ側 verify-xml の「番号が戻らない」が附則の 3_3 のあとの 3 を捕まえた）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Reiwa" Year="2" Num="7" PromulgateMonth="4" PromulgateDay="22" LawType="Rule">
+  <LawNum>令和二年四月二十二日最高裁判所規則第七号</LawNum>
+  <LawBody>
+    <LawTitle>特許法による査証の手続等に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（申立書の記載事項等・法第百五条の二）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特許法（昭和三十四年法律第百二十一号。以下「法」という。）第百五条の二第二項の書面には、同項各号に掲げる事項のほか、申立てに係る措置の内容を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の申立てに係る措置の内容の記載は、査証を求める事項を明らかにしてしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第百五条の二第一項本文の申立てをする当事者は、第一項の書面について直送（当事者の相手方に対する直接の送付をいう。第七条第四項において同じ。）をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>相手方は、前項の申立てについて意見があるときは、意見を記載した書面を裁判所に提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（執行官援助の申立ての方式・法第百五条の二の二）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第百五条の二の二第三項の申立ては、期日においてする場合を除き、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の申立てをするときは、援助を求める事務の内容及び援助を必要とする理由を明らかにしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（忌避の申立ての方式・法第百五条の二の三）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>査証人に対する忌避の申立ては、期日においてする場合を除き、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>忌避の原因は、疎明しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（査証の実施に必要な事項についての協議）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、口頭弁論若しくは弁論準備手続の期日又は進行協議期日において、査証の実施に必要な事項について、当事者、査証人及び法第百五条の二の二第三項の規定による命令を受けた執行官と協議をすることができる。書面による準備手続においても、同様とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（査証の実施の日時等の通知・法第百五条の二の四）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>査証人は、査証をするに当たっては、当該査証を実施する日時及び場所を定め、裁判所に対し、その日時及び場所を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定による通知があったときは、裁判所書記官は、速やかに、同項の査証を実施する日時及び場所を査証を受ける当事者に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則（平成八年最高裁判所規則第五号）第四条第五項の規定は、前項の規定による通知について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（査証報告書の提出等・法第百五条の二の四）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判長は、査証人に、共同して又は各別に、査証報告書（法第百五条の二の四第一項に規定する査証報告書をいう。以下同じ。）を作成させ、これを提出させることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判長は、査証人の意見を聴いて、査証報告書を提出すべき期間を定めることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>査証報告書には、次に掲げる事項を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証人の氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証の対象とした書類等（法第百五条の二第一項に規定する書類等をいう。）の表示</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証に着手した日時及びこれを終了した日時</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証をした場所</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証に立ち会った者があるときは、その氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証を命じられた事項及び措置の内容</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="7">
+            <ItemTitle>七</ItemTitle>
+            <ItemSentence>
+              <Sentence>査証の結果</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="8">
+            <ItemTitle>八</ItemTitle>
+            <ItemSentence>
+              <Sentence>執行官の援助を受けたときは、執行官の氏名、援助を受けた日時及び場所並びに援助を受けた事務の内容</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（不開示の申立ての方式等・法第百五条の二の六）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第百五条の二の六第二項の規定による申立ては、書面で、かつ、査証報告書中の開示しないこととすべき部分を特定してしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の申立てをするときは、査証報告書の写しから開示しないこととすべき部分を除いたものをも作成し、前項の書面に添付して提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の書面には、査証報告書の全部又は一部を申立人に開示しないことについての正当な理由を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立てをする当事者は、同項の書面及び第二項の規定により提出する査証報告書の写しから開示しないこととすべき部分を除いたものについて直送をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>申立人は、第一項の申立てについて意見があるときは、意見を記載した書面を裁判所に提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="6">
+          <ParagraphNum>６</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第百五条の二の六第三項の査証報告書の一部を開示しないこととする決定が確定したときは、第一項の申立てをした当事者は、遅滞なく、査証報告書の写しから当該決定により特定された開示しないこととする部分を除いたものを作成し、裁判所に提出しなければならない。ただし、当該申立てにより特定された開示しないこととすべき部分と当該決定により特定された開示しないこととする部分とが同一である場合は、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（査証報告書の閲覧等の請求の方式等・法第百五条の二の七）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第百五条の二の七第一項又は同条第三項において準用する民事訴訟法（平成八年法律第百九号）第九十一条第四項後段の請求は、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第二項の規定により査証報告書の写しから開示しないこととすべき部分を除いたもの又は同条第六項本文の規定により査証報告書の写しから開示しないこととする部分を除いたものが提出されたときは、法第百五条の二の七第一項の査証報告書の閲覧、謄写又は複製は、その提出されたものによってさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、特許法等の一部を改正する法律（令和元年法律第三号）附則第一条第三号に掲げる規定の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（執行官の手数料及び費用に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>執行官の手数料及び費用に関する規則（昭和四十一年最高裁判所規則第十五号）の一部を次のように改正する。第三条の二の次に次の一条を加える。（査証の援助）第三条の三 特許法（昭和三十四年法律第百二十一号）第百五条の二の二第三項の規定による援助（法第八条第一項第一号の三）の手数料の額は、一万一千円とする。２前項の援助を行うべき場所に臨んだ場合において、執行官の責めに帰することができない事由によつて同項の援助を実施することができなかつたとき（法第八条第二項第一号）の手数料の額は、四千円とする。３第一項の援助を命じた裁判所は、査証の実施に必要な事項についての協議の状況その他の事情により、第一項又は前項の手数料の額（第三十二条又は第三十三条の規定の適用がある場合にあつては、これらの規定による加算後の額）に、それぞれ第一項又は前項に定める金額の範囲内の額を加算することができる。第三十二条及び第三十三条第三項中「第三条の二第一項」の下に「、第三条の三第一項」を加える。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（民事訴訟費用等に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟費用等に関する規則（昭和四十六年最高裁判所規則第五号）の一部を次のように改正する。第七条中「通訳人」の下に「、査証人」を加える。別表第二の五の項上欄に次のように加える。リ 特許法（昭和三十四年法律第百二十一号）の規定による査証の命令の申立て</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

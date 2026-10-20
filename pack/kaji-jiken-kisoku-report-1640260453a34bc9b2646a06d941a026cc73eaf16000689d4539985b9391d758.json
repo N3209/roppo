@@ -1,0 +1,419 @@
+{
+ "workId": "kaji-jiken-kisoku",
+ "file": "kaji-jiken-kisoku-e27bd0bd96f1f3d7fe81b6720513fcbf9a34cb31a354a163b145cbfe421f1d7e.xml",
+ "sha256": "e27bd0bd96f1f3d7fe81b6720513fcbf9a34cb31a354a163b145cbfe421f1d7e",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521kajikisoku.pdf",
+  "fetched": "2026-10-06",
+  "sha256": "56a08267d527ebd0e02bd3d7ea672d6a699864d0c589d525c884d05841d3e7cb",
+  "pages": 42,
+  "law_num": "平成二十四年七月十七日最高裁判所規則第八号",
+  "main_articles": 155,
+  "counts": {
+   "Article": 166,
+   "Paragraph": 305,
+   "Item": 122,
+   "Subitem1": 0,
+   "SupplProvision": 11,
+   "AppdxTable": 3,
+   "Table": 3
+  },
+  "matching_characters": 44066,
+  "dropped_notes": 51,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 1,
+  "kept_spaces": 11,
+  "table_pages": [
+   37,
+   38,
+   38,
+   39,
+   40,
+   41,
+   41,
+   42
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 38,
+    "before": [
+     "第六十八条第二項",
+     "前条第一項（第三号に係る部分に限る。）の規定により電子調書に記",
+     "証人等の陳述を記載した書面を作成しなければ"
+    ],
+    "added": [
+     "",
+     "録すべき事項を記録した電磁的記録を作成し、ファイルに記録しなければ",
+     ""
+    ]
+   },
+   {
+    "page": 41,
+    "before": [
+     null,
+     "読み替える",
+     "、家事事件手続規則第四十六条"
+    ],
+    "added": [
+     "",
+     "",
+     "の四中「同条の文書の写し」とあるのは「同項において読み替えて準用する同規則第百四十九条の二第一項の電磁的記録を記録した記録媒体」と読み替える"
+    ]
+   },
+   {
+    "page": 42,
+    "before": [
+     null,
+     "ファイルに記録して",
+     "家事調停事件の記録に添付し"
+    ],
+    "added": [
+     "",
+     "",
+     "て"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-article",
+    "2"
+   ],
+   [
+    "excerpt-first-paragraph",
+    "4"
+   ],
+   [
+    "appdx",
+    "別表第一"
+   ],
+   [
+    "appdx",
+    "別表第二"
+   ],
+   [
+    "appdx",
+    "別表第三"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成二七年八月三日最高裁判所規則第七号）",
+   "附則（平成三一年三月二〇日最高裁判所規則第一号）",
+   "附則（令和元年七月九日最高裁判所規則第三号）",
+   "附則（令和二年一月一〇日最高裁判所規則第二号）",
+   "附則（令和四年五月一三日最高裁判所規則第一四号） 抄",
+   "附則（令和四年一一月七日最高裁判所規則第一七号） 抄",
+   "附則（令和五年九月一九日最高裁判所規則第四号） 抄",
+   "附則（令和五年一一月二二日最高裁判所規則第七号）",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附則（令和七年十月一七日最高裁判所規則第一三号）"
+  ]
+ },
+ "independentCount": {
+  "title": "家事事件手続規則",
+  "extractor": [
+   {
+    "page": 37,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 38,
+    "tables": 2,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 39,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 40,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 41,
+    "tables": 2,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 42,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 155,
+    "xml": 155,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 68,
+    "body": 68
+   },
+   "Article": {
+    "pdf_lines": 166,
+    "xml": 166,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 135,
+    "xml": 135,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 122,
+    "xml": 122,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "家事事件手続規則",
+  "units": 671,
+  "pdf_lines": 1471,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 439,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 84
+ },
+ "tables": {
+  "title": "家事事件手続規則",
+  "xml_tables": 3,
+  "pdf_fragments": 8,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 13,
+    "equal": 13,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 31,
+    "equal": 31,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 3,
+    "rows": 13,
+    "equal": 13,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成24年7月17日 号外第154号",
+   "rule": "平成24年最高裁判所規則第8号",
+   "title": "家事事件手続規則",
+   "year": 2012,
+   "no": 8,
+   "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540007f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成27年8月3日 本紙第6587号",
+    "rule": "平成27年最高裁判所規則第7号",
+    "title": "家事事件手続規則の一部を改正する規則",
+    "year": 2015,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20150803/20150803h06587/20150803h065870001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成31年3月20日 本紙第7471号",
+    "rule": "平成31年最高裁判所規則第1号",
+    "title": "家事事件手続規則の一部を改正する規則",
+    "year": 2019,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20190320/20190320h07471/20190320h074710001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和元年7月9日 本紙第46号",
+    "rule": "令和元年最高裁判所規則第3号",
+    "title": "家事事件手続規則の一部を改正する規則",
+    "year": 2019,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20190709/20190709h00046/20190709h000460002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和2年1月10日 本紙第167号",
+    "rule": "令和2年最高裁判所規則第2号",
+    "title": "家事事件手続規則の一部を改正する規則",
+    "year": 2020,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20200110/20200110h00167/20200110h001670002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年5月13日 本紙第732号",
+    "rule": "令和4年最高裁判所規則第14号",
+    "title": "家事事件手続規則及び民事訴訟費用等に関する規則の一部を改正する規則",
+    "year": 2022,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20220513/20220513h00732/20220513h007320004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年11月22日 本紙第1108号",
+    "rule": "令和5年最高裁判所規則第7号",
+    "title": "人事訴訟規則及び家事事件手続規則の一部を改正する規則",
+    "year": 2023,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20231122/20231122h01108/20231122h011080002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年10月17日 本紙第1570号",
+    "rule": "令和7年最高裁判所規則第13号",
+    "title": "家事事件手続規則及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則の一部を改正する規則",
+    "year": 2025,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20251017/20251017h01570/20251017h015700002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年9月19日 本紙第1064号",
+    "rule": "令和5年最高裁判所規則第4号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20230919/20230919h01064/20230919h010640002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20150803",
+    "no": 8,
+    "explained_by_neighbour": [
+     "家事事件手続規則の一部を改正する規則（最高裁七）"
+    ]
+   },
+   {
+    "date": "20190709",
+    "no": 2,
+    "explained_by_neighbour": [
+     "司法修習生に関する規則の一部を改正する規則（最高裁一）",
+     "家事事件手続規則の一部を改正する規則（同三）"
+    ]
+   },
+   {
+    "date": "20200110",
+    "no": 1,
+    "explained_by_neighbour": [
+     "家事事件手続規則の一部を改正する規則（同二）"
+    ]
+   },
+   {
+    "date": "20220513",
+    "no": 13,
+    "explained_by_neighbour": [
+     "家事事件手続規則及び民事訴訟費用等に関する規則の一部を改正する規則（同一四）"
+    ]
+   }
+  ]
+ }
+}

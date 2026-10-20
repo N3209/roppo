@@ -1,0 +1,241 @@
+{
+ "workId": "hanzai-shueki-hozen-kisoku",
+ "file": "hanzai-shueki-hozen-kisoku-3e551e54bc047845ce7cb65f67e630049d151f3f0d529946c4e2ec9ef885e1ab.xml",
+ "sha256": "3e551e54bc047845ce7cb65f67e630049d151f3f0d529946c4e2ec9ef885e1ab",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2023/hanzaisyuuekihozennkisoku20230220.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "2b751f40d9f855a993123a31460d78aed3bec2e8f534912b0c2346168c484a2a",
+  "pages": 15,
+  "law_num": "平成十一年十二月一日最高裁判所規則第十号",
+  "main_articles": 28,
+  "counts": {
+   "Article": 32,
+   "Paragraph": 95,
+   "Item": 65,
+   "Subitem1": 0,
+   "SupplProvision": 11,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 15620,
+  "dropped_notes": 20,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 9,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則 抄",
+   "附則（平成一四年三月二七日最高裁判所規則第五号）",
+   "附則（平成一四年一二月一一日最高裁判所規則第一五号）",
+   "附則（平成一七年一月一一日最高裁判所規則第一号）",
+   "附則（平成一八年二月八日最高裁判所規則第二号）",
+   "附則（平成二〇年一〇月二日最高裁判所規則第一四号）",
+   "附則（平成二〇年一〇月一五日最高裁判所規則第一六号）",
+   "附則（平成二〇年一一月一九日最高裁判所規則第二一号）",
+   "附則（平成二七年四月八日最高裁判所規則第四号）",
+   "附則（令和元年一一月二七日最高裁判所規則第五号）",
+   "附則（令和四年一一月七日最高裁判所規則第一七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "犯罪収益に係る保全手続等に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 28,
+    "xml": 28,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 7,
+    "body": 7
+   },
+   "Article": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 57,
+    "xml": 57,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 65,
+    "xml": 65,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "犯罪収益に係る保全手続等に関する規則",
+  "units": 207,
+  "pdf_lines": 592,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 109,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 24
+ },
+ "tables": {
+  "title": "犯罪収益に係る保全手続等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成17年1月11日 号外第3号",
+    "rule": "平成17年最高裁判所規則第1号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2005,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年2月8日 本紙第4272号",
+    "rule": "平成18年最高裁判所規則第2号",
+    "title": "会社法及び会社法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備等に関する規則",
+    "year": 2006,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20060208/20060208h04272/20060208h042720004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月2日 本紙第4925号",
+    "rule": "平成20年最高裁判所規則第14号",
+    "title": "刑事訴訟規則及び犯罪収益に係る保全手続等に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20081002/20081002h04925/20081002h049250002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月15日 本紙第4933号",
+    "rule": "平成20年最高裁判所規則第16号",
+    "title": "犯罪収益に係る保全手続等に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 16,
+    "url": "https://www.kanpo.go.jp/old/20081015/20081015h04933/20081015h049330004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年11月19日 号外第254号",
+    "rule": "平成20年最高裁判所規則第21号",
+    "title": "犯罪収益に係る保全手続等に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 21,
+    "url": "https://www.kanpo.go.jp/old/20081119/20081119g00254/20081119g002540003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年4月8日 本紙第6509号",
+    "rule": "平成27年最高裁判所規則第4号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2015,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20150408/20150408h06509/20150408h065090003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和元年11月27日 号外第169号",
+    "rule": "令和元年最高裁判所規則第5号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2019,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20191127/20191127g00169/20191127g001690001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20081015",
+    "no": 15,
+    "explained_by_neighbour": [
+     "犯罪収益に係る保全手続等に関する規則の一部を改正する規則（同一六）"
+    ]
+   },
+   {
+    "date": "20081119",
+    "no": 20,
+    "explained_by_neighbour": [
+     "犯罪収益に係る保全手続等に関する規則の一部を改正する規則（同二一）"
+    ]
+   },
+   {
+    "date": "20191127",
+    "no": 6,
+    "explained_by_neighbour": [
+     "民事執行規則等の一部を改正する規則（最高裁五）"
+    ]
+   }
+  ]
+ }
+}

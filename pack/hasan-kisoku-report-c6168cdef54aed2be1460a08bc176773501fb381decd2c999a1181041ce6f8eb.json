@@ -1,0 +1,464 @@
+{
+ "workId": "hasan-kisoku",
+ "file": "hasan-kisoku-d13c8b2a00b10a2accf77b07aa4f5cbe748202c52f23696055851cb11f7e5404.xml",
+ "sha256": "d13c8b2a00b10a2accf77b07aa4f5cbe748202c52f23696055851cb11f7e5404",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521hasannkisoku.pdf",
+  "fetched": "2026-10-06",
+  "sha256": "1de89a031173e570e20b29cb1be1b630f86c23d656436b2a20e758c5cb261968",
+  "pages": 40,
+  "law_num": "平成十六年十月六日最高裁判所規則第十四号",
+  "main_articles": 98,
+  "counts": {
+   "Article": 106,
+   "Paragraph": 224,
+   "Item": 84,
+   "Subitem1": 7,
+   "SupplProvision": 8,
+   "AppdxTable": 1,
+   "Table": 3
+  },
+  "matching_characters": 34441,
+  "dropped_notes": 33,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 2,
+  "kept_spaces": 15,
+  "table_pages": [
+   28,
+   29,
+   30,
+   31,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 29,
+    "before": [
+     "一",
+     "法第二百五十七条第一項（同条第八項において準用する場合を含む。）の破産手続開始の登記の嘱託書",
+     "イ 破産手続開始の決定の裁判書の謄本ロ 破産管財人がそれぞれ単独にその職務を行い、又は職務を分掌することについて法第七十六条第一項ただし書の許可"
+    ],
+    "added": [
+     "",
+     "",
+     "があったときは、当該許可の決定の裁判書の謄本"
+    ]
+   },
+   {
+    "page": 31,
+    "before": [
+     "八",
+     "法第二百五十八条第五項において準用",
+     "保全管理命令、保全管理命令を変更する"
+    ],
+    "added": [
+     "",
+     "する同条第一項第二号の規定による登記の嘱託書",
+     "決定又は保全管理命令を取り消す決定の裁判書の謄本"
+    ]
+   },
+   {
+    "page": 35,
+    "before": [
+     "第一条第二項",
+     "陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計",
+     "調書を作成し、記名押印しなければ"
+    ],
+    "added": [
+     "",
+     "算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ",
+     ""
+    ]
+   },
+   {
+    "page": 36,
+    "before": [
+     "第三十四条の七第二項、第七十二条、第七十六条、第百十六",
+     "電子調書",
+     "調書"
+    ],
+    "added": [
+     "条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二項、第百四十二条及び第百四十六条第一項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 37,
+    "before": [
+     "第六十六条第三項",
+     "当該電子調書に記録するとともに、当該電子調書の内容を確認し、かつ、これを確認したことを当該",
+     "付記して認印しなければ"
+    ],
+    "added": [
+     "",
+     "電子調書上明らかにする措置を講じなければ",
+     ""
+    ]
+   },
+   {
+    "page": 38,
+    "new_row_under_rowspan": [
+     "ファイルに記録して",
+     "破産手続等に係る事件の記録に添付して"
+    ]
+   },
+   {
+    "page": 40,
+    "before": [
+     "第百九十五条",
+     "被上告人（当該書面の送達について法第百九条の二（電子情報処理組織による送達）第一項ただし書の届出をしている者を除く。）の数の副本（法第百三十二条の十（電子情報処理組織による申立て等）第",
+     "被上告人の数に六を加えた数の副本"
+    ],
+    "added": [
+     "",
+     "一項の規定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [
+   {
+    "page": 35,
+    "pdfplumber": "算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。に記録しなければ",
+    "assigned": "算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ"
+   },
+   {
+    "page": 35,
+    "pdfplumber": "）",
+    "assigned": ""
+   },
+   {
+    "page": 36,
+    "pdfplumber": "当該電子調書に記録するとともに、当該電子調書の内容を確認しかつ、これを確認したことを当該",
+    "assigned": "当該電子調書に記録するとともに、当該電子調書の内容を確認し、かつ、これを確認したことを当該"
+   },
+   {
+    "page": 36,
+    "pdfplumber": "付記して認印しなければ、",
+    "assigned": "付記して認印しなければ"
+   }
+  ],
+  "page_numbers": [],
+  "events": [
+   [
+    "known-arabic-item",
+    "1"
+   ],
+   [
+    "known-arabic-item",
+    "2"
+   ],
+   [
+    "known-arabic-item",
+    "3"
+   ],
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（平成一七年一月一一日最高裁判所規則第一号）抄",
+   "附 則（平成一七年二月九日最高裁判所規則第六号）",
+   "附 則（平成一九年四月一一日最高裁判所規則第五号）",
+   "附 則（平成二〇年六月六日最高裁判所規則第八号）",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附 則（令和七年八月二九日最高裁判所規則第一〇号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "破産規則",
+  "extractor": [
+   {
+    "page": 28,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 29,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 30,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 31,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 34,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 35,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 36,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 37,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 38,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 39,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 40,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 98,
+    "xml": 98,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 38,
+    "body": 38
+   },
+   "Article": {
+    "pdf_lines": 106,
+    "xml": 106,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 118,
+    "xml": 115,
+    "diff": -3,
+    "explained_by_registered_exceptions": -3
+   },
+   "Item": {
+    "pdf_lines": 81,
+    "xml": 84,
+    "diff": 3,
+    "explained_by_registered_exceptions": 3
+   },
+   "Subitem1": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "破産規則",
+  "units": 465,
+  "pdf_lines": 1009,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 309,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 51
+ },
+ "tables": {
+  "title": "破産規則",
+  "xml_tables": 3,
+  "pdf_fragments": 11,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 6,
+    "equal": 6,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 9,
+    "equal": 9,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 3,
+    "rows": 69,
+    "equal": 69,
+    "joins": 4,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成16年10月6日 号外第221号",
+   "rule": "平成16年最高裁判所規則第14号",
+   "title": "破産規則",
+   "year": 2004,
+   "no": 14,
+   "url": "https://www.kanpo.go.jp/old/20041006/20041006g00221/20041006g002210001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成17年1月11日 号外第3号",
+    "rule": "平成17年最高裁判所規則第1号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2005,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年2月9日 本紙第4030号",
+    "rule": "平成17年最高裁判所規則第6号",
+    "title": "不動産登記法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2005,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20050209/20050209h04030/20050209h040300003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年4月11日 本紙第4561号",
+    "rule": "平成19年最高裁判所規則第5号",
+    "title": "信託法及び信託法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備に関する規則",
+    "year": 2007,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20070411/20070411h04561/20070411h045610001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年8月29日 号外第195号",
+    "rule": "令和7年最高裁判所規則第10号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20250829/20250829g00195/20250829g001950006f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年6月6日 本紙第4844号",
+    "rule": "平成20年最高裁判所規則第8号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2008,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20080606/20080606h04844/20080606h048440001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

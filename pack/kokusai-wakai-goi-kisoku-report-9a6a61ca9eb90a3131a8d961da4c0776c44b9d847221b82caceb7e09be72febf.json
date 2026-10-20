@@ -1,0 +1,223 @@
+{
+ "workId": "kokusai-wakai-goi-kisoku",
+ "file": "kokusai-wakai-goi-kisoku-925c660360e11b509f38b8ecd275c840e0a3a50a9ff4e6383b648395b0025dc1.xml",
+ "sha256": "925c660360e11b509f38b8ecd275c840e0a3a50a9ff4e6383b648395b0025dc1",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521kokusaiwakaigouikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "6799fbb9eef9ab8afad089fffee73479dd31dbc44f9ac43d597c2bd07db53d58",
+  "pages": 7,
+  "law_num": "令和六年二月一日最高裁判所規則第三号",
+  "main_articles": 14,
+  "counts": {
+   "Article": 15,
+   "Paragraph": 26,
+   "Item": 5,
+   "Subitem1": 0,
+   "SupplProvision": 2,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 6524,
+  "dropped_notes": 15,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   4,
+   5,
+   6,
+   7
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 5,
+    "before": [
+     "第三十四条の七第二項、第七十二条、第七十六条、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二",
+     "電子調書",
+     "調書"
+    ],
+    "added": [
+     "十二条の三第二項、第百四十二条及び第百四十六条第一項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 6,
+    "new_row_under_rowspan": [
+     "電子調書の記録",
+     "調書の記載"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "国際和解合意関係事件手続規則",
+  "extractor": [
+   {
+    "page": 4,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 5,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 6,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "国際和解合意関係事件手続規則",
+  "units": 48,
+  "pdf_lines": 123,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 38,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 5
+ },
+ "tables": {
+  "title": "国際和解合意関係事件手続規則",
+  "xml_tables": 1,
+  "pdf_fragments": 4,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 71,
+    "equal": 71,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和6年2月1日 本紙第1153号",
+   "rule": "令和6年最高裁判所規則第3号",
+   "title": "国際和解合意関係事件手続規則",
+   "year": 2024,
+   "no": 3,
+   "url": "https://www.kanpo.go.jp/old/20240201/20240201h01153/20240201h011530002f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

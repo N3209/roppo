@@ -1,0 +1,254 @@
+{
+ "workId": "tokutei-wakai-kisoku",
+ "file": "tokutei-wakai-kisoku-593cadfde2cdb20d99d6a73faefd574c512bf9af615e42a767a563d91eafcc90.xml",
+ "sha256": "593cadfde2cdb20d99d6a73faefd574c512bf9af615e42a767a563d91eafcc90",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521tokuteiwakaikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "f84c821dbc3eccdf50d2c61ab536b5c1139ad8ac74d3f39f9295c8e31c6e3a5c",
+  "pages": 8,
+  "law_num": "令和六年二月一日最高裁判所規則第四号",
+  "main_articles": 13,
+  "counts": {
+   "Article": 14,
+   "Paragraph": 25,
+   "Item": 5,
+   "Subitem1": 0,
+   "SupplProvision": 2,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 6413,
+  "dropped_notes": 15,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 4,
+    "before": [
+     "第一条第二項",
+     "陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟",
+     "調書を作成し、記名押印しなければ"
+    ],
+    "added": [
+     "",
+     "記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ",
+     ""
+    ]
+   },
+   {
+    "page": 5,
+    "new_row_under_rowspan": [
+     "書類又は電磁的記録について直送（当事者が前条（書類又は電磁的記録の送付）第二項又は第三項の方法により相手方に対して直接送付すること",
+     "書類について直送（当事者の相手方に対する直接の送付"
+    ]
+   },
+   {
+    "page": 8,
+    "before": [
+     "第百九十五条",
+     "被上告人（当該書面の送達について法第百九条の二（電子情報処理組織による送達）第一項ただし書の届",
+     "被上告人の数に六を加えた数の副本"
+    ],
+    "added": [
+     "",
+     "出をしている者を除く。）の数の副本（法第百三十二条の十（電子情報処理組織による申立て等）第一項の規定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "特定和解関係事件手続規則",
+  "extractor": [
+   {
+    "page": 3,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 4,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 5,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 6,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 8,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "特定和解関係事件手続規則",
+  "units": 46,
+  "pdf_lines": 120,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 36,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 5
+ },
+ "tables": {
+  "title": "特定和解関係事件手続規則",
+  "xml_tables": 1,
+  "pdf_fragments": 6,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 71,
+    "equal": 71,
+    "joins": 2,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和6年2月1日 本紙第1153号",
+   "rule": "令和6年最高裁判所規則第4号",
+   "title": "特定和解関係事件手続規則",
+   "year": 2024,
+   "no": 4,
+   "url": "https://www.kanpo.go.jp/old/20240201/20240201h01153/20240201h011530002f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

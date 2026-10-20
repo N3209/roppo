@@ -1,0 +1,150 @@
+{
+ "workId": "saiban-jinsokuka-kensho-kisoku",
+ "file": "saiban-jinsokuka-kensho-kisoku-7d2c28aeb2a436c4b71c52822ea0e2ad1a9af8de5427994c7140047a5c60b29f.xml",
+ "sha256": "7d2c28aeb2a436c4b71c52822ea0e2ad1a9af8de5427994c7140047a5c60b29f",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2022/r4kisokukaisei.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "95bb06e63da48a2b2703ec6ddcff8c8d2c4f234edcecb5864157e61b4fa4ece8",
+  "pages": 2,
+  "law_num": "平成十五年十一月十三日最高裁判所規則第二十六号",
+  "main_articles": 4,
+  "counts": {
+   "Article": 4,
+   "Paragraph": 6,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 2,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 472,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 12,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和四年一一月二八日最高裁判所規則第一八号）"
+  ]
+ },
+ "independentCount": {
+  "title": "裁判の迅速化に係る検証に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "裁判の迅速化に係る検証に関する規則",
+  "units": 10,
+  "pdf_lines": 25,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 8,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 4
+ },
+ "tables": {
+  "title": "裁判の迅速化に係る検証に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成15年11月13日 本紙第3731号",
+   "rule": "平成15年最高裁判所規則第26号",
+   "title": "裁判の迅速化に係る検証に関する規則",
+   "year": 2003,
+   "no": 26,
+   "url": "https://www.kanpo.go.jp/old/20031113/20031113h03731/20031113h037310001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和4年11月28日 本紙第866号",
+    "rule": "令和4年最高裁判所規則第18号",
+    "title": "裁判の迅速化に係る検証に関する規則の一部を改正する規則",
+    "year": 2022,
+    "no": 18,
+    "url": "https://www.kanpo.go.jp/old/20221128/20221128h00866/20221128h008660002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

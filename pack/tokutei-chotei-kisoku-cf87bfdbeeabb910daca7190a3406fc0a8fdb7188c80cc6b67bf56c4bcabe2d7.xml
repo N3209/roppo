@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/r080521tokuteityoutei.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和六年九月一七日最高裁判所規則第一四号」
+  範囲: 本則9条（削除条の範囲を1要素として数える）、附則3本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="12" Num="2" PromulgateMonth="1" PromulgateDay="20" LawType="Rule">
+  <LawNum>平成十二年一月二十日最高裁判所規則第二号</LawNum>
+  <LawBody>
+    <LawTitle>特定調停手続規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（特定調停の申立て・法第三条）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特定債務等の調整の促進のための特定調停に関する法律（平成十一年法律第百五十八号。以下「法」という。）第二条（定義）第三項の特定調停の申立人が事業を行っているときは、当該申立人は、申立てと同時に（やむを得ない理由がある場合にあっては、申立ての後遅滞なく）、関係権利者との交渉の経過及び申立人の希望する調停条項の概要を明らかにしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特定調停の申立人が法人であるときは、当該申立人は、申立てと同時に（やむを得ない理由がある場合にあっては、申立ての後遅滞なく）、当該申立人の使用人その他の従業者の過半数で組織する労働組合があるときはその労働組合の名称、当該申立人の使用人その他の従業者の過半数で組織する労働組合がないときは当該申立人の使用人その他の従業者の過半数を代表する者の氏名を明らかにしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（財産の状況を示すべき明細書等・法第三条）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三条（特定調停手続）第三項の財産の状況を示すべき明細書その他特定債務者であることを明らかにする資料には、次に掲げる事項を具体的に記載しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立人の資産、負債その他の財産の状況</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立人が事業を行っているときは、その事業の内容及び損益、資金繰りその他の事業の状況</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立人が個人であるときは、職業、収入その他の生活の状況</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三条第三項の関係権利者の一覧表には、関係権利者の氏名又は名称及び住所並びにその有する債権又は担保権の発生原因及び内容を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（民事執行手続の停止・法第七条）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第七条（民事執行手続の停止）第一項の申立ては、次に掲げる事項を明らかにし、かつ、その証拠書類を提出してしなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>当該民事執行の手続の基礎となっている債権又は担保権の内容</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>前号の担保権によって担保される債権の内容</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>当該民事執行の手続の進行状況</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>特定債務等の調整に関する関係権利者の意向</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>調停が成立する見込み</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特定調停に係る事件の係属する裁判所は、前項の申立てがあった場合において、必要があると認めるときは、当該民事執行の申立てをしている関係権利者を審尋することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（相手方が提出すべき書面等・法第十条）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>関係権利者である当事者及び参加人は、相当な期間（裁判所書記官が期間を定めて提出を催告したときは、その期間）内に、次に掲げる事項を記載した書面及びその証拠書類を提出しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立人に対する債権又は担保権の発生原因及び内容</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>前号の債権についての弁済、放棄等による内容の変更及び同号の担保権についての担保関係の変更</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項第二号に規定する弁済による債権の内容の変更を記載するときは、その算出の根拠及び過程を明らかにしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（当事者に対する通知・法第十一条等）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事調停規則（昭和二十六年最高裁判所規則第八号）第二十二条（当事者に対する通知）第一項の規定は、法第十一条（特定調停をしない場合）又は第十八条（特定調停の不成立）の規定により事件が終了した場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（文書の提出を求める場合の制裁の告知等・法第十二条）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>調停委員会は、法第十二条（文書等の提出）の規定により文書又は物件の提出を求める場合には、同時に、その違反に対する法律上の制裁を告知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>調停委員会は、必要があると認めるときは、法第十二条の規定により提出された文書又は物件を裁判所に留め置くことができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（調停条項案の書面による受諾等・法第十六条等）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則（平成八年最高裁判所規則第五号）第百六十三条（和解条項案の書面による受諾）第一項から第三項までの規定は法第十六条（調停条項案の書面による受諾）の規定による調停条項案の提示及び受諾並びに同条の規定により当事者間に合意が成立したものとみなされる場合について、同規則第百六十四条（裁判所等が定める和解条項）の規定は法第十七条（調停委員会が定める調停条項）の規定により調停委員会が調停条項を定める場合について準用する。この場合において、同規則第百六十三条第一項中「書面又は電磁的記録」とあるのは「書面」と、「記載し、又は記録して」とあるのは「記載して」と、「付記し、又は記録する」とあるのは「付記する」と、同条第三項並びに同規則第百六十四条第二項及び第三項中「電子調書」とあるのは「調書」と、「記録しなければ」とあるのは「記載しなければ」と読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十六条の規定により当事者間に合意が成立したものとみなされたときは、裁判所書記官は、調停条項案を受諾する旨の書面を提出した当事者に対し、遅滞なく、合意が成立したものとみなされた旨を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（裁判官の特定調停への準用・法第十九条）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第四条から前条まで（相手方が提出すべき書面等、当事者に対する通知、文書の提出を求める場合の制裁の告知等及び調停条項案の書面による受諾等）の規定は、裁判官だけで特定調停を行う場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（民事調停規則との関係・法第二十二条）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>特定調停については、この規則に定めるもののほか、民事調停規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日（平成十二年二月十七日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二四年七月一七日最高裁判所規則第九号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、非訟事件手続法（平成二十三年法律第五十一号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（以下「施行日」という。）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

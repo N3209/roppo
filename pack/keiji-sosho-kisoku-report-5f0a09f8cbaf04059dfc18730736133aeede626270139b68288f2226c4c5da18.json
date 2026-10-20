@@ -1,0 +1,504 @@
+{
+ "workId": "keiji-sosho-kisoku",
+ "file": "keiji-sosho-kisoku-61b824d192340cd5c8d61f31ac2c5f4ae6a45e15f4272a084ae2abe32fb99201.xml",
+ "sha256": "61b824d192340cd5c8d61f31ac2c5f4ae6a45e15f4272a084ae2abe32fb99201",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/keijisosyoukisoku_20260521.pdf",
+  "fetched": "2026-10-06",
+  "sha256": "6eb99e8ec305f537083d55ba678faa93b3a6d1b2a23acceb6688ae480364e428",
+  "pages": 227,
+  "law_num": "昭和二十三年十二月一日最高裁判所規則第三十二号",
+  "main_articles": 562,
+  "counts": {
+   "Article": 568,
+   "Paragraph": 1076,
+   "Item": 360,
+   "Subitem1": 15,
+   "SupplProvision": 50,
+   "AppdxTable": 0,
+   "Table": 3
+  },
+  "matching_characters": 128838,
+  "dropped_notes": 434,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 14,
+  "table_pages": [
+   202,
+   203,
+   204,
+   205,
+   205,
+   206
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 205,
+    "before": [
+     "第百五十条",
+     "被疑者",
+     "法第三百四十五条の二（法第四百四条（法第四百十四条において準用する場合を含む。）において準用する場合を含む。）又"
+    ],
+    "added": [
+     "",
+     "",
+     "は第四百九十四条の三の規定による決定を受けた者"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [
+   {
+    "law_num": "令和八年九月十六日最高裁判所規則第十一号",
+    "part": "第二十七条・第百三十八条の九",
+    "gazette": "官報 令和8年9月16日 本紙第1791号 最高裁判所規則第十一号（刑事訴訟規則の一部を改正する規則）",
+    "effective": "2026-10-20"
+   }
+  ],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二四年五月二八日最高裁判所規則第八号）",
+   "附則（昭和二四年七月一日最高裁判所規則第一二号）",
+   "附則（昭和二五年四月一五日最高裁判所規則第九号）",
+   "附則（昭和二五年四月二八日最高裁判所規則第一一号）",
+   "附則（昭和二五年一二月二〇日最高裁判所規則第二八号）",
+   "附則（昭和二六年一一月二〇日最高裁判所規則第一五号）",
+   "附則（昭和二七年七月三一日最高裁判所規則第一九号）",
+   "附則（昭和二八年三月一四日最高裁判所規則第五号）",
+   "附則（昭和二八年一〇月一五日最高裁判所規則第二一号）",
+   "附則（昭和二九年五月二九日最高裁判所規則第五号）",
+   "附則（昭和三二年二月一五日最高裁判所規則第一号）",
+   "附則（昭和三五年三月二五日最高裁判所規則第二号）",
+   "附則（昭和三六年六月一日最高裁判所規則第六号）",
+   "附則（昭和四七年六月二四日最高裁判所規則第五号）",
+   "附則（昭和五一年六月七日最高裁判所規則第四号）",
+   "附則（昭和五一年一一月二〇日最高裁判所規則第八号）",
+   "附則（昭和五七年九月三日最高裁判所規則第七号）",
+   "附則（昭和六二年一二月一日最高裁判所規則第八号）",
+   "附則（平成四年二月三日最高裁判所規則第一号）",
+   "附則（平成七年六月一日最高裁判所規則第一号）",
+   "附則（平成九年七月二十九日最高裁判所規則第五号）",
+   "附則（平成一一年一二月一日最高裁判所規則第九号）",
+   "附則（平成一二年九月二七日最高裁判所規則第一二号）",
+   "附則（平成一二年一二月一五日最高裁判所規則第一五号）",
+   "附則（平成一三年二月一九日最高裁判所規則第一号）",
+   "附則（平成一五年三月一九日最高裁判所規則第七号）",
+   "附則（平成一七年六月二二日最高裁判所規則第一〇号）",
+   "附則（平成一八年五月一二日最高裁判所規則第六号）",
+   "附則（平成一八年七月二五日最高裁判所規則第九号）",
+   "附則（平成一八年七月二八日最高裁判所規則第一一号）",
+   "附則（平成一九年五月二五日最高裁判所規則第六号）",
+   "附則（平成一九年一二月七日最高裁判所規則第一五号）",
+   "附則（平成二〇年五月二一日最高裁判所規則第五号）抄",
+   "附則（平成二〇年五月二一日最高裁判所規則第六号）抄",
+   "附則（平成二〇年一〇月二日最高裁判所規則第一四号）",
+   "附則（平成二〇年一〇月二一日最高裁判所規則第一七号）抄",
+   "附則（平成二四年二月二〇日最高裁判所規則第一号）",
+   "附則（平成二八年四月七日最高裁判所規則第四号）",
+   "附則（平成二八年一〇月一八日最高裁判所規則第六号）抄",
+   "附則（平成三〇年一月一五日最高裁判所規則第一号）抄",
+   "附則（令和三年四月二六日最高裁判所規則第一号）",
+   "附則（令和三年一二月二二日最高裁判所規則第三号）",
+   "附則（令和五年七月一八日最高裁判所規則第三号）",
+   "附則（令和五年九月一九日最高裁判所規則第四号）抄",
+   "附則（令和五年一二月二五日最高裁判所規則第一〇号）抄",
+   "附則（令和七年二月一二日最高裁判所規則第二号）",
+   "附則（令和七年二月一二日最高裁判所規則第三号）抄",
+   "附則（令和七年一二月二六日最高裁判所規則第一七号）",
+   "附則（令和八年九月一六日最高裁判所規則第一一号）"
+  ]
+ },
+ "independentCount": {
+  "title": "刑事訴訟規則",
+  "extractor": [
+   {
+    "page": 202,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 203,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 204,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 205,
+    "tables": 2,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 206,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 562,
+    "xml": 562,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 44,
+    "body": 44
+   },
+   "Article": {
+    "pdf_lines": 568,
+    "xml": 568,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 477,
+    "xml": 477,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 360,
+    "xml": 360,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 50,
+    "xml": 50,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "刑事訴訟規則",
+  "units": 2077,
+  "pdf_lines": 5007,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 1564,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 105
+ },
+ "tables": {
+  "title": "刑事訴訟規則",
+  "xml_tables": 3,
+  "pdf_fragments": 6,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 5,
+    "equal": 5,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 11,
+    "equal": 11,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 3,
+    "rows": 9,
+    "equal": 9,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成17年6月22日 号外第138号",
+    "rule": "平成17年最高裁判所規則第10号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2005,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20050622/20050622g00138/20050622g001380025f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年5月12日 本紙第4335号",
+    "rule": "平成18年最高裁判所規則第6号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20060512/20060512h04335/20060512h043350002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年7月25日 本紙第4386号",
+    "rule": "平成18年最高裁判所規則第9号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2006,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20060725/20060725h04386/20060725h043860002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年7月28日 号外第174号",
+    "rule": "平成18年最高裁判所規則第11号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20060728/20060728g00174/20060728g001740001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年5月25日 号外第107号",
+    "rule": "平成19年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び少年審判規則の一部を改正する規則",
+    "year": 2007,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20070525/20070525g00107/20070525g001070049f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成19年12月7日 号外第279号",
+    "rule": "平成19年最高裁判所規則第15号",
+    "title": "刑事訴訟規則及び犯罪被害者等の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20071207/20071207g00279/20071207g002790017f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年5月21日 号外第104号",
+    "rule": "平成20年最高裁判所規則第5号",
+    "title": "裁判員の参加する刑事裁判に関する規則及び刑事訴訟規則の一部を改正する規則",
+    "year": 2008,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20080521/20080521g00104/20080521g001040001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年5月21日 号外第104号",
+    "rule": "平成20年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び犯罪被害者等の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20080521/20080521g00104/20080521g001040004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月2日 本紙第4925号",
+    "rule": "平成20年最高裁判所規則第14号",
+    "title": "刑事訴訟規則及び犯罪収益に係る保全手続等に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20081002/20081002h04925/20081002h049250002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月21日 本紙第4937号",
+    "rule": "平成20年最高裁判所規則第17号",
+    "title": "犯罪被害者等の権利利益の保護を図るための刑事手続に付随する措置に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20081021/20081021h04937/20081021h049370002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成24年2月20日 本紙第5742号",
+    "rule": "平成24年最高裁判所規則第1号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2012,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20120220/20120220h05742/20120220h057420002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成28年4月7日 本紙第6751号",
+    "rule": "平成28年最高裁判所規則第4号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2016,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20160407/20160407h06751/20160407h067510001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成28年10月18日 本紙第6880号",
+    "rule": "平成28年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則の一部を改正する規則",
+    "year": 2016,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20161018/20161018h06880/20161018h068800002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成30年1月15日 本紙第7181号",
+    "rule": "平成30年最高裁判所規則第1号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2018,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20180115/20180115h07181/20180115h071810001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和3年4月26日 本紙第481号",
+    "rule": "令和3年最高裁判所規則第1号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2021,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20210426/20210426h00481/20210426h004810002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和3年12月22日 本紙第642号",
+    "rule": "令和3年最高裁判所規則第3号",
+    "title": "少年審判規則及び刑事訴訟規則の一部を改正する規則",
+    "year": 2021,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20211222/20211222h00642/20211222h006420002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年7月18日 本紙第1021号",
+    "rule": "令和5年最高裁判所規則第3号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2023,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20230718/20230718h01021/20230718h010210001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年9月19日 本紙第1064号",
+    "rule": "令和5年最高裁判所規則第4号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20230919/20230919h01064/20230919h010640002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年12月25日 号外第270号",
+    "rule": "令和5年最高裁判所規則第10号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20231225/20231225g00270/20231225g002700005f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年2月12日 号外第28号",
+    "rule": "令和7年最高裁判所規則第2号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2025,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20250212/20250212g00028/20250212g000280001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年2月12日 号外第28号",
+    "rule": "令和7年最高裁判所規則第3号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20250212/20250212g00028/20250212g000280007f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和8年9月16日 本紙第1791号",
+    "rule": "令和8年最高裁判所規則第11号",
+    "title": "刑事訴訟規則の一部を改正する規則",
+    "year": 2026,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/20260916/20260916h01791/20260916h017910002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [
+   "令和8年最高裁判所規則第11号"
+  ],
+  "shared_page_only": [
+   {
+    "date": "20210426",
+    "no": 2,
+    "explained_by_neighbour": [
+     "刑事訴訟規則の一部を改正する規則（最高裁一）"
+    ]
+   },
+   {
+    "date": "20231225",
+    "no": 9,
+    "explained_by_neighbour": [
+     "刑事訴訟規則等の一部を改正する規則（同一〇）"
+    ]
+   }
+  ]
+ }
+}

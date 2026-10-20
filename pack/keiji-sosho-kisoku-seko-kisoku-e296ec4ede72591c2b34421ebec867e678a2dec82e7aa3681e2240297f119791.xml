@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/2023/keijisosyoukisokusekoukisoku.20240215.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和五年一二月二五日最高裁判所規則第一〇号」
+  範囲: 本則3条（削除条の範囲を1要素として数える）、附則5本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFで半角「( )」で組まれた括弧60字を全角「（）」に統一。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="23" Num="34" PromulgateMonth="12" PromulgateDay="23" LawType="Rule">
+  <LawNum>昭和二十三年十二月二十三日最高裁判所規則第三十四号</LawNum>
+  <LawBody>
+    <LawTitle>刑事訴訟規則施行規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号。以下規則という。）は、規則施行前に公訴の提起があつた事件については、これを適用しない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>規則施行の際まだ公訴が提起されていない事件については、規則を適用する。但し、規則施行前に従前の刑事訴訟法（大正十一年法律第七十五号。以下旧法という。）及び日本国憲法の施行に伴う刑事訴訟法の応急的措置に関する法律（昭和二十二年法律第七十六号。以下応急措置法という。）によつて生じた効力を妨げない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項但書の場合において、旧法又は応急措置法によつてした訴訟手続で規則にこれに相当する規定のあるものは、これを規則によつてしたものとみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第二項の事件について、規則施行の際現に被疑者に三人を超える弁護人があるときは、規則第二十七条の規定は、これを適用しない。但し、その被疑者の弁護人の数は、規則施行の際現に選任されていた弁護人の数を超えることができない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一条第一項の事件については、次の例による。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>規則第十九条から第二十五条まで（主任弁護人）、第四十九条（調書への引用）、第五十七条（裁判書等の謄本、抄本等）、第百七十九条の三（公判期日に出頭しない者に対する処置）、第百七十九条の四（公判期日の変更の請求）、第百七十九条の五（私選弁護人差支の場合の処置）、第百七十九条の六（国選弁護人差支の場合の処置）、第百八十二条（公判期日の不変更）、第百八十三条から第百八十六条まで（不出頭の場合の診断書の提出等）、第百九十一条の二（証人等の出頭）、第二百十二条（弁論時間の制限）、第二百十五条（公判廷の写真撮影等の制限）、第二百五十六条（違憲判断事件の優先審判）及び第三百三条（検察官及び弁護人の訴訟遅延行為に対する処置）の規定は，第一条第一項の規定にかかわらず、これを適用又は準用する。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一審の公判調書には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ItemSentence>
+            <Subitem1 Num="1">
+              <Subitem1Title>（イ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>公判をした裁判所及び年月日</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="2">
+              <Subitem1Title>（ロ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>裁判官、裁判所書記官及び検察官の官氏名並びに被告人、代理人、弁護人、輔佐人、通事及び翻訳人の氏名</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="3">
+              <Subitem1Title>（ハ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>被告人の出頭の有無</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="4">
+              <Subitem1Title>（ニ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>公開を禁じたときは、その旨及び理由</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="5">
+              <Subitem1Title>（ホ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>旧法第五十六条第二項に掲げる事項につき、裁判長が記録上明らかにしておくのを相当と認め、その記載を命じたもの</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="6">
+              <Subitem1Title>（ヘ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>判決その他の裁判の宣告をしたこと</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="7">
+              <Subitem1Title>（ト）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>その他公判期日における訴訟手続</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+            <Subitem1 Num="8">
+              <Subitem1Title>（チ）</Subitem1Title>
+              <Subitem1Sentence>
+                <Sentence>前各号に掲げるものの外、裁判長が記載を命じた事項及び訴訟関係人の請求により記載を許した事項</Sentence>
+              </Subitem1Sentence>
+            </Subitem1>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>開廷後引き続き十五日以上開廷しなかつた場合においても、必要と認める場合に限り、公判手続を更新すれば足りる。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一審の判決書には、起訴状に記載された事実を引用することができる。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一審において有罪の言渡をするに当り証拠により罪となるべき事実を認めた理由を説明し、法令の適用を示すには、証拠の標目及び法令を掲げれば足りる。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一審においては、上訴の申立がなく、且つ判決宣告の日から七日以内に判決書の謄本の請求がない場合には、判決主文並びに罪となるべき事実の要旨及び適用した罰条を公判調書に記載させて、これを以て判決書に代えることができる。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十四年一月一日（規則施行の日）から、これを施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二四年七月一日最高裁判所規則第一二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十四年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二五年一二月二〇日最高裁判所規則第二九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、刑事訴訟規則の一部を改正する規則（昭和二十五年最高裁判所規則第二十八号）施行の日（昭和二十六年一月四日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年九月一九日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（令和五年法律第二十八号）附則第一条第三号に掲げる規定の施行の日から施行する。ただし、第一条中刑事訴訟規則第六条の改正規定及び附則第二条の規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（刑事訴訟規則施行規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>刑事訴訟規則施行規則（昭和二十三年最高裁判所規則第三十四号）の一部を次のように改正する。第三条第一号中「、第百七十九条の二（継続審理）」を削る。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年一二月二五日最高裁判所規則第一〇号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（令和五年法律第二十八号）附則第一条第四号に掲げる規定の施行の日（令和六年二月一五日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

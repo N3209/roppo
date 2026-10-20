@@ -125,13 +125,28 @@ function countVersionNotes(lawId) {
  * 同じ元法令に属するもの、つまり元の法令そのものと、ほかの固定版である。
  * 取り込んだデータ（source: 'file'）は版の関係を持たないので入れない。
  *
+ * パックのものは、住所の形では束ねられない。
+ *
+ *   e-Gov    元の法令 123AC… と固定版 123AC…@…_20270623_… が @ で繋がる
+ *   パック    pack-<sha256A> と pack-<sha256B>。どちらも @ を持たない別の法令
+ *
+ * 訂正版は必ず別の sha256 になるので、住所だけ見ると他人である。同じ規則の
+ * 版だと分かるのは workId だけなので、それでも束ねる。住所を分けているのは
+ * わざとで（同じ住所で上書きすると注釈が黙って新しい本文に付き直す）、
+ * 束ねる手段を別に持つのが筋である。
+ *
  * 施行日の新しい順。元の法令は施行日を持たないことがあるので、
- * 持たないものは先頭に置く（たいてい最新である）。
+ * 持たないものは先頭に置く（たいてい最新である）。パックのものは施行日を
+ * 持たない（pack.json の enforcedOn が全件 null。PDFで確かめていない施行日を
+ * 推測で書かない方針）ため、全部が先頭に並ぶ。並び順は付けられない。
  */
 function versionPeers(lawId) {
   const base = baseLawIdOf(lawId);
+  const self = state.laws.find(l => l.lawId === lawId);
+  const workId = self && self.workId;
   const list = state.laws.filter(l => l.lawId !== lawId && l.source !== 'file'
-    && (l.lawId === base || l.revisionOf === base));
+    && (l.lawId === base || l.revisionOf === base
+      || (!!workId && l.workId === workId)));
   return list.sort((a, b) => {
     const x = a.enforcementDate || '9999-99-99';
     const y = b.enforcementDate || '9999-99-99';

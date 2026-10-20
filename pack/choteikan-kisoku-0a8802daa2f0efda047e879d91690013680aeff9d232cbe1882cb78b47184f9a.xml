@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/file4/chouteikankisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「平成二四年七月一七日最高裁判所規則第九号」。これに加えて官報から 令和七年三月三日最高裁判所規則第五号 を反映
+  範囲: 本則5条（削除条の範囲を1要素として数える）、附則3本（抄を含む）。PDF掲載範囲。附則の最後に官報から改正規則の附則を追加
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。官報から反映した改正を加えた本文と全文を機械照合。PDFの誤字の訂正・官報による改正の反映あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFの誤りを確認のうえ訂正（第一条「（平成二十三法律第五十二号）」→「（平成二十三年法律第五十二号）」。根拠は corrections.py と作業メモ）。PDFに未反映の改正を官報から反映（令和七年三月三日最高裁判所規則第五号第七条による改正と同規則附則。2025-04-01施行。根拠は amendments.py と作業メモ）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="15" Num="15" PromulgateMonth="10" PromulgateDay="1" LawType="Rule">
+  <LawNum>平成十五年十月一日最高裁判所規則第十五号</LawNum>
+  <LawBody>
+    <LawTitle>民事調停官及び家事調停官規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（趣旨）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事調停官及び家事調停官の任免等に関しては、民事調停法（昭和二十六年法律第二百二十二号）、家事事件手続法（平成二十三年法律第五十二号）その他の法令に定めるもののほか、この規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（勤務裁判所の指定）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事調停官及び家事調停官の勤務する裁判所は、最高裁判所が指定する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（解任）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所は、民事調停官が民事調停法第二十三条の二第五項各号のいずれかに該当するに至ったとき又は家事調停官が家事事件手続法第二百五十条第五項各号のいずれかに該当するに至ったときは、その民事調停官又は家事調停官を解任しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（政治的行為の制限）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事調停官及び家事調停官は、在任中、政党その他の政治的団体の役員となり、又は積極的に政治運動をしてはならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（旅費、日当及び宿泊料）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事調停官又は家事調停官が第二条の規定により指定された裁判所で職務を行う場合には、次項の規定により算定される旅費を支給する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>旅費は、鉄道賃、船賃及びその他の交通費（鉄道、船舶及び航空機以外を利用する移動に要する費用をいう。次項において同じ。）の三種とし、その金額は、国家公務員等の旅費に関する法律（昭和二十五年法律第百十四号。同項において「旅費法」という。）及び国家公務員等の旅費に関する法律施行令（令和六年政令第三百六号。同項において「旅費法施行令」という。）の規定に基づいて受ける旅費の金額と同一とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項に規定する場合を除き、民事調停官又は家事調停官には、旅費、日当及び宿泊料を支給するものとし、その金額は、旅費法及び旅費法施行令の規定に基づいて受ける鉄道賃、船賃、航空賃及びその他の交通費、宿泊手当並びに宿泊費の金額と同一とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前三項に定めるもののほか、民事調停官又は家事調停官に支給する旅費、日当及び宿泊料については、別に最高裁判所の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十六年一月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二四年七月一七日最高裁判所規則第九号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、非訟事件手続法（平成二十三年法律第五十一号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年三月三日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、国家公務員等の旅費に関する法律の一部を改正する法律（令和六年法律第二十二号）の施行の日（令和七年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた旅費、日当及び宿泊料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

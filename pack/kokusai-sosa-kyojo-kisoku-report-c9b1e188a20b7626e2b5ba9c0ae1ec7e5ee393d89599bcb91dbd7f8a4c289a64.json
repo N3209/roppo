@@ -1,0 +1,142 @@
+{
+ "workId": "kokusai-sosa-kyojo-kisoku",
+ "file": "kokusai-sosa-kyojo-kisoku-8ab0f97fd61d4d9f9a17c0d53ea79b723722d82a7274706450843960ede548d1.xml",
+ "sha256": "8ab0f97fd61d4d9f9a17c0d53ea79b723722d82a7274706450843960ede548d1",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/kokusaisousakyoujyo.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "53d1de1180df29a0982c82b367ddd347e1dde6a74138817e026246fd77703097",
+  "pages": 1,
+  "law_num": "昭和五十五年九月十八日最高裁判所規則第七号",
+  "main_articles": 2,
+  "counts": {
+   "Article": 2,
+   "Paragraph": 5,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 2,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 449,
+  "dropped_notes": 1,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成一六年六月二一日最高裁判所規則第一一号）"
+  ]
+ },
+ "independentCount": {
+  "title": "国際捜査共助規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "国際捜査共助規則",
+  "units": 8,
+  "pdf_lines": 22,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 4,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 5
+ },
+ "tables": {
+  "title": "国際捜査共助規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成16年6月21日 本紙第3875号",
+    "rule": "平成16年最高裁判所規則第11号",
+    "title": "国際捜査共助規則の一部を改正する規則",
+    "year": 2004,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20040621/20040621h03875/20040621h038750002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

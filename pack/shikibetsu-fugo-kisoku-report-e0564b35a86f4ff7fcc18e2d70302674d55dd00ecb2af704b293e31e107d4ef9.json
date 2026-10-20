@@ -1,0 +1,149 @@
+{
+ "workId": "shikibetsu-fugo-kisoku",
+ "file": "shikibetsu-fugo-kisoku-e70e657728b1477c6f2a50b160ef94ce402d12e0a16764fbbddbdda9edb89c47.xml",
+ "sha256": "e70e657728b1477c6f2a50b160ef94ce402d12e0a16764fbbddbdda9edb89c47",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521shikibetufugoukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "6e655a64b96c8a4e1326b8dcd88cc2571cd7305f07c4d7e2372184f13ad42ae3",
+  "pages": 3,
+  "law_num": "令和六年九月十七日最高裁判所規則第十五号",
+  "main_articles": 4,
+  "counts": {
+   "Article": 4,
+   "Paragraph": 11,
+   "Item": 11,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2559,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則"
+  ]
+ },
+ "independentCount": {
+  "title": "民事事件等に関する手続において用いる識別符号の付与等に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "民事事件等に関する手続において用いる識別符号の付与等に関する規則",
+  "units": 29,
+  "pdf_lines": 80,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 12,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 5
+ },
+ "tables": {
+  "title": "民事事件等に関する手続において用いる識別符号の付与等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和6年9月17日 号外第216号",
+   "rule": "令和6年最高裁判所規則第15号",
+   "title": "民事事件等に関する手続において用いる識別符号の付与等に関する規則",
+   "year": 2024,
+   "no": 15,
+   "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160256f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和7年8月29日 号外第195号",
+    "rule": "令和7年最高裁判所規則第11号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20250829/20250829g00195/20250829g001950011f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

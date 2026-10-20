@@ -1,0 +1,131 @@
+{
+ "workId": "kakyu-saibankan-shimei-shimon-kisoku",
+ "file": "kakyu-saibankan-shimei-shimon-kisoku-6431cce8f772042fda6294ab86c16cc7e20355ddc305753d2863818a8e9f1e15.xml",
+ "sha256": "6431cce8f772042fda6294ab86c16cc7e20355ddc305753d2863818a8e9f1e15",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/kakyuusaibansyosaibankansimeisimoniinkai.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "5a185e1fd9ff260ec3a5aa199a300aa4395a859520618d9c8b65365b2ad41c91",
+  "pages": 3,
+  "law_num": "平成十五年二月二十六日最高裁判所規則第六号",
+  "main_articles": 19,
+  "counts": {
+   "Article": 19,
+   "Paragraph": 31,
+   "Item": 10,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2106,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則"
+  ]
+ },
+ "independentCount": {
+  "title": "下級裁判所裁判官指名諮問委員会規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 19,
+    "xml": 19,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 19,
+    "xml": 19,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 12,
+    "xml": 12,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "下級裁判所裁判官指名諮問委員会規則",
+  "units": 63,
+  "pdf_lines": 95,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 48,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 4
+ },
+ "tables": {
+  "title": "下級裁判所裁判官指名諮問委員会規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

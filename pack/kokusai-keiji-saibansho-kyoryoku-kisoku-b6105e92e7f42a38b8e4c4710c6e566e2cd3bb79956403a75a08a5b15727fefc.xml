@@ -1,0 +1,547 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/2022/kokusaikeijisaibansyokisoku20220221.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和4年2月21日最高裁判所規則第９号」
+  範囲: 本則13条（削除条の範囲を1要素として数える）、附則4本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。文中の空白の除去あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。文中の空白1か所（紙面で字間のない、元の改行の跡）を除去し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="19" Num="8" PromulgateMonth="7" PromulgateDay="19" LawType="Rule">
+  <LawNum>平成十九年七月十九日最高裁判所規則第八号</LawNum>
+  <LawBody>
+    <LawTitle>国際刑事裁判所に対する協力の手続に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条・第二条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 証拠の提供に関する令状の発付、証人尋問及び不服申立てに関する手続</ChapterTitle>
+        <ArticleRange>（第三条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 引渡犯罪人の引渡し及び仮拘禁に関する裁判所の審査及び令状の発付に関する手続</ChapterTitle>
+        <ArticleRange>（第四条―第八条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 執行協力に関する手続</ChapterTitle>
+        <ArticleRange>（第九条―第十三条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章  総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>国際刑事裁判所に対する協力等に関する法律（平成十九年法律第三十七号。以下「法」という。）による証拠の提供に関する令状の発付、証人尋問及び不服申立てに関する手続、引渡犯罪人の引渡し及び仮拘禁に関する裁判所の審査及び令状の発付に関する手続並びに執行協力に関する手続については、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（訳文の添付）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>外国語で記載された書面には、その訳文を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 証拠の提供に関する令状の発付、証人尋問及び不服申立てに関する手続</ChapterTitle>
+        <Article Num="3">
+          <ArticleCaption>（刑事訴訟規則の準用）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>証拠の提供に関する令状の発付、証人尋問及び不服申立てに関する手続については、その性質に反しない限り、刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）第一編第二章及び第五章から第十三章まで、第二編第一章、第三編第一章、第三章及び第四章、第七編並びに第八編の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 引渡犯罪人の引渡し及び仮拘禁に関する裁判所の審査及び令状の発付に関する手続</ChapterTitle>
+        <Article Num="4">
+          <ArticleCaption>（拘禁許可状の請求の方式・法第二十一条）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>拘禁許可状の請求は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>引渡犯罪人の氏名、年齢、性別、国籍、職業及び住居</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>引渡犯罪名及び引渡犯罪に係る行為</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>引渡犯罪に係る行為に適用すべき国際刑事裁判所に関するローマ規程（以下「規程」という。）の罰条及び引渡犯罪が規程第七十条１に規定する犯罪である場合には日本国の相当する罰条</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>引渡しの請求の年月日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>引渡犯罪人に対して行われた国際刑事裁判所の捜査又は裁判に係る手続</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>必要とする有効期間</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>拘禁許可状を数通必要とするときは、その旨及び事由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>引渡犯罪人の氏名が明らかでないときは、人相、体格その他本人を特定するに足りる事項でこれを指定しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>引渡犯罪人の年齢、性別、国籍、職業又は住居が明らかでないときは、その旨を記載すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（法第二十四条第一項の申立ての方式等）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十四条第一項の申立ては、その理由を明示してしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立ては、審問期日においてする場合を除き、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面による申立てについては、刑事訴訟規則第二百九十七条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の申立てがあったときは、東京高等裁判所は、直ちにその旨を東京高等検察庁の検察官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（審査手続の停止の決定の手続等・法第二十四条）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>東京高等裁判所は、法第二十四条第一項の決定をするには、東京高等検察庁の検察官の意見を聴かなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の決定の告知は、審問期日においては宣告により、その他の場合には裁判書の謄本を送達して、これをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定による裁判書の謄本の送達は、東京高等検察庁の検察官、引渡犯罪人及び補佐する弁護士に対してしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（審査手続の停止の決定の取消し等・法第二十四条）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>東京高等検察庁の検察官は、法第二十四条第一項の決定により審査の手続が停止されている場合において、国際刑事裁判所において引渡犯罪につき規程第十七条１の規定による事件を受理するかどうかの決定があったときは、速やかに、東京高等裁判所に対し、当該決定の内容を通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>東京高等裁判所は、前項の規定により事件を受理する旨の決定があった旨の通知を受けたときは、決定をもって、法第二十四条第一項の決定を取り消さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>東京高等裁判所は、前項の決定をしたときは、速やかに、東京高等検察庁の検察官、引渡犯罪人及び補佐する弁護士に裁判書の謄本を送達しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="8">
+          <ArticleCaption>（逃亡犯罪人引渡法による審査等の手続に関する規則の準用）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この章に特別の定めがあるもののほか、引渡犯罪人の引渡し及び仮拘禁に関する裁判所の審査及び令状の発付に関する手続については、逃亡犯罪人引渡法による審査等の手続に関する規則（昭和二十八年最高裁判所規則第十一号）第二条第二項、第三条及び第六条から第二十八条までの規定を準用する。この場合において、同規則第三条中「法及びこの規則」とあるのは「国際刑事裁判所に対する協力等に関する法律（平成十九年法律第三十七号）第二章第三節並びにこの規則及び国際刑事裁判所に対する協力の手続に関する規則（平成十九年最高裁判所規則第八号）第三章」と、同規則第八条第一項中「法第五条第三項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十一条第二項において読み替えて準用する逃亡犯罪人引渡法第五条第三項」と、同項第四号中「法第五条第二項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十一条第二項において準用する逃亡犯罪人引渡法第五条第二項」と、同条第二項及び同規則第十条第二項中「第五条第三項及び第四項」とあるのは「国際刑事裁判所に対する協力の手続に関する規則第四条第三項及び第四項」と、同条第一項及び同規則第十一条第一項中「法第八条第二項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十二条第二項において準用する逃亡犯罪人引渡法第八条第二項」と、同規則第十条第一項中「第五条第二項第一号から第七号まで」とあるのは「国際刑事裁判所に対する協力の手続に関する規則第四条第二項第一号から第五号まで」と、同規則第十二条第一項第四号中「法第二十七条第一項」とあるのは「国際刑事裁判所に対する協力等に関する法律第三十五条第二項において準用する逃亡犯罪人引渡法第二十七条第一項」と、同規則第十八条中「法第九条第四項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十三条第二項において準用する逃亡犯罪人引渡法第九条第四項」と、同規則第十九条第一項第一号中「法第九条第三項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十三条第二項において読み替えて準用する逃亡犯罪人引渡法第九条第三項」と、同規則第二十二条第三項中「請求国の官憲」とあるのは「国際刑事裁判所の指定する者」と、同規則第二十五条第一項及び第二十七条中「法第十条第一項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十三条第一項」と、同規則第二十六条第一項中「法第十条第二項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十三条第二項において準用する逃亡犯罪人引渡法第十条第二項」と、「同条第一項」とあるのは「国際刑事裁判所に対する協力等に関する法律第二十三条第一項」と、同規則第二十八条中「第五条から第九条まで」とあるのは「国際刑事裁判所に対する協力の手続に関する規則第四条及び同規則第八条において準用する第六条から第九条まで」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 執行協力に関する手続</ChapterTitle>
+        <Article Num="9">
+          <ArticleCaption>（執行協力の請求に係る審査の請求の方式・法第四十条）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>罰金刑（法第二条第十号に規定する罰金刑をいう。以下同じ。）の確定裁判の執行に係る執行協力の請求の審査の請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行協力の請求に係る確定裁判を受けた者の氏名及び当該確定裁判の確定年月日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行協力の請求に係る罰金刑の確定裁判における罰金額及びこれに相当する日本円の金額</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪の罪名、事実の要旨及び適用された罰条並びに罰金刑の根拠とされた法令の条項並びに請求犯罪が規程第七十条１に規定する犯罪である場合には日本国の相当する罰条</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>没収刑（法第二条第十号に規定する没収刑をいう。以下同じ。）の確定裁判の執行に係る執行協力の請求の審査の請求は、前項第一号に掲げる事項のほか、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行協力の請求に係る財産並びにこれを有する者（名義人が異なる場合は、名義人を含む。）の氏名及び住所又は居所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪の罪名、事実の要旨及び適用された罰条並びに没収刑の根拠とされた法令の条項並びに日本国の相当する罰条（請求犯罪が規程第七十条１に規定する犯罪である場合に限る。）及び法令の条項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪につき日本国において刑罰を科すとした場合において日本国の法令によれば当該執行協力の請求に係る財産が没収の裁判をすることができる財産に当たるものでないと認めるべきときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号の場合において、当該執行協力の請求に係る財産が、請求犯罪に係る行為によりその被害を受けた者から得た財産であり、かつ、その者又はその一般承継人に帰属することを理由として没収の裁判をすることができる財産に当たるものでないと認めるべきときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行協力の請求に係る財産を有し又はその財産の上に地上権、抵当権その他の権利を有すると思料するに足りる相当な理由のある者が、自己の責めに帰することのできない理由により、当該確定裁判に係る手続において自己の権利を主張することができなかったと認めるべきときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>没収刑の確定裁判の執行に代えて当該確定裁判を受けた者から追徴すべき日本円の金額</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>被害回復命令（法第二条第十号に規定する被害回復命令をいう。以下同じ。）の確定裁判の執行に係る執行協力の請求の審査の請求は、第一項第一号に掲げる事項のほか、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪の罪名、事実の要旨及び適用された罰条並びに被害回復命令の根拠とされた法令の条項並びに日本国の相当する法令の条項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十条第二項後段に規定する意見</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十条第二項後段の規定により当該確定裁判が没収の確定裁判に相当する旨の意見を付したときは、次に掲げる事項</Sentence>
+              </ItemSentence>
+              <Subitem1 Num="1">
+                <Subitem1Title>イ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>執行協力の請求に係る財産並びにこれを有する者（名義人が異なる場合は、名義人を含む。）の氏名及び住所又は居所</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="2">
+                <Subitem1Title>ロ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>請求犯罪につき日本国において刑罰を科すとした場合において日本国の法令によれば当該執行協力の請求に係る財産が没収の裁判をすることができる財産に当たるものでないと認めるべきときは、その旨</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="3">
+                <Subitem1Title>ハ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>ロの場合において、当該執行協力の請求に係る財産が、重大犯罪（法第二条第三号に規定する重大犯罪をいう。以下同じ。）に係る行為によりその被害を受けた者から得た財産であって、被害回復命令によりその者又はその一般承継人に返還すべきものであり、かつ、それらの者に帰属することを理由として没収の裁判をすることができる財産に当たるものでないと認めるべきときは、その旨</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="4">
+                <Subitem1Title>ニ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>前項第五号に掲げる事項</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="5">
+                <Subitem1Title>ホ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>被害回復命令の確定裁判の執行に代えて当該確定裁判を受けた者から追徴すべき日本円の金額</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十条第二項後段の規定により当該確定裁判が追徴の確定裁判に相当する旨の意見を付したときは、執行協力の請求に係る被害回復命令の確定裁判において示された金額及びこれに相当する日本円の金額</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前三項の審査の請求をする場合には、法第四十一条第一項第二号に定める決定をすることができる要件があると認められるべき資料（同条第三項から第六項まで及び次条に規定する当該決定をする場合において同時に示さなければならないとされている事項を認めるべき資料を含む。）を提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleCaption>（日本円の金額の表示）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、罰金刑の確定裁判の執行に係る執行協力の請求につき、法第四十一条第一項第二号に定める決定をするときは、当該確定裁判における罰金額に相当する日本円の金額を同時に示さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、被害回復命令の確定裁判の執行に係る執行協力の請求につき、法第四十一条第一項第二号に定める決定をする場合において、当該確定裁判が日本国の法令によれば追徴の確定裁判に相当する旨を示すときは、当該被害回復命令の確定裁判において示された金額に相当する日本円の金額を同時に示さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="11">
+          <ArticleCaption>（執行協力の実施に関する決定の取消しの請求の方式等・法第四十二条）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第四十二条第五項において準用する組織的な犯罪の処罰及び犯罪収益の規制等に関する法律（平成十一年法律第百三十六号。以下「組織的犯罪処罰法」という。）第六十五条第一項の規定による取消しの請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>取消しを求める決定の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>取消しを求める事由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の請求をする場合には、法第四十二条第五項において準用する組織的犯罪処罰法第六十五条第一項に規定する事由があると認められるべき資料を提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、検察官の請求による場合を除き、法第四十二条第五項において準用する組織的犯罪処罰法第六十五条第一項の決定をするときは、検察官の意見を聴かなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（執行協力の請求に係る没収保全等の請求の方式・法第四十三条等）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第四十三条第一項前段の規定による請求は、第九条第二項第一号に掲げる事項のほか、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪に係る没収刑又は被害回復命令の裁判を受けるべき者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>債権の没収のための保全にあっては、債務者の氏名及び住所又は居所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪の罪名、事実の要旨及び適用された罰条並びに没収保全の根拠とされた法令の条項並びに日本国の相当する罰条（請求犯罪が規程第七十条１に規定する犯罪である場合に限る。）及び法令の条項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>没収刑のための保全に係る執行協力において、当該執行協力の請求に係る財産が、請求犯罪に係る行為によりその被害を受けた者から得た財産であるときは、当該請求犯罪につき日本国において刑罰を科すとした場合において、日本国の法令によれば当該財産がその者又はその一般承継人に帰属することを理由として没収保全をすることができる財産に当たるものでないこと。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>被害回復命令のための保全であって日本国の法令によれば没収の保全に相当するものに係る執行協力において、当該執行協力の請求に係る財産が、重大犯罪に係る行為によりその被害を受けた者から得た財産であって、被害回復命令によりその者又はその一般承継人に返還すべきものであるときは、当該重大犯罪につき日本国において刑罰を科すとした場合において、日本国の法令によれば当該財産がそれらの者に帰属することを理由として没収保全をすることができる財産に当たるものでないこと。</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第四十五条第一項の規定による請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪に係る被害回復命令の裁判を受けるべき者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行協力の請求に係る追徴保全額</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>処分を禁止すべき財産</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求犯罪の罪名、事実の要旨及び適用された罰条並びに追徴保全の根拠とされた法令の条項並びに日本国の相当する法令の条項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前二項の請求をする場合には、没収保全命令又は追徴保全命令を発することができる要件があると認められるべき資料を提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleCaption>（犯罪収益に係る保全手続等に関する規則等の準用）</ArticleCaption>
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この章に特別の定めがあるもののほか、執行協力に関する手続については、その性質に反しない限り、犯罪収益に係る保全手続等に関する規則（平成十一年最高裁判所規則第十号）第三章（第三条、第六条、第七条第二項及び第三項、第十二条、第二十一条並びに第二十三条を除く。）、刑事訴訟規則（第一編第二章及び第五章から第十三章まで、第二編第一章、第三編第一章、第三章及び第四章、第七編並びに第八編に限る。）、刑事事件における第三者所有物の没収手続に関する規則（昭和三十八年最高裁判所規則第八号）並びに逃亡犯罪人引渡法による審査等の手続に関する規則第十九条、第二十一条及び第二十二条の規定を準用する。この場合において、犯罪収益に係る保全手続等に関する規則第四条第一項中「前条第一項各号」とあるのは「国際刑事裁判所に対する協力の手続に関する規則（平成十九年最高裁判所規則第八号）第九条第二項第一号及び第十二条第一項各号」と、「同条第一項第一号及び第六号」とあるのは「同項第一号」と、同項第三号及び同条第二項中「法第二十二条第二項」とあるのは「国際刑事裁判所に対する協力等に関する法律（平成十九年法律第三十七号）第四十四条第二項」と、同規則第五条中「法」とあるのは「国際刑事裁判所に対する協力等に関する法律第四十四条第三項において読み替えて準用する組織的な犯罪の処罰及び犯罪収益の規制等に関する法律」と、同規則第七条第一項及び第八条第一項第二号中「被疑者」とあり、並びに同規則第十条第一項及び第十四条第一項第二号中「被告人又は被疑者」とあるのは「請求犯罪に係る国際刑事裁判所に対する協力等に関する法律第二条第十号に規定する没収刑又は被害回復命令の裁判を受けるべき者」と、同規則第八条中「起訴前」とあるのは「国際刑事裁判所に関するローマ規程第六十一条１に規定する審理が行われる前」と、同条及び同規則第十一条第四項中「法第二十三条第四項」とあるのは「国際刑事裁判所に対する協力等に関する法律第四十四条第五項において読み替えて準用する組織的な犯罪の処罰及び犯罪収益の規制等に関する法律第六十八条第二項」と、同規則第十条第一項及び第十一条の二第十項中「法第三十条第四項」とあるのは「国際刑事裁判所に対する協力等に関する法律第四十七条において準用する組織的な犯罪の処罰及び犯罪収益の規制等に関する法律第三十条第四項」と、同規則第十一条第十項及び第十一条の二第十項中「法第三十六条第一項」とあるのは「国際刑事裁判所に対する協力等に関する法律第四十七条において準用する組織的な犯罪の処罰及び犯罪収益の規制等に関する法律第三十六条第一項」と、同規則第十一条第十一項、第十三条第一項、第十四条第一項、第十五条並びに第十七条第一項第二号及び第二項中「法」とあるのは「国際刑事裁判所に対する協力等に関する法律第四十七条において準用する組織的な犯罪の処罰及び犯罪収益の規制等に関する法律」と、同規則第十一条第十二項及び第十一条の二第十一項中「第三条第一項又は第二十六条第一項」とあるのは「国際刑事裁判所に対する協力の手続に関する規則第十二条第一項」と、同規則第二十二条中「第五条から第九条まで（第七条第二項及び第三項を除く。）及び第十二条」とあるのは「国際刑事裁判所に対する協力の手続に関する規則第十三条において準用する第五条、第七条第一項、第八条及び第九条」と、「「追徴保全解放金」と、第十二条中「第三十二条第一項」とあるのは「第四十七条」とあるのは「、「追徴保全解放金」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日（平成十九年十月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年一〇月一五日最高裁判所規則第一六号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、電子記録債権法（平成十九年法律第百二号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年一一月一九日最高裁判所規則第二一号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、株式等の取引に係る決済の合理化を図るための社債等の振替に関する法律等の一部を改正する法律（平成十六年法律第八十八号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和四年二月二一日最高裁判所規則第九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、公布の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

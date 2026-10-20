@@ -1,0 +1,187 @@
+{
+ "workId": "saikosai-jimu-sokyoku-kisoku",
+ "file": "saikosai-jimu-sokyoku-kisoku-06d454f6d1d9ea4bdf04bafc939a1013e4bd6f232f854f12e948cfc4c6c7155b.xml",
+ "sha256": "06d454f6d1d9ea4bdf04bafc939a1013e4bd6f232f854f12e948cfc4c6c7155b",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file5/saikousaibansyojimusoukyokukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "3fbb1ff70cd3c3ab8a1bd315183c47c5cc6690b44ff9790f45a3854a45aedfb6",
+  "pages": 3,
+  "law_num": "昭和二十二年十二月一日最高裁判所規則第十号",
+  "main_articles": 13,
+  "counts": {
+   "Article": 13,
+   "Paragraph": 47,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 15,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2009,
+  "dropped_notes": 14,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二三年一〇月一三日最高裁判所規則第二四号）",
+   "附則（昭和二三年一二月二八日最高裁判所規則第四〇号）",
+   "附則（昭和二四年七月一日最高裁判所規則第一七号）",
+   "附則（昭和二五年一月一七日最高裁判所規則第二号）",
+   "附則（昭和二五年五月一日最高裁判所規則第一三号）",
+   "附則（昭和二六年三月三一日最高裁判所規則第二号）",
+   "附則（昭和二七年四月二三日最高裁判所規則第九号）",
+   "附則（昭和二八年三月三〇日最高裁判所規則第六号）",
+   "附則（昭和三八年四月二二日最高裁判所規則第四号）",
+   "附則（昭和四三年四月二〇日最高裁判所規則第二号）",
+   "附則（昭和五〇年四月七日最高裁判所規則第二号）",
+   "附則（昭和五六年三月一八日最高裁判所規則第一号）",
+   "附則（令和六年三月一日最高裁判所規則第六号）",
+   "附則（令和六年四月一八日最高裁判所規則第一一号）"
+  ]
+ },
+ "independentCount": {
+  "title": "最高裁判所事務総局規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 19,
+    "xml": 19,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "最高裁判所事務総局規則",
+  "units": 47,
+  "pdf_lines": 108,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 45,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 18
+ },
+ "tables": {
+  "title": "最高裁判所事務総局規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和6年3月1日 本紙第1172号",
+    "rule": "令和6年最高裁判所規則第6号",
+    "title": "最高裁判所事務総局規則の一部を改正する規則",
+    "year": 2024,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20240301/20240301h01172/20240301h011720003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年4月18日 本紙第1205号",
+    "rule": "令和6年最高裁判所規則第11号",
+    "title": "最高裁判所事務総局規則及び裁判官及び裁判官の秘書官以外の裁判所職員の退職管理に関する規則の一部を改正する規則",
+    "year": 2024,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20240418/20240418h01205/20240418h012050002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20240301",
+    "no": 5,
+    "explained_by_neighbour": [
+     "最高裁判所事務総局規則の一部を改正する規則（同六）"
+    ]
+   },
+   {
+    "date": "20240301",
+    "no": 7,
+    "explained_by_neighbour": [
+     "最高裁判所事務総局規則の一部を改正する規則（同六）"
+    ]
+   },
+   {
+    "date": "20240301",
+    "no": 8,
+    "explained_by_neighbour": [
+     "最高裁判所事務総局規則の一部を改正する規則（同六）"
+    ]
+   }
+  ]
+ }
+}

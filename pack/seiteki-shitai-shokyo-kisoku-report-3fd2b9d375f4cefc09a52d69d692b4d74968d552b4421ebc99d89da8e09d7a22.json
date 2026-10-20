@@ -1,0 +1,179 @@
+{
+ "workId": "seiteki-shitai-shokyo-kisoku",
+ "file": "seiteki-shitai-shokyo-kisoku-f81f8c8f965b97e8e75d83fe1c0be243c20607b3357a4024becdb01f3d3eff02.xml",
+ "sha256": "f81f8c8f965b97e8e75d83fe1c0be243c20607b3357a4024becdb01f3d3eff02",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/seitekishitaisatueikisoku20260521.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "df76b68f9923cc29e107d17d6f14537fb81c182268400dd7aaae95aecedf9ad5",
+  "pages": 7,
+  "law_num": "令和六年四月十七日最高裁判所規則第十号",
+  "main_articles": 9,
+  "counts": {
+   "Article": 10,
+   "Paragraph": 25,
+   "Item": 4,
+   "Subitem1": 0,
+   "SupplProvision": 2,
+   "AppdxTable": 0,
+   "Table": 1
+  },
+  "matching_characters": 3809,
+  "dropped_notes": 4,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 2,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   3,
+   4
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和６年９月１７日最高裁判所規則第１４号抄）"
+  ]
+ },
+ "independentCount": {
+  "title": "性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律による消去等の手続等に関する規則",
+  "extractor": [
+   {
+    "page": 3,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 4,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律による消去等の手続等に関する規則",
+  "units": 39,
+  "pdf_lines": 126,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 32,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律による消去等の手続等に関する規則",
+  "xml_tables": 1,
+  "pdf_fragments": 2,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 5,
+    "equal": 5,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和6年4月17日 本紙第1204号",
+   "rule": "令和6年最高裁判所規則第10号",
+   "title": "性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律による消去等の手続等に関する規則",
+   "year": 2024,
+   "no": 10,
+   "url": "https://www.kanpo.go.jp/old/20240417/20240417h01204/20240417h012040002f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

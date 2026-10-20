@@ -1,0 +1,161 @@
+{
+ "workId": "shikkokan-kisoku",
+ "file": "shikkokan-kisoku-ef731d8ed2b26e3538ebaf49381469da3ba7fc915a2f8e441f416f2487e9f18a.xml",
+ "sha256": "ef731d8ed2b26e3538ebaf49381469da3ba7fc915a2f8e441f416f2487e9f18a",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2022/sikkoukankisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "0e5541a78f828ea6d3f531ac3618854dd981400d02791676538b91ddf8c7f74d",
+  "pages": 4,
+  "law_num": "昭和四十一年十一月八日最高裁判所規則第十号",
+  "main_articles": 22,
+  "counts": {
+   "Article": 28,
+   "Paragraph": 46,
+   "Item": 4,
+   "Subitem1": 0,
+   "SupplProvision": 9,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 3366,
+  "dropped_notes": 24,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [
+   {
+    "kind": "caption-article",
+    "parts": [
+     "（施行期日）",
+     "第一条 この規則は、法の施行の日から施行する。"
+    ]
+   }
+  ],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和五五年五月六日最高裁判所規則第三号）抄",
+   "附則（昭和六〇年一二月二一日最高裁判所規則第六号）抄",
+   "附則（平成二年五月一六日最高裁判所規則第三号）抄",
+   "附則（平成六年九月一日最高裁判所規則第八号）",
+   "附則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附則（平成一一年九月一六日最高裁判所規則第六号）",
+   "附則（平成一三年一二月二八日最高裁判所規則第十号）",
+   "附則（平成一九年三月三一日最高裁判所規則第四号）"
+  ]
+ },
+ "independentCount": {
+  "title": "執行官規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 22,
+    "xml": 22,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 2,
+    "body": 2
+   },
+   "Article": {
+    "pdf_lines": 28,
+    "xml": 28,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 9,
+    "xml": 9,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "執行官規則",
+  "units": 83,
+  "pdf_lines": 172,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 54,
+  "accounted": {
+   "caption_then_unit_on_one_line": 1,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 16
+ },
+ "tables": {
+  "title": "執行官規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成19年3月31日 特別号外第9号",
+    "rule": "平成19年最高裁判所規則第4号",
+    "title": "執行官規則及び沖縄の復帰に伴う特別措置に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20070331/20070331t00009/20070331t000090242f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

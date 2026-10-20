@@ -1,0 +1,2481 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/iryoukansatsukisoku-20260521.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和7 年12 月26 日最高裁判所規則第１７号」
+  範囲: 本則106条（削除条の範囲を1要素として数える）、附則5本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFで半角「( )」で組まれた括弧2字を全角「（）」に統一。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="16" Num="13" PromulgateMonth="8" PromulgateDay="9" LawType="Rule">
+  <LawNum>平成十六年八月九日最高裁判所規則第十三号</LawNum>
+  <LawBody>
+    <LawTitle>心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律による審判の手続等に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条―第十六条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 審判</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <ArticleRange>（第十七条―第四十八条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 入院又は通院</SectionTitle>
+          <ArticleRange>（第四十九条―第七十条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 退院又は入院継続</SectionTitle>
+          <ArticleRange>（第七十一条―第七十六条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="4">
+          <SectionTitle>第四節 処遇の終了又は通院期間の延長</SectionTitle>
+          <ArticleRange>（第七十七条―第八十二条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="5">
+          <SectionTitle>第五節 再入院等</SectionTitle>
+          <ArticleRange>（第八十三条―第八十八条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="6">
+          <SectionTitle>第六節 抗告</SectionTitle>
+          <ArticleRange>（第八十九条―第百一条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="7">
+          <SectionTitle>第七節 雑則</SectionTitle>
+          <ArticleRange>（第百二条・第百三条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 連戻状</ChapterTitle>
+        <ArticleRange>（第百四条―第百六条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律（平成十五年法律第百十号。以下「法」という。）による審判の手続等については、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（精神保健判定医の名簿の通知・法第六条）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六条第二項の規定による精神保健判定医の名簿の送付があったときは、最高裁判所は、速やかに、その内容を各地方裁判所に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（精神保健審判員として任命すべき者の選任の取消し・法第六条）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>地方裁判所は、精神保健審判員として任命すべき者に選任された者が法第七条各号のいずれかに該当するに至ったときは、その選任を取り消さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（精神保健審判員の解任・法第六条等）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>地方裁判所は、精神保健審判員が心身の故障その他の事由により職務の執行ができないと認めるときは、当該精神保健審判員を解任することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（地方裁判所への委任・法第六条等）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前三条に定めるもののほか、精神保健審判員として任命すべき者の選任及び精神保健審判員の任命に関し必要な事項は、地方裁判所において定めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（精神保健審判員の旅費、日当及び宿泊料・法第六条）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>精神保健審判員に支給する旅費、日当及び宿泊料の額は、国家公務員等の旅費に関する法律（昭和二十五年法律第百十四号）及び国家公務員等の旅費に関する法律施行令（令和六年政令第三百六号）の規定に基づいて受ける鉄道賃、船賃、航空賃及びその他の交通費、宿泊手当並びに宿泊費の額と同一とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項に定めるもののほか、精神保健審判員に支給する旅費、日当及び宿泊料については、別に最高裁判所の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（宣誓の方式・法第九条）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>精神保健審判員がする法第九条第二項の規定による宣誓は、法令に従い公平誠実にその職務を行うべきことを誓う旨を記載した書面に署名押印して、これを当該精神保健審判員を任命した地方裁判所に提出することによって行うものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="8">
+          <ArticleCaption>（除斥・法第十条）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官又は精神保健審判員の監督権を有する裁判所は、裁判官又は精神保健審判員が法第十条において準用する刑事訴訟法（昭和二十三年法律第百三十一号）第二十条各号のいずれかに該当すると認めるときは、除斥の決定をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の決定をするには、当該裁判官又は精神保健審判員の意見を聴かなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>当該裁判官は、第一項の決定に関与することができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所が当該裁判官の退去により第一項の決定をすることができないときは、直近上級の裁判所が、当該決定をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項及び第二項の規定は、裁判所書記官について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleCaption>（回避）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官、精神保健審判員又は裁判所書記官は、職務の執行から除斥されるべきとき、又は審判の公正を妨げるべき事情があるときは、監督権を有する裁判所の許可を得て、回避することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleCaption>（裁判官のみによる裁判又は処分・法第十一条）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次に掲げる裁判又は処分は、法第十一条第一項の合議体の構成員である裁判官のみでする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>第二十九条第二項の規定により出頭を命ずること。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>第三十条第一項の規定により呼出しをすること。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>第三十七条において準用する刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）第二十六条第一項の規定により付添人の数を制限すること。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>第五十六条第一項の規定により付添人を選任するかどうかについて回答を求めること。</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="11">
+          <ArticleCaption>（精神保健参与員として指定すべき者の欠格事由・法第十五条）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次の各号のいずれかに掲げる者は、精神保健参与員として指定すべき者に選任することができない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>拘禁刑以上の刑に処せられた者</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>公務員で懲戒免職の処分を受け、当該処分の日から二年を経過しない者</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>第十三条第一項第二号の規定により精神保健参与員の指定を取り消された者</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（精神保健参与員として指定すべき者の選任の取消し・法第十五条）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>地方裁判所は、精神保健参与員として指定すべき者に選任された者が前条各号のいずれかに該当するに至ったときは、その選任を取り消さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleCaption>（精神保健参与員の指定の取消し・法第十五条）</ArticleCaption>
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、精神保健参与員が次の各号のいずれかに該当するときは、その指定を取り消さなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>第十一条第一号又は第二号のいずれかに該当するに至ったとき。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>職務上の義務違反その他精神保健参与員たるに適しない非行があると認めるとき。</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、精神保健参与員が心身の故障その他の事由により職務の執行ができないと認めるときは、その指定を取り消すことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="14">
+          <ArticleCaption>（地方裁判所への委任・法第十五条）</ArticleCaption>
+          <ArticleTitle>第十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前三条に定めるもののほか、精神保健参与員として指定すべき者の選任及び精神保健参与員の指定に関し必要な事項は、地方裁判所において定めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="15">
+          <ArticleCaption>（精神保健参与員の旅費、日当及び宿泊料・法第十五条）</ArticleCaption>
+          <ArticleTitle>第十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第六条の規定は、精神保健参与員について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="16">
+          <ArticleCaption>（資料提供の求めの方式等・法第二十三条等）</ArticleCaption>
+          <ArticleTitle>第十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十三条又は第九十条第一項の規定による資料の提供の求めは、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>対象者の氏名その他の対象者を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>提供を求める資料を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>資料の提供を求める理由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、前項の求めに応じて刑事事件に係る訴訟に関する書類を提供しようとするときは、あらかじめ、検察官の意見を聴かなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 審判</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <Article Num="17">
+            <ArticleCaption>（裁判書）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判官及び精神保健審判員は、裁判をするときは、裁判書を作成し、これに記名押印しなければならない。合議体で決定をする場合において、裁判書に記名押印できない裁判官又は精神保健審判員があるときは、他の裁判官の一人（当該記名押印できない裁判官が裁判長以外の裁判官である場合は、裁判長）又は精神保健審判員が、その事由を付記して記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる裁判を除く裁判の裁判書には、前項の規定により記名押印することに代えて押印することをもって足りる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処遇事件を終局させる決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第四条第一項及び第二項、第五条、第二十九条第一項、第三十四条第三項ただし書（法第三十七条第五項後段において準用する場合を含む。）、第三十七条第五項前段、第四十条第二項前段、第四十一条第八項、第六十条第三項ただし書（法第六十二条第二項後段において準用する場合を含む。）、第六十一条第三項、第六十二条第二項前段並びに第六十九条ただし書（法第七十条第二項において準用する場合を含む。）の決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第一項前段及び第六十条第一項前段の命令</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五十一条第二項（第八十五条第一項において準用する場合を含む。）の命令及び第五十一条第三項（第五十七条、第八十五条第一項及び第八十七条第一項において準用する場合を含む。）の決定</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判書には、次に掲げる事項を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>主文</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判を受ける者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判を受ける者の年齢、職業、住居及び本籍</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処遇事件を特定するに足りる事項</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる裁判を除く裁判の裁判書には、前項第二号及び第四号に掲げる事項の記載を省略することができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処遇事件を終局させる決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第三項ただし書（法第三十七条第五項後段において準用する場合を含む。）、第三十七条第五項前段、第四十条第二項前段、第四十一条第八項、第六十条第三項ただし書（法第六十二条第二項後段において準用する場合を含む。）、第六十一条第三項及び第六十二条第二項前段の決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第一項前段及び第六十条第一項前段の命令</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判書には、処遇事件の記録中の書類の記載を引用することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（裁判の告知等）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる決定の告知は、審判期日における言渡し又は裁判書の謄本の送達によってしなければならない。ただし、この規則に特別の定めがある場合は、この限りでない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処遇事件を終局させる決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十九条第一項、第三十四条第三項ただし書（法第三十七条第五項後段において準用する場合を含む。）、第三十七条第五項前段、第四十条第二項前段、第四十一条第八項、第六十条第三項ただし書（法第六十二条第二項後段において準用する場合を含む。）、第六十一条第三項及び第六十二条第二項前段の決定</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五十一条第三項（第五十七条、第八十五条第一項及び第八十七条第一項において準用する場合を含む。）の決定</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる命令の告知は、対象者の面前における言渡し又は裁判書の謄本の送達によってしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第一項前段及び第六十条第一項前段の命令</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第五十一条第二項（第八十五条第一項において準用する場合を含む。）の命令</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項各号に掲げる決定及び前項各号に掲げる命令を除く裁判の告知は、相当と認める方法によってするものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判を審判期日又は裁判を受ける者の面前において言い渡す場合において、相当と認めるときは、前条第一項の規定にかかわらず、裁判所書記官に当該裁判を調書に記載させることにより、裁判書の作成に代えることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判を裁判書の謄本の送達以外の方法により告知した場合には、裁判所書記官は、告知の方法、場所及び年月日を裁判書又は裁判を記載した調書に付記して押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleCaption>（裁判と同行状の執行指揮）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段及び第三十七条第五項前段の裁判、この規則第五十一条第二項及び第三項（第五十七条において準用する場合を含む。）の裁判並びに同行状（検察官にその執行を嘱託した場合に限る。）は、検察官の指揮によって執行する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十二条第一項第一号、第六十条第一項前段、第六十一条第一項第一号及び第六十二条第二項前段の裁判、この規則第八十五条第一項において準用する第五十一条第二項及び第三項の裁判、第八十七条第一項において準用する第五十一条第三項の裁判並びに同行状（検察官にその執行を嘱託した場合を除く。）は、裁判長等（法第十一条第一項の合議体の構成員である裁判官又は裁判長をいう。以下同じ。）又は裁判官の指揮によって執行する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前二項の指揮は、裁判書若しくは裁判を記載した調書の謄本若しくは抄本又は同行状に押印して行うものとする。ただし、急速を要するときは、対象者の氏名及び年齢、裁判の主文及び年月日、裁判所並びに裁判官及び精神保健審判員（精神保健審判員にあっては、法第十一条第一項の合議体が裁判をした場合に限る。）の氏名を記載した書面に押印して行うことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（陳述録取調書の作成）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等又は裁判官は、対象者、保護者又は参考人の陳述の内容が審判上必要であると認めるときは、裁判所書記官に、調書を作成させなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の調書には、対象者、保護者又は参考人の陳述の要旨及び裁判長等又は裁判官が記載を命じた事項を記載するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="21">
+            <ArticleCaption>（調書への引用）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>調書には、書面、写真その他適当と認めるものを引用し、記録に添付して調書の一部とすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（医師等の指定及び変更の通知）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>指定医療機関の管理者又は保護観察所の長は、法第三十一条第五項及び第三十二条第二項並びにこの規則第四十条第一項の医師又は社会復帰調整官を指定したときは、書面をもって、その旨を裁判所に通知しなければならない。その通知の内容に変更が生じたときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、法第二十三条の三の規定により保護者となる市町村長（特別区の長を含む。以下同じ。）が法第三十一条第六項及びこの規則第四十三条第二項の職員を指定した場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="23">
+            <ArticleCaption>（書類及び送達等）</ArticleCaption>
+            <ArticleTitle>第二十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟法第一編第六章及び刑事訴訟規則第一編第六章の規定は、処遇事件の性質に反しない限り、処遇事件に関する書類及び送達について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則第二百九十六条の規定は裁判所又は裁判官に対する申立てその他の申述について、同規則第二百九十八条の規定は処遇事件に関する書類の発送及び受理並びに処遇事件の関係人その他の者に対する通知について、それぞれ準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="24">
+            <ArticleCaption>（事実の取調べの申出・法第二十四条）</ArticleCaption>
+            <ArticleTitle>第二十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官、法第二条第四項に規定する指定入院医療機関の管理者若しくは保護観察所の長又は対象者、保護者若しくは付添人は、裁判所又は裁判官に対し、証人尋問、鑑定、検証、押収（刑事訴訟法第百二条の二第一項に規定する電磁的記録提供命令（同項第一号イに掲げる方法による提供を命ずるものに限る。）を含む。）、捜索、同法第百二条の二第一項に規定する電磁的記録提供命令（同号ロに掲げる方法による提供を命ずるものに限る。）、通訳及び翻訳並びに官公署、医療施設その他の公私の団体に対して必要な事項の報告、資料の提出その他の協力を求める処分の申出をすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="25">
+            <ArticleCaption>（鑑定人の宣誓の方式・法第二十四条等）</ArticleCaption>
+            <ArticleTitle>第二十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>宣誓は、鑑定人が、良心に従って誠実に鑑定することを誓う旨を述べる方式（当該事項を述べることができないときは、裁判所書記官が当該事項を記載した書面を朗読し、鑑定人が当該書面に署名する方式）によりしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>鑑定人の宣誓は、前項の方式によるほか、良心に従って誠実に鑑定することを誓う旨を記載した書面に鑑定人が署名して裁判所に提出する方式によってもさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定により同項の書面を提出する方式によって宣誓をさせるに当たっては、虚偽の鑑定をしたときは刑罰が科されることがある旨を記載した書面を鑑定人に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="26">
+            <ArticleCaption>（鑑定の経過及び結果の報告期限・法第二十四条等）</ArticleCaption>
+            <ArticleTitle>第二十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、鑑定の経過及び結果を報告すべき期限を定めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="27">
+            <ArticleCaption>（証人尋問等・法第二十四条）</ArticleCaption>
+            <ArticleTitle>第二十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則中裁判所の行う証人尋問、鑑定、検証、押収（刑事訴訟法第百二条の二第一項に規定する電磁的記録提供命令（同項第一号イに掲げる方法による提供を命ずるものに限る。）を含む。）、同項に規定する電磁的記録提供命令（同号ロに掲げる方法による提供を命ずるものに限る。）、捜索、通訳及び翻訳に関する規定は、処遇事件の性質に反しない限り、法第二十四条第三項の規定による証人尋問、鑑定、検証、押収、電磁的記録提供命令、捜索、通訳及び翻訳について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="28">
+            <ArticleCaption>（呼出状の記載要件・法第二十六条）</ArticleCaption>
+            <ArticleTitle>第二十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十六条第一項の呼出状には、対象者の氏名、年齢及び住居、処遇事件について呼び出す旨、出頭すべき年月日時及び場所並びに正当な理由がなく出頭しないときは同行状を発することがある旨を記載し、裁判長等又は裁判官が記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判期日に呼び出す場合における前項の呼出状には、前項に規定する事項のほか、心身の障害のため、又は正当な理由がなく審判期日に出席しないときは、対象者が出席しないでも審判を行うことがある旨を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第二項本文（法第三十七条第五項後段において準用する場合を含む。）又は第六十条第二項本文（法第六十二条第二項後段において準用する場合を含む。）の手続に呼び出す場合における第一項の呼出状には、同項に規定する事項のほか、心身の障害のため、又は正当な理由がなく裁判官又は裁判所の面前に出頭しないときは、対象者に陳述の機会を与えることなく、法第三十四条第一項前段若しくは第六十条第一項前段の命令又は法第三十七条第五項前段若しくは第六十二条第二項前段の決定をすることがある旨を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="29">
+            <ArticleCaption>（呼出状の送達等・法第二十六条）</ArticleCaption>
+            <ArticleTitle>第二十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項の呼出状は、対象者に送達しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>出頭した対象者に対し口頭で次回の出頭を命じたときは、呼出状を送達した場合と同一の効力を有する。この場合においては、当該出頭を命じた旨を調書に記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の規定により送達をし、又は前項の規定により出頭を命じたときは、速やかに、その旨を付添人（付添人がない場合にあっては保護者）に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段若しくは第六十条第一項前段の命令又は法第三十七条第五項前段、第四十二条第一項第一号、第六十一条第一項第一号若しくは第六十二条第二項前段の決定により入院している対象者に対し、第一項の規定により送達をし、又は第二項前段の規定により出頭を命じたときは、速やかに、その旨を当該対象者が入院している医療施設の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="30">
+            <ArticleCaption>（簡易の呼出し）</ArticleCaption>
+            <ArticleTitle>第三十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>処遇事件についての呼出しは、呼出状の送達以外の相当と認める方法によってすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第四項の規定は、前項の規定により呼出しをした場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="31">
+            <ArticleCaption>（同行状の記載要件・法第二十六条）</ArticleCaption>
+            <ArticleTitle>第三十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十六条第二項及び第三項の同行状には、対象者の氏名、年齢及び住居、処遇事件名、同行すべき場所、有効期間及びその期間経過後は執行に着手することができず当該同行状は返還しなければならない旨並びに発付の年月日を記載し、裁判長等又は裁判官が記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十六条第三項の同行状には、前項に規定する事項のほか、特に発付を必要とする理由を具体的に記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の同行状の有効期間は、発付の日から七日とする。ただし、相当と認めるときは、七日を超える期間を定めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="32">
+            <ArticleCaption>（同行状の執行と執行後の処置・法第二十八条）</ArticleCaption>
+            <ArticleTitle>第三十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項の同行状の執行を検察官に嘱託する場合には、当該同行状の原本を検察官に送付しなければならない。同項の同行状を保護観察所の職員に執行させる場合には、当該同行状の原本を保護観察所の長に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項の同行状は、数通を発することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項の同行状を執行したときはこれに執行の場所及び年月日時を記載し、執行することができなかったときはこれにその事由を記載して、記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の同行状は、これを発した裁判所又は裁判官に提出しなければならない。検察官にその執行を嘱託した同行状については、検察官を経由してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所又は裁判官は、前項の同行状を受け取ったときは、執行することができなかった場合を除き、裁判所書記官に引致された年月日時を当該同行状に記載させなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="33">
+            <ArticleCaption>（出頭命令・法第二十九条）</ArticleCaption>
+            <ArticleTitle>第三十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第二十九条第一項の決定をしたときは、速やかに、その旨を付添人（付添人がない場合にあっては保護者）及び対象者が入院している医療施設の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十九条第二項の規定による護送の嘱託は、同条第一項の決定の裁判書又は当該決定を記載した調書の謄本又は抄本を検察官に送付してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="34">
+            <ArticleCaption>（不出頭の場合の資料）</ArticleCaption>
+            <ArticleTitle>第三十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>対象者は、呼出しを受け、又は出頭を命ぜられた場合において、出頭することができないと思料するときは、速やかに、その理由を記載した書面及びその理由を明らかにすべき資料を裁判所又は裁判官に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="35">
+            <ArticleCaption>（付添人の選任・法第三十条）</ArticleCaption>
+            <ArticleTitle>第三十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>付添人の選任は、付添人と連署した書面を提出してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>付添人の選任は、審級ごとにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="36">
+            <ArticleCaption>（主任付添人等・法第三十条）</ArticleCaption>
+            <ArticleTitle>第三十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則第十九条から第二十五条までの規定は、対象者に二以上の付添人がある場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="37">
+            <ArticleCaption>（付添人の数の制限・法第三十条）</ArticleCaption>
+            <ArticleTitle>第三十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟規則第二十六条の規定は、法第三十条第二項の規定により付添人の数を制限する場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="38">
+            <ArticleCaption>（国選付添人の選任・法第三十条）</ArticleCaption>
+            <ArticleTitle>第三十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十条第三項の規定により裁判所が付すべき付添人は、裁判所の所在地にある弁護士の中から裁判長等がこれを選任しなければならない。ただし、裁判所の所在地に弁護士がないときその他やむを得ない事情があるときは、その裁判所の所在地を管轄する地方裁判所の管轄区域又はこれに隣接する他の地方裁判所の管轄区域内にある弁護士の中からこれを選任することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定にかかわらず、抗告裁判所が付添人を付する場合であって、抗告審の審理のために特に必要があると認めるときは、裁判長は、原裁判所が付した付添人であった弁護士を選任することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、法第七十条第一項の抗告に関する手続において最高裁判所が付添人を付する場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="39">
+            <ArticleCaption>（付添人選任の通知・法第三十条）</ArticleCaption>
+            <ArticleTitle>第三十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段若しくは第六十条第一項前段の命令又は法第三十七条第五項前段、第四十二条第一項第一号、第六十一条第一項第一号若しくは第六十二条第二項前段の決定により入院している対象者について、法第三十条第一項の規定により付添人が選任されたときは、裁判所（法第十一条第一項の合議体による裁判所で審判すべき場合であって、精神保健審判員が任命されるまでの間においては、法第三十三条第一項、第四十九条第一項若しくは第二項、第五十条又は第五十九条第一項若しくは第二項の申立てを受けた地方裁判所の裁判官）は、速やかに、その旨を当該対象者が入院している医療施設の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等は、前項に規定する対象者について、前条の規定により付添人を選任したときは、速やかに、その旨を当該対象者が入院している医療施設の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="40">
+            <ArticleCaption>（審判の準備・法第三十一条）</ArticleCaption>
+            <ArticleTitle>第四十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、適当と認めるときは、検察官、指定入院医療機関の管理者若しくはその指定する医師又は保護観察所の長若しくはその指定する社会復帰調整官及び付添人を出頭させた上、審判の進行に関し必要な事項について打合せを行うことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の打合せは、合議体の構成員（精神保健審判員を除く。）に行わせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、裁判所書記官に命じて、審判の進行に関し必要な事項について、検察官、指定入院医療機関の管理者、保護観察所の長又は付添人に問合せをさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="41">
+            <ArticleCaption>（審判期日の指定及び通知・法第三十一条）</ArticleCaption>
+            <ArticleTitle>第四十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判期日は、裁判長等が定める。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判期日は、保護者及び付添人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="42">
+            <ArticleCaption>（審判期日の列席者・法第三十一条）</ArticleCaption>
+            <ArticleTitle>第四十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判期日には、裁判官、精神保健審判員（法第十一条第一項の合議体が審判期日を開く場合に限る。）及び裁判所書記官が列席する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="43">
+            <ArticleCaption>（対象者の任意の供述）</ArticleCaption>
+            <ArticleTitle>第四十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等は、審判期日において、対象者が任意に供述をする場合には、必要とする事項につき対象者の供述を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>精神保健審判員、陪席の裁判官、検察官、指定入院医療機関の管理者若しくはその指定する医師、保護観察所の長若しくはその指定する社会復帰調整官、保護者（法第二十三条の三の規定により保護者となる市町村長については、その指定する職員を含む。次条において同じ。）又は付添人は、裁判長等に告げて、前項の供述を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="44">
+            <ArticleCaption>（審判調書）</ArticleCaption>
+            <ArticleTitle>第四十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判期日における手続については、審判調書を作成する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判調書には、次に掲げる事項その他審判に関する重要な事項を記載するものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>審判をした裁判所、年月日及び場所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処遇事件名及び対象者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>列席した裁判官、精神保健審判員（法第四十一条第七項の規定により出席した場合を含む。）及び裁判所書記官並びに出席した精神保健参与員、検察官、指定医療機関の管理者又はその指定する医師及び保護観察所の長又はその指定する社会復帰調整官の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>出席した対象者、保護者及び付添人の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>検察官、指定医療機関の管理者又はその指定する医師、保護観察所の長又はその指定する社会復帰調整官、保護者及び付添人の陳述の要旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者の陳述の要旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>証人、鑑定人、通訳人、翻訳人及び参考人の供述の要旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="8">
+                <ItemTitle>八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判その他の処分をしたこと。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="9">
+                <ItemTitle>九</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判長等が記載を命じた事項</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、裁判長等の許可があるときは、審判調書の作成又は前項第一号から第八号までに掲げる記載事項の一部を省略することができる。ただし、法第六十四条第一項及び第二項並びに第七十条第一項の抗告があった場合並びにこれらの抗告の手続における審判調書については、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="45">
+            <ArticleCaption>（審判調書の記名押印及び認印）</ArticleCaption>
+            <ArticleTitle>第四十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>審判調書には、裁判所書記官が記名押印し、裁判長等が認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十一条第一項の合議体の構成員である裁判官に差し支えがあるときは、裁判所書記官がその事由を付記して記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長に差し支えがあるときは、他の裁判官の一人がその事由を付記して認印しなければならない。ただし、いずれの裁判官にも差し支えがあるときは、裁判所書記官がその事由を付記して記名押印すれば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官に差し支えがあるときは、裁判長等がその事由を付記して認印すれば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="46">
+            <ArticleCaption>（適正な審判のための措置等）</ArticleCaption>
+            <ArticleTitle>第四十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等は、審判期日において、適正な審判をするため必要があると認めるときは、発言を制止し、対象者以外の者を退席させ、又はその他の適当な措置を講ずることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等は、対象者の精神障害の状態を考慮し、必要があると認めるときは、指定医療機関の管理者又はその指定する医師の協力を求めることその他の当該精神障害の状態に応じた適当な措置を講ずることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="47">
+            <ArticleCaption>（記録等の閲覧又は謄写・法第三十二条）</ArticleCaption>
+            <ArticleTitle>第四十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等は、処遇事件の記録又は証拠物の閲覧又は謄写について、その日時、場所及び時間を指定することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判長等は、処遇事件の記録又は証拠物の閲覧又は謄写について、書類の破棄その他不法な行為を防ぐため必要があると認めるときは、裁判所書記官その他の裁判所職員を閲覧若しくは謄写に立ち会わせ、又はその他の適当な措置を講じなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="48">
+            <ArticleCaption>（検察官の意見の聴取・法第三十二条）</ArticleCaption>
+            <ArticleTitle>第四十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、刑事事件に係る訴訟に関する書類について、法第三十二条第一項の許可をしようとするときは、あらかじめ、検察官の意見を聴かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 入院又は通院</SectionTitle>
+          <Article Num="49">
+            <ArticleCaption>（申立ての方式・法第三十三条）</ArticleCaption>
+            <ArticleTitle>第四十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十三条第一項の申立ては、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者の氏名、年齢、職業、住居及び本籍</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が法第二条第二項に該当するとする理由の要旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十四条第一項前段の命令により対象者を入院させるべき医療施設の名称、所在地及び管理者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者に対する他の処遇事件があるときは、その旨及び当該他の処遇事件が係属する裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>保護者の氏名及び住居（保護者が判明しない場合は、後見人又は保佐人、配偶者、親権を行う者及び扶養義務者の氏名及び住居）</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="50">
+            <ArticleCaption>（申立ての通知・法第三十三条）</ArticleCaption>
+            <ArticleTitle>第五十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十三条第一項の申立てがあったときは、これを受けた地方裁判所の裁判官は、速やかに、その旨を対象者及び付添人（付添人がない場合にあっては保護者）に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="51">
+            <ArticleCaption>（鑑定入院命令・法第三十四条）</ArticleCaption>
+            <ArticleTitle>第五十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段の命令においては、対象者を入院させるべき医療施設を指定しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十三条第一項の申立てを受けた地方裁判所の裁判官は、必要があると認めるときは、命令をもって、前項の規定による指定を変更することができる。ただし、精神保健審判員が任命された後においては、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、必要があると認めるときは、決定をもって、第一項の規定による指定を変更することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第四項及び第五項の規定は、第二項の命令及び前項（第五十七条において準用する場合を含む。）の決定について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="52">
+            <ArticleCaption>（鑑定入院命令に関する通知・法第三十四条）</ArticleCaption>
+            <ArticleTitle>第五十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段の命令、同条第三項ただし書の決定、前条第二項の命令及び同条第三項の決定をしたときは、速やかに、その旨を付添人及び保護者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第三項ただし書の決定をしたときは、速やかに、その旨を対象者が入院している医療施設の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段の命令を取り消し、若しくはその執行を停止したとき、又は法第三十四条第三項ただし書の決定を取り消し、若しくはその執行を停止したときも、前項と同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="53">
+            <ArticleCaption>（裁判所書記官の立会い及び調書の作成・法第三十四条）</ArticleCaption>
+            <ArticleTitle>第五十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第二項本文の手続には、裁判所書記官を立ち会わせなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、前項に規定する手続について、調書を作らなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の調書には、対象者の陳述の要旨及び裁判官が記載を命じた事項を記載するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二項の調書には、裁判所書記官が記名押印し、裁判官が認印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判官に差し支えがあるときは、裁判所書記官がその事由を付記して記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官に差し支えがあるときは、裁判官がその事由を付記して認印すれば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="54">
+            <ArticleCaption>（鑑定入院命令等の執行と執行後の処置・法第三十四条）</ArticleCaption>
+            <ArticleTitle>第五十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第一項前段の命令、この規則第五十一条第二項の命令又は同条第三項の決定は、裁判書又は裁判を記載した調書の謄本又は抄本を検察官に送付してその執行を嘱託しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項に規定する命令又は決定を執行したときは執行の場所及び年月日時を記載した書面を、執行することができなかったときはその事由を記載した書面を、執行を指揮した検察官を経由して、当該命令又は決定をした裁判官又は裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="55">
+            <ArticleCaption>（入院費等の支払・法第三十四条）</ArticleCaption>
+            <ArticleTitle>第五十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第三十四条第一項前段の命令が執行された場合には、医療施設の管理者の請求により、入院に要した費用及び精神障害の治療に要した費用を支払うものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定により支払うべき費用の額は、裁判所の相当と認めるところによる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="56">
+            <ArticleCaption>（付添人の選任に関する処分・法第三十五条）</ArticleCaption>
+            <ArticleTitle>第五十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第三十三条第一項の申立てがあった場合において、対象者に付添人がないときは、遅滞なく、対象者及び保護者に対し、一定の期間を定めて、付添人を選任するかどうかについて回答を求めなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の期間内に回答がなく又は付添人の選任がないときは、法第十一条第一項の合議体の構成員である裁判官は、直ちに対象者のため付添人を選任しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の処分は、法第三十四条第二項本文の手続を行う裁判官がすることもできる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="57">
+            <ArticleCaption>（鑑定入院決定・法第三十七条）</ArticleCaption>
+            <ArticleTitle>第五十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十一条第一項及び第三項並びに第五十二条から第五十五条までの規定は、法第三十七条第五項前段の決定について準用する。この場合において、第五十二条第一項中「法第三十四条第一項前段の命令、同条第三項ただし書の決定、前条第二項の命令及び同条第三項の決定」とあるのは「法第三十七条第五項前段及び同項後段において準用する法第三十四条第三項ただし書の決定並びに第五十七条において準用する前条第三項の決定」と、同条第二項及び第三項中「法第三十四条第三項ただし書」とあるのは「法第三十七条第五項後段において準用する法第三十四条第三項ただし書」と、同項中「法第三十四条第一項前段の命令」とあるのは「法第三十七条第五項前段の決定」と、第五十三条第一項中「法第三十四条第二項本文」とあるのは「法第三十七条第五項後段において準用する法第三十四条第二項本文」と、同条第三項から第六項までの規定中「裁判官」とあるのは「法第十一条第一項の合議体の構成員である裁判官」と、第五十四条第一項中「法第三十四条第一項前段の命令、この規則第五十一条第二項の命令又は同条第三項の決定」とあるのは「法第三十七条第五項前段の決定及び第五十七条において準用する第五十一条第三項の決定」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="58">
+            <ArticleCaption>（保護観察所による生活環境の調査・法第三十八条）</ArticleCaption>
+            <ArticleTitle>第五十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、保護観察所の長に対し、法第三十八条の規定により調査及び報告を求める場合には、必要な事項を指示しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項に規定する場合には、同項の報告の期限を定めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、第一項に規定する場合には、保護観察所の長に対し、必要な資料を提供することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定により刑事事件に係る訴訟に関する書類を提供しようとするときは、あらかじめ、検察官の意見を聴かなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の調査及び報告の求めを受けた保護観察所の長は、意見を付して、調査の結果を書面で報告するものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="59">
+            <ArticleCaption>（審判期日の通知・法第三十九条）</ArticleCaption>
+            <ArticleTitle>第五十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十一条第一項の合議体による裁判所が開く審判期日（法第三十三条第一項の申立てに係るものに限る。）は、検察官に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="60">
+            <ArticleCaption>（医療施設の管理者への通知等・法第四十条）</ArticleCaption>
+            <ArticleTitle>第六十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第三十四条第一項前段の命令又は法第三十七条第五項前段の決定により入院している対象者に対し、法第四十条第一項の決定をしたときは、速やかに、その旨を当該対象者が入院している医療施設の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の通知を受けた医療施設の管理者は、対象者を退院させなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="61">
+            <ArticleCaption>（検察官の通知・法第四十条）</ArticleCaption>
+            <ArticleTitle>第六十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十条第二項後段の規定による検察官の通知は、書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="62">
+            <ArticleCaption>（審判期日の通知・法第四十一条）</ArticleCaption>
+            <ArticleTitle>第六十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十九条の規定は、法第四十一条第一項の合議体による裁判所が開く審判期日について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="63">
+            <ArticleCaption>（決定の告知方法・法第四十二条）</ArticleCaption>
+            <ArticleTitle>第六十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>対象者に対する法第四十二条第一項第一号の決定の告知は、裁判書の謄本を厚生労働省の職員を介して対象者に交付する方法によってすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>対象者に対する法第四十二条第一項第二号の決定の告知は、裁判書の謄本を社会復帰調整官を介して対象者に交付する方法によってすることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前二項の規定により告知をする場合において、対象者が正当な理由がなく裁判書の謄本の交付を受けることを拒んだときは、対象者にこれを提示すれば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前三項の規定により告知をしたときは告知の方法、場所及び年月日を記載した書面を、告知をすることができなかったときはその事由を記載した書面を、法第四十二条第一項第一号又は第二号の決定をした裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="64">
+            <ArticleCaption>（厚生労働大臣への通知等・法第四十二条）</ArticleCaption>
+            <ArticleTitle>第六十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第四十二条第一項の決定をしたときは、速やかに、その旨を厚生労働大臣に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第四十二条第一項の決定をする場合において、必要があると認めるときは、あらかじめ、当該決定の予定日を厚生労働大臣に通知することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第四十二条第一項第二号の決定をしたときは、速やかに、その旨を保護観察所の長に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十条の規定は、法第三十四条第一項前段の命令又は法第三十七条第五項前段の決定により入院している対象者に対し、法第四十二条の決定をした場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="65">
+            <ArticleCaption>（資料提供の求め・法第四十三条）</ArticleCaption>
+            <ArticleTitle>第六十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>厚生労働大臣は、法第四十三条第三項の規定により指定入院医療機関又は指定通院医療機関を定めるため必要があると認めるときは、その必要な限度において、裁判所に対し、法第三十七条第一項に規定する鑑定の経過及び結果を記載した書面その他の必要な資料の提供を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十六条の規定は、前項の規定による資料の提供の求めについて準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="66">
+            <ArticleCaption>（決定の執行等・法第四十五条）</ArticleCaption>
+            <ArticleTitle>第六十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第四十二条第一項第一号の決定を執行させるため、裁判書若しくは決定を記載した調書の謄本若しくは抄本又は対象者の氏名及び年齢、決定の主文及び年月日、裁判所並びに裁判官及び精神保健審判員の氏名を記載した書面を厚生労働大臣に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十二条第一項第一号の決定を執行したときは執行の場所及び年月日時並びに対象者を入院させた指定入院医療機関の名称、所在地及び管理者の氏名を記載した書面を、執行することができなかったときはその事由を記載した書面を、当該決定をした裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="67">
+            <ArticleCaption>（呼出状の記載要件等・法第四十五条）</ArticleCaption>
+            <ArticleTitle>第六十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十五条第三項の呼出状には、対象者の氏名、年齢及び住居、法第四十二条第一項第一号の決定の執行のために呼び出す旨、出頭すべき年月日時及び場所並びに正当な理由がなく出頭しないときは同行状を発することがある旨を記載し、法第十一条第一項の合議体の構成員である裁判官が記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の呼出状は、対象者に送達しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項の規定により送達をしたときは、速やかに、その旨を付添人（付添人がない場合にあっては保護者）に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="68">
+            <ArticleCaption>（同行状の記載要件と執行・法第四十五条）</ArticleCaption>
+            <ArticleTitle>第六十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十五条第四項及び第五項の同行状には、対象者の氏名、年齢及び住居、法第四十二条第一項第一号の決定の執行のために同行する旨、同行すべき場所並びに発付の年月日を記載し、法第十一条第一項の合議体の構成員である裁判官が記名押印しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第三十二条第一項前段及び第二項から第五項までの規定は、前項の同行状について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="69">
+            <ArticleCaption>（傍聴の申出の際に明らかにすべき事項等・法第四十七条）</ArticleCaption>
+            <ArticleTitle>第六十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十七条第一項の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申出人の氏名又は名称及び住居</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>当該申出に係る処遇事件を特定するに足りる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申出人が傍聴を求める処遇事件に係る対象行為の被害者等（被害者又はその法定代理人若しくは被害者が死亡した場合若しくはその心身に重大な故障がある場合におけるその配偶者、直系の親族若しくは兄弟姉妹をいう。）であることの基礎となるべき事実</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の申出については、弁護士でなければ代理人となることができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="70">
+            <ArticleCaption>（通知の申出の際に明らかにすべき事項等・法第四十八条）</ArticleCaption>
+            <ArticleTitle>第七十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項の規定は、法第四十八条第一項の申出について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の申出及び法第四十八条第一項の規定による通知の受領については、弁護士でなければ代理人となることができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 退院又は入院継続</SectionTitle>
+          <Article Num="71">
+            <ArticleCaption>（申立ての方式・法第四十九条）</ArticleCaption>
+            <ArticleTitle>第七十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十九条第一項又は第二項の申立ては、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者の氏名、年齢、職業、住居及び本籍</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者に対する他の処遇事件があるときは、その旨及び当該他の処遇事件が係属する裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>保護者の氏名及び住居（保護者が判明しない場合は、後見人又は保佐人、配偶者、親権を行う者及び扶養義務者の氏名及び住居）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者について法第四十二条第一項第一号又は第六十一条第一項第一号の決定があった日及び当該決定をした裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者について法第五十一条第一項第一号の決定があるときは、当該決定（これが複数あるときは、その最後のものをいう。以下この号において同じ。）があった日及び当該決定をした裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第四十九条第二項ただし書に規定する期間の進行の停止があったときは、その旨</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨及び理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="72">
+            <ArticleCaption>（申立ての通知・法第四十九条）</ArticleCaption>
+            <ArticleTitle>第七十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十九条第一項又は第二項の申立てがあったときは、これを受けた地方裁判所の裁判官は、速やかに、その旨を対象者及び付添人（付添人がない場合にあっては保護者）に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="73">
+            <ArticleCaption>（申立ての方式・法第五十条）</ArticleCaption>
+            <ArticleTitle>第七十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十条の申立ては、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第七十一条第一号から第五号までに掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が入院している指定入院医療機関の名称</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨及び理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="74">
+            <ArticleCaption>（申立ての通知・法第五十条）</ArticleCaption>
+            <ArticleTitle>第七十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十条の申立てがあったときは、これを受けた地方裁判所の裁判官は、速やかに、その旨を指定入院医療機関の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="75">
+            <ArticleCaption>（決定の告知方法等・法第五十一条）</ArticleCaption>
+            <ArticleTitle>第七十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十三条第二項から第四項まで及び第六十四条第三項の規定は法第五十一条第一項第二号の決定について、第六十四条第一項及び第二項の規定は法第五十一条第一項各号の決定について、それぞれ準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十五条の規定は、法第五十一条第三項において準用する法第四十三条第三項の規定により指定通院医療機関を定める場合について準用する。この場合において、第六十五条第一項中「法第三十七条第一項」とあるのは、「法第五十二条」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="76">
+            <ArticleCaption>（保護観察所による生活環境の調査・法第五十三条）</ArticleCaption>
+            <ArticleTitle>第七十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十八条の規定は、法第五十三条において準用する法第三十八条の規定による調査及び報告について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="4">
+          <SectionTitle>第四節 処遇の終了又は通院期間の延長</SectionTitle>
+          <Article Num="77">
+            <ArticleCaption>（申立ての方式・法第五十四条）</ArticleCaption>
+            <ArticleTitle>第七十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十四条第一項又は第二項の申立ては、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者の氏名、年齢、職業、住居及び本籍</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が通院している指定通院医療機関の名称、所在地及び管理者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者に対する他の処遇事件があるときは、その旨及び当該他の処遇事件が係属する裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>保護者の氏名及び住居（保護者が判明しない場合は、後見人又は保佐人、配偶者、親権を行う者及び扶養義務者の氏名及び住居）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者について法第四十二条第一項第二号又は第五十一条第一項第二号の決定があった日及び当該決定をした裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者について法第五十六条第一項第一号又は第六十一条第三項の決定があるときは、当該決定（これらが複数あるときは、その最後のものをいう。以下この号において同じ。）があった日及び当該決定をした裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨及び理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="78">
+            <ArticleCaption>（申立ての通知・法第五十四条）</ArticleCaption>
+            <ArticleTitle>第七十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十四条第一項又は第二項の申立てがあったときは、これを受けた地方裁判所の裁判官は、速やかに、その旨を対象者及び付添人（付添人がない場合にあっては保護者）に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="79">
+            <ArticleCaption>（申立ての方式・法第五十五条）</ArticleCaption>
+            <ArticleTitle>第七十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十五条の申立ては、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第七十七条第一号及び第三号から第六号までに掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が通院している指定通院医療機関の名称</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者に対して精神保健観察を実施している保護観察所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨及び理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="80">
+            <ArticleCaption>（保護観察所の長への通知・法第五十五条）</ArticleCaption>
+            <ArticleTitle>第八十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十五条の申立てがあったときは、これを受けた地方裁判所の裁判官は、速やかに、その旨を保護観察所の長に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="81">
+            <ArticleCaption>（厚生労働大臣への通知・法第五十六条）</ArticleCaption>
+            <ArticleTitle>第八十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十四条第一項の規定は、法第五十六条第一項の決定について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="82">
+            <ArticleCaption>（保護観察所による生活環境の調査・法第五十八条）</ArticleCaption>
+            <ArticleTitle>第八十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十八条の規定は、法第五十八条において準用する法第三十八条の規定による調査及び報告について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="5">
+          <SectionTitle>第五節 再入院等</SectionTitle>
+          <Article Num="83">
+            <ArticleCaption>（申立ての方式・法第五十九条）</ArticleCaption>
+            <ArticleTitle>第八十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十九条第一項又は第二項の申立ては、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者の氏名、年齢、職業、住居及び本籍</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が通院している指定通院医療機関の名称、所在地及び管理者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者に対する他の処遇事件があるときは、その旨及び当該他の処遇事件が係属する裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>保護者の氏名及び住居（保護者が判明しない場合は、後見人又は保佐人、配偶者、親権を行う者及び扶養義務者の氏名及び住居）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者について法第四十二条第一項第二号又は第五十一条第一項第二号の決定があった日及び当該決定をした裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者について法第五十六条第一項第一号又は第六十一条第三項の決定があるときは、当該決定（これらが複数あるときは、その最後のものをいう。以下この号において同じ。）があった日及び当該決定をした裁判所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第五十九条第二項ただし書の規定により同条第一項の協議を行わず、又は同項の意見を付さないときは、緊急を要する理由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="8">
+                <ItemTitle>八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>申立ての趣旨及び理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="84">
+            <ArticleCaption>（申立ての通知・法第五十九条）</ArticleCaption>
+            <ArticleTitle>第八十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十九条第一項又は第二項の申立てがあったときは、これを受けた地方裁判所の裁判官は、速やかに、その旨を対象者及び付添人（付添人がない場合にあっては保護者）に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="85">
+            <ArticleCaption>（鑑定入院命令・法第六十条）</ArticleCaption>
+            <ArticleTitle>第八十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十一条第一項から第三項まで、第五十二条、第五十三条及び第五十五条の規定は、法第六十条第一項前段の命令について準用する。この場合において、第五十一条第二項中「法第三十三条第一項」とあるのは「法第五十九条第一項又は第二項」と、第五十二条第一項中「法第三十四条第一項前段の命令、同条第三項ただし書の決定、前条第二項の命令及び同条第三項の決定」とあるのは「法第六十条第一項前段の命令、同条第三項ただし書の決定、第八十五条第一項において準用する前条第二項の命令及び第八十五条第一項において準用する前条第三項の決定」と、同条第二項及び第三項中「法第三十四条第三項ただし書」とあるのは「法第六十条第三項ただし書」と、同項中「法第三十四条第一項前段」とあるのは「法第六十条第一項前段」と、第五十三条第一項中「法第三十四条第二項本文」とあるのは「法第六十条第二項本文」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十四条第四項及び第五項の規定は、前項において準用する第五十一条第二項の命令及び前項において準用する第五十一条第三項（第八十七条第一項において準用する場合を含む。）の決定について準用する。この場合において、法第三十四条第四項中「検察官」とあるのは「保護観察所の職員」と、「執行を嘱託するものとする」とあるのは「執行をさせるものとする」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六十条第一項前段の命令、第一項において準用する第五十一条第二項の命令又は第一項において準用する第五十一条第三項の決定は、裁判書若しくは裁判を記載した調書の謄本若しくは抄本又は対象者の氏名及び年齢、裁判の主文及び年月日、裁判所並びに裁判官及び精神保健審判員（精神保健審判員にあっては、法第十一条第一項の合議体が裁判をした場合に限る。）の氏名を記載した書面を保護観察所の長に送付してその執行をさせなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項に規定する命令又は決定を執行したときは執行の場所及び年月日時を記載した書面を、執行することができなかったときはその事由を記載した書面を、当該命令又は決定をした裁判官又は裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="86">
+            <ArticleCaption>（入院等の決定・法第六十一条）</ArticleCaption>
+            <ArticleTitle>第八十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十条の規定は、法第六十条第一項前段の命令又は法第六十二条第二項前段の決定により入院している対象者に対し、法第六十一条第一項及び第二項の決定をした場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十三条第一項、第三項及び第四項並びに第六十六条の規定は法第六十一条第一項第一号の決定について、第六十三条第二項から第四項までの規定は法第六十一条第一項第二号及び第三項の決定について、第六十四条第一項の規定は法第六十一条第一項各号及び第三項の決定について、第六十四条第二項の規定は法第六十一条第一項各号の決定について、それぞれ準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十五条の規定は、法第六十一条第四項において準用する法第四十三条第三項の規定により指定入院医療機関を定める場合について準用する。この場合において、第六十五条第一項中「法第三十七条第一項」とあるのは、「法第六十二条第一項」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第六十七条の規定は法第六十一条第五項において準用する法第四十五条第三項の呼出状について、第三十二条第一項後段、第二項、第三項、第四項前段及び第五項並びに第六十八条第一項の規定は法第六十一条第五項において準用する法第四十五条第四項及び第五項の同行状について、それぞれ準用する。この場合において、第六十七条第一項及び第六十八条第一項中「法第四十二条第一項第一号」とあるのは、「法第六十一条第一項第一号」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="87">
+            <ArticleCaption>（鑑定入院決定・法第六十二条）</ArticleCaption>
+            <ArticleTitle>第八十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十一条第一項及び第三項、第五十二条、第五十三条並びに第五十五条の規定は、法第六十二条第二項前段の決定について準用する。この場合において、第五十二条第一項中「法第三十四条第一項前段の命令、同条第三項ただし書の決定、前条第二項の命令及び同条第三項の決定」とあるのは「法第六十二条第二項前段の決定、同項後段において準用する法第六十条第三項ただし書の決定及び第八十七条第一項において準用する前条第三項の決定」と、同条第二項及び第三項中「法第三十四条第三項ただし書」とあるのは「法第六十二条第二項後段において準用する法第六十条第三項ただし書」と、同項中「法第三十四条第一項前段の命令」とあるのは「法第六十二条第二項前段の決定」と、第五十三条第一項中「法第三十四条第二項本文」とあるのは「法第六十二条第二項後段において準用する法第六十条第二項本文」と、同条第三項から第六項までの規定中「裁判官」とあるのは「法第十一条第一項の合議体の構成員である裁判官」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第八十五条第三項及び第四項の規定は、法第六十二条第二項前段の決定及び前項において準用する第五十一条第三項の決定の執行について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="88">
+            <ArticleCaption>（保護観察所による生活環境の調査・法第六十三条）</ArticleCaption>
+            <ArticleTitle>第八十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十八条の規定は、法第六十三条において準用する法第三十八条の規定による調査及び報告について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="6">
+          <SectionTitle>第六節 抗告</SectionTitle>
+          <Article Num="89">
+            <ArticleCaption>（抗告申立ての方式・法第六十四条）</ArticleCaption>
+            <ArticleTitle>第八十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告をするには、申立書（以下「抗告申立書」という。）を原裁判所に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告申立書には、抗告の趣意を簡潔に明示しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="90">
+            <ArticleCaption>（入院している対象者の抗告申立て等・法第六十四条）</ArticleCaption>
+            <ArticleTitle>第九十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第四十二条第一項第一号又は第六十一条第一項第一号の決定により入院している対象者は、指定入院医療機関の管理者又はその代理者を経由して抗告申立書を提出することができる。この場合において、抗告の提起期間内に抗告申立書を指定入院医療機関の管理者又はその代理者に提出したときは、抗告の提起期間内に抗告をしたものとみなす。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>指定入院医療機関の管理者又はその代理者は、前項に規定する対象者から抗告申立書が提出されたときは、これを受領しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告申立書を受領した指定入院医療機関の管理者又はその代理者は、速やかに、原裁判所に対し、当該抗告申立書を送付し、かつ、これを受領した年月日を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="91">
+            <ArticleCaption>（抗告申立書の送付・法第六十四条）</ArticleCaption>
+            <ArticleTitle>第九十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>原裁判所は、抗告申立書を受け取ったときは、速やかに、当該抗告申立書を記録と共に抗告裁判所に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の場合において、原裁判所は、抗告申立書に対する意見を付することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="92">
+            <ArticleCaption>（証拠物の送付・法第六十四条）</ArticleCaption>
+            <ArticleTitle>第九十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>原裁判所は、必要があると認めるときは、証拠物を抗告裁判所に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告裁判所は、原裁判所に証拠物の送付を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="93">
+            <ArticleCaption>（抗告の通知・法第六十四条）</ArticleCaption>
+            <ArticleTitle>第九十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、検察官、指定入院医療機関の管理者又は保護観察所の長から抗告があったときは対象者及び付添人（付添人がない場合にあっては保護者）に対し、対象者、保護者又は付添人から抗告があったときは検察官、指定入院医療機関の管理者又は保護観察所の長に対し、速やかに、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="94">
+            <ArticleCaption>（抗告取下げの方式・法第六十五条）</ArticleCaption>
+            <ArticleTitle>第九十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告の取下げは、書面を抗告裁判所に提出してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>記録を抗告裁判所に送付する前に抗告の取下げをする場合には、前項の書面を原裁判所に提出することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九十条第一項前段、第二項及び第三項並びに前条の規定は、抗告の取下げについて準用する。この場合において、第九十条第一項前段、第二項及び第三項中「抗告申立書」とあるのは、「第九十四条第一項の書面」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="95">
+            <ArticleCaption>（必要的付添人・法第六十七条）</ArticleCaption>
+            <ArticleTitle>第九十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十六条第一項及び第二項の規定は、法第六十七条の規定により抗告裁判所が付添人を付さなければならない場合について準用する。この場合において、第五十六条第二項中「法第十一条第一項の合議体の構成員である裁判官」とあるのは、「裁判長」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="96">
+            <ArticleCaption>（抗告審の裁判の通知）</ArticleCaption>
+            <ArticleTitle>第九十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、次の各号のいずれかに該当する場合には、速やかに、その旨を指定入院医療機関の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が法第四十二条第一項第一号又は第六十一条第一項第一号の決定（以下この条及び第百条において「入院決定」という。）により入院している場合において、次のイ又はロのいずれかに該当するとき。</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第六十八条第二項の規定により入院決定を取り消したとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第六十九条ただし書の規定により入院決定の執行を停止したとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>入院決定により入院していた対象者が法第六十九条ただし書の規定により当該入院決定の執行を停止されている場合において、次のイ又はロのいずれかに該当するとき。</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第六十八条の決定があったとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>イに掲げる場合を除き、入院決定が確定したとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="97">
+            <ArticleCaption>（差戻し又は移送後の審判・法第六十八条）</ArticleCaption>
+            <ArticleTitle>第九十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告裁判所から法第六十八条第二項本文の規定による差戻し又は移送を受けた事件については、更に審判をしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="98">
+            <ArticleCaption>（執行停止の決定をする裁判所・法第六十九条）</ArticleCaption>
+            <ArticleTitle>第九十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>抗告中の事件について原決定の執行を停止する決定は、記録が抗告裁判所に到達する前は原裁判所が、到達した後は抗告裁判所がするものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="99">
+            <ArticleCaption>（再抗告に関する手続・法第七十条）</ArticleCaption>
+            <ArticleTitle>第九十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第八十九条から第九十三条までの規定は、法第七十条第一項の抗告について準用する。この場合において、第八十九条から第九十一条までの規定中「抗告申立書」とあるのは、「再抗告申立書」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九十条第一項前段、第二項及び第三項、第九十三条並びに第九十四条第一項及び第二項の規定は、法第七十条第一項の抗告の取下げについて準用する。この場合において、第九十条第一項前段、第二項及び第三項中「抗告申立書」とあるのは、「第九十九条第二項において準用する第九十四条第一項の書面」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五十六条第一項及び第二項の規定は、法第七十条第二項において準用する法第六十七条の規定により最高裁判所が付添人を付さなければならない場合について準用する。この場合において、第五十六条第二項中「法第十一条第一項の合議体の構成員である裁判官」とあるのは、「裁判長」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="100">
+            <ArticleCaption>（再抗告審の裁判の通知等）</ArticleCaption>
+            <ArticleTitle>第百条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、次の各号のいずれかに該当する場合には、速やかに、その旨を指定入院医療機関の管理者に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>対象者が入院決定により入院している場合（次号に規定する場合を除く。）において、当該入院決定を法第七十一条第二項の規定により取り消したとき。</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>入院決定（執行されたものに限る。）を法第六十八条第二項の規定により取り消す決定（以下この号において「入院取消決定」という。）があった場合において、次のイからニまでのいずれかに該当するとき。</Sentence>
+                </ItemSentence>
+                <Subitem1 Num="1">
+                  <Subitem1Title>イ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第七十一条第二項の規定により入院取消決定を取り消したとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="2">
+                  <Subitem1Title>ロ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第七十条第二項において準用する法第六十九条ただし書の規定により入院取消決定の執行を停止したとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="3">
+                  <Subitem1Title>ハ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>法第七十条第二項において準用する法第六十九条ただし書の規定により入院取消決定の執行が停止されている場合において、法第七十一条第一項の決定があったとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+                <Subitem1 Num="4">
+                  <Subitem1Title>ニ</Subitem1Title>
+                  <Subitem1Sentence>
+                    <Sentence>ハに掲げる場合を除き、法第七十条第二項において準用する法第六十九条ただし書の規定により入院取消決定の執行が停止されている場合において、当該入院取消決定が確定したとき。</Sentence>
+                  </Subitem1Sentence>
+                </Subitem1>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="101">
+            <ArticleCaption>（差戻し又は移送後の審判・法第七十一条）</ArticleCaption>
+            <ArticleTitle>第百一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第九十七条の規定は、法第七十一条第二項の規定により地方裁判所に差し戻し、又は他の地方裁判所に移送した事件について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="7">
+          <SectionTitle>第七節 雑則</SectionTitle>
+          <Article Num="102">
+            <ArticleCaption>（申立ての取下げの方式等・法第七十四条）</ArticleCaption>
+            <ArticleTitle>第百二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第七十四条の規定による申立ての取下げは、書面を提出してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第三十三条第一項又は第五十九条第一項若しくは第二項の申立ての取下げがあったときは対象者及び付添人（付添人がない場合にあっては保護者）に対し、法第五十条の申立ての取下げがあったときは指定入院医療機関の管理者に対し、法第五十五条の申立ての取下げがあったときは保護観察所の長に対し、速やかに、その旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="103">
+            <ArticleCaption>（競合する処分の調整の手続・法第七十六条）</ArticleCaption>
+            <ArticleTitle>第百三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第七十六条の規定による決定に関する手続は、その性質に反しない限り、処遇事件の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 連戻状</ChapterTitle>
+        <Article Num="104">
+          <ArticleCaption>（連戻状の請求等・法第九十九条）</ArticleCaption>
+          <ArticleTitle>第百四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第九十九条第六項の規定による連戻状の請求は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>退去者の氏名、年齢及び住居又は現在地（住居及び現在地が明らかでないときは、その旨）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき指定入院医療機関の名称及び所在地</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>三十日を超える有効期間を必要とするときは、その旨及びその理由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>連戻状を数通必要とするときは、その旨及びその理由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>同一事由により退去者に対し前に連戻状の請求又はその発付があったときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の請求をするには、連れ戻すべき事由があることを認めるに足りる資料を提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の請求を受けた裁判官は、必要があると認めるときは、当該請求をした指定入院医療機関の管理者若しくはその指定入院医療機関の職員の出頭を求めてその陳述を聴き、又はこれらの者に対し書類その他の物の提示を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="105">
+          <ArticleCaption>（連戻状の記載要件等・法第九十九条）</ArticleCaption>
+          <ArticleTitle>第百五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第九十九条第五項の連戻状には、次に掲げる事項を記載し、裁判官が記名押印する。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>退去者の氏名、年齢及び住居又は現在地（住居及び現在地が明らかでないときは、その旨）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>連れ戻すべき指定入院医療機関の名称及び所在地</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>有効期間</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>有効期間経過後は、連戻しに着手することができず、連戻状は返還しなければならない旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>発付の年月日</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の連戻状の有効期間は、発付の日から三十日とする。ただし、当該連戻状の請求を受けた裁判官は、相当と認めるときは、三十日を超える期間を定めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三十二条第二項の規定は第一項の連戻状について、同条第三項の規定は第一項の連戻状による連戻しについて、それぞれ準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官は、前条第一項の請求を却下する場合には、同項の書面にその旨を記載し、記名押印した上、これを請求者に交付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官は、第一項の連戻状を発したときは、速やかに、前条第一項の書面を請求者に返還しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="106">
+          <ArticleCaption>（準用・法第九十九条）</ArticleCaption>
+          <ArticleTitle>第百六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>刑事訴訟規則第五十八条から第六十一条まで、第二百九十六条及び第二百九十八条第一項の規定は、法第九十九条第五項の連戻状に関する手続について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日から施行する。ただし、第二条、第三条、第五条、第十一条、第十二条及び第十四条の規定は、法第六条、第七条及び第十五条の規定の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（裁判所の非常勤職員の政治的行為制限の特例に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所の非常勤職員の政治的行為制限の特例に関する規則（昭和二十七年最高裁判所規則第二十五号）の一部を次のように改正する。本則中第八号を第十号とし、第七号を第九号とし、第六号の次に次の二号を加える。七 精神保健審判員八 精神保健参与員</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（政治資金規正法第二十二条の九第一項第二号の非常勤職員の範囲を定める規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>政治資金規正法第二十二条の九第一項第二号の非常勤職員の範囲を定める規則（平成四年最高裁判所規則第十三号）の一部を次のように改正する。本則中第七号を第九号とし、第六号を第八号とし、第五号の次に次の二号を加える。六 精神保健審判員七 精神保健参与員</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二六年一月六日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、精神保健及び精神障害者福祉に関する法律の一部を改正する法律（平成二十五年法律第四十七号）の施行の日（平成二十六年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年二月十二日最高裁判所規則第三号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑法等の一部を改正する法律（令和四年法律第六十七号。次条において「刑法等一部改正法」という。）の施行の日（令和七年六月一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年三月三日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、国家公務員等の旅費に関する法律の一部を改正する法律（令和六年法律第二十二号）の施行の日（令和七年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に支給原因となる事実が生じた旅費、日当及び宿泊料の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年十二月二十六日最高裁判所規則第十七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律（令和七年法律第三十九号）附則第一条第三号に掲げる規定の施行の日（令和八年五月二十一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

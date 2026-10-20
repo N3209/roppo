@@ -1,0 +1,222 @@
+{
+ "workId": "taino-shobun-chosei-kisoku",
+ "file": "taino-shobun-chosei-kisoku-816bb68c4d4f7cf77ee737afc703bace82ee5fa995eefc93ae5401c47a2ced05.xml",
+ "sha256": "816bb68c4d4f7cf77ee737afc703bace82ee5fa995eefc93ae5401c47a2ced05",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file2/20130701taichoukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "79f9534999e6d1261127cd2ee1516c1278c85a295f23cfb08b59034a4c4c067b",
+  "pages": 11,
+  "law_num": "昭和三十二年八月一日最高裁判所規則第十二号",
+  "main_articles": 57,
+  "counts": {
+   "Article": 59,
+   "Paragraph": 104,
+   "Item": 45,
+   "Subitem1": 0,
+   "SupplProvision": 10,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 14845,
+  "dropped_notes": 65,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [
+   {
+    "page": 1,
+    "text": "- 1 -"
+   },
+   {
+    "page": 2,
+    "text": "- 2 -"
+   },
+   {
+    "page": 3,
+    "text": "- 3 -"
+   },
+   {
+    "page": 4,
+    "text": "- 4 -"
+   },
+   {
+    "page": 5,
+    "text": "- 5 -"
+   },
+   {
+    "page": 6,
+    "text": "- 6 -"
+   },
+   {
+    "page": 7,
+    "text": "- 7 -"
+   },
+   {
+    "page": 8,
+    "text": "- 8 -"
+   },
+   {
+    "page": 9,
+    "text": "- 9 -"
+   },
+   {
+    "page": 10,
+    "text": "- 10 -"
+   },
+   {
+    "page": 11,
+    "text": "- 11 -"
+   }
+  ],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和三四年一二月一五日最高裁判所規則第一九号）",
+   "附則（昭和四一年一二月二〇日最高裁判所規則第一一号）",
+   "附則（昭和五五年五月六日最高裁判所規則第三号抄）",
+   "附則（昭和五五年九月一七日最高裁判所規則第六号抄）",
+   "附則（平成二年五月一六日最高裁判所規則第三号抄）",
+   "附則（平成一〇年一一月一九日最高裁判所規則第五号）",
+   "附則（平成一四年二月一五日最高裁判所規則第四号）",
+   "附則（平成一七年一月一一日最高裁判所規則第一号抄）",
+   "附則（平成二五年三月二六日最高裁判所規則第二号）"
+  ]
+ },
+ "independentCount": {
+  "title": "滞納処分と強制執行等との手続の調整に関する規則",
+  "extractor": [
+   {
+    "page": 1,
+    "tables": 0,
+    "outside_equal": false,
+    "multiset_equal": false,
+    "only_in_pymupdf": "－－－－－－－",
+    "only_in_pdfplumber": "−−−−−−−",
+    "problem": true
+   },
+   {
+    "page": 11,
+    "page_number_position_only": true
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 57,
+    "xml": 57,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 10,
+    "body": 10
+   },
+   "Article": {
+    "pdf_lines": 59,
+    "xml": 59,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 40,
+    "xml": 40,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 45,
+    "xml": 45,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "滞納処分と強制執行等との手続の調整に関する規則",
+  "units": 222,
+  "pdf_lines": 572,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 149,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 25
+ },
+ "tables": {
+  "title": "滞納処分と強制執行等との手続の調整に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成17年1月11日 号外第3号",
+    "rule": "平成17年最高裁判所規則第1号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2005,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成25年3月26日 号外第61号",
+    "rule": "平成25年最高裁判所規則第2号",
+    "title": "滞納処分と強制執行等との手続の調整に関する規則の一部を改正する規則",
+    "year": 2013,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20130326/20130326g00061/20130326g000610002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

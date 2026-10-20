@@ -22,7 +22,7 @@ const API = 'https://laws.e-gov.go.jp/api/2';
  * 画面に出しておけば一目で分かる。publish.js が sw.js と食い違っていないかを
  * 確かめるので、片方だけ上げ忘れることはない。
  */
-const APP_VERSION = 'v101';
+const APP_VERSION = 'v102';
 
 
 /*
@@ -624,12 +624,45 @@ async function adoptDatasetId(foreign) {
  * 持っている」という、その時点の事実である。だから版も墓石も持たない。
  * 端末ごとに最新の塊のものを見ればよい。
  */
+/*
+ * 法令の出どころ。
+ *
+ * 1か所に出してあるのは、出どころによって「もう一度手に入るか」が変わり、
+ * それが画面の文とボタンを決めるからである。
+ *
+ *   egov     法令の住所を投げれば取り直せる
+ *   file     手元のファイルから入れたもの。ほかの端末からは取り直せない
+ *   pack     規則パックから入れたもの。pack/ にあるので取り直せる
+ *   unknown  知らない値。新しい版が書いたものを古い版が読んだとき
+ *
+ * 記録に source が無いものは e-Gov である（e-Gov から取るときは付けていない）。
+ * 知らない値を e-Gov に寄せてはいけない。取れない住所を e-Gov に投げることに
+ * なる。取れない側に寄せれば、画面には出るが押せない、で済む。
+ *
+ * ここを散らしておくと、出どころを増やしたときに「file ではない＝e-Gov」と
+ * 決めている箇所が取り残される。実際に renderMissing がそうなっていた。
+ */
+function lawOrigin(rec) {
+  const s = rec && rec.source;
+  if (s === 'file' || s === 'pack') return s;
+  if (!s || s === 'egov') return 'egov';
+  return 'unknown';
+}
+
 function lawInventory(laws) {
   return (laws || []).map(l => ({
     lawId: l.lawId,
     lawTitle: l.lawTitle || '',
     lawNum: l.lawNum || '',
-    source: l.source || 'egov',          // 'file' ならファイルから取り込んだもの
+    source: lawOrigin(l),
+    /*
+     * 版をまたいで束ねる札。パックのものだけが持つ。
+     *
+     * パックの住所は pack-<sha256> で、訂正版は別の sha256 になる。つまり
+     * 新旧は別の法令として並ぶ。同じ規則の版だと分かるのは workId だけなので、
+     * 目録にも載せる。無ければ入れない（e-Gov のものに空の欄を増やさない）。
+     */
+    ...(l.workId ? { workId: l.workId } : {}),
   })).filter(x => x.lawId);
 }
 

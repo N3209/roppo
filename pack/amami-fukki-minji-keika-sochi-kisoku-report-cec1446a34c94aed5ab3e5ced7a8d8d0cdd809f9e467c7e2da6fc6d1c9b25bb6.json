@@ -1,0 +1,131 @@
+{
+ "workId": "amami-fukki-minji-keika-sochi-kisoku",
+ "file": "amami-fukki-minji-keika-sochi-kisoku-0686499ed8765fc1e6c9fa07e5c9fa4fddc02d39b85f8b73a9f19fc7611fad4a.xml",
+ "sha256": "0686499ed8765fc1e6c9fa07e5c9fa4fddc02d39b85f8b73a9f19fc7611fad4a",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/amamiguntounohukkinitomonauminjinikansurujikennotetudukinokeikasotinikansurukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "830df50e576876c9dbc5d3f8ee21f575f5df344f3a9cee17f800dd62b4aa9829",
+  "pages": 1,
+  "law_num": "昭和二十八年十二月二十四日最高裁判所規則第二十八号",
+  "main_articles": 4,
+  "counts": {
+   "Article": 4,
+   "Paragraph": 5,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 664,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則"
+  ]
+ },
+ "independentCount": {
+  "title": "奄美群島の復帰に伴う民事に関する事件の手続の経過措置に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "奄美群島の復帰に伴う民事に関する事件の手続の経過措置に関する規則",
+  "units": 9,
+  "pdf_lines": 27,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 8,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 5
+ },
+ "tables": {
+  "title": "奄美群島の復帰に伴う民事に関する事件の手続の経過措置に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

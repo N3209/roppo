@@ -1,0 +1,292 @@
+{
+ "workId": "kaisha-hisho-kisoku",
+ "file": "kaisha-hisho-kisoku-2596b8ceed3e94e48485d7dc2694471403a2e68f5e24dd3fa233510aa437f028.xml",
+ "sha256": "2596b8ceed3e94e48485d7dc2694471403a2e68f5e24dd3fa233510aa437f028",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521kaisyahisyou.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "ac5e73ea1ee994b070e745f91793d18c6dd230c0a7bccbef29b496fda29ff59e",
+  "pages": 15,
+  "law_num": "平成十八年二月八日最高裁判所規則第一号",
+  "main_articles": 47,
+  "counts": {
+   "Article": 50,
+   "Paragraph": 94,
+   "Item": 23,
+   "Subitem1": 0,
+   "SupplProvision": 10,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 11357,
+  "dropped_notes": 26,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 1,
+  "kept_spaces": 3,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（平成一九年四月一一日最高裁判所規則第五号）",
+   "附 則（平成二〇年一〇月一日最高裁判所規則第一〇号）",
+   "附 則（平成二四年七月一七日最高裁判所規則第九号）抄",
+   "附 則（令和二年四月二二日最高裁判所規則第六号）",
+   "附 則（令和四年二月二一日最高裁判所規則第八号）",
+   "附 則（令和四年五月一三日最高裁判所規則第一三号）",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附 則（令和七年一二月一五日最高裁判所規則第一六号）"
+  ]
+ },
+ "independentCount": {
+  "title": "会社非訟事件等手続規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 47,
+    "xml": 47,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 9,
+    "body": 9
+   },
+   "Article": {
+    "pdf_lines": 50,
+    "xml": 50,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 37,
+    "xml": 37,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 23,
+    "xml": 23,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "会社非訟事件等手続規則",
+  "units": 178,
+  "pdf_lines": 443,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 131,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 24
+ },
+ "tables": {
+  "title": "会社非訟事件等手続規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成18年2月8日 本紙第4272号",
+   "rule": "平成18年最高裁判所規則第1号",
+   "title": "会社非訟事件等手続規則",
+   "year": 2006,
+   "no": 1,
+   "url": "https://www.kanpo.go.jp/old/20060208/20060208h04272/20060208h042720002f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成19年4月11日 本紙第4561号",
+    "rule": "平成19年最高裁判所規則第5号",
+    "title": "信託法及び信託法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備に関する規則",
+    "year": 2007,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20070411/20070411h04561/20070411h045610001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月1日 号外第216号",
+    "rule": "平成20年最高裁判所規則第10号",
+    "title": "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則",
+    "year": 2008,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20081001/20081001g00216/20081001g002160004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和2年4月22日 本紙第236号",
+    "rule": "令和2年最高裁判所規則第6号",
+    "title": "会社非訟事件等手続規則の一部を改正する規則",
+    "year": 2020,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20200422/20200422h00236/20200422h002360002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年2月21日 号外第36号",
+    "rule": "令和4年最高裁判所規則第8号",
+    "title": "会社非訟事件等手続規則の一部を改正する規則",
+    "year": 2022,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20220221/20220221g00036/20220221g000360003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年5月13日 本紙第732号",
+    "rule": "令和4年最高裁判所規則第13号",
+    "title": "共有に関する非訟事件及び土地等の管理に関する非訟事件に関する手続規則",
+    "year": 2022,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20220513/20220513h00732/20220513h007320001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月15日 号外第273号",
+    "rule": "令和7年最高裁判所規則第16号",
+    "title": "会社非訟事件等手続規則の一部を改正する規則",
+    "year": 2025,
+    "no": 16,
+    "url": "https://www.kanpo.go.jp/old/20251215/20251215g00273/20251215g002730006f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20081001",
+    "no": 9,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 11,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 12,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20081001",
+    "no": 13,
+    "explained_by_neighbour": [
+     "一般社団法人及び一般財団法人に関する法律等の施行に伴う関係規則の整備に関する規則（同一〇）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 7,
+    "explained_by_neighbour": [
+     "会社非訟事件等手続規則の一部を改正する規則（同八）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 9,
+    "explained_by_neighbour": [
+     "会社非訟事件等手続規則の一部を改正する規則（同八）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 10,
+    "explained_by_neighbour": [
+     "会社非訟事件等手続規則の一部を改正する規則（同八）"
+    ]
+   },
+   {
+    "date": "20251215",
+    "no": 15,
+    "explained_by_neighbour": [
+     "会社非訟事件等手続規則の一部を改正する規則（同一六）"
+    ]
+   }
+  ]
+ }
+}

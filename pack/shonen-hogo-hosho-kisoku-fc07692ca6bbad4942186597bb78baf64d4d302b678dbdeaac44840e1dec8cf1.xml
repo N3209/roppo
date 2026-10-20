@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/20260521shounenhoshoukisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和7年12月26日最高裁判所規則第１７号」
+  範囲: 本則10条（削除条の範囲を1要素として数える）、附則6本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="4" Num="8" PromulgateMonth="7" PromulgateDay="20" LawType="Rule">
+  <LawNum>平成四年七月二十日最高裁判所規則第八号</LawNum>
+  <LawBody>
+    <LawTitle>少年の保護事件に係る補償に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（趣旨）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>少年の保護事件に係る補償に関する法律（平成四年法律第八十四号。以下「法」という。）による決定の告知及び補償の払渡しの方法その他補償の実施に関しては、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（事件の開始）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条第一項の決定において同項の判断がされ、その決定が確定した場合において、その決定をした家庭裁判所は、その決定を受けた者が審判事由（法第一条の審判事由をいう。次項において同じ。）で当該判断に係るものに関して法第二条第一項各号に掲げる身体の自由の拘束を受けたものであると思料するときは、事件を開始する手続として、裁判所書記官に命じて、当該決定において当該判断がされ、その決定が確定した旨を明らかにした書面を作成させなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条第二項の決定が確定した場合において、その決定をした家庭裁判所は、その決定を受けた者が当該決定に係る審判事由に関して同項の身体の自由の拘束又は没取を受けたものであると思料するときは、事件を開始する手続として、裁判所書記官に命じて、当該決定が確定した旨を明らかにした書面を作成させなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（代理）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>本人又は法第六条第一項の特別関係者（これらの法定代理人を含む。）が弁護士でない者を代理人に選任するには、家庭裁判所の許可を受けなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の許可は、いつでも取り消すことができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>代理人の権限（法定代理権を含む。）は、書面で証明しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（申出の方式）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第五条第三項の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>申出に係る決定の表示</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>本人及び代理人の氏名、名称又は商号及び住所又は居所</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>申出の趣旨及び理由</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第六条第一項の申出は、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>申出人及び代理人の氏名、名称又は商号及び住所又は居所</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>本人が死亡した年月日及び申出人と本人との関係</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>申出の趣旨及び理由</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第五条第三項又は法第六条第一項の申出を口頭でするには、裁判所書記官の面前で陳述しなければならない。この場合においては、裁判所書記官は、調書を作らなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第六条第一項の申出をする場合において、第二項第二号に掲げる事項を証する資料があるときは、申出人は、その資料を提出しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（決定書の作成）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第五条第一項の補償に関する決定若しくは同条第三項の変更の決定（次条において「補償に関する決定」と総称する。）又は法第六条第一項の特別関係者に対する補償の決定（次条において「特別関係者に対する補償の決定」という。）をするときは、決定書を作成しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の決定書には、次に掲げる事項を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>事件の表示</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>本人又は申出人の氏名、名称又は商号及び住所又は居所並びに代理人の氏名、名称又は商号</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>主文及び理由</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>決定の年月日</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>裁判所の表示</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>少年審判規則（昭和二十三年最高裁判所規則第三十三号）第二条第一項及び第二項の規定は、第一項の決定書の作成について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（決定の告知）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>補償に関する決定の告知は、本人に対してしなければならない。ただし、本人の住所及び居所が明らかでない場合、外国においてすべき告知につき困難な事情がある場合、本人が告知を受ける能力を有しない場合又は本人が申し出た場合には、代理人に対してすることできる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>本人に対して補償に関する決定の告知をするときは、裁判所書記官は、その旨を代理人に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>補償に関する決定又は特別関係者に対する補償の決定の告知は、決定書の謄本を送達してしなければならない。ただし、補償の全部をしない旨の決定については、相当と認める方法によってすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟法（平成八年法律第百九号）第九十八条、第九十九条第二項及び第三項、第百条第一項、第百一条から第百二条の二まで、第百三条（本人及びその法定代理人に対する送達にあっては、同条第二項を除く。）、第百五条、第百六条、第百七条第一項及び第三項並びに第百八条並びに民事訴訟規則（平成八年最高裁判所規則第五号）第三十九条、第四十条、第四十三条及び第四十四条の規定は前項の規定による送達について、同規則第五十条第一項の規定は補償に関する決定及び特別関係者に対する補償の決定の告知がされた場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（調査）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>家庭裁判所調査官は、法第七条の調査を命じられたときは、その結果を書面で家庭裁判所に報告するものとする。この場合において、家庭裁判所調査官は、意見を付けることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>少年審判規則第十二条、第十九条（検証、押収（刑事訴訟法第百二条の二第一項に規定する電磁的記録提供命令（同項第一号イに掲げる方法による提供を命ずるものに限る。）を含む。）、捜索及び同項に規定する電磁的記録提供命令（同号ロに掲げる方法による提供を命ずるものに限る。）に係る部分を除く。）及び第十九条の二の規定は、法第七条の調査について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（補償の払渡し）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>補償金の払渡し又は没取に係る物の返付（以下「補償の払渡し」という。）は、法第五条第一項又は法第六条第一項の決定をした家庭裁判所に書面で請求しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定による請求が本人からされたときは、裁判所書記官は、遅滞なく、その旨を法定代理人に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第五条第三項の変更の決定（以下この項において「変更決定」という。）があった場合において、既に同条第一項の補償に関する決定に基づき補償の払渡しがされているときは、その補償の払渡しは、変更決定に基づく補償の払渡しの一部とみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（事件の記録の閲覧等）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>家庭裁判所は、本人、申出人又は代理人の申出があった場合において、相当と認めるときは、事件の記録の閲覧若しくは謄写を許可し、又は裁判所書記官に命じて事件の記録の正本、謄本若しくは抄本若しくは事件に関する証明書を交付させることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="10">
+        <ArticleCaption>（刑事訴訟規則の準用）</ArticleCaption>
+        <ArticleTitle>第十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）第五十八条から第六十一条までの規定は、書類の作成について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日から施行し、法の施行後に法第二条の決定があった法第一条の保護事件に係る身体の自由の拘束又は没取について適用する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年一二月一七日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法（平成八年法律第百九号。以下「新法」という。）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（少年の保護事件に係る補償に関する規則の一部改正に伴う経過措置）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第十七条の規定の施行前に書類の送達のために郵便を差し出した場合には、当該送達については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一三年二月一九日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法等の一部を改正する法律（平成十二年法律第百四十二号）の施行の日（平成十三年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二三年一二月二日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民法等の一部を改正する法律（平成二十三年法律第六十一号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（以下「施行日」という。）から施行する。ただし、第二条中民事訴訟費用等に関する規則第二条の三から第二条の五までの改正規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年一二月二六日最高裁判所規則第一七号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律（令和七年法律第三十九号）附則第一条第三号に掲げる規定の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

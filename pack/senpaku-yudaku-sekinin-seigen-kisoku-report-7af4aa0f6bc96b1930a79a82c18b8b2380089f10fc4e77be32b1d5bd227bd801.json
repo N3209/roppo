@@ -1,0 +1,155 @@
+{
+ "workId": "senpaku-yudaku-sekinin-seigen-kisoku",
+ "file": "senpaku-yudaku-sekinin-seigen-kisoku-40bfb189c1125d88babf1af807aca01117a7dead5455e3ae1ecfc5509e3fbf82.xml",
+ "sha256": "40bfb189c1125d88babf1af807aca01117a7dead5455e3ae1ecfc5509e3fbf82",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2020/R021001sennpakuyudakutousongaibaisyousekininseigenjikentoutetuzukikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "fc5ea1d68b81d74cc8e609d4e8f482892653a30ddda96de0a4ce019333526aae",
+  "pages": 4,
+  "law_num": "昭和五十一年五月十五日最高裁判所規則第三号",
+  "main_articles": 8,
+  "counts": {
+   "Article": 10,
+   "Paragraph": 15,
+   "Item": 4,
+   "Subitem1": 0,
+   "SupplProvision": 6,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2278,
+  "dropped_notes": 9,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 4,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和五九年三月二日最高裁判所規則第一号）抄",
+   "附則（平成六年八月三日最高裁判所規則第六号）",
+   "附則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附則（平成一六年七月二六日最高裁判所規則第一二号）",
+   "附則（令和元年一一月二七日最高裁判所規則第六号）"
+  ]
+ },
+ "independentCount": {
+  "title": "船舶油濁等損害賠償責任制限事件等手続規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 10,
+    "xml": 10,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "船舶油濁等損害賠償責任制限事件等手続規則",
+  "units": 32,
+  "pdf_lines": 95,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 16,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "船舶油濁等損害賠償責任制限事件等手続規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成16年7月26日 本紙第3899号",
+    "rule": "平成16年最高裁判所規則第12号",
+    "title": "油濁損害賠償責任制限事件等手続規則の一部を改正する規則",
+    "year": 2004,
+    "no": 12,
+    "url": "https://www.kanpo.go.jp/old/20040726/20040726h03899/20040726h038990001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和元年11月27日 号外第169号",
+    "rule": "令和元年最高裁判所規則第6号",
+    "title": "船舶油濁損害賠償責任制限事件等手続規則の一部を改正する規則",
+    "year": 2019,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20191127/20191127g00169/20191127g001690007f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

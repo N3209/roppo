@@ -1,0 +1,247 @@
+{
+ "workId": "jiken-kiroku-tokubetsu-hozon-kisoku",
+ "file": "jiken-kiroku-tokubetsu-hozon-kisoku-ecad094bfeec4c42ae91ba14fc1e65c8c1195f5584f249ab487bb7fcd67b5648.xml",
+ "sha256": "ecad094bfeec4c42ae91ba14fc1e65c8c1195f5584f249ab487bb7fcd67b5648",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/R8_5tokubetuhozonkisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "5e45fee495c7cc6f1b32d2316f92531dc0f292b3014eb0dfeeb66327357127ea",
+  "pages": 8,
+  "law_num": "令和六年三月十一日最高裁判所規則第九号",
+  "main_articles": 20,
+  "counts": {
+   "Article": 20,
+   "Paragraph": 39,
+   "Item": 8,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 2,
+   "Table": 2
+  },
+  "matching_characters": 5488,
+  "dropped_notes": 4,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 5,
+  "table_pages": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 6,
+    "before": [
+     "１５",
+     "破産事件再生事件"
+    ],
+    "added": [
+     "",
+     "小規模個人再生事件給与所得者等再生事件会社更生事件承認援助事件企業価値担保権実行事件船舶所有者等責任制限事件油濁等損害賠償責任制限事件"
+    ]
+   },
+   {
+    "page": 8,
+    "before": [
+     null,
+     null,
+     "借地非訟事件の終局決定の原本（抗告を却下するものを除く。）罹災都市借地借家臨時処理事件及び接収不動産に関する借地借家臨時処理事件の裁判上の和解と同一の効力を有する決定の原本破産手続開始の決定の原本破産法（平成１６年法律第７５号）第２５２条第１項及び第２項の免責許可の決定の原本民事再生法（平成１１年法律第２２５号）第２３５条第１項（同法第２４４条において準用する場合を含む。）の免責の決定の原本破産法第２５４条第１項の免責取消しの決定の原本復権の決定の原本簡易確定手続開始の決定の原本"
+    ],
+    "added": [
+     "",
+     "",
+     "執行認許の決定の原本家事審判事件の終局決定の原本（抗告を却下するものを除く。）子の返還申立事件の終局決定の原本（抗告を却下するものを除く。）国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成２５年法律第４８号）第１１７条第４項の終局決定を変更する決定又は同条第５項の決定（同条第１項の規定により終局決定を変更する決定をいう。）を変更する決定の原本訴訟等の費用の額の確定の決定の原本訴訟上の救助又は手続上の救助により納付を猶予された費用の支払を命ずる決定又は取立ての決定の原本秘密保持命令又は秘密保持命令の取消しの決定の原本"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表第一"
+   ],
+   [
+    "appdx",
+    "別表第二"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（令和６年３月１１日最高裁判所規則第９号）",
+   "附 則（令和７年１０月１６日最高裁判所規則第１２号）",
+   "附 則（令和８年５月１４日最高裁判所規則第９号）"
+  ]
+ },
+ "independentCount": {
+  "title": "事件記録等の特別保存に関する規則",
+  "extractor": [
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 8,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 20,
+    "xml": 20,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 4,
+    "body": 4
+   },
+   "Article": {
+    "pdf_lines": 20,
+    "xml": 20,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 16,
+    "xml": 16,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "事件記録等の特別保存に関する規則",
+  "units": 74,
+  "pdf_lines": 155,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 53,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 11
+ },
+ "tables": {
+  "title": "事件記録等の特別保存に関する規則",
+  "xml_tables": 2,
+  "pdf_fragments": 4,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 32,
+    "equal": 32,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 13,
+    "equal": 13,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和5年12月25日 号外第270号",
+   "rule": "令和5年最高裁判所規則第9号",
+   "title": "事件記録等の特別保存に関する規則",
+   "year": 2023,
+   "no": 9,
+   "url": "https://www.kanpo.go.jp/old/20231225/20231225g00270/20231225g002700002f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和6年3月11日 本紙第1178号",
+    "rule": "令和6年最高裁判所規則第9号",
+    "title": "事件記録等の特別保存に関する規則の一部を改正する規則",
+    "year": 2024,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20240311/20240311h01178/20240311h011780001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年10月16日 本紙第1569号",
+    "rule": "令和7年最高裁判所規則第12号",
+    "title": "事件記録等の特別保存に関する規則の一部を改正する規則",
+    "year": 2025,
+    "no": 12,
+    "url": "https://www.kanpo.go.jp/old/20251016/20251016h01569/20251016h015690001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和8年5月14日 本紙第1704号",
+    "rule": "令和8年最高裁判所規則第9号",
+    "title": "事件記録等の特別保存に関する規則の一部を改正する規則",
+    "year": 2026,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20260514/20260514h01704/20260514h017040001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

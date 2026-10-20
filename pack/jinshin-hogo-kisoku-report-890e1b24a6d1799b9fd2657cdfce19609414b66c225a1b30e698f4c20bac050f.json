@@ -1,0 +1,187 @@
+{
+ "workId": "jinshin-hogo-kisoku",
+ "file": "jinshin-hogo-kisoku-fe53d13e993df8a6f399656a37f128b35b3106d18d7e87f4218b7740b762e915.xml",
+ "sha256": "fe53d13e993df8a6f399656a37f128b35b3106d18d7e87f4218b7740b762e915",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521jinnshinnhogokisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "226e8ec7b0be14623557936950c69e8c4265deb3ec7752634bdf89be1e4ca9f3",
+  "pages": 10,
+  "law_num": "昭和二十三年九月二十一日最高裁判所規則第二十二号",
+  "main_articles": 46,
+  "counts": {
+   "Article": 50,
+   "Paragraph": 92,
+   "Item": 22,
+   "Subitem1": 0,
+   "SupplProvision": 11,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 8528,
+  "dropped_notes": 21,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 124,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和二四年七月一日最高裁判所規則第一二号）",
+   "附則（昭和二七年九月二二日最高裁判所規則第二六号）",
+   "附則（昭和四六年六月一四日最高裁判所規則第六号）",
+   "附則（昭和四六年六月二三日最高裁判所規則第九号）",
+   "附則（昭和五五年九月一〇日最高裁判所規則第五号）抄",
+   "附則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附則（平成一五年一一月一二日最高裁判所規則第二三号）抄",
+   "附則（平成一八年五月一二日最高裁判所規則第六号）",
+   "附則（平成一八年七月二八日最高裁判所規則第一一号）抄",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "人身保護規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 46,
+    "xml": 46,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 50,
+    "xml": 50,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 37,
+    "xml": 37,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 22,
+    "xml": 22,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "人身保護規則",
+  "units": 165,
+  "pdf_lines": 348,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 125,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 13
+ },
+ "tables": {
+  "title": "人身保護規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成15年11月12日 号外第260号",
+    "rule": "平成15年最高裁判所規則第23号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2003,
+    "no": 23,
+    "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600011f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年5月12日 本紙第4335号",
+    "rule": "平成18年最高裁判所規則第6号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20060512/20060512h04335/20060512h043350002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年7月28日 号外第174号",
+    "rule": "平成18年最高裁判所規則第11号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20060728/20060728g00174/20060728g001740001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20060728",
+    "no": 12,
+    "explained_by_neighbour": [
+     "刑事訴訟規則等の一部を改正する規則（最高裁一一）"
+    ]
+   }
+  ]
+ }
+}

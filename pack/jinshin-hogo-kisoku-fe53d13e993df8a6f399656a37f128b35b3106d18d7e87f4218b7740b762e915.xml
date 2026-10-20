@@ -1,0 +1,930 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/080521jinnshinnhogokisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和六年九月一七日同第一四号」
+  範囲: 本則46条（削除条の範囲を1要素として数える）、附則11本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFで半角「( )」で組まれた括弧124字を全角「（）」に統一。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="23" Num="22" PromulgateMonth="9" PromulgateDay="21" LawType="Rule">
+  <LawNum>昭和二十三年九月二十一日最高裁判所規則第二十二号</LawNum>
+  <LawBody>
+    <LawTitle>人身保護規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（この規則の趣旨）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>人身保護法（以下法という。）による救済の請求に関しては、法に定めるものの外、この規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（救済の内容）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法による救済は、裁判所が、法第十二条第二項の規定により、決定で、拘束者に対し、被拘束者の利益のためにする釈放その他適当であると認める処分を受忍し又は実行させるために、被拘束者を一定の日時及び場所に出頭させるとともに、審問期日までに答弁書を提出することを命じ（以下この決定を人身保護命令という。）、且つ、法第十六条第三項の規定により、判決で、釈放その他適当であると認める処分をすることによつてこれを実現する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（拘束及び拘束者の意義）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法及びこの規則において、拘束とは、逮捕、抑留、拘禁等身体の自由を奪い、又は制限する行為をいい、拘束者とは、拘束が官公署、病院等の施設において行われている場合には、その施設の管理者をいい、その他の場合には、現実に拘束を行つている者をいう。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（請求の要件）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条の請求は、拘束又は拘束に関する裁判若しくは処分がその権限なしにされ又は法令の定める方式若しくは手続に著しく違反していることが顕著である場合に限り、これをすることができる。但し、他に救済の目的を達するのに適当な方法があるときは、その方法によつて相当の期間内に救済の目的が達せられないことが明白でなければ、これをすることができない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条の請求は、被拘束者の自由に表示した意思に反してこれをすることができない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>請求者は、法第三条但書の規定により請求をみずからする場合には、同条但書の特別の事情を疎明しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（請求の方式）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条の請求をするには、左の事項を明らかにし、かつ、第二号、第三号及び第五号から第七号までの事項につき、関係者、参考人等の陳述書、証明書等の文書その他の物件又は電磁的記録（電子的方式、磁気的方式その他人の知覚によつては認識することができない方式で作られる記録であつて、電子計算機による情報処理の用に供されるものをいう。以下同じ。）によつて疎明方法を提供しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>請求者又はその代理人の氏名及び住所</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>拘束者の氏名、住所その他拘束者を特定するに足りる事項</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>被拘束者の氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>請求の趣旨</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>拘束の日時、場所、方法その他拘束の事情の概要</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>拘束が法律上正当な手続によらない理由</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="7">
+            <ItemTitle>七</ItemTitle>
+            <ItemSentence>
+              <Sentence>第四条ただし書の規定により請求をするときは、同条ただし書に当る事由</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（不備の補正）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>請求が前条の規定に違反している場合には、裁判所は、三日以内に不備を補正すべきことを命じなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>請求者が不備を補正しないときは、裁判所は、決定で請求を却下しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（請求の手数料）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条の請求をするには、三千二百円（第四十六条の規定によりその例によることとされる民事訴訟法第百三十二条の十第一項の規定による電子情報処理組織を使用する方法による申立てをする場合にあつては、二千七百円）の手数料を納めなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>手数料は、現金をもつて納めなければならない。ただし、法第二条の請求を書面をもつてすることができる場合であつて、やむを得ない事由があるときは、請求書又は請求の趣意を記載した調書に収入印紙を貼つて納めることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>3</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定により手数料を現金をもつて納める場合には、裁判所から得られた納付情報により納付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>4</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条の規定は、請求者が手数料を納めない場合について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="10">
+        <ArticleCaption>（除斥）</ArticleCaption>
+        <ArticleTitle>第十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判によつて行われている拘束について救済の請求があつたときは、当該裁判に関与した裁判官は、法律上職務の執行から除斥される。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="11">
+        <ArticleCaption>（審理及び裁判の迅速）</ArticleCaption>
+        <ArticleTitle>第十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条の請求に関する審理及び裁判は、事件受理の前後にかかわらず、他の事件に優先して、迅速にこれをしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="12">
+        <ArticleTitle>第十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、除斥又は忌避の申立が手続を遅延させる目的のみでされたことが明らかであるときは、決定でこれを却下しなければならない。除斥又は忌避の申立がその手続に違反している場合も、同様である。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の場合においては、除斥又は忌避を申し立てられた裁判官が除斥又は忌避の裁判に関与することは、これを妨げない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="13">
+        <ArticleTitle>第十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>除斥又は忌避の申立があつた場合においても、手続を停止してはならない。但し、合議体の裁判官が除斥又は忌避されたときはその合議体が、地方裁判所の一人の裁判官が除斥又は忌避されたときは当該裁判官が、申立を理由があると認めるときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="14">
+        <ArticleTitle>第十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>移送の裁判及び移送の申立を却下した裁判に対しては、不服を申し立てることができない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の裁判が法令に違反しているときは、上告裁判所の判断を受ける。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="15">
+        <ArticleCaption>（併合の禁止）</ArticleCaption>
+        <ArticleTitle>第十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第二条の請求は、他の訴と併合してこれをすることができない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="16">
+        <ArticleCaption>（指定代理）</ArticleCaption>
+        <ArticleTitle>第十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>官公署の施設の管理者が、拘束者として法第二条の請求を受けたときは、その施設の職員を指定して、その請求に関し、訴訟行為をさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定により官公署の施設の管理者が指定した者は、当該請求について、代理人の選任以外の一切の裁判上の行為をする権限を有する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="17">
+        <ArticleCaption>（準備調査）</ArticleCaption>
+        <ArticleTitle>第十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第九条第一項の規定による準備調査は、同項に掲げる者のうち拘束の事由その他の事項の調査について必要であると認める者を審尋してこれを行う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="18">
+        <ArticleCaption>（準備調査省略の場合の手続）</ArticleCaption>
+        <ArticleTitle>第十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、第八条又は第九条の規定により請求を却下する場合及び事件を他の管轄裁判所に移送する場合の外、法第九条第一項の規定による準備調査を必要としないときは、直ちに、法第十一条第一項の規定により請求を棄却するか、又は法第十二条の規定により召喚及び人身保護命令発付の手続をすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="19">
+        <ArticleCaption>（仮の処分の通知）</ArticleCaption>
+        <ArticleTitle>第十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十条第一項の処分がされたとき、又はその処分が取り消されたときは、裁判所書記官は、拘束に関する令状を発した裁判所（裁判官が令状を発したときは、その裁判官所属の裁判所）及び当該裁判所に対応する検察庁の検察官にその旨を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="20">
+        <ArticleCaption>（勾引）</ArticleCaption>
+        <ArticleTitle>第二十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十条第二項の勾引には、刑事訴訟に関する法令の規定中被告人の勾引に関する規定を準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="21">
+        <ArticleCaption>（決定による請求棄却）</ArticleCaption>
+        <ArticleTitle>第二十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>次に掲げる場合には、裁判所は、決定で請求を棄却することができる。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>請求が不適法であつてその不備を補正することができないものであるとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>請求が被拘束者の自由に表示した意思に反してされたとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>拘束者又はその住居が明らかでないとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>被拘束者が死亡したとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="5">
+            <ItemTitle>五</ItemTitle>
+            <ItemSentence>
+              <Sentence>被拘束者が身体の自由を回復したとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="6">
+            <ItemTitle>六</ItemTitle>
+            <ItemSentence>
+              <Sentence>その他請求の理由のないことが明白であるとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の決定は、準備調査において拘束者を審尋した場合を除いて、これを拘束者に告知することを要しない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="22">
+        <ArticleCaption>（仮の処分の取消）</ArticleCaption>
+        <ArticleTitle>第二十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、法第十条第一項の処分をした場合において、法第十一条第一項の決定をするときは、更に、決定で、さきにした法第十条第一項の処分を取り消し、且つ、被拘束者に出頭を命じこれを拘束者に引き渡す旨の裁判をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の規定による決定は、これを請求者、拘束者及び被拘束者に告知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="23">
+        <ArticleCaption>（召喚の方式）</ArticleCaption>
+        <ArticleTitle>第二十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十二条第一項の規定による召喚は、民事訴訟法の期日における呼出の方式によつてこれを行う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="24">
+        <ArticleCaption>（人身保護命令に係る電子命令書の送達）</ArticleCaption>
+        <ArticleTitle>第二十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>人身保護命令が発せられた場合には、その電子命令書（民事訴訟法第百二十二条において準用する同法第二百五十二条第一項の規定により作成された電磁的記録（同法第百二十二条において準用する同法第二百五十三条第二項の規定により裁判所の使用に係る電子計算機（入出力装置を含む。）に備えられたファイル（以下単に「ファイル」という。）に記録されたものに限る。）をいう。）を拘束者に送達しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の送達については、民事訴訟法の公示送達の方法によることができない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="25">
+        <ArticleCaption>（人身保護命令の効果）</ArticleCaption>
+        <ArticleTitle>第二十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一項の電子命令書が拘束者に送達されたときは、被拘束者は、その送達の時から人身保護命令を発した裁判所によつて当該拘束の場所において監護されるものとする。この場合には、被拘束者の監護は、拘束者において当該裁判所の指揮のもとに引き続きこれを行うものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の場合において、裁判所は、必要があると認めるときは、被拘束者を拘置所、刑務所、警察署その他適当であると認める場所に移すことを命ずることができる。この場合には、被拘束者の監護は、被拘束者の移送を受けた者においてこれを行うものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="26">
+        <ArticleTitle>第二十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第二十四条第一項の電子命令書が拘束者に送達された後において、他の裁判所、行政庁その他の者が、被拘束者を被告人、証人又は参考人として呼び出す等法の規定による救済手続を遅延させるおそれのある行為をしようとするときは、当該人身保護命令を発した裁判所の同意を得なければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="27">
+        <ArticleCaption>（答弁書）</ArticleCaption>
+        <ArticleTitle>第二十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>答弁書には、次に掲げる事項を記載し、拘束者又はその代理人が記名押印しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>拘束者又はその代理人の氏名及び住所</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>人身保護命令に対する答弁の趣旨</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>拘束の日時、場所及びその事由</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>被拘束者を出頭させることができないときは、その理由</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>拘束が裁判によつて行われている場合には、令状その他の裁判書の謄本又は抄本を答弁書に添付しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>拘束者又はその代理人は、前項の裁判書の謄本又は抄本の添付に代えて、最高裁判所の細則で定めるところにより、当該裁判書の謄本又は抄本に係る画像情報を電子情報処理組織（民事訴訟規則第五十二条の十第一項に規定する電子情報処理組織をいう。）を使用してファイルに記録する方法により提出することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>4</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>拘束者は、令状その他の裁判書の謄本又は抄本の交付を当該令状その他の裁判書を保管する官庁に請求することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="28">
+        <ArticleCaption>（人身保護命令の通知等）</ArticleCaption>
+        <ArticleTitle>第二十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>人身保護命令が発せられたとき、又はこれが取り消されたときは、裁判所書記官は、拘束に関する令状を発した裁判所（裁判官が令状を発したときは、その裁判官所属の裁判所）及び当該裁判所に対応する検察庁の検察官にその旨を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="29">
+        <ArticleCaption>（審問期日）</ArticleCaption>
+        <ArticleTitle>第二十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>審問期日においては、まず、拘束者又はその代理人が答弁書に基いて陳述し、これに対し、被拘束者若しくは請求者又はこれらの者の代理人が陳述するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の陳述があつた後、裁判所は、疎明方法の取調を行う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>3</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>拘束者は、拘束の事由を疎明しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>4</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判によつて行われている拘束は、適法なものと推定する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="30">
+        <ArticleTitle>第三十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一項の陳述が行われるべき審問期日には、被拘束者及びその代理人並びに拘束者及び請求者又はこれらの者の代理人が出頭しなければならない。但し、左の各号の一に該当する場合は、この限りでない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>被拘束者の出頭については、その代理人が出頭している場合において、被拘束者が病気その他やむを得ない事由によつて出頭することができず、且つ、被拘束者に異議がないとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>被拘束者の代理人の出頭については、被拘束者が出頭している場合において、被拘束者に異議がないとき。</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>請求者又はその代理人の出頭については、請求者及びその代理人の出頭がない場合において、裁判所が請求書に記載した事項はこれを陳述したものとみなすのを相当と認めるとき。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一項の陳述があつた後の審問期日においては、裁判所は、相当と認めるときは、出頭しない者があつても、期日を開くことができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="31">
+        <ArticleCaption>（被拘束者の代理人）</ArticleCaption>
+        <ArticleTitle>第三十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者の代理人は、弁護士でなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者の代理人が選任されていないときは、裁判所は、これを選任しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>3</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者が被告人又は被疑者である場合において弁護士である弁護人（裁判長又は裁判官により選任されたものを除く。）があるときは、その弁護人は、これを被拘束者の代理人とみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="32">
+        <ArticleCaption>（審問期日の通知）</ArticleCaption>
+        <ArticleTitle>第三十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所書記官は、第二十八条の裁判所及び検察官に審問期日を通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の裁判所の裁判官及び検察官は、審問期日に立ち会い意見を述べることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、前項の場合において、相当と認めるときは、裁判所が第一項の裁判所の裁判官又は検察官との間で映像と音声の送受信により相手の状態を相互に認識しながら通話をすることができる方法によつて、意見を述べさせることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項に規定する方法によつて第一項の裁判所の裁判官又は検察官に意見を述べさせるときは、裁判所は、次に掲げる事項を確認しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>通話者</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>通話者の所在する場所の状況が当該方法によつて手続を実施するために適切なものであること。</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の裁判所の裁判官又は検察官に前項の意見を述べさせたときは、その旨及び同項第二号に掲げる事項を審問に係る電子調書（期日又は期日外における手続の方式、内容及び経過等の記録及び公証をするために民事訴訟法第百六十条第一項（他の法令において準用する場合を含む。）その他の法令の規定により裁判所書記官が作成する電磁的記録をいう。）に記録しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="33">
+        <ArticleCaption>（審問の方式）</ArticleCaption>
+        <ArticleTitle>第三十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>審問は、その性質に反しない限り、民事訴訟に関する法令の規定中口頭弁論の方式に関する規定に従つて行う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="34">
+        <ArticleCaption>（被拘束者の訴訟行為）</ArticleCaption>
+        <ArticleTitle>第三十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者は、請求について、自由な意思に基き、攻撃又は防ぎよの方法の提出、異議の申立、上訴の提起、請求の取下その他一切の訴訟行為をすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者の訴訟行為と請求者の訴訟行為とが抵触するときは、その抵触する範囲において、請求者の訴訟行為は、その効力を失う。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="35">
+        <ArticleCaption>（請求の取下）</ArticleCaption>
+        <ArticleTitle>第三十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>請求は、判決のあるまで、拘束者の同意を得ないでこれを取り下げることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>請求の取下は、書面でこれをしなければならない。但し、審問期日において、口頭でこれをすることを妨げない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>3</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>請求の取下があつた場合には、裁判所は、直ちに、決定で、さきに発した人身保護命令を取り消し、及びさきにした法第十条第一項の処分を取り消し、且つ、被拘束者に出頭を命じ、これを拘束者に引き渡す旨の裁判をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="36">
+        <ArticleCaption>（判決の言渡期日）</ArticleCaption>
+        <ArticleTitle>第三十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>判決の言渡は、審問終結の日から五日以内にこれをする。但し、特別の事情があるときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="37">
+        <ArticleCaption>（請求認容の判決）</ArticleCaption>
+        <ArticleTitle>第三十七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判所は、請求を理由があるとするときは、判決で、被拘束者を直ちに釈放し、又は被拘束者が幼児若しくは精神病者であるときその他被拘束者につき特別の事情があると認めるときは、被拘束者の利益のために適当であると認める処分をすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="38">
+        <ArticleCaption>（手続費用）</ArticleCaption>
+        <ArticleTitle>第三十八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十七条に規定する手続に要した費用は、民事訴訟における訴訟費用の外、被拘束者の旅費、日当及び宿泊料並びに第三十一条第二項の規定により選任された代理人に給与する旅費、日当、宿泊料及び報酬とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の被拘束者の旅費、日当及び宿泊料の額については、民事訴訟における当事者の旅費、日当及び宿泊料の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="39">
+        <ArticleCaption>（勾引及び勾留）</ArticleCaption>
+        <ArticleTitle>第三十九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第十八条の勾引又は勾留には、刑事訴訟に関する法令の規定中被告人の勾引又は勾留に関する規定を準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="40">
+        <ArticleCaption>（弁護士依頼の申出）</ArticleCaption>
+        <ArticleTitle>第四十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者は、代理人のない場合に限り、拘束者に対し、弁護士を指定してこれを代理人として依頼する旨の申出をすることができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被拘束者が二人以上の弁護士を指定して前項の申出をしたときは、拘束者は、そのうちの一人の弁護士にこれを通知すれば足りる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="41">
+        <ArticleCaption>（上告）</ArticleCaption>
+        <ArticleTitle>第四十一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>下級裁判所の判決に対しては、控訴をすることはできないが、最高裁判所に上告をすることができる。その期間は、言渡しの日から三日とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>上告理由書及び上告受理申立て理由書の提出期間は、十五日とする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="42">
+        <ArticleCaption>（書面審理）</ArticleCaption>
+        <ArticleTitle>第四十二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所は、上告状、上告理由書、答弁書その他の書類によつて上告を理由がないと認めたときは、審問を経ないで、判決で上告を棄却することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="43">
+        <ArticleCaption>（事件送致命令）</ArticleCaption>
+        <ArticleTitle>第四十三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所が、下級裁判所に係属する事件を法第二十二条第一項の規定によりみずから処理するため送致させようとするときは、当該下級裁判所に対し、事件送致命令を発する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>最高裁判所の裁判所書記官は、前項の命令が発せられたときは、速やかに、請求者に対し、また、人身保護命令が発せられた後は、拘束者に対し、その旨を通知する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="44">
+        <ArticleTitle>第四十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一項の命令があつたときは、事件は、初めから最高裁判所に係属したものとみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条第一項の命令があつたときは、当該下級裁判所の裁判所書記官は、速やかに最高裁判所の裁判所書記官に訴訟記録の管理を引き継がなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="45">
+        <ArticleCaption>（他の法律による裁判の効力）</ArticleCaption>
+        <ArticleTitle>第四十五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>他の法律によつてされた当該拘束に関する裁判で被拘束者に不利なものは、人身保護命令若しくは法第十条第一項の処分をする決定が拘束者に送達され、又は被拘束者を釈放し若しくは被拘束者につき適当な処分をする判決の言渡しがあつたときは、これと抵触する範囲において、その効力を制限される。ただし、拘束が判決、勾留状又は監置の決定の執行として行われている場合には、刑期、未決勾留若しくは監置の期間の算入又は刑事補償法による補償については、人身保護命令は発せられなかつたものとみなし、法第十条第一項の処分又はその取消しは、それぞれこれを刑法における仮釈放の処分又はその取消しとみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>2</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>他の法律によつてされた当該拘束に関する裁判で被拘束者に不利なものは、人身保護命令若しくは法第十条第一項の処分を取り消す決定が拘束者に送達され又は請求を棄却する判決の言渡があつたときは、その効力を回復する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="46">
+        <ArticleCaption>（請求手続の性質）</ArticleCaption>
+        <ArticleTitle>第四十六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法による救済の請求に関しては、法及びこの規則に定めるものの外、その性質に反しない限り、民事訴訟の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十三年九月二十八日から、これを施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二四年七月一日最高裁判所規則第一二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十四年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和二七年九月二二日最高裁判所規則第二六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十七年九月二十五日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四六年六月一四日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日等）</ParagraphCaption>
+        <ParagraphNum>1</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十六年七月一日から施行し、第六条の規定による改正後の参与員規則第七条第二項の規定、第八条の規定による改正後の司法委員規則第六条第二項の規定、第九条の規定による改正後の調停委員規則第十条第二項の規定及び第十条の規定による改正後の鑑定委員規則第七条第二項の規定は、昭和四十七年一月一日から適用する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>2</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行前に要した参与員、人身保護法による国選代理人、司法委員、調停委員等及び鑑定委員の費用並びにこの規則の施行後昭和四十六年十二月三十一日までの間に支給原因の生じた参与員、司法委員、調停委員等及び鑑定委員の日当の額については、なお従前の例による。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四六年六月二三日最高裁判所規則第九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十六年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五五年九月一〇日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>1</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十五年十月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年一二月一七日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法（平成八年法律第百九号。以下「新法」という。）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年一一月一二日最高裁判所規則第二三号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、平成十六年一月一日から施行する。ただし、第一条中民事訴訟費用等に関する規則第四条第一号の改正規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年五月一二日最高裁判所規則第六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は，刑事施設及び受刑者の処遇等に関する法律（平成十七年法律第五十号）の施行の日（平成十八年五月二十四日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年七月二八日最高裁判所規則第一一号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>1</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は，刑事訴訟法等の一部を改正する法律（平成十六年法律第六十二号）附則第一条第一号に掲げる規定の施行の日（平成十八年十月二日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（令和八年五月二一日）（以下「施行日」という。）から施行する。ただし、第二条中民事訴訟費用等に関する規則第二条の三から第二条の五までの改正規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="34">
+        <ArticleCaption>（人身保護規則の一部改正に伴う経過措置）</ArticleCaption>
+        <ArticleTitle>第三十四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条の規定による改正後の人身保護規則第七条の規定は、施行日以後に開始される人身保護事件における疎明方法の提供について適用し、施行日前に開始された人身保護事件における疎明方法の提供については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

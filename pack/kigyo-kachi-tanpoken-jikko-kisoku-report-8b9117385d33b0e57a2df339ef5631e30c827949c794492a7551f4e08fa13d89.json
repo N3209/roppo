@@ -1,0 +1,293 @@
+{
+ "workId": "kigyo-kachi-tanpoken-jikko-kisoku",
+ "file": "kigyo-kachi-tanpoken-jikko-kisoku-f19f37ed7d6156eb6e5f99d90cdf60b46eb682f5e6d5e20c2f21e9ae8ed1751c.xml",
+ "sha256": "f19f37ed7d6156eb6e5f99d90cdf60b46eb682f5e6d5e20c2f21e9ae8ed1751c",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260525kigyoukatitanpokenkikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "4324c502b221c90436dd08f2c118f7769dde6bb25743f5929849070f06c33df1",
+  "pages": 25,
+  "law_num": "令和八年四月二十二日最高裁判所規則第七号",
+  "main_articles": 51,
+  "counts": {
+   "Article": 65,
+   "Paragraph": 130,
+   "Item": 49,
+   "Subitem1": 2,
+   "SupplProvision": 1,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 19735,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 4,
+  "table_pages": [
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 20,
+    "before": [
+     "第三十四条の七第二項、第",
+     "電子調書",
+     "調書"
+    ],
+    "added": [
+     "七十二条、第七十六条、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二項、第百四十二条及び第百四十六条第一項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 21,
+    "before": [
+     "第六十六条第三項",
+     "当該電子調書に記録するとと",
+     "付記して認印しなければ"
+    ],
+    "added": [
+     "",
+     "もに、当該電子調書の内容を確認し、かつ、これを確認したことを当該電子調書上明らかにする措置を講じなければ",
+     ""
+    ]
+   },
+   {
+    "page": 22,
+    "before": [
+     "第六十九条",
+     "他の電磁的記録",
+     "書面、写真、録音テープ、ビデオテープその他裁判所"
+    ],
+    "added": [
+     "",
+     "",
+     "において適当と認めるもの"
+    ]
+   },
+   {
+    "page": 23,
+    "before": [
+     null,
+     "第二項、第四項及び第五項",
+     "第二項及び第五項並びに同"
+    ],
+    "added": [
+     "",
+     "",
+     "規則附則第九条第一項及び第二項"
+    ]
+   },
+   {
+    "page": 24,
+    "before": [
+     null,
+     "読み替える",
+     "、企業価値担保権実行手続規則附則第十一条中「同条の文書の写し」とあるのは「第十一条第一項において読み替えて準用する同規則第百四十九"
+    ],
+    "added": [
+     "",
+     "",
+     "条の二第一項の電磁的記録を記録した記録媒体」と読み替える"
+    ]
+   },
+   {
+    "page": 25,
+    "before": [
+     "第二百十条第一項",
+     "電子抗告提起通知書（法第三",
+     "抗告提起通知書"
+    ],
+    "added": [
+     "",
+     "百三十条の抗告又は法第三百三十六条第一項の抗告があった旨を通知するために裁判所書記官が作成する電磁的記録をいう。）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則"
+  ]
+ },
+ "independentCount": {
+  "title": "企業価値担保権実行手続規則",
+  "extractor": [
+   {
+    "page": 19,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 20,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 21,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 22,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 23,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 24,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 51,
+    "xml": 51,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 17,
+    "body": 17
+   },
+   "Article": {
+    "pdf_lines": 65,
+    "xml": 65,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 65,
+    "xml": 65,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 49,
+    "xml": 49,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "企業価値担保権実行手続規則",
+  "units": 263,
+  "pdf_lines": 540,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 161,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 23
+ },
+ "tables": {
+  "title": "企業価値担保権実行手続規則",
+  "xml_tables": 1,
+  "pdf_fragments": 7,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 69,
+    "equal": 69,
+    "joins": 6,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "令和8年4月22日 号外第94号",
+   "rule": "令和8年最高裁判所規則第7号",
+   "title": "企業価値担保権実行手続規則",
+   "year": 2026,
+   "no": 7,
+   "url": "https://www.kanpo.go.jp/old/20260422/20260422g00094/20260422g000940003f.html",
+   "found_by": "官報"
+  },
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

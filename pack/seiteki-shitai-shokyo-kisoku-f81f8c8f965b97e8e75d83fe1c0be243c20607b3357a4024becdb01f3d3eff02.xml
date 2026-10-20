@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/seitekishitaisatueikisoku20260521.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和６年９月17 日最高裁判所規則第14 号」
+  範囲: 本則9条（削除条の範囲を1要素として数える）、附則2本（抄を含む）、本文中の表1点。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFで半角「( )」で組まれた括弧2字を全角「（）」に統一。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Reiwa" Year="6" Num="10" PromulgateMonth="4" PromulgateDay="17" LawType="Rule">
+  <LawNum>令和六年四月十七日最高裁判所規則第十号</LawNum>
+  <LawBody>
+    <LawTitle>性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律による消去等の手続等に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（趣旨）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律（令和五年法律第六十七号。以下「法」という。）による押収物に記録された性的な姿態の影像に係る電磁的記録の消去等の手続等については、法及び他の最高裁判所規則に定めるもののほか、この規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（検察官が保管する物の提出又は送付の際の通知・法第十三条）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>検察官は、その保管している物が法第十条第一項第一号に掲げる物に該当すると思料する場合において、当該物を刑事被告事件の係属する裁判所が刑事訴訟法（昭和二十三年法律第百三十一号）第九十九条第一項の規定により差し押さえたとき又は家庭裁判所が少年法（昭和二十三年法律第百六十八号）第十五条第二項において準用する刑事訴訟法第九十九条第一項の規定により差し押さえたときは、その差押え後速やかに、当該物が法第十条第一項第一号に掲げる物に該当すると思料する旨を当該裁判所に通知するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>検察官は、その保管している物が法第十条第一項第一号に掲げる物に該当すると思料する場合において、当該物について刑事被告事件の係属する裁判所が刑事訴訟法第九十九条第三項の規定により提出を受けるとき又は家庭裁判所が少年法第十五条第二項において準用する刑事訴訟法第九十九条第三項の規定により提出を受けるときは、その提出の際に、当該物が法第十条第一項第一号に掲げる物に該当すると思料する旨を当該裁判所に通知するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>検察官は、その保管している物が法第十条第一項第一号に掲げる物に該当すると思料する場合において、当該物を刑事訴訟法第三百十条の規定により刑事被告事件の係属する裁判所に提出するとき又は少年の保護事件の処理に関する法令の規定により家庭裁判所に送付するときは、当該物が法第十条第一項第一号に掲げる物に該当すると思料する旨を当該裁判所に通知するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（通知に係る押収物を領置するかどうかの通知・法第十三条）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>検察官は、法第十三条第一項前段又は第二項前段の規定による通知を受けたときは、速やかに、その通知に係る押収物を領置する旨又は領置しない旨のいずれかを、その通知をした裁判所に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（検察官による少年の保護事件の記録又は証拠物の閲覧・法第十三条）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>検察官は、少年審判規則（昭和二十三年最高裁判所規則第三十三号）第七条第一項の規定にかかわらず、法第十三条第二項各号に掲げる押収物について、法第二十六条第一項各号に掲げる処分等又は当該処分等に係る法第二十九条第一項各号に定める裁決をするため必要な限度で、当該押収物に係る少年の保護事件の記録又は証拠物を閲覧することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（撮影対象者等の住所、氏名等の秘匿等の申立ての方式・法第三十五条）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>次に掲げる申立ては、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>法第三十五条第一項の申立て</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>法第三十五条第二項において読み替えて準用する民事訴訟法（平成八年法律第百九号）第百三十三条の二第二項の申立て</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>法第三十五条第二項において読み替えて準用する民事訴訟法第百三十三条の四第一項の取消しの申立て</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="4">
+            <ItemTitle>四</ItemTitle>
+            <ItemSentence>
+              <Sentence>法第三十五条第二項において読み替えて準用する民事訴訟法第百三十三条の四第二項の許可の申立て</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（秘匿事項届出書面の記載事項等・法第三十五条）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三十五条第二項において読み替えて準用する民事訴訟法第百三十三条第二項の規定による届出に係る書面（以下この条において「秘匿事項届出書面」という。）には、秘匿事項を記載するほか、秘匿事項届出書面である旨を表示しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則（平成八年最高裁判所規則第五号）第三条第一項（第二号に係る部分に限る。）の規定は、前項の秘匿事項届出書面について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（秘匿決定があった場合における秘匿事項記載部分の閲覧等の制限の申立ての方式等・法第三十五条）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟規則第五十二条の二十、第五十二条の二十一第一項及び第五十二条の二十二の規定は、法第三十五条第一項の決定があった場合について準用する。この場合において、次の表の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句に読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+          <TableStruct>
+            <Table>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>読み替える民事訴訟規則の規定</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>読み替えられる字句</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>読み替える字句</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>第五十二条の二十第一項</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>申立て</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>被告の申立て</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>第五十二条の二十第二項</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>秘匿対象者</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>被告</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>第五十二条の二十一第一項</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>この規則の規定（第五十二条の十九（秘匿事項届出書面の記載事項等）第一項を除く。次項において同じ。）による押印（当該秘匿決定に係る秘匿対象者</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>この規則の規定による押印（当該秘匿決定に係る撮影対象者等（性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律第九条第二項に規定する撮影対象者等をいう。）</Sentence>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>第五十二条の二十二第一項</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>法第百三十三条（申立人の住所、氏名等の秘匿）第一項の申立てをした者</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>被告</Sentence>
+                </TableColumn>
+              </TableRow>
+            </Table>
+          </TableStruct>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（対象領置物件及び対象電磁的記録等の閲覧等の制限の申立ての方式等・法第三十六条）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三十六条第一項の申立ては、書面でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の申立ては、対象姿態等該当部分を特定してしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立ては、法第三十六条第一項に規定する証拠の申出の際にしなければならない。ただし、やむを得ない事由があるときは、当該申出があった後速やかに申立てをすれば足りる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立てをするときは、法第三十六条第一項に規定する証拠の申出に係る対象領置物件若しくは対象領置物件を複写した記録媒体又は対象電磁的記録若しくは対象電磁的記録を複写し若しくは印刷した記録媒体（以下この条において「記録媒体等」という。）から対象姿態等該当部分を除いたもの（以下この条において「申立時除外媒体」という。）を作成し、裁判所に提出しなければならない。ただし、同項の申立てに係る対象姿態等該当部分が当該証拠の申出に係る記録媒体等の全部であるときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立てをする被告は、申立時除外媒体の複製物について直送をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="6">
+          <ParagraphNum>６</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立てを認容する決定においては、対象姿態等該当部分を特定しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="7">
+          <ParagraphNum>７</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の決定があったときは、被告は、遅滞なく、法第三十六条第一項に規定する証拠の申出に係る記録媒体等から当該決定において特定された対象姿態等該当部分を除いたもの（以下この条において「決定後除外媒体」という。）を作成し、裁判所に提出しなければならない。ただし、第一項の申立てにおいて特定された対象姿態等該当部分と当該決定において特定された対象姿態等該当部分とが同一である場合は、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="8">
+          <ParagraphNum>８</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第六項の決定があったときは、被告は、前項ただし書の場合を除き、決定後除外媒体の複製物について直送をしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="9">
+          <ParagraphNum>９</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立てをする被告は、申立時除外媒体又は決定後除外媒体の提出に代えて、最高裁判所の細則で定めるところにより、これらに係る画像情報を電子情報処理組織（民事訴訟規則第五十二条の十第一項に規定する電子情報処理組織をいう。）を使用して裁判所の使用に係る電子計算機（入出力装置を含む。）に備えられたファイルに記録する方法により提出することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="10">
+          <ParagraphNum>10</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟法第百三十二条の十一第一項（第三号に係る部分を除く。）及び第三項の規定は、申立時除外媒体及び決定後除外媒体（同法第二百三十一条に規定する物件を除く。）の提出について準用する。この場合において、同法第百三十二条の十一第一項中「前条第一項」とあるのは、「性的な姿態を撮影する行為等の処罰及び押収物に記録された性的な姿態の影像に係る電磁的記録の消去等に関する法律による消去等の手続等に関する規則第八条第九項」と読み替えるものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="11">
+          <ParagraphNum>11</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>被告は、第一項の申立てをした場合において、申立時除外媒体の複製物又は決定後除外媒体の複製物の直送をしたときは、民事訴訟規則第百三十七条第二項の規定による同条第一項の写しの直送をすることを要しない。ただし、第一項の申立てを却下する裁判が確定したときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="12">
+          <ParagraphNum>12</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第一項の申立てがされた場合における被告及び対象領置物件又は対象電磁的記録に係る撮影対象者等以外の者による対象姿態等該当部分に係る民事訴訟法第九十一条の二第一項の規定による電磁的訴訟記録の閲覧は、民事訴訟規則第三十三条の三第一項の規定にかかわらず、同項第一号に掲げる方法に限るものとする。ただし、第一項の申立てを却下する裁判が確定したときは、この限りでない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（取消訴訟以外の国を被告とする訴訟についての準用・法第三十七条）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第五条から前条までの規定は、法第二十六条第一項各号に掲げる処分等又は当該処分等に係る法第二十九条第一項各号に定める裁決に関する国を被告とする訴訟（行政事件訴訟法（昭和三十七年法律第百三十九号）第九条第一項に規定する取消訴訟を除く。）について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法附則第一条ただし書に掲げる規定の施行の日（令和六年六月二〇日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和６年９月１７日最高裁判所規則第１４号抄）</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

@@ -1,0 +1,2603 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/20260521haguenokisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和7年10月17日最高裁判所規則第13号」
+  範囲: 本則104条（削除条の範囲を1要素として数える）、附則6本（抄を含む）、別表2点。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。PDFの誤字の訂正あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。27ページ先頭の表の行は紙面で確認のうえ縦結合の下の新しい行とした（verification/boundary/）。PDFの誤りを確認のうえ訂正（第一条「第三条の二第六項）において」→「第三条の二第六項において」。根拠は corrections.py と作業メモ）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="25" Num="5" PromulgateMonth="11" PromulgateDay="13" LawType="Rule">
+  <LawNum>平成二十五年十一月十三日最高裁判所規則第五号</LawNum>
+  <LawBody>
+    <LawTitle>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 子の返還に関する事件の手続</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <ArticleRange>（第一条―第四条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 子の返還申立事件の手続</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 総則</SubsectionTitle>
+            <TOCDivision Num="1">
+              <DivisionTitle>第一目 管轄</DivisionTitle>
+              <ArticleRange>（第五条―第七条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="2">
+              <DivisionTitle>第二目 裁判所職員の除斥、忌避及び回避</DivisionTitle>
+              <ArticleRange>（第八条―第十二条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="3">
+              <DivisionTitle>第三目 当事者能力及び手続行為能力</DivisionTitle>
+              <ArticleRange>（第十三条・第十四条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="4">
+              <DivisionTitle>第四目 参加</DivisionTitle>
+              <ArticleRange>（第十五条・第十六条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="5">
+              <DivisionTitle>第五目 手続代理人</DivisionTitle>
+              <ArticleRange>（第十七条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="6">
+              <DivisionTitle>第六目 手続費用</DivisionTitle>
+              <ArticleRange>（第十八条・第十九条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="7">
+              <DivisionTitle>第七目 子の返還申立事件の審理等</DivisionTitle>
+              <ArticleRange>（第二十条―第三十三条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="8">
+              <DivisionTitle>第八目 当事者に対する住所、氏名等の秘匿</DivisionTitle>
+              <ArticleRange>（第三十三条の二）</ArticleRange>
+            </TOCDivision>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 第一審裁判所における子の返還申立事件の手続</SubsectionTitle>
+            <TOCDivision Num="1">
+              <DivisionTitle>第一目 子の返還の申立て</DivisionTitle>
+              <ArticleRange>（第三十四条―第四十一条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="2">
+              <DivisionTitle>第二目 子の返還申立事件の手続の期日</DivisionTitle>
+              <ArticleRange>（第四十二条・第四十三条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="3">
+              <DivisionTitle>第三目 事実の調査及び証拠調べ</DivisionTitle>
+              <ArticleRange>（第四十四条―第四十六条の四）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="4">
+              <DivisionTitle>第四目 裁判</DivisionTitle>
+              <ArticleRange>（第四十七条―第五十条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="5">
+              <DivisionTitle>第五目 裁判によらない子の返還申立事件の終了</DivisionTitle>
+              <ArticleRange>（第五十一条―第五十三条）</ArticleRange>
+            </TOCDivision>
+          </TOCSubsection>
+          <TOCSubsection Num="3">
+            <SubsectionTitle>第三款 不服申立て</SubsectionTitle>
+            <TOCDivision Num="1">
+              <DivisionTitle>第一目 終局決定に対する即時抗告</DivisionTitle>
+              <ArticleRange>（第五十四条―第五十八条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="2">
+              <DivisionTitle>第二目 終局決定に対する特別抗告</DivisionTitle>
+              <ArticleRange>（第五十九条―第六十七条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="3">
+              <DivisionTitle>第三目 終局決定に対する許可抗告</DivisionTitle>
+              <ArticleRange>（第六十八条）</ArticleRange>
+            </TOCDivision>
+            <TOCDivision Num="4">
+              <DivisionTitle>第四目 終局決定以外の裁判に対する不服申立て</DivisionTitle>
+              <ArticleRange>（第六十九条―第七十一条）</ArticleRange>
+            </TOCDivision>
+          </TOCSubsection>
+          <TOCSubsection Num="4">
+            <SubsectionTitle>第四款 終局決定の変更</SubsectionTitle>
+            <ArticleRange>（第七十二条・第七十三条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="5">
+            <SubsectionTitle>第五款 再審</SubsectionTitle>
+            <ArticleRange>（第七十四条・第七十五条）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 義務の履行状況の調査及び履行の勧告</SectionTitle>
+          <ArticleRange>（第七十六条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="4">
+          <SectionTitle>第四節 出国禁止命令</SectionTitle>
+          <ArticleRange>（第七十七条―第八十三条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 子の返還の執行手続に関する民事執行規則の特則</ChapterTitle>
+        <ArticleRange>（第八十四条―第九十一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 家事事件の手続に関する特則</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 子の返還申立事件に係る家事調停の手続等</SectionTitle>
+          <ArticleRange>（第九十二条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 子との交流についての家事審判及び家事調停の手続等に関する特則</SectionTitle>
+          <ArticleRange>（第九十三条―第九十五条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 雑則</ChapterTitle>
+        <ArticleRange>（第九十六条・第九十七条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 子の返還に関する事件の手続</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <Article Num="1">
+            <ArticleCaption>（当事者等が裁判所に提出すべき書面の記載事項）</ArticleCaption>
+            <ArticleTitle>第一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>申立書その他の当事者、子の返還に関する事件の手続に参加した子（以下この条及び第三条の二第六項において単に「手続に参加した子」という。）又は代理人が裁判所に提出すべき書面には、次に掲げる事項を記載し、当事者、手続に参加した子又は代理人が記名（当該書面がその提出により子の返還に関する事件の手続の開始、続行、停止又は完結をさせるものである場合にあっては、記名押印）をするものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>当事者及び手続に参加した子の氏名又は名称及び住所並びに代理人の氏名及び住所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>手続代理人の郵便番号及び電話番号（ファクシミリの番号を含む。次項において同じ。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>附属書類の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>年月日</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所の表示</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定にかかわらず、当事者、手続に参加した子又は代理人からその住所を記載した同項の書面が提出されているときは、以後裁判所に提出する同項の書面については、これを記載することを要しない。手続代理人からその郵便番号及び電話番号を記載した同項の書面が提出されているときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="2">
+            <ArticleCaption>（裁判所に提出すべき書面のファクシミリによる提出）</ArticleCaption>
+            <ArticleTitle>第二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所に提出すべき書面は、次に掲げるものを除き、ファクシミリを利用して送信することにより提出することができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>民事訴訟費用等に関する法律（昭和四十六年法律第四十号）の規定により手数料を納付しなければならない申立てに係る書面</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成二十五年法律第四十八号。以下「法」という。）第六十九条の二において準用する民事訴訟法（平成八年法律第百九号）第百三十三条第二項の規定による届出に係る書面（第三十三条の二第二項において「秘匿事項届出書面」という。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>その提出により子の返還に関する事件の手続の開始、続行、停止又は完結をさせる書面（第一号に該当する書面を除く。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法定代理権、子の返還に関する事件の手続における手続上の行為をするのに必要な授権又は手続代理人の権限を証明する書面その他の子の返還に関する事件の手続上重要な事項を証明する書面</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>特別抗告の抗告理由書又は法第百十一条第二項（法第百十六条第一項（法第百三十三条において準用する場合を含む。）及び第百三十三条において準用する場合を含む。）の申立てに係る理由書</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>ファクシミリを利用して書面が提出されたときは、裁判所が受信した時に、当該書面が裁判所に提出されたものとみなす。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項に規定する場合において、必要があると認めるときは、提出者に対し、送信に使用した書面を提出させることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="3">
+            <ArticleCaption>（裁判所に提出する書面に記載した情報の電磁的方法による提供等）</ArticleCaption>
+            <ArticleTitle>第三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、書面を裁判所に提出した者又は提出しようとする者が当該書面に記載されている情報の内容を記録した電磁的記録（電子的方式、磁気的方式その他人の知覚によっては認識することができない方式で作られる記録であって、電子計算機による情報処理の用に供されるものをいう。以下この項において同じ。）を有している場合において、必要があると認めるときは、その者に対し、当該電磁的記録に記録された情報を電磁的方法（電子情報処理組織を使用する方法その他の情報通信の技術を利用する方法をいう。）であって裁判所の定めるものにより裁判所に提供することを求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、申立書その他の書面を送付しようとするときその他必要があると認めるときは、当該書面を裁判所に提出した者又は提出しようとする者に対し、その写しを提出することを求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="3_2">
+            <ArticleCaption>（催告及び通知）</ArticleCaption>
+            <ArticleTitle>第三条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>子の返還に関する事件の手続における催告及び通知は、相当と認める方法によることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所書記官は、催告又は通知をしたときは、その旨及び催告又は通知の方法を子の返還に関する事件の記録上明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>催告は、これを受けるべき者の所在が明らかでないとき、又はその者が外国に在るときは、催告すべき事項を公告してすれば足りる。この場合において、その公告は、催告すべき事項を記載した書面を裁判所の掲示場その他裁判所内の公衆の見やすい場所に掲示して行う。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定による催告は、公告をした日から一週間を経過した時にその効力を生ずる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>この規則の規定による通知（第三十二条第一項において準用する民事訴訟規則（平成八年最高裁判所規則第五号）第四十六条第二項の規定による通知を除く。）は、これを受けるべき者の所在が明らかでないとき、又はその者が外国に在るときは、することを要しない。この場合においては、裁判所書記官は、その事由を子の返還に関する事件の記録上明らかにしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>当事者、手続に参加した子その他の関係人に対する通知は、裁判所書記官にさせることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="4">
+            <ArticleCaption>（申立てその他の申述の方式等に関する民事訴訟規則の準用）</ArticleCaption>
+            <ArticleTitle>第四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事訴訟規則第一条第一項及び第二項の規定は子の返還に関する事件の手続における申立てその他の申述の方式について、同規則第五条の規定は子の返還に関する事件の手続における書類の記載の仕方について準用する。この場合において、同規則第一条第二項中「陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ」とあるのは、「調書を作成し、記名押印しなければ」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 子の返還申立事件の手続</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 総則</SubsectionTitle>
+            <Division Num="1">
+              <DivisionTitle>第一目 管轄</DivisionTitle>
+              <Article Num="5">
+                <ArticleCaption>（移送の申立ての方式・法第三十七条）</ArticleCaption>
+                <ArticleTitle>第五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>移送の申立ては、子の返還申立事件の手続の期日においてする場合を除き、書面でしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の申立てをするときは、申立ての理由を明らかにしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="6">
+                <ArticleCaption>（移送等における取扱い・法第三十七条）</ArticleCaption>
+                <ArticleTitle>第六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>家庭裁判所は、法第三十七条第二項又は第四項の規定による移送の裁判をするときは、当事者及び子の返還申立事件の手続に参加した子（以下この節において単に「手続に参加した子」という。）の意見を聴くことができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>家庭裁判所は、法第三十七条第三項の規定による裁判をするときは、当事者及び手続に参加した子の意見を聴かなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="7">
+                <ArticleCaption>（移送に関する民事訴訟規則の準用・法第三十七条）</ArticleCaption>
+                <ArticleTitle>第七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>民事訴訟規則第九条の規定は、子の返還申立事件の移送の裁判について準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="2">
+              <DivisionTitle>第二目 裁判所職員の除斥、忌避及び回避</DivisionTitle>
+              <Article Num="8">
+                <ArticleCaption>（除斥又は忌避の申立ての方式等・法第三十八条等）</ArticleCaption>
+                <ArticleTitle>第八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判官に対する除斥又は忌避の申立ては、その原因を明示して、裁判官の所属する裁判所にしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の申立ては、子の返還申立事件の手続の期日においてする場合を除き、書面でしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>除斥又は忌避の原因は、申立てをした日から三日以内に疎明しなければならない。法第三十九条第二項ただし書に規定する事実についても、同様とする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="9">
+                <ArticleCaption>（除斥又は忌避についての裁判官の意見陳述・法第四十条）</ArticleCaption>
+                <ArticleTitle>第九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判官は、その除斥又は忌避の申立てについて意見を述べることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="10">
+                <ArticleCaption>（裁判官の回避）</ArticleCaption>
+                <ArticleTitle>第十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判官は、法第三十八条第一項又は第三十九条第一項に規定する場合には、監督権を有する裁判所の許可を得て、回避することができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="11">
+                <ArticleCaption>（裁判所書記官の除斥等・法第四十一条）</ArticleCaption>
+                <ArticleTitle>第十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判所書記官の除斥、忌避及び回避については、前三条の規定を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="12">
+                <ArticleCaption>（家庭裁判所調査官の除斥及び回避・法第四十二条）</ArticleCaption>
+                <ArticleTitle>第十二条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>家庭裁判所調査官の除斥及び回避については、第八条から第十条までの規定（忌避に関する部分を除く。）を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="3">
+              <DivisionTitle>第三目 当事者能力及び手続行為能力</DivisionTitle>
+              <Article Num="13">
+                <ArticleCaption>（法人でない社団又は財団の当事者能力の判断資料の提出等・法第四十三条）</ArticleCaption>
+                <ArticleTitle>第十三条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件の手続における法人でない社団又は財団の当事者能力の判断資料の提出については民事訴訟規則第十四条第一項の規定を、子の返還申立事件の手続における法定代理権及び手続上の行為をするのに必要な授権の証明については同規則第十五条第一項の規定を、子の返還申立事件の手続における法定代理権の消滅の届出については同規則第十七条前段の規定を準用する。この場合において、同項中「書面又は電磁的記録により」とあるのは、「書面で」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="14">
+                <ArticleCaption>（法人の代表者等への準用・法第四十六条）</ArticleCaption>
+                <ArticleTitle>第十四条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法人の代表者及び法人でない社団又は財団で当事者能力を有するものの代表者又は管理人については、この規則中法定代理及び法定代理人に関する規定を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="4">
+              <DivisionTitle>第四目 参加</DivisionTitle>
+              <Article Num="15">
+                <ArticleCaption>（参加の申出の方式等・法第四十七条等）</ArticleCaption>
+                <ArticleTitle>第十五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第四十七条第三項の書面には、子の返還申立事件の手続に参加する者が当事者となる資格を有する者であることを明らかにする資料を添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第四十七条第一項の規定による参加の申出があった場合には、当該申出を却下する裁判があったときを除き、裁判所書記官は、その旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第四十七条第二項の規定による参加の裁判があったときは、裁判所書記官は、その旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>第二項の規定は法第四十八条第一項の規定による参加の申出があった場合について、前項の規定は同条第二項の規定による参加の裁判があった場合について準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="16">
+                <ArticleCaption>（手続からの排除の通知・法第四十九条）</ArticleCaption>
+                <ArticleTitle>第十六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第四十九条第一項の規定による排除の裁判があったときは、裁判所書記官は、その旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="5">
+              <DivisionTitle>第五目 手続代理人</DivisionTitle>
+              <Article Num="17">
+                <ArticleCaption>（手続代理人の代理権の証明等・法第五十条等）</ArticleCaption>
+                <ArticleTitle>第十七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>手続代理人の権限の証明及び消滅の届出については、民事訴訟規則第二十三条第一項、第二項及び第四項の規定を準用する。この場合において、同条第一項中「書面又は電磁的記録により」とあるのは「書面で」と、同条第二項中「又は電磁的記録が私人により作成されたもの」とあるのは「が私文書」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="6">
+              <DivisionTitle>第六目 手続費用</DivisionTitle>
+              <Article Num="18">
+                <ArticleCaption>（手続費用に関する民事訴訟規則の準用・法第五十八条）</ArticleCaption>
+                <ArticleTitle>第十八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>民事訴訟規則第一編第四章第一節の規定（同規則第二十四条第三項から第五項まで、第二十五条第二項及び第二十六条後段の規定を除く。）は、子の返還申立事件の手続の費用の負担について準用する。この場合において、同規則第二十四条第二項、第二十五条第一項及び第三項並びに第二十七条中「資料」とあるのは「書面」と、同規則第二十四条第二項中「第四十七条の二（書類又は電磁的記録の直送）第一項」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則（平成二十五年最高裁判所規則第五号）第三十三条第一項」と、同規則第二十五条第一項中「記載し、又は記録した書面又は電磁的記録」とあるのは「記載した書面」と、同規則第二十六条前段中「記録した電磁的記録を作成し、これをファイルに記録しなければ」とあるのは「記載した書面を作成し、当該書面に記名押印しなければ」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="19">
+                <ArticleCaption>（手続上の救助の申立ての方式等・法第五十九条）</ArticleCaption>
+                <ArticleTitle>第十九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>手続上の救助の申立ては、書面でしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>手続上の救助の事由は、疎明しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="7">
+              <DivisionTitle>第七目 子の返還申立事件の審理等</DivisionTitle>
+              <Article Num="20">
+                <ArticleCaption>（受命裁判官の指定及び裁判所の嘱託の手続）</ArticleCaption>
+                <ArticleTitle>第二十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件の手続における受命裁判官の指定及び裁判所がする嘱託の手続については、民事訴訟規則第三十一条の規定を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="21">
+                <ArticleCaption>（期日調書の形式的記載事項・法第六十一条）</ArticleCaption>
+                <ArticleTitle>第二十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第六十一条の調書（以下「期日調書」という。）には、次に掲げる事項を記載しなければならない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>事件の表示</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>裁判官及び裁判所書記官の氏名</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="3">
+                    <ItemTitle>三</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>出頭した当事者、手続に参加した子、代理人、補佐人、通訳人及びその他の関係人の氏名</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="4">
+                    <ItemTitle>四</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>期日の日時及び場所</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>期日調書には、裁判所書記官が記名押印し、裁判長が認印しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の場合において、裁判長に支障があるときは、陪席裁判官がその事由を付記して認印しなければならない。裁判官に支障があるときは、裁判所書記官がその旨を記載すれば足りる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="22">
+                <ArticleCaption>（期日調書の実質的記載事項・法第六十一条）</ArticleCaption>
+                <ArticleTitle>第二十二条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>期日調書には、手続の要領を記載し、特に、次に掲げる事項を明確にしなければならない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>申立ての趣旨の変更、申立ての取下げ及び和解</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>証人、当事者本人及び鑑定人の陳述</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="3">
+                    <ItemTitle>三</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>証人、当事者本人及び鑑定人の宣誓の有無並びに証人及び鑑定人に宣誓をさせなかった理由</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="4">
+                    <ItemTitle>四</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>検証の結果</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="5">
+                    <ItemTitle>五</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>裁判長が記載を命じた事項及び当事者の請求により記載を許した事項</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="6">
+                    <ItemTitle>六</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>書面を作成しないでした裁判</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の規定にかかわらず、子の返還申立事件の手続が裁判によらないで完結した場合には、裁判長の許可を得て、証人、当事者本人及び鑑定人の陳述並びに検証の結果の記載を省略することができる。ただし、当事者が子の返還申立事件の手続の完結を知った日から一週間以内にその記載をすべき旨の申出をしたときは、この限りでない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>期日調書には、手続の要領のほか、当事者及び手続に参加した子による書面の提出の予定その他手続の進行に関する事項を記載することができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="23">
+                <ArticleCaption>（期日及び期日調書に関する民事訴訟規則の準用・法第六十一条）</ArticleCaption>
+                <ArticleTitle>第二十三条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>民事訴訟規則第六十八条から第七十二条まで、第七十六条及び第七十七条前段の規定は、子の返還申立事件の手続の期日及び期日調書について準用する。この場合において、別表第一の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句に読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="24">
+                <ArticleCaption>（子の返還申立事件の記録の正本等の様式・法第六十二条）</ArticleCaption>
+                <ArticleTitle>第二十四条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件の記録の正本、謄本又は抄本には、正本、謄本又は抄本であることを記載し、裁判所書記官が記名押印しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="25">
+                <ArticleCaption>（住所等表示部分の閲覧等又はその複製の許可の申立て・法第六十二条）</ArticleCaption>
+                <ArticleTitle>第二十五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>当事者が子の返還申立事件の記録中住所等表示部分（法第六十二条第四項に規定する住所等表示部分をいう。第九十五条第一項において同じ。）の閲覧等（法第六十二条第一項に規定する閲覧等をいう。次条において同じ。）又はその複製の許可の申立てをするときは、同条第四項第一号又は第二号に該当することを明らかにする資料を提出しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="26">
+                <ArticleCaption>（子の返還申立事件の記録の閲覧等又はその複製の許可・法第六十二条）</ArticleCaption>
+                <ArticleTitle>第二十六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第六十二条第三項又は第六項の規定による許可の裁判においては、子の返還申立事件の記録中閲覧等又はその複製を許可する部分を特定しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="27">
+                <ArticleCaption>（受命裁判官又は受託裁判官の期日指定等・法第六十三条）</ArticleCaption>
+                <ArticleTitle>第二十七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>受命裁判官又は受託裁判官が行う子の返還申立事件の手続の期日の指定及び変更は、その裁判官が行う。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="28">
+                <ArticleCaption>（期日変更の制限・法第六十三条）</ArticleCaption>
+                <ArticleTitle>第二十八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件の手続の期日の変更は、次に掲げる事由に基づいては、してはならない。ただし、やむを得ない事由があるときは、この限りでない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>当事者又は手続に参加した子の一人につき手続代理人が数人ある場合において、その一部の代理人について変更の事由が生じたこと。</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>期日指定後にその期日と同じ日時が他の事件の期日に指定されたこと。</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+              </Article>
+              <Article Num="29">
+                <ArticleCaption>（裁判長等が定めた期間の伸縮・法第六十三条）</ArticleCaption>
+                <ArticleTitle>第二十九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長、受命裁判官又は受託裁判官が定めた期間の伸縮については、民事訴訟規則第三十八条の規定を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="30">
+                <ArticleCaption>（受継の申立ての方式等・法第六十五条等）</ArticleCaption>
+                <ArticleTitle>第三十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第六十五条第一項又は第三項の規定による受継の申立ては、書面でしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の書面には、子の返還申立事件の手続を受け継ぐ者が法令により手続を続行する資格のある者であることを明らかにする資料を添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第六十五条第一項又は第三項の規定による受継があったときは、裁判所書記官は、その旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>第一項及び第二項の規定は法第六十六条第一項又は第三項の規定による受継の申立てについて、前項の規定は同条第一項又は第三項の規定による受継があった場合について準用する。この場合において、第二項中「法令により手続を続行する資格のある者」とあるのは、「当該子の返還申立事件において申立人となることができる者又は相手方の死亡後に子を監護している者」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="31">
+                <ArticleCaption>（当事者の死亡の届出・法第六十六条）</ArticleCaption>
+                <ArticleTitle>第三十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>当事者が死亡したときは、その手続代理人は、その旨を裁判所に書面で届け出なければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="32">
+                <ArticleCaption>（送達・法第六十七条）</ArticleCaption>
+                <ArticleTitle>第三十二条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>送達については、民事訴訟規則第一編第五章第四節の規定（同規則第四十一条第二項、第一編第五章第四節第三款、第四十六条第一項及び第一編第五章第四節第五款の規定を除く。）を準用する。この場合において、同規則第三十九条中「地方裁判所」とあるのは、「家庭裁判所」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>送達すべき書類の提出に代えて調書を作成したときは、その調書の謄本又は抄本を交付して送達をする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>呼出状の公示送達は、呼出状を掲示場に掲示してする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="33">
+                <ArticleCaption>（書類の送付）</ArticleCaption>
+                <ArticleTitle>第三十三条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>直送（当事者又は手続に参加した子（以下この条及び第四十六条第二項において「当事者等」という。）の他の当事者等に対する直接の送付をいう。以下この条及び同項において同じ。）その他の送付は、送付すべき書類の写しの交付又はその書類のファクシミリを利用しての送信によってする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判所が当事者等その他の関係人に対し送付すべき書類の送付に関する事務は、裁判所書記官が取り扱う。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判所が当事者等の提出に係る書類の他の当事者等への送付をしなければならない場合（送達をしなければならない場合を除く。）において、当事者等がその書類について直送をしたときは、その送付は、することを要しない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>当事者等が直送をしなければならない書類について、直送を困難とする事由その他相当とする事由があるときは、当該当事者等は、裁判所に対し、当該書類の他の当事者等への送付を裁判所書記官に行わせるよう申し出ることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="8">
+              <DivisionTitle>第八目 当事者に対する住所、氏名等の秘匿</DivisionTitle>
+              <Article Num="33_2">
+                <ArticleCaption>（申立ての方式等に関する民事訴訟規則の準用・法第六十九条の二）</ArticleCaption>
+                <ArticleTitle>第三十三条の二</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件の手続における申立ての方式等については、民事訴訟規則第五十二条の十八（第二号に係る部分を除く。）、第五十二条の十九第一項、第五十二条の二十一第一項及び第五十二条の二十二第一項の規定を準用する。この場合において、同項中「又は秘匿事項を推知することができる事項が記載された」とあるのは、「が記載された」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項において読み替えて準用する民事訴訟規則第五十二条の二十二第一項の規定により、秘匿事項届出書面から法第六十九条の二において読み替えて準用する民事訴訟法第百三十三条の四第一項の取消し又は同条第二項の許可の裁判に係る部分以外の部分（秘匿事項が記載された部分に限る。）を除いたものが提出された場合には、秘匿事項届出書面の閲覧又は謄写は、その提出されたものによってさせることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 第一審裁判所における子の返還申立事件の手続</SubsectionTitle>
+            <Division Num="1">
+              <DivisionTitle>第一目 子の返還の申立て</DivisionTitle>
+              <Article Num="34">
+                <ArticleCaption>（子の返還申立書の記載事項等・法第七十条等）</ArticleCaption>
+                <ArticleTitle>第三十四条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立書には、申立ての趣旨及び子の返還申立事件の手続による旨を記載するほか、次に掲げる事項を記載しなければならない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>法第二十七条各号に掲げる事由</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>予想される争点及び当該争点に関連する重要な事実</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="3">
+                    <ItemTitle>三</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>第一号に掲げる事由及び予想される争点ごとの証拠</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="4">
+                    <ItemTitle>四</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>返還を求める子について親権者の指定若しくは変更又は子の監護に関する処分についての審判事件（人事訴訟法（平成十五年法律第百九号）第三十二条第一項に規定する附帯処分についての裁判及び同条第三項の親権者の指定についての裁判に係る事件を含む。第四十一条第一項第六号において同じ。）が係属している場合には、当該審判事件が係属している裁判所及び当該審判事件の表示</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項第一号に掲げる事由及び予想される争点についての証拠書類があるときは、その写しを子の返還申立書に添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立書には、相手方の数と同数の写しを添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>家庭裁判所は、子の返還の申立てをした者に対し、前二項の写しのほか、子の返還申立事件の手続の円滑な進行を図るために必要な資料の提出を求めることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="35">
+                <ArticleCaption>（申立ての通知）</ArticleCaption>
+                <ArticleTitle>第三十五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還の申立てがあったときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="36">
+                <ArticleCaption>（子の返還申立書の補正の促し・法第七十条）</ArticleCaption>
+                <ArticleTitle>第三十六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、子の返還申立書の記載について必要な補正を促す場合には、裁判所書記官に命じて行わせることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="37">
+                <ArticleCaption>（子の返還申立書の却下の命令に対する即時抗告・法第七十条等）</ArticleCaption>
+                <ArticleTitle>第三十七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立書の却下の命令に対し即時抗告をするときは、抗告状には、却下された子の返還申立書を添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="38">
+                <ArticleCaption>（参考事項の聴取・法第七十条）</ArticleCaption>
+                <ArticleTitle>第三十八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、子の返還の申立てがあったときは、当事者から、子の返還申立事件の手続の進行に関する意見その他手続の進行について参考とすべき事項の聴取をすることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、前項の聴取をする場合には、裁判所書記官に命じて行わせることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="39">
+                <ArticleCaption>（申立ての変更の通知・法第七十一条）</ArticleCaption>
+                <ArticleTitle>第三十九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>申立人が法第七十一条第一項の規定により申立ての趣旨を変更した場合には、同条第三項又は第四項の規定による裁判があったときを除き、裁判所書記官は、その旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="40">
+                <ArticleCaption>（答弁書の提出期限）</ArticleCaption>
+                <ArticleTitle>第四十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第七十二条第一項の規定により子の返還申立書の写しが相手方に送付されるときは、裁判長は、答弁書の提出をすべき期限を定めなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="41">
+                <ArticleCaption>（答弁書の提出等）</ArticleCaption>
+                <ArticleTitle>第四十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>相手方は、前条の期限までに、次に掲げる事項を記載した答弁書を提出しなければならない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>申立ての趣旨に対する答弁</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>子の返還申立書に記載された事実に対する認否</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="3">
+                    <ItemTitle>三</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>法第二十八条第一項各号に掲げる事由であって答弁を理由付けるもの</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="4">
+                    <ItemTitle>四</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>予想される争点及び当該争点に関連する重要な事実</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="5">
+                    <ItemTitle>五</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>第三号に掲げる事由及び予想される争点ごとの証拠</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="6">
+                    <ItemTitle>六</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>返還を求める子について親権者の指定若しくは変更又は子の監護に関する処分についての審判事件が係属している場合には、当該審判事件が係属している裁判所及び当該審判事件の表示</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項第三号に掲げる事由及び予想される争点についての証拠書類があるときは、その写しを答弁書に添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="2">
+              <DivisionTitle>第二目 子の返還申立事件の手続の期日</DivisionTitle>
+              <Article Num="42">
+                <ArticleCaption>（音声の送受信による通話の方法による手続・法第七十五条）</ArticleCaption>
+                <ArticleTitle>第四十二条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>家庭裁判所及び当事者双方が音声の送受信により同時に通話をすることができる方法によって子の返還申立事件の手続の期日における手続（証拠調べを除く。）を行うときは、家庭裁判所又は受命裁判官は、次に掲げる事項を確認しなければならない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>通話者</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>通話者の所在する場所の状況が当該方法によって手続を実施するために適切なものであること。</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の手続を行ったときは、その旨及び同項第二号に掲げる事項を子の返還申立事件の記録上明らかにしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="43">
+                <ArticleCaption>（手続代理人の陳述禁止等の通知・法第七十六条）</ArticleCaption>
+                <ArticleTitle>第四十三条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>手続代理人の陳述禁止等の通知については、民事訴訟規則第六十五条の規定を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="3">
+              <DivisionTitle>第三目 事実の調査及び証拠調べ</DivisionTitle>
+              <Article Num="44">
+                <ArticleCaption>（事実の調査・法第七十七条等）</ArticleCaption>
+                <ArticleTitle>第四十四条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>事実の調査は、必要に応じ、事件の関係人の性格、経歴、生活状況、財産状態及び家庭環境その他の環境等について、医学、心理学、社会学、経済学その他の専門的知識を活用して行うように努めなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>事実の調査については、裁判所書記官は、その要旨を子の返還申立事件の記録上明らかにしておかなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="44_2">
+                <ArticleCaption>（音声の送受信による通話の方法による家庭裁判所調査官の関与・法第八十条）</ArticleCaption>
+                <ArticleTitle>第四十四条の二</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第八十条第三項に規定する方法によって家庭裁判所調査官に子の返還申立事件の手続の期日に立ち会わせ、当該期日において意見を述べさせるときは、家庭裁判所又は受命裁判官は、次に掲げる事項を確認しなければならない。</Sentence>
+                  </ParagraphSentence>
+                  <Item Num="1">
+                    <ItemTitle>一</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>通話者</Sentence>
+                    </ItemSentence>
+                  </Item>
+                  <Item Num="2">
+                    <ItemTitle>二</ItemTitle>
+                    <ItemSentence>
+                      <Sentence>通話者の所在する場所の状況が当該方法によって手続を実施するために適切なものであること。</Sentence>
+                    </ItemSentence>
+                  </Item>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の方法によって家庭裁判所調査官に同項の期日に立ち会わせ、当該期日において意見を述べさせたときは、その旨及び同項第二号に掲げる事項を子の返還申立事件の記録上明らかにしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="44_3">
+                <ArticleCaption>（音声の送受信による通話の方法による裁判所技官の関与・法第八十一条）</ArticleCaption>
+                <ArticleTitle>第四十四条の三</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前条の規定は、法第八十一条第二項において準用する法第八十条第三項に規定する方法によって裁判所技官に子の返還申立事件の手続の期日に立ち会わせ、当該期日において意見を述べさせる場合について準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="45">
+                <ArticleCaption>（審問の期日の通知・法第八十五条）</ArticleCaption>
+                <ArticleTitle>第四十五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第八十五条第二項の審問の期日は、当事者及び手続に参加した子に通知しなければならない。ただし、その通知をすることにより事実の調査に支障を生ずるおそれがあると認められるときは、この限りでない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="46">
+                <ArticleCaption>（証拠調べ・法第八十六条）</ArticleCaption>
+                <ArticleTitle>第四十六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件の手続における証拠調べについては、民事訴訟規則第二編第三章第一節から第六節までの規定（同規則第九十九条第二項、第百条、第百一条、第百五条の二から第百五条の五まで、第百八条第二項、第百十二条第三項及び第四項、第百二十一条、第百二十四条第四項、第百三十一条、第百三十二条第三項、第百三十五条の二、第百三十七条第三項及び第四項、第百三十九条、第百四十三条第三項、第百四十九条の二第三項、第百四十九条の三並びに第百五十一条の二の規定を除く。）を準用する。この場合において、別表第二の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句に読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>当事者等が前項において準用する民事訴訟規則第九十九条第一項の証拠の申出を記載した書面を裁判所に提出する場合には、当該書面について直送をしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、必要があると認めるときは、第一項の証拠調べの期日において家庭裁判所調査官又は医師である裁判所技官が証人、当事者本人又は鑑定人に対し直接に問いを発することを許すことができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="46_2">
+                <ArticleCaption>（証人の宣誓）</ArticleCaption>
+                <ArticleTitle>第四十六条の二</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、証人に宣誓書を朗読させ、かつ、これに署名させなければならない。証人が宣誓書を朗読することができないときは、裁判長は、裁判所書記官にこれを朗読させなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、相当と認めるときは、前項前段の規定にかかわらず、同項前段に規定する署名に代えて、宣誓書に宣誓の趣旨を理解した旨の記載をさせることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前二項の宣誓書には、良心に従って真実を述べ、何事も隠さず、また、何事も付け加えないことを誓う旨を記載しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="46_3">
+                <ArticleCaption>（鑑定人の宣誓）</ArticleCaption>
+                <ArticleTitle>第四十六条の三</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>鑑定人の宣誓書には、良心に従って誠実に鑑定をすることを誓う旨を記載しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>鑑定人の宣誓は、宣誓書を裁判所に提出する方式によってもさせることができる。この場合における裁判長による宣誓の趣旨の説明及び虚偽鑑定の罰の告知は、これらの事項を記載した書面を鑑定人に送付する方法によって行う。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="46_4">
+                <ArticleCaption>（受命裁判官等の証拠調べの調書）</ArticleCaption>
+                <ArticleTitle>第四十六条の四</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>受命裁判官又は受託裁判官の所属する裁判所の裁判所書記官は、第四十六条第一項において読み替えて準用する民事訴訟規則第百四十二条の期日調書に同条の文書の写しを添付することができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="4">
+              <DivisionTitle>第四目 裁判</DivisionTitle>
+              <Article Num="47">
+                <ArticleCaption>（終局決定の確定証明書等・法第九十三条等）</ArticleCaption>
+                <ArticleTitle>第四十七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>家庭裁判所の裁判所書記官は、法第六十二条第一項又は第七項の規定による請求により、子の返還申立事件の記録に基づいて終局決定の確定についての証明書を交付する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件がなお抗告審に係属中であるときは、前項の規定にかかわらず、当該子の返還申立事件の記録の存する裁判所の裁判所書記官が、終局決定の確定した部分のみについて同項の証明書を交付する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前二項の規定は、終局決定以外の裁判について準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="48">
+                <ArticleCaption>（終局決定の確定の通知）</ArticleCaption>
+                <ArticleTitle>第四十八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定が確定したときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="49">
+                <ArticleCaption>（終局決定の方式等・法第九十四条等）</ArticleCaption>
+                <ArticleTitle>第四十九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定の裁判書には、終局決定をした裁判官が記名押印しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>合議体の構成員である裁判官が終局決定の裁判書に記名押印することに支障があるときは、他の裁判官が終局決定の裁判書にその事由を付記して記名押印しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定の告知がされたときは、裁判所書記官は、その旨及び告知の方法を子の返還申立事件の記録上明らかにしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前三項の規定は、終局決定以外の裁判について準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="50">
+                <ArticleCaption>（脱漏した手続費用の負担の裁判を求める申立て・法第九十六条）</ArticleCaption>
+                <ArticleTitle>第五十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>手続費用の負担の裁判を脱漏した場合における手続費用の負担の裁判を求める申立てについては、民事訴訟規則第百六十一条の規定を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="5">
+              <DivisionTitle>第五目 裁判によらない子の返還申立事件の終了</DivisionTitle>
+              <Article Num="51">
+                <ArticleCaption>（裁判によらない子の返還申立事件の終了の通知）</ArticleCaption>
+                <ArticleTitle>第五十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件が裁判によらないで終了したときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="52">
+                <ArticleCaption>（子の返還の申立ての取下げがあった場合等の取扱い・法第九十九条等）</ArticleCaption>
+                <ArticleTitle>第五十二条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還の申立ての取下げがあった場合において、相手方の同意を要しないときは、裁判所書記官は、申立ての取下げがあった旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還の申立ての取下げについて相手方の同意を要する場合において、相手方が申立ての取下げに同意したとき（法第九十九条第三項の規定により同意したものとみなされた場合を含む。）は、裁判所書記官は、その旨を当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第百四十七条の規定により子の返還申立事件について申立ての取下げがあったものとみなされたときは、裁判所書記官は、遅滞なく、その旨を手続に参加した子（子の返還申立事件に係る家事調停の手続に参加したものを除く。）に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="53">
+                <ArticleCaption>（和解・法第百条）</ArticleCaption>
+                <ArticleTitle>第五十三条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>子の返還申立事件における和解については、民事訴訟規則第三十二条第一項及び第二項、第百六十三条並びに第百六十四条の規定を準用する。この場合において、同規則第百六十三条第一項中「書面又は電磁的記録」とあるのは「書面」と、「記載し、又は記録して」とあるのは「記載して」と、「付記し、又は記録する」とあるのは「付記する」と、同条第三項及び第四項並びに同規則第百六十四条第二項及び第三項中「電子調書」とあるのは「調書」と、同規則第百六十三条第三項並びに第百六十四条第二項及び第三項中「記録しなければ」とあるのは「記載しなければ」と、同規則第百六十三条第四項中「記録した」とあるのは「記載した」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>当事者が裁判所において和解をしたときは、裁判所書記官は、遅滞なく、その旨を手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第百条第一項において準用する民事訴訟法第二百六十四条の規定により当事者間に和解が調ったものとみなされたときは、裁判所書記官は、和解条項案を受諾する旨の書面を提出した当事者に対し、遅滞なく、和解が調ったものとみなされた旨を通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+          </Subsection>
+          <Subsection Num="3">
+            <SubsectionTitle>第三款 不服申立て</SubsectionTitle>
+            <Division Num="1">
+              <DivisionTitle>第一目 終局決定に対する即時抗告</DivisionTitle>
+              <Article Num="54">
+                <ArticleCaption>（抗告状の記載事項等・法第百一条等）</ArticleCaption>
+                <ArticleTitle>第五十四条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定に対する即時抗告をするときは、抗告状には、原決定の取消し又は変更を求める事由を具体的に記載しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の抗告状には、原審における当事者及び手続に参加した子（抗告人を除く。）の数と同数の写しを添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="55">
+                <ArticleCaption>（抗告裁判所への事件送付）</ArticleCaption>
+                <ArticleTitle>第五十五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定に対する即時抗告があった場合には、原裁判所は、抗告却下の決定をしたときを除き、遅滞なく、事件を抗告裁判所に送付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の規定による事件の送付は、原裁判所の裁判所書記官が、抗告裁判所の裁判所書記官に対し、子の返還申立事件の記録を送付してしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="56">
+                <ArticleCaption>（反論書）</ArticleCaption>
+                <ArticleTitle>第五十六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判長は、原審における当事者（抗告人を除く。）に対し、相当の期間を定めて、抗告人が主張する原決定の取消し又は変更を求める事由に対する当該当事者の主張を記載した書面の提出を命ずることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="57">
+                <ArticleCaption>（原審の終局決定の裁判書の引用・法第百六条）</ArticleCaption>
+                <ArticleTitle>第五十七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>抗告審の終局決定の裁判書における理由の記載は、原審の終局決定の裁判書を引用してすることができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="58">
+                <ArticleCaption>（第一審の手続の規定及び民事訴訟規則の準用・法第百七条）</ArticleCaption>
+                <ArticleTitle>第五十八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定に対する即時抗告及びその抗告審に関する手続については、特別の定めがある場合を除き、前款の規定（第三十五条、第三十七条、第四十条、第四十一条及び第五十二条第一項の規定を除く。）を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>民事訴訟規則第百七十三条、第百七十七条及び第百八十五条の規定は、終局決定に対する即時抗告及びその抗告審に関する手続について準用する。この場合において、同規則第百七十三条第三項及び第百七十七条第二項中「相手方」とあるのは、「原審における当事者及び手続に参加した子」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="2">
+              <DivisionTitle>第二目 終局決定に対する特別抗告</DivisionTitle>
+              <Article Num="59">
+                <ArticleCaption>（特別抗告をする場合における費用の予納・法第百八条等）</ArticleCaption>
+                <ArticleTitle>第五十九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>特別抗告をするときは、抗告状の写しの送付に必要な費用のほか、抗告提起通知書の送達及び送付、抗告理由書の写しの送付、裁判の告知並びに抗告裁判所が子の返還申立事件又は抗告事件の記録の送付を受けた旨の通知に必要な費用の概算額を予納しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="60">
+                <ArticleCaption>（特別抗告の抗告提起通知書の送達及び送付・法第百八条等）</ArticleCaption>
+                <ArticleTitle>第六十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>特別抗告があった場合には、原裁判所は、抗告状却下の命令又は法第百十条第一項において準用する法第百三条第三項の規定による抗告却下の決定があったときを除き、抗告提起通知書を、抗告人に送達するとともに、原審における当事者及び手続に参加した子（抗告人を除く。）に送付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="61">
+                <ArticleCaption>（特別抗告の抗告理由書の提出期間・法第百八条等）</ArticleCaption>
+                <ArticleTitle>第六十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>特別抗告の抗告理由書の提出の期間は、抗告人が前条の規定による抗告提起通知書の送達を受けた日から十四日とする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="62">
+                <ArticleCaption>（特別抗告の理由を記載した書面の写しの添付・法第百八条等）</ArticleCaption>
+                <ArticleTitle>第六十二条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>特別抗告の理由を記載した書面には、原審における当事者及び手続に参加した子（抗告人を除く。）の数に六を加えた数の写しを添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="63">
+                <ArticleCaption>（抗告裁判所への事件送付・法第百八条等）</ArticleCaption>
+                <ArticleTitle>第六十三条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>特別抗告があった場合には、原裁判所は、抗告状却下の命令又は抗告却下の決定があったときを除き、事件を抗告裁判所に送付しなければならない。この場合において、原裁判所は、抗告人が特別抗告の理由中に示した子の返還申立事件の手続に関する事実の有無について意見を付することができる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の規定による事件の送付は、原裁判所の裁判所書記官が、抗告裁判所の裁判所書記官に対し、子の返還申立事件の記録を送付してしなければならない。ただし、原裁判所が子の返還申立事件の記録を送付する必要がないと認めたときは、原裁判所の裁判所書記官は、抗告事件の記録のみを抗告裁判所の裁判所書記官に送付すれば足りる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>抗告裁判所の裁判所書記官は、前項の規定による子の返還申立事件又は抗告事件の記録の送付を受けたときは、速やかに、その旨を原審における当事者及び手続に参加した子に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>第二項ただし書の規定により抗告事件の記録のみが送付された場合において、抗告裁判所が同項の子の返還申立事件の記録が必要であると認めたときは、抗告裁判所の裁判所書記官は、速やかに、その送付を原裁判所の裁判所書記官に求めなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="64">
+                <ArticleCaption>（特別抗告の抗告理由書の写しの送付・法第百八条等）</ArticleCaption>
+                <ArticleTitle>第六十四条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>抗告裁判所は、原裁判所から事件の送付を受けた場合には、特別抗告が不適法であるとき又は特別抗告に理由がないことが明らかなときを除き、原審における当事者及び手続に参加した子（抗告人を除く。）に対し、特別抗告の抗告理由書の写しを送付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="65">
+                <ArticleCaption>（執行停止の申立ての方式等・法第百九条）</ArticleCaption>
+                <ArticleTitle>第六十五条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第百九条第一項ただし書の申立ては、書面でしなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第百九条第一項ただし書の規定による裁判があったとき又は当該裁判が効力を失ったときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="66">
+                <ArticleCaption>（差戻し等の通知）</ArticleCaption>
+                <ArticleTitle>第六十六条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第百十条第二項において準用する民事訴訟法第三百二十五条第一項前段若しくは第二項又は第三百二十六条の規定による裁判があったときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="67">
+                <ArticleCaption>（即時抗告の規定及び民事訴訟規則の準用・法第百十条）</ArticleCaption>
+                <ArticleTitle>第六十七条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>第五十四条第二項、第五十七条及び第五十八条の規定は、特別抗告及びその抗告審に関する手続について準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>民事訴訟規則第五十条の二、第百九十条第一項、第百九十二条、第百九十三条、第百九十六条及び第二百二条の規定は、特別抗告及びその抗告審に関する手続について準用する。この場合において、同規則第五十条の二中「電子決定書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、決定に係るものをいう。第六十七条（口頭弁論に係る電子調書の実質的記録事項等）第一項第七号及び第百六十条（判決の更正決定等の方式）第一項において同じ。）」とあるのは「決定書」と、「電子調書に記録させる」とあるのは「調書に記載させる」と、同規則第百九十六条第一項中「第百九十四条（上告理由書の提出期間）」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第六十一条」と、「第百九十条（法第三百十二条第一項及び第二項の上告理由の記載の方式）又は第百九十一条（法第三百十二条第三項の上告理由の記載の方式）」とあるのは「同規則第六十七条第二項において準用する第百九十条第一項」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="3">
+              <DivisionTitle>第三目 終局決定に対する許可抗告</DivisionTitle>
+              <Article Num="68">
+                <ArticleCaption>（即時抗告等の規定及び民事訴訟規則の準用・法第百十二条）</ArticleCaption>
+                <ArticleTitle>第六十八条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>第五十四条第二項及び第五十七条から第六十六条までの規定は、許可抗告及びその抗告審に関する手続について準用する。この場合において、第五十四条第二項中「前項の抗告状」とあり、及び第五十九条中「抗告状」とあるのは「法第百十一条第二項の規定による許可の申立書」と、同条、第六十条、第六十二条及び第六十三条第一項中「特別抗告」とあるのは「法第百十一条第二項の申立て」と、第五十九条から第六十一条までの規定中「抗告提起通知書」とあるのは「抗告許可申立て通知書」と、第五十九条中「抗告理由書」とあり、並びに第六十一条及び第六十四条中「特別抗告の抗告理由書」とあるのは「法第百十一条第二項の申立てに係る理由書」と、第六十条及び第六十三条第一項中「抗告状却下」とあるのは「法第百十一条第二項の規定による許可の申立書の却下」と、第六十条中「法第百十条第一項において準用する法第百三条第三項の規定による抗告却下」とあり、及び第六十三条第一項中「抗告却下」とあるのは「法第百十一条第二項の申立ての却下若しくは不許可」と、第六十四条中「特別抗告が不適法であるとき又は特別抗告」とあるのは「法第百十一条第二項の申立てが不適法であるとき又は同項の申立て」と、第六十六条中「第百十条第二項」とあるのは「第百十二条第二項」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>民事訴訟規則第百九十二条、第百九十三条、第百九十六条及び第百九十九条第一項の規定は法第百十一条第二項の申立てについて、同規則第二百条の規定は法第百十一条第二項の規定による許可をする場合について、同規則第五十条の二及び第二百二条の規定は許可抗告の抗告審に関する手続について準用する。この場合において、同規則第五十条の二中「電子決定書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、決定に係るものをいう。第六十七条（口頭弁論に係る電子調書の実質的記録事項等）第一項第七号及び第百六十条（判決の更正決定等の方式）第一項において同じ。）」とあるのは「決定書」と、「電子調書に記録させる」とあるのは「調書に記載させる」と、同規則第百九十六条第一項中「第百九十四条（上告理由書の提出期間）」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第六十八条第一項において読み替えて準用する同規則第六十一条」と、「第百九十条（法第三百十二条第一項及び第二項の上告理由の記載の方式）又は第百九十一条（法第三百十二条第三項の上告理由の記載の方式）」とあるのは「同規則第六十八条第二項において準用する第百九十九条第一項」と、同条第二項中「法第三百十六条（原裁判所による上告の却下）第一項第二号の規定による上告却下」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百十一条第二項の規定による申立ての不許可」と、「法第三百十五条（上告の理由の記載）第二項」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第六十八条第二項において準用する第百九十九条第一項」と読み替えるものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+            <Division Num="4">
+              <DivisionTitle>第四目 終局決定以外の裁判に対する不服申立て</DivisionTitle>
+              <Article Num="69">
+                <ArticleCaption>（即時抗告の提起に係る記録の送付・法第百十三条）</ArticleCaption>
+                <ArticleTitle>第六十九条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定以外の裁判に対する即時抗告（第三項の即時抗告を除く。）があった場合において、原裁判所が子の返還申立事件の記録を送付する必要がないと認めたときは、第七十一条において準用する第五十五条第二項の規定にかかわらず、原裁判所の裁判所書記官は、抗告事件の記録のみを抗告裁判所の裁判所書記官に送付すれば足りる。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="2">
+                  <ParagraphNum>２</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の規定により抗告事件の記録が送付された場合において、抗告裁判所が同項の子の返還申立事件の記録が必要であると認めたときは、抗告裁判所の裁判所書記官は、速やかに、その送付を原裁判所の裁判所書記官に求めなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="3">
+                  <ParagraphNum>３</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>法第六十二条第十一項の規定による即時抗告があったときは、第七十一条において準用する第五十五条第二項の規定にかかわらず、原裁判所の裁判所書記官は、抗告事件の記録のみを抗告裁判所の裁判所書記官に送付するものとする。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+                <Paragraph Num="4">
+                  <ParagraphNum>４</ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>前項の場合には、同項の記録に、抗告事件についての原裁判所の意見を記載した書面及び抗告事件の審理に参考となる資料を添付しなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="70">
+                <ArticleCaption>（原裁判所の意見）</ArticleCaption>
+                <ArticleTitle>第七十条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>終局決定以外の裁判に対する即時抗告があった場合において、抗告裁判所に事件を送付するときは、原裁判所は、抗告事件についての意見を付さなければならない。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+              <Article Num="71">
+                <ArticleCaption>（終局決定に対する不服申立ての規定の準用・法第百十六条）</ArticleCaption>
+                <ArticleTitle>第七十一条</ArticleTitle>
+                <Paragraph Num="1">
+                  <ParagraphNum></ParagraphNum>
+                  <ParagraphSentence>
+                    <Sentence>裁判所、裁判官又は裁判長がした終局決定以外の裁判に対する不服申立てについては、特別の定めがある場合を除き、前款の規定（第三十五条、第三十七条、第四十条、第四十一条、第四十八条、第五十一条及び第五十二条第一項の規定を除く。）及び前三目の規定（第五十四条第二項及び第五十八条第一項（これらの規定を第六十七条第一項及び第六十八条第一項において準用する場合を含む。）並びに第六十二条、第六十四条、第六十五条第二項及び第六十六条（これらの規定を第六十八条第一項において準用する場合を含む。）の規定を除く。）を準用する。</Sentence>
+                  </ParagraphSentence>
+                </Paragraph>
+              </Article>
+            </Division>
+          </Subsection>
+          <Subsection Num="4">
+            <SubsectionTitle>第四款 終局決定の変更</SubsectionTitle>
+            <Article Num="72">
+              <ArticleCaption>（終局決定の変更の手続・法第百十七条）</ArticleCaption>
+              <ArticleTitle>第七十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百十七条第一項の規定による終局決定の変更の申立書（次項から第四項までにおいて「終局決定の変更の申立書」という。）には、変更を求める終局決定の裁判書の写しを添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>終局決定の変更の申立書に記載すべき終局決定の変更を求める理由は、具体的な事実を含むものでなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の具体的な事実についての証拠書類があるときは、その写しを終局決定の変更の申立書に添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="4">
+                <ParagraphNum>４</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>終局決定の変更の申立書には、当事者（法第百十七条第一項の申立てをした者を除く。）及び手続に参加した子の数と同数の写しを添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="5">
+                <ParagraphNum>５</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前各項に規定するもののほか、法第百十七条第一項の規定による終局決定の変更の手続については、その性質に反しない限り、各審級における手続に関する規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="73">
+              <ArticleCaption>（法第百十八条第一項の申立て等・法第百十八条）</ArticleCaption>
+              <ArticleTitle>第七十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百十八条第一項の規定による申立てについては第六十五条第一項の規定を、法第百十八条第一項の規定による裁判があった場合又は当該裁判が効力を失った場合については第六十五条第二項の規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="5">
+            <SubsectionTitle>第五款 再審</SubsectionTitle>
+            <Article Num="74">
+              <ArticleCaption>（再審の手続・法第百十九条）</ArticleCaption>
+              <ArticleTitle>第七十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>再審の申立書には、不服の申立てに係る裁判書の写しを添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項に規定するもののほか、再審の手続については、その性質に反しない限り、各審級における手続に関する規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="75">
+              <ArticleCaption>（法第百二十条第一項の申立て等・法第百二十条）</ArticleCaption>
+              <ArticleTitle>第七十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第百二十条第一項の規定による申立てについては第六十五条第一項の規定を、法第百二十条第一項の規定による裁判があった場合又は当該裁判が効力を失った場合については第六十五条第二項の規定を準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 義務の履行状況の調査及び履行の勧告</SectionTitle>
+          <Article Num="76">
+            <ArticleCaption>（義務の履行状況の調査及び履行の勧告の手続・法第百二十一条）</ArticleCaption>
+            <ArticleTitle>第七十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百二十一条第五項（同条第七項において準用する場合を含む。）の規定による許可があった場合における同条第一項（同条第七項において準用する場合を含む。以下この条において同じ。）の規定による調査及び勧告の事件の記録の閲覧、謄写若しくは複製、その正本、謄本若しくは抄本の交付又は当該事件に関する事項の証明書の交付の請求に関する事務は、裁判所書記官が取り扱う。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二十六条の規定は、法第百二十一条第一項の規定による調査及び勧告の事件の記録の閲覧、謄写若しくは複製又はその正本、謄本若しくは抄本の交付について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百二十一条第一項の規定による調査及び勧告の手続については、その性質に反しない限り、前節第一款の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="4">
+          <SectionTitle>第四節 出国禁止命令</SectionTitle>
+          <Article Num="77">
+            <ArticleCaption>（申立ての趣旨の記載方法・法第百二十三条）</ArticleCaption>
+            <ArticleTitle>第七十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百二十二条第二項の規定による裁判の申立ての趣旨の記載は、提出を求める旅券をできる限り特定してしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="78">
+            <ArticleCaption>（出国禁止命令の申立ての取下げの通知・法第百二十三条）</ArticleCaption>
+            <ArticleTitle>第七十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>出国禁止命令の申立ての取下げがあったとき（出国禁止命令事件の相手方に対し、当該出国禁止命令事件が係属したことの通知及び出国禁止命令の告知がされていないときを除く。）は、裁判所書記官は、その旨を当該出国禁止命令事件の当事者及び当該出国禁止命令事件の手続に参加した子に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="79">
+            <ArticleCaption>（出国禁止命令の発効等の通知）</ArticleCaption>
+            <ArticleTitle>第七十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>出国禁止命令が効力を生じたときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。当該出国禁止命令の効力発生後に当該出国禁止命令の申立てが取り下げられたときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="80">
+            <ArticleCaption>（法第百二十八条第一項の申立て等・法第百二十八条等）</ArticleCaption>
+            <ArticleTitle>第八十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百二十八条第一項（法第百二十九条第三項において準用する場合を含む。以下この条において同じ。）の申立てについては第六十五条第一項の規定を、法第百二十八条第一項の規定による裁判があった場合又は当該裁判が効力を失った場合については第六十五条第二項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="81">
+            <ArticleCaption>（出国禁止命令取消事件の手続・法第百二十九条）</ArticleCaption>
+            <ArticleTitle>第八十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>出国禁止命令取消事件の申立ての取下げがあった場合については、第七十八条の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>出国禁止命令の取消しの裁判が効力を生じた場合については、第七十九条前段の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事保全規則（平成二年最高裁判所規則第三号）第二十七条第一項の規定は、出国禁止命令取消事件の申立てについて準用する。この場合において、同項中「第九条第二項第二号又は第六号」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成二十五年法律第四十八号）第百三十三条において読み替えて準用する同法第九十四条第二項第二号又は第三号」と、「保全命令」とあるのは「同法第百二十二条第一項の規定による裁判」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="82">
+            <ArticleCaption>（旅券提出の通知・法第百三十一条）</ArticleCaption>
+            <ArticleTitle>第八十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>外務大臣は、法第百二十二条第二項の規定による裁判を受けた者から当該裁判に係る旅券の提出を受けたときは、その旨を出国禁止命令をした裁判所に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="83">
+            <ArticleCaption>（子の返還申立事件の手続規定の準用・法第百三十三条）</ArticleCaption>
+            <ArticleTitle>第八十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>出国禁止命令事件及び出国禁止命令取消事件の手続については、特別の定めがある場合を除き、第二節第一款から第三款まで及び第五款の規定（第三十四条、第三十五条、第三十八条、第四十条、第四十一条、第四十五条、第四十八条、第五十一条及び第五十三条の規定を除く。）を準用する。この場合において、第二十一条第一項中「第六十一条」とあるのは、「第百三十条」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 子の返還の執行手続に関する民事執行規則の特則</ChapterTitle>
+        <Article Num="84">
+          <ArticleCaption>（子の返還の強制執行の申立書の記載事項及び添付書類・法第百三十四条等）</ArticleCaption>
+          <ArticleTitle>第八十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>子の返還の強制執行（法第百三十四条第一項に規定する子の返還の強制執行をいう。第九十条において同じ。）の申立書には、民事執行規則（昭和五十四年最高裁判所規則第五号）第二十一条第一号及び第五号に掲げる事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>子の氏名及び生年月日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>確定した子の返還を命ずる終局決定（確定した子の返還を命ずる終局決定と同一の効力を有するものを含む。次項において同じ。）の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>子の返還の代替執行（法第百三十五条第一項に規定する子の返還の代替執行をいう。以下この号、次項第二号及び第三号並びに第八十六条第一項において同じ。）を求めるときは、次に掲げる事項</Sentence>
+              </ItemSentence>
+              <Subitem1 Num="1">
+                <Subitem1Title>イ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>返還実施者（法第百三十七条に規定する返還実施者をいう。以下同じ。）となるべき者の氏名及び住所</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="2">
+                <Subitem1Title>ロ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>返還実施者となるべき者が債権者と異なるときは、返還実施者となるべき者と子との関係その他のその者を返還実施者として指定することの相当性に関する事項</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="3">
+                <Subitem1Title>ハ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>子の住所</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="4">
+                <Subitem1Title>ニ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>子の返還の代替執行を求める理由</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+              <Subitem1 Num="5">
+                <Subitem1Title>ホ</Subitem1Title>
+                <Subitem1Sentence>
+                  <Sentence>法第百三十六条第二号又は第三号に該当することを理由として子の返還の代替執行を求めるときは、これらの号に掲げる事由に該当する具体的な事実</Sentence>
+                </Subitem1Sentence>
+              </Subitem1>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立書には、確定した子の返還を命ずる終局決定の正本のほか、次に掲げる書類を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>子の生年月日を証する書類の写し</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>子の返還の代替執行を求めるときは、前項第三号ロに掲げる事項についての証拠書類の写し</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第百三十六条第一号に該当することを理由として子の返還の代替執行を求めるときは、民事執行法（昭和五十四年法律第四号）第百七十二条第一項の規定による決定の謄本及び当該決定の確定についての証明書</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="85">
+          <ArticleTitle>第八十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="86">
+          <ArticleCaption>（子の返還の代替執行に関する通知）</ArticleCaption>
+          <ArticleTitle>第八十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>子の返還の代替執行の手続における民事執行法第百七十一条第一項の規定による決定があったときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第百四十条第一項において準用する民事執行法第百七十五条第一項又は第二項に規定する子の監護を解くために必要な行為（以下「解放実施」という。）を求める申立てがあったときは、執行官は、速やかに、その旨を外務大臣に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="87">
+          <ArticleCaption>（解放実施に関する外務大臣との協議）</ArticleCaption>
+          <ArticleTitle>第八十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>執行官は、解放実施を行うべき場所における外務大臣の立会いの方法その他の解放実施に係る手続の円滑な進行のために必要な事項について、あらかじめ外務大臣と協議することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="88">
+          <ArticleCaption>（子の返還の実施の要件等）</ArticleCaption>
+          <ArticleTitle>第八十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>返還実施者は、法第百四十一条第一項に規定する行為をする権限を第三者に委任することができない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>解放実施は、返還実施者が解放実施を行うべき場所に出頭したときに限り、行うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>返還実施者は、執行官が解放実施によって子の監護を解いたときに限り、法第百四十一条第一項に規定する行為をすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="89">
+          <ArticleTitle>第八十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="90">
+          <ArticleCaption>（執行事件の記録の正本等の様式及び閲覧等・法第百四十三条）</ArticleCaption>
+          <ArticleTitle>第九十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>子の返還の強制執行に係る事件の記録の正本、謄本又は抄本の様式及び当該事件の記録の閲覧、謄写若しくは複製又はその正本、謄本若しくは抄本の交付については、第二十四条から第二十六条までの規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="91">
+          <ArticleCaption>（民事執行規則の準用等）</ArticleCaption>
+          <ArticleTitle>第九十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民事執行規則第百五十八条の規定は解放実施を求める旨の申立書について、同規則第百五十九条の規定は法第百四十条第一項において準用する民事執行法第百七十五条第三項の申立てについて、同規則第百六十条の規定は法第百四十条第一項において準用する民事執行法第百七十五条第六項の申立てについて、同規則第百六十一条から第百六十四条までの規定は解放実施について準用する。この場合において、同規則第百五十八条第一項第五号中「法第百七十五条第三項」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成二十五年法律第四十八号）第百四十条第一項において準用する法第百七十五条第三項」と、同項第六号及び第二項第四号並びに同規則第百六十条第一項中「法第百七十五条第六項」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十条第一項において準用する法第百七十五条第六項」と、同規則第百五十八条第二項中「法第百七十四条第一項第一号」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百三十五条第一項に規定する子の返還の代替執行の手続における法第百七十一条第一項」と、同項第三号及び同規則第百五十九条第一項中「法第百七十五条第三項」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十条第一項において準用する法第百七十五条第三項」と、同規則第百六十一条第一項中「債権者及び」とあるのは「返還実施者、債権者及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十条第一項において準用する」と、同条第三項中「人事訴訟法（平成十五年法律第百九号）第三十四条第一項若しくは第二項又は家事事件手続法（平成二十三年法律第五十二号）第五十八条第一項若しくは第二項（同法第九十三条第一項及び第二百五十八条第一項」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第七十九条第一項又は第二項（同法第百七条第一項」と、「第六十条第一項（同法第九十三条第一項及び第二百五十八条第一項」とあるのは「第八十一条第一項（同法第百七条第一項」と、同条第四項中「協力」とあるのは「協力又は国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則（平成二十五年最高裁判所規則第五号）第八十七条の規定による協議」と、同規則第百六十二条中「次条」とあるのは「国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第九十一条第一項において準用する第百六十三条」と、同規則第百六十三条第三号中「債権者又はその代理人が法第百七十五条第九項」とあるのは「返還実施者、債権者又は国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十条第一項において準用する法第百七十五条第六項の代理人が国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第百四十条第一項において準用する法第百七十五条第九項」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>解放実施を求める旨の申立書には、返還実施者の氏名、生年月日及び住所並びに日本国内における居所及び連絡先を記載し、子の生年月日を証する書類の写しを添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 家事事件の手続に関する特則</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 子の返還申立事件に係る家事調停の手続等</SectionTitle>
+          <Article Num="92">
+            <ArticleCaption>（子の返還の申立ての取下げの擬制の通知・法第百四十七条）</ArticleCaption>
+            <ArticleTitle>第九十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第百四十七条の規定により子の返還申立事件について申立ての取下げがあったものとみなされたときは、裁判所書記官は、遅滞なく、その旨を当該子の返還申立事件が係属していた裁判所に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 子との交流についての家事審判及び家事調停の手続等に関する特則</SectionTitle>
+          <Article Num="93">
+            <ArticleCaption>（申立書の記載事項の特則）</ArticleCaption>
+            <ArticleTitle>第九十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第六条第一項に規定する外国返還援助の決定若しくは法第十七条第一項に規定する日本国交流援助の決定を受けた者又は子の返還の申立てをした者が、子との交流の定めをすること又はその変更を求める家事審判又は家事調停の申立てをするときは、当該家事審判又は家事調停の申立書に当該各決定を受けた旨又は子の返還の申立てをした旨を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="94">
+            <ArticleCaption>（申立て等の通知）</ArticleCaption>
+            <ArticleTitle>第九十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条の家事審判又は家事調停の申立てがあったときは、裁判所書記官は、速やかに、その旨を外務大臣に通知しなければならない。当該申立て（家事事件手続法（平成二十三年法律第五十二号）第二百七十二条第四項又は第二百八十六条第七項の規定により家事審判の申立てがあったものとみなされた場合にあっては、その申立て。以下この条において同じ。）に係る審判（審判に対する即時抗告がされた場合にあっては、同法第九十一条第二項の審判に代わる裁判）が確定したとき又は当該申立てに係る家事審判事件若しくは家事調停事件が裁判によらないで終了したときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="95">
+            <ArticleCaption>（住所等表示部分の閲覧等に関する規定の準用・法第百四十九条）</ArticleCaption>
+            <ArticleTitle>第九十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>子との交流の定めをすること又はその変更を求める家事審判の申立てに係る事件の記録中の住所等表示部分に関する家事事件手続法第四十七条第三項の申立てについては、第二十五条の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>子との交流について定め、又はその変更について定める審判書又は調停調書の正本に基づく強制執行の申立てに係る事件の記録中に法第五条第四項（第二号に係る部分に限る。）の規定により外務大臣から提供を受けた情報が記載され、又は記録されたものがある場合における当該事件の記録の正本、謄本又は抄本の様式及び当該事件の記録の閲覧、謄写若しくは複製又はその正本、謄本若しくは抄本の交付については、第二十四条から第二十六条までの規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 雑則</ChapterTitle>
+        <Article Num="96">
+          <ArticleCaption>（審理の状況についての説明の求めの方式・法第百五十一条）</ArticleCaption>
+          <ArticleTitle>第九十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第百五十一条の規定による説明の求めは、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="97">
+          <ArticleCaption>（本案事件が係属する裁判所に対する通知・法第百五十二条）</ArticleCaption>
+          <ArticleTitle>第九十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>子の返還申立事件が係属する裁判所の裁判所書記官は、遅滞なく、子の返還申立事件が係属した旨を当該子の返還申立事件に係る子についての親権者の指定若しくは変更又は子の監護に関する処分についての審判事件（人事訴訟法第三十二条第一項に規定する附帯処分についての裁判及び同条第三項の親権者の指定についての裁判に係る事件を含む。）が係属する裁判所（当該子の返還申立事件の記録上判明しているものに限る。次項において「本案事件が係属する裁判所」という。）に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>子の返還申立事件が終了したときは、裁判所書記官は、遅滞なく、その旨を本案事件が係属する裁判所に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日（平成二六年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和元年一一月二七日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事執行法及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律の一部を改正する法律（令和元年法律第二号。以下「民事執行法等改正法」という。）の施行の日（令和二年四月一日）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和四年一一月七日最高裁判所規則第一七号） 抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下この条において「改正法」という。）附則第一条第二号に掲げる規定の施行の日（令和五年二月二〇日）から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則第三十二条、第七十七条、第七十八条、第九十六条及び第百六十三条第一項の改正規定、第十四条の規定、第十八条中労働審判規則第三十七条の改正規定（「第七十七条」を「第七十七条前段」に改める部分に限る。）、第二十条中非訟事件手続規則第二十一条及び第五十条の改正規定、第二十一条中家事事件手続規則第三十三条及び第百二十六条第二項の改正規定並びに第二十二条中国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第二十三条及び第五十三条第一項の改正規定 改正法附則第一条第三号に掲げる規定の施行の日（令和五年三月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則目次の改正規定（「第三十一条」を「第三十条の二」に改める部分に限る。）及び同規則第一編第五章第一節中第三十一条の前に二条を加える改正規定、第三条の規定、第六条の規定、第七条中民事執行規則第十五条の二の改正規定、第八条中民事保全規則第六条の改正規定、第十条中民事再生規則第十一条の改正規定、第十二条中外国倒産処理手続の承認援助に関する規則第十二条の改正規定、第十三条中会社更生規則第十条の改正規定、第十六条の規定、第十七条中破産規則第十二条の改正規定並びに第二十三条の規定 改正法附則第一条第四号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>第十五条の規定 改正法附則第一条第五号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（調書の記載等に関する経過措置）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前に行われた子の返還申立事件の手続の記録については、第二十二条の規定による改正後の国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十二条第二項の規定にかかわらず、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和五年九月一九日最高裁判所規則第４号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（令和五年法律第二十八号）附則第一条第三号に掲げる規定の施行の日（令和五年一一月一五日）から施行する。ただし、第一条中刑事訴訟規則第六条の改正規定及び附則第二条の規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（令和八年五月二一日）から施行する。ただし、第二条中民事訴訟費用等に関する規則第二条の三から第二条の五までの改正規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和七年十月一七日最高裁裁判所規則第一三号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民法等の一部を改正する法律（令和六年法律第三十三号）の施行の日（令和八年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <AppdxTable>
+      <AppdxTableTitle>別表第一</AppdxTableTitle>
+      <RelatedArticleNum>（第二十三条関係）</RelatedArticleNum>
+      <TableStruct>
+        <Table>
+          <TableRow>
+            <TableColumn rowspan="3">
+              <Sentence>第六十八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前条（口頭弁論に係る電子調書の実質的記録事項等）第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第二十二条第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の録音又は録画により作成された電磁的記録をファイル</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>を録音テープ又はビデオテープ（これらに準ずる方法により一定の事項を記録することができる物を含む。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書の記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律（平成二十五年法律第四十八号）第六十一条の調書（以下「期日調書」という。）の記載</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前条第一項（第三号に係る部分に限る。）の規定により電子調書に記録すべき事項を記録した電磁的記録を作成し、ファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証人等の陳述を記載した書面を作成しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="3">
+              <Sentence>第六十九条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>口頭弁論に係る電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>期日調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>他の電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面、写真、録音テープ、ビデオテープその他裁判所において適当と認めるもの</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>これをファイルに記録して電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>子の返還申立事件の記録に添付して期日調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第七十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記に係る電磁的記録（以下「電子速記録」という。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子速記録を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録を</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第七十二条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子速記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>ファイルに記録して</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>子の返還申立事件の記録に添付して</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十二条及び第七十六条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>期日調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該陳述の録音により作成された電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>録音テープ</Sentence>
+            </TableColumn>
+          </TableRow>
+        </Table>
+      </TableStruct>
+    </AppdxTable>
+    <AppdxTable>
+      <AppdxTableTitle>別表第二</AppdxTableTitle>
+      <RelatedArticleNum>（第四十六条関係）</RelatedArticleNum>
+      <TableStruct>
+        <Table>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>地方裁判所又は簡易裁判所</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>家庭裁判所</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百七条第三項、第百二十九条第二項、第百三十二条の二第三項、第百三十七条第二項、第百三十八条第一項、第百四十九条第二項及び第百四十九条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>直送</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第三十三条第一項の直送</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し、尋問事項書を添付しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書の作成に用いる場合</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律第六十一条の調書（以下「期日調書」という。）への添付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二項、第百四十二条及び第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>期日調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録させなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載させなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十二条の二第二項及び第百二十二条の三第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十三条第四項、第百三十二条の五第三項及び第百三十三条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>準用する。この場合において、同条第二項中「口頭弁論に係る電子調書に記録しなければ」とあるのは、「期日調書に記載しなければ」と読み替えるものとする</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節（証人尋問）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条の二</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十九条の二</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>口頭弁論若しくは弁論準備手続の期日又は進行協議期日</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>子の返還申立事件の手続の期日</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="4">
+              <Sentence>第百三十四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百八条（電子呼出状の記録事項等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条第一項において読み替えて準用する第百八条第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二項、第四項及び第五項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第二項及び第五項並びに同規則第四十六条の二第一項及び第二項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>、第百二十一条（傍聴人の退廷）及び</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>及び</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第九十九条（証拠の申出）第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条第二項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十二条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録すべき</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載すべき</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>裁判所書記官は、法</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>法</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>画像情報を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>原本、謄本又は抄本は、</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第二項及び第百五十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百四十二条（受命裁判官等の証拠調べの電子調書）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条第一項において読み替えて準用する第百四十二条及び同規則第四十六条の四</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書について</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>期日調書について</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第一項から第三項まで及び第百三十七条の二から前条まで</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>から前条まで（第百三十七条第三項及び第四項、第百三十九条並びに第百四十三条第三項を除く。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の規定</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条の四の規定</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十九条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>最高裁判所の細則で定めるところにより、当該申出に係る電磁的記録の複製を第五十二条の十（電子情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該電磁的記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電磁的記録をいう</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面をいう</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第一項及び第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子証拠説明書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証拠説明書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録を記録した記録媒体</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="5">
+              <Sentence>第百四十九条の四</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>から第百三十九条まで</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、第百三十八条</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>提出等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>提出等）並びに国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条の四</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>文書の写し」とあるのは「電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>文書の写し」とあるのは「電磁的記録を記録した記録媒体</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百三十九条中「書証の写し」とあるのは「電磁的記録の複製」と、第百四十八条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百四十八条</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>読み替える</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第四十六条の四中「同条の文書の写し」とあるのは「同項において読み替えて準用する同規則第百四十九条の二第一項の電磁的記録を記録した記録媒体」と読み替える</Sentence>
+            </TableColumn>
+          </TableRow>
+        </Table>
+      </TableStruct>
+    </AppdxTable>
+  </LawBody>
+</Law>

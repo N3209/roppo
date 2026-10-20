@@ -1,0 +1,217 @@
+{
+ "workId": "fusei-kyoso-keiso-tokurei-kisoku",
+ "file": "fusei-kyoso-keiso-tokurei-kisoku-d7494a44da1cfd0a06358e12b0d6c4cbf4c5469c5b9d0ca530b9cc586473b508.xml",
+ "sha256": "d7494a44da1cfd0a06358e12b0d6c4cbf4c5469c5b9d0ca530b9cc586473b508",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2023/huseikyousouboushitokureikisoku.20240215.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "bf5b158d463b128d581775f785c8b80d1aa69b59c7f561c4038815217d05fe4d",
+  "pages": 8,
+  "law_num": "平成二十三年十月十一日最高裁判所規則第四号",
+  "main_articles": 8,
+  "counts": {
+   "Article": 11,
+   "Paragraph": 24,
+   "Item": 15,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 0,
+   "Table": 1
+  },
+  "matching_characters": 4222,
+  "dropped_notes": 2,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   4,
+   5,
+   6,
+   7
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成二八年一〇月一八日最高裁判所規則第六号）抄",
+   "附則（平成三〇年一月一五日最高裁判所規則第一号）抄",
+   "附則（令和五年一二月二五日最高裁判所規則第一〇号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則",
+  "extractor": [
+   {
+    "page": 4,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 5,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 6,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 12,
+    "xml": 12,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則",
+  "units": 53,
+  "pdf_lines": 116,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 28,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則",
+  "xml_tables": 1,
+  "pdf_fragments": 4,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 35,
+    "equal": 35,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成23年10月11日 号外第219号",
+   "rule": "平成23年最高裁判所規則第4号",
+   "title": "不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則",
+   "year": 2011,
+   "no": 4,
+   "url": "https://www.kanpo.go.jp/old/20111011/20111011g00219/20111011g002190001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成28年10月18日 本紙第6880号",
+    "rule": "平成28年最高裁判所規則第6号",
+    "title": "刑事訴訟規則及び不正競争防止法第二十三条第一項に規定する事件に係る刑事訴訟手続の特例に関する規則の一部を改正する規則",
+    "year": 2016,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20161018/20161018h06880/20161018h068800002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成30年1月15日 本紙第7181号",
+    "rule": "平成30年最高裁判所規則第1号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2018,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20180115/20180115h07181/20180115h071810001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年12月25日 号外第270号",
+    "rule": "令和5年最高裁判所規則第10号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20231225/20231225g00270/20231225g002700005f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

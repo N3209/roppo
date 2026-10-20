@@ -1,0 +1,2114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/080521syouhisyatokureikisoku.pdf
+  取得: 2026-10-18
+  反映: PDFに改正履歴の記載なし。掲載された附則の最後は「附 則（令和六年九月十七日最高裁判所規則第十四号）抄」
+  範囲: 本則58条（削除条の範囲を1要素として数える）、附則4本（抄を含む）、別表1点、本文中の表1点。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。PDFの誤字の訂正あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。19ページ先頭の表の行は紙面で確認のうえ縦結合の下の新しい行とした（verification/boundary/）。PDFの誤りを確認のうえ訂正（第四十二条「法第第六十一条第一項」→「法第六十一条第一項」。根拠は corrections.py と作業メモ）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="27" Num="5" PromulgateMonth="6" PromulgateDay="29" LawType="Rule">
+  <LawNum>平成二十七年六月二十九日最高裁判所規則第五号</LawNum>
+  <LawBody>
+    <LawTitle>消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 共通義務確認訴訟に係る民事訴訟手続の特例</ChapterTitle>
+        <ArticleRange>（第二条―第五条の四）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 対象債権等の確定手続</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 簡易確定手続</SectionTitle>
+          <TOCSubsection Num="1">
+            <SubsectionTitle>第一款 通則</SubsectionTitle>
+            <ArticleRange>（第六条―第十条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="2">
+            <SubsectionTitle>第二款 簡易確定手続の開始</SubsectionTitle>
+            <ArticleRange>（第十条の二―第十五条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="3">
+            <SubsectionTitle>第三款 簡易確定手続申立団体による公告及び通知等</SubsectionTitle>
+            <ArticleRange>（第十六条・第十七条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="4">
+            <SubsectionTitle>第四款 対象債権等の確定</SubsectionTitle>
+            <ArticleRange>（第十八条―第三十三条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="5">
+            <SubsectionTitle>第五款 費用の負担</SubsectionTitle>
+            <ArticleRange>（第三十四条）</ArticleRange>
+          </TOCSubsection>
+          <TOCSubsection Num="6">
+            <SubsectionTitle>第六款 補則</SubsectionTitle>
+            <ArticleRange>（第三十五条―第三十五条の十二）</ArticleRange>
+          </TOCSubsection>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 異議後の訴訟に係る民事訴訟手続の特例</SectionTitle>
+          <ArticleRange>（第三十六条―第三十八条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 特定適格消費者団体のする仮差押え等</ChapterTitle>
+        <ArticleRange>（第三十九条―第四十二条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="5">
+        <ChapterTitle>第五章 補則</ChapterTitle>
+        <ArticleRange>（第四十三条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（当事者の責務）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>当事者は、消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する法律（平成二十五年法律第九十六号。以下「法」という。）の趣旨を踏まえ、被害回復裁判手続の円滑かつ迅速な進行に努め、信義に従い誠実に被害回復裁判手続を追行しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>二以上の特定適格消費者団体が対象債権等及び対象消費者等の範囲の全部又は一部並びに共通義務確認の訴えの被告とされる事業者等が同一である被害回復裁判手続を追行するときは、当該二以上の特定適格消費者団体は、被害回復裁判手続の円滑かつ迅速な進行のために相互に連携を図りながら協力するように努めなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 共通義務確認訴訟に係る民事訴訟手続の特例</ChapterTitle>
+        <Article Num="2">
+          <ArticleCaption>（訴状の記載事項等・法第五条）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第五条の規定による対象債権及び対象消費者の範囲の記載については、消費者契約の年月日、物品、権利、役務その他の消費者契約の目的となるものの内容、その対価その他の取引条件、勧誘の方法その他の消費者契約に係る客観的な事実関係をもってしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>共通義務確認の訴えの訴状には、民事訴訟規則（平成八年最高裁判所規則第五号）第五十三条第一項及び第四項に規定する事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>対象消費者の数の見込み</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求の内容及び相手方が同一である共通義務確認訴訟又は事実上及び法律上同種の原因に基づく請求を目的とする共通義務確認訴訟が既に係属しているときは、当該共通義務確認訴訟が係属している裁判所及び当該共通義務確認訴訟に係る事件の表示</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>共通義務確認の訴えの訴状には、前項第一号に掲げる事項の根拠となる資料を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>共通義務確認の訴えを提起する者（次項に規定する者を除く。）は、前項の資料が書面等（書面、書類、文書、謄本、抄本、正本、副本、複本その他文字、図形等人の知覚によって認識することができる情報が記載された紙その他の有体物をいう。以下この条において同じ。）をもって作成されているときは、当該書面等の添付に代えて、最高裁判所の細則で定めるところにより、当該書面等の画像情報を電子情報処理組織（民事訴訟規則第五十二条の十第一項に規定する電子情報処理組織をいう。次項及び第三十七条第二項において同じ。）を使用して裁判所の使用に係る電子計算機（入出力装置を含む。次項において同じ。）に備えられたファイル（次項及び第三十七条第二項において単に「ファイル」という。）に記録する方法により提出することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>共通義務確認の訴えを提起する民事訴訟法（平成八年法律第百九号）第百三十二条の十一第一項第一号に掲げる者は、第三項の資料を提出する場合において、次の各号に掲げるときは、最高裁判所の細則で定めるところにより、それぞれ当該各号に定めるものを電子情報処理組織を使用してファイルに記録する方法により提出しなければならない。ただし、同条第三項に規定する場合は、この限りでない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該資料が書面等をもって作成されているとき 当該書面等の画像情報</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該資料が電磁的記録（電子的方式、磁気的方式その他人の知覚によっては認識することができない方式で作られる記録であって、電子計算機による情報処理の用に供されるものをいう。以下同じ。）をもって作成されているとき 当該電磁的記録</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="6">
+            <ParagraphNum>６</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、前二項の規定により書面等の画像情報が提出された場合において、必要があると認めるときは、当該書面等の原本の提示を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（裁量移送における取扱い・法第六条）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六条第五項ただし書又は第六項の申立てがあったときは、裁判所は、相手方の意見を聴いて決定をするものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、職権により法第六条第五項ただし書又は第六項の規定による移送の決定をするときは、当事者の意見を聴くことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（弁論等の必要的併合の申出の方式・法第七条）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第七条第二項の規定による申出は、期日においてする場合を除き、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申出は、事件の表示を明らかにしてしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（保全開示命令の申立ての方式等・法第九条）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保全開示命令の申立ては、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の申立てをする特定適格消費者団体は、保全開示命令の申立書について直送をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>事業者等は、保全開示命令の申立てについて意見があるときは、意見を記載した書面を裁判所に提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5_2">
+          <ArticleCaption>（保全開示命令の申立てについての手続における審尋に係る電子調書・法第九条）</ArticleCaption>
+          <ArticleTitle>第五条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保全開示命令の申立てについての手続における審尋に係る電子調書（期日又は期日外における手続の方式、内容及び経過等の記録及び公証をするために民事訴訟法第百六十条第一項（他の法令において準用する場合を含む。）その他の法令の規定により裁判所書記官が作成する電磁的記録をいう。）は、民事訴訟規則第七十八条において準用する民事訴訟法第百六十条第一項の規定にかかわらず、作成することを要しない。ただし、裁判長が作成を命じたときは、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5_3">
+          <ArticleCaption>（保全開示命令の申立てについての手続における決定に対する即時抗告に係る事件記録の引継ぎ・法第九条）</ArticleCaption>
+          <ArticleTitle>第五条の三</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保全開示命令の申立てについての手続における決定に対する即時抗告があった場合において、原裁判所が共通義務確認訴訟に係る事件の記録の管理を引き継ぐ必要がないと認めたときは、民事訴訟規則第二百五条において準用する同規則第百七十四条第二項の規定にかかわらず、原裁判所の裁判所書記官は、抗告事件の記録の管理のみを抗告裁判所の裁判所書記官に引き継げば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5_4">
+          <ArticleCaption>（保全開示命令の申立てについての手続における決定に対する即時抗告があった場合の判決又は決定の確定証明・法第九条）</ArticleCaption>
+          <ArticleTitle>第五条の四</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>保全開示命令の申立てについての手続における決定に対する即時抗告に係る事件がなお抗告審に係属中であるときは、民事訴訟規則第五十条第二項において準用する同規則第四十八条第二項の規定にかかわらず、共通義務確認訴訟に係る事件の記録の存する裁判所の裁判所書記官が、判決又は決定の確定した部分のみについて同規則第四十八条第一項（同規則第五十条第二項において準用する場合を含む。）の書面の交付又は電磁的記録の提供を行う。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 対象債権等の確定手続</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 簡易確定手続</SectionTitle>
+          <Subsection Num="1">
+            <SubsectionTitle>第一款 通則</SubsectionTitle>
+            <Article Num="6">
+              <ArticleCaption>（簡易確定手続における申立て等の方式）</ArticleCaption>
+              <ArticleTitle>第六条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続に関する申立て、届出及び申出は、特別の定めがある場合を除き、書面でしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="7">
+              <ArticleCaption>（簡易確定手続における調書）</ArticleCaption>
+              <ArticleTitle>第七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における調書（口頭弁論の調書を除く。）は、作成することを要しない。ただし、裁判長が作成を命じたときは、この限りでない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="8">
+              <ArticleCaption>（簡易確定手続における決定に対する即時抗告に係る事件記録の送付）</ArticleCaption>
+              <ArticleTitle>第八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における決定に対する即時抗告があった場合において、原裁判所が簡易確定手続に係る事件の記録を送付する必要がないと認めたときは、原裁判所の裁判所書記官は、抗告事件の記録のみを抗告裁判所の裁判所書記官に送付すれば足りる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の規定により抗告事件の記録が送付された場合において、抗告裁判所が簡易確定手続に係る事件の記録が必要であると認めたときは、抗告裁判所の裁判所書記官は、速やかに、その送付を原裁判所の裁判所書記官に求めなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="9">
+              <ArticleCaption>（簡易確定手続における決定の確定証明書）</ArticleCaption>
+              <ArticleTitle>第九条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第一審裁判所の裁判所書記官は、当事者又は利害関係を疎明した第三者の請求により、簡易確定手続に係る事件の記録に基づいて簡易確定手続における決定の確定についての証明書を交付する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続に係る事件がなお抗告審に係属中であるときは、前項の規定にかかわらず、当該簡易確定手続に係る事件の記録の存する裁判所の裁判所書記官が、決定の確定した部分のみについて同項の証明書を交付する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="10">
+              <ArticleCaption>（公告事務の取扱者）</ArticleCaption>
+              <ArticleTitle>第十条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における公告に関する事務は、裁判所書記官が取り扱う。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="2">
+            <SubsectionTitle>第二款 簡易確定手続の開始</SubsectionTitle>
+            <Article Num="10_2">
+              <ArticleCaption>（簡易確定手続開始の申立期間の伸長・法第十六条）</ArticleCaption>
+              <ArticleTitle>第十条の二</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第十六条第二項の規定による申立てに係る申立書には、次に掲げる事項を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>当該申立てをする特定適格消費者団体の名称及び住所並びに代表者の氏名</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>前号の特定適格消費者団体又はその代理人の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>相手方の氏名又は名称及び住所並びに法定代理人の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>申立ての趣旨及び理由</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="5">
+                  <ItemTitle>五</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>共通義務確認訴訟における請求を認容する判決又は法第十三条に規定する請求の認諾等を識別するために裁判所が付した符号</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="6">
+                  <ItemTitle>六</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>共通義務確認訴訟における請求を認容する判決が確定した日又は法第十三条に規定する請求の認諾等によって共通義務確認訴訟が終了した日</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="7">
+                  <ItemTitle>七</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>既に法第十六条第二項の決定があるときは、その旨及び伸長された期間</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の申立書には、既に法第十六条第二項の決定があるときは、その旨及び伸長された期間を証する文書を添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="11">
+              <ArticleCaption>（簡易確定手続開始の申立書の記載事項・法第十七条）</ArticleCaption>
+              <ArticleTitle>第十一条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第十七条の最高裁判所規則で定める事項は、次に掲げるものとする。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>簡易確定手続開始の申立てをする特定適格消費者団体の名称及び住所並びに代表者の氏名</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>相手方の氏名又は名称及び住所並びに法定代理人の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>申立ての趣旨</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>簡易確定手続開始の原因となる事実</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="5">
+                  <ItemTitle>五</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>共通義務確認訴訟における請求を認容する判決又は法第十三条に規定する請求の認諾等を識別するために裁判所が付した符号</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="6">
+                  <ItemTitle>六</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>対象債権等及び対象消費者等の範囲</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="7">
+                  <ItemTitle>七</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第十六条第二項の決定があるときは、その旨及び伸長された期間</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続開始の申立書には、前項各号に掲げる事項を記載するほか、次に掲げる事項を記載するものとする。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>届出期間についての前項第一号の特定適格消費者団体の意見</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>前号の特定適格消費者団体又は代理人の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第十三条に規定する特定適格消費者団体が二以上あるときは、他の特定適格消費者団体による簡易確定手続開始の申立ての見込み</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項第一号に掲げる事項の記載は、できる限り、次に掲げる事項を明らかにしてしなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>届出消費者の数の見込み</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>予定している法第二十六条第一項の規定による公告及び法第二十七条第一項の規定による通知の方法並びにこれらに要する期間</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第二十八条第一項の求めをする見込み</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第三十条の照会をする見込み</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="5">
+                  <ItemTitle>五</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>情報開示命令の申立ての見込み</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="6">
+                  <ItemTitle>六</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>保全開示命令の申立てを認容する決定があるときは、その旨及び開示を受けた文書の表示</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+            </Article>
+            <Article Num="12">
+              <ArticleCaption>（簡易確定手続開始の申立書の添付書面・法第十七条）</ArticleCaption>
+              <ArticleTitle>第十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続開始の申立書には、法第十六条第二項の決定があるときは、その旨及び伸長された期間を証する文書を添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="13">
+              <ArticleCaption>（簡易確定手続開始の申立書の写しの添付等・法第十七条等）</ArticleCaption>
+              <ArticleTitle>第十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続開始の申立書には、相手方の数と同数の写しを添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続開始の申立てがあった場合には、裁判所が直ちに当該申立てを却下する決定をしたときを除き、裁判所書記官は、相手方に対し、前項の写しを送付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項に規定する場合には、裁判所は、当事者に対し、届出期間及び認否期間についての意見を聴くことができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="14">
+              <ArticleCaption>（簡易確定手続開始の申立ての取下げの理由の明示等・法第十九条）</ArticleCaption>
+              <ArticleTitle>第十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続開始の申立ての取下げをするときは、取下げの理由を明らかにしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項に規定する場合において、裁判所が取下げを許可したときは、裁判所書記官は、その旨を当事者に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="15">
+              <ArticleCaption>（簡易確定手続開始の申立てを却下する決定の方式・法第二十条）</ArticleCaption>
+              <ArticleTitle>第十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続開始の申立てを却下する決定は、決定書を作成してしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="3">
+            <SubsectionTitle>第三款 簡易確定手続申立団体による公告及び通知等</SubsectionTitle>
+            <Article Num="16">
+              <ArticleCaption>（公告事項の変更の通知の方式・法第二十六条）</ArticleCaption>
+              <ArticleTitle>第十六条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第二十六条第二項の規定による裁判所及び相手方に対する通知は、書面でしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="17">
+              <ArticleCaption>（情報開示命令の申立書の直送等・法第三十二条）</ArticleCaption>
+              <ArticleTitle>第十七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続申立団体は、情報開示命令の申立書について直送をしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>相手方は、情報開示命令の申立てについて意見があるときは、意見を記載した書面を裁判所に提出しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>相手方は、法第三十一条第三項の規定による通知をした場合において、前項の書面を提出するときは、これに当該通知の書面の写しを添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="4">
+            <SubsectionTitle>第四款 対象債権等の確定</SubsectionTitle>
+            <Article Num="18">
+              <ArticleCaption>（届出書の記載事項・法第三十三条）</ArticleCaption>
+              <ArticleTitle>第十八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出書に法第三十三条第二項第一号に掲げる事項を記載するには、次に掲げる事項を明らかにして記載しなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>債権届出をする簡易確定手続申立団体の名称及び住所並びに代表者の氏名</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>相手方の氏名又は名称及び住所並びに法定代理人の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>届出消費者の氏名及び住所並びに法定代理人の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出書には、請求の趣旨並びに請求を特定するのに必要な事実並びに当該請求が共通義務確認訴訟において認められた義務又は和解金債権に係る事実上及び法律上の原因を前提とするものであることを明らかにする事実を記載するほか、請求を理由付ける事実を具体的に記載しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出書には、前二項に規定する事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>第一項第一号の簡易確定手続申立団体の代理人（同号の代表者を除く。）の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>前号の簡易確定手続申立団体又は代理人の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+            </Article>
+            <Article Num="19">
+              <ArticleCaption>（数個の請求に係る義務について簡易確定手続開始決定がされた場合の債権届出）</ArticleCaption>
+              <ArticleTitle>第十九条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>一の共通義務確認の訴えで同一の事業者等に対して請求の基礎となる消費者契約及び財産的被害等を同じくする数個の請求がされた場合において、そのうち二以上の請求に係る法第二条第四号に規定する義務について簡易確定手続開始決定がされたときは、簡易確定手続申立団体は、一の対象消費者の一の財産的被害等については、できる限り、当該二以上の請求に係る法第二条第四号に規定する義務に係る対象債権のうちから一の対象債権を限り、債権届出をしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項に規定する場合において、簡易確定手続申立団体が一の対象消費者の一の財産的被害等について数個の対象債権の債権届出をするときは、各債権届出は、順位を付して、又は選択的なものとしてしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="20">
+              <ArticleCaption>（簡易確定手続についての授権の証明等・法第三十四条）</ArticleCaption>
+              <ArticleTitle>第二十条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第三十四条第一項の授権は、書面で証明しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続申立団体が二以上あるときは、簡易確定手続申立団体は、法第三十四条第一項の授権を得るに当たっては、当該授権をしようとする対象消費者等に対し、他の簡易確定手続申立団体に対する同項の授権の有無を確認しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第三十四条第一項の授権の取消しの通知をした者は、その旨を裁判所に届け出なければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="21">
+              <ArticleCaption>（簡易確定手続授権契約の解除の届出・法第三十六条）</ArticleCaption>
+              <ArticleTitle>第二十一条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続申立団体は、簡易確定手続授権契約を解除したときは、その旨を裁判所に届け出なければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="22">
+              <ArticleCaption>（届出書の送達・法第三十八条）</ArticleCaption>
+              <ArticleTitle>第二十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出書の送達は、債権届出団体から提出された副本によってする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="23">
+              <ArticleCaption>（届出債権を記載した一覧表）</ArticleCaption>
+              <ArticleTitle>第二十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、必要があると認めるときは、債権届出団体に対し、その届出に係る届出債権について第十八条に規定する事項を記載した一覧表の提出を求めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="24">
+              <ArticleCaption>（債権届出の取下げがあった場合の取扱い・法第四十三条等）</ArticleCaption>
+              <ArticleTitle>第二十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>債権届出の取下げがあったときは、裁判所書記官は、その旨を相手方に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の規定は、法第三十四条第六項又は第八項の規定により債権届出の取下げがあったものとみなされた場合について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="25">
+              <ArticleCaption>（届出消費者表の記載事項・法第四十四条）</ArticleCaption>
+              <ArticleTitle>第二十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第四十四条第二項の最高裁判所規則で定める事項は、次に掲げるものとする。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>届出消費者の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>債権届出団体の名称及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="3">
+                  <ItemTitle>三</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>相手方の氏名又は名称及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="4">
+                  <ItemTitle>四</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>届出債権の原因</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="5">
+                  <ItemTitle>五</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第三十九条第一項若しくは第六十九条第一項の規定により債権届出が却下されたとき又は法第四十三条第一項の規定による債権届出の取下げがあったとき（法第三十四条第六項又は第八項の規定により債権届出の取下げがあったものとみなされたときを含む。）は、その旨</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="6">
+                  <ItemTitle>六</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第四十五条第二項の規定により届出債権の内容の全部を認めたものとみなされたときは、その旨</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="7">
+                  <ItemTitle>七</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>法第四十六条第二項の規定により認否を争う旨の申出が却下されたときは、その旨</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+            </Article>
+            <Article Num="26">
+              <ArticleCaption>（認否のための証拠書類の送付・法第四十五条）</ArticleCaption>
+              <ArticleTitle>第二十六条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>相手方は、届出債権の認否のため必要があるときは、債権届出団体に対し、当該届出債権に関する証拠書類の送付を求めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="27">
+              <ArticleCaption>（認否の方式等・法第四十五条）</ArticleCaption>
+              <ArticleTitle>第二十七条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出債権の認否は、書面でしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>相手方は、届出債権の内容の全部又は一部を認めないときは、前項の書面（次項において「認否書」という。）に、その理由を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>相手方は、認否書について直送をしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="28">
+              <ArticleCaption>（認否の内容を記載した一覧表）</ArticleCaption>
+              <ArticleTitle>第二十八条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、必要があると認めるときは、相手方に対し、届出債権の認否の内容を記載した一覧表の提出を求めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="29">
+              <ArticleCaption>（認否を争う旨の申出の判断のための証拠書類の送付・法第四十六条）</ArticleCaption>
+              <ArticleTitle>第二十九条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>債権届出団体は、認否を争う旨の申出をするかどうかを判断するため必要があるときは、相手方に対し、当該届出債権に関する証拠書類の送付を求めることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="30">
+              <ArticleCaption>（認否を争う旨の申出の方式等・法第四十六条）</ArticleCaption>
+              <ArticleTitle>第三十条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>認否を争う旨の申出の書面には、できる限り、予想される争点及び当該争点に関連する重要な事実を記載し、かつ、予想される争点ごとに証拠を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の書面には、できる限り、予想される争点につき、証拠となるべき文書の写し（次項において「書証の写し」という。）を添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>債権届出団体が認否を争う旨の申出をするときは、第一項の書面及び書証の写しについて直送をしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="31">
+              <ArticleCaption>（簡易確定決定の決定書の送達・法第四十七条）</ArticleCaption>
+              <ArticleTitle>第三十一条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定決定の決定書の送達は、その正本によってする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="32">
+              <ArticleCaption>（異議の申立書の記載事項等・法第四十九条）</ArticleCaption>
+              <ArticleTitle>第三十二条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>届出消費者が異議の申立てをするときは、異議の申立書には、次に掲げる事項を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+                <Item Num="1">
+                  <ItemTitle>一</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>異議の申立てをする者の代理人（法定代理人を除く。）の氏名及び住所</Sentence>
+                  </ItemSentence>
+                </Item>
+                <Item Num="2">
+                  <ItemTitle>二</ItemTitle>
+                  <ItemSentence>
+                    <Sentence>異議の申立てをする者又は代理人の郵便番号及び電話番号（ファクシミリの番号を含む。）</Sentence>
+                  </ItemSentence>
+                </Item>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>異議の申立書には、当事者（異議の申立てをする者を除く。）の数と同数の写しを添付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判所は、前項の写しを同項の当事者に送付しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="4">
+                <ParagraphNum>４</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>民事訴訟法第百六十一条第二項に掲げる事項を記載した異議の申立書は、準備書面を兼ねるものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="33">
+              <ArticleCaption>（異議申立権の放棄及び異議の取下げ・法第四十九条）</ArticleCaption>
+              <ArticleTitle>第三十三条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>異議を申し立てる権利の放棄は、裁判所に対する申述によってしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の申述は、書面でしなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第一項の申述があったときは、裁判所書記官は、その旨を当事者（同項の申述をした者を除く。）に通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="4">
+                <ParagraphNum>４</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>民事訴訟規則第百六十二条第一項の規定は、異議の取下げの書面の送達について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="5">
+            <SubsectionTitle>第五款 費用の負担</SubsectionTitle>
+            <Article Num="34">
+              <ArticleCaption>（簡易確定手続の費用及び個別費用の負担・法第五十一条等）</ArticleCaption>
+              <ArticleTitle>第三十四条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>民事訴訟規則第一編第四章第一節の規定（同規則第二十四条第三項から第五項まで、第二十五条第二項及び第二十六条後段の規定を除く。）は、簡易確定手続の費用及び個別費用の負担について準用する。この場合において、同規則第二十四条第二項、第二十五条第一項及び第三項並びに第二十七条中「資料」とあるのは「書面」と、同規則第二十五条第一項中「記載し、又は記録した書面又は電磁的記録」とあるのは「記載した書面」と、同規則第二十六条前段中「記録した電磁的記録を作成し、これをファイルに記録しなければ」とあるのは「記載した書面を作成し、当該書面に記名押印しなければ」と読み替えるものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+          <Subsection Num="6">
+            <SubsectionTitle>第六款 補則</SubsectionTitle>
+            <Article Num="35">
+              <ArticleCaption>（簡易確定手続における催告）</ArticleCaption>
+              <ArticleTitle>第三十五条</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における催告は、これを受けるべき者の所在が明らかでないとき、又はその者が外国に在るときは、催告すべき事項を公告してすれば足りる。この場合において、その公告は、催告すべき事項を記載した書面を裁判所の掲示場その他裁判所内の公衆の見やすい場所に掲示して行う。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の規定による催告は、公告をした日から一週間を経過した時にその効力を生ずる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_2">
+              <ArticleCaption>（簡易確定手続に係る事件の記録の閲覧等）</ArticleCaption>
+              <ArticleTitle>第三十五条の二</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>第三十五条の十二において準用する民事訴訟規則第三十四条第三項本文、第五項本文又は第七項の規定により文書その他の物件から秘密記載部分を除いたものが提出された場合には、当該文書その他の物件の閲覧、謄写又は複製は、その提出されたものによってさせることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_3">
+              <ArticleCaption>（簡易確定手続において送達すべき書類の提出に代えて調書を作成した場合に送達すべき書類）</ArticleCaption>
+              <ArticleTitle>第三十五条の三</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続において送達すべき書類の提出に代えて調書を作成したときは、その調書の謄本又は抄本を交付して送達をする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_4">
+              <ArticleCaption>（簡易確定手続における呼出状の公示送達）</ArticleCaption>
+              <ArticleTitle>第三十五条の四</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における呼出状の公示送達は、呼出状を掲示場に掲示してする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_5">
+              <ArticleCaption>（簡易確定手続における決定及び命令の方式）</ArticleCaption>
+              <ArticleTitle>第三十五条の五</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における決定書及び命令書には、決定又は命令をした裁判官が記名押印しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>合議体の構成員である裁判官が前項の決定書に記名押印することに支障があるときは、他の裁判官が当該決定書にその事由を付記して記名押印しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_6">
+              <ArticleCaption>（簡易確定手続における証人の宣誓）</ArticleCaption>
+              <ArticleTitle>第三十五条の六</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続において、証人に宣誓させる場合は、裁判長は、証人に宣誓書を朗読させ、かつ、これに署名させなければならない。証人が宣誓書を朗読することができないときは、裁判長は、裁判所書記官にこれを朗読させなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>裁判長は、相当と認めるときは、前項前段の規定にかかわらず、同項前段に規定する署名に代えて、宣誓書に宣誓の趣旨を理解した旨の記載をさせることができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="3">
+                <ParagraphNum>３</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前二項の宣誓書には、良心に従って真実を述べ、何事も隠さず、また、何事も付け加えないことを誓う旨を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_7">
+              <ArticleCaption>（簡易確定手続における鑑定人の宣誓）</ArticleCaption>
+              <ArticleTitle>第三十五条の七</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における鑑定人の宣誓書には、良心に従って誠実に鑑定をすることを誓う旨を記載しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における鑑定人の宣誓は、宣誓書を裁判所に提出する方式によってもさせることができる。この場合における裁判長による宣誓の趣旨の説明及び虚偽鑑定の罰の告知は、これらの事項を記載した書面を鑑定人に送付する方法によって行う。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_8">
+              <ArticleCaption>（簡易確定手続における受命裁判官等の証拠調べの調書）</ArticleCaption>
+              <ArticleTitle>第三十五条の八</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続において、受命裁判官又は受託裁判官の所属する裁判所の裁判所書記官は、第三十五条の十二において読み替えて準用する民事訴訟規則第百四十二条の調書に同条の文書の写しを添付することができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_9">
+              <ArticleCaption>（簡易確定手続における更正決定の方式）</ArticleCaption>
+              <ArticleTitle>第三十五条の九</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>簡易確定手続における決定又は命令の更正決定は、裁判書の原本及び正本に付記しなければならない。ただし、裁判所は、相当と認めるときは、裁判書の原本及び正本への付記に代えて、決定書を作成し、その正本を当事者に送達することができる。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の規定は、法第五十三条において読み替えて準用する民事訴訟法第二百六十七条の二第一項の規定による和解に係る調書の更正決定について準用する。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_10">
+              <ArticleCaption>（簡易確定手続における和解条項案の書面による受諾の通知）</ArticleCaption>
+              <ArticleTitle>第三十五条の十</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第五十三条において準用する民事訴訟法第二百六十四条の規定により当事者間に和解が調ったものとみなされたときは、裁判所書記官は、和解条項案を受諾する旨の書面を提出した当事者に対し、遅滞なく、和解が調ったものとみなされた旨を通知しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_11">
+              <ArticleCaption>（簡易確定手続において特別抗告等を提起する場合における費用の予納）</ArticleCaption>
+              <ArticleTitle>第三十五条の十一</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>法第五十三条において準用する民事訴訟法第三百三十条又は第三百三十六条第一項の抗告を提起するときは、抗告状の送達に必要な費用のほか、抗告提起通知書及び抗告理由書の送達、裁判の告知並びに抗告裁判所が記録の送付を受けた旨の通知に必要な費用の概算額を予納しなければならない。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+              <Paragraph Num="2">
+                <ParagraphNum>２</ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>前項の規定は、法第五十三条において準用する民事訴訟法第三百三十七条第二項の申立てをする場合について準用する。この場合において、前項中「抗告提起通知書」とあるのは、「抗告許可申立て通知書」と読み替えるものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+            <Article Num="35_12">
+              <ArticleCaption>（民事訴訟規則の準用・法第五十三条）</ArticleCaption>
+              <ArticleTitle>第三十五条の十二</ArticleTitle>
+              <Paragraph Num="1">
+                <ParagraphNum></ParagraphNum>
+                <ParagraphSentence>
+                  <Sentence>特別の定めがある場合を除き、簡易確定手続については、その性質に反しない限り、民事訴訟規則第一編第一章（第一条第三項、第一条の二並びに第四条第三項及び第四項を除く。）、第二章（第六条、第六条の二及び第八条を除く。）、第三章（第十四条第二項から第四項まで、第十五条第二項及び第三項、第十八条第二項及び第三項、第二節、第二十条第一項から第三項まで、第二十二条並びに第二十三条第三項を除く。）及び第五章（第三十三条の三、第三十三条の四第二項から第四項まで、第三十三条の五、第三十四条第八項から第十一項まで、第二節、第四節第三款、第四十六条第一項、第四十七条第三項及び第四項、第四十七条の二第四項及び第五項、第四十八条並びに第五十一条第三項から第七項までを除く。）、第五十六条、第二編第二章（第六十条、第六十三条の二、第六十四条、第七十六条の二第一項後段、第八十条、第八十一条、第八十二条第三項及び第四項、第三節並びに第九十五条第三項を除く。）、第三章（第百一条、第百五条の二、第百五条の三、第百八条第二項、第百十二条第三項及び第四項、第百二十四条第四項、第百三十一条、第百三十二条第三項、第百三十五条の二、第百三十七条第三項及び第四項、第百四十三条第三項、第百四十九条の二第三項、第百四十九条の三、第百五十一条の二並びに第七節を除く。）及び第五章（第百六十二条を除く。）、第三編第三章、第四編（第二百十一条第二項及び第三項を除く。）並びに第九編の規定を準用する。この場合において、別表の上欄に掲げる同規則の規定中同表の中欄に掲げる字句は、それぞれ同表の下欄に掲げる字句に読み替えるものとする。</Sentence>
+                </ParagraphSentence>
+              </Paragraph>
+            </Article>
+          </Subsection>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 異議後の訴訟に係る民事訴訟手続の特例</SectionTitle>
+          <Article Num="36">
+            <ArticleCaption>（裁量移送における取扱い・法第五十六条）</ArticleCaption>
+            <ArticleTitle>第三十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十六条第三項の申立てがあったときは、地方裁判所は、相手方の意見を聴いて決定をするものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>地方裁判所は、職権により法第五十六条第三項の規定による移送の決定をするときは、当事者の意見を聴くことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="37">
+            <ArticleCaption>（異議後の訴訟についての授権の証明等・法第五十七条）</ArticleCaption>
+            <ArticleTitle>第三十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十七条第一項の授権は、書面又は電磁的記録により証明しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事訴訟法第百三十二条の十一第一項第一号に掲げる者は、最高裁判所の細則で定めるところにより、前項の授権を証明する書面の画像情報又は電磁的記録を電子情報処理組織を使用してファイルに記録する方法により提出しなければならない。ただし、同条第三項に規定する場合は、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項の規定により書面の画像情報が提出された場合において、必要があると認めるときは、当該書面の原本の提示を求めることができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第五十七条第一項の授権の取消しの通知をした者は、その旨を裁判所に書面で届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>債権届出団体は、訴訟授権契約を解除したときは、その旨を裁判所に書面で届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="38">
+            <ArticleCaption>（訴訟手続の受継の申立ての方式・法第五十七条）</ArticleCaption>
+            <ArticleTitle>第三十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民事訴訟規則第五十一条の規定は、異議後の訴訟において債権届出団体が法第五十七条第一項の授権を欠くときについて準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 特定適格消費者団体のする仮差押え等</ChapterTitle>
+        <Article Num="39">
+          <ArticleCaption>（仮差押命令の申立書の記載事項・法第六十一条）</ArticleCaption>
+          <ArticleTitle>第三十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六十一条第一項の申立てをするに当たり、同項の規定による他の申立てであって、対象債権及び対象消費者の範囲の全部又は一部並びに共通義務確認の訴えの被告とされる事業者等が同一であるものが既にされているとき（当該他の申立てが取り下げられ若しくは却下されたとき、又は当該他の申立てに係る仮差押命令が取り消されたときを除く。）は、申立書には、当該他の申立てに係る次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>事件の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>裁判所の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>手続の当事者である特定適格消費者団体</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>保全すべき権利</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>仮に差し押さえるべき物</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="40">
+          <ArticleCaption>（強制執行の申立書等の記載事項等）</ArticleCaption>
+          <ArticleTitle>第四十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>特定適格消費者団体が法第六十一条第一項の申立てに係る仮差押え（当該特定適格消費者団体を手続の当事者とするものに限る。）の執行がされている財産について強制執行の申立てをするときは、当該強制執行の申立書には、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該仮差押えの執行に係る仮差押命令を発した裁判所及び当該仮差押命令の事件の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当該強制執行の申立てが当該仮差押えにより保全される債権に基づくものであるときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項第二号に規定する場合には、同項の強制執行の申立書には、同項第一号の仮差押命令の決定書の写しを添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前二項の規定は、特定適格消費者団体が第一項の財産について強制執行又は担保権の実行の手続がされている場合において配当要求をするときについて準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="41">
+          <ArticleCaption>（対象債権等について配当等を受けた場合等の通知）</ArticleCaption>
+          <ArticleTitle>第四十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>特定適格消費者団体は、対象債権等について法第二条第九号ロに規定する民事執行の手続により弁済を受け、又は配当等（民事執行法（昭和五十四年法律第四号）第八十四条第三項に規定する配当等をいう。以下この条及び次条において同じ。）を受けたときは、速やかに、次に掲げる事項を債務者に書面で通知しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>民事執行の事件の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行裁判所の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>債務名義の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>弁済を受け、又は配当等を受けた額及び年月日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>対象債権等の額（利息その他の附帯の債権の額を含む。）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号の額のうち弁済又は配当等により消滅した部分の額</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="42">
+          <ArticleCaption>（配当等の額の供託がされている場合における対象債権等の確定の結果の届出）</ArticleCaption>
+          <ArticleTitle>第四十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六十一条第一項の申立てに係る仮差押えについて民事執行法その他の法令の規定により仮差押債権者の債権に対する配当等の額に相当する金銭が供託されている場合において、当該仮差押えの手続の当事者である特定適格消費者団体を当事者とする簡易確定手続及び異議後の訴訟の手続が全て終了したときは、当該特定適格消費者団体は、速やかにこれらの手続における対象債権等の確定の結果を執行裁判所に書面で届け出なければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="5">
+        <ChapterTitle>第五章 補則</ChapterTitle>
+        <Article Num="43">
+          <ArticleCaption>（手続の受継の申立ての方式・法第六十六条）</ArticleCaption>
+          <ArticleTitle>第四十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民事訴訟規則第五十一条の規定（法第六十六条第一項第一号及び第二号の簡易確定手続並びに同項第一号の仮差押命令に係る仮差押えの手続にあっては、同規則第五十一条第三項から第七項までの規定を除く。）は、法第六十六条第一項の規定による手続の中断について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（民事訴訟費用等に関する規則の一部改正）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>民事訴訟費用等に関する規則（昭和四十六年最高裁判所規則第五号）の一部を次のように改正する。別表第二の二の項の次に次のように加える。</Sentence>
+            <Sentence>別表第二の三の項中「並びに」を「及び」に、「及び二の項」を「から二の二の項まで」に改める。</Sentence>
+          </ParagraphSentence>
+          <TableStruct>
+            <Table>
+              <TableRow>
+                <TableColumn>
+                  <Sentence>二の二</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>消費者の財産的被害の集団的な回復のための民事の裁判手続の特例に関する法律（平成二十五年法律第九十六号）第十四条の規定による申立て</Sentence>
+                </TableColumn>
+                <TableColumn>
+                  <Sentence>千円。ただし、消費者の財産的被害の集団的な回復のための民事の裁判手続の特例に関する法律第三十条第二項の債権届出があつた債権の個数が五百を超えるときは、その超える個数五百までごとに、千円を加えた額</Sentence>
+                </TableColumn>
+              </TableRow>
+            </Table>
+          </TableStruct>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和四年一一月七日最高裁判所規則第一七号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下この条において「改正法」という。）附則第一条第二号に掲げる規定の施行の日（令和五年二月二〇日）から施行する。ただし、次の各号に掲げる規定は、当該各号に定める日から施行する。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則第三十二条、第七十七条、第七十八条、第九十六条及び第百六十三条第一項の改正規定、第十四条の規定、第十八条中労働審判規則第三十七条の改正規定（「第七十七条」を「第七十七条前段」に改める部分に限る。）、第二十条中非訟事件手続規則第二十一条及び第五十条の改正規定、第二十一条中家事事件手続規則第三十三条及び第百二十六条第二項の改正規定並びに第二十二条中国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則第二十三条及び第五十三条第一項の改正規定 改正法附則第一条第三号に掲げる規定の施行の日（令和五年三月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>第一条中民事訴訟規則目次の改正規定（「第三十一条」を「第三十条の二」に改める部分に限る。）及び同規則第一編第五章第一節中第三十一条の前に二条を加える改正規定、第三条の規定、第六条の規定、第七条中民事執行規則第十五条の二の改正規定、第八条中民事保全規則第六条の改正規定、第十条中民事再生規則第十一条の改正規定、第十二条中外国倒産処理手続の承認援助に関する規則第十二条の改正規定、第十三条中会社更生規則第十条の改正規定、第十六条の規定、第十七条中破産規則第十二条の改正規定並びに第二十三条の規定 改正法附則第一条第四号に掲げる規定の施行の日（令和六年三月一日）</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>第十五条の規定 改正法附則第一条第五号に掲げる規定の施行の日</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和五年三月一五日最高裁判所規則第一号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、消費者契約法及び消費者の財産的被害の集団的な回復のための民事の裁判手続の特例に関する法律の一部を改正する法律（令和四年法律第五十九号）附則第一条第一号に掲げる規定の施行の日（令和五年一〇月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（令和六年九月十七日最高裁判所規則第十四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号）の施行の日（令和八年五月二十一日）から施行する。ただし、第二条中民事訴訟費用等に関する規則第二条の三から第二条の五までの改正規定は、公布の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="60">
+        <ArticleCaption>（消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則の一部改正に伴う経過措置）</ArticleCaption>
+        <ArticleTitle>第六十条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条の規定による改正後の消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則（次項において「改正後消費者特例規則」という。）第十条の二、第十一条及び第十二条の規定は、施行日以後に提起される共通義務確認訴訟の結果を前提とする簡易確定手続開始の申立期間の伸長及び簡易確定手続開始の申立書について適用し、施行日前に提起された共通義務確認訴訟の結果を前提とする簡易確定手続開始の申立期間の伸長及び簡易確定手続開始の申立書については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>改正後消費者特例規則第三十七条第一項の規定は、施行日以後にされる消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する法律（平成二十五年法律第九十六号）第三十三条第一項の規定による届出に係る同法第五十七条第一項の異議後の訴訟における同項の授権の証明について適用し、施行日前にされた同法第三十三条第一項の規定による届出に係る同法第五十七条第一項の異議後の訴訟における同項の授権の証明については、なお従前の例による。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <AppdxTable>
+      <AppdxTableTitle>別表</AppdxTableTitle>
+      <RelatedArticleNum>（第三十五条の十二関係）</RelatedArticleNum>
+      <TableStruct>
+        <Table>
+          <TableRow>
+            <TableColumn>
+              <Sentence>上欄</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>中欄</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>下欄</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第一条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計算機（入出力装置を含む。以下同じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書を作成し、記名押印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子判決書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>判決書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第十五条第一項及び第二十三条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面又は電磁的記録により</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面で</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第十五条第四項及び第二百十一条第四項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二十三条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>又は電磁的記録が私人により作成されたもの</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>が私文書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十条の二第二項、第六十六条第一項、第六十七条第一項及び第三項、第六十九条並びに第七十六条の二第一項前段</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>に係る電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十条の二第二項、第六十六条第一項、第百二十二条の二第二項、第百二十二条の三第二項、第百六十三条第三項並びに第百六十四条第二項及び第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十二条第四項、第七十二条、第七十六条、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二項、第百四十二条、第百四十六条第一項、第百六十三条第三項及び第四項並びに第百六十四条第二項及び第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十二条第四項、第九十六条第三項及び第百十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録させなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載させなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十三条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>訴訟記録の閲覧等の請求又は法第九十一条の三（訴訟に関する事項の証明）に規定する訴訟に関する事項を証明した書面の交付若しくは当該事項を証明した電磁的記録の提供</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>簡易確定手続に係る事件の記録の閲覧若しくは謄写、その正本、謄本若しくは抄本の交付、その複製又は事件に関する事項の証明書の交付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第三十三条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>訴訟記録の閲覧等の請求は、訴訟記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>請求（事件に関する事項の証明書の交付の請求を除く。）は、簡易確定手続に係る事件の記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第四十七条第一項及び第四十七条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類又は電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第四十七条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類又は電磁的記録の相手方</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類の相手方</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>書類又は電磁的記録について直送（当事者が前条（書類又は電磁的記録の送付）第二項又は第三項の方法により相手方に対して直接送付すること</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書類について直送（当事者の相手方に対する直接の送付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第五十条の二</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子決定書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、決定に係るものをいう。第六十七条（口頭弁論に係る電子調書の実質的記録事項等）第一項第七号及び第百六十条（判決の更正決定等の方式）第一項において同じ。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>決定書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書に記録させる</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書に記載させる</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十六条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>裁判長は、前項の電子調書の内容を確認するとともに、これを確認したことを当該電子調書上明らかにする措置を講じなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前項の調書には、裁判所書記官が記名押印し、裁判長が認印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第六十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該電子調書に記録するとともに、当該電子調書の内容を確認し、かつ、これを確認したことを当該電子調書上明らかにする措置を講じなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>付記して認印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記録すれば</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載すれば</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録し</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第一項第六号及び同条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第一項第七号</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子決定書又は電子命令書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、命令に係るものをいう。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載する</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十七条第四項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録した電磁的記録を作成し、これをファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書に記載しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第六十八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の録音又は録画により作成された電磁的記録をファイル</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>を録音テープ又はビデオテープ（これらに準ずる方法により一定の事項を記録することができる物を含む。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書の記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書の記載</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第六十八条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前条第一項（第三号に係る部分に限る。）の規定により電子調書に記録すべき事項を記録した電磁的記録を作成し、ファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証人等の陳述を記載した書面を作成しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第六十九条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>他の電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面、写真、録音テープ、ビデオテープその他裁判所において適当と認めるもの</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>これをファイルに記録して電子調書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>簡易確定手続に係る事件の記録に添付して調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第七十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記に係る電磁的記録（以下「電子速記録」という。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子速記録を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録を</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第七十二条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子速記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>速記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>ファイルに記録して</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>簡易確定手続に係る事件の記録に添付して</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該陳述の録音により作成された電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>録音テープ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条の二第一項前段</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録した電磁的記録を作成し、これをファイルに記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載した調書を作成し、記名押印しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第七十六条の二第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第九十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子調書を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書を</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書に</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書に</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百八条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記録しなければ</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載し、尋問事項書を添付しなければ</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百十六条第三項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の作成に用いる場合</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>への添付</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百二十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節（証人尋問）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>前節及び消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則第三十五条の六</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="3">
+              <Sentence>第百三十四条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百八条（電子呼出状の記録事項等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則第三十五条の十二において読み替えて準用する第百八条第一項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の電子呼出状</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>の呼出状</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二項、第四項及び第五項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第二項及び第五項並びに同規則第三十五条の六第一項及び第二項</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十二条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録すべき</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載すべき</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>裁判所書記官は、法</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>法</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>画像情報を</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>原本、謄本又は抄本は、</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十六条第二項及び第百五十一条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第百四十二条（受命裁判官等の証拠調べの電子調書）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則同規則第三十五条の八及び第三十五条の十二において読み替えて準用する第百四十二条</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子調書について</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>調書について</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十七条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>第一項から第三項まで及び第百三十七条の二から前条まで</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>から前条まで（第百三十七条第三項及び第四項並びに第百四十三条第三項を除く。）</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>の規定</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>及び消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則第三十五条の八の規定</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十九条の二第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>最高裁判所の細則で定めるところにより、当該申出に係る電磁的記録の複製を第五十二条の十（電子情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>当該電磁的記録</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電磁的記録をいう</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面をいう</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第一項及び第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子証拠説明書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>証拠説明書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百四十九条の二第二項及び第百四十九条の四</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録の複製</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電磁的記録を記録した記録媒体</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第百四十九条の四</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>提出等）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>提出等）並びに消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則第三十五条の八</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>読み替える</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>、消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則第三十五条の八中「同条の文書の写し」とあるのは「第三十五条の十二において読み替えて準用する同規則第百四十九条の二第一項の電磁的記録を記録した記録媒体」と読み替える</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="3">
+              <Sentence>第百六十三条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面又は電磁的記録</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>書面</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>記載し、又は記録して</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載して</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>付記し、又は記録する</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>付記する</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第百六十三条第四項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記録した</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>記載した</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二百九条</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子上告提起通知書」とあるのは「電子抗告許可申立て通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>上告提起通知書」とあるのは「抗告許可申立て通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>第二百十条第一項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子抗告提起通知書（法第三百三十条の抗告又は法第三百三十六条第一項の抗告があった旨を通知するために裁判所書記官が作成する電磁的記録をいう。）</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>抗告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn rowspan="2">
+              <Sentence>第二百十条第二項</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>電子抗告提起通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>抗告提起通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+          <TableRow>
+            <TableColumn>
+              <Sentence>電子抗告許可申立て通知書</Sentence>
+            </TableColumn>
+            <TableColumn>
+              <Sentence>抗告許可申立て通知書</Sentence>
+            </TableColumn>
+          </TableRow>
+        </Table>
+      </TableStruct>
+    </AppdxTable>
+  </LawBody>
+</Law>

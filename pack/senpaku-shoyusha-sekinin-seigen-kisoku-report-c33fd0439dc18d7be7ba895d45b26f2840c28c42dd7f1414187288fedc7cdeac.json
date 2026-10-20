@@ -1,0 +1,329 @@
+{
+ "workId": "senpaku-shoyusha-sekinin-seigen-kisoku",
+ "file": "senpaku-shoyusha-sekinin-seigen-kisoku-8f826904043ea2458deb1d82252f9302a72fe87469bdd2b79fb36aa3a6d6fefa.xml",
+ "sha256": "8f826904043ea2458deb1d82252f9302a72fe87469bdd2b79fb36aa3a6d6fefa",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521sennpakusyoyusya.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "312c5dfd271e90f2d60b7fdd40084621bda22823592d306d0a9ba4048c6d131c",
+  "pages": 20,
+  "law_num": "昭和五十一年五月十五日最高裁判所規則第二号",
+  "main_articles": 52,
+  "counts": {
+   "Article": 55,
+   "Paragraph": 85,
+   "Item": 32,
+   "Subitem1": 0,
+   "SupplProvision": 6,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 12539,
+  "dropped_notes": 21,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 152,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 37,
+  "kept_spaces": 0,
+  "table_pages": [
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 13,
+    "before": [
+     "第一条第二項",
+     "陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計算機（入出力装置を含む。以下同じ。）に",
+     "調書を作成し、記名押印しなければ"
+    ],
+    "added": [
+     "",
+     "備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ",
+     ""
+    ]
+   },
+   {
+    "page": 14,
+    "before": [
+     "第三十条の二第二項、第三十四条の七第二項、第六十六条",
+     "記録しなければ",
+     "記載しなければ"
+    ],
+    "added": [
+     "第一項、第百二十二条の二第二項及び第百二十二条の三第二項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 15,
+    "before": [
+     null,
+     "書類又は電磁的記録について直送（当事者が前条（書類又は電磁的記録の送付）第二項又は第三項の方法により相手方に対して直接送付する",
+     "書類について直送（当事者の相手方に対する直接の送付"
+    ],
+    "added": [
+     "",
+     "こと",
+     ""
+    ]
+   },
+   {
+    "page": 18,
+    "new_row_under_rowspan": [
+     "の電子呼出状",
+     "の呼出状"
+    ]
+   },
+   {
+    "page": 19,
+    "before": [
+     "第百四十九条の二第",
+     "電子証拠説明書",
+     "証拠説明書"
+    ],
+    "added": [
+     "一項及び第二項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 20,
+    "before": [
+     "第百九十五条",
+     "被上告人（当該書面の送達について法第百九条の二（電子情報処理組織による送達）第一項ただし書の届出をしている者を除く。）の数の副本（法第百三十二条の十（電子情報処理組織による申立て等）第一項の規",
+     "被上告人の数に六を加えた数の副本"
+    ],
+    "added": [
+     "",
+     "定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和五九年三月二日最高裁判所規則第一号）抄",
+   "附則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附則（平成一五年三月一九日最高裁判所規則第七号）",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "船舶所有者等責任制限事件手続規則",
+  "extractor": [
+   {
+    "page": 12,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 13,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 14,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 15,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 16,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 17,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 18,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 19,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 20,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 52,
+    "xml": 52,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 9,
+    "body": 9
+   },
+   "Article": {
+    "pdf_lines": 55,
+    "xml": 55,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 28,
+    "xml": 28,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "船舶所有者等責任制限事件手続規則",
+  "units": 186,
+  "pdf_lines": 353,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 131,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 20
+ },
+ "tables": {
+  "title": "船舶所有者等責任制限事件手続規則",
+  "xml_tables": 1,
+  "pdf_fragments": 9,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 70,
+    "equal": 70,
+    "joins": 5,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

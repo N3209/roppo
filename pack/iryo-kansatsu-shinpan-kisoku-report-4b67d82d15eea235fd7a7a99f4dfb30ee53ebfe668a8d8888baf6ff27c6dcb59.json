@@ -1,0 +1,205 @@
+{
+ "workId": "iryo-kansatsu-shinpan-kisoku",
+ "file": "iryo-kansatsu-shinpan-kisoku-78fdd29358c63d111ead8bae33d5bc6e98fb1d428356603636fd723531bd1894.xml",
+ "sha256": "78fdd29358c63d111ead8bae33d5bc6e98fb1d428356603636fd723531bd1894",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/iryoukansatsukisoku-20260521.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "4dd5055640a12d391b59e5427c4175307c1381d9a63f4d0372b7006c8fcb721b",
+  "pages": 23,
+  "law_num": "平成十六年八月九日最高裁判所規則第十三号",
+  "main_articles": 106,
+  "counts": {
+   "Article": 110,
+   "Paragraph": 221,
+   "Item": 93,
+   "Subitem1": 8,
+   "SupplProvision": 5,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 25130,
+  "dropped_notes": 9,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 2,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 4,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "quoted-amendment-item",
+    "七 精神保健審判員"
+   ],
+   [
+    "quoted-amendment-item",
+    "八 精神保健参与員"
+   ],
+   [
+    "quoted-amendment-item",
+    "六 精神保健審判員"
+   ],
+   [
+    "quoted-amendment-item",
+    "七 精神保健参与員"
+   ],
+   [
+    "suppl-paragraph-caption",
+    "1"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成二六年一月六日最高裁判所規則第一号）",
+   "附則（令和七年二月十二日最高裁判所規則第三号）抄",
+   "附則（令和七年三月三日最高裁判所規則第五号）",
+   "附則（令和七年十二月二十六日最高裁判所規則第十七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律による審判の手続等に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 106,
+    "xml": 106,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 10,
+    "body": 10
+   },
+   "Article": {
+    "pdf_lines": 110,
+    "xml": 110,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 109,
+    "xml": 109,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 97,
+    "xml": 93,
+    "diff": -4,
+    "explained_by_registered_exceptions": -4
+   },
+   "Subitem1": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律による審判の手続等に関する規則",
+  "units": 446,
+  "pdf_lines": 891,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 319,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 4
+  },
+  "pdf_body_from_line": 23
+ },
+ "tables": {
+  "title": "心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律による審判の手続等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成16年8月9日 号外第174号",
+   "rule": "平成16年最高裁判所規則第13号",
+   "title": "心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律による審判の手続等に関する規則",
+   "year": 2004,
+   "no": 13,
+   "url": "https://www.kanpo.go.jp/old/20040809/20040809g00174/20040809g001740001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成26年1月6日 本紙第6202号",
+    "rule": "平成26年最高裁判所規則第1号",
+    "title": "心神喪失等の状態で重大な他害行為を行った者の医療及び観察等に関する法律による審判の手続等に関する規則の一部を改正する規則",
+    "year": 2014,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20140106/20140106h06202/20140106h062020002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年2月12日 号外第28号",
+    "rule": "令和7年最高裁判所規則第3号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20250212/20250212g00028/20250212g000280007f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年3月3日 号外第42号",
+    "rule": "令和7年最高裁判所規則第5号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20250303/20250303g00042/20250303g000420002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "workId": "kyoyu-kanri-hisho-kisoku",
+ "file": "kyoyu-kanri-hisho-kisoku-4a419dba76ac6712e9b62997e3eda3b1a032545d1dd4e892226ca12e5512f276.xml",
+ "sha256": "4a419dba76ac6712e9b62997e3eda3b1a032545d1dd4e892226ca12e5512f276",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/kyouyuukannrikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "bb91b79d50745e7a1b4957f680dcd748cfde756be24be73fb740291d72a7f83a",
+  "pages": 12,
+  "law_num": "令和四年五月十三日最高裁判所規則第十三号",
+  "main_articles": 26,
+  "counts": {
+   "Article": 31,
+   "Paragraph": 45,
+   "Item": 64,
+   "Subitem1": 3,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 10890,
+  "dropped_notes": 17,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 192,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 21,
+  "kept_spaces": 5,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [
+   {
+    "kind": "known-glued-number",
+    "parts": [
+     "第四条民訴法等一部改正法施"
+    ]
+   },
+   {
+    "kind": "known-glued-number",
+    "parts": [
+     "イ建物の区分所有等に関する法律第三十八条の二第一項"
+    ]
+   },
+   {
+    "kind": "known-glued-number",
+    "parts": [
+     "ロ建物の区分所有等に関する法律第六十六条"
+    ]
+   },
+   {
+    "kind": "known-glued-number",
+    "parts": [
+     "ハ建物の区分所有等に関する法律第七十三条"
+    ]
+   },
+   {
+    "kind": "caption-article-end",
+    "parts": [
+     "（建物の区分所有等に関する法律第一章第七節の規定による非訟事",
+     "第二十六条"
+    ]
+   },
+   {
+    "kind": "caption-article",
+    "parts": [
+     "（民事訴訟規則等の一部を改正する規則の一部改正に伴う調整規定",
+     "第四条 民訴法等一部改正法施"
+    ]
+   }
+  ],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和七年一二月一五日最高裁判所規則第一五号）",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "共有、管理等に関する非訟事件に関する手続規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 26,
+    "xml": 26,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 6,
+    "body": 6
+   },
+   "Article": {
+    "pdf_lines": 30,
+    "xml": 31,
+    "diff": 1,
+    "explained_by_registered_exceptions": 1
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 14,
+    "xml": 14,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 64,
+    "xml": 64,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 3,
+    "diff": 3,
+    "explained_by_registered_exceptions": 3
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "共有、管理等に関する非訟事件に関する手続規則",
+  "units": 154,
+  "pdf_lines": 361,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 64,
+  "accounted": {
+   "caption_then_unit_on_one_line": 2,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 14
+ },
+ "tables": {
+  "title": "共有、管理等に関する非訟事件に関する手続規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和4年5月13日 本紙第732号",
+    "rule": "令和4年最高裁判所規則第13号",
+    "title": "共有に関する非訟事件及び土地等の管理に関する非訟事件に関する手続規則",
+    "year": 2022,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20220513/20220513h00732/20220513h007320001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和7年12月15日 号外第273号",
+    "rule": "令和7年最高裁判所規則第15号",
+    "title": "共有に関する非訟事件及び土地等の管理に関する非訟事件に関する手続規則及びマンションの建替え等の円滑化に関する法律による権利の変換又は分配金の取得等と強制執行等との調整に関する規則の一部を改正する規則",
+    "year": 2025,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20251215/20251215g00273/20251215g002730001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

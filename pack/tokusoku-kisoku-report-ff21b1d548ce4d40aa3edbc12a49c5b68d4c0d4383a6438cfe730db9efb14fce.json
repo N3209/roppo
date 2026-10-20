@@ -1,0 +1,211 @@
+{
+ "workId": "tokusoku-kisoku",
+ "file": "tokusoku-kisoku-e8095f0d39208be234158d946fe641922d6ff7a9392c04d25fa99112d927c408.xml",
+ "sha256": "e8095f0d39208be234158d946fe641922d6ff7a9392c04d25fa99112d927c408",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/08521minnsohoudaihachihenntokusokutetudukinikannsurukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "842ba49aae69cf756faf7becacbcd30a3360043792f384d94007aabfc349f2a0",
+  "pages": 4,
+  "law_num": "平成十八年七月二十六日最高裁判所規則第十号",
+  "main_articles": 6,
+  "counts": {
+   "Article": 8,
+   "Paragraph": 26,
+   "Item": 11,
+   "Subitem1": 0,
+   "SupplProvision": 8,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 3418,
+  "dropped_notes": 7,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則 抄",
+   "附則（平成一八年一二月二八日最高裁判所規則第一四号）",
+   "附則（平成一九年一〇月一日最高裁判所規則第一二号）",
+   "附則（平成二〇年一〇月一日最高裁判所規則第一一号）",
+   "附則（平成二一年一〇月一日最高裁判所規則第九号）",
+   "附則（平成二二年一〇月一日最高裁判所規則第七号）",
+   "附則（平成二七年一二月二五日最高裁判所規則第一一号）",
+   "附則（令和七年八月二九日最高裁判所規則第一一号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "民事訴訟法第八編第二章の規定による督促手続に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 13,
+    "xml": 13,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 11,
+    "xml": 11,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "民事訴訟法第八編第二章の規定による督促手続に関する規則",
+  "units": 52,
+  "pdf_lines": 135,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 21,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 12
+ },
+ "tables": {
+  "title": "民事訴訟法第八編第二章の規定による督促手続に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成18年7月26日 本紙第4387号",
+    "rule": "平成18年最高裁判所規則第10号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則",
+    "year": 2006,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20060726/20060726h04387/20060726h043870001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成18年12月28日 本紙第4494号",
+    "rule": "平成18年最高裁判所規則第14号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則の一部を改正する規則",
+    "year": 2006,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20061228/20061228h04494/20061228h044940002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成19年10月1日 本紙第4678号",
+    "rule": "平成19年最高裁判所規則第12号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則の一部を改正する規則",
+    "year": 2007,
+    "no": 12,
+    "url": "https://www.kanpo.go.jp/old/20071001/20071001h04678/20071001h046780002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成20年10月1日 号外第216号",
+    "rule": "平成20年最高裁判所規則第11号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則の一部を改正する規則",
+    "year": 2008,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20081001/20081001g00216/20081001g002160004f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成21年10月1日 本紙第5165号",
+    "rule": "平成21年最高裁判所規則第9号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則の一部を改正する規則",
+    "year": 2009,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20091001/20091001h05165/20091001h051650002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成22年10月1日 本紙第5408号",
+    "rule": "平成22年最高裁判所規則第7号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則の一部を改正する規則",
+    "year": 2010,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20101001/20101001h05408/20101001h054080003f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成27年12月25日 本紙第6684号",
+    "rule": "平成27年最高裁判所規則第11号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則の一部を改正する規則",
+    "year": 2015,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20151225/20151225h06684/20151225h066840002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和7年8月29日 号外第195号",
+    "rule": "令和7年最高裁判所規則第11号",
+    "title": "民事訴訟法第百三十二条の十第一項に規定する電子情報処理組織を用いて取り扱う督促手続に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 11,
+    "url": "https://www.kanpo.go.jp/old/20250829/20250829g00195/20250829g001950011f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

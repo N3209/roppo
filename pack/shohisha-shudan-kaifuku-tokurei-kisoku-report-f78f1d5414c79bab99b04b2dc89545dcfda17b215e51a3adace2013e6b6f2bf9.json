@@ -1,0 +1,283 @@
+{
+ "workId": "shohisha-shudan-kaifuku-tokurei-kisoku",
+ "file": "shohisha-shudan-kaifuku-tokurei-kisoku-86290d48d9b7abb832c4f51bb156a2efb9fa3e49001d465ab8de42e8f54aa525.xml",
+ "sha256": "86290d48d9b7abb832c4f51bb156a2efb9fa3e49001d465ab8de42e8f54aa525",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521syouhisyatokureikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "d6e1db1239996b03a8464b324c917f7cbd240c5e20d4e0daafbe2ada284058e9",
+  "pages": 19,
+  "law_num": "平成二十七年六月二十九日最高裁判所規則第五号",
+  "main_articles": 58,
+  "counts": {
+   "Article": 63,
+   "Paragraph": 115,
+   "Item": 57,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 1,
+   "Table": 2
+  },
+  "matching_characters": 18258,
+  "dropped_notes": 56,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 5,
+  "table_pages": [
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 19,
+    "new_row_under_rowspan": [
+     "読み替える",
+     "、消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則第三十五条の八中「同条の文書の写し」とあるのは「第三十五条の十二において読み替えて準用する同規則第百四十九条の二第一項の電磁的記録を記録した記録媒体」と読み替える"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "text-after-quoted-table",
+    "別表第二の三の項中「並びに」を「及び」に"
+   ],
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和五年三月一五日最高裁判所規則第一号）抄",
+   "附 則（令和六年九月十七日最高裁判所規則第十四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則",
+  "extractor": [
+   {
+    "page": 12,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 13,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 14,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 15,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 16,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 17,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 18,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 19,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 58,
+    "xml": 58,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 13,
+    "body": 13
+   },
+   "Article": {
+    "pdf_lines": 63,
+    "xml": 63,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 52,
+    "xml": 52,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 57,
+    "xml": 57,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則",
+  "units": 254,
+  "pdf_lines": 565,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 166,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 20
+ },
+ "tables": {
+  "title": "消費者の財産的被害等の集団的な回復のための民事の裁判手続の特例に関する規則",
+  "xml_tables": 2,
+  "pdf_fragments": 8,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 1,
+    "equal": 1,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 67,
+    "equal": 67,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年6月29日 号外第145号",
+    "rule": "平成27年最高裁判所規則第5号",
+    "title": "消費者の財産的被害の集団的な回復のための民事の裁判手続の特例に関する規則",
+    "year": 2015,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20150629/20150629g00145/20150629g001450001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和5年3月15日 号外第51号",
+    "rule": "令和5年最高裁判所規則第1号",
+    "title": "消費者の財産的被害の集団的な回復のための民事の裁判手続の特例に関する規則の一部を改正する規則",
+    "year": 2023,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20230315/20230315g00051/20230315g000510002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

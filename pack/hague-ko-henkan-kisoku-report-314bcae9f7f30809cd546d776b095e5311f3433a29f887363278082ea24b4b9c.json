@@ -1,0 +1,302 @@
+{
+ "workId": "hague-ko-henkan-kisoku",
+ "file": "hague-ko-henkan-kisoku-a2e9ac3631cfc5ec4fbad569b96f5ed28258bf4c28dd0f9e4798a9d7f23a4a28.xml",
+ "sha256": "a2e9ac3631cfc5ec4fbad569b96f5ed28258bf4c28dd0f9e4798a9d7f23a4a28",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521haguenokisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "bf656984c51d19f85e8a0468cd069f69f14b3b5164f56d5b5c9a3931db3a7fe9",
+  "pages": 28,
+  "law_num": "平成二十五年十一月十三日最高裁判所規則第五号",
+  "main_articles": 104,
+  "counts": {
+   "Article": 109,
+   "Paragraph": 191,
+   "Item": 46,
+   "Subitem1": 5,
+   "SupplProvision": 6,
+   "AppdxTable": 2,
+   "Table": 2
+  },
+  "matching_characters": 29103,
+  "dropped_notes": 32,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 3,
+  "table_pages": [
+   24,
+   25,
+   25,
+   26,
+   27,
+   28
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 26,
+    "before": [
+     "第百二十三条第四項、第百三十二条の五第三項及び第百",
+     "準用する",
+     "準用する。この場合において、同条第二項中「口頭弁論に係る電子調書に記録しなければ」とあるの"
+    ],
+    "added": [
+     "三十三条第三項",
+     "",
+     "は、「期日調書に記載しなければ」と読み替えるものとする"
+    ]
+   },
+   {
+    "page": 27,
+    "new_row_under_rowspan": [
+     "電子調書について",
+     "期日調書について"
+    ]
+   },
+   {
+    "page": 28,
+    "before": [
+     null,
+     "読み替える",
+     "、国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の"
+    ],
+    "added": [
+     "",
+     "",
+     "手続等に関する規則第四十六条の四中「同条の文書の写し」とあるのは「同項において読み替えて準用する同規則第百四十九条の二第一項の電磁的記録を記録した記録媒体」と読み替える"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-article",
+    "2"
+   ],
+   [
+    "excerpt-first-paragraph",
+    "5"
+   ],
+   [
+    "appdx",
+    "別表第一"
+   ],
+   [
+    "appdx",
+    "別表第二"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和元年一一月二七日最高裁判所規則第五号）抄",
+   "附則（令和四年一一月七日最高裁判所規則第一七号） 抄",
+   "附則（令和五年九月一九日最高裁判所規則第４号）抄",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附則（令和七年十月一七日最高裁裁判所規則第一三号）"
+  ]
+ },
+ "independentCount": {
+  "title": "国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則",
+  "extractor": [
+   {
+    "page": 24,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 25,
+    "tables": 2,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 26,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 27,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 104,
+    "xml": 104,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 32,
+    "body": 32
+   },
+   "Article": {
+    "pdf_lines": 109,
+    "xml": 109,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 81,
+    "xml": 81,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 46,
+    "xml": 46,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則",
+  "units": 387,
+  "pdf_lines": 927,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 288,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 43
+ },
+ "tables": {
+  "title": "国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則",
+  "xml_tables": 2,
+  "pdf_fragments": 6,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 13,
+    "equal": 13,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 32,
+    "equal": 32,
+    "joins": 2,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成25年11月13日 号外第245号",
+   "rule": "平成25年最高裁判所規則第5号",
+   "title": "国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則",
+   "year": 2013,
+   "no": 5,
+   "url": "https://www.kanpo.go.jp/old/20131113/20131113g00245/20131113g002450001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和元年11月27日 号外第169号",
+    "rule": "令和元年最高裁判所規則第5号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2019,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20191127/20191127g00169/20191127g001690001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年10月17日 本紙第1570号",
+    "rule": "令和7年最高裁判所規則第13号",
+    "title": "家事事件手続規則及び国際的な子の奪取の民事上の側面に関する条約の実施に関する法律による子の返還に関する事件の手続等に関する規則の一部を改正する規則",
+    "year": 2025,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20251017/20251017h01570/20251017h015700002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年9月19日 本紙第1064号",
+    "rule": "令和5年最高裁判所規則第4号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20230919/20230919h01064/20230919h010640002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

@@ -24,7 +24,7 @@
  * 抱えたまま読み込み直すことになるため、断りなしには行わない。
  */
 
-const VERSION = 'v101';
+const VERSION = 'v102';
 const CACHE = 'roppo-shell-' + VERSION;
 
 // 欠けると起動しないもの。全部そろって初めてこの版を入れる。
@@ -37,6 +37,7 @@ const REQUIRED = [
   './find.js',
   './sync.js',
   './view.js',
+  './pack.js',
   './version-migration.js',
   './version-migration-view.js',
   './boot.js',

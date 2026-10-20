@@ -1,0 +1,152 @@
+{
+ "workId": "mansion-saisei-chosei-kisoku",
+ "file": "mansion-saisei-chosei-kisoku-c0a432fea20b335b59fd94ddaa7f977ff22cbb3066fc2bdf9866184479ca30ee.xml",
+ "sha256": "c0a432fea20b335b59fd94ddaa7f977ff22cbb3066fc2bdf9866184479ca30ee",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260401mansionsaisei.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "6e860185435c75309a47344e3dd068ed1a3dd77d43c89d0db0e2dbd4757e2c5d",
+  "pages": 3,
+  "law_num": "平成十四年十二月十一日最高裁判所規則第十三号",
+  "main_articles": 6,
+  "counts": {
+   "Article": 7,
+   "Paragraph": 13,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2322,
+  "dropped_notes": 5,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 2,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（平成二六年一〇月二四日最高裁判所規則第七号）",
+   "附 則（令和七年一二月一五日最高裁判所規則第一五号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "マンションの再生等の円滑化に関する法律による権利の変換等と強制執行等との調整に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "マンションの再生等の円滑化に関する法律による権利の変換等と強制執行等との調整に関する規則",
+  "units": 20,
+  "pdf_lines": 86,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 16,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "マンションの再生等の円滑化に関する法律による権利の変換等と強制執行等との調整に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成26年10月24日 本紙第6401号",
+    "rule": "平成26年最高裁判所規則第7号",
+    "title": "マンションの建替えの円滑化等に関する法律による権利の変換と強制執行等との調整に関する規則の一部を改正する規則",
+    "year": 2014,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20141024/20141024h06401/20141024h064010002f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和7年12月15日 号外第273号",
+    "rule": "令和7年最高裁判所規則第15号",
+    "title": "共有に関する非訟事件及び土地等の管理に関する非訟事件に関する手続規則及びマンションの建替え等の円滑化に関する法律による権利の変換又は分配金の取得等と強制執行等との調整に関する規則の一部を改正する規則",
+    "year": 2025,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20251215/20251215g00273/20251215g002730001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

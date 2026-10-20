@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/kokusennbengohiyousanteikisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「平成19年9月27日最高裁判所規則第１１号」
+  範囲: 本則9条（削除条の範囲を1要素として数える）、附則2本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="18" Num="12" PromulgateMonth="7" PromulgateDay="28" LawType="Rule">
+  <LawNum>平成十八年七月二十八日最高裁判所規則第十二号</LawNum>
+  <LawBody>
+    <LawTitle>総合法律支援法による国選弁護人等契約弁護士に係る費用の額の算定等に関する規則</LawTitle>
+    <MainProvision>
+      <Article Num="1">
+        <ArticleCaption>（趣旨）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>総合法律支援法（平成十六年法律第七十四号。以下「法」という。）第三十九条第三項の規定による同条第二項第二号に定める費用の額の算定に関する手続については、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（申立て裁判所）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三十九条第三項の申立ては、同項の検察官が所属する検察庁の対応する裁判所にこれをしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="3">
+        <ArticleCaption>（申立ての方式）</ArticleCaption>
+        <ArticleTitle>第三条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三十九条第三項の申立ては、訴訟費用の負担を命ずる裁判が確定した後速やかにこれをしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三十九条第三項の申立ては、次に掲げる事項を記載した書面でこれをしなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>訴訟費用の負担を命ずる裁判を特定するに足りる事項</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>前号の裁判が確定した日及び確定した事由</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="4">
+        <ArticleCaption>（算定する裁判所等）</ArticleCaption>
+        <ArticleTitle>第四条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第二条の申立てを受けた裁判所は、その申立てに係る費用の額を算定しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第二条の申立てを受けた上訴裁判所は、自ら費用の額を算定するのが適当でないと認めるときは、前項の規定にかかわらず、当該被告事件を審理した下級の裁判所に同項の規定による算定をさせることができる。この場合には、その旨を記載し、かつ、裁判長が認印した送付書とともに申立書及び関係書類を送付するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="3">
+          <ParagraphNum>３</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項の場合において、上訴裁判所は、第一項の規定による算定についての意見を付することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="4">
+          <ParagraphNum>４</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第二項の規定による送付をしたときは、上訴裁判所は、直ちにその旨を検察官に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="5">
+          <ParagraphNum>５</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第二項から前項までの規定は、上告裁判所から第二項の規定による送付をされた控訴裁判所が自ら費用の額を算定するのが適当でないと認めるときについて準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="5">
+        <ArticleCaption>（算定の決定）</ArticleCaption>
+        <ArticleTitle>第五条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>法第三十九条第三項の算定は、決定でしなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="6">
+        <ArticleCaption>（決定書）</ArticleCaption>
+        <ArticleTitle>第六条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前条の決定をするときは、裁判官が、決定書を作成し、これに記名押印しなければならない。合議体で決定をする場合において、決定書に記名押印することができない裁判官があるときは、他の裁判官の一人（当該記名押印することができない裁判官が裁判長以外の裁判官である場合は、裁判長）が、その事由を付記して記名押印しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>決定書には、次に掲げる事項を記載しなければならない。</Sentence>
+          </ParagraphSentence>
+          <Item Num="1">
+            <ItemTitle>一</ItemTitle>
+            <ItemSentence>
+              <Sentence>申立てをした検察官の官氏名</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="2">
+            <ItemTitle>二</ItemTitle>
+            <ItemSentence>
+              <Sentence>算定した訴訟費用の負担を命ずる裁判を特定するに足りる事項</Sentence>
+            </ItemSentence>
+          </Item>
+          <Item Num="3">
+            <ItemTitle>三</ItemTitle>
+            <ItemSentence>
+              <Sentence>算定した費用の額</Sentence>
+            </ItemSentence>
+          </Item>
+        </Paragraph>
+      </Article>
+      <Article Num="7">
+        <ArticleCaption>（算定の決定の通知）</ArticleCaption>
+        <ArticleTitle>第七条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>第五条の決定をした場合には、その旨を検察官に通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="8">
+        <ArticleCaption>（国選弁護人選任に関する通知）</ArticleCaption>
+        <ArticleTitle>第八条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>日本司法支援センターは、法第三十八条第二項の規定により国選弁護人の候補を指名して裁判所若しくは裁判長又は裁判官に通知をする場合において、その国選弁護人の候補が法第三十九条第二項第二号に掲げる国選弁護人等契約弁護士であるときは、その旨をも通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>裁判長又は裁判官は、検察官に対して刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）第二十九条の三第一項の規定による通知をする場合において、選任した弁護人が前項の国選弁護人等契約弁護士であるときは、その旨をも通知しなければならない。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="9">
+        <ArticleCaption>（刑事訴訟規則の準用等）</ArticleCaption>
+        <ArticleTitle>第九条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>刑事訴訟規則第三十七条、第五十七条第一項及び第五十八条から第六十一条まで（第六十条の二第一項ただし書を除く。）の規定は法又はこの規則の規定により裁判所に提出すべき書類及び裁判官その他の裁判所職員が作成すべき書類について、同規則第二百九十八条の規定はこれらの書類の発送及び受理並びにこの規則の規定による通知について準用する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>前項において準用する刑事訴訟規則第六十条の規定にかかわらず、日本司法支援センターの職員が作成すべき書類に署名押印すべき場合には、署名押印に代えて記名押印することができる。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法附則第一条第二号に掲げる規定の施行の日（平成十八年十月二日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一九年九月二七日最高裁判所規則第一一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法等の一部を改正する法律（平成十九年法律第六十八号）の施行の日（平成十九年十一月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

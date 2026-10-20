@@ -1,0 +1,148 @@
+{
+ "workId": "saikosai-saiban-jimu-shori-kisoku",
+ "file": "saikosai-saiban-jimu-shori-kisoku-52ee7e8c52491c2ae0be864b0305f4e6231a9096c7efee6eb8f87f85f51d3828.xml",
+ "sha256": "52ee7e8c52491c2ae0be864b0305f4e6231a9096c7efee6eb8f87f85f51d3828",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/R6.9.17saikousaibansyosaibanjimusyorikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "77ec16caae558e5aeabc9b7f256cf5df5f2e31e3e28e35da9759b42c39f30f37",
+  "pages": 3,
+  "law_num": "昭和二十二年十一月一日最高裁判所規則第六号",
+  "main_articles": 15,
+  "counts": {
+   "Article": 15,
+   "Paragraph": 31,
+   "Item": 3,
+   "Subitem1": 0,
+   "SupplProvision": 8,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 2026,
+  "dropped_notes": 8,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（昭和二二年一二月二九日最高裁判所規則第一九号）",
+   "附 則（昭和二三年四月一日最高裁判所規則第三号）",
+   "附 則（昭和二三年一〇月一九日最高裁判所規則第二六号）",
+   "附 則（昭和二四年七月一日最高裁判所規則第一二号〕",
+   "附 則（昭和二八年一月一九日最高裁判所規則第一号）",
+   "附 則（昭和四〇年三月三一日最高裁判所規則第五号）",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）"
+  ]
+ },
+ "independentCount": {
+  "title": "最高裁判所裁判事務処理規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "最高裁判所裁判事務処理規則",
+  "units": 34,
+  "pdf_lines": 84,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 38,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 11
+ },
+ "tables": {
+  "title": "最高裁判所裁判事務処理規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

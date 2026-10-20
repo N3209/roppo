@@ -1,0 +1,753 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/okinawanohukkinitomonautokubetusotinikansurukisoku.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「平成19年3月31日最高裁判所規則第４号」
+  範囲: 本則31条（削除条の範囲を1要素として数える）、附則9本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="47" Num="1" PromulgateMonth="5" PromulgateDay="2" LawType="Rule">
+  <LawNum>昭和四十七年五月二日最高裁判所規則第一号</LawNum>
+  <LawBody>
+    <LawTitle>沖縄の復帰に伴う特別措置に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条・第二条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 事件の手続</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <ArticleRange>（第三条－第五条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 民事関係</SectionTitle>
+          <ArticleRange>（第六条－第十二条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 刑事関係</SectionTitle>
+          <ArticleRange>（第十三条－第二十条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 裁判所の職員の任命等</ChapterTitle>
+        <ArticleRange>（第二十一条－第二十七条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 削除</ChapterTitle>
+      </TOCChapter>
+      <TOCChapter Num="5">
+        <ChapterTitle>第五章 沖縄の外国人弁護士</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 沖縄の外国人弁護士の承認等</SectionTitle>
+          <ArticleRange>（第三十二条－第三十九条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 沖縄外国人弁護士選考委員会</SectionTitle>
+          <ArticleRange>（第四十条－第四十九条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>沖縄の復帰に伴う事件の手続、裁判所の職員の任命及び沖縄の外国人弁護士等に関する特別措置については、沖縄の復帰に伴う特別措置に関する法律（昭和四十六年法律第百二十九号。以下「法」という。）に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（定義）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則において「沖縄」とは、法第二条第一項に規定する沖縄をいう。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則において「本土」とは、法第二条第二項に規定する本土をいう。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則において「沖縄法令」とは、法第二条第三項に規定する沖縄法令をいう。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則において「本土法令」とは、法第二条第四項に規定する本土法令をいう。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 事件の手続</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 通則</SectionTitle>
+          <Article Num="3">
+            <ArticleCaption>（記録等の送付及び当事者等への通知）</ArticleCaption>
+            <ArticleTitle>第三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法の施行の際琉球政府の裁判所（以下「旧裁判所」という。）に係属していた事件で、法第四章の規定に基づき事件を承継した裁判所以外の裁判所がその記録及び証拠物（以下「記録等」と総称する。）を保管しているものについては、記録等を保管している裁判所は、法の施行後、すみやかに、これを事件を承継した裁判所に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、前項の規定により記録等の送付を受けたときは、すみやかに、その旨を民事事件の当事者又は刑事事件の訴訟関係人に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、法の施行の際琉球列島米国民政府の裁判所（以下「民政府の裁判所」という。）に係属していた事件につき、法第十五条第一項において準用する法第十一条第一項、法第十二条第一項又は法第十三条の規定に基づき事件を承継した裁判所が事件の記録の送付を受けた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="4">
+            <ArticleCaption>（介輔及び歯科介輔に係る最高裁判所規則で定める法律の規定等）</ArticleCaption>
+            <ArticleTitle>第四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる規定は、法第百五十七条において読み替える法第百条第十項（法第百一条第三項において準用する場合を含む。）の最高裁判所規則で定める法律の規定とする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>民事訴訟法（平成八年法律第百九号）第百九十七条（同法において準用する場合を含む。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>刑事訴訟法（昭和二十三年法律第百三十一号）第百五条、第百三十一条第二項、第百四十九条、第二百七十八条及び第三百十四条第四項（同法においてこれらの規定を準用する場合を含む。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>裁判所における事件の手続に関して前二号又は次項第一号に掲げる規定を準用し、又はその例によるものとする法律（前二号に掲げるものを除く。）の規定</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる最高裁判所規則の規定の適用については、介輔又は歯科介輔は、医師又は歯科医師とみなす。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）第百八十三条から第百八十五条までの規定（同規則においてこれらの規定を準用する場合を含む。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前項各号又は前号に掲げる規定を準用し，又はその例によるものとする最高裁判所規則（前号に掲げるものを除く）の規定</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+          <Article Num="5">
+            <ArticleCaption>（合衆国ドル表示の金額の切替え）</ArticleCaption>
+            <ArticleTitle>第五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次に掲げる合衆国ドル表示の金額については、法第四十九条第一項の規定による交換比率により日本円に換算した額をもつてその額とする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十三条若しくは法第二十八条第六項又は第九条、第十条、第十一条若しくは第十二条第二項の規定によりなお従前の例によることとされるものに係る金額</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>旧裁判所（旧裁判所の裁判官、執達吏及び執達吏の職務を行なう裁判所書記官を含む。以下この条において同じ。）がした予納命令に係る費用の額、保釈を許す裁判に係る保証金の額その他旧裁判所が沖縄法令の規定により定めた金額で債権又は債務の額でないもの</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>旧裁判所がした競売手続において最高価競買人の申し出た競買価額その他沖縄法令の規定により旧裁判所に対してした申述に係る金額</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 民事関係</SectionTitle>
+          <Article Num="6">
+            <ArticleCaption>（民事訴訟規則の適用に関する経過措置）</ArticleCaption>
+            <ArticleTitle>第六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第十九条第一項の規定により民事訴訟法等の一部を改正する法律（昭和二十九年法律第百二十七号）附則第四項及び第八項の規定の例によることとされる事件については、民事訴訟規則（昭和三十一年最高裁判所規則第二号）第四十五条、第五十条及び第五十三条から第五十六条まで（同規則第五十七条及び第六十条においてこれらの規定を準用する場合を含む。）並びに同規則第六十一条の規定は、適用しない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="7">
+            <ArticleCaption>（上告理由書の提出期間等に関する特例）</ArticleCaption>
+            <ArticleTitle>第七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>琉球政府の高等裁判所（以下「旧高等裁判所」という。）に係属していた上告事件に係る上告理由書の提出期間は、法の施行の際その期間が満了していない場合に限り、法の施行の日から起算する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の事件につき旧高等裁判所に上告理由書を提出した者は、沖縄の復帰に伴い上告理由を補正する必要が生じたときは、法の施行の日から起算して三十日以内にその補正のための書面を上告裁判所に提出することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前二項の規定は、旧高等裁判所に係属していた再抗告事件について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="8">
+            <ArticleCaption>（自動車に対する強制執行等に関する経過措置）</ArticleCaption>
+            <ArticleTitle>第八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>道路運送車両法（昭和二十六年法律第百八十五号）による登録を受けた自動車、建設機械抵当法（昭和二十九年法律第九十七号）による登記を受けた建設機械又は航空法（昭和二十七年法律第二百三十一号）による登録を受けた航空機につき法の施行前に沖縄において開始された強制執行については、自動車及び建設機械強制執行規則（昭和二十七年最高裁判所規則第五号）附則第二項から第七項までの規定の例による。沖縄の道路運送車両法（千九百五十四年立法第四十五号）による登録を受けた自動車につき法の施行前に本土において開始された強制執行についても、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項前段に規定する自動車、建設機械又は航空機につき法の施行前に沖縄において委任された競売については、自動車及び建設機械競売規則（昭和二十七年最高裁判所規則第六号）附則第二項から第四項までの規定の例による。前項後段に規定する自動車につき法の施行前に本土において申し立てられた競売についても、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="9">
+            <ArticleCaption>（調停委員等の執務に係る給付に関する経過措置）</ArticleCaption>
+            <ArticleTitle>第九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>沖縄法令の規定により調停委員、調停の補助をした者、参与員又は鑑定委員がした執務に係る日当その他の給付については、なお従前の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="10">
+            <ArticleCaption>（執達吏が受任した事件等の費用に関する経過措置）</ArticleCaption>
+            <ArticleTitle>第十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>執達吏又は執達吏の職務を行なう裁判所書記官が受任した事件につき、法の施行前に完了し、又は続行することを要しないこととなつた各個の事務、法の施行前に着手され法の施行の際まだ完了していない各個の事務及び法の施行前に執行官法（昭和四十一年法律第百十一号）第八条第二項各号に掲げる場合に該当した各個の事務に係る手数料及び立替金の額については、なお従前の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項に規定する事件に係る当事者又はその他の者が負担すべき費用の範囲及び額については、なお従前の例による。ただし、同項に規定する各個の事務以外の事務に係る手数料及び費用の額については、執行官の手数料及び費用に関する規則（昭和四十一年最高裁判所規則第十五号）に定める額とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="11">
+            <ArticleCaption>（人身保護事件の手続の費用に関する経過措置）</ArticleCaption>
+            <ArticleTitle>第十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>旧裁判所が受理した沖縄の人身保護法（千九百六十九年立法第七十七号）の規定による事件の手続の費用については、法第二十三条の規定の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="12">
+            <ArticleCaption>（民政府の裁判所の事件に関する特例）</ArticleCaption>
+            <ArticleTitle>第十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>裁判所は、法第十五条第一項において準用する法第十一条第一項、法第十二条第一項又は法第十三条の規定に基づいて承継した事件の審理のため事件の記録の全部又は一部を翻訳する必要があると認めるときは、当事者にその訳文の提出を命じ、又は適当と認める者にその翻訳を嘱託することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項に規定する事件に関する申立てその他の手続で、法の施行前にされたものに係る手数料の範囲及び額並びに当事者又はその他の者が負担すべき費用の範囲及び額については、なお従前の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項の規定による翻訳の嘱託は、民事訴訟費用等に関する法律（昭和四十六年法律第四十号）の適用については、同法第二十条第一項に規定する鑑定の嘱託とみなす。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 刑事関係</SectionTitle>
+          <Article Num="13">
+            <ArticleCaption>（法の施行前に生じた事項について適用する最高裁判所規則）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十七条第一項の最高裁判所規則で定める刑事に関する最高裁判所規則は、次に掲げるものとする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>刑事訴訟規則</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>刑事事件における第三者所有物の没収手続に関する規則（昭和三十八年最高裁判所規則第八号）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>交通事件即決裁判手続規則（昭和二十九年最高裁判所規則第十四号）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>刑事補償規則（昭和二十五年最高裁判所規則第一号）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>少年審判規則（昭和二十三年最高裁判所規則第三十三号）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法廷等の秩序維持に関する規則（昭和二十七年最高裁判所規則第二十号）</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十七条第一項及び前項の規定により刑事訴訟規則の規定を適用する場合においては、同規則第二百十九条第一項ただし書中「判決宣告の日」とあるのは「沖縄の復帰に伴う特別措置に関する規則（昭和四十七年最高裁判所規則第一号）の施行の日」とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（控訴趣意書の差出期間等に関する特例）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>旧裁判所の指定した控訴趣意書又は上告趣意書を差し出すべき最終日（沖縄の刑事訴訟規則（千九百五十六年上訴裁判所規則第二十八号）第二百八十九条第四項又は第三百二条第二項の規定により最終日とみなされる日を含む。）が法の施行の日から起算して二十日以内の日にあたる事件については、その最終日は、法の施行の日から起算して二十一日目の日とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>旧裁判所に上告趣意書又は控訴趣意書を差し出した者は、刑事訴訟法が適用されることとなつたことに伴い控訴の申立ての理由を補正する必要が生じたときは、法の施行の日から起算して二十一日以内にその補正のための書面を控訴裁判所に差し出すことができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>刑事訴訟法及び刑事訴訟規則中控訴趣意書に関する規定は、前項の規定により差し出す書面について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="15">
+            <ArticleCaption>（上告審としての事件受理の申立てに係る事件に関する特例）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法の施行の際沖縄の刑事訴訟法（千九百五十五年立法第八十五号）第四百十六条の規定により上告審として事件を受理すべきことを申し立てている者は、法の施行の日から起算して十四日以内に福岡高等裁判所に上告の申立書を差し出すことができる。ただし、法の施行前に事件を受理する旨の決定がされている場合は、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定により上告の申立書が差し出されたときは、事件受理の申立ての際あわせて上告の申立てがあつたものとみなす。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>沖縄の刑事訴訟規則第三百三条の七の規定により旧高等裁判所が事件受理の申立書、理由書及び添附書類の送付を受けている事件については、刑事訴訟規則第二百六十一条第一項の期間は、第三条第一項の規定により最高裁判所がこれらの書類の送付を受けた日の翌日から起算する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>最高裁判所は、前項の書類の送付を受けたときは、すみやかに、その年月日を検察官に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法の施行前に上告審として事件を受理する旨の決定があつた事件については、申立人は、刑事訴訟法が適用されることとなつたことに伴い上告の申立ての理由を補正する必要が生じたときは、法の施行の日から起算して二十八日以内にその補正のための書面を最高裁判所に差し出すことができる。この場合においては、前条第三項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（民政府の裁判所の事件の引継ぎに関する手続等）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十八条第八項前段に規定する事件について同項の規定により起訴状を差し出すべき期間は、法の施行の日から起算して十四日とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十八条第八項後段に規定する事件について同項の規定により当事者が那覇地方裁判所に審理を求める旨の書面を提出すべき期間は、法の施行の日から起算して十四日とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十八条第八項の規定により当事者から那覇地方裁判所に審理を求める旨の書面の提出があつたときは、裁判所は、すみやかに、その旨を検察官に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十八条第八項後段に規定する事件について同項の規定により起訴状を差し出すべき期間は、前項の規定による通知を受けた日から十四日とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>検察官は、法第二十八条第八項の規定により起訴状を差し出す場合においては、同時に、被告人の数に応ずる起訴状の謄本並びに民政府の裁判所に提出されていた起訴状及びその訳文を差し出さなければならない。ただし、やむを得ない事情があるときは、起訴状の差出し後、すみやかにこれらの書面を差し出せば足りる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十八条第八項の規定による起訴状の差出しがあつた場合においては、その起訴状の差出しを刑事訴訟法第二百五十六条第一項の規定による起訴状の提出とみなして、刑事に関する訴訟関係法令の規定を適用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>民政府の裁判所がした刑事に関する裁判について再審開始の決定が確定したときは、検察官は、刑事訴訟法第二百五十六条に定める起訴状を差し出さなければならない。この場合においては、前条第一項の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第二項の規定は、前項の規定による起訴状の差出しがあつた場合について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（勾留に関する処分等）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法の施行の際旧裁判所に係属していた刑事に関する事件で、事件を承継した裁判所が第三条第一項の規定による記録等の送付を受けていないものについて勾留に関する処分をすべき場合には、法の施行の際記録等を保管していた裁判所又はその裁判所の裁判官が、これをしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>事件を承継した裁判所は、被告人が勾留されている事件について記録等の送付を受けたときは、直ちに、その旨を法の施行の際記録等を保管していた裁判所に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 裁判所の職員の任命等</ChapterTitle>
+        <Article Num="21">
+          <ArticleCaption>（執達吏の身分）</ArticleCaption>
+          <ArticleTitle>第二十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条の規定により裁判所の職員となつた者で、法の施行の際執達吏に任命されているものは、執行官となる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="22">
+          <ArticleCaption>（裁判官以外の裁判所の職員の任命等）</ArticleCaption>
+          <ArticleTitle>第二十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条の規定により裁判所の職員となつた者（裁判官に任命された者を除く。）について、法の施行後最初に行なわれる任命、補職、勤務裁判所の指定及び勤務検察審査会の指定は、裁判官以外の裁判所職員の任免等に関する規則（昭和二十五年最高裁判所規則第四号）第三条から第六条まで、下級裁判所事務処理規則（昭和二十三年最高裁判所規則第十六号）第二十四条第四項、首席書記官等に関する規則（昭和二十九年最高裁判所規則第九号）第三条第三項及び第四条第三項、次席家庭裁判所調査官等に関する規則（昭和二十九年最高裁判所規則第十二号）第二条第二項並びに検察審査会法（昭和二十三年法律第百四十七号）第二十条第二項の規定にかかわらず、最高裁判所が行なう。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="23">
+          <ArticleCaption>（裁判官及び裁判官の秘書官以外の裁判所職員の給与等）</ArticleCaption>
+          <ArticleTitle>第二十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条の規定により裁判所の職員となつた者（裁判官及び裁判官の秘書官に任命された者を除く。）の裁判所職員臨時措置法（昭和二十六年法律第二百九十九号）本則に規定する事項については、この規則に特別の定めがあるものを除くほか、その性質に反しない限り、法の規定に基づく人事院規則及び政令の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>沖縄県の区域内に置かれる裁判所に勤務する医師に対する特別の手当の支給については、法第五十五条第二項の規定に基づく人事院規則の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六十四条第三項に規定する災害補償に関する事項については、法第五十六条第一項並びに同項において適用するものとされる国家公務員災害補償法（昭和二十六年法律第百九十一号）並びに国家公務員災害補償法の一部を改正する法律（昭和四十一年法律第六十七号）附則第六条及び第八条の規定に基づく人事院規則の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="24">
+          <ArticleCaption>（家庭裁判所調査官補の職権の特例に関する指名）</ArticleCaption>
+          <ArticleTitle>第二十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二十二条の規定により家庭裁判所調査官補に任命された者について、法の施行後最初に行なわれる家庭裁判所調査官補の職権の特例に関する規則（昭和二十九年最高裁判所規則第六号）第一項の規定による指名は、同項の規定にかかわらず、最高裁判所が行なう。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="25">
+          <ArticleCaption>（報酬等の支給定日）</ArticleCaption>
+          <ArticleTitle>第二十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条の規定により裁判所の職員となつた者の昭和四十七年五月分の報酬又は俸給の支給定日は、裁判官の報酬等の支給定日に関する規則（昭和三十六年最高裁判所規則第二号）第一条の規定にかかわらず、最高裁判所が別に定める日とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="26">
+          <ArticleCaption>（調停委員となるべき者の選任等に関する経過措置）</ArticleCaption>
+          <ArticleTitle>第二十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>沖縄法令の規定により選任されている調停委員、参与員又は鑑定委員となるべき者は、本土法令の相当規定により選任された調停委員、参与員又は鑑定委員となるべき者とみなす。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>沖縄の調停委員規則（千九百六十八年琉球高等裁判所規則第五号）第六条、参与員となるべき者の選任規則（千九百六十八年琉球高等裁判所規則第四号）第５条又は沖縄の鑑定委員規則（千九百七十一年琉球高等裁判所規則第三号）第三条に規定する事由に該当する行為は、調停委員規則（昭和二十六年最高裁判所規則第十一号）第六条、参与員規則（昭和二十二年最高裁判所規則第十三号）第四条又は鑑定委員規則（昭和四十二年最高裁判所規則第四号）第三条に規定する事由に該当する行為とみなす。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>沖縄の法令の規定（法第二十五条第一項の規定によりなお効力を有することとされる沖縄法令の規定を含む。）により禁錮以上の刑に処せられた者は、調停委員規則第三条第二号、参与員規則第二条第二号、司法委員規則（昭和二十三年最高裁判所規則第二十九号）第二条第二号及び鑑定委員規則第二条第二号に該当する者とみなす。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="27">
+          <ArticleTitle>第二十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 削除</ChapterTitle>
+        <Article Num="28:31">
+          <ArticleTitle>第二十八条から第三十一条まで</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>削除</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="5">
+        <ChapterTitle>第五章 沖縄の外国人弁護士</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 沖縄の外国人弁護士の承認等</SectionTitle>
+          <Article Num="37">
+            <ArticleCaption>（承認）</ArticleCaption>
+            <ArticleTitle>第三十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>最高裁判所は、選考の結果及び聴取した日本弁護士連合会の意見を勘案し、相当と認めるときは、承認をするものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定により承認をする場合においては、承認を受ける者が事務を行なうことのできる外国法を指定しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="38">
+            <ArticleCaption>（事務所）</ArticleCaption>
+            <ArticleTitle>第三十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>承認を受けた者の事務所は、沖縄外国人弁護士法律事務所と称する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>承認を受けた者は、事務所に最高裁判所の指定した外国法に関して業務を行なうものであることを表示しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="39">
+            <ArticleCaption>（準用規定）</ArticleCaption>
+            <ArticleTitle>第三十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>外国弁護士資格者承認等規則（昭和二十四年最高裁判所規則第二十二号）第六条、第七条（第十二条において準用する場合を含む。）及び第八条から第十一条までの規定は、承認をした場合について準用する。この場合において、同規則第八条の二第一項中「事務所の所在地を管轄する地方裁判所の管轄区域内にある弁護士会」とあるのは「那覇地方裁判所の管轄区域内にある弁護士会（以下「弁護士会」という。）」と、同規則第九条中「法」とあるのは「弁護士法（昭和二十四年法律第二百五号）」と、同規則第十条第二号中「法」とあるのは「弁護士法」と、同規則第十一条中「別紙第二号書式による書面」とあるのは「その旨の書面」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 沖縄外国人弁護士選考委員会</SectionTitle>
+        </Section>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（沖縄の外国人弁護士の選考等に関する規定の失効）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>第三十二条から第三十六条まで及び第五章第二節の規定は、施行の日から起算して二月を経過した日にその効力を失う。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和四七年六月二四日最高裁判所規則第五号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十七年七月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五五年三月三一日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十五年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五六年三月三一日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十六年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（昭和五七年三月三一日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和五十七年四月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年十二月十七日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法（平成八年法律第百九号。以下「新法」という。）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一六年三月三一日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、裁判所職員定員法の一部を改正する法律（平成十六年法律第七号）の施行の日（平成十六年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一六年四月二一日最高裁判所規則第九号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成一六年五月一日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一九年三月三一日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、執行官法の一部を改正する法律（平成十九年法律第十八号）の施行の日（平成十九年四月一日）から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

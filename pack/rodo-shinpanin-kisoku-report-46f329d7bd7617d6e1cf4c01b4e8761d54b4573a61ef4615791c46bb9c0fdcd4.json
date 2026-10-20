@@ -1,0 +1,169 @@
+{
+ "workId": "rodo-shinpanin-kisoku",
+ "file": "rodo-shinpanin-kisoku-c8c6d28c0ff418a5ef002c5074fdacffc1765929f9dddd4a0840214f1e62223d.xml",
+ "sha256": "c8c6d28c0ff418a5ef002c5074fdacffc1765929f9dddd4a0840214f1e62223d",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/roudou_kisokutou/20250212roudoushinpaninkisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "6ab14359d2abd9a29cb5ef3f0de340ec794759239e2a3198316a55c1545c7f56",
+  "pages": 3,
+  "law_num": "平成十七年一月十一日最高裁判所規則第三号",
+  "main_articles": 7,
+  "counts": {
+   "Article": 12,
+   "Paragraph": 18,
+   "Item": 7,
+   "Subitem1": 0,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 1848,
+  "dropped_notes": 2,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 2,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "quoted-amendment-item",
+    "三 労働審判員"
+   ],
+   [
+    "quoted-amendment-item",
+    "二 労働審判員"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和七年二月十二日最高裁判所規則第三号）抄",
+   "附則（令和七年三月三日最高裁判所規則第五号）"
+  ]
+ },
+ "independentCount": {
+  "title": "労働審判員規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 12,
+    "xml": 12,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 9,
+    "xml": 7,
+    "diff": -2,
+    "explained_by_registered_exceptions": -2
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "労働審判員規則",
+  "units": 39,
+  "pdf_lines": 79,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 18,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 2
+  },
+  "pdf_body_from_line": 6
+ },
+ "tables": {
+  "title": "労働審判員規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成17年1月11日 号外第3号",
+   "rule": "平成17年最高裁判所規則第3号",
+   "title": "労働審判員規則",
+   "year": 2005,
+   "no": 3,
+   "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030007f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和7年2月12日 号外第28号",
+    "rule": "令和7年最高裁判所規則第3号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 3,
+    "url": "https://www.kanpo.go.jp/old/20250212/20250212g00028/20250212g000280007f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年3月3日 号外第42号",
+    "rule": "令和7年最高裁判所規則第5号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20250303/20250303g00042/20250303g000420002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

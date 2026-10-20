@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/tokureikisoku2.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和六年九月一七日同第一四号」
+  範囲: 本則17条（削除条の範囲を1要素として数える）、附則5本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。表記の統一あり。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFで半角「( )」で組まれた括弧2字を全角「（）」に統一。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="45" Num="6" PromulgateMonth="7" PromulgateDay="7" LawType="Rule">
+  <LawNum>昭和四十五年七月七日最高裁判所規則第六号</LawNum>
+  <LawBody>
+    <LawTitle>民事訴訟手続に関する条約等の実施に伴う民事訴訟手続の特例等に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 民事訴訟手続に関する条約の実施</ChapterTitle>
+        <ArticleRange>（第二条－第十条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 民事又は商事に関する裁判上及び裁判外の文書の外国における送達及び告知に関する条約の実施</ChapterTitle>
+        <ArticleRange>（第十一条－第十三条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（この規則の趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民事訴訟手続に関する条約及び民事又は商事に関する裁判上及び裁判外の文書の外国における送達及び告知に関する条約の実施のための裁判所の手続に関しては、民事訴訟手続に関する条約等の実施に伴う民事訴訟手続の特例等に関する法律（昭和四十五年法律第百十五号。以下「法」という。）に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 民事訴訟手続に関する条約の実施</ChapterTitle>
+        <Article Num="2">
+          <ArticleCaption>（送達すべき文書の翻訳文）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民事訴訟手続に関する条約（以下「民訴条約」という。）の締約国である外国の当局に対し、同条約第三条第二項に規定する方法による文書の送達を嘱託するときは、送達すべき文書に同項に規定する言語のいずれか一方によつて作成された翻訳文を添附するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民訴条約の締約国に駐在する日本国の大使、公使又は領事に対し、文書の送達を嘱託する場合において必要があるときは、送達すべき文書に送達すべき地における公用語又は送達を受けるべき者が解する言語によつて作成された翻訳文を添附するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>当事者が作成し、又は提出した文書に添附すべき翻訳文は、その当事者が提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（裁判外の文書の送達嘱託の申請）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民訴条約第一条第一項の文書で裁判外のものを同条約の締約国である外国において送達することを求める者は、次に掲げる事項を記載した申請書を管轄裁判所に提出しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>送達すべき文書の種類</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>当事者の氏名及び資格</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>送達を受けるべき者の氏名及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>申請者の氏名及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>年月日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>裁判所の表示</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項第一号から第三号までに掲げる事項については、送達すべき地における公用語による記載をもしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3_2">
+          <ArticleCaption>（裁判外の文書の送達）</ArticleCaption>
+          <ArticleTitle>第三条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六条第一項の送達及び外国の当局の嘱託により本邦においてする裁判外の文書の送達に関しては、民事訴訟規則（平成八年最高裁判所規則第五号）第一編第五章第四節の規定（同規則第四十一条、第四十二条、第一編第五章第四節第三款、第四十六条第一項、第四十七条第三項及び第四項並びに第四十七条の二の規定を除く。）を準用する。この場合において、同規則第四十七条第一項中「書類又は電磁的記録」とあるのは「書類」と読み替えるものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（民訴条約第二条に規定する方法による文書の送達）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民訴条約第二条に規定する方法により文書の送達をすべきときは、裁判所書記官は、送達を受けるべき者に対し、送達すべき文書を表示してその受領を催告しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定による催告を受けた者は、出頭して文書を受領すること又は文書の送付を申し出ることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の規定による申出を受けたときは、裁判所書記官は、民事訴訟法（平成八年法律第百九号）及び民事訴訟規則に定める郵便による送達の例により、文書を送付する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の規定による催告を発した日から三週間以内に、送達を受けるべき者が出頭せず、又は第二項の規定による申出をしないときは、裁判所書記官は、文書の受領が拒絶されたものとして取り扱うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（司法共助の嘱託書及び添附書類の翻訳）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民訴条約第八条の当局に対する嘱託書及びその添附書類には、同条約第十条に規定する言語のいずれか一方によつて作成された翻訳文を添附するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二条第二項の規定は、民訴条約の締約国に駐在する日本国の大使、公使又は領事に対する嘱託書の添附書類について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二条第三項の規定は、前二項の場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5_2">
+          <ArticleCaption>（受託裁判所のした処分に対する不服申立て）</ArticleCaption>
+          <ArticleTitle>第五条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>外国の当局の嘱託により証拠調べその他の裁判上の行為をするに際し本邦の裁判所がした裁判については、当該裁判所を受訴裁判所とみなして不服申立てに関する民事訴訟規則の規定を適用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（法第十一条の申立て）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十一条の申立てに係る申立書には、第九条の二において準用する非訟事件手続規則（平成二十四年最高裁判所規則第七号）第一条第一項各号に掲げる事項のほか、次に掲げる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行認許の請求をすべき訴訟費用の負担を定める裁判（その裁判において訴訟費用の額を定めていないときは、その裁判のほか訴訟費用の額を定める裁判（訴訟費用の負担の額を定める裁判所書記官の処分を含む。））の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行認許の請求をすべき相手国の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>訴訟費用債務者が民訴条約第十八条第一項に規定する免除を受けたこと及びその要件となる事実</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>訴訟費用債務者の氏名及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>執行認許の請求について裁判をする権限を有する当局の管轄を定める原因である事実</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項第一号、第二号、第四号及び第五号に掲げる事項については、執行認許の請求をすべき相手国の公用語による記載をもしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の申立書には、同項第一号の裁判の謄本、裁判所書記官がその確定を証明する書類及び法第二十二条の規定により当局の権限を証明する書類並びにこれらの書類について民訴条約第十九条第二項３に規定する言語のいずれか一方によつて作成された翻訳文を添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民訴条約第十八条第一項に規定する免除の要件となる事実について、証拠書類があるときは、その写しを申立書に添付しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（当局の権限証明の申請）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十二条の規定による当局の権限の証明を求める者は、法第十一条に規定する第一審の受訴裁判所を経由してその申請をしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="8">
+          <ArticleCaption>（費用額確定請求書等の送付）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十一条の申立てに基づき執行認許の請求を外務大臣に嘱託する場合において、申立人が民訴条約第十九条第四項の規定により費用額を定めるべき旨の請求書及び証拠書類を提出しているときは、裁判所は、これらの書類を外務大臣に送付する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の請求書は、執行認許の請求をすべき相手国の公用語又は相手国との間の取極により定められた言語で作成しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の証拠書類が前項に規定する言語で作成されていないときは、同項に規定する言語のいずれか一方によつて作成された翻訳文を添附しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleCaption>（費用計算書等の提出）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民訴条約第十九条第四項の規定により本邦の裁判所に対し費用額を定めるべき旨の請求をするときは、費用計算書及び費用額に関する証拠書類を提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書類が外国語で作成されているときは、日本語又は関係国間の取極により定められた言語によつて作成された翻訳文を添附しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9_2">
+          <ArticleCaption>（非訟事件手続規則の準用）</ArticleCaption>
+          <ArticleTitle>第九条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十一条の申立て及び執行認許の手続に関しては、この規則に特別の定めがある場合を除き、非訟事件手続規則の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleCaption>（救助請求書の用語等）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十三条第一項の規定により提出する請求書及びその関係書類は、民訴条約第十条に規定する言語のいずれかで作成し、又は同条に規定する言語のいずれか一方によつて作成された翻訳文を添附して作成しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 民事又は商事に関する裁判上及び裁判外の文書の外国における送達及び告知に関する条約の実施</ChapterTitle>
+        <Article Num="11">
+          <ArticleCaption>（送達すべき文書の翻訳文）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>民事又は商事に関する裁判上及び裁判外の文書の外国における送達及び告知に関する条約（以下「送達条約」という。）の締約国である外国の当局に対し、同条約第五条第一項に規定する方法による文書の送達を嘱託した場合において、送達すべき文書の翻訳を求められたときは、同条第三項に規定する言語又は当該外国との間の取極により定められた言語によつて作成された翻訳文を送付するものとする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二条第二項の規定は、送達条約の締約国に駐在する日本国の大使、公使又は領事に対して文書の送達を嘱託する場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二条第三項の規定は、前二項の場合について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（裁判外の文書の送達嘱託の申請）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>送達条約第十七条の裁判外の文書を同条約の締約国である外国において送達することを求める者は、第三条第一項各号に掲げる事項のほか、次に掲げる事項を記載した申請書を管轄裁判所に提出しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>送達について利害関係を有する者があるときは、その氏名及び住所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>送達すべき文書に期間又は期限の定めの記載があるときは、その内容</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三条第一項第一号から第三号まで及び前項各号に掲げる事項については、送達条約第七条第二項に規定する言語のいずれかによる記載をもしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12_2">
+          <ArticleCaption>（裁判外の文書の送達）</ArticleCaption>
+          <ArticleTitle>第十二条の二</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第三条の二の規定は、送達条約第十七条の裁判外の文書の送達について準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleCaption>（送達条約第五条第二項に規定する方法による文書の送達）</ArticleCaption>
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>送達条約第五条第二項に規定する方法により文書の送達をすべきときは、第四条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和四十五年七月二十七日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、この規則の施行前に生じた事項についても適用する。ただし、この規則の施行前に生じた効力を妨げない。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成八年一二月一七日最高裁判所規則第六号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法（平成八年法律第百九号。以下「新法」という。）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一五年一一月一二日最高裁判所規則第一九号）抄</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事訴訟法等の一部を改正する法律（平成一五年法律第百八号。次項において「法」という。）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二四年七月一七日最高裁判所規則第九号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、非訟事件手続法（平成二十三年法律第五十一号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和六年九月一七日最高裁判所規則第一四号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号。以下「改正法」という。）の施行の日（以下「施行日」という。）から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

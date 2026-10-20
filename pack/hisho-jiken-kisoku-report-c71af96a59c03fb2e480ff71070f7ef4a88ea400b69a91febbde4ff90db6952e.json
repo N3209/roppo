@@ -1,0 +1,310 @@
+{
+ "workId": "hisho-jiken-kisoku",
+ "file": "hisho-jiken-kisoku-22dd08753f91df939883258e22ade5e544bcb33b949b117a8ae2a6541621ca6b.xml",
+ "sha256": "22dd08753f91df939883258e22ade5e544bcb33b949b117a8ae2a6541621ca6b",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521hisyoukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "ce3ea2dbe7c663a168c66a5675ed74e9d49f16109485ff7ed07af97ea0254359",
+  "pages": 28,
+  "law_num": "平成二十四年七月十七日最高裁判所規則第七号",
+  "main_articles": 79,
+  "counts": {
+   "Article": 83,
+   "Paragraph": 154,
+   "Item": 31,
+   "Subitem1": 0,
+   "SupplProvision": 5,
+   "AppdxTable": 2,
+   "Table": 2
+  },
+  "matching_characters": 21769,
+  "dropped_notes": 26,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 5,
+  "kept_spaces": 2,
+  "table_pages": [
+   23,
+   24,
+   24,
+   25,
+   26,
+   27
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [
+   {
+    "kind": "wrapped-caption",
+    "parts": [
+     "の施行の日 （調書の記載等に関",
+     "する経過措置） 第二条 ３ こ"
+    ]
+   },
+   {
+    "kind": "text-caption-article",
+    "parts": [
+     "三 第十五条の規定 改正法附則第一条第五号に掲げる規定の施行",
+     "（調書の記載等に関する経過措置） 第二条 ３ この規則の施行"
+    ]
+   },
+   {
+    "kind": "caption-article",
+    "parts": [
+     "（調書の記載等に関する経過措置）",
+     "第二条 ３ この規則の施行前に行われた非訟事件手続法（平成二"
+    ]
+   },
+   {
+    "kind": "article-paragraph",
+    "parts": [
+     "第二条",
+     "３ この規則の施行前に行われた非訟事件手続法（平成二十三年法"
+    ]
+   }
+  ],
+  "table_page_joins": [
+   {
+    "page": 25,
+    "before": [
+     "第百七条第三項、第百二十九条第二項、第百三十二条の二第三項、第百三十七条第二項、第",
+     "直送",
+     "非訟事件手続規則第三十六条第一項の直送"
+    ],
+    "added": [
+     "百三十八条第一項、第百四十九条第二項及び第百四十九条の二第二項",
+     "",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "excerpt-article",
+    "2"
+   ],
+   [
+    "excerpt-first-paragraph",
+    "3"
+   ],
+   [
+    "appdx",
+    "別表第一"
+   ],
+   [
+    "appdx",
+    "別表第二"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則〔令和四年一一月七日最高裁判所規則第一七号〕抄",
+   "附 則（令和五年九月一九日最高裁判所規則第四号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附 則（令和七年一二月二六日最高裁判所規則第一七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "非訟事件手続規則",
+  "extractor": [
+   {
+    "page": 23,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 24,
+    "tables": 2,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 25,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 26,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 27,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 79,
+    "xml": 79,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 27,
+    "body": 27
+   },
+   "Article": {
+    "pdf_lines": 82,
+    "xml": 83,
+    "diff": 1,
+    "explained_by_registered_exceptions": 1
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 69,
+    "xml": 70,
+    "diff": 1,
+    "explained_by_registered_exceptions": 1
+   },
+   "Item": {
+    "pdf_lines": 31,
+    "xml": 31,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "非訟事件手続規則",
+  "units": 300,
+  "pdf_lines": 703,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 227,
+  "accounted": {
+   "caption_then_unit_on_one_line": 1,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0,
+   "caption_at_line_end": 1
+  },
+  "pdf_body_from_line": 39
+ },
+ "tables": {
+  "title": "非訟事件手続規則",
+  "xml_tables": 2,
+  "pdf_fragments": 6,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 15,
+    "equal": 15,
+    "joins": 0,
+    "empty_rows_skipped": 0,
+    "differ": []
+   },
+   {
+    "table": 2,
+    "rows": 32,
+    "equal": 32,
+    "joins": 1,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成24年7月17日 号外第154号",
+   "rule": "平成24年最高裁判所規則第7号",
+   "title": "非訟事件手続規則",
+   "year": 2012,
+   "no": 7,
+   "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和5年9月19日 本紙第1064号",
+    "rule": "令和5年最高裁判所規則第4号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20230919/20230919h01064/20230919h010640002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年12月26日 号外第285号",
+    "rule": "令和7年最高裁判所規則第17号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20251226/20251226g00285/20251226g002850019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

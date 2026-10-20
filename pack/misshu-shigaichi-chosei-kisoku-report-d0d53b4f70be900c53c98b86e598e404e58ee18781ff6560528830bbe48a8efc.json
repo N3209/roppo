@@ -1,0 +1,139 @@
+{
+ "workId": "misshu-shigaichi-chosei-kisoku",
+ "file": "misshu-shigaichi-chosei-kisoku-2a7390737bc039be62e7d04ab5487d33a9b9ccd559b8cfbda61ace88bb9ea69f.xml",
+ "sha256": "2a7390737bc039be62e7d04ab5487d33a9b9ccd559b8cfbda61ace88bb9ea69f",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20031219missyuushigaichicyouseikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "ac17270e3ffafccffc44e409fd6f23b8e502b229267baff11c304ad13d6c4151",
+  "pages": 2,
+  "law_num": "平成十五年十一月二十六日最高裁判所規則第二十八号",
+  "main_articles": 4,
+  "counts": {
+   "Article": 4,
+   "Paragraph": 9,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 1396,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則"
+  ]
+ },
+ "independentCount": {
+  "title": "密集市街地における防災街区の整備の促進に関する法律による権利の変換と強制執行等との調整に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "密集市街地における防災街区の整備の促進に関する法律による権利の変換と強制執行等との調整に関する規則",
+  "units": 12,
+  "pdf_lines": 45,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 12,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "密集市街地における防災街区の整備の促進に関する法律による権利の変換と強制執行等との調整に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成15年11月26日 本紙第3739号",
+   "rule": "平成15年最高裁判所規則第28号",
+   "title": "密集市街地における防災街区の整備の促進に関する法律による権利の変換と強制執行等との調整に関する規則",
+   "year": 2003,
+   "no": 28,
+   "url": "https://www.kanpo.go.jp/old/20031126/20031126h03739/20031126h037390002f.html",
+   "found_by": "官報"
+  },
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

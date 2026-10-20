@@ -1,0 +1,253 @@
+{
+ "workId": "kinyu-kikan-kosei-tokurei-kisoku",
+ "file": "kinyu-kikan-kosei-tokurei-kisoku-414fabd4aae58e6c8b8d9cfedef984d6e57192cbb1d7ef99661c319f37d5c2bf.xml",
+ "sha256": "414fabd4aae58e6c8b8d9cfedef984d6e57192cbb1d7ef99661c319f37d5c2bf",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/2022/kinnyukikankouseikisokuR4.2.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "cc907bbc8797203508738b5b1b12cc443c7a7ea9c521362558456e618334a226",
+  "pages": 6,
+  "law_num": "平成十五年二月十九日最高裁判所規則第三号",
+  "main_articles": 15,
+  "counts": {
+   "Article": 17,
+   "Paragraph": 24,
+   "Item": 12,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 4830,
+  "dropped_notes": 15,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [
+   {
+    "page": 1,
+    "text": "1"
+   },
+   {
+    "page": 2,
+    "text": "2"
+   },
+   {
+    "page": 3,
+    "text": "3"
+   },
+   {
+    "page": 4,
+    "text": "4"
+   },
+   {
+    "page": 5,
+    "text": "5"
+   },
+   {
+    "page": 6,
+    "text": "6"
+   }
+  ],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（平成一六年一〇月六日最高裁判所規則第一五号）抄",
+   "附 則（平成一八年二月八日最高裁判所規則第二号）抄",
+   "附 則（令和四年二月二一日最高裁判所規則第七号）"
+  ]
+ },
+ "independentCount": {
+  "title": "金融機関等の更生手続の特例等に関する規則",
+  "extractor": [
+   {
+    "page": 1,
+    "page_number_position_only": true
+   },
+   {
+    "page": 2,
+    "page_number_position_only": true
+   },
+   {
+    "page": 3,
+    "page_number_position_only": true
+   },
+   {
+    "page": 4,
+    "page_number_position_only": true
+   },
+   {
+    "page": 5,
+    "page_number_position_only": true
+   },
+   {
+    "page": 6,
+    "page_number_position_only": true
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 15,
+    "xml": 15,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 5,
+    "body": 5
+   },
+   "Article": {
+    "pdf_lines": 17,
+    "xml": 17,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 12,
+    "xml": 12,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "金融機関等の更生手続の特例等に関する規則",
+  "units": 62,
+  "pdf_lines": 182,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 32,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 14
+ },
+ "tables": {
+  "title": "金融機関等の更生手続の特例等に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成16年10月6日 号外第221号",
+    "rule": "平成16年最高裁判所規則第15号",
+    "title": "民事再生規則等の一部を改正する規則",
+    "year": 2004,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20041006/20041006g00221/20041006g002210010f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年2月8日 本紙第4272号",
+    "rule": "平成18年最高裁判所規則第2号",
+    "title": "会社法及び会社法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備等に関する規則",
+    "year": 2006,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20060208/20060208h04272/20060208h042720004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年2月21日 号外第36号",
+    "rule": "令和4年最高裁判所規則第7号",
+    "title": "金融機関等の更生手続の特例等に関する規則の一部を改正する規則",
+    "year": 2022,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20220221/20220221g00036/20220221g000360002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20220221",
+    "no": 2,
+    "explained_by_neighbour": [
+     "金融機関等の更生手続の特例等に関する規則の一部を改正する規則（同七）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 3,
+    "explained_by_neighbour": [
+     "金融機関等の更生手続の特例等に関する規則の一部を改正する規則（同七）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 4,
+    "explained_by_neighbour": [
+     "金融機関等の更生手続の特例等に関する規則の一部を改正する規則（同七）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 5,
+    "explained_by_neighbour": [
+     "金融機関等の更生手続の特例等に関する規則の一部を改正する規則（同七）"
+    ]
+   },
+   {
+    "date": "20220221",
+    "no": 6,
+    "explained_by_neighbour": [
+     "金融機関等の更生手続の特例等に関する規則の一部を改正する規則（同七）"
+    ]
+   }
+  ]
+ }
+}

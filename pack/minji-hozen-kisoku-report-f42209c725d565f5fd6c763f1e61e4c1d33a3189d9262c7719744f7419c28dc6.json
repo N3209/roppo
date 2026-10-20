@@ -1,0 +1,443 @@
+{
+ "workId": "minji-hozen-kisoku",
+ "file": "minji-hozen-kisoku-e8b3acc3dd83991a8769353459f06298fe7828422e7cd9156d39baf23836911d.xml",
+ "sha256": "e8b3acc3dd83991a8769353459f06298fe7828422e7cd9156d39baf23836911d",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521minjihozenkisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "65f5f704346c68c3cb28d1036662b755593009d7e250c26d1a2083dc3b8dfd91",
+  "pages": 31,
+  "law_num": "平成二年五月十六日最高裁判所規則第三号",
+  "main_articles": 61,
+  "counts": {
+   "Article": 71,
+   "Paragraph": 135,
+   "Item": 56,
+   "Subitem1": 7,
+   "SupplProvision": 19,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 24657,
+  "dropped_notes": 49,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 6,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 20,
+  "table_pages": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 26,
+    "before": [
+     "第二十三条第二項",
+     "又は電磁的記録が私人により作成",
+     "が私文書"
+    ],
+    "added": [
+     "",
+     "されたもの",
+     ""
+    ]
+   },
+   {
+    "page": 27,
+    "before": [
+     "第三十二条第四項、第三十四条の七第二項、第七十二条、第七十六条、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二",
+     "電子調書",
+     "調書"
+    ],
+    "added": [
+     "項、第百四十六条第一項、第百六十三条第三項及び第四項並びに第百六十四条第二項及び第三項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 28,
+    "before": [
+     "第五十条の二",
+     "電子決定書（法第百二十二条（判決に関する規定の準用）において準用する法第二百五十二条（電子判決書）第一項の規定により作成される電磁的記録であって、決定に係るものをいう。第六十七条（口頭弁論に係る電子調書の実質的記録事項等）第一項第七号及び第",
+     "決定書"
+    ],
+    "added": [
+     "",
+     "百六十条（判決の更正決定等の方式）第一項において同じ。）",
+     ""
+    ]
+   },
+   {
+    "page": 29,
+    "before": [
+     "第六十八条第二項",
+     "前条第一項（第三号に係る部分に限る。）の規定により電子調書に",
+     "証人等の陳述を記載した書面を作成しなければ"
+    ],
+    "added": [
+     "",
+     "記録すべき事項を記録した電磁的記録を作成し、ファイルに記録しなければ",
+     ""
+    ]
+   },
+   {
+    "page": 30,
+    "before": [
+     "第百四十九条の二",
+     "最高裁判所の細則で定めるところ",
+     "当該電磁的記録"
+    ],
+    "added": [
+     "第一項",
+     "により、当該申出に係る電磁的記録の複製を第五十二条の十（電子情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製",
+     ""
+    ]
+   },
+   {
+    "page": 31,
+    "before": [
+     "第百九十五条",
+     "被上告人（当該書面の送達につい",
+     "上告裁判所が最高裁判所であると"
+    ],
+    "added": [
+     "",
+     "て法第百九条の二（電子情報処理組織による送達）第一項ただし書の届出をしている者を除く。）の数の副本（法第百三十二条の十（電子情報処理組織による申立て等）第一項の規定により当該書面に記載すべき事項をファイルに記録した場合にあっては、当該事項を出力することにより作成した書面）",
+     "きは被上告人の数に六を加えた数の副本、上告裁判所が高等裁判所であるときは被上告人の数に四を加えた数の副本"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "subitem2",
+    "1"
+   ],
+   [
+    "subitem2",
+    "2"
+   ],
+   [
+    "subitem2",
+    "3"
+   ],
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則抄",
+   "附 則（平成八年一二月一七日最高裁判所規則第六号）抄",
+   "附 則（平成一〇年一一月一九日最高裁判所規則第五号）抄",
+   "附 則（平成一〇年一一月一九日最高裁判所規則第七号）",
+   "附 則（平成一一年六月一四日最高裁判所規則第四号）",
+   "附 則（平成一二年一二月一五日最高裁判所規則第一五号）",
+   "附 則（平成一四年二月一五日最高裁判所規則第四号）",
+   "附 則（平成一四年一二月一一日最高裁判所規則第一四号）",
+   "附 則（平成一五年一一月一二日最高裁判所規則第二二号）抄",
+   "附 則（平成一七年一月一一日最高裁判所規則第一号）抄",
+   "附 則（平成一七年二月九日最高裁判所規則第六号）",
+   "附 則（平成二〇年六月六日最高裁判所規則第八号）",
+   "附 則（平成二〇年一〇月一五日最高裁判所規則第一五号）",
+   "附 則（平成二〇年一一月一九日最高裁判所規則第二〇号）抄",
+   "附 則（平成二七年四月八日最高裁判所規則第四号）",
+   "附 則（令和元年一一月二七日最高裁判所規則第五号）抄",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則一四号）抄",
+   "附 則（令和七年七月一日最高裁判所規則第九号）"
+  ]
+ },
+ "independentCount": {
+  "title": "民事保全規則",
+  "extractor": [
+   {
+    "page": 25,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 26,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 27,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 28,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 29,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 30,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 31,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 61,
+    "xml": 61,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 15,
+    "body": 15
+   },
+   "Article": {
+    "pdf_lines": 71,
+    "xml": 71,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 54,
+    "xml": 54,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 56,
+    "xml": 56,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 19,
+    "xml": 19,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "民事保全規則",
+  "units": 297,
+  "pdf_lines": 786,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 173,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 41
+ },
+ "tables": {
+  "title": "民事保全規則",
+  "xml_tables": 1,
+  "pdf_fragments": 7,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 67,
+    "equal": 67,
+    "joins": 6,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成15年11月12日 号外第260号",
+    "rule": "平成15年最高裁判所規則第22号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2003,
+    "no": 22,
+    "url": "https://www.kanpo.go.jp/old/20031112/20031112g00260/20031112g002600006f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年1月11日 号外第3号",
+    "rule": "平成17年最高裁判所規則第1号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2005,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年2月9日 本紙第4030号",
+    "rule": "平成17年最高裁判所規則第6号",
+    "title": "不動産登記法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2005,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20050209/20050209h04030/20050209h040300003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年10月15日 本紙第4933号",
+    "rule": "平成20年最高裁判所規則第15号",
+    "title": "民事執行規則及び民事保全規則の一部を改正する規則",
+    "year": 2008,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20081015/20081015h04933/20081015h049330001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年11月19日 号外第254号",
+    "rule": "平成20年最高裁判所規則第20号",
+    "title": "民事執行規則及び民事保全規則の一部を改正する規則",
+    "year": 2008,
+    "no": 20,
+    "url": "https://www.kanpo.go.jp/old/20081119/20081119g00254/20081119g002540001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成27年4月8日 本紙第6509号",
+    "rule": "平成27年最高裁判所規則第4号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2015,
+    "no": 4,
+    "url": "https://www.kanpo.go.jp/old/20150408/20150408h06509/20150408h065090003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和元年11月27日 号外第169号",
+    "rule": "令和元年最高裁判所規則第5号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2019,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20191127/20191127g00169/20191127g001690001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年7月1日 本紙第1497号",
+    "rule": "令和7年最高裁判所規則第9号",
+    "title": "民事執行規則及び民事保全規則の一部を改正する規則",
+    "year": 2025,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20250701/20250701h01497/20250701h014970002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和8年4月24日 本紙第1694号",
+    "rule": "令和8年最高裁判所規則第8号",
+    "title": "民事執行規則及び民事保全規則の一部を改正する規則",
+    "year": 2026,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20260424/20260424h01694/20260424h016940002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成20年6月6日 本紙第4844号",
+    "rule": "平成20年最高裁判所規則第8号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2008,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20080606/20080606h04844/20080606h048440001f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [
+   "令和8年最高裁判所規則第8号"
+  ],
+  "shared_page_only": [
+   {
+    "date": "20191127",
+    "no": 6,
+    "explained_by_neighbour": [
+     "民事執行規則等の一部を改正する規則（最高裁五）"
+    ]
+   }
+  ]
+ }
+}

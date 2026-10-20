@@ -202,7 +202,13 @@ function renderLawList() {
     normalize(l.abbrev || '').includes(kw));
 
   if (!list.length) {
-    ul.innerHTML = '<li style="color:var(--fg-faint);cursor:default">該当なし</li>';
+    /*
+     * 「1本も無い」と「絞り込みに合うものが無い」は別である。
+     * 両方に「該当なし」と出していたので、まだ何も取り込んでいない人には
+     * 何に該当しないのか分からなかった。本文の面に出す誘いとも噛み合わない。
+     */
+    ul.innerHTML = '<li style="color:var(--fg-faint);cursor:default">'
+      + (state.laws.length ? '該当なし' : 'まだ法令がありません') + '</li>';
     return;
   }
   for (const l of list) {
@@ -225,18 +231,184 @@ function renderLawList() {
       await flushSave();
       await store.delLaw(l.lawId);
       state.indexCache.delete(l.lawId);
-      if (P().current && P().current.lawId === l.lawId) {
-        P().current = null;
+      /*
+       * 知らせを描くのは refreshLawList のあとにする。state.laws が
+       * 更新されるのはその中なので、先に描くと「消す前の本数」で文を選ぶ。
+       * 最後の1本を消したのに「法令を選択してください」と出る経路だった。
+       *
+       * 面は掴んでおく。await をまたぐ間に操作対象が変わっても、消した
+       * 法令を映していた面に描きたい。
+       */
+      const pane = P();
+      const wasOpen = !!(pane.current && pane.current.lawId === l.lawId);
+      if (wasOpen) {
+        pane.current = null;
         state.selected = null;
-        P().header.hidden = true;
-        P().el.innerHTML = '<div class="empty"><p>法令を選択してください。</p></div>';
+        pane.header.hidden = true;
+        pane.el.innerHTML = '';            // 消した法令の本文を残さない
         closePopover();
       }
       await refreshLawList();
+      if (wasOpen) pane.el.innerHTML = emptyPaneHTML();
       toast('削除しました');
     };
     ul.appendChild(li);
   }
+}
+
+/*
+ * 法令を開いていない面に出す知らせ。3通りある。
+ *
+ *   ・1本も無い        取り込みへ誘う
+ *   ・あるが選んでいない  選べと言う
+ *   ・1本も無く、通信もできない  押しても取れないので、そう言う
+ *
+ * 0本のときに「法令を選択してください」と出していた。選ぶものが無いのに
+ * 選べと言うことになる。最後の1本を削除した直後がその経路だった。
+ *
+ * 通信の判断は navigator.onLine が false のときだけに留める。繋がって
+ * いないことだけは当てになるが、その逆は当てにならない（apiGet の注記と同じ）。
+ * 当てにならない方に賭けて「取り込めます」と言い切ると、押して失敗する。
+ */
+function emptyPaneHTML() {
+  if (state.laws.length) return '<div class="empty"><p>法令を選択してください。</p></div>';
+  if (navigator.onLine === false) {
+    return '<div class="empty">'
+      + '<p class="empty-lead">まだ法令がありません</p>'
+      + '<p class="hint">いまは通信できていません。繋がったら、法令名で検索して'
+      + '取り込めます。取り込んだ法令は端末の中に保存されるので、次からは'
+      + '通信がなくても読めます。</p>'
+      + '</div>';
+  }
+  return '<div class="empty">'
+    + '<p class="empty-lead">法令を追加してみましょう</p>'
+    + '<p><button id="btn-add-law-2" class="primary">法令を追加する</button></p>'
+    + '<p class="hint">「民法」「刑法」など、法令名で検索して取り込みます。'
+    + '取り込んだ法令は端末の中に保存されるので、次からは通信がなくても読めます。</p>'
+    + '</div>';
+}
+
+/*
+ * 何も開いていない面の知らせを、いまの状態に合わせて描き直す。
+ *
+ * 1面目だけを見る。2面目の「左の一覧から法令を選ぶと…」は、法令があっても
+ * 無くても、通信できてもできなくても変わらない知らせなので触らない。
+ *
+ * 法令を開いている面には何もしない。開いている本文を知らせで潰すのが
+ * 一番まずい。
+ */
+function refreshEmptyPane() {
+  const p = state.panes && state.panes[0];
+  if (!p || p.current) return;
+  p.el.innerHTML = emptyPaneHTML();
+}
+
+/*
+ * 本文の末尾に出す出典。
+ *
+ * e-Gov の公共データ利用規約（第1.0版）は、コンテンツを利用するときに出典を、
+ * 編集・加工したときはその旨と主体を記載することを求めている。このアプリは
+ * XML を画面の形に組み替えているので、後者にも当たる。
+ *
+ * ファイルから取り込んだものの出典は、こちらには分からない。XML のコメントに
+ * 来歴（PROV_KEYS）が書いてあればヘッダーの帯に出しているので、ここでは
+ * 繰り返さず、出典を把握しているのが誰かだけを言う。
+ */
+/*
+ * 規則パックの出典。
+ *
+ * e-Gov のものと違って、加工が2段ある。
+ *
+ *   裁判所の公示物（掲載PDF／掲載ページ）
+ *     → PDFからXMLに起こす（個人による加工。裁判所による提供・検証ではない）
+ *     → このアプリが条・項・号を組み替えて表示する
+ *
+ * 1段目を言わないと、裁判所が配ったXMLをこのアプリが組み替えただけに読める。
+ *
+ * 文はパックが持っているものをそのまま出す。言い換えない。照合の文
+ * （verification.state）は「差分なし」と「文言は未照合」と「目視照合は未実施」が
+ * 1つに同居していて、どれかを落とすと読み方が変わる。要約したくなるが、
+ * 要約は「照合していない範囲を照合したように読ませる」方向にしか働かない。
+ *
+ * 持っていない値の行は出さない。空の見出しを並べると、何が分かっていないのかが
+ * かえって見えなくなる。
+ */
+function packNoteHTML(rec) {
+  const p = rec.provenance || {};
+  const line = [];
+
+  const src = p['出典'] || '最高裁判所規則（裁判所ウェブサイトの掲載）';
+  line.push('出典：' + esc(src) + (rec.sourceKind ? '　' + esc(rec.sourceKind) : ''));
+
+  /*
+   * URL は http(s) のときだけリンクにする。それ以外は字のまま出す。
+   * 取り込むファイルの中身をそのままリンクにしてはいけない。
+   */
+  const url = p['URL'] || '';
+  if (/^https?:\/\//.test(url)) {
+    line.push('<a href="' + esc(url) + '" target="_blank" rel="noopener">'
+      + esc(url) + '</a>');
+  } else if (url) {
+    line.push(esc(url));
+  }
+
+  if (p['取得']) line.push(esc(p['取得']) + ' に取得したものです。');
+
+  // 加工の主体。パックが書いた文をそのまま出す（PDL1.0 が求めるのはこれ）
+  if (p['変換']) line.push(esc(p['変換']) + '。');
+  line.push('さらにこのアプリが、表示のために条・項・号を組み替えています。'
+    + '本文は書き換えていません。');
+
+  if (p['反映']) line.push('反映：' + esc(p['反映']));
+  if (p['範囲']) line.push('範囲：' + esc(p['範囲']));
+
+  /*
+   * 未施行の改正。読み方が変わるので、照合より先に出す。
+   *
+   * e-Gov のものは固定版と施行日から未施行の帯を出せるが、パックは施行日を
+   * 持たない（PDFで確かめていない施行日を推測で書かない方針）。だから
+   * ここで言うしかない。言わなければ、読む人はこれが現行で全部だと思う。
+   */
+  const nyf = rec.notYetInForce || [];
+  for (const a of nyf) line.push('未施行の改正があります：' + esc(a));
+
+  if (rec.packState) line.push('照合：' + esc(rec.packState));
+
+  /*
+   * 照合の一部を適用できていない規則は、そう言う。
+   *
+   * 103本に同じ文を出すと、この2本が違うことが画面から消える。出典と免責を
+   * 作ったときの原則（照合していない範囲を照合したように読ませない）が、
+   * ここでそのまま効く。
+   */
+  for (const e of (rec.packExcluded || [])) {
+    line.push('この規則では、照合の一部を適用できていません：'
+      + esc([e.check, e.where].filter(Boolean).join('　')));
+  }
+
+  line.push('官報に掲載された内容と異なる場合は、官報が優先します。'
+    + ' <button type="button" class="about-link" data-about="1">このアプリについて</button>');
+
+  return '<div class="source-note">' + line.join('<br>') + '</div>';
+}
+
+function sourceNoteHTML(rec) {
+  if (rec.source === 'pack') return packNoteHTML(rec);
+  if (rec.source === 'file') {
+    return '<div class="source-note">ファイルから取り込んだものです。'
+      + '出典は取り込んだ人が把握してください。'
+    + ' <button type="button" class="about-link" data-about="1">このアプリについて</button>'
+    + '</div>';
+  }
+  const at = rec.savedAt ? ymdOf(rec.savedAt) : '';
+  return '<div class="source-note">'
+    + '出典：e-Gov法令検索（デジタル庁） '
+    + '<a href="https://laws.e-gov.go.jp/" target="_blank" rel="noopener">'
+    + 'https://laws.e-gov.go.jp/</a>'
+    + (at ? '<br>' + at + ' にこの端末へ取り込んだ版です。' : '')
+    + '<br>表示のために条・項・号を組み替えていますが、本文は書き換えていません。'
+    + ' <button type="button" class="about-link" data-about="1">このアプリについて</button>'
+    + '</div>';
 }
 
 /* ------------------------------------------------------------- 法令の表示 */
@@ -269,16 +441,22 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
 
   pane.title.textContent = rec.lawTitle;
   // 分類と条文の件数は読むのに要らない。名前と、いつの版かだけ残す。
-  pane.meta.textContent = rec.source === 'file'
-    ? [
-      rec.lawNum,
-      // 来歴があれば「施行日は不明」より具体的なことが言える
-      rec.provenance && rec.provenance['反映'] ? rec.provenance['反映'] : '',
-    ].filter(Boolean).join('　/　') || '取り込んだデータ　施行日は不明'
-    : [
+  /*
+   * 自分で起こしたデータ（ファイル・パック）は施行日を持たない。
+   * 来歴があれば「施行日は不明」より具体的なことが言える。
+   */
+  if (rec.source === 'file' || rec.source === 'pack') {
+    const prov0 = rec.provenance || {};
+    pane.meta.textContent = [rec.lawNum, prov0['反映'] || '']
+      .filter(Boolean).join('　/　')
+      || (rec.source === 'pack' ? '規則パック　施行日は不明'
+        : '取り込んだデータ　施行日は不明');
+  } else {
+    pane.meta.textContent = [
       rec.lawNum,
       rec.enforcementDate ? '施行: ' + rec.enforcementDate : '',
     ].filter(Boolean).join('　/　');
+  }
   const warn = $('.law-warn', pane.root);
   const unenforced = isUnenforced(rec);
   warn.hidden = !unenforced;
@@ -331,6 +509,25 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
         ? '<span class="warn" title="' + esc(dups.join('、')) + '">'
           + where + '位置の重なりが ' + dups.length + '件</span>'
         : '');
+  } else if (rec.source === 'pack') {
+    /*
+     * パックの帯は、読み方が変わることだけ出す。
+     *
+     * 出典・加工の2段・照合の範囲と限界は、本文の末尾（packNoteHTML）が持つ。
+     * ヘッダーは開くたびに目に入る一等地で、前にここへ「このアプリについて」を
+     * 置いて絞り込みの入力欄を 38px 狭めた。常に要るものだけを置く。
+     *
+     * 未施行の改正だけは別である。あるのに言わなければ、読む人はこれが現行で
+     * 全部だと思う。パックは施行日を持たないので（PDFで確かめていない施行日を
+     * 推測で書かない方針）、未施行の帯（law-warn）が出る経路が無い。
+     */
+    const nyf = rec.notYetInForce || [];
+    note.hidden = !nyf.length;
+    note.innerHTML = nyf.length
+      ? '<span class="warn" title="' + esc(nyf.join('　')) + '">未施行の改正があります'
+        + (nyf.length > 1 ? '（' + nyf.length + '件）' : '')
+        + '　本文の末尾に書いています</span>'
+      : '';
   } else if (rec.revisionOf) {
     /*
      * 固定版を開いている。注釈を別の版へ写す入口を出す。
@@ -348,7 +545,7 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
   }
 
   pane.header.hidden = false;
-  pane.el.innerHTML = html;
+  pane.el.innerHTML = html + sourceNoteHTML(rec);
   syncTopbarLaw();
   syncFindPlaceholder();
   indexAnchorEls(pane);
@@ -1476,11 +1673,13 @@ function saveAmendState() {
   try { localStorage.setItem(AMEND_KEY, JSON.stringify(amendState)); } catch (e) { /* 任意 */ }
 }
 
-function today() {
-  const d = new Date();
+function ymdOf(ms) {
+  const d = new Date(ms);
   const p2 = n => String(n).padStart(2, '0');
   return d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate());
 }
+
+function today() { return ymdOf(Date.now()); }
 
 /* 1法令ぶんの判定。通信できないときは何も言わない（黙って古い印を残す）。 */
 async function checkAmendment(law) {
@@ -2189,6 +2388,9 @@ function wire() {
   document.addEventListener('click', e => {
     if (e.target && e.target.id === 'btn-add-law-2') openAdd();
   });
+  // 通信の状態が変わったら、何も開いていない面の知らせを書き直す
+  window.addEventListener('online', refreshEmptyPane);
+  window.addEventListener('offline', refreshEmptyPane);
 
   $('#btn-sync').onclick = () => doSync();
   $('#btn-peek').onclick = () => peekRemote();
@@ -2208,6 +2410,12 @@ function wire() {
   };
 
   $('#btn-export').onclick = openExportDialog;
+  $('#btn-about').onclick = () => $('#dlg-about').showModal();
+  document.addEventListener('click', e => {
+    if (e.target && e.target.dataset && e.target.dataset.about) {
+      $('#dlg-about').showModal();
+    }
+  });
   $('#exp-backup').onclick = exportBackup;
   $('#exp-restore').onclick = () => $('#restore-file').click();
   $('#restore-file').onchange = async e => {
@@ -2221,6 +2429,20 @@ function wire() {
   for (const b of $$('#slashbar button')) {
     b.onclick = () => applySlash(b.dataset.slash);
   }
+
+  /*
+   * 規則パックの一覧。押すまで読みに行かない。
+   *
+   * 追加の画面を開くたびに pack.json を取りに行くと、規則を入れる気が無い
+   * ときにも通信する。実体は pack.js にある（このファイルより後に読むが、
+   * 呼ぶのは押されたときなので読み込みの時点では要らない）。
+   */
+  $('#pack-open').onclick = async () => {
+    $('#pack-open').hidden = true;
+    $('#pack-filter').hidden = false;
+    await openPackList();
+  };
+  $('#pack-filter').oninput = () => { if (packShown()) renderPackList(); };
 
   $('#btn-import-law').onclick = () => $('#import-file').click();
   $('#import-file').onchange = async e => {

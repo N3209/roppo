@@ -1,0 +1,241 @@
+{
+ "workId": "shonin-kyufu-kisoku",
+ "file": "shonin-kyufu-kisoku-f2bb0ea221eb3ca6f6961d4f64a67e0fd8442799f617e5126b106c330bd6aafc.xml",
+ "sha256": "f2bb0ea221eb3ca6f6961d4f64a67e0fd8442799f617e5126b106c330bd6aafc",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/shounintoukisoku20260701.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "c135e7bcc59bce698bfcce2596d95433c4b31d3099a9014ad50a7a7df471dce1",
+  "pages": 8,
+  "law_num": "昭和四十六年六月十四日最高裁判所規則第八号",
+  "main_articles": 6,
+  "counts": {
+   "Article": 6,
+   "Paragraph": 83,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 38,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 4227,
+  "dropped_notes": 4,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和四七年六月二四日最高裁判所規則第六号）",
+   "附則（昭和四八年六月一一日最高裁判所規則第四号）",
+   "附則（昭和五〇年一一月一五日最高裁判所規則第七号）",
+   "附則（昭和五一年六月一六日最高裁判所規則第五号）",
+   "附則（昭和五二年六月一三日最高裁判所規則第一号）",
+   "附則（昭和五三年六月一三日最高裁判所規則第二号）",
+   "附則（昭和五四年三月三一日最高裁判所規則第一号）",
+   "附則（昭和五四年六月一八日最高裁判所規則第三号）",
+   "附則（昭和五五年六月一六日最高裁判所規則第四号）",
+   "附則（昭和五六年六月一五日最高裁判所規則第五号）",
+   "附則（昭和五七年六月一四日最高裁判所規則第三号）",
+   "附則（昭和五九年六月一八日最高裁判所規則第四号）",
+   "附則（昭和六〇年六月一七日最高裁判所規則第二号）",
+   "附則（昭和六一年六月一六日最高裁判所規則第三号）",
+   "附則（昭和六二年六月一五日最高裁判所規則第二号）",
+   "附則（昭和六三年六月一三日最高裁判所規則第三号）",
+   "附則（平成元年六月一四日最高裁判所規則第二号）",
+   "附則（平成二年四月二四日最高裁判所規則第二号）",
+   "附則（平成二年六月一三日最高裁判所規則第五号）",
+   "附則（平成三年六月一二日最高裁判所規則第二号）",
+   "附則（平成四年六月一〇日最高裁判所規則第七号）",
+   "附則（平成五年六月一〇日最高裁判所規則第三号）",
+   "附則（平成六年六月三〇日最高裁判所規則第四号）",
+   "附則（平成七年六月七日最高裁判所規則第二号）",
+   "附則（平成八年六月六日最高裁判所規則第三号）",
+   "附則（平成九年六月五日最高裁判所規則第二号）",
+   "附則（平成一〇年六月一日最高裁判所規則第二号）",
+   "附則（平成一一年六月九日最高裁判所規則第三号）",
+   "附則（平成一二年六月九日最高裁判所規則第八号）",
+   "附則（平成一五年六月一六日最高裁判所規則第一三号）",
+   "附則（平成一六年六月九日最高裁判所規則第一〇号）",
+   "附則（令和元年七月九日最高裁判所規則第二号）",
+   "附則（令和五年六月一日最高裁判所規則第二号）",
+   "附則（令和六年六月一二日最高裁判所規則第一二号）",
+   "附則（令和七年三月三日最高裁判所規則第五号）",
+   "附則（令和七年六月一一日最高裁判所規則第八号）",
+   "附則（令和八年六月一〇日最高裁判所規則第一〇号）"
+  ]
+ },
+ "independentCount": {
+  "title": "刑事の手続における証人等に対する給付に関する規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 76,
+    "xml": 76,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 38,
+    "xml": 38,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "刑事の手続における証人等に対する給付に関する規則",
+  "units": 126,
+  "pdf_lines": 224,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 14,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 41
+ },
+ "tables": {
+  "title": "刑事の手続における証人等に対する給付に関する規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成16年6月9日 本紙第3867号",
+    "rule": "平成16年最高裁判所規則第10号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2004,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20040609/20040609h03867/20040609h038670002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和元年7月9日 本紙第46号",
+    "rule": "令和元年最高裁判所規則第2号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2019,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20190709/20190709h00046/20190709h000460002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和5年6月1日 本紙第989号",
+    "rule": "令和5年最高裁判所規則第2号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2023,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20230601/20230601h00989/20230601h009890001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年6月12日 本紙第1241号",
+    "rule": "令和6年最高裁判所規則第12号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 12,
+    "url": "https://www.kanpo.go.jp/old/20240612/20240612h01241/20240612h012410001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年3月3日 号外第42号",
+    "rule": "令和7年最高裁判所規則第5号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20250303/20250303g00042/20250303g000420002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年6月11日 本紙第1483号",
+    "rule": "令和7年最高裁判所規則第8号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 8,
+    "url": "https://www.kanpo.go.jp/old/20250611/20250611h01483/20250611h014830002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和8年6月10日 本紙第1723号",
+    "rule": "令和8年最高裁判所規則第10号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2026,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20260610/20260610h01723/20260610h017230001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20190709",
+    "no": 3,
+    "explained_by_neighbour": [
+     "民事訴訟費用等に関する規則等の一部を改正する規則（同二）"
+    ]
+   }
+  ]
+ }
+}

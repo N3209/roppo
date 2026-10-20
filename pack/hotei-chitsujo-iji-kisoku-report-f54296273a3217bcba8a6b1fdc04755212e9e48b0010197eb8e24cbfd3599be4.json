@@ -1,0 +1,245 @@
+{
+ "workId": "hotei-chitsujo-iji-kisoku",
+ "file": "hotei-chitsujo-iji-kisoku-924c3cac15dffe2d092e85afdc72d7e6be708ab52eded30f5675b4a0b08b4d47.xml",
+ "sha256": "924c3cac15dffe2d092e85afdc72d7e6be708ab52eded30f5675b4a0b08b4d47",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/R6.9.17houteitounotitujoijinikannsurukisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "39bc7c39df9e00be1c9d6256ab7accb92e8a7c885b73cc084e9fb0fb37a513d4",
+  "pages": 9,
+  "law_num": "昭和二十七年九月一日最高裁判所規則第二十号",
+  "main_articles": 32,
+  "counts": {
+   "Article": 32,
+   "Paragraph": 62,
+   "Item": 7,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 6085,
+  "dropped_notes": 11,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   6,
+   7,
+   8,
+   9
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 7,
+    "before": [
+     "第百二十二条の二第二項及び第百二",
+     "記録しなければ",
+     "記載しなければ"
+    ],
+    "added": [
+     "十二条の三第二項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 8,
+    "before": [
+     "第百四十六条第二項及び第百五十一",
+     "第百四十二条（受命裁判官等の証拠調べの電子調書）",
+     "法廷等の秩序維持に関する規則第十二条の二にお"
+    ],
+    "added": [
+     "条",
+     "",
+     "いて読み替えて準用する第百四十二条及び同規則第十二条の五"
+    ]
+   },
+   {
+    "page": 9,
+    "before": [
+     null,
+     "文書の写し」とあるのは",
+     "文書の写し」とあるのは"
+    ],
+    "added": [
+     "",
+     "「電磁的記録の複製",
+     "「電磁的記録を記録した記録媒体"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（昭和四六年六月二三日最高裁判所規則第九号）",
+   "附則（平成一八年五月一二日最高裁判所規則第六号）",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）"
+  ]
+ },
+ "independentCount": {
+  "title": "法廷等の秩序維持に関する規則",
+  "extractor": [
+   {
+    "page": 6,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 8,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 9,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 26,
+    "xml": 26,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "法廷等の秩序維持に関する規則",
+  "units": 102,
+  "pdf_lines": 190,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 90,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "法廷等の秩序維持に関する規則",
+  "xml_tables": 1,
+  "pdf_fragments": 4,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 30,
+    "equal": 30,
+    "joins": 3,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成18年5月12日 本紙第4335号",
+    "rule": "平成18年最高裁判所規則第6号",
+    "title": "刑事訴訟規則等の一部を改正する規則",
+    "year": 2006,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20060512/20060512h04335/20060512h043350002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

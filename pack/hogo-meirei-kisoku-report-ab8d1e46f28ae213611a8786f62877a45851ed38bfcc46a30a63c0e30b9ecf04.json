@@ -1,0 +1,332 @@
+{
+ "workId": "hogo-meirei-kisoku",
+ "file": "hogo-meirei-kisoku-ef5554532f80b4f384d67c0942e74144e62489f3e492883224f768516aaa196b.xml",
+ "sha256": "ef5554532f80b4f384d67c0942e74144e62489f3e492883224f768516aaa196b",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521hogomeireitetsuzukikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "c810e2ec49a5de0d9cebfeafe97907bf1e007a38e10f9a4d5fcefe3d70ed6e45",
+  "pages": 12,
+  "law_num": "平成十三年七月二十七日最高裁判所規則第七号",
+  "main_articles": 23,
+  "counts": {
+   "Article": 24,
+   "Paragraph": 61,
+   "Item": 27,
+   "Subitem1": 0,
+   "SupplProvision": 6,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 10706,
+  "dropped_notes": 21,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [
+   {
+    "kind": "caption-article-end",
+    "parts": [
+     "（送達すべき書類の提出に代えて調書を作成した場合に送達すべき",
+     "第十一条の二"
+    ]
+   }
+  ],
+  "table_page_joins": [
+   {
+    "page": 8,
+    "before": [
+     "第一条第二項",
+     "陳述の内容を電子調書に記録し、これを裁判所の使用に係る電子計算機（入出力装置を含む。以下同",
+     "調書を作成し、記名押印しなければ"
+    ],
+    "added": [
+     "",
+     "じ。）に備えられたファイル（第三十三条の三（電磁的訴訟記録の閲覧等の方法等）第二項第一号を除き、以下単に「ファイル」という。）に記録しなければ",
+     ""
+    ]
+   },
+   {
+    "page": 9,
+    "before": [
+     "第三十四条の七第二項、第七十二条、第七十六条、第百十六条第三項、第百十八条第二項、第百二十二条の二第二項、第百二十二条の三第二項、第百四十二条及",
+     "電子調書",
+     "調書"
+    ],
+    "added": [
+     "び第百四十六条第一項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 11,
+    "before": [
+     "第百四十九条の二第一項",
+     "最高裁判所の細則で定めるところにより、当該申出に係る電磁的記録の複製を第五十二条の十（電子",
+     "当該電磁的記録"
+    ],
+    "added": [
+     "",
+     "情報処理組織）第一項の電子情報処理組織を使用する方法によりファイルに記録し、又は電磁的記録の複製",
+     ""
+    ]
+   },
+   {
+    "page": 12,
+    "before": [
+     "第二百十条第一項",
+     "電子抗告提起通知書（法第三百三十条の抗告又は法第三百三十六条",
+     "抗告提起通知書"
+    ],
+    "added": [
+     "",
+     "第一項の抗告があった旨を通知するために裁判所書記官が作成する電磁的記録をいう。）",
+     ""
+    ]
+   },
+   {
+    "page": 12,
+    "dropped_empty_last_rows": 1
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成一六年一〇月二○日最高裁判所規則第一七号）",
+   "附則（平成一九年一一月二八日最高裁判所規則第一三号）",
+   "附則（平成二五年一一月一三日最高裁判所規則第七号）",
+   "附則（令和六年二月一日最高裁判所規則第一号）",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "配偶者暴力等に関する保護命令手続規則",
+  "extractor": [
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 8,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 9,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 10,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 11,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 23,
+    "xml": 23,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 24,
+    "xml": 24,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 32,
+    "xml": 32,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 27,
+    "xml": 27,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "配偶者暴力等に関する保護命令手続規則",
+  "units": 114,
+  "pdf_lines": 272,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 78,
+  "accounted": {
+   "caption_then_unit_on_one_line": 1,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 9
+ },
+ "tables": {
+  "title": "配偶者暴力等に関する保護命令手続規則",
+  "xml_tables": 1,
+  "pdf_fragments": 6,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 70,
+    "equal": 70,
+    "joins": 4,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "令和6年2月1日 本紙第1153号",
+    "rule": "令和6年最高裁判所規則第1号",
+    "title": "配偶者暴力等に関する保護命令手続規則の一部を改正する規則",
+    "year": 2024,
+    "no": 1,
+    "url": "https://www.kanpo.go.jp/old/20240201/20240201h01153/20240201h011530002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成16年10月20日 本紙第3958号",
+    "rule": "平成16年最高裁判所規則第17号",
+    "title": "配偶者暴力に関する保護命令手続規則の一部を改正する規則",
+    "year": 2004,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20041020/20041020h03958/20041020h039580007f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成19年11月28日 本紙第4718号",
+    "rule": "平成19年最高裁判所規則第13号",
+    "title": "配偶者暴力に関する保護命令手続規則の一部を改正する規則",
+    "year": 2007,
+    "no": 13,
+    "url": "https://www.kanpo.go.jp/old/20071128/20071128h04718/20071128h047180003f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   },
+   {
+    "issue": "平成25年11月13日 号外第245号",
+    "rule": "平成25年最高裁判所規則第7号",
+    "title": "配偶者暴力に関する保護命令手続規則の一部を改正する規則",
+    "year": 2013,
+    "no": 7,
+    "url": "https://www.kanpo.go.jp/old/20131113/20131113g00245/20131113g002450009f.html",
+    "found_by": "PDFの改正履歴（官報に同じ番号の規則あり）"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20240201",
+    "no": 2,
+    "explained_by_neighbour": [
+     "配偶者暴力等に関する保護命令手続規則の一部を改正する規則（最高裁一）"
+    ]
+   },
+   {
+    "date": "20240201",
+    "no": 3,
+    "explained_by_neighbour": [
+     "配偶者暴力等に関する保護命令手続規則の一部を改正する規則（最高裁一）"
+    ]
+   },
+   {
+    "date": "20240201",
+    "no": 4,
+    "explained_by_neighbour": [
+     "配偶者暴力等に関する保護命令手続規則の一部を改正する規則（最高裁一）"
+    ]
+   }
+  ]
+ }
+}

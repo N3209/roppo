@@ -1,0 +1,268 @@
+{
+ "workId": "rodo-shinpan-kisoku",
+ "file": "rodo-shinpan-kisoku-6e0242f9c69f15e2daa2f443809883167c296d1c25bc48ed6888847230202a2d.xml",
+ "sha256": "6e0242f9c69f15e2daa2f443809883167c296d1c25bc48ed6888847230202a2d",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521roudoushinnpannkisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "bf49f92a6f48b994a48fc2543b402939ad3ad53a049c36b60ad044f4a1c6a25d",
+  "pages": 14,
+  "law_num": "平成十七年一月十一日最高裁判所規則第二号",
+  "main_articles": 39,
+  "counts": {
+   "Article": 45,
+   "Paragraph": 74,
+   "Item": 29,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 9904,
+  "dropped_notes": 22,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 3,
+  "table_pages": [
+   11,
+   12,
+   13,
+   14
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 12,
+    "before": [
+     "第百二十二条の二第二項及び第百二十二",
+     "記録しなければ",
+     "明らかにしなければ"
+    ],
+    "added": [
+     "条の三第二項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 13,
+    "before": [
+     "第百四十六条第二項",
+     "、第百四十二条（受命裁判官等の証拠調べの電子調書）の規定は、法第二百二",
+     "準用する"
+    ],
+    "added": [
+     "",
+     "十九条第二項において準用する法第二百十九条（書証の申出）、第二百二十三条第一項及び第二百二十六条（文書送付の嘱託）の規定により提出され、又は送付された文書その他の物件の取調べを受命裁判官又は受託裁判官にさせる場合における電子調書について準用する",
+     ""
+    ]
+   },
+   {
+    "page": 14,
+    "new_row_under_rowspan": [
+     "第百三十九条中「書証の写し」とあるのは「電磁的記録の複製」と、第百四十八条",
+     "第百四十八条"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "quoted-amendment-item",
+    "二 別表第二の一の項に掲げる申立てに係る"
+   ],
+   [
+    "excerpt-article",
+    "2"
+   ],
+   [
+    "excerpt-first-paragraph",
+    "3"
+   ],
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則",
+   "附 則（平成二四年七月一七日最高裁判所規則第九号）抄",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "労働審判規則",
+  "extractor": [
+   {
+    "page": 11,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 12,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 13,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 14,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 39,
+    "xml": 39,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 45,
+    "xml": 45,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 30,
+    "xml": 30,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 30,
+    "xml": 29,
+    "diff": -1,
+    "explained_by_registered_exceptions": -1
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "労働審判規則",
+  "units": 150,
+  "pdf_lines": 329,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 107,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 1
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "労働審判規則",
+  "xml_tables": 1,
+  "pdf_fragments": 4,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 31,
+    "equal": 31,
+    "joins": 2,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成17年1月11日 号外第3号",
+   "rule": "平成17年最高裁判所規則第2号",
+   "title": "労働審判規則",
+   "year": 2005,
+   "no": 2,
+   "url": "https://www.kanpo.go.jp/old/20050111/20050111g00003/20050111g000030006f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "workId": "choteikan-kisoku",
+ "file": "choteikan-kisoku-0a8802daa2f0efda047e879d91690013680aeff9d232cbe1882cb78b47184f9a.xml",
+ "sha256": "0a8802daa2f0efda047e879d91690013680aeff9d232cbe1882cb78b47184f9a",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file4/chouteikankisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "c1679f057dd9c9c52d1c33994c3c7274131cf49e13ff2e095891dc50f42e9159",
+  "pages": 2,
+  "law_num": "平成十五年十月一日最高裁判所規則第十五号",
+  "main_articles": 5,
+  "counts": {
+   "Article": 6,
+   "Paragraph": 12,
+   "Item": 0,
+   "Subitem1": 0,
+   "SupplProvision": 3,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 1042,
+  "dropped_notes": 3,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 0,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [
+   {
+    "law_num": "令和七年三月三日最高裁判所規則第五号",
+    "part": "第七条",
+    "gazette": "官報 令和7年3月3日 号外 最高裁判所規則第五号（民事訴訟費用等に関する規則等の一部を改正する規則）",
+    "effective": "2025-04-01"
+   }
+  ],
+  "suppl_labels": [
+   "附則抄",
+   "附則（平成二四年七月一七日最高裁判所規則第九号）抄",
+   "附則（令和七年三月三日最高裁判所規則第五号）"
+  ]
+ },
+ "independentCount": {
+  "title": "民事調停官及び家事調停官規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 5,
+    "xml": 5,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 6,
+    "xml": 6,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 3,
+    "xml": 3,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "民事調停官及び家事調停官規則",
+  "units": 22,
+  "pdf_lines": 35,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 13,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 3
+ },
+ "tables": {
+  "title": "民事調停官及び家事調停官規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成15年10月1日 号外第229号",
+   "rule": "平成15年最高裁判所規則第15号",
+   "title": "民事調停官及び家事調停官規則",
+   "year": 2003,
+   "no": 15,
+   "url": "https://www.kanpo.go.jp/old/20031001/20031001g00229/20031001g002290003f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "平成24年7月17日 号外第154号",
+    "rule": "平成24年最高裁判所規則第9号",
+    "title": "非訟事件手続法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2012,
+    "no": 9,
+    "url": "https://www.kanpo.go.jp/old/20120717/20120717g00154/20120717g001540019f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年3月3日 号外第42号",
+    "rule": "令和7年最高裁判所規則第5号",
+    "title": "民事訴訟費用等に関する規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 5,
+    "url": "https://www.kanpo.go.jp/old/20250303/20250303g00042/20250303g000420002f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [
+   "令和7年最高裁判所規則第5号"
+  ]
+ }
+}

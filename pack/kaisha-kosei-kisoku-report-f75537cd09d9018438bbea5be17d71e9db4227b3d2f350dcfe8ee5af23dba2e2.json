@@ -1,0 +1,315 @@
+{
+ "workId": "kaisha-kosei-kisoku",
+ "file": "kaisha-kosei-kisoku-f7521227ddcfa6c149a5a21babd35f9b0937e9e61c5a8f5db295fa09fa7c961d.xml",
+ "sha256": "f7521227ddcfa6c149a5a21babd35f9b0937e9e61c5a8f5db295fa09fa7c961d",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/080521kaisyakouseikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "4c9bcc04cf93ba3db29f1c666774512f3c0ac85ee0faec1db4fbae01d607f1d4",
+  "pages": 34,
+  "law_num": "平成十五年二月十九日最高裁判所規則第二号",
+  "main_articles": 77,
+  "counts": {
+   "Article": 82,
+   "Paragraph": 179,
+   "Item": 82,
+   "Subitem1": 2,
+   "SupplProvision": 7,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 28353,
+  "dropped_notes": 49,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 348,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 1,
+  "kept_spaces": 11,
+  "table_pages": [
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 30,
+    "before": [
+     "第四十七条第一項及び第四十七条の",
+     "書類又は電磁的記録",
+     "書類"
+    ],
+    "added": [
+     "二第二項",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 31,
+    "before": [
+     "第六十七条第一項第六号及び同条第二項並びに第百八",
+     "記録",
+     "記載"
+    ],
+    "added": [
+     "十四条",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 34,
+    "before": [
+     "第百八十九条第一",
+     "電子上告提起通知書（上告の提起",
+     "上告提起通知書"
+    ],
+    "added": [
+     "項",
+     "があった旨を通知するために裁判所書記官が作成する電磁的記録をいう。以下同じ。）",
+     ""
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（平成一六年一〇月六日最高裁判所規則第一五号）抄",
+   "附則（平成一七年二月九日最高裁判所規則第六号）",
+   "附則（平成一八年二月八日最高裁判所規則第二号）抄",
+   "附 則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附 則（令和六年九月一七日最高裁判所規則第一四号）抄",
+   "附 則（令和七年八月二九日最高裁判所規則第一〇号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "会社更生規則",
+  "extractor": [
+   {
+    "page": 28,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 29,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 30,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 31,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 32,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 33,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 34,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 77,
+    "xml": 77,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 25,
+    "body": 25
+   },
+   "Article": {
+    "pdf_lines": 82,
+    "xml": 82,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 96,
+    "xml": 96,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 82,
+    "xml": 82,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 2,
+    "xml": 2,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 7,
+    "xml": 7,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "会社更生規則",
+  "units": 376,
+  "pdf_lines": 880,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 247,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 37
+ },
+ "tables": {
+  "title": "会社更生規則",
+  "xml_tables": 1,
+  "pdf_fragments": 7,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 69,
+    "equal": 69,
+    "joins": 3,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": null,
+  "amendments": [
+   {
+    "issue": "平成16年10月6日 号外第221号",
+    "rule": "平成16年最高裁判所規則第15号",
+    "title": "民事再生規則等の一部を改正する規則",
+    "year": 2004,
+    "no": 15,
+    "url": "https://www.kanpo.go.jp/old/20041006/20041006g00221/20041006g002210010f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成17年2月9日 本紙第4030号",
+    "rule": "平成17年最高裁判所規則第6号",
+    "title": "不動産登記法等の施行に伴う関係規則の整備等に関する規則",
+    "year": 2005,
+    "no": 6,
+    "url": "https://www.kanpo.go.jp/old/20050209/20050209h04030/20050209h040300003f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "平成18年2月8日 本紙第4272号",
+    "rule": "平成18年最高裁判所規則第2号",
+    "title": "会社法及び会社法の施行に伴う関係法律の整備等に関する法律の施行に伴う関係規則の整備等に関する規則",
+    "year": 2006,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20060208/20060208h04272/20060208h042720004f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和7年8月29日 号外第195号",
+    "rule": "令和7年最高裁判所規則第10号",
+    "title": "民事執行規則等の一部を改正する規則",
+    "year": 2025,
+    "no": 10,
+    "url": "https://www.kanpo.go.jp/old/20250829/20250829g00195/20250829g001950006f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}

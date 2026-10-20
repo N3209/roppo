@@ -1,0 +1,294 @@
+{
+ "workId": "chusai-kisoku",
+ "file": "chusai-kisoku-ef16280b3c60e852a7c1ad7e24b6f76aa020c68afda1d4d461e7319626574df0.xml",
+ "sha256": "ef16280b3c60e852a7c1ad7e24b6f76aa020c68afda1d4d461e7319626574df0",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/assets/20260521chusaikisoku.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "846692d16d5b837b230169dc985e117ebec550e71cb8822c63de10a23c65428e",
+  "pages": 9,
+  "law_num": "平成十五年十一月二十六日最高裁判所規則第二十七号",
+  "main_articles": 16,
+  "counts": {
+   "Article": 18,
+   "Paragraph": 32,
+   "Item": 8,
+   "Subitem1": 0,
+   "SupplProvision": 4,
+   "AppdxTable": 1,
+   "Table": 1
+  },
+  "matching_characters": 7707,
+  "dropped_notes": 15,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 0,
+  "kept_spaces": 3,
+  "table_pages": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [
+   {
+    "page": 6,
+    "before": [
+     "第三十三条第一項",
+     "訴訟記録の閲覧等の請求又は法第九十一条の三（訴訟に関",
+     "事件の記録の閲覧若しくは謄写、その正本、謄本若しくは"
+    ],
+    "added": [
+     "",
+     "する事項の証明）に規定する訴訟に関する事項を証明した書面の交付若しくは当該事項を証明した電磁的記録の提供",
+     "抄本の交付、その複製又は事件に関する事項の証明書の交付"
+    ]
+   },
+   {
+    "page": 7,
+    "before": [
+     "第六十七条第一項第六号及び同条第二項並びに第百八十四",
+     "記録",
+     "記載"
+    ],
+    "added": [
+     "条",
+     "",
+     ""
+    ]
+   },
+   {
+    "page": 8,
+    "before": [
+     "第百二十七条",
+     "前節（証人尋問）",
+     "前節及び仲裁関係事件手続規"
+    ],
+    "added": [
+     "",
+     "",
+     "則第一条の八"
+    ]
+   }
+  ],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [
+   [
+    "appdx",
+    "別表"
+   ]
+  ],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附則",
+   "附則（令和四年一一月七日最高裁判所規則第一七号）抄",
+   "附則（令和六年二月一日最高裁判所規則第二号）",
+   "附則（令和六年九月一七日最高裁判所規則第一四号）抄"
+  ]
+ },
+ "independentCount": {
+  "title": "仲裁関係事件手続規則",
+  "extractor": [
+   {
+    "page": 5,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 6,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 7,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 8,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   },
+   {
+    "page": 9,
+    "tables": 1,
+    "outside_equal": true,
+    "multiset_equal": true,
+    "only_in_pymupdf": "",
+    "only_in_pdfplumber": ""
+   }
+  ],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 16,
+    "xml": 16,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Article": {
+    "pdf_lines": 18,
+    "xml": 18,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 12,
+    "xml": 12,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 8,
+    "xml": 8,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 4,
+    "xml": 4,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "仲裁関係事件手続規則",
+  "units": 61,
+  "pdf_lines": 163,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 44,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 7
+ },
+ "tables": {
+  "title": "仲裁関係事件手続規則",
+  "xml_tables": 1,
+  "pdf_fragments": 5,
+  "tables": [
+   {
+    "table": 1,
+    "rows": 71,
+    "equal": 71,
+    "joins": 3,
+    "empty_rows_skipped": 0,
+    "differ": []
+   }
+  ],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成15年11月26日 本紙第3739号",
+   "rule": "平成15年最高裁判所規則第27号",
+   "title": "仲裁関係事件手続規則",
+   "year": 2003,
+   "no": 27,
+   "url": "https://www.kanpo.go.jp/old/20031126/20031126h03739/20031126h037390001f.html",
+   "found_by": "官報"
+  },
+  "amendments": [
+   {
+    "issue": "令和4年11月7日 号外第236号",
+    "rule": "令和4年最高裁判所規則第17号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2022,
+    "no": 17,
+    "url": "https://www.kanpo.go.jp/old/20221107/20221107g00236/20221107g002360001f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年2月1日 本紙第1153号",
+    "rule": "令和6年最高裁判所規則第2号",
+    "title": "仲裁関係事件手続規則の一部を改正する規則",
+    "year": 2024,
+    "no": 2,
+    "url": "https://www.kanpo.go.jp/old/20240201/20240201h01153/20240201h011530002f.html",
+    "found_by": "官報"
+   },
+   {
+    "issue": "令和6年9月17日 号外第216号",
+    "rule": "令和6年最高裁判所規則第14号",
+    "title": "民事訴訟規則等の一部を改正する規則",
+    "year": 2024,
+    "no": 14,
+    "url": "https://www.kanpo.go.jp/old/20240917/20240917g00216/20240917g002160001f.html",
+    "found_by": "官報"
+   }
+  ],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": [],
+  "shared_page_only": [
+   {
+    "date": "20240201",
+    "no": 1,
+    "explained_by_neighbour": [
+     "仲裁関係事件手続規則の一部を改正する規則（同二）"
+    ]
+   },
+   {
+    "date": "20240201",
+    "no": 3,
+    "explained_by_neighbour": [
+     "仲裁関係事件手続規則の一部を改正する規則（同二）"
+    ]
+   },
+   {
+    "date": "20240201",
+    "no": 4,
+    "explained_by_neighbour": [
+     "仲裁関係事件手続規則の一部を改正する規則（同二）"
+    ]
+   }
+  ]
+ }
+}

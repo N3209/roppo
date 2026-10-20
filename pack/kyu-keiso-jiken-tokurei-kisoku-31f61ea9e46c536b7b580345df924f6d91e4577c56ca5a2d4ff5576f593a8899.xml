@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/assets/jyousoshinpantokurei.pdf
+  取得: 2026-10-18
+  反映: PDFに改正履歴の記載なし。掲載された附則の最後は「附則」
+  範囲: 本則20条（削除条の範囲を1要素として数える）、附則1本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。PDFは条見出しを条名の後ろに印字する旧書式（「第一条 （この規則の目的）この規則は」）。20か所とも条見出し（ArticleCaption）として条名の前に置いた（文字は同じ、並びのみ変更。2026-10-19 ユーザー決定）。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Showa" Year="25" Num="30" PromulgateMonth="12" PromulgateDay="20" LawType="Rule">
+  <LawNum>昭和二十五年十二月二十日最高裁判所規則第三十号</LawNum>
+  <LawBody>
+    <LawTitle>旧刑事訴訟法事件の控訴審及び上告審における審判の特例に関する規則</LawTitle>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（この規則の目的）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この規則は、刑事訴訟法（昭和二十三年法律第百三十一号。以下法という。）施行前に公訴の提起があつた事件の控訴審（地方裁判所が控訴裁判所である場合を含む。以下同じ。）及び上告審（最高裁判所が上告裁判所である場合に限る。以下同じ。）における審判の迅速を図ることを目的とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="2">
+          <ArticleCaption>（この規則と他の法令との関係）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条の事件の控訴審及び上告審における審判については、この規則による外、改正前の刑事訴訟法（大正十一年法律第七十五号。以下旧法という。）、日本国憲法の施行に伴う刑事訴訟法の応急的措置に関する法律（昭和二十二年法律第七十六号。以下応急措置法という。）、刑事訴訟法施行法（昭和二十三年法律第二百四十九号）及び刑事訴訟規則施行規則（昭和二十三年最高裁判所規則第三十四号）による。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 控訴審</ChapterTitle>
+        <Article Num="3">
+          <ArticleCaption>（公判期日において控訴申立の理由等を明らかにする手続）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、被告人に対し、その人違でないことを確めるに足りる事項を尋ねた後、控訴申立人に対し、控訴申立の理由を問わなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、相当と認めるときは、前項の手続を経ないで被告人尋問を開始した事件についても、控訴申立人に対し、控訴申立の理由を問うことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>控訴申立人が控訴申立の理由を陳述するには、第一審判決に対する不服の事項を具体的に明示してしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判長は、必要と認めるときは、控訴の相手方に対し、前項の陳述に対する答弁を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（公判期日前に控訴申立の理由等を明らかにする手続）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、複雑な事件について、必要と認めるときは、前条の手続に代え又はこれを補うため、公判期日前、次の方法により、第一審判決に対する不服の事項及びこれに対する答弁を明らかにさせることができる。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>控訴申立人、控訴の相手方又はその他の訴訟関係人（旧法第三百七十八条及び第三百七十九条に掲げる者を含む。）に出頭を命ずること。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>前号に掲げる者に対し、一定の期間を定めて、書面を差し出すべきことを命ずること。</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の手続は、合議体の構成員にこれをさせることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項第一号の手続をするときは、裁判所書記官を立ち会わせなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の手続については、調書を作り、裁判長又は受命裁判官が、裁判所書記官とともに署名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項第二号の書面及び前項の調書は、公判期日において、裁判所書記官に朗読させ又はその要旨を告げさせなければならない。第一審判決に対する不服の事項が具休的に明示されている控訴申立書も、同様である．</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（不服のない事項についての審理）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、控訴申立人に不服のないことが明らかな事項については、事案の真相を明らかにし被告人の権利を保護するため必要と認める場合の外、重ねて、被告人を尋問し、証拠調をすることを要しない。この場合には、控訴申立人に不服のない限度において、原判決の認定した事実による。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（不服のない場合における判決書の記載）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>有罪の言渡をする場合の判決書において、前条の規定により被告人尋問及び証拠調をしなかつた事実について事実の摘示及び証拠の説明をするには、原判決の認定した事実のとおりであつて、控訴申立人に不服のないことを明らかにすれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（附帯控訴についての準用規定）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>附帯控訴については、前四条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="8">
+          <ArticleCaption>（判決書の簡易化）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、有罪の言渡をするに当り証拠により罪となるべき事実を認めた理由を説明し法令の適用を示すには、証拠の標目及び法令を掲げれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleCaption>（調書判決）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、上告の申立がなく、且つ上告の提起期間内に判決書の謄本の請求がない場合には、判決主文並びに罪となるべき事実の要旨及び適用した罰條を公判調書に記載させて、これをもつて判決書に代えることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 上告審</ChapterTitle>
+        <Article Num="10">
+          <ArticleCaption>（上告趣意書の差出期間）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、訴訟記録の送付を受けたときは、旧法第四百二十二條及び第四百二十三條の規定にかかわらず、速やかに上告趣意書を差し出すべき最終日を指定してこれを上告申立人に通知しなければならない。上告申立人に弁護人があるときは、その通知は、弁護人にもこれをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の通知は、通知書を送達してこれをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の最終日は、上告申立人に対する前項の送達があつた日の翌日から起算して二十八日目以後の日でなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第二項の通知書の送達があつた場合において第一項の最終日の指定が前項の規定に違反しているときは、第一項の規定にかかわらず、上告申立人に対する送達があつた日の翌日から起算して二十八日目の日を最終日とみなす。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="11">
+          <ArticleCaption>（訴訟記録到達の通知）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、前條の通知をする場合には、同時に訴訟記録の送付があつた旨を検察官又は被告人で上告申立人でない者に通知しなければならない。被告人に弁護人があるときは、その通知は、弁護人にこれをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の通知は、通知書を送達してこれをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（附帯上告の提起期間）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>上告の相手方がする附帯上告は、旧法第四百二十四条第一項の規定にかかわらず、前条の通知があつた日の翌日から起算して二十八日目の日までにこれをしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleCaption>（期間経過後の上告趣意書）</ArticleCaption>
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、上告趣意書を差し出すべき期間経過後に上告趣意書を受け取つた場合においても、その遅延がやむを得ない事情に基くものと認めるときは、これを期間内に差し出されたものとして審判をすることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="14">
+          <ArticleCaption>（主任弁護人以外の弁護人の上告趣意書）</ArticleCaption>
+          <ArticleTitle>第十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>上告趣意書は、主任弁護人以外の弁護人もこれを差し出すことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="15">
+          <ArticleCaption>（上告趣意書の記載）</ArticleCaption>
+          <ArticleTitle>第十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>上告趣意書には、上告の理由を簡潔に明示しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="16">
+          <ArticleCaption>（上告趣意書の謄本）</ArticleCaption>
+          <ArticleTitle>第十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>上告趣意書には、相手方の数に応ずる謄本を添附しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="17">
+          <ArticleCaption>（上告趣意書の謄本の送達）</ArticleCaption>
+          <ArticleTitle>第十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、上告趣意書を受け取つたときは、速やかにその謄本を相手方に送達しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="18">
+          <ArticleCaption>（答弁書）</ArticleCaption>
+          <ArticleTitle>第十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>上告の相手方は、上告趣意書の謄本の送達を受けた日から七日以内に答弁書を裁判所に差し出すことができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官が相手方であるときは、重要と認める上告の理由について答弁書を差し出さなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、必要と認めるときは、上告の相手方に対し、一定の期間を定めて、答弁書を差し出すべきことを命ずることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>答弁書には、相手方の数に応ずる謄本を添附しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、答弁書を受け取つたときは、速やかにその謄本を上告申立人に送達しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="19">
+          <ArticleCaption>（判決書への引用）</ArticleCaption>
+          <ArticleTitle>第十九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所は、相当と認めるときは、判決書に上告趣意書又は答弁書の記載を引用することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="20">
+          <ArticleCaption>（再上告以外の上告についての特則）</ArticleCaption>
+          <ArticleTitle>第二十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>応急措置法第十七条の規定による以外の上告については、刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）中の次に掲げる規定をも適用する。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>第二百三十一条から第二百三十四条まで（補償の請求の方式等・法第三百七十一条）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>第二百五十三条（判例の摘示・法第四百五条）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>第二百五十七条から第二百六十四条まで（上告審としての事件受理の申立等・法第四百六条）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>第二百六十七条から第二百七十七条まで（判決訂正申立の方式等・法第四百十五条等）</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、昭和二十六年一月四日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則施行の際現に最高裁判所に係属している事件及び最高裁判所への上告の提起期間内にある事件については、その上告審に限り、第十条から第二十条までの規定は、適用しない。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+  </LawBody>
+</Law>

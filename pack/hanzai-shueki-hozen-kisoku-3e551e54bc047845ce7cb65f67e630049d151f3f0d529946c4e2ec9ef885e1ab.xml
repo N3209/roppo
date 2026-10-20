@@ -1,0 +1,1196 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/2023/hanzaisyuuekihozennkisoku20230220.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「令和４年11月７日最高裁判所規則第１７号」
+  範囲: 本則28条（削除条の範囲を1要素として数える）、附則11本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="11" Num="10" PromulgateMonth="12" PromulgateDay="1" LawType="Rule">
+  <LawNum>平成十一年十二月一日最高裁判所規則第十号</LawNum>
+  <LawBody>
+    <LawTitle>犯罪収益に係る保全手続等に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 被告人以外の者の財産等の没収手続</ChapterTitle>
+        <ArticleRange>（第二条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 保全手続</ChapterTitle>
+        <TOCSection Num="1">
+          <SectionTitle>第一節 没収保全</SectionTitle>
+          <ArticleRange>（第三条－第二十条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="2">
+          <SectionTitle>第二節 追徴保全</SectionTitle>
+          <ArticleRange>（第二十一条・第二十二条）</ArticleRange>
+        </TOCSection>
+        <TOCSection Num="3">
+          <SectionTitle>第三節 雑則</SectionTitle>
+          <ArticleRange>（第二十三条）</ArticleRange>
+        </TOCSection>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 没収及び追徴の裁判の執行及び保全についての国際共助手続</ChapterTitle>
+        <ArticleRange>（第二十四条－第二十七条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>組織的な犯罪の処罰及び犯罪収益の規制等に関する法律（平成十一年法律第百三十六号。以下「法」という。）による被告人以外の者の財産等の没収に関する手続、没収保全及び追徴保全に関する手続並びに没収及び追徴の裁判の執行及び保全についての国際共助手続については、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 被告人以外の者の財産等の没収手続</ChapterTitle>
+        <Article Num="2">
+          <ArticleCaption>（刑事事件における第三者所有物の没収手続に関する規則の準用）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第十八条第一項及び第二項並びに法第三十七条第三項（法第四十条第三項において準用する場合を含む。）の没収に関する手続については、刑事事件における第三者所有物の没収手続に関する規則（昭和三十八年最高裁判所規則第八号）の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 保全手続</ChapterTitle>
+        <Section Num="1">
+          <SectionTitle>第一節 没収保全</SectionTitle>
+          <Article Num="3">
+            <ArticleCaption>（没収保全の請求の方式）</ArticleCaption>
+            <ArticleTitle>第三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全の請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>被告人又は被疑者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>罪名、公訴事実又は被疑事実の要旨及び没収の根拠となるべき法令の条項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処分を禁止すべき財産並びにこれを有する者（名義人が異なる場合は、名義人を含む。）の氏名及び住所又は居所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>債権の没収保全にあっては、債務者の氏名及び住所又は居所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十二条第一項に規定する事由</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>請求者が警察官たる司法警察員であるときは、法第二十三条第一項の規定による指定を受けた者である旨</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全の請求をする場合には、法第二十二条第一項に規定する事由があると認められるべき資料を提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="4">
+            <ArticleCaption>（附帯保全の請求の方式）</ArticleCaption>
+            <ArticleTitle>第四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>附帯保全（附帯保全命令による処分の禁止をいう。以下同じ。）の請求は、没収保全の請求と併せてする場合には前条第一項各号に掲げる事項のほか第二号及び第三号に掲げる事項を、没収保全の請求と別にする場合には同条第一項第一号及び第六号に掲げる事項のほか次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処分を禁止すべき権利並びにこれを有する者（名義人が異なる場合は、名義人を含む。）の氏名及び住所又は居所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十二条第二項に規定する事由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>附帯保全の請求をする場合には、法第二十二条第二項に規定する事由があると認められるべき資料を提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="5">
+            <ArticleCaption>（急速を要する場合の没収保全命令等の記載事項）</ArticleCaption>
+            <ArticleTitle>第五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第二十二条第四項の規定により没収保全命令又は附帯保全命令を発する場合には、その旨を裁判書に記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="6">
+            <ArticleCaption>（没収保全に関する処分をすべき裁判官）</ArticleCaption>
+            <ArticleTitle>第六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全に関する処分は、公訴の提起があった日から第一回の公判期日までは、公訴を受けた裁判所（地方裁判所の支部にあっては、その支部。以下この条において同じ。）の裁判官がしなければならない。ただし、公訴に係る事件の審判に関与すべき裁判官は、急速を要する場合及び当該公訴を受けた裁判所に処分をすべき他の裁判官がない場合を除き、することができない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="7">
+            <ArticleCaption>（没収保全命令が発せられている場合の起訴状の記載要件等）</ArticleCaption>
+            <ArticleTitle>第七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全命令が発せられている場合において、当該没収保全命令に係る被疑者に対して公訴を提起するときは、検察官は、起訴状に没収保全命令が発せられている旨を記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の規定は、同項に規定する被疑者に係る共犯に対して公訴を提起する場合において検察官が共犯に関し法第二十二条第一項に規定する理由があると思料するときにおける当該共犯に対する起訴状について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項に規定する場合においては、検察官は、共犯に関し法第二十二条第一項に規定する理由があると認められるべき資料を前条の裁判官に提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="8">
+            <ArticleCaption>（起訴前の没収保全の期間の更新の請求の方式）</ArticleCaption>
+            <ArticleTitle>第八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>起訴前の没収保全の期間の更新の請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>被疑者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第二十三条第四項に規定するやむを得ない事由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>起訴前の没収保全の期間の更新の請求をする場合には、法第二十三条第四項に規定するやむを得ない事由があると認められるべき資料を提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="9">
+            <ArticleCaption>（代替金の納付及び還付）</ArticleCaption>
+            <ArticleTitle>第九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>代替金が没収保全に関する処分をすべき裁判所に納付されたときは、当該裁判所の裁判所書記官は、その旨を検察官に通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全が効力を失ったときは、前項の裁判所は、納付された代替金を還付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="10">
+            <ArticleCaption>（債権の没収保全に係る債務者の供託の事情届の方式等）</ArticleCaption>
+            <ArticleTitle>第十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十条第四項において準用する民事執行法（昭和五十四年法律第四号）第百五十六条第四項又は次条第九項の規定による届出（以下この条において「事情届」という。）については、民事執行規則（昭和五十四年最高裁判所規則第五号）第百三十八条第一項及び第二項の規定を準用する。この場合において、同条第一項中「差押債権者及び債務者」とあるのは、「被告人又は被疑者及び債権者」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>事情届があったときは、没収保全に関する処分をすべき裁判所の裁判所書記官は、検察官にその旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の裁判所書記官は、事情届があった場合において、没収の裁判が確定したとき、没収保全の全部が効力を失ったとき又は代替金が納付されたときは供託書正本を、没収保全の一部が効力を失ったときは供託書正本の保管を証する書面を検察官に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="11">
+            <ArticleCaption>（振替社債等の没収保全）</ArticleCaption>
+            <ArticleTitle>第十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>社債、株式等の振替に関する法律（平成十三年法律第七十五号）第二条第一項に規定する社債等であって振替機関（同条第二項に規定する振替機関をいう。第七項において同じ。）が取り扱うもの（以下この条において「振替社債等」という。）の没収保全については、この条に定めるもののほか、債権の没収保全の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>振替社債等の没収保全は、振替社債等の権利者（名義人が異なる場合は、名義人を含む。以下この条において「権利者」という。）に対し振替若しくは抹消の申請又は取立てその他の処分を禁止し、並びに振替機関等（社債、株式等の振替に関する法律第二条第五項に規定する振替機関等であって権利者が口座の開設を受けているものをいう。以下この条において同じ。）に対し振替及び抹消を禁止する旨の没収保全命令を発して行う。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>次の各号に掲げる請求に係る振替社債等（以下この条において「買取請求株式等」という。）について当該各号に定める買取口座に記載又は記録がされている場合において、買取請求株式等の没収保全をするときにおける前項の規定の適用については、同項中「振替若しくは抹消の申請又は取立てその他の処分」とあるのは「取立てその他の処分」と、「並びに振替機関等」とあるのは「買取口座開設振替機関等」と、「権利者が口座の開設を受けているもの」とあるのは「振替社債等の発行者（以下この条において「発行者」という。）が当該買取口座の開設を受けているもの」と、「振替及び抹消を禁止する」とあるのは「振替を禁止し、及び発行者に対し振替の申請その他の処分を禁止する」とする。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第百五十五条第一項（同法第二百二十八条第一項及び第二百三十九条第一項において読み替えて準用する場合を含む。以下この号において同じ。）に規定する株式買取請求、投資口買取請求又は優先出資買取請求 同法第百五十五条第一項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第百八十三条第一項（同法第二百四十七条の三第一項において読み替えて準用する場合を含む。以下この号において同じ。）に規定する新株予約権買取請求又は新投資口予約権買取請求 同法第百八十三条第一項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百十五条第一項に規定する新株予約権付社債買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百五十九条第一項に規定する株式買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百六十条第一項に規定する新株予約権買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="6">
+                <ItemTitle>六</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百六十六条第一項に規定する株式買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="7">
+                <ItemTitle>七</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百六十七条第一項に規定する新株予約権買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="8">
+                <ItemTitle>八</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百七十三条第一項に規定する株式買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="9">
+                <ItemTitle>九</ItemTitle>
+                <ItemSentence>
+                  <Sentence>社債、株式等の振替に関する法律第二百七十四条第一項に規定する新株予約権買取請求 同項に規定する買取口座</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>振替社債等の没収保全命令の謄本及び更新の裁判（法第二十三条第四項に規定する更新の裁判をいう。以下この項及び次条第三項において同じ。）の謄本は、権利者及び振替機関等（買取請求株式等の没収保全命令の謄本及び更新の裁判の謄本にあっては、権利者、買取口座開設振替機関等及び発行者）に送達しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>振替社債等の没収保全の効力は、没収保全命令の謄本が振替機関等（買取請求株式等の没収保全の請求にあっては、買取口座開設振替機関等をいう。次項及び第七項において同じ。）に送達された時に生ずる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>振替債（社債、株式等の振替に関する法律第二百七十八条第一項に規定する振替債をいう。第八項において同じ。）、振替新株予約権付社債（同法第百九十二条第一項に規定する振替新株予約権付社債をいう。以下この条において同じ。）であって社債の償還済みのものでないもの、振替転換特定社債（同法第二百五十条に規定する振替転換特定社債をいう。第八項において同じ。）又は振替新優先出資引受権付特定社債（同法第二百五十三条に規定する振替新優先出資引受権付特定社債をいう。同項において同じ。）であって社債の償還済みのものでないものの没収保全命令の謄本の送達を受けた振替機関等は、直ちに、発行者に対し、次に掲げる事項を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>権利者を特定するに足りる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全命令を受けた振替社債等の銘柄（社債、株式等の振替に関する法律第六十八条第三項第二号（同法第百十三条、第百十五条、第百十七条、第百十八条、第百二十条、第百二十一条、第百二十二条、第百二十四条及び第百二十七条において準用する場合を含む。）、第九十一条第三項第二号又は第百九十四条第三項第二号（同法第二百五十一条第一項及び第二百五十四条第一項において準用する場合を含む。）に規定する銘柄をいう。）及び額又は数</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全命令の謄本が送達された旨及び送達の年月日</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="7">
+              <ParagraphNum>７</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全に係る振替社債等が振替機関によって取り扱われなくなったときは、振替機関等は、書面でその旨を没収保全命令を発した裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="8">
+              <ParagraphNum>８</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>発行者は、没収保全に係る振替債等（振替債、振替転換特定社債であって転換を請求することができなくなったもの又は振替新優先出資引受権付特定社債であって新優先出資の引受権が消滅したものをいう。以下この条において同じ。）の全額又は没収保全に係る振替新株予約権付社債（新株予約権の行使により社債が消滅するものその他の新株の取得により社債を失うものについては、新株予約権が消滅したものに限る。）についての社債の全額に相当する金銭をその履行地の供託所に供託することができる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="9">
+              <ParagraphNum>９</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>発行者は、前項の規定による供託をしたときは、当該供託をしたことを没収保全命令を発した裁判所に届け出なければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="10">
+              <ParagraphNum>１０</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全がされた振替債等又は振替新株予約権付社債について第八項又は次項において準用する法第三十六条第一項（同条第四項において準用する場合を含む。）の規定による供託があったことを証する文書が提出されたときは、検察事務官は、検察官が抹消の申請を指揮する書面に基づいて、当該供託に係る振替債等又は振替新株予約権付社債について、社債、株式等の振替に関する法律第七十一条第一項（同法第百十三条、第百十五条、第百十七条、第百十八条、第百二十条、第百二十一条、第百二十二条、第百二十四条及び第百二十七条において準用する場合を含む。）、第九十六条第一項又は第百九十九条第一項（同法第二百五十一条第一項及び第二百五十四条第一項において準用する場合を含む。）の申請をしなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="11">
+              <ParagraphNum>１１</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十六条の規定は、振替債等又は振替新株予約権付社債について没収保全と強制執行による差押えが競合する場合について準用する。この場合において、同条第一項中「差押命令又は差押処分の送達を受けた」とあるのは「差押えがされた」と、「その債権」とあるのは「当該振替債等の全額又は当該振替新株予約権付社債についての社債」と、同条第三項中「差押命令を発した執行裁判所又は差押処分をした裁判所書記官」とあり、及び同条第四項中「執行裁判所（差押処分がされている場合にあっては、当該差押処分をした裁判所書記官）」とあるのは「執行裁判所」と、同条第三項中「金銭債権」とあるのは「振替債等の額又は振替新株予約権付社債についての社債」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="12">
+              <ParagraphNum>１２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>振替社債等の没収保全の請求をする場合における第三条第一項又は第二十六条第一項の書面には、振替機関等（買取請求株式等の没収保全の請求にあっては、買取口座開設振替機関等及び発行者）の名称及び住所をも記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="11_2">
+            <ArticleCaption>（電子記録債権の没収保全）</ArticleCaption>
+            <ArticleTitle>第十一条の二</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子記録債権（電子記録債権法（平成十九年法律第百二号）第二条第一項に規定する電子記録債権をいう。以下この条において同じ。）の没収保全については、この条に定めるもののほか、債権の没収保全の例による。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子記録債権の没収保全は、債権者（名義人が異なる場合は、名義人を含む。以下この条において同じ。）に対し取立てその他の処分又は電子記録（電子記録債権法第二条第一項に規定する電子記録をいう。以下この条において同じ。）の請求を禁止し、債務者に対し債権者への弁済を禁止し、及び当該電子記録債権の電子記録をしている電子債権記録機関（同条第二項に規定する電子債権記録機関をいう。以下この条において同じ。）に対し電子記録を禁止する旨の没収保全命令を発して行う。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の没収保全命令の謄本及び更新の裁判の謄本は、債権者、債務者及び電子債権記録機関に送達しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子記録債権の没収保全の効力は、没収保全命令の謄本が電子債権記録機関に送達された時に生ずる。ただし、債務者に対する没収保全の効力は、没収保全命令の謄本が債務者に送達された時に生ずる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>債権者は、前項の規定により没収保全の効力が生じた場合であっても、次に掲げる電子記録の請求をすることができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>支払等記録（電子記録債権法第二十四条第一号に規定する支払等であって没収保全との関係において当該支払等に係る債務を消滅させる効力を有するものに係るものに限る。）</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>根質権の担保すべき元本の確定の電子記録</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全に係る電子記録債権のうち没収保全がされていない部分の分割（電子記録債権法第四十三条第一項に規定する分割をいう。）をする分割記録</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前三号に掲げるもののほか、没収保全に係る電子記録債権のうち没収保全がされていない部分についての電子記録</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子債権記録機関は、第四項の規定により没収保全の効力が生じた場合であっても、次に掲げる電子記録をすることができる。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>質権の順位の変更の電子記録</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>転質の電子記録</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前項第一号から第三号までに掲げる電子記録</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>前三号に掲げるもののほか、没収保全に係る電子記録債権のうち没収保全がされていない部分についての電子記録</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="7">
+              <ParagraphNum>７</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子債権記録機関は、没収保全命令に抵触する電子記録がされているときは、当該電子記録の訂正をしなければならない。ただし、電子記録上の利害関係を有する第三者がある場合にあっては、当該第三者の承諾があるときに限る。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="8">
+              <ParagraphNum>８</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子記録債権法第十条第三項から第五項までの規定は、前項の規定による電子記録の訂正について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="9">
+              <ParagraphNum>９</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子債権記録機関は、第七項の規定により電子記録の訂正をするときは、当該訂正の年月日をも記録しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="10">
+              <ParagraphNum>１０</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全に係る電子記録債権について法第三十条第四項において準用する民事執行法第百五十六条第一項又は法第三十六条第一項（同条第四項において準用する場合を含む。）の規定による供託があったことを証する文書が提出されたときは、検察事務官は、検察官が支払等記録の嘱託を指揮する書面に基づいて、当該供託をしたことによる支払等記録を嘱託しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="11">
+              <ParagraphNum>１１</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>電子記録債権の没収保全の請求をする場合における第三条第一項又は第二十六条第一項の書面には、電子債権記録機関の名称及び住所をも記載しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="12">
+              <ParagraphNum>１２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第二項の没収保全命令が発せられている場合において、電子記録債権法第七十七条第一項の規定により没収保全に係る電子記録債権が記録されている債権記録（同法第二条第四項に規定する債権記録をいう。次項において同じ。）がその効力を失ったときは、既にされた没収保全に関する処分その他の行為は、当該電子記録債権の内容をその権利の内容とする債権に対する債権の没収保全に関する処分その他の行為として効力を有する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="13">
+              <ParagraphNum>１３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>債務者に没収保全命令の謄本が送達されている場合において、電子債権記録機関に没収保全命令の謄本が送達されていないときは、前項に規定する債権の没収保全の効力は、電子記録債権法第七十七条第一項の規定により没収保全に係る電子記録債権が記録されている債権記録がその効力を失った時に生ずる。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="12">
+            <ArticleCaption>（没収保全命令の取消しの請求の方式）</ArticleCaption>
+            <ArticleTitle>第十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全命令の取消しの請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>被告人又は被疑者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十二条第一項に規定する事由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全命令の取消しの請求をする場合には、法第三十二条第一項に規定する事由があると認められるべき資料を提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="13">
+            <ArticleCaption>（没収保全財産に対し強制執行による差押え等がされた場合の通知）</ArticleCaption>
+            <ArticleTitle>第十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全がされている財産に対し強制競売の開始決定又は強制執行による差押えがされたときは、執行裁判所の裁判所書記官（法第三十五条第一項に規定する動産（以下単に「動産」という。）にあっては執行官、差押処分がされた金銭債権にあっては当該差押処分をした裁判所書記官）は、検察官にその旨を通知しなければならない。ただし、次条第三項の規定による通知があったときは、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項本文に規定する場合において、強制執行の申立てが取り下げられたとき、又は強制執行の手続を取り消す決定（差押処分がされた金銭債権にあっては、当該差押処分を取り消す旨の裁判所書記官の処分を含む。第十五条第二項及び第十六条第三項において同じ。）が効力を生じたときも、前項本文と同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項本文に規定する場合において、没収の裁判が確定したとき、没収保全が効力を失ったとき、又は代替金が納付されたときは、検察官は、執行裁判所（動産にあっては執行官、差押処分がされた金銭債権にあっては当該差押処分をした裁判所書記官）にその旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="14">
+            <ArticleCaption>（没収保全がされている金銭債権に対し強制執行による差押えがされた場合の供託の事情届の方式等）</ArticleCaption>
+            <ArticleTitle>第十四条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十六条第二項の規定による届出（以下この条において「競合時の事情届」という。）は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>没収保全事件及び強制執行事件の表示</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>被告人又は被疑者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>強制執行による差押命令又は差押処分に係る債権者及び債務者の氏名</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>供託した金額及び供託の事由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項の書面には、供託書正本を添付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>競合時の事情届があったときは、没収保全に関する処分をすべき裁判所の裁判所書記官は、検察官及び執行裁判所（差押処分がされた場合にあっては、当該差押処分をした裁判所書記官。以下この条において同じ。）にその旨を通知しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全が金銭債権の一部に係る場合においては、当該没収保全に関する処分をすべき裁判所の裁判所書記官は、前項の規定により執行裁判所に通知するときに、併せて供託書正本の保管を証する書面を送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="5">
+              <ParagraphNum>５</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十条第三項の規定は、競合時の事情届があった場合に準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="6">
+              <ParagraphNum>６</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項において準用する第十条第三項の規定により供託書正本又は供託書正本の保管を証する書面を送付された検察官は、没収保全が効力を失ったとき又は代替金が納付されたときは当該供託書正本又は当該供託書正本の保管を証する書面を、没収保全がされている金銭債権の額に相当する部分の一部について没収の裁判が確定したときは供託書正本の保管を証する書面を執行裁判所に送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="15">
+            <ArticleCaption>（強制執行による差押えがされている金銭債権につき没収保全がされた場合の供託の事情届の方式等）</ArticleCaption>
+            <ArticleTitle>第十五条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前条第一項から第四項までの規定は、法第三十六条第四項において準用する同条第二項の規定による届出について準用する。この場合において、前条第三項及び第四項中「没収保全に関する処分をすべき裁判所の裁判所書記官」とあるのは「執行裁判所の裁判所書記官（差押処分がされている場合にあっては、当該差押処分をした裁判所書記官）」と、同条第三項中「執行裁判所（差押処分がされた場合にあっては、当該差押処分をした裁判所書記官。以下この条において同じ。）」とあり、及び同条第四項中「執行裁判所」とあるのは「没収保全命令を発した裁判所」と、同項中「没収保全が」とあるのは「強制執行による差押えが」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>法第三十六条第四項において準用する同条第一項の規定により供託されている場合において、執行裁判所の裁判所書記官（差押処分がされている場合にあっては、当該差押処分をした裁判所書記官）は、強制執行の申立てが取り下げられたとき又は強制執行の手続を取り消す決定が効力を生じたときは没収保全命令を発した裁判所に、次条第二項の規定による没収の裁判が確定した旨の通知があったときは検察官に供託書正本（供託に係る金銭債権の一部について没収の裁判が確定した旨の通知があったときは、供託書正本の保管を証する書面）を送付しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="16">
+            <ArticleCaption>（強制執行による差押え等がされている財産につき没収保全がされた場合の通知）</ArticleCaption>
+            <ArticleTitle>第十六条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>強制競売の開始決定又は強制執行による差押えがされている財産について没収保全命令が発せられたときは、検察官は、執行裁判所（動産にあっては執行官、差押処分がされている金銭債権にあっては当該差押処分をした裁判所書記官）にその旨を通知しなければならない。ただし、前条第一項において準用する第十四条第三項の規定による通知があったときは、この限りでない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>前項本文に規定する場合において、没収の裁判が確定したとき、没収保全が効力を失ったとき、又は代替金が納付されたときも、同項本文と同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第一項本文に規定する場合において、強制執行の申立てが取り下げられたとき、強制執行の手続を取り消す決定が効力を生じたとき、又は強制執行の手続により財産が売却されたときは、執行裁判所の裁判所書記官（動産にあっては執行官、差押処分がされている金銭債権にあっては当該差押処分をした裁判所書記官）は、検察官にその旨を通知しなければならない。民事執行法第百四十三条に規定する債権（同法第百六十七条第一項の規定により債権執行の例によるものとされる同項に規定するその他の財産権を含む。）について、同法第百五十五条第四項（同法第百六十七条の十四第一項において準用する場合を含む。）の規定による届出があったとき、同法第百六十六条第二項において準用する同法第八十四条の規定による配当若しくは弁済金の交付若しくは同法第百六十七条の十一第三項の規定による弁済金の交付が実施されたとき、又は同法第百五十九条第一項の転付命令若しくは同法第百六十一条第一項の譲渡命令が効力を生じたときも、同様とする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="17">
+            <ArticleCaption>（強制執行の停止及びその決定の取消しの請求の方式）</ArticleCaption>
+            <ArticleTitle>第十七条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>強制執行の停止の請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>第十四条第一項第一号から第三号までに掲げる事項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第三十八条第一項に規定する理由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>強制執行の停止の請求をする場合には、法第三十八条第一項に規定する理由があると認められるべき資料を提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十二条の規定は、強制執行の停止の決定の取消しの請求について準用する。この場合において、同条中「第三十二条第一項」とあるのは「第三十八条第三項」と、同条第一項中「没収保全事件」とあるのは「強制執行停止事件」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="18">
+            <ArticleCaption>（没収保全と担保権の実行による差押えとが競合する場合の通知）</ArticleCaption>
+            <ArticleTitle>第十八条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十三条第一項本文及び第三項並びに第十六条第三項の規定は没収保全がされている財産に対し担保権の実行による差押えがされた場合について、同条（第一項ただし書を除く。）の規定は担保権の実行による差押えがされている財産について没収保全命令が発せられた場合について準用する。この場合において、第十三条第一項本文及び第三項中「執行官、差押処分がされた金銭債権にあっては当該差押処分をした裁判所書記官」とあり、並びに第十六条第一項本文及び第三項中「執行官、差押処分がされている金銭債権にあっては当該差押処分をした裁判所書記官」とあるのは「、執行官」と、同項中「弁済金の交付若しくは同法第百六十七条の十一第三項の規定による弁済金の交付」とあるのは「弁済金の交付」と、当該担保権について附帯保全がされているときは、第十三条第三項及び第十六条第二項中「没収保全」とあるのは「没収保全若しくは附帯保全」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="19">
+            <ArticleCaption>（没収保全と仮差押えの執行又は滞納処分による差押えとが競合する場合の通知等）</ArticleCaption>
+            <ArticleTitle>第十九条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十三条の規定は没収保全がされている財産に対し仮差押えの執行がされた場合について、同条第三項の規定は没収保全がされている財産に対し滞納処分による差押えがされた場合について準用する。この場合において、同条第一項及び第三項中「執行官、差押処分がされた金銭債権にあっては当該差押処分をした裁判所書記官」とあるのは「、執行官」と、同条第二項中「決定（差押処分がされた金銭債権にあっては、当該差押処分を取り消す旨の裁判所書記官の処分を含む。第十五条第二項及び第十六条第三項において同じ。）」とあるのは「決定」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十四条の規定は没収保全がされている金銭債権に対し滞納処分による差押え又は仮差押えの執行がされた場合における当該金銭債権の債務者の供託について、第十五条の規定は仮差押えの執行がされている金銭債権につき没収保全がされた場合における当該金銭債権の債務者の供託について準用する。この場合において、第十四条第一項第三号中「強制執行による差押命令又は差押処分」とあるのは「滞納処分による差押えをした徴収職員等（徴収職員、徴税吏員その他滞納処分を執行する権限を有する者をいう。以下同じ。）の属する庁その他の事務所の名称及び所在並びに滞納者の氏名又は仮差押えの執行」と、同条第三項中「執行裁判所（差押処分がされた場合にあっては、当該差押処分をした裁判所書記官。以下この条において同じ。）」とあり、並びに同条第四項及び第六項中「執行裁判所」とあるのは「徴収職員等又は保全執行裁判所」と、第十五条中「執行裁判所の裁判所書記官（差押処分がされている場合にあっては、当該差押処分をした裁判所書記官）」とあるのは「保全執行裁判所の裁判所書記官」と、同条第一項中「強制執行による差押え」とあるのは「仮差押えの執行」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="3">
+              <ParagraphNum>３</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十六条の規定は仮差押えの執行がされている財産について没収保全命令が発せられた場合について、同条第一項及び第二項の規定は滞納処分による差押えがされている財産について没収保全命令が発せられた場合について準用する。この場合において、同条第一項中「執行裁判所（動産にあっては執行官、差押処分がされている金銭債権にあっては当該差押処分をした裁判所書記官）」とあるのは、仮差押えの執行がされている財産について没収保全命令が発せられた場合にあっては「保全執行裁判所（動産にあっては、執行官）」と、滞納処分による差押えがされている財産について没収保全命令が発せられた場合にあっては「徴収職員等」と、同条第三項中「執行官、差押処分がされている金銭債権にあっては当該差押処分をした裁判所書記官」とあるのは「、執行官」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+            <Paragraph Num="4">
+              <ParagraphNum>４</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第十七条の規定は、仮差押えの執行がされている財産につき没収保全命令を発した場合又は発しようとする場合における強制執行の停止の請求及び強制執行の停止の決定の取消しの請求について準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="20">
+            <ArticleCaption>（附帯保全手続への準用）</ArticleCaption>
+            <ArticleTitle>第二十条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>附帯保全に関する手続については、この規則に特別の定めがあるもののほか、没収保全に関する規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="2">
+          <SectionTitle>第二節 追徴保全</SectionTitle>
+          <Article Num="21">
+            <ArticleCaption>（追徴保全の請求の方式）</ArticleCaption>
+            <ArticleTitle>第二十一条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>追徴保全の請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+              </ParagraphSentence>
+              <Item Num="1">
+                <ItemTitle>一</ItemTitle>
+                <ItemSentence>
+                  <Sentence>被告人又は被疑者の氏名及び住所又は居所</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="2">
+                <ItemTitle>二</ItemTitle>
+                <ItemSentence>
+                  <Sentence>罪名、公訴事実又は被疑事実の要旨及び追徴の根拠となるべき法令の条項</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="3">
+                <ItemTitle>三</ItemTitle>
+                <ItemSentence>
+                  <Sentence>追徴保全額</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="4">
+                <ItemTitle>四</ItemTitle>
+                <ItemSentence>
+                  <Sentence>処分を禁止すべき財産</Sentence>
+                </ItemSentence>
+              </Item>
+              <Item Num="5">
+                <ItemTitle>五</ItemTitle>
+                <ItemSentence>
+                  <Sentence>法第四十二条第一項に規定する事由</Sentence>
+                </ItemSentence>
+              </Item>
+            </Paragraph>
+            <Paragraph Num="2">
+              <ParagraphNum>２</ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>追徴保全の請求をする場合には、法第四十二条第一項に規定する事由があると認められるべき資料を提出しなければならない。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+          <Article Num="22">
+            <ArticleCaption>（追徴保全命令等への準用）</ArticleCaption>
+            <ArticleTitle>第二十二条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>第五条から第九条まで（第七条第二項及び第三項を除く。）及び第十二条の規定は、追徴保全命令又は追徴保全について準用する。この場合において、第九条中「代替金」とあるのは「追徴保全解放金」と、第十二条中「第三十二条第一項」とあるのは「第四十七条」と読み替えるものとする。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+        <Section Num="3">
+          <SectionTitle>第三節 雑則</SectionTitle>
+          <Article Num="23">
+            <ArticleCaption>（刑事訴訟規則の準用）</ArticleCaption>
+            <ArticleTitle>第二十三条</ArticleTitle>
+            <Paragraph Num="1">
+              <ParagraphNum></ParagraphNum>
+              <ParagraphSentence>
+                <Sentence>没収保全及び追徴保全に関する手続については、法及びこの規則に定めるもののほか、刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）の規定を準用する。</Sentence>
+              </ParagraphSentence>
+            </Paragraph>
+          </Article>
+        </Section>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 没収及び追徴の裁判の執行及び保全についての国際共助手続</ChapterTitle>
+        <Article Num="24">
+          <ArticleCaption>（共助要請に係る審査の請求の方式）</ArticleCaption>
+          <ArticleTitle>第二十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>没収の確定裁判の執行に係る共助の要請の審査の請求は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助の要請をした外国の名称</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>日本国が行う同種の要請に応ずる旨の要請国の保証がなされている旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助の要請に係る財産並びにこれを有する者（名義人が異なる場合は、名義人を含む。）の氏名及び住所又は居所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助の要請に係る確定裁判を受けた者の氏名及び当該確定裁判の確定年月日</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助犯罪の罪名、事実の要旨及び適用された罰条並びに没収の根拠とされた法令の条項並びに日本国において相当する罰条及び法令の条項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>追徴の確定裁判の執行に係る共助の要請の審査の請求は、前項第一号、第二号及び第四号に掲げる事項のほか、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助の要請に係る追徴の確定裁判における追徴額</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第六十条第一項に規定する共助の要請にあっては、その旨及び当該要請に係る財産の価額</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助犯罪の罪名、事実の要旨及び適用された罰条並びに追徴の根拠とされた法令の条項並びに日本国において相当する罰条及び法令の条項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="25">
+          <ArticleCaption>（執行共助の決定の取消しの請求の方式）</ArticleCaption>
+          <ArticleTitle>第二十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六十五条第一項の規定による取消しの請求（次項において「決定取消請求」という。）は、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>取消しを求める決定の表示</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>取消しを求める事由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>決定取消請求をする場合には、法第六十五条第一項に規定する事由があると認められるべき資料を提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="26">
+          <ArticleCaption>（共助要請に係る没収保全等の請求の方式）</ArticleCaption>
+          <ArticleTitle>第二十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六十六条第一項前段の規定による請求（以下この条において「共助没収保全請求」という。）は、第二十四条第一項第一号から第三号まで及び第五号に掲げる事項のほか、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助犯罪に係る被告人若しくは被疑者又は確定裁判を受けた者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>債権の没収のための保全にあっては、債務者の氏名及び住所又は居所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十二条第一項に規定する事由。ただし、法第五十九条第二項の規定による要請にあっては、国際的な協力の下に規制薬物に係る不正行為を助長する行為等の防止を図るための麻薬及び向精神薬取締法等の特例等に関する法律（平成三年法律第九十四号。以下「麻薬特例法」という。）第十九条第一項に規定する事由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六十七条第一項の規定による請求（以下この条において「共助追徴保全請求」という。）は、第二十四条第一項第一号及び第二号並びに同条第二項第三号に掲げる事項のほか、次に掲げる事項を記載した書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助犯罪に係る被告人若しくは被疑者又は確定裁判を受けた者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>共助の要請に係る追徴保全額</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第六十条第二項に規定する共助の要請にあっては、その旨及び当該要請に係る財産の価額</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>処分を禁止すべき財産</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第四十二条第一項に規定する事由。ただし、法第五十九条第二項の規定による要請にあっては、麻薬特例法第二十条第一項に規定する事由</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>共助没収保全請求又は共助追徴保全請求が、共助の要請をした外国の裁判所若しくは裁判官のした没収若しくは追徴のための保全の裁判に基づく要請である場合又は没収若しくは追徴の裁判の確定後の要請である場合には、第一項第三号又は前項第五号に掲げる事項に代えて、その旨を記載すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>共助没収保全請求又は共助追徴保全請求をする場合には、没収保全命令又は追徴保全命令を発することができる要件があると認められるべき資料を提出しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="27">
+          <ArticleCaption>（刑事訴訟規則等の準用）</ArticleCaption>
+          <ArticleTitle>第二十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>この章に特別の定めがあるもののほか、裁判所若しくは裁判官のする審査、処分若しくは令状の発付、検察官若しくは検察事務官のする処分又は裁判所の審査への利害関係人の参加に関する手続については、前二章並びに刑事訴訟規則（第一編第二章及び第五章から第十三章まで、第二編第一章、第三編第一章、第三章及び第四章、第七編並びに第八編に限る。）、刑事事件における第三者所有物の没収手続に関する規則並びに逃亡犯罪人引渡法による審査等の手続に関する規則（昭和二十八年最高裁判所規則第十一号）第四条、第十九条、第二十一条及び第二十二条の規定を、それぞれその性質に反しない限り、準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則 抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、法の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一四年三月二七日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、短期社債等の振替に関する法律（平成十三年法律第七十五号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一四年一二月一一日最高裁判所規則第一五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十五年一月六日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一七年一月一一日最高裁判所規則第一号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民事関係手続の改善のための民事訴訟法等の一部を改正する法律（平成十六年法律第百五十二号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成一八年二月八日最高裁判所規則第二号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、会社法（平成十七年法律第八十六号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年一〇月二日最高裁判所規則第一四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、少年法の一部を改正する法律（平成二十年法律第七十一号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+      <Paragraph Num="2">
+        <ParagraphCaption>（経過措置）</ParagraphCaption>
+        <ParagraphNum>２</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則の施行の日前に少年法の一部を改正する法律による改正前の少年法（昭和二十三年法律第百六十八号）第三十七条第一項の規定により公訴の提起があった成人の刑事事件については、この規則による改正後の刑事訴訟規則及び犯罪収益に係る保全手続等に関する規則の規定にかかわらず、なお従前の例による。沖縄の復帰に伴う特別措置に関する法律（昭和四十六年法律第百二十九号）第二十六条第四項の規定により家庭裁判所が権限を有する成人の刑事事件についても、同様とする。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年一〇月一五日最高裁判所規則第一六号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphCaption>（施行期日）</ParagraphCaption>
+        <ParagraphNum>１</ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、電子記録債権法（平成十九年法律第百二号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二〇年一一月一九日最高裁判所規則第二一号）</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、株式等の取引に係る決済の合理化を図るための社債等の振替に関する法律等の一部を改正する法律（平成十六年法律第八十八号）の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+      <Article Num="2">
+        <ArticleCaption>（経過措置）</ArticleCaption>
+        <ArticleTitle>第二条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則の施行前に発せられた没収保全命令に係る改正前の犯罪収益に係る保全手続等に関する規則（以下「旧規則」という。）第十一条第一項に規定する預託された株券に係る株式について、株式等の取引に係る決済の合理化を図るための社債等の振替に関する法律等の一部を改正する法律附則第七条第一項前段に規定する場合に該当する場合には、この規則の施行前にした旧規則の規定による没収保全に関する処分その他の行為は、改正後の犯罪収益に係る保全手続等に関する規則（以下「新規則」という。）の規定によってした没収保全に関する処分その他の行為として効力を有するものとする。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+        <Paragraph Num="2">
+          <ParagraphNum>２</ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>旧規則第十一条の二第一項に規定する振替社債等に関し、この規則の施行前にした旧規則の規定による没収保全に関する処分その他の行為は、新規則の相当規定によってした没収保全に関する処分その他の行為とみなす。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（平成二七年四月八日最高裁判所規則第四号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、会社法の一部を改正する法律（平成二十六年法律第九十号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和元年一一月二七日最高裁判所規則第五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、民法の一部を改正する法律（平成二十九年法律第四十四号）の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附則（令和四年一一月七日最高裁判所規則第一七号）</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、民事訴訟法等の一部を改正する法律（令和四年法律第四十八号）附則第一条第二号に掲げる規定の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

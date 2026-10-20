@@ -1,0 +1,587 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  出典: 最高裁判所規則（裁判所ウェブサイト「規則集」の掲載PDF）
+  URL: https://www.courts.go.jp/vc-files/courts/file5/tuusinboujukisoku010601.pdf
+  取得: 2026-10-18
+  反映: PDF冒頭の改正履歴の最後は「平成三十年一月十五日最高裁判所規則第一号」
+  範囲: 本則18条（削除条の範囲を1要素として数える）、附則3本（抄を含む）。PDF掲載範囲
+  変換: N3209 がPDFからXML化（個人による加工。裁判所による提供・検証ではない）。PDFの抽出本文と全文を機械照合。紙面との全ページ目視照合は未実施
+  変換の詳細: 本文はPyMuPDF、表はpdfplumberから変換。目次・本則・附則の抽出全文一致（空白・改行除外）。表はセルごとにPyMuPDFの文字と照合し、ページをまたぐセルは前ページの同じセルに結合、縦結合はrowspan。冒頭の題名・掲載情報と、条ごとの改正注記・施行日の編集注記を除外し別ファイルに記録。法令番号は漢数字表記に統一。紙面との全ページ目視照合は未実施
+-->
+<Law Lang="ja" Era="Heisei" Year="12" Num="6" PromulgateMonth="3" PromulgateDay="15" LawType="Rule">
+  <LawNum>平成十二年三月十五日最高裁判所規則第六号</LawNum>
+  <LawBody>
+    <LawTitle>犯罪捜査のための通信傍受に関する規則</LawTitle>
+    <TOC>
+      <TOCLabel>目次</TOCLabel>
+      <TOCChapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <ArticleRange>（第一条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="2">
+        <ChapterTitle>第二章 傍受令状の請求等の手続</ChapterTitle>
+        <ArticleRange>（第二条－第七条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="3">
+        <ChapterTitle>第三章 通信傍受の記録等</ChapterTitle>
+        <ArticleRange>（第八条－第十七条）</ArticleRange>
+      </TOCChapter>
+      <TOCChapter Num="4">
+        <ChapterTitle>第四章 補則</ChapterTitle>
+        <ArticleRange>（第十八条）</ArticleRange>
+      </TOCChapter>
+      <TOCSupplProvision>
+        <SupplProvisionLabel>附則</SupplProvisionLabel>
+      </TOCSupplProvision>
+    </TOC>
+    <MainProvision>
+      <Chapter Num="1">
+        <ChapterTitle>第一章 総則</ChapterTitle>
+        <Article Num="1">
+          <ArticleCaption>（趣旨）</ArticleCaption>
+          <ArticleTitle>第一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>犯罪捜査のための通信傍受に関する法律（平成十一年法律第百三十七号。以下「法」という。）による傍受令状の発付、傍受ができる期間の延長、記録媒体の封印及び提出、傍受の原記録の保管その他の取扱い、傍受の実施の状況を記載した書面の提出、法第十五条に規定する通信に該当するかどうかの審査、通信の当事者に対する通知を発しなければならない期間の延長、裁判所が保管する傍受記録の聴取及び閲覧並びにその複製の作成並びに不服申立てに関する手続については、法に定めるもののほか、この規則の定めるところによる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="2">
+        <ChapterTitle>第二章 傍受令状の請求等の手続</ChapterTitle>
+        <Article Num="2">
+          <ArticleCaption>（傍受令状請求権者の指定、変更の通知）</ArticleCaption>
+          <ArticleTitle>第二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検事総長は、法第四条第一項の規定により傍受令状を請求することができる検察官を指定したときは、最高裁判所にその旨を通知しなければならない。その通知の内容に変更を生じたときも、同様とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>国家公安委員会、都道府県公安委員会、厚生労働大臣又は海上保安庁長官は、法第四条第一項の規定により傍受令状を請求することができる司法警察員を指定したときは、国家公安委員会、厚生労働大臣又は海上保安庁長官においては最高裁判所に、都道府県公安委員会においてはその所在地を管轄する地方裁判所にその旨を通知しなければならない。その通知の内容に変更を生じたときも、同様とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="3">
+          <ArticleCaption>（傍受令状請求書の記載事項）</ArticleCaption>
+          <ArticleTitle>第三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>傍受令状の請求書には、次に掲げる事項及び傍受令状発付の要件たる事項を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>被疑者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>被疑事実の要旨、罪名及び罰条</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受すべき通信</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受の実施の対象とすべき通信手段</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受の実施の方法及び場所（法第五条第四項後段の申立てをする場合にあっては、傍受の実施の方法、当該申立てをする旨及びその理由並びに指定期間における傍受の実施の場所及び指定期間以外の期間における傍受の実施の場所）</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受ができる期間</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者の官公職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="8">
+              <ItemTitle>八</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者が、法第四条第一項の規定による指定を受けた者である旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="9">
+              <ItemTitle>九</ItemTitle>
+              <ItemSentence>
+                <Sentence>七日を超える有効期間を必要とするときは、その旨及び事由</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="10">
+              <ItemTitle>十</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求に係る被疑事実の全部又は一部と同一の被疑事実について、前に同一の通信手段を対象とする傍受令状の請求又はその発付があったときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="11">
+              <ItemTitle>十一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十条第一項の許可の請求をするときは、その旨及びその理由並びに通信管理者等に関する事項</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="12">
+              <ItemTitle>十二</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十三条第一項の許可の請求をするときは、その旨及びその理由並びに通信管理者等に関する事項及び傍受の実施に用いるものとして指定する特定電子計算機を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>被疑者の氏名が明らかでないときは、その旨を記載すれば足りる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="4">
+          <ArticleCaption>（資料の提供・法第四条等）</ArticleCaption>
+          <ArticleTitle>第四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>傍受令状を請求するには、傍受の理由及び必要があることを認めるべき資料を提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第四条第三項の請求をするには、その請求が相当であることを認めるべき資料をも提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第五条第四項後段の申立てをするには、その申立てが相当であることを認めるべき資料をも提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="5">
+          <ArticleCaption>（傍受令状の記載事項）</ArticleCaption>
+          <ArticleTitle>第五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第六条第一項の最高裁判所規則で定める事項は、次に掲げる事項とする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>請求者の官公職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>有効期間内であっても、その理由又は必要がなくなったときは、直ちにこれを返還しなければならない旨</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第五条第三項の規定により法第二十三条第一項の許可をするときは、傍受の実施に用いるものとして指定された特定電子計算機を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="6">
+          <ArticleCaption>（傍受ができる期間の延長請求の方式）</ArticleCaption>
+          <ArticleTitle>第六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第七条第一項の規定による傍受ができる期間の延長の請求は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面には、延長を必要とする事由及び延長を求める期間を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の請求をするには、傍受令状を差し出し、かつ、延長を必要とする事由があることを認めるべき資料を提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="7">
+          <ArticleCaption>（傍受ができる期間の延長の裁判）</ArticleCaption>
+          <ArticleTitle>第七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判官は、前条第一項の請求を理由があるものと認めて延長の裁判をしたときは、延長する期間及び理由を記載した傍受令状を裁判所書記官をして請求者に交付させなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>裁判所書記官は、傍受令状を請求者に交付する場合には、傍受令状に交付の年月日を記載して記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前条第一項の請求については、刑事訴訟規則（昭和二十三年最高裁判所規則第三十二号）第百四十条及び第百四十一条の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="3">
+        <ChapterTitle>第三章 通信傍受の記録等</ChapterTitle>
+        <Article Num="8">
+          <ArticleCaption>（記録媒体の封印の方法）</ArticleCaption>
+          <ArticleTitle>第八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十五条第一項又は第二項の規定により立会人が記録媒体を封印する場合においては、封印上に、封印した年月日時を記載して署名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="9">
+          <ArticleCaption>（傍受の原記録の提出）</ArticleCaption>
+          <ArticleTitle>第九条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十五条第四項又は第二十六条第四項の規定により記録媒体を裁判官に提出する場合においては、次に掲げる事項を記載した書面及び傍受令状の写しを添付しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>記録媒体を提出する者の官公職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>記録媒体の種類及び数量</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>各記録媒体への記録の開始及び終了の年月日時</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十六条第一項の規定により記録をした記録媒体があるときは、その旨</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+        <Article Num="10">
+          <ArticleCaption>（傍受の処分着手後の措置）</ArticleCaption>
+          <ArticleTitle>第十条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>傍受令状に基づき傍受の処分に着手したときは、傍受令状に着手の年月日時及び傍受の実施を終了した年月日時を記載して記名押印しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="11">
+          <ArticleCaption>（傍受の実施の状況を記載した書面等の記載事項）</ArticleCaption>
+          <ArticleTitle>第十一条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十七条第一項第九号の最高裁判所規則で定める事項は、次に掲げる事項とする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受令状の発付及び傍受ができる期間の延長の裁判の年月日並びに傍受令状を発付した裁判官が所属する裁判所名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>被疑者の氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受の実施をした者の官公職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受の実施の対象とされた通信手段</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="5">
+              <ItemTitle>五</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受の実施の方法及び場所</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="6">
+              <ItemTitle>六</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第十四条第二項の規定により傍受をした通信について法第二十九条第五項の規定により通信の記録を消去したときは、消去した者の官公職氏名、消去した年月日時及び消去した部分</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="7">
+              <ItemTitle>七</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受をした通信について、記録媒体中の記録箇所を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十七条第二項第六号の最高裁判所規則で定める事項は、前項各号に掲げる事項のほか、次に掲げる事項とする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十三条第一項の規定による通信の原信号の暗号化及び暗号化信号の伝送を行った通信管理者等の氏名及び職業</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受の実施に用いた特定電子計算機を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十八条第一項第十二号の最高裁判所規則で定める事項は、第一項第一号から第五号までに掲げる事項のほか、次に掲げる事項とする。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十条第一項の規定による通信の原信号の暗号化及び暗号化信号の一時的保存並びに法第二十一条第一項の規定による暗号化信号の復号を行った通信管理者等の氏名及び職業</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>再生の実施をした者の官公職氏名</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第二十一条第四項の規定により再生した通信について法第二十九条第五項の規定により通信の記録を消去したときは、消去した者の官公職氏名、消去した年月日時及び消去した部分</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="4">
+              <ItemTitle>四</ItemTitle>
+              <ItemSentence>
+                <Sentence>再生をした通信について、記録媒体中の記録箇所を特定するに足りる事項</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第二十八条第二項第八号の最高裁判所規則で定める事項は、第一項第一号から第五号まで、第二項各号並びに前項第二号及び第四号に掲げる事項並びに法第二十三条第四項においてその例によることとされる法第二十一条第四項の規定により再生した通信について法第二十九条第五項の規定により通信の記録を消去したときは、消去した者の官公職氏名、消去した年月日時及び消去した部分とする。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="12">
+          <ArticleCaption>（傍受をした通信の記録消去後の措置）</ArticleCaption>
+          <ArticleTitle>第十二条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官又は司法警察員は、傍受の実施の状況を記載した書面を裁判官に提出した後、法第二十九条第五項の規定又は法第三十三条第三項（法第二十七条第三項又は第二十八条第三項において準用する場合を含む。）に規定する消去命令により通信の記録を消去したときは、速やかに、消去した者の官公職氏名、消去した年月日時及び消去した部分を当該裁判官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="13">
+          <ArticleCaption>（通信の当事者に対する通知をした場合の事後措置）</ArticleCaption>
+          <ArticleTitle>第十三条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>検察官又は司法警察員は、傍受記録に記録されている通信の当事者に対し、法第三十条の規定による通知をしたときは、速やかに、通知書の写しを添付した書面をもって、その旨を原記録保管裁判官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="14">
+          <ArticleCaption>（通信の当事者に対する通知を発しなければならない期間の延長請求の方式）</ArticleCaption>
+          <ArticleTitle>第十四条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十条第二項の規定による通知を発しなければならない期間の延長の請求は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面には、傍受の実施を終了した年月日、通知によって捜査が妨げられるおそれがあることを認めるべき事由及び延長を求める期間を記載しなければならない。前に通知を発しなければならない期間が延長されたときは、その旨及びその期間をも記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の請求をするには、通知によって捜査が妨げられるおそれがあることを認めるべき資料を提供しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="15">
+          <ArticleCaption>（傍受の原記録の聴取及び閲覧等の請求の方式）</ArticleCaption>
+          <ArticleTitle>第十五条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条第一項から第五項までの規定による傍受の原記録の聴取若しくは閲覧又はその複製の作成の請求は、書面でしなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>前項の書面には、聴取若しくは閲覧又は複製の作成を求める部分を特定するに足りる事項及び法に定める聴取若しくは閲覧又は複製の作成の理由が存在すると認められる事由を記載しなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>第一項の請求を受けた原記録保管裁判官は、必要があると認めるときは、請求者に対し、法に定める聴取若しくは閲覧又は複製の作成の理由が存在することを認めるべき資料の提示を求めることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="16">
+          <ArticleCaption>（傍受の原記録等の聴取及び閲覧等）</ArticleCaption>
+          <ArticleTitle>第十六条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十二条第一項から第五項までの規定による傍受の原記録の聴取及び閲覧並びにその複製の作成は、裁判所において行う。ただし、原記録保管裁判官が必要と認めるときは、この限りでない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="2">
+            <ParagraphNum>２</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原記録保管裁判官は、傍受の原記録の聴取及び閲覧並びにその複製の作成について、日時、場所及び時間を指定することができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="3">
+            <ParagraphNum>３</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原記録保管裁判官は、傍受の原記録の聴取及び閲覧並びにその複製の作成について、傍受の原記録の破棄その他不法な行為を防ぐため必要があると認めるときは、裁判所書記官その他の裁判所職員をこれに立ち会わせ、又はその他の適当な措置を講じなければならない。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="4">
+            <ParagraphNum>４</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>原記録保管裁判官は、傍受の原記録を聴取させ、又は閲覧させる場合において、必要があると認めるときは、その複製を聴取させ、又は閲覧させることができる。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+          <Paragraph Num="5">
+            <ParagraphNum>５</ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>法第三十一条の規定による傍受記録の聴取若しくは閲覧又はその複製の作成に関する手続のうち、裁判所が保管する傍受記録に係る手続については、前各項の規定を準用する。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+        <Article Num="17">
+          <ArticleCaption>（傍受の原記録の保管に関する通知）</ArticleCaption>
+          <ArticleTitle>第十七条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>次に掲げる場合には、検察官は、速やかに、それぞれその旨を当該傍受の原記録保管裁判官に通知しなければならない。</Sentence>
+            </ParagraphSentence>
+            <Item Num="1">
+              <ItemTitle>一</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受が行われた事件に係る被疑事件について公訴が提起されたとき及び当該被告事件が終結したとき。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="2">
+              <ItemTitle>二</ItemTitle>
+              <ItemSentence>
+                <Sentence>傍受が行われた事件に係る被告事件以外の被告事件において傍受記録又はその複製等が証拠として取り調べられたとき及び当該被告事件が終結したとき。</Sentence>
+              </ItemSentence>
+            </Item>
+            <Item Num="3">
+              <ItemTitle>三</ItemTitle>
+              <ItemSentence>
+                <Sentence>法第三十七条に規定する罪に係る被疑事件について公訴が提起されたとき、当該被告事件が終結したとき及び右の罪に係る被疑事件について刑事訴訟法（昭和二十三年法律第百三十一号）第二百六十二条第一項の請求がされたとき。</Sentence>
+              </ItemSentence>
+            </Item>
+          </Paragraph>
+        </Article>
+      </Chapter>
+      <Chapter Num="4">
+        <ChapterTitle>第四章 補則</ChapterTitle>
+        <Article Num="18">
+          <ArticleCaption>（刑事訴訟規則との関係）</ArticleCaption>
+          <ArticleTitle>第十八条</ArticleTitle>
+          <Paragraph Num="1">
+            <ParagraphNum></ParagraphNum>
+            <ParagraphSentence>
+              <Sentence>通信の傍受に関する手続については、法及びこの規則に定めるもののほか、刑事訴訟規則による。</Sentence>
+            </ParagraphSentence>
+          </Paragraph>
+        </Article>
+      </Chapter>
+    </MainProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、法の施行の日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成一二年一二月一五日最高裁判所規則第一五号）</SupplProvisionLabel>
+      <Paragraph Num="1">
+        <ParagraphNum></ParagraphNum>
+        <ParagraphSentence>
+          <Sentence>この規則は、平成十三年一月六日から施行する。</Sentence>
+        </ParagraphSentence>
+      </Paragraph>
+    </SupplProvision>
+    <SupplProvision>
+      <SupplProvisionLabel>附 則（平成三〇年一月一五日最高裁判所規則第一号）抄</SupplProvisionLabel>
+      <Article Num="1">
+        <ArticleCaption>（施行期日）</ArticleCaption>
+        <ArticleTitle>第一条</ArticleTitle>
+        <Paragraph Num="1">
+          <ParagraphNum></ParagraphNum>
+          <ParagraphSentence>
+            <Sentence>この規則は、刑事訴訟法等の一部を改正する法律（平成二十八年法律第五十四号）附則第一条第四号に掲げる規定の施行の日から施行する。ただし、第三条の規定は、同法の施行の日から施行する。</Sentence>
+          </ParagraphSentence>
+        </Paragraph>
+      </Article>
+    </SupplProvision>
+  </LawBody>
+</Law>

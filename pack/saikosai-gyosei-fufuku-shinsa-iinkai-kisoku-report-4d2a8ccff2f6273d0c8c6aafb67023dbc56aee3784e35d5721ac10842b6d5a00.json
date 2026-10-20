@@ -1,0 +1,143 @@
+{
+ "workId": "saikosai-gyosei-fufuku-shinsa-iinkai-kisoku",
+ "file": "saikosai-gyosei-fufuku-shinsa-iinkai-kisoku-05c02aa551c694a9c5e0ae4b98befa05b79550dc113110b690be61a696cdacf0.xml",
+ "sha256": "05c02aa551c694a9c5e0ae4b98befa05b79550dc113110b690be61a696cdacf0",
+ "checkedAt": "2026-10-20",
+ "note": "照合の記録。比較相手はPDF（別の抽出経路）と官報の目次・本文。商用DBの本文は含まない",
+ "conversion": {
+  "source": "https://www.courts.go.jp/vc-files/courts/file4/gyouhukuiinnkai_kisoku_kisokusyuuyou.pdf",
+  "fetched": "2026-10-18",
+  "sha256": "3aa7f36b762e76bf08a76b858f4a25d0696a84b3e2fa0580b0b1244ff0ea108d",
+  "pages": 6,
+  "law_num": "平成二十八年三月二十四日最高裁判所規則第二号",
+  "main_articles": 23,
+  "counts": {
+   "Article": 27,
+   "Paragraph": 47,
+   "Item": 21,
+   "Subitem1": 0,
+   "SupplProvision": 1,
+   "AppdxTable": 0,
+   "Table": 0
+  },
+  "matching_characters": 5258,
+  "dropped_notes": 0,
+  "long_vowel_fixes": 0,
+  "halfwidth_paren_fixes": 0,
+  "halfwidth_punctuation_fixes": [],
+  "removed_spaces": 4,
+  "kept_spaces": 8,
+  "table_pages": [],
+  "excluded_pages": {},
+  "excluded_tables": [],
+  "inline_splits": [],
+  "table_page_joins": [],
+  "hanging_punctuation": [],
+  "page_numbers": [],
+  "events": [],
+  "gazette_amendments": [],
+  "suppl_labels": [
+   "附 則"
+  ]
+ },
+ "independentCount": {
+  "title": "最高裁判所行政不服審査委員会規則",
+  "extractor": [],
+  "counts": {
+   "MainProvisionArticle": {
+    "pdf_lines": 23,
+    "xml": 23,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "InlineStructure": {
+    "found": 0,
+    "first": []
+   },
+   "FrontMatterAfterEnactment": {
+    "lines": 0,
+    "first": []
+   },
+   "Headings": {
+    "toc": 6,
+    "body": 6
+   },
+   "Article": {
+    "pdf_lines": 27,
+    "xml": 27,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "ExplicitParagraph": {
+    "pdf_lines": 20,
+    "xml": 20,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Item": {
+    "pdf_lines": 21,
+    "xml": 21,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "Subitem1": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "SupplProvision": {
+    "pdf_lines": 1,
+    "xml": 1,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   },
+   "AppdxTable": {
+    "pdf_lines": 0,
+    "xml": 0,
+    "diff": 0,
+    "explained_by_registered_exceptions": 0
+   }
+  },
+  "unexplained": [],
+  "quoted_provision_lines": {},
+  "inline_structure": []
+ },
+ "unitMap": {
+  "title": "最高裁判所行政不服審査委員会規則",
+  "units": 100,
+  "pdf_lines": 214,
+  "xml_to_pdf": [],
+  "pdf_to_xml": [],
+  "mid_line": [],
+  "number_goes_back": [],
+  "main_provision_units": 65,
+  "accounted": {
+   "caption_then_unit_on_one_line": 0,
+   "registered_mid_line": 0,
+   "quoted_in_amending_provision": 0
+  },
+  "pdf_body_from_line": 11
+ },
+ "tables": {
+  "title": "最高裁判所行政不服審査委員会規則",
+  "xml_tables": 0,
+  "pdf_fragments": 0,
+  "tables": [],
+  "unused_pdf_tables": []
+ },
+ "kanpo": {
+  "enacted": {
+   "issue": "平成28年3月24日 本紙第6741号",
+   "rule": "平成28年最高裁判所規則第2号",
+   "title": "最高裁判所行政不服審査委員会規則",
+   "year": 2016,
+   "no": 2,
+   "url": "https://www.kanpo.go.jp/old/20160324/20160324h06741/20160324h067410005f.html",
+   "found_by": "官報"
+  },
+  "amendments": [],
+  "pdf_not_in_kanpo": [],
+  "kanpo_not_in_pdf": []
+ }
+}
