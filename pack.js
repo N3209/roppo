@@ -38,6 +38,23 @@ const PACK_PREFIX = 'pack-';
  * 持ち回すと、パックを差し替えたあとも古い一覧を出す。103本ぶんの見出しでも
  * 500KB ほどで、押すのは人なので、読み直す方がよい。
  */
+/*
+ * 通信できなかったことを、数字ではなく言葉で言う。
+ *
+ * Service Worker が入っていると、通信の失敗は catch に来ない。殻のキャッシュに
+ * 無いものは素通しするが、その fetch が失敗すると sw.js が 504 のレスポンスに
+ * 化けさせる（sw.js の fetch の末尾）。だから res.ok が false で status が 504
+ * になり、「規則パックが読めません（504）」と出ていた。504 は読む人に何も
+ * 言わない。
+ *
+ * これは jsdom の試験では出ない経路である（Service Worker が動かないので、
+ * fetch の失敗はそのまま catch に来る）。実ブラウザで見つけた。
+ *
+ * 503 は sw.js が画面遷移のときに返す値、502 は中継が落ちているときに来る。
+ * どれも「こちらから届かない」であって、パックの話ではない。
+ */
+const OFFLINE_STATUS = new Set([502, 503, 504]);
+
 async function fetchPackManifest() {
   let res;
   try {
@@ -47,16 +64,28 @@ async function fetchPackManifest() {
   }
   if (!res.ok) {
     // 404 は「まだ置いていない」である。壊れているのとは言い方を分ける
-    throw new Error(res.status === 404
-      ? 'この配布には規則パックが入っていません'
-      : '規則パックが読めません（' + res.status + '）');
+    if (res.status === 404) throw new Error('この配布には規則パックが入っていません');
+    if (OFFLINE_STATUS.has(res.status)) {
+      throw new Error('規則パックが読めません（通信できませんでした）。'
+        + 'オフラインのときは取り込めません');
+    }
+    throw new Error('規則パックが読めません（' + res.status + '）');
   }
   let json;
   try { json = await res.json(); }
   catch (e) { throw new Error('pack.json が読めません（形が違います）'); }
   const rules = (json && json.rules) || [];
   if (!rules.length) throw new Error('pack.json に規則が1本も入っていません');
-  return { packVersion: json.packVersion || '', note: json.note || '', rules };
+  return {
+    packVersion: json.packVersion || '',
+    /*
+     * パックを組んだ日。版の番号だけでは、どのくらい前のものか分からない。
+     * 規則ごとの「取得」（PDFを取った日）とは別で、こちらは全体の鮮度である。
+     */
+    builtAt: json.builtAt || '',
+    note: json.note || '',
+    rules,
+  };
 }
 
 /** バイト列の sha256 を16進で。crypto.subtle は https と localhost で使える。 */
@@ -71,29 +100,28 @@ async function sha256Hex(buf) {
  * 通信を含めていないのは、ここが検めの中身だからである。通信を混ぜると、
  * 検めを試すのに偽の通信先が要る。バイト列を渡せば試せる形にしておく。
  *
- * 検める順に意味がある。安いものから、そして「名乗りと違う」を先に出す。
+ * 検める順に意味がある。**理由を言い分けられるものを先に見る。**
  *
- *   1  バイト数    pack.json の bytes と合うか
- *   2  sha256      pack.json の sha256 と合うか
- *   3  BOM と改行  LF のみ・BOM なしか（配信の経路で書き換わっていないか）
+ *   1  BOM と改行  LF のみ・BOM なしか（配信の経路で書き換わっていないか）
+ *   2  バイト数    pack.json の bytes と合うか
+ *   3  sha256      pack.json の sha256 と合うか
  *   4  XML として読めるか
  *   5  題名が pack.json と合うか
  *   6  条文が読めるか（描いてみる）
  *
- * 3は2と重なるが、理由を言い分けるために別に見る。sha256 が合わないときに
- * 「CRLF が混じっている」と言えれば、.gitattributes を直せばよいと分かる。
- * 「ハッシュが違う」だけでは、中身が差し替わったのかと疑うことになる。
+ * はじめは安い順（バイト数 → sha256 → BOM と改行）にしていた。これは誤り
+ * だった。改行が書き換わるとバイト数も増えるので、必ず「バイト数が合いません」
+ * で止まり、用意した「改行が CRLF です」に辿り着けない。一番起きやすい故障の
+ * 案内が、一番出ない順番になっていた。
+ *
+ * 1と3は同じ狂いを別の角度から見ている。どちらでも気づけるが、直し方が違う。
+ *
+ *   「改行が CRLF です」      .gitattributes を確かめればよいと分かる
+ *   「ハッシュが合いません」   中身が差し替わったのかと疑うことになる
  */
 async function packRecordFrom(entry, buf) {
   // ArrayBuffer でも Uint8Array でも受ける。以下はこの1つの見方だけを使う
   const u8 = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
-
-  if (entry.bytes !== undefined && u8.length !== entry.bytes) {
-    throw new Error('バイト数が合いません（一覧 ' + entry.bytes
-      + ' / 実物 ' + u8.length + '）');
-  }
-
-  const sum = await sha256Hex(u8);
   const text = new TextDecoder('utf-8').decode(u8);
 
   /*
@@ -110,8 +138,15 @@ async function packRecordFrom(entry, buf) {
   const crlf = (text.match(/\r\n/g) || []).length;
   if (crlf) {
     throw new Error('改行が CRLF です（' + crlf + '箇所）。'
-      + '配信の経路で書き換わっています（dist/.gitattributes の *.xml -text）');
+      + '配信の経路で書き換わっています（dist/.gitattributes の pack/** -text）');
   }
+
+  if (entry.bytes !== undefined && u8.length !== entry.bytes) {
+    throw new Error('バイト数が合いません（一覧 ' + entry.bytes
+      + ' / 実物 ' + u8.length + '）');
+  }
+
+  const sum = await sha256Hex(u8);
   if (sum !== entry.sha256) {
     throw new Error('ハッシュが合いません（一覧 ' + String(entry.sha256).slice(0, 12)
       + '… / 実物 ' + sum.slice(0, 12) + '…）');
@@ -186,8 +221,14 @@ async function packRecordFrom(entry, buf) {
 async function takePackRule(entry, opts) {
   let res;
   try { res = await fetch(PACK_DIR + entry.file, { cache: 'no-store' }); }
-  catch (e) { throw new Error('取りに行けませんでした（通信）'); }
-  if (!res.ok) throw new Error('取りに行けませんでした（' + res.status + '）');
+  catch (e) { throw new Error('取りに行けませんでした（通信できませんでした）'); }
+  if (!res.ok) {
+    // 一覧と同じ理由で、504 のような数字をそのまま出さない（上の OFFLINE_STATUS）
+    if (OFFLINE_STATUS.has(res.status)) {
+      throw new Error('取りに行けませんでした（通信できませんでした）');
+    }
+    throw new Error('取りに行けませんでした（' + res.status + '）');
+  }
   const buf = await res.arrayBuffer();
 
   const rec = await packRecordFrom(entry, buf);
@@ -268,7 +309,8 @@ function renderPackList() {
   const note = $('#pack-note');
   if (note) {
     note.textContent = got.rules.length + '本'
-      + (got.packVersion ? '　パック版 ' + got.packVersion : '');
+      + (got.packVersion ? '　パック版 ' + got.packVersion : '')
+      + (got.builtAt ? '　' + got.builtAt + ' 作成' : '');
   }
 
   const list = got.rules.filter(r => !kw

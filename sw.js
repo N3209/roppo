@@ -24,7 +24,7 @@
  * 抱えたまま読み込み直すことになるため、断りなしには行わない。
  */
 
-const VERSION = 'v102';
+const VERSION = 'v105';
 const CACHE = 'roppo-shell-' + VERSION;
 
 // 欠けると起動しないもの。全部そろって初めてこの版を入れる。
