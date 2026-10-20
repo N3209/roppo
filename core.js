@@ -22,7 +22,7 @@ const API = 'https://laws.e-gov.go.jp/api/2';
  * 画面に出しておけば一目で分かる。publish.js が sw.js と食い違っていないかを
  * 確かめるので、片方だけ上げ忘れることはない。
  */
-const APP_VERSION = 'v107';
+const APP_VERSION = 'v108';
 
 
 /*

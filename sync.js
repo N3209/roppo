@@ -315,7 +315,19 @@ async function syncOnce(remote, opts) {
     }
     const v = validateSnapshot(raw);
     if (!v.ok) { out.why = '中身が読めません（' + f.writerId + '）: ' + v.why; return out; }
-    all.push(v.snapshot);
+    /*
+     * 置かれた時刻を持ち回す。
+     *
+     * 下の目録（LAW_INV_KEY）に Date.now() を入れていたので、覚えた時刻が
+     * 並ぶだけで、どの書き手が古いのか見分けられなかった。実際に、引退した
+     * 端末が「自分はこれを持っている」と言い続けているのを見分けるのに、
+     * 世代の数字しか手がかりが無かった。
+     *
+     * ファイルの時刻はここまで来ている（listSnapshots が返している）のに、
+     * 捨てていた。中身には入れず、こちらで添える（相手が名乗る値ではなく、
+     * Drive が記録した値を使う）。
+     */
+    all.push(Object.assign(v.snapshot, { placedAt: f.modifiedTime || '' }));
   }
 
   const ds = await adoptDatasetId(all);
@@ -431,7 +443,20 @@ async function syncOnce(remote, opts) {
     for (const s2 of incoming) {
       if (s2.writerId === deviceId) continue;
       const list = (s2.records && s2.records.laws) || null;
-      if (list) inv[s2.writerId] = { at: Date.now(), laws: list };
+      /*
+       * at は「相手が置いた時刻」である。こちらが覚えた時刻ではない。
+       *
+       * Date.now() を入れていたので、5つの書き手が全部同じ時刻になり、
+       * 引退した端末を見分けられなかった。見分けるためにある欄が、
+       * 見分けられない値を持っていた。
+       */
+      if (list) {
+        inv[s2.writerId] = {
+          at: s2.placedAt ? Date.parse(s2.placedAt) || Date.now() : Date.now(),
+          gen: s2.generation,
+          laws: list,
+        };
+      }
     }
     if (Object.keys(inv).length) await store.putMeta(LAW_INV_KEY, inv);
   } catch (e) { /* 覚えられなくても同期は済んでいる */ }
@@ -633,13 +658,36 @@ async function peekRemote() {
       lines.push('※ 両方の端末で、上のアカウントが同じかを確かめてください');
     } else {
       lines.push('置いてあるもの ' + list.length + '件:');
+      /*
+       * 書き手ごとに、最新の世代と置いた時刻を出す。
+       *
+       * 時刻を出していなかったので、引退した端末が混じっていても見分けられ
+       * なかった。印（deviceId）は人には読めないが、時刻は読める。
+       * 実際に、公開先へ移る前の PC の印が残り続けて、消した規則7本を
+       * 「自分は持っている」と言い続けていた。
+       */
       const by = new Map();
       for (const f of list) {
         const cur = by.get(f.writerId);
-        if (!cur || f.generation > cur) by.set(f.writerId, f.generation);
+        if (!cur || f.generation > cur.g) {
+          by.set(f.writerId, { g: f.generation, t: f.modifiedTime || '' });
+        }
       }
-      for (const [w, g] of by) {
-        lines.push('  ' + w + '　最新の世代 ' + g + (w === deviceId ? '　（この端末）' : ''));
+      for (const [w, v] of by) {
+        const t = v.t ? Date.parse(v.t) : 0;
+        const d = t ? Math.floor((Date.now() - t) / 86400000) : -1;
+        lines.push('  ' + w + '　最新の世代 ' + v.g
+          + (v.t ? '　' + new Date(t).toLocaleString('ja-JP') : '')
+          + (d > 0 ? '（' + d + '日前）' : '')
+          + (w === deviceId ? '　（この端末）' : ''));
+      }
+      const stale = [...by].filter(([w, v]) => w !== deviceId && v.t
+        && Date.now() - Date.parse(v.t) > 7 * 86400000);
+      if (stale.length) {
+        lines.push('');
+        lines.push('※ 7日以上置き直されていない端末が ' + stale.length + '件あります。');
+        lines.push('   使っていない端末や、別の住所で開いていたときの記録が残ると、');
+        lines.push('   「ほかの端末にあって、この端末に無い法令」に古いものが出ます。');
       }
       /*
        * 置いてあるものの印を覗いて、別のかたまりが居れば合流を出す。
@@ -866,12 +914,33 @@ async function missingLaws() {
   for (const [writer, got] of Object.entries(inv)) {
     for (const l of (got && got.laws) || []) {
       if (!l || !l.lawId || have.has(l.lawId)) continue;
-      if (!out.has(l.lawId)) out.set(l.lawId, { ...l, writers: [] });
-      out.get(l.lawId).writers.push(writer);
+      if (!out.has(l.lawId)) out.set(l.lawId, { ...l, writers: [], at: 0 });
+      const o = out.get(l.lawId);
+      o.writers.push(writer);
+      // いちばん新しい記録の時刻を持つ。古い端末だけが持っているものが分かる
+      if (got.at && got.at > o.at) o.at = got.at;
     }
   }
   return [...out.values()]
     .sort((a, b) => String(a.lawTitle).localeCompare(String(b.lawTitle), 'ja'));
+}
+
+/*
+ * 目録がいつの記録かを言う。
+ *
+ * 目録は「その端末が最後に同期した時点の事実」で、墓石を持たない。だから
+ * 引退した端末が「自分はこれを持っている」と言い続ける。実際にそうなって、
+ * ファイルから取り込んで消した規則7本が、引退した端末の記録として残り続けた。
+ * 原因を突き止めるのに、Drive の中身を直に見るしかなかった。
+ *
+ * どの端末のものかを出しても、印（deviceId）は人には読めない。いつの記録かを
+ * 出せば、「古い記録だ」とだけは分かる。消す手立ては別に要る。
+ */
+function invAge(at) {
+  if (!at) return '';
+  const d = Math.floor((Date.now() - at) / 86400000);
+  if (d <= 0) return '';                      // 今日の記録なら黙っている
+  return '　' + d + '日前の記録';
 }
 
 /*
@@ -948,7 +1017,7 @@ async function renderMissing() {
     const d = document.createElement('div');
     d.className = 'r';
     d.innerHTML = `<div class="info"><div class="name">${esc(l.lawTitle || l.lawId)}</div>`
-      + `<div class="sub">${esc(l.lawNum || '')}${sub}</div></div>`
+      + `<div class="sub">${esc(l.lawNum || '')}${sub}${esc(invAge(l.at))}</div></div>`
       + (can ? '<button>取り込む</button>'
         : `<button disabled>${esc(MISSING_LABEL[origin] || '取り込めない')}</button>`);
     const btn = d.querySelector('button');
