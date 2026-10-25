@@ -531,6 +531,31 @@ async function runSync() {
   } finally {
     syncing = false;
     await showLastSync();
+    /*
+     * 本文の食い違いを調べ直す。
+     *
+     * 同期で目録が入れ替わるので、ここで調べないと帯が古い判断で出る。
+     * 失敗しても読むのに差し支えないので、黙って諦める（checkStaleBodies
+     * の中で捕まえている）。
+     */
+    await checkStaleBodies();
+    const stale = Object.keys(staleBody).length;
+    if (stale) {
+      toast('本文が他の端末と食い違う法令が ' + stale + '件あります。'
+        + '注釈が別の条文に付いて見えることがあります。'
+        + '「法令を追加」から、どの版に合わせるかを選んでください');
+      /*
+       * 開いている面が当たっているなら、開き直して帯を出す。
+       *
+       * 食い違っているときだけ開き直す。同期のたびに開き直すと、大きな
+       * 法令を読んでいる最中に固まる。
+       */
+      for (const pane of livePanes()) {
+        if (pane.current && staleBodyOf(pane.current.lawId)) {
+          await openLaw(pane.current.lawId, null, pane.el.scrollTop, pane);
+        }
+      }
+    }
   }
 }
 
@@ -926,6 +951,175 @@ async function missingLaws() {
 }
 
 /*
+ * 本文が他の端末と食い違っている法令。
+ *
+ * 目録に載った版IDと、手元の版IDを比べる。
+ *
+ * **「相手の方が新しいときだけ言う」のはやめた。** 施行日の新旧では
+ * 決められないからである（Codex の2回目の指摘4・7）。
+ *
+ *   ・入れ替えは取り消せる。取り消すと注釈は旧版の住所へ戻るが、相手の
+ *     目録には新版が載ったままなので、「相手が新しい」で判断すると
+ *     **戻したばかりの注釈を動かさずに本文だけ新版へ戻してしまう**
+ *   ・施行日が同じで版IDが違うことがある（theirs <= ours で黙っていた）
+ *   ・施行日を持たない記録もある
+ *
+ * だから新旧を決めず、「版が食い違っている」ことだけを言う。どちらに
+ * 合わせるかは人が決める。**こちらの方が新しい場合も言う。** うるさく
+ * なるが、黙って「別の条文に付いた注釈」を見続けるより軽い。
+ *
+ * 持っていない法令はここでは扱わない。それは missingLaws の話である。
+ */
+async function staleBodies() {
+  let inv = {};
+  try {
+    const rec = await store.getMeta(LAW_INV_KEY);
+    inv = (rec && rec.value) || {};
+  } catch (e) { return []; }
+
+  const mine = new Map(state.laws.map(l => [l.lawId, l]));
+  const out = new Map();
+  for (const [writer, got] of Object.entries(inv)) {
+    if (writer === deviceId) continue;
+    for (const l of (got && got.laws) || []) {
+      if (!l || !l.lawId || !l.lawRevisionId) continue;
+      const here = mine.get(l.lawId);
+      if (!here) continue;
+      if ((here.lawRevisionId || '') === l.lawRevisionId) continue;
+      const o = out.get(l.lawId)
+        || { lawId: l.lawId, lawTitle: here.lawTitle || l.lawTitle || l.lawId,
+          ours: here.lawRevisionId || '', oursEnforced: here.enforcementDate || '',
+          others: [], at: 0 };
+      o.others.push({ writer, rev: l.lawRevisionId,
+        enforced: l.enforcementDate || '', at: got.at || 0 });
+      if (got.at && got.at > o.at) o.at = got.at;
+      out.set(l.lawId, o);
+    }
+  }
+  return [...out.values()]
+    .sort((a, b) => String(a.lawTitle).localeCompare(String(b.lawTitle), 'ja'));
+}
+
+/*
+ * 分かっている食い違い。画面を開いている間だけ覚える。
+ *
+ * 帯を描くのは showLaw の中で、そこは同期していない関数である。
+ * 目録を読み直すわけにいかないので、同期のあとに調べて覚えておく
+ * （規則パックの packNewer と同じ運び）。
+ */
+let staleBody = {};
+
+async function checkStaleBodies() {
+  try {
+    const list = await staleBodies();
+    const map = {};
+    for (const s of list) map[s.lawId] = s;
+    staleBody = map;
+  } catch (e) { /* 分からないときは何も出さない */ }
+}
+
+/** その法令の本文が古いと分かっているか。分かっていなければ null。 */
+const staleBodyOf = lawId => staleBody[lawId] || null;
+
+/*
+ * 本文だけを取り直す。注釈には触らない。
+ *
+ * **これが「入れ替え」と違うところである。** 入れ替えは「本文が新しく
+ * なるので注釈を動かす」操作だが、こちらは「注釈はもう新しい住所に居る
+ * ので本文だけを合わせる」操作である。注釈を動かすと二度動かすことに
+ * なり、条が入れ替わる改正では逆へ戻してしまう。
+ *
+ * 取る版は目録が名乗った版IDで指定する。法令IDで取り直すと、その間に
+ * さらに改正されていたら別の本文が来る（Codex の助言）。
+ */
+async function takeStaleBody(lawId, pick) {
+  const before = await store.getLaw(lawId);
+  if (!before) throw new Error('法令が見つかりません');
+  const xml = await apiFetchLaw(pick.rev);
+
+  /*
+   * 取っている間に、このタブ以外がこの法令を書き換えていないか。
+   *
+   * 通信の待ち時間に別のタブが入れ替え（や取り消し）を終えていると、
+   * 取得前のレコードを丸ごと書き戻して **本文と注釈が別の版になる。**
+   * swappedAt や keptAs も取得前の値へ巻き戻る（Codex の2回目の
+   * 指摘5）。トランザクションの中で検める。
+   */
+  const next = { ...before, xml,
+    lawRevisionId: pick.rev,
+    /*
+     * 施行日は、分かっているときだけ入れ替える。分からないなら**消す。**
+     * 前の版の施行日を残すと、新しい版IDに別の版の施行日が組み合わさる
+     * （Codex の2回目の指摘7）。
+     */
+    importedAt: today(), savedAt: Date.now() };
+  if (pick.enforced) next.enforcementDate = pick.enforced;
+  else delete next.enforcementDate;
+
+  await store.applyBulk({
+    laws: [next],
+    local: true,
+    expect: { laws: [{ lawId, savedAt: before.savedAt || 0 }] },
+  });
+  delete staleBody[lawId];
+}
+
+async function renderStale() {
+  const box = $('#stale-box');
+  const list = $('#stale-list');
+  if (!box || !list) return;
+  const miss = await staleBodies();
+  box.hidden = !miss.length;
+  if (!miss.length) return;
+
+  $('#stale-count').textContent = miss.length + '件';
+  list.innerHTML = '';
+  for (const s of miss) {
+    /*
+     * 候補は端末ごとに出す。
+     *
+     * どちらが正しいかはアプリには決められない（入れ替えは取り消せるので、
+     * 施行日の新しい方が正しいとは言えない）。相手ごとに「この版に合わせる」
+     * を並べて、人に選ばせる（Codex の2回目の指摘4）。
+     */
+    const seen = new Map();
+    for (const o of s.others) if (o.rev && !seen.has(o.rev)) seen.set(o.rev, o);
+    const d = document.createElement('div');
+    d.className = 'r';
+    const mine = s.oursEnforced ? s.oursEnforced + ' 施行の版'
+      : s.ours ? '版ID ' + String(s.ours).slice(-8) : '版の記録なし';
+    d.innerHTML = `<div class="info"><div class="name">${esc(s.lawTitle)}</div>`
+      + `<div class="sub">${esc('この端末は ' + mine + invAge(s.at))}</div></div>`;
+    const box = document.createElement('div');
+    box.className = 'stale-picks';
+    for (const o of seen.values()) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'mini';
+      b.textContent = (o.enforced ? o.enforced + ' 施行の版' : '版ID ' + String(o.rev).slice(-8))
+        + 'に合わせる';
+      b.onclick = async () => {
+        b.disabled = true; b.textContent = '取得中…';
+        try {
+          await takeStaleBody(s.lawId, o);
+          await refreshLawList();
+          if (typeof afterSwapRefresh === 'function') await afterSwapRefresh(s.lawId);
+          toast(`「${s.lawTitle}」の本文を取り直しました`);
+          await checkStaleBodies();
+          await renderStale();
+        } catch (e) {
+          b.disabled = false; b.textContent = '再試行';
+          toast('取り直せませんでした: ' + e.message);
+        }
+      };
+      box.appendChild(b);
+    }
+    d.appendChild(box);
+    list.appendChild(d);
+  }
+}
+
+/*
  * 目録がいつの記録かを言う。
  *
  * 目録は「その端末が最後に同期した時点の事実」で、墓石を持たない。だから
@@ -950,12 +1144,17 @@ function invAge(at) {
 const MISSING_SUB = {
   file: '　ファイルから取り込んだもの。e-Gov には無い',
   pack: '　規則パックのもの。e-Gov には無い',
+  pinned: '　他の端末で固定した版。住所が e-Gov のものではないので取り直せない',
   unknown: '　この版では扱えない出どころ。アプリを更新すること',
 };
 const MISSING_LABEL = {
   file: 'ファイルから',
+  pinned: '固定した版',
   unknown: '扱えない',
 };
+
+/* 目録の1行が、どの札で説明されるか。出どころの手前に固定版を見る。 */
+const missingKind = l => (isPinnedLawId(l.lawId) ? 'pinned' : lawOrigin(l));
 
 /*
  * 目録から取り直せるか。
@@ -964,15 +1163,41 @@ const MISSING_LABEL = {
  * ファイルから入れたものは、元のファイルを持っている人しか入れられない。
  */
 const canTakeMissing = l => {
+  /*
+   * 固定版は取り直せない。
+   *
+   * 住所が `<法令ID>@<版ID>` で、e-Gov に無いIDである。takeMissing は
+   * l.lawId をそのまま apiFetchLaw に渡すので、押せば必ず失敗する。目録は
+   * lawRevisionId を運んでいないので、正しい版IDに直すこともできない。
+   *
+   * 本文の入れ替えが残す `@kept-…` は、そもそもどの版か分かっていない本文
+   * なので、e-Gov から取り直すという考え自体が成り立たない。入れ替えを
+   * 作ったことで、この行が普通に出るようになった（それまでは固定版を
+   * 他の端末に作ったときだけだった）。
+   */
+  if (isPinnedLawId(l.lawId)) return false;
   const o = lawOrigin(l);
   return o === 'egov' || o === 'pack';
 };
 
-/** 目録から1本取り込む。e-Gov のものだけ。 */
+/*
+ * 目録から1本取り込む。e-Gov のものだけ。
+ *
+ * **版IDが分かっているなら、それで取る。** 法令IDで取ると、相手が同期して
+ * からAPIがさらに進んでいた場合に、相手の注釈とは別の本文が来る
+ * （Codex の2回目の指摘8）。takeStaleBody で塞いだ穴が、こちらに残っていた。
+ *
+ * 版IDと施行日も記録する。書かないと、次の改正で「新しい版が出ています」と
+ * 言えない（checkAmendment の behind 判定はどちらかを要る）。
+ */
 async function takeMissing(l) {
-  const xml = await apiFetchLaw(l.lawId);
+  const rev = l.lawRevisionId || '';
+  const xml = await apiFetchLaw(rev || l.lawId);
   await store.putLaw({
     lawId: l.lawId, lawTitle: l.lawTitle, lawNum: l.lawNum,
+    ...(rev ? { lawRevisionId: rev } : {}),
+    ...(l.enforcementDate ? { enforcementDate: l.enforcementDate } : {}),
+    importedAt: today(),
     xml, savedAt: Date.now(),
   });
   state.indexCache.delete(l.lawId);
@@ -1011,15 +1236,20 @@ async function renderMissing() {
      * パックは pack/ にあるので押せる。ここがパックの「まとめて」に相当する
      * 唯一の経路である。出るのは自分が選んだものだけなので、103本を一息に
      * 入れる話にはならない（pack.js の openPackList の冒頭）。
+     *
+     * 押せるかは canTakeMissing だけで決める。前はここに同じ条件をもう一度
+     * 書いていた。条件が2か所にあると、片方だけ直したときに「押せるのに
+     * 取り直せない」行ができる（固定版がまさにそれだった）。
      */
-    const sub = MISSING_SUB[origin] || '';
-    const can = origin === 'egov' || origin === 'pack';
+    const kind = missingKind(l);
+    const sub = MISSING_SUB[kind] || '';
+    const can = canTakeMissing(l);
     const d = document.createElement('div');
     d.className = 'r';
     d.innerHTML = `<div class="info"><div class="name">${esc(l.lawTitle || l.lawId)}</div>`
       + `<div class="sub">${esc(l.lawNum || '')}${sub}${esc(invAge(l.at))}</div></div>`
       + (can ? '<button>取り込む</button>'
-        : `<button disabled>${esc(MISSING_LABEL[origin] || '取り込めない')}</button>`);
+        : `<button disabled>${esc(MISSING_LABEL[kind] || '取り込めない')}</button>`);
     const btn = d.querySelector('button');
     if (can) {
       btn.onclick = async () => {
@@ -1081,6 +1311,7 @@ async function takeAllMissing() {
   }
   await refreshLawList();
   await renderMissing();
+  await checkStaleBodies();
   toast(done + '件を取り込みました'
     + (failed.length ? '　※' + failed.length + '件は取り込めませんでした' : ''));
   if (failed.length) console.warn('取り込めなかったもの', failed);

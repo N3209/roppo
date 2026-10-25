@@ -642,6 +642,344 @@ function buildVersionCopies({ plan, picks, nowNotes, nowRanges,
   return { notes, ranges, skipped, op: opId };
 }
 
+
+/* ---------------------------------------- 版をその場で入れ替える（核） */
+
+/*
+ * 元の法令の本文を新しい版に差し替えるときの、注釈の振り分けを組む。
+ * DBも時計も触らない。
+ *
+ * なぜ「写す」と別の関数なのか。違いは3つある。
+ *
+ *   ・住所が同じ法令の中で動く。だから元の記録を墓石にしないと、同じ注釈が
+ *     古い住所と新しい住所の2か所に出る
+ *   ・行き先が決まらなかった注釈は、退避させる固定版へ逃がす。元の法令に
+ *     置いていくと、差し替えた本文にその住所が無いので画面のどこにも出ない。
+ *     文言注釈には迷子の箱（state.orphanRanges）があるが、条項号の注釈には
+ *     無いので、黙って見えなくなる
+ *   ・そのまま（same）は何も書かない。住所が変わらないのだから動かす理由がない
+ *
+ * 二度写しの判定（copiedFrom の照合）は要らない。増やす操作ではなく動かす
+ * 操作なので、元の住所には何も残らない。代わりに行き先が空いているかを見る。
+ * 「これから動く注釈が居る」のは空いているのと同じである（第3条と第4条が
+ * 入れ替わる改正では、互いの住所へ同時に動く）。
+ *
+ * 行き先が塞がっていたら、その注釈も退避先へ逃がす。元の住所に置いていくと
+ * 見えなくなるので、「動かさない」という選択肢は無い。
+ *
+ * 文言注釈は id が鍵なので、住所を書き換えるだけで動く（墓石が要らない）。
+ * 条項号の注釈は `lawId:anchor` が鍵なので、墓石＋新規になる。
+ */
+function buildVersionSwap({ plan, picks, nowNotes, nowRanges, fromDisp, toDisp,
+  lawId, keptLawId, deviceId, now, op }) {
+  const opId = op || ('sw' + now + '-' + Math.random().toString(16).slice(2, 8));
+  const fd = fromDisp || new Map();
+  const td = toDisp || new Map();
+
+  const living = rec => rec && !isTomb(rec);
+  const noteAt = new Map();
+  const tombAt = new Map();
+  for (const n of nowNotes || []) {
+    if (!n || !n.key) continue;
+    if (living(n)) noteAt.set(n.key, n); else tombAt.set(n.key, n);
+  }
+
+  /*
+   * 行き先を決める。
+   *   選ばれていて住所が同じ   そのまま（何も書かない）
+   *   選ばれていて住所が違う   元の法令の中で動かす
+   *   選ばれていない          退避先へ逃がす（住所はそのまま）
+   */
+  const dest = new Map();
+  for (const it of plan.items) {
+    const to = picks.get(it.anchor);
+    if (to && to === it.anchor) dest.set(it.anchor, { lawId, anchor: to, kind: 'stay' });
+    else if (to) dest.set(it.anchor, { lawId, anchor: to, kind: 'move' });
+    else dest.set(it.anchor, { lawId: keptLawId, anchor: it.anchor, kind: 'park' });
+  }
+
+  // これから空く住所。入れ替わる改正を通すために要る
+  const leaving = new Set();
+  for (const [anchor, d] of dest) {
+    if (d.kind !== 'stay') leaving.add(lawId + ':' + anchor);
+  }
+
+  // 行き先の重なり。どちらが正しいか決められないので、両方とも退避先へ逃がす
+  const claim = new Map();
+  for (const [anchor, d] of dest) {
+    if (d.kind === 'stay') continue;
+    const k = d.lawId + ':' + d.anchor;
+    if (!claim.has(k)) claim.set(k, []);
+    claim.get(k).push(anchor);
+  }
+
+  /*
+   * 墓石と新規を別に集める。並べた順で put するので、入れ替わる改正では
+   * 片方の墓石がもう片方の新規を消しうる（A→B と B→A が同時に起きると、
+   * B の住所に墓石と新規の両方が並ぶ）。最後に突き合わせて、新規が来る
+   * 住所には墓石を書かない。
+   */
+  const creates = new Map();
+  const tombs = new Map();
+
+  const outRanges = [];
+  const skipped = [];
+  const moves = [];        // [旧住所, 行き先の法令, 行き先の住所]
+  const rangeMoves = [];   // [id, 旧住所, 旧nth, 行き先の法令, 行き先の住所, 新nth]
+  const stayed = [];
+  const parked = [];
+
+  for (const it of plan.items) {
+    let d = dest.get(it.anchor);
+    const srcKey = lawId + ':' + it.anchor;
+
+    // 行き先が使えないなら退避先へ落とす。元の住所には置いていけない
+    if (d.kind === 'move') {
+      const dk = d.lawId + ':' + d.anchor;
+      const rival = claim.get(dk) || [];
+      const there = noteAt.get(dk);
+      let why = '';
+      if (rival.length > 1) why = '行き先が重なっています（' + rival.join('、') + '）';
+      else if (there && !leaving.has(dk)) why = '行き先にすでに注釈があります';
+      if (why) {
+        skipped.push({ anchor: it.anchor, to: d.anchor,
+          why: why + '。退避させた版へ移しました' });
+        d = { lawId: keptLawId, anchor: it.anchor, kind: 'park' };
+      }
+    }
+
+    const dk = d.lawId + ':' + d.anchor;
+
+    /* ---- 条項号の注釈 ---- */
+    if (d.kind === 'stay') {
+      if (it.notes.length) stayed.push(it.anchor);
+    } else {
+      for (const n of it.notes) {
+        /*
+         * 候補（別々に直されたもの）は動かさない。**先に解決させる。**
+         *
+         * 一度は「候補を連れていく」ようにした。それは失うより悪い直し方
+         * だった。候補は中身だけでなく元の `key / lawId / anchor` を持つ
+         * レコードで、resolveConflict は選んだ候補をそのまま展開する
+         * （core.js）。だから移した先で「これを採る」を押すと、**元の
+         * 住所へ書き戻る。** 墓石を生きた注釈で置き換え、移した先には
+         * 未解決のものが残る（Codex の2回目の指摘1）。
+         *
+         * 版の面でも当てにならない。移した先の墓石から採番するので、
+         * その版が候補を支配して次のマージで消えることがある。
+         *
+         * ここまで来ないように画面が止めている（showSwapPlan）。それでも
+         * 来たら書かずに throw する。黙って落とすより、何も書かない方がよい。
+         */
+        if (hasConflict(n)) {
+          throw new Error('別々に直された注釈があります（' + it.anchor
+            + '）。先にどちらを採るか選んでください');
+        }
+        creates.set(dk, {
+          key: dk, lawId: d.lawId, anchor: d.anchor,
+          tags: [...(n.tags || [])],
+          color: n.color || '',
+          summary: n.summary || '',
+          memo: n.memo || '',
+          /*
+           * どこから動かしたか。取り消しに使う。
+           * 写し（copiedFrom）とは別の名前にする。意味が違うものを同じ欄に
+           * 入れると、取り消しの対象を取り違える。
+           */
+          movedFrom: { lawId, anchor: it.anchor, op: opId },
+          updatedAt: now,
+          /*
+           * いまそこに在るもの（生きていても墓石でも）を越える版を振る。
+           * 入れ替わる改正では、生きている注釈の上に書くことになる。
+           *
+           * **元の注釈の系譜は継がない。** 継ぐと（vvMerge してから上げると）
+           * その版が上の alts を支配するので、pruneAlts が候補を落とす。
+           * 候補を連れてきた意味が無くなる。「移したものは元の後継だから
+           * 系譜を継ぐのが自然だ」と見えるが、ここでそれをやると指摘1に
+           * 戻る。直すときは core.js の pruneAlts を先に読むこと。
+           */
+          version: vvBump((noteAt.get(dk) || tombAt.get(dk) || {}).version, deviceId),
+        });
+        tombs.set(srcKey, n);
+        if (d.kind === 'park') parked.push(it.anchor);
+        else moves.push([it.anchor, d.lawId, d.anchor]);
+      }
+    }
+
+    /* ---- 文言注釈 ---- */
+    for (const got of it.ranges) {
+      const r = got.rec;
+      // 条項号の注釈と同じ理由（候補を別の住所へ持っていけない）
+      if (hasConflict(r)) {
+        throw new Error('別々に直された文言注釈があります（' + it.anchor
+          + '「' + (r.text || '') + '」）。先にどちらを採るか選んでください');
+      }
+      /*
+       * 退避先は本文がそのままなので、位置を数え直す必要がない。
+       * 元の法令に残す・動かす場合は、差し替えた本文で数え直す。
+       * そのまま（stay）でも数え直す。条項号の対応が決まっても、その中の
+       * どの文言かは保証されない（changed を選んだ場合は本文が違う）。
+       */
+      if (d.kind === 'park') {
+        outRanges.push({ ...r, lawId: keptLawId, anchor: it.anchor,
+          movedFrom: { lawId, anchor: it.anchor, op: opId },
+          updatedAt: now, version: vvBump(r.version, deviceId) });
+        rangeMoves.push([r.id, it.anchor, Number(r.nth), keptLawId, it.anchor, Number(r.nth)]);
+        continue;
+      }
+      const mv = planRangeMove(fd.get(it.anchor), td.get(d.anchor), r);
+      if (!mv.ok) {
+        /*
+         * 差し替えた本文で位置が決められない。退避先へ逃がす。
+         * 元の法令に残すと迷子の箱に入るので気づけはするが、本文が変わった
+         * あとのその印は、別の文を指している恐れがある。
+         */
+        skipped.push({ anchor: it.anchor, to: d.anchor, text: r.text,
+          why: '文言の行き先が確かめられません（' + (mv.why || '')
+            + '）。退避させた版へ移しました' });
+        outRanges.push({ ...r, lawId: keptLawId, anchor: it.anchor,
+          movedFrom: { lawId, anchor: it.anchor, op: opId },
+          updatedAt: now, version: vvBump(r.version, deviceId) });
+        rangeMoves.push([r.id, it.anchor, Number(r.nth), keptLawId, it.anchor, Number(r.nth)]);
+        continue;
+      }
+      // 住所も位置も変わらないなら書かない
+      if (d.kind === 'stay' && Number(mv.nth) === Number(r.nth)) continue;
+      outRanges.push({ ...r, lawId, anchor: d.anchor, nth: mv.nth,
+        movedFrom: { lawId, anchor: it.anchor, op: opId },
+        updatedAt: now, version: vvBump(r.version, deviceId) });
+      rangeMoves.push([r.id, it.anchor, Number(r.nth), lawId, d.anchor, Number(mv.nth)]);
+    }
+  }
+
+  const outNotes = [];
+  for (const [k, rec] of tombs) {
+    if (creates.has(k)) continue;        // 動いてきた注釈が居る。墓石を書くと消える
+    outNotes.push(noteTomb(rec, now, vvBump(rec.version, deviceId)));
+  }
+  for (const rec of creates.values()) outNotes.push(rec);
+
+  return { notes: outNotes, ranges: outRanges, skipped,
+    moves, parked, stayed, rangeMoves, op: opId };
+}
+
+/**
+ * 入れ替えを取り消す計画を立てる。DBも時計も触らない。
+ *
+ * 動かした先から元の住所へ戻すだけなので、控えには行き先の対応表しか
+ * 要らない（注釈の中身まで控えると、487件で百KB単位になる）。
+ *
+ * 入れ替えのあとに直した中身は、そのまま持って帰る。写しの取り消しは
+ * 直したものを残すが、こちらは残せない。本文を古いものに戻すのだから、
+ * 新しい本文の住所に注釈を残すと行き場が無くなる。
+ */
+function planSwapUndo({ notes, ranges, last, deviceId, now }) {
+  const out = { notes: [], ranges: [], lost: [], blocked: [] };
+  if (!last || !last.op) return out;
+  const op = last.op;
+  const base = last.lawId;
+
+  const living = rec => rec && !isTomb(rec);
+  const noteAt = new Map();
+  const tombAt = new Map();
+  for (const n of notes || []) {
+    if (!n || !n.key) continue;
+    if (living(n)) noteAt.set(n.key, n); else tombAt.set(n.key, n);
+  }
+
+  const creates = new Map();
+  const tombs = new Map();
+
+  /* 対応表は [旧住所, 行き先の法令, 行き先の住所] と、退避の [住所] の2通り */
+  const pairs = [];
+  for (const m of last.moves || []) pairs.push([m[0], m[1], m[2]]);
+  for (const a of last.parked || []) pairs.push([a, last.keptLawId, a]);
+
+  /*
+   * この取り消しで**本当に空く**住所。
+   *
+   * 入れ替わる改正を戻すときに要る（A→B と B→A を戻すなら、A の戻り先は
+   * B が出ていく住所である）。これを見ないと「埋まっている」と誤判定する。
+   *
+   * **対応表をそのまま使ってはいけない。** 表に載っていても、その住所に
+   * いま居るのが「この入れ替えで動かしたもの」でなければ出ていかない。
+   *
+   *   AとBを交換する入れ替え → 新Aの注釈を消して、そこに別の注釈Xを作る
+   *   → 取り消すと、Aは表に載っているので「空く」と見え、Xを上書きする
+   *
+   * （Codex の2回目の指摘2）。だから先に1周して、動かせるものだけを集める。
+   */
+  const actionable = [];
+  for (const [fromAnchor, toLawId, toAnchor] of pairs) {
+    const rec = noteAt.get(toLawId + ':' + toAnchor);
+    if (!rec || !rec.movedFrom || rec.movedFrom.op !== op) {
+      out.lost.push({ anchor: fromAnchor, why: '動かした先に見つかりません' });
+      continue;
+    }
+    actionable.push([fromAnchor, toLawId, toAnchor, rec]);
+  }
+  const vacating = new Set(actionable.map(([, l, a]) => l + ':' + a));
+
+  for (const [fromAnchor, , , rec] of actionable) {
+    const back = base + ':' + fromAnchor;
+    /*
+     * 戻し先に、この取り消しと関係のない注釈が居ないか。
+     *
+     * 入れ替えで旧 M/6 のメモを新 M/5 へ動かしたあと、新しい本文にもある
+     * M/6 に別のメモを書くことがある。そこへ黙って書き戻すと、後から
+     * 書いたメモが消える（版を継いで進めるので、候補にも残らない。
+     * Codex の指摘2）。
+     *
+     * 見つけたら、その場で飛ばすのではなく**取り消しそのものを断る。**
+     * 本文を戻す操作なので、一部だけ戻すと「本文は旧版、注釈は半分新版」
+     * という状態が残り、どちらが正しいか誰にも分からなくなる。
+     */
+    const there = noteAt.get(back);
+    if (there && !vacating.has(back)) {
+      out.blocked.push({ anchor: fromAnchor,
+        why: '戻す先に、入れ替えのあとで書いた注釈があります' });
+      continue;
+    }
+    const dk = rec.key;
+    creates.set(back, {
+      key: back, lawId: base, anchor: fromAnchor,
+      tags: [...(rec.tags || [])],
+      color: rec.color || '',
+      summary: rec.summary || '',
+      memo: rec.memo || '',
+      updatedAt: now,
+      version: vvBump((noteAt.get(back) || tombAt.get(back) || {}).version, deviceId),
+    });
+    tombs.set(dk, rec);
+  }
+
+  for (const [k, rec] of tombs) {
+    if (creates.has(k)) continue;
+    out.notes.push(noteTomb(rec, now, vvBump(rec.version, deviceId)));
+  }
+  for (const rec of creates.values()) out.notes.push(rec);
+
+  /*
+   * 文言注釈は鍵が id なので、住所を書き換えるだけで戻る。別の記録を
+   * 上書きすることはない（条項号の注釈と違って、住所が鍵ではない）。
+   * だから衝突の検査は要らない。
+   */
+  const byId = new Map();
+  for (const r of ranges || []) if (living(r)) byId.set(r.id, r);
+  for (const m of last.rangeMoves || []) {
+    const [id, fromAnchor, fromNth] = m;
+    const r = byId.get(id);
+    if (!r || !r.movedFrom || r.movedFrom.op !== op) {
+      out.lost.push({ anchor: fromAnchor, why: '動かした文言注釈が見つかりません' });
+      continue;
+    }
+    const { movedFrom, ...rest } = r;
+    out.ranges.push({ ...rest, lawId: base, anchor: fromAnchor, nth: fromNth,
+      updatedAt: now, version: vvBump(r.version, deviceId) });
+  }
+
+  return out;
+}
 /**
  * 写したものを取り消す計画を立てる。DBも時計も触らない。
  *

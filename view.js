@@ -599,8 +599,72 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
      */
     paintVersionMigrationNote(note, rec);
   } else {
-    note.hidden = true;
-    note.innerHTML = '';
+    /*
+     * 元の法令を開いている。写し先があるときだけ入口を出す。
+     *
+     * versionPeers は両方向を見ている（l.lawId === base か l.revisionOf === base）。
+     * 元の法令を開いていても、固定版が候補に出る。それなのに、呼ぶ場所を
+     * 固定版の枝にしか置いていなかった。
+     *
+     * **一番やりたいことが、一番できない形になっていた。** 改正が出ると、
+     * 新しい版は固定版として入り（注釈0件）、注釈は元の法令に残る。
+     * 固定版を開くと入口は出るが写すものが無く、元の法令を開くと注釈が
+     * あるのに入口が出ない。
+     *
+     * Codex がパックについて同じことを指摘したとき、revisionOf の枝を見て
+     * 「固定版はここで呼んでいる」で流した。revisionOf を持たない側を
+     * 見ていなかった。
+     *
+     * quiet なので、写せるものが無いときは帯が出ない。元の法令は普段読む版
+     * なので、常に帯が出ると邪魔になる。
+     *
+     * 本文を入れ替える入口も、ここから出す。
+     *
+     * 元の法令は「名前は固定、中身は動く」ものである。改正が施行されれば
+     * e-Gov の同じIDの先にある本文が入れ替わるが、手元の記録はそのままで、
+     * 取り直す道が無かった。だから注釈の付いている側が古くなっていく。
+     *
+     * e-Gov が「新しい版が出ています」と言っているときは帯を開く。言うことが
+     * あるのに黙っていると、気づく手立てが無い。それ以外のときは quiet の
+     * まま（ボタンは帯を開かない。開く条件にすると全部の法令に帯が出る）。
+     */
+    /*
+     * 本文が他の端末より古いことは、いちばん先に言う。
+     *
+     * 届いた注釈が別の条文に付いて見えている恐れがあるので、読む前に
+     * 知らせないと意味がない（Codex の指摘4）。改正の知らせ（behind）や
+     * 「写せます」より強い。
+     */
+    const stale = typeof staleBodyOf === 'function' ? staleBodyOf(rec.lawId) : null;
+    const am = amendOf(rec);
+    const behind = !!(am && am.kind === 'behind');
+    paintVersionMigrationNote(note, rec, {
+      quiet: !behind && !stale,
+      swap: lawOrigin(rec) === 'egov' ? rec.lawId : '',
+      /*
+       * 写す入口は出さない。
+       *
+       * ここから写せる先は、この法令の固定版しかない。入れ替えができた以上、
+       * その向きはほぼ使わない。それなのに「入れ替える」と並べていたので、
+       * **作った本人が間違えて 481件を固定版へ写した**（2026-10-25）。
+       *
+       * 固定版 → 元の法令 は今でも要る向きなので、固定版を開いたときの帯には
+       * 残してある。要るのは「メモを書いた版から、読む版へ」であって、
+       * その逆ではない。
+       */
+      copy: false,
+      prefix: stale
+        ? '<span class="warn">この本文は他の端末と版が違います'
+          + '　注釈が別の条文に付いて見えているおそれがあります。'
+          + '「法令を追加」から、どの版に合わせるかを選んでください</span>'
+        : '',
+      lead: behind
+        ? '新しい版が出ています（施行 ' + am.date + '）。'
+        : 'この法令には別の版が手元にあります。',
+      head: behind
+        ? '入れ替えると、注釈はこの法令に付いたまま新しい本文の正しい位置へ動きます'
+        : undefined,
+    });
   }
 
   pane.header.hidden = false;
@@ -1758,10 +1822,29 @@ async function checkAmendment(law) {
   enforced.sort((a, b) => (a.amendment_enforcement_date < b.amendment_enforcement_date ? -1 : 1));
   const latest = enforced[enforced.length - 1];
 
-  // 取り込んだときの版が分からない古い記録は、施行日で見比べる
+  /*
+   * どの版を持っているかの手掛かりを、上から順に使う。
+   *
+   *   lawRevisionId     版IDそのもの。あれば確実
+   *   enforcementDate   その版の施行日。日付で見比べる
+   *   savedAt           その記録を書いた時刻（＝取り込んだ時刻）
+   *
+   * 3つめを足した。版IDも施行日も持たない古い記録が32件あって、そのどれも
+   * 「新しい版が出ています」と言えなかった。**黙っていたので、古い条文を
+   * 読んでいることに気づく手立てが無かった。**
+   *
+   * 取り込んだ時刻は必ずある。e-Gov は取り込んだ時点で効いていた本文を返す
+   * ので、それより後に施行された改正があるなら手元は確実に古い。
+   *
+   * この手掛かりは**取りこぼす方にしか外れない。** savedAt が実際の取り込み
+   * より後ろへずれることはあっても（入れ替えの取り消し、控えからの復元）、
+   * 前へずれることはない。だから「古いのに黙る」ことはあっても「新しいのに
+   * 古いと言う」ことはない。
+   */
+  const asOf = law.enforcementDate || (law.savedAt ? ymdOf(law.savedAt) : '');
   const behind = latest && (law.lawRevisionId
     ? latest.law_revision_id !== law.lawRevisionId
-    : !!(law.enforcementDate && latest.amendment_enforcement_date > law.enforcementDate));
+    : !!(asOf && latest.amendment_enforcement_date > asOf));
 
   const rev = law.lawRevisionId || '';           // どの版について調べたか
   if (behind) {
@@ -1926,6 +2009,37 @@ async function openRevisions(lawId) {
 
   const now = today();
   const held = new Set(state.laws.map(l => l.lawRevisionId).filter(Boolean));
+
+  /*
+   * 元の法令を開いているなら、先に「本文を入れ替える」道を出す。
+   *
+   * 下の一覧は「別の法令として増やす」ための道である。改正が出たときに
+   * やりたいのは普通そちらではなく、読んでいる法令の本文を新しくして
+   * 注釈を連れていくことで、その道がここから辿れなかった。
+   */
+  {
+    const sw = $('#rev-swap');
+    const cur = state.laws.find(l => l.lawId === lawId);
+    const latest = revs.filter(r => r.amendment_enforcement_date <= now)[0];
+    const show = cur && !cur.revisionOf && lawOrigin(cur) === 'egov' && latest
+      && (!cur.lawRevisionId || cur.lawRevisionId !== latest.law_revision_id);
+    sw.hidden = !show;
+    if (show) {
+      const when = cur.importedAt || (cur.savedAt ? ymdOf(cur.savedAt) : '');
+      sw.innerHTML = '<div>'
+        + esc('手元の本文は' + (when ? when + ' 時点の' : '') + 'ものです。'
+          + 'いま効いているのは ' + latest.amendment_enforcement_date + ' 施行の版です。')
+        + '</div>'
+        + '<button type="button" class="mini" id="rev-swap-go">'
+        + 'この法令の本文を入れ替える</button>';
+      $('#rev-swap-go').onclick = () => {
+        $('#dlg-revisions').close();
+        openVersionSwap(lawId);
+      };
+    } else {
+      sw.innerHTML = '';
+    }
+  }
 
   box.innerHTML = '';
   for (const r of revs) {
@@ -2235,7 +2349,14 @@ async function searchAndShow() {
         btn.disabled = true; btn.textContent = '取得中…';
         try {
           const xml = await apiFetchLaw(l.lawId);
-          await store.putLaw({ ...l, xml, savedAt: Date.now() });
+          /*
+           * 取り込んだ日を記録する。
+           *
+           * 書いていなかったので、退避させる版の名前を付けるときに savedAt で
+           * 代用していた。savedAt は「最後に書いた時刻」なので、入れ替えを
+           * 取り消したあとは「いま」になり、名前が嘘になった。
+           */
+          await store.putLaw({ ...l, xml, importedAt: today(), savedAt: Date.now() });
           state.indexCache.delete(l.lawId);
           await refreshLawList();
           btn.textContent = '取込済';
@@ -2468,6 +2589,7 @@ function wire() {
     $('#dlg-add').showModal();
     $('#add-query').focus();
     renderMissing();                    // 同期で分かった目録から、足りないものを出す
+    renderStale();                      // 本文が他の端末より古いもの
   };
   $('#missing-all').onclick = () => takeAllMissing();
   $('#btn-add-law').onclick = openAdd;

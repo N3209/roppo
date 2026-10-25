@@ -2,6 +2,36 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<!--
+  何に繋いでよいかをブラウザに約束させる（Content-Security-Policy）。
+
+  いま穴が見つかっているわけではない。効くのは「万一どこかに穴があったとき」で、
+  esc() を1か所忘れた日に被害の大きさが変わる。盗んだものを外へ送る先が、
+  ここに書いた3つに限られる。
+
+  GitHub Pages はヘッダを設定できないので meta で入れる。frame-ancestors は
+  meta では効かない（ヘッダ専用）ので書いていない。
+
+  script-src 'self' だけで足りる。配布物が外から読むスクリプトは0件で、
+  index.html に素の <script> も onclick= 属性も無く、eval も使っていない。
+
+  style に 'unsafe-inline' が要るのは、index.html に style="…" が38か所あるため。
+  外すには全部をクラスに移す必要があるので、いまは許す。スタイルから情報は
+  漏れないので、ここを緩めても外へ送る経路は増えない。
+
+  connect-src の3つは、法令の取得（e-Gov）と同期（Google の Drive API）である。
+  accounts.google.com は location.href で画面ごと移るので connect-src には要らない。
+  'self' は規則パック（pack/）と Service Worker の取得に要る。
+-->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self';
+  style-src 'self' 'unsafe-inline';
+  img-src 'self';
+  connect-src 'self' https://laws.e-gov.go.jp https://www.googleapis.com;
+  base-uri 'self';
+  form-action 'self';
+  object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
 <title>六法</title>
@@ -307,6 +337,25 @@
       <div id="missing-list" class="add-results"></div>
     </div>
 
+    <!--
+      他の端末が本文を入れ替えたとき。注釈だけが先に届くので、古い本文の
+      上では「別の条文に付いた注釈」が出る。気づけるようにする。
+    -->
+    <div id="stale-box" hidden>
+      <p class="note-label" style="margin-top:16px">
+        本文が他の端末と食い違う法令　<span id="stale-count" class="count"></span>
+      </p>
+      <p class="hint" style="margin:0 0 8px">
+        法令そのものは同期しないので、どれかの端末が本文を入れ替えると注釈だけが
+        先に届きます。<strong>そのままだと、注釈が別の条文に付いて見えることが
+        あります。</strong>合わせたい版を選ぶと、<strong>本文だけ</strong>を
+        取り直します（注釈には触りません）。
+        どちらが正しいかはアプリには決められません。入れ替えは取り消せるので、
+        施行日の新しい方が正しいとは限らないからです。
+      </p>
+      <div id="stale-list" class="add-results"></div>
+    </div>
+
     <p class="note-label" style="margin-top:16px">
       規則パックから取り込む　<span id="pack-note" class="count"></span>
     </p>
@@ -401,6 +450,7 @@
       改正法の名前を主役にしていたときは、刑法の版に「日本国の自衛隊と…協定の
       実施に関する法律」が並ぶので、別の法令が混ざっているようにしか見えなかった。
     -->
+    <div id="rev-swap" class="note-dup" hidden style="margin:0 0 10px"></div>
     <div class="rev-head">
       <span class="rv-date">施行日</span>
       <span class="rv-title">版（下段は改正した法律）</span>
@@ -428,10 +478,12 @@
       </p>
       <div class="sub-head">写し先を選ぶ</div>
       <div id="vmig-peers" class="vmig-peers"></div>
+      <div id="vmig-swap-undo-box" class="note-dup" hidden style="margin:12px 0 0"></div>
       <div id="vmig-undo-box" class="note-dup" hidden style="margin:12px 0 0"></div>
     </div>
 
     <div id="vmig-step2" hidden>
+      <div id="vmig-lead" hidden></div>
       <div id="vmig-sum" class="vmig-sum"></div>
       <div id="vmig-list" class="vmig-list"></div>
     </div>

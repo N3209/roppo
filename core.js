@@ -22,7 +22,7 @@ const API = 'https://laws.e-gov.go.jp/api/2';
  * 画面に出しておけば一目で分かる。publish.js が sw.js と食い違っていないかを
  * 確かめるので、片方だけ上げ忘れることはない。
  */
-const APP_VERSION = 'v109';
+const APP_VERSION = 'v113';
 
 
 /*
@@ -288,7 +288,29 @@ let localWrites = 0;
  * だから、渡すものは呼び側で全部そろえてから来ること。ここでは put を並べて、
  * 最後に完了を待つだけにする。
  */
-async function applyBulk({ laws, notes, ranges, lawOrder: order, meta, local }) {
+/*
+ * 法令と注釈を、1つのトランザクションで読む。
+ *
+ * 別々に読むと、その間に同期の書き込みが挟まりうる。片方が書き込みの前、
+ * 片方が後の中身になると、指紋の照合も通ってしまう（同期の applyBulk は
+ * local を渡さないので localWrites も動かない。Codex の指摘5）。
+ * 1つのトランザクションで読めば、挟まる隙がない。
+ *
+ * 法令は欲しいものだけ、注釈は全部読む（突き合わせに全部要る）。
+ */
+async function readForMigration(lawIds) {
+  const db = await openDB();
+  const t = db.transaction(['laws', 'notes', 'ranges'], 'readonly');
+  const ids = lawIds || [];
+  const got = await Promise.all([
+    ...ids.map(id => idbReq(t.objectStore('laws').get(id))),
+    idbReq(t.objectStore('notes').getAll()),
+    idbReq(t.objectStore('ranges').getAll()),
+  ]);
+  return { laws: got.slice(0, ids.length), notes: got[ids.length], ranges: got[ids.length + 1] };
+}
+
+async function applyBulk({ laws, notes, ranges, lawOrder: order, meta, local, expect }) {
   /*
    * 手元の編集として書くなら、先に数を増やす（local: true）。
    *
@@ -308,6 +330,74 @@ async function applyBulk({ laws, notes, ranges, lawOrder: order, meta, local }) 
   const t = db.transaction(names, 'readwrite');
   const os = {};
   for (const n of names) os[n] = t.objectStore(n);
+
+  /*
+   * 期待値を、このトランザクションの中で検める。
+   *
+   * 呼び側は書く前に状態を確かめているが、確かめてから書くまでの間に別の
+   * タブが書き込めば、あとから書いた方が勝つ。vmBusy も vmToken も
+   * localWrites もタブごとの変数なので、タブをまたいでは効かない
+   * （Codex の指摘6）。トランザクションの中で検めれば、そこは防げる。
+   *
+   * await を挟まずに済ませる。get を先に並べ、そのまま put も並べる。
+   * get の onsuccess は put の完了より先に走るので、食い違いが分かった
+   * 時点で abort すれば、並べた put ごと巻き戻る。
+   *
+   *   expect.laws  [{ lawId, savedAt }]        その法令が、その savedAt のまま
+   *                [{ lawId, absent: true }]   その法令が、まだ無い
+   */
+  let mismatch = '';
+  const fail = msg => {
+    if (mismatch) return;
+    mismatch = msg;
+    try { t.abort(); } catch (e) { /* すでに終わっているなら、そのまま */ }
+  };
+  /*
+   * 注釈の指紋。
+   *
+   *   ''          その鍵に何も無い
+   *   'l:<版>'    生きている
+   *   't:<版>'    墓石
+   *
+   * 法令の savedAt だけを検めても、**別のタブが注釈だけを直した場合は
+   * 通ってしまう**（本文は変わらないので。Codex の2回目の指摘3）。
+   * 触る鍵の指紋を渡してもらって、ここで突き合わせる。
+   *
+   * 1鍵ごとに get を出すと数百回になるので、getAll を1回で済ませる。
+   */
+  const fpOf = r => !r ? ''
+    : (isTomb(r) ? 't:' : 'l:') + vvKey(r.version);
+  const checkAll = (storeName, keyName, want, label) => {
+    if (!want || !want.length) return;
+    const req = os[storeName].getAll();
+    req.onsuccess = () => {
+      const m = new Map((req.result || []).filter(r => r && r[keyName] !== undefined)
+        .map(r => [r[keyName], r]));
+      for (const [k, w] of want) {
+        if (fpOf(m.get(k)) !== w) {
+          fail(label + '「' + k + '」が、調べている間に変わりました');
+          return;
+        }
+      }
+    };
+  };
+  checkAll('notes', 'key', expect && expect.notes, '注釈');
+  checkAll('ranges', 'id', expect && expect.ranges, '文言注釈');
+
+  for (const e of (expect && expect.laws) || []) {
+    const req = os.laws.get(e.lawId);
+    req.onsuccess = () => {
+      const got = req.result;
+      if (e.absent) {
+        if (got) fail('「' + e.lawId + '」が、調べている間に作られました');
+        return;
+      }
+      if (!got) fail('「' + e.lawId + '」が、調べている間に消されました');
+      else if ((got.savedAt || 0) !== Number(e.savedAt || 0)) {
+        fail('「' + e.lawId + '」が、調べている間に書き換えられました');
+      }
+    };
+  }
 
   /*
    * put() は不正な値だと「その場で」例外を投げる（鍵が無いなど）。
@@ -332,11 +422,17 @@ async function applyBulk({ laws, notes, ranges, lawOrder: order, meta, local }) 
     throw err;
   }
 
-  await txDone(t);
+  try {
+    await txDone(t);
+  } catch (err) {
+    // abort の理由を、呼び側が人に出せる言葉にして返す
+    throw mismatch ? new Error(mismatch) : err;
+  }
 }
 
 const store = {
   applyBulk,
+  readForMigration,
   allLaws: () => read('laws', s => s.getAll()),      // XML 込み。書き出しでだけ使う
   allLawMeta: () => read('lawMeta', s => s.getAll()),
   getLaw: id => read('laws', s => s.get(id)),
@@ -663,6 +759,22 @@ function lawInventory(laws) {
      * 目録にも載せる。無ければ入れない（e-Gov のものに空の欄を増やさない）。
      */
     ...(l.workId ? { workId: l.workId } : {}),
+    /*
+     * どの版の本文を持っているか。
+     *
+     * 法令XMLは同期で運ばない（運ぶのは目録だけ）。だから、ある端末が
+     * 本文を入れ替えると**注釈だけが先に他の端末へ届く。** 届いた注釈の
+     * 住所は新しい本文のものなので、古い本文の上では
+     *
+     *   住所が無い   画面のどこにも出ない
+     *   住所がある   別の条文に付いて見える（条が入れ替わる改正）
+     *
+     * 後者のほうが悪い。間違ったものが正しい顔で出る。版IDと施行日を
+     * 目録に載せておけば、食い違っていることだけは分かる
+     * （Codex の指摘4）。無ければ入れない。
+     */
+    ...(l.lawRevisionId ? { lawRevisionId: l.lawRevisionId } : {}),
+    ...(l.enforcementDate ? { enforcementDate: l.enforcementDate } : {}),
   })).filter(x => x.lawId);
 }
 
