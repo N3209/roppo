@@ -2386,7 +2386,17 @@ const FONT_STACKS = {
 };
 // leading は 1/10 倍、measure は em 単位（0 は幅いっぱい）で持つ
 const VIEW_DEFAULT = {
-  font: 'mincho', size: 16, leading: 19, measure: 46,
+  /*
+   * annotSize は書き込み（前メモ・後メモ・タグ）の文字の大きさ。
+   *
+   * 本文（size）とは別に持つ。前は前メモだけが本文に連動し（.82em）、
+   * 後メモとタグは固定だった（12.5px / 11px）。本文を大きくすると3つの
+   * 釣り合いが崩れ、しかも後メモだけ小さいまま残った。
+   *
+   * 既定の13pxは、本文16pxのときの前メモ（.82em ≒ 13.1px）に合わせた値で
+   * ある。これまでの見え方をほぼ変えない。
+   */
+  font: 'mincho', size: 16, leading: 19, measure: 46, annotSize: 13,
   annot: 'all', ink: '#1558b8', paren: 'dim',
   /*
    * 選んだ条項号を本文で囲むか。
@@ -2413,6 +2423,7 @@ function applyView(v) {
   root.style.setProperty('--font-body', FONT_STACKS[v.font] || FONT_STACKS.mincho);
   root.style.setProperty('--text-size', v.size + 'px');
   root.style.setProperty('--text-leading', (v.leading / 10).toFixed(1));
+  root.style.setProperty('--annot-size', (v.annotSize || VIEW_DEFAULT.annotSize) + 'px');
   root.style.setProperty('--measure', v.measure ? v.measure + 'em' : '100%');
   root.dataset.annot = v.annot || 'all';
   root.style.setProperty('--ink', v.ink || VIEW_DEFAULT.ink);
@@ -2431,8 +2442,10 @@ function applyView(v) {
   }
   $('#size-range').value = v.size;
   $('#leading-range').value = v.leading;
+  $('#annot-range').value = v.annotSize || VIEW_DEFAULT.annotSize;
   $('#size-val').textContent = v.size + 'px';
   $('#leading-val').textContent = (v.leading / 10).toFixed(1);
+  $('#annot-val').textContent = (v.annotSize || VIEW_DEFAULT.annotSize) + 'px';
 
   try { localStorage.setItem('roppo.view', JSON.stringify(v)); } catch (e) { /* 任意 */ }
   // 字組みが変われば要素の位置も変わる。現在位置の判定をやり直す。
@@ -2501,6 +2514,7 @@ function wireView() {
   });
   $('#size-range').oninput = e => { view.size = Number(e.target.value); applyView(view); };
   $('#leading-range').oninput = e => { view.leading = Number(e.target.value); applyView(view); };
+  $('#annot-range').oninput = e => { view.annotSize = Number(e.target.value); applyView(view); };
   $('#view-reset').onclick = () => { view = { ...VIEW_DEFAULT }; applyView(view); };
 
   applyView(view);

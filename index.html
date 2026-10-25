@@ -103,6 +103,13 @@
       <p class="note-label">行間　<span id="leading-val" class="val"></span></p>
       <input id="leading-range" type="range" min="14" max="26" step="1">
 
+      <!--
+        書き込み（前メモ・後メモ・タグ）の大きさ。本文とは別に持つ。
+        前は前メモだけが本文に連動し、後メモとタグは固定だった。
+      -->
+      <p class="note-label">書き込みの大きさ　<span id="annot-val" class="val"></span></p>
+      <input id="annot-range" type="range" min="10" max="22" step="1">
+
       <p class="note-label">書き込みの色</p>
       <div class="font-picker" id="ink-picker">
         <button type="button" data-ink="#1558b8">青</button>

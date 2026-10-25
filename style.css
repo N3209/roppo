@@ -971,7 +971,14 @@ a.ref {
  */
 .note-summary {
   display: block;                 /* 本文に割り込ませず、独立した行にする */
-  font-family: var(--font-ui); font-size: .82em; line-height: 1.6;
+  /*
+   * 大きさは --annot-size（表示設定のつまみ）で決める。
+   *
+   * 前は .82em で本文に連動していたが、後メモ（12.5px）とタグ（11px）は
+   * 固定だった。本文を大きくすると3つの釣り合いが崩れ、後メモだけ小さい
+   * まま残った。3つとも同じつまみに繋ぐ。
+   */
+  font-family: var(--font-ui); font-size: var(--annot-size, 13px); line-height: 1.6;
   color: var(--ink);
   border-left: 3px solid color-mix(in srgb, var(--ink) 30%, transparent);
   padding: 1px 0 1px 9px;
@@ -981,7 +988,7 @@ a.ref {
 
 /* メモは条文の下にぶら下げる */
 .memo-inline {
-  font-family: var(--font-ui); font-size: 12.5px; line-height: 1.75;
+  font-family: var(--font-ui); font-size: var(--annot-size, 13px); line-height: 1.75;
   color: var(--ink); white-space: pre-wrap; word-break: break-word;
   border-left: 2px solid color-mix(in srgb, var(--ink) 30%, transparent);
   padding: 2px 0 2px 10px;
@@ -989,7 +996,11 @@ a.ref {
 }
 .mk .memo-inline { border-left-color: var(--dot); }
 
-.inline-tags { font-family: var(--font-ui); font-size: 11px; margin-left: .5em; white-space: nowrap; }
+/* タグは少し小さく。つまみに連れて動く（0.85倍） */
+.inline-tags {
+  font-family: var(--font-ui); font-size: calc(var(--annot-size, 13px) * .85);
+  margin-left: .5em; white-space: nowrap;
+}
 .inline-tags .t {
   display: inline-block; color: var(--ink);
   border: 1px solid color-mix(in srgb, var(--ink) 35%, transparent); border-radius: 4px;
