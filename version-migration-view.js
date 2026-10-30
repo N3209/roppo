@@ -907,10 +907,46 @@ async function openVersionSwap(lawId) {
    */
   const now = today();
   const enforced = (revs || [])
-    .filter(r => r.amendment_enforcement_date && r.amendment_enforcement_date <= now)
-    .sort((a, b) => (a.amendment_enforcement_date < b.amendment_enforcement_date ? -1 : 1));
-  const latest = enforced[enforced.length - 1];
-  if (!latest) { stop('施行済みの版が見つかりませんでした。'); return; }
+    .filter(r => r.amendment_enforcement_date && r.amendment_enforcement_date <= now);
+
+  /*
+   * どの版に差し替えるかは、**並べ替えの末尾で決めてはいけない。**
+   *
+   * 同じ施行日の版が複数ある法令がある（児童福祉法は 2026-10-01 に2版、
+   * 2024-04-01 には6版）。末尾を取ると、現行ではない方を掴んで本文を
+   * 上書きしかねない。ここは**取ったものがそのまま本文になる**ので、
+   * 表示の誤りでは済まない。
+   *
+   * 検索APIが現行として返す版を正とし、取れなければ施行日の一番新しい版に
+   * 落とす。落としたうえでその日に版が複数あるなら、どれか分からないので
+   * 進めずに断る。黙って別の版を書くより、できないと言う方がよい。
+   */
+  const latestDate = latestEnforcedDate(enforced);
+  if (!latestDate) { stop('施行済みの版が見つかりませんでした。'); return; }
+  const atLatest = enforced.filter(r => r.amendment_enforcement_date === latestDate);
+
+  let latest = null;
+  try {
+    const cur = await apiCurrentRevision(lawId);
+    if (cur) latest = enforced.find(r => r.law_revision_id === cur.law_revision_id) || cur;
+  } catch (e) { /* 取れなければ下に落とす */ }
+  if (token !== vmToken) return;
+  if (!latest) {
+    /*
+     * 落とし先が一意だと言えるのは、**日付の無い版が1つも無いとき**に限る。
+     *
+     * 施行日を持たない版を外してから数えているので、「その日に1つだけ」でも
+     * 日付不明の版が現行である見込みを消せない（Codex の指摘4）。本文を
+     * 書き替える操作なので、少しでも分からなければ進めない。
+     */
+    const undated = (revs || []).filter(r => !r.amendment_enforcement_date).length;
+    if (atLatest.length > 1 || undated) {
+      stop('どの版がいま効いているのかを確かめられませんでした。'
+        + '通信できるときに、もう一度お試しください。');
+      return;
+    }
+    latest = atLatest[0];
+  }
   if (rec.lawRevisionId && rec.lawRevisionId === latest.law_revision_id) {
     stop('いま手元にあるのが最新の版です（' + latest.amendment_enforcement_date + ' 施行）。');
     return;
@@ -927,12 +963,25 @@ async function openVersionSwap(lawId) {
    * 版IDを持たない古い記録では、新しいかどうかを版IDで決められない。
    * 本文を突き合わせる。同じなら差し替える意味がないので、そう言って
    * 版IDだけを書き足す（次からは版IDで判定できる）。
+   *
+   * **本文はデータベースから読む。** rec は state.laws の見出しで、xml を
+   * 持たない（store.allLawMeta が落としている）。前は rec.xml と比べて
+   * いたので、この枝には一度も入らなかった（Codex の指摘7）。
+   *
+   * そして、ここを素直に直すだけでは**法令が開けなくなる。**
+   * putLawAndMeta は渡した記録をそのまま本文の棚に書くので、xml を持たない
+   * 見出しを渡すと本文が消える。届かない枝だったから助かっていた。
+   * 読んだ記録そのものを下敷きにして書く。
    */
-  if (xml === rec.xml) {
+  let full = null;
+  try { full = await store.getLaw(lawId); } catch (e) { /* 読めなければ突き合わせない */ }
+  if (token !== vmToken) return;
+  if (full && full.xml && xml === full.xml) {
     try {
-      await store.putLaw({ ...rec,
+      await store.putLaw({ ...full,
         lawRevisionId: latest.law_revision_id,
         enforcementDate: latest.amendment_enforcement_date,
+        importedAt: today(),
         savedAt: Date.now() });
       delete amendState[lawId];
       saveAmendState();
@@ -1102,8 +1151,20 @@ async function showSwapPlan(lawId, xml, rev) {
   const got = rec.importedAt || '';
   const baseTitle = rec.baseTitle || rec.lawTitle || '';
   const when = rev.amendment_enforcement_date || '';
+
+  /*
+   * 「その施行の改正より前」と名乗れるのは、**退避する本文がその日より
+   * 前のものだと分かるとき**に限る。
+   *
+   * 同じ日に施行された別の版へ入れ替えることがある（児童福祉法は
+   * 2026-10-01 に2版ある）。そのとき手元の本文もその日のものなので、
+   * 「より前」は嘘になる（Codex の指摘6）。分からないときは
+   * 「入れ替え前の本文」と、確実なことだけを言う。
+   */
+  const mineWhen = rec.enforcementDate || '';
+  const before = !!when && (!mineWhen || mineWhen < when);
   const keptTitle = baseTitle + '（'
-    + (when ? when + ' 施行の改正より前の本文' : '入れ替え前の本文')
+    + (before ? when + ' 施行の改正より前の本文' : '入れ替え前の本文')
     + (got ? '。' + got + ' 取り込み' : '') + '）';
   /* 住所に使う日付。取り込んだ日が分かればそれ、分からなければ退避した日 */
   const stamp = got || today();

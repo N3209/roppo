@@ -22,7 +22,7 @@ const API = 'https://laws.e-gov.go.jp/api/2';
  * 画面に出しておけば一目で分かる。publish.js が sw.js と食い違っていないかを
  * 確かめるので、片方だけ上げ忘れることはない。
  */
-const APP_VERSION = 'v115';
+const APP_VERSION = 'v116';
 
 
 /*
@@ -511,11 +511,58 @@ async function apiSearchLaws(title) {
  * その法令の版の一覧。まだ施行されていない改正も入っている。
  * 例：民法は 2029-06-23 施行予定の改正が、いまの時点で返ってくる。
  */
+/**
+ * 施行日で並べるときの比べ方。
+ *
+ * **等しいときに 0 を返すこと。** 以前は `a < b ? -1 : 1` と書いていて、
+ * 同じ日付でも「後ろ」と答えていた。並べ替えの約束を破る比べ方なので、
+ * 同じ日付が混ざると並びが運任せになり、`enforced[last]` が現行とは
+ * 限らなくなる（児童福祉法で誤検知。2026-10-01 の2版を取り違えた）。
+ */
+function byEnforcementDate(a, b) {
+  const x = (a && a.amendment_enforcement_date) || '';
+  const y = (b && b.amendment_enforcement_date) || '';
+  return x === y ? 0 : (x < y ? -1 : 1);
+}
+
+/** 施行済みのうち、一番新しい施行日。無ければ ''。 */
+function latestEnforcedDate(revs) {
+  let out = '';
+  for (const r of revs || []) {
+    const d = r && r.amendment_enforcement_date;
+    if (d && d > out) out = d;
+  }
+  return out;
+}
+
 async function apiRevisions(lawId) {
   const r = await apiGet(`${API}/law_revisions/${encodeURIComponent(lawId)}`,
     '版の一覧の取得');
   const d = await r.json();
   return d.revisions || [];
+}
+
+/**
+ * いま効いている版を1つに決める。
+ *
+ * 版の一覧（law_revisions）には**同じ施行日の版が複数ある。** 児童福祉法は
+ * 2026-10-01 に2版、2024-04-01 には6版ある。一覧だけではどれが現行か決まらない
+ * ので、検索APIが現行として返す版IDを正とする。
+ *
+ * 見つからなければ null。呼ぶ側は日付での判定に落とすこと。
+ */
+async function apiCurrentRevision(lawId) {
+  const r = await apiGet(`${API}/laws?law_id=${encodeURIComponent(lawId)}`,
+    '現行の版の取得');
+  const d = await r.json();
+  const it = (d.laws || d.items || [])[0] || {};
+  const ri = it.revision_info || {};
+  if (!ri.law_revision_id) return null;
+  return {
+    law_revision_id: ri.law_revision_id,
+    amendment_enforcement_date: ri.amendment_enforcement_date || '',
+    amendment_law_title: ri.amendment_law_title || '',
+  };
 }
 
 async function apiFetchLaw(lawId) {

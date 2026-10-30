@@ -1813,9 +1813,16 @@ async function checkAmendment(law) {
   const enforced = revs.filter(r => r.amendment_enforcement_date && r.amendment_enforcement_date <= now);
   const future = revs.filter(r => r.amendment_enforcement_date && r.amendment_enforcement_date > now);
 
-  // 施行済みのうち一番新しいもの＝いま効いている版
-  enforced.sort((a, b) => (a.amendment_enforcement_date < b.amendment_enforcement_date ? -1 : 1));
-  const latest = enforced[enforced.length - 1];
+  /*
+   * 施行済みのうち一番新しいもの＝いま効いている版。
+   *
+   * **並べ替えの末尾を取ってはいけない。** 同じ施行日の版が複数あるとき、
+   * どれが末尾に来るかは決まらない（児童福祉法は 2026-10-01 に2版、
+   * 2024-04-01 には6版）。日付の最大を取り、その日付の版をまとめて持つ。
+   */
+  const latestDate = latestEnforcedDate(enforced);
+  const atLatest = enforced.filter(r => r.amendment_enforcement_date === latestDate);
+  if (!latestDate) return null;          // 施行済みの版が1つも無いなら何も言えない
 
   /*
    * どの版を持っているかの手掛かりを、上から順に使う。
@@ -1836,27 +1843,94 @@ async function checkAmendment(law) {
    * 前へずれることはない。だから「古いのに黙る」ことはあっても「新しいのに
    * 古いと言う」ことはない。
    */
-  const asOf = law.enforcementDate || (law.savedAt ? ymdOf(law.savedAt) : '');
-  const behind = latest && (law.lawRevisionId
-    ? latest.law_revision_id !== law.lawRevisionId
-    : !!(asOf && latest.amendment_enforcement_date > asOf));
+  /*
+   * 版IDをそのまま突き合わせるのはやめた。
+   *
+   * 手元の版が一覧のどこに居るかを引いて、**施行日で比べる。** 版IDの不一致を
+   * そのまま「古い」と読むと、同じ日に施行された別の版を現行と取り違えたときに
+   * 嘘をつく（児童福祉法で実際に出た。手元は現行の _087 なのに、アプリは
+   * 同じ日の _029 を現行とみなして「新しい版が出ています」と言った）。
+   */
+  const mineRev = law.lawRevisionId
+    ? revs.find(r => r.law_revision_id === law.lawRevisionId) : null;
+  const asOf = (mineRev && mineRev.amendment_enforcement_date)
+    || law.enforcementDate || (law.savedAt ? ymdOf(law.savedAt) : '');
+
+  /*
+   * 判定は3段。上から順に、確かなものだけで決める。
+   *
+   *   1  施行日が手元より後の版がある        → 確実に古い
+   *   2  施行日が並んでいて、手元に版IDがある → 現行の版IDを問い合わせて決める
+   *   3  それ以外                            → 古いとは言わない
+   *
+   * 2 を足したのは、同じ日に複数の改正が施行される法令があるため。日付だけでは
+   * 決まらず、そこを黙って見逃すと同じ日の別の版を読み続ける。**その日の版が
+   * 1つしかない法令では問い合わせない**ので、増える通信はごく一部に限られる。
+   *
+   * 問い合わせに失敗したら黙る。確かめられなかったことを「古い」と言わない。
+   */
+  let behind = !!(latestDate && asOf && latestDate > asOf);
+  let current = null;                    // 問い合わせで分かった現行の版
+  let unsure = false;                    // 確かめられなかった
+
+  /*
+   * 問い合わせが要るのは、日付だけでは決まらないとき。2通りある。
+   *
+   *   並んでいる   最新の施行日に版が複数あり、手元もその日付
+   *   分からない   手元に版IDがあるのに、その版が一覧に無い
+   *
+   * 後者を落としていた（Codex の指摘3）。版IDが一覧に無い記録は施行日も
+   * 当てにならず、savedAt が最新日より後ろなら、古い版でも「最新」と
+   * 言われて黙る。条件を「日付が確定しているときの手加減」に限る。
+   */
+  const tied = latestDate && asOf === latestDate && atLatest.length > 1;
+  const lost = !!law.lawRevisionId && !mineRev;
+  if (!behind && law.lawRevisionId && latestDate && (tied || lost)) {
+    try {
+      current = await apiCurrentRevision(law.lawId);
+      if (!current) unsure = true;
+      else if (current.law_revision_id !== law.lawRevisionId) behind = true;
+    } catch (e) { unsure = true; }       // 確かめられないなら、そう言う
+  }
+
+  /*
+   * 確かめられなかったものを「最新です」と言ってはいけない（Codex の指摘2）。
+   * 黙るのと、最新だと言うのは別である。前の印を残したまま、数にだけ入れる。
+   */
+  if (unsure) return { kind: 'unknown', rev: law.lawRevisionId || '', at: Date.now() };
+
+  /*
+   * 知らせに載せる版。問い合わせで現行が分かっているならそれを使う。
+   * 分かっていないときは、その日の版のどれか（日付と改正名のためだけに使う）。
+   */
+  const latest = current || atLatest[0];
 
   const rev = law.lawRevisionId || '';           // どの版について調べたか
   if (behind) {
+    /*
+     * 改正名は、現行の版を問い合わせて分かったときだけ添える。
+     *
+     * 最新の施行日に版が複数あるとき、atLatest[0] の改正名が現行の版の
+     * ものとは限らない。日付は確かなので日付だけ出す（Codex の指摘5）。
+     */
+    const named = current || (atLatest.length === 1 ? atLatest[0] : null);
     return {
       kind: 'behind', rev,
       date: latest.amendment_enforcement_date,
-      title: latest.amendment_law_title || '',
+      title: (named && named.amendment_law_title) || '',
       at: Date.now(),
     };
   }
 
-  future.sort((a, b) => (a.amendment_enforcement_date < b.amendment_enforcement_date ? -1 : 1));
+  future.sort(byEnforcementDate);
   if (future.length) {
+    // 同じ日に複数あるなら、どの改正かは決まらない。日付だけ出す
+    const soon = future[0].amendment_enforcement_date;
+    const atSoon = future.filter(r => r.amendment_enforcement_date === soon);
     return {
       kind: 'upcoming', rev,
-      date: future[0].amendment_enforcement_date,
-      title: future[0].amendment_law_title || '',
+      date: soon,
+      title: (atSoon.length === 1 && atSoon[0].amendment_law_title) || '',
       at: Date.now(),
     };
   }
@@ -1884,7 +1958,15 @@ async function checkAmendments(loud) {
       // 問い合わせている間に消された・取り込み直された場合は書き戻さない
       const now = state.laws.find(l => l.lawId === law.lawId);
       if (!now || (now.lawRevisionId || '') !== (law.lawRevisionId || '')) continue;
-      if (r) {
+      if (r && r.kind === 'unknown') {
+        /*
+         * 確かめられなかった。**前の印を上書きしない。**
+         *
+         * ここで none を書くと、昨日まで「新しい版が出ています」と
+         * 出ていた帯が、通信が怪しかっただけで消える（Codex の指摘2）。
+         */
+        failed++;
+      } else if (r) {
         amendState[law.lawId] = r;
         if (r.kind === 'behind') behind++;
         if (r.kind === 'upcoming') upcoming++;
@@ -1997,9 +2079,14 @@ async function openRevisions(lawId) {
   }
   if (token !== revToken) return;   // 別の法令の一覧に切り替わっている
 
-  // 新しい順。施行日が入っていないものは出しようがないので外す。
+  /*
+   * 新しい順。施行日が入っていないものは出しようがないので外す。
+   *
+   * 比べ方は byEnforcementDate を裏返して使う。ここも等しいとき -1 を
+   * 返していて、同じ施行日の版の並びが運任せだった（Codex の指摘1）。
+   */
   revs = revs.filter(r => r.amendment_enforcement_date)
-    .sort((a, b) => (a.amendment_enforcement_date < b.amendment_enforcement_date ? 1 : -1));
+    .sort((a, b) => -byEnforcementDate(a, b));
   if (!revs.length) { box.innerHTML = '<p class="hint">版の情報がありません。</p>'; return; }
 
   const now = today();
@@ -2015,7 +2102,28 @@ async function openRevisions(lawId) {
   {
     const sw = $('#rev-swap');
     const cur = state.laws.find(l => l.lawId === lawId);
-    const latest = revs.filter(r => r.amendment_enforcement_date <= now)[0];
+
+    /*
+     * いま効いている版を、並びの先頭で決めてはいけない。
+     *
+     * 同じ施行日の版が複数あると、先頭がどれかは決まらない。手元が現行を
+     * 持っていても「本文を入れ替える」が出た（児童福祉法。Codex の指摘1）。
+     * 並んでいるときは現行を問い合わせ、分からなければ帯を出さない。
+     */
+    const enforcedRevs = revs.filter(r => r.amendment_enforcement_date <= now);
+    const latestDate = latestEnforcedDate(enforcedRevs);
+    const atLatest = enforcedRevs.filter(r => r.amendment_enforcement_date === latestDate);
+    let latest = atLatest.length === 1 ? atLatest[0] : null;
+    if (!latest && atLatest.length > 1) {
+      try {
+        const curRev = await apiCurrentRevision(lawId);
+        if (token !== revToken) return;
+        if (curRev) {
+          latest = enforcedRevs.find(r => r.law_revision_id === curRev.law_revision_id)
+            || curRev;
+        }
+      } catch (e) { /* 分からないなら帯を出さない */ }
+    }
     const show = cur && !cur.revisionOf && lawOrigin(cur) === 'egov' && latest
       && (!cur.lawRevisionId || cur.lawRevisionId !== latest.law_revision_id);
     sw.hidden = !show;
