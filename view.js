@@ -234,7 +234,7 @@ function renderLawList() {
     if (dotEl) dotEl.onclick = e => { e.stopPropagation(); openRevisions(l.lawId); };
     li.querySelector('.del').onclick = async e => {
       e.stopPropagation();
-      if (!confirm(`「${l.lawTitle}」を削除します。\nこの法令に付けたタグ・メモは残ります。よろしいですか？`)) return;
+      if (!confirm(`「${l.lawTitle}」を削除します。\nこの法令に付けたメモ・マークは残ります。よろしいですか？`)) return;
       await flushSave();
       await store.delLaw(l.lawId);
       state.indexCache.delete(l.lawId);
@@ -1064,17 +1064,12 @@ function filterAnchors(pane) {
 
   for (const n of state.notes.values()) {
     if (n.lawId !== lawId) continue;
-    const hit = f.tag
-      ? (n.tags || []).includes(f.tag)
-      : !!(n.color || (n.tags || []).length
-        || String(n.summary || '').trim() || String(n.memo || '').trim());
-    if (hit) out.add(n.anchor);
-  }
-  // 文言に付けたものは、タグを持たない。「印のあるもの」のときだけ数える。
-  if (!f.tag) {
-    for (const r of state.ranges.values()) {
-      if (r.lawId === lawId) out.add(r.anchor);
+    if (n.color || String(n.summary || '').trim() || String(n.memo || '').trim()) {
+      out.add(n.anchor);
     }
+  }
+  for (const r of state.ranges.values()) {
+    if (r.lawId === lawId) out.add(r.anchor);
   }
   return out;
 }
@@ -1127,7 +1122,8 @@ function applyFilter(pane) {
 
   for (const el of kids) if (!show.get(el)) el.classList.add('filtered-out');
 
-  const name = pane.filter.tag ? `タグ「${pane.filter.tag}」` : '印のあるもの';
+  // 絞り込みは「印のあるもの」だけになった（文字タグを外したため）
+  const name = '印のあるもの';
   banner.hidden = false;
   banner.innerHTML = `<span>${esc(name)}で絞り込み中　${shown}件</span>`;
   const b = document.createElement('button');
@@ -1148,7 +1144,12 @@ function setFilter(f, pane) {
   renderFilterPicker();
 }
 
-/** 表示設定の中の選び口。いま開いている法令に実際にあるタグだけ出す。 */
+/*
+ * 表示設定の中の選び口。
+ *
+ * 以前はタグごとのボタンも並べていた（文字タグを画面から外すまで）。いまは
+ * 「すべて」と「印のあるもの」だけで、後者は印が1つでもあるときに出す。
+ */
 function renderFilterPicker() {
   const box = $('#filter-picker');
   if (!box) return;
@@ -1169,19 +1170,13 @@ function renderFilterPicker() {
 
   const lawId = pane.current.lawId;
   let marked = 0;
-  const tags = new Map();
   for (const n of state.notes.values()) {
     if (n.lawId !== lawId) continue;
-    if (n.color || (n.tags || []).length
-      || String(n.summary || '').trim() || String(n.memo || '').trim()) marked++;
-    for (const t of (n.tags || [])) tags.set(t, (tags.get(t) || 0) + 1);
+    if (n.color || String(n.summary || '').trim() || String(n.memo || '').trim()) marked++;
   }
   for (const r of state.ranges.values()) if (r.lawId === lawId) marked++;
 
-  if (marked) add('印のあるもの', { marked: true }, !!(pane.filter && !pane.filter.tag));
-  for (const [t] of [...tags].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))) {
-    add(t, { tag: t }, !!(pane.filter && pane.filter.tag === t));
-  }
+  if (marked) add('印のあるもの', { marked: true }, !!pane.filter);
 }
 
 /* ------------------------------------------------- 移動の履歴と読書位置 */

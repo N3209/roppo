@@ -358,12 +358,12 @@ async function doFind() {
     const ids = new Set(laws.map(l => l.lawId));
     for (const n of state.notes.values()) {
       if (!ids.has(n.lawId)) continue;
-      if (!normalize((n.summary || '') + ' ' + (n.memo || '') + ' ' + (n.tags || []).join(' ')).includes(q)) continue;
+      if (!normalize((n.summary || '') + ' ' + (n.memo || '')).includes(q)) continue;
       const law = state.laws.find(l => l.lawId === n.lawId);
       results.push({
         kind: 'メモ', lawId: n.lawId, lawTitle: law ? law.lawTitle : n.lawId,
         anchor: n.anchor,
-        text: [n.summary, n.memo, (n.tags || []).join(' ')].filter(Boolean).join('　'), at: 0,
+        text: [n.summary, n.memo].filter(Boolean).join('　'), at: 0,
       });
     }
     for (const r of state.ranges.values()) {

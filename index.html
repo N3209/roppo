@@ -104,8 +104,8 @@
       <input id="leading-range" type="range" min="14" max="26" step="1">
 
       <!--
-        書き込み（前メモ・後メモ・タグ）の大きさ。本文とは別に持つ。
-        前は前メモだけが本文に連動し、後メモとタグは固定だった。
+        書き込み（前メモ・後メモ）の大きさ。本文とは別に持つ。
+        前は前メモだけが本文に連動し、後メモは固定だった。
       -->
       <p class="note-label">書き込みの大きさ　<span id="annot-val" class="val"></span></p>
       <input id="annot-range" type="range" min="10" max="22" step="1">
@@ -124,7 +124,7 @@
         <button type="button" data-paren="dim">薄く</button>
       </div>
 
-      <p class="note-label">タグで絞る</p>
+      <p class="note-label">表示を絞る</p>
       <div class="font-picker" id="filter-picker" style="grid-template-columns:1fr 1fr"></div>
 
       <p class="note-label">選んだ条文の枠</p>
@@ -197,7 +197,7 @@
         </div>
         <div class="find-target">
           <label><input type="checkbox" id="find-in-text" checked> 本文</label>
-          <label><input type="checkbox" id="find-in-notes" checked> メモ・タグ</label>
+          <label><input type="checkbox" id="find-in-notes" checked> メモ</label>
         </div>
         <div class="find-status" id="find-status"></div>
       </div>
@@ -215,8 +215,6 @@
                 style="margin-top:6px" hidden>元の法令へ移す</button>
       </div>
       <ul id="mark-list" class="mark-list"></ul>
-      <div class="sub-head">文字タグ</div>
-      <ul id="tag-list" class="mark-list"></ul>
     </div>
   </aside>
 
@@ -397,11 +395,25 @@
   <form method="dialog" class="dlg-form">
     <h2>書き出しと復元</h2>
 
-    <p class="note-label">端末どうしで同期</p>
+    <p class="note-label">ほかの端末と揃える</p>
+    <!--
+      同期は Google Cloud にこのアプリを登録して動かしている。審査を通して
+      いないので、**作者のアカウントでしか接続できない。** 何も書いていないと、
+      押して Google の画面で弾かれ、アプリが壊れていると思われる。
+
+      言うのは「試作中であること」だけにする。代わりに書き出しを使え、とは
+      案内しない。それは「ほかの端末と揃える」とは別の目的の道具で、同じ節に
+      並べると「同期の代用品」として勧めることになる。書き出しは下に節が
+      あるので、読めば分かる。
+    -->
+    <p class="hint prototype-note" style="margin:0 0 8px">
+      <strong>同期（Google ドライブ経由）は試作中で、いまは作者の環境でのみ
+      動きます。</strong>
+    </p>
     <p class="hint" style="margin:0 0 8px">
-      タグ・メモ・マーク・並び順を、Google ドライブ経由でほかの端末と揃えます。
-      法令の本文は送りません（e-Gov から取り直せるため）。
-      置き場所はこのアプリ専用の隠し場所で、ドライブの画面には出ません。
+      揃えるのはメモ・マーク・並び順です。法令の本文は送りません
+      （e-Gov から取り直せるため）。置き場所はこのアプリ専用の隠し場所で、
+      ドライブの画面には出ません。
     </p>
     <div class="row">
       <button type="button" id="btn-sync" class="primary">同期する</button>
@@ -422,7 +434,7 @@
 
     <p class="note-label" style="margin-top:16px">バックアップ</p>
     <p class="hint" style="margin:0 0 8px">
-      取り込んだ全法令（無加工のXML）と、すべてのタグ・メモ・マークを1ファイルにまとめます。
+      取り込んだ全法令（無加工のXML）と、すべてのメモ・マークを1ファイルにまとめます。
       条文は e-Gov から取り直せますが、注釈は取り返せません。
     </p>
     <div class="row">

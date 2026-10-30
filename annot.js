@@ -449,8 +449,12 @@ function applyNoteTo(el, n) {
   for (const c of MARK_COLORS) el.classList.remove('mk-' + c.key);
   if (n && n.color) el.classList.add('mk', 'mk-' + n.color);
 
-  if (n && (n.tags || []).length) insertTags(el, n.tags);
-  else dropOwned(el, '.inline-tags', anchor);
+  /*
+   * 文字タグは画面から外した（使われていなかった。実データで0件）。
+   * 記録の tags 欄は残してあるので、古い版が本文に置いた札が残っていたら
+   * 外すだけはやる。
+   */
+  dropOwned(el, '.inline-tags', anchor);
 
   /*
    * 前メモは insertSummary が必ず新しく作るので、すでにあるものは中身だけ
@@ -569,33 +573,6 @@ function memoInsertPoint(el) {
 }
 
 /*
- * 文字タグを本文に置く。
- *
- * 以前は要素の末尾に足していた。すると号を持つ項では、号を全部飛び越えて
- * 一番後ろに出る。刑訴89条（号6個）や会社法2条（号38個）で、タグだけが
- * 遠くに離れていた。後メモと同じ場所（自分の文の直後）に置く。
- *
- * タグは短い札なので、後メモ（塊）より前に出す。paintNotesIn がタグ→後メモの
- * 順に呼ぶので、同じ差し込み位置を指定すれば、その順に並ぶ。
- */
-function insertTags(el, tags) {
-  const anchor = el.dataset.anchor || '';
-  const sel = '.inline-tags[data-for="' + attrEsc(anchor) + '"]';
-  let span = el.querySelector(sel);
-  if (!span) {
-    span = document.createElement('span');
-    span.className = 'inline-tags';
-    span.dataset.for = anchor;
-  }
-  span.innerHTML = tags.map(t => `<span class="t">${esc(t)}</span>`).join('');
-  const { parent, before } = memoSlot(el);
-  if (span.parentNode !== parent || span.nextSibling !== before) {
-    parent.insertBefore(span, before);
-  }
-  return span;
-}
-
-/*
  * 後メモを本文に置く。すでにあるものは、必要なときだけ動かす。
  *
  * 置き場所が入れ子の中（項の中）になることがあるので、どのアンカーのメモかを
@@ -690,8 +667,22 @@ function allMarks() {
   for (const n of state.notes.values()) {
     out.push({
       kind: 'note', lawId: n.lawId, anchor: n.anchor, at: n.updatedAt || 0,
-      color: n.color || '', tags: n.tags || [],
+      color: n.color || '',
+      /*
+       * memo は前メモと後メモを繋いだもの。**表示と「メモのあるもの」の判定に
+       * 使うので、意味を変えない。** 後メモだけにすると、前メモしか書いていない
+       * 注釈が件数からも一覧からも漏れる（annot.js の memoCount と
+       * showMarkResults、find.js の結果の文の3か所）。
+       */
       memo: [n.summary, n.memo].map(t => String(t || '').trim()).filter(Boolean).join('　'),
+      /*
+       * 絞るための欄。繋いだ memo では「前メモだけ書いたもの」を集められない。
+       *
+       * 文字タグを画面から外すまで、独立して絞れる欄はタグだけだった。無くして
+       * みて、この粗さが見えた。足すだけにして、既にある呼び先は触らない。
+       */
+      summary: String(n.summary || '').trim(),
+      body: String(n.memo || '').trim(),
       phrase: '',
     });
   }
@@ -700,7 +691,7 @@ function allMarks() {
       kind: isSlash(r) ? 'slash' : 'range', id: r.id, lawId: r.lawId, anchor: r.anchor,
       at: r.updatedAt || 0,
       slash: SLASH_KINDS[r.kind] || '',
-      color: r.color || '', tags: [],
+      color: r.color || '',
       memo: String(r.memo || '').trim(),
       phrase: r.text || '',
     });
@@ -711,11 +702,9 @@ function allMarks() {
 function renderMarkList() {
   const marks = allMarks();
   const byColor = new Map();
-  const byTag = new Map();
   let memoCount = 0;
   for (const m of marks) {
     if (m.color) byColor.set(m.color, (byColor.get(m.color) || 0) + 1);
-    for (const t of m.tags) byTag.set(t, (byTag.get(t) || 0) + 1);
     if (m.memo) memoCount++;
   }
 
@@ -793,18 +782,6 @@ function renderMarkList() {
     ml.appendChild(li);
   }
 
-  const tl = $('#tag-list');
-  tl.innerHTML = '';
-  if (!byTag.size) {
-    tl.innerHTML = '<li style="color:var(--fg-faint);cursor:default">まだありません</li>';
-    return;
-  }
-  for (const [tag, n] of [...byTag].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))) {
-    const li = document.createElement('li');
-    li.innerHTML = `<span>${esc(tag)}</span><span class="n">${n}</span>`;
-    li.onclick = () => showMarkResults(m => m.tags.includes(tag), `タグ「${tag}」`);
-    tl.appendChild(li);
-  }
 }
 
 function renderNotePane() {
@@ -833,10 +810,6 @@ function renderNotePane() {
     <div class="palette" id="palette"></div>
     <p class="note-label">前メモ</p>
     <input id="summary-input" type="text" placeholder="この条文を一言でいうと" autocomplete="off">
-    <p class="note-label">文字タグ</p>
-    <div class="note-tags" id="tag-chips"></div>
-    <input id="tag-input" type="text" placeholder="タグを入力して Enter" autocomplete="off">
-    <div class="tag-known" id="tag-known"></div>
     <p class="note-label">後メモ</p>
     <textarea id="memo-input" placeholder="詳しく書き足したいこと"></textarea>
     <div class="saved-at" id="saved-at"></div>
@@ -884,81 +857,6 @@ function renderNotePane() {
     palette.appendChild(none);
   };
   paintPalette();
-
-  let paintKnownRef = () => {};      // 下で定義する（タグを外したときも候補を出し直す）
-
-  const chips = $('#tag-chips');
-  const paintChips = () => {
-    chips.innerHTML = '';
-    for (const t of note.tags) {
-      const c = document.createElement('span');
-      c.className = 'chip';
-      c.innerHTML = `${esc(t)}<button title="外す">×</button>`;
-      c.querySelector('button').onclick = async () => {
-        note.tags = note.tags.filter(x => x !== t);
-        await saveNote(note);
-        paintChips();
-        if ($('#tag-known')) paintKnownRef();
-      };
-      chips.appendChild(c);
-    }
-  };
-  paintChips();
-
-  /*
-   * 使ったことのあるタグを押して付けられるようにする。
-   * 同じタグを続けて付けるとき、毎回同じ文字を打つのは無駄である。
-   * 打ち込みも残す。新しいタグはそちらで足す。
-   */
-  const known = $('#tag-known');
-  const paintKnown = () => {
-    const count = new Map();
-    for (const n of state.notes.values()) {
-      for (const t of (n.tags || [])) count.set(t, (count.get(t) || 0) + 1);
-    }
-    const list = [...count]
-      .filter(([t]) => !note.tags.includes(t))
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ja'))
-      .slice(0, 12);
-    known.innerHTML = '';
-    for (const [t] of list) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'tag-known-btn';
-      b.textContent = t;
-      b.onclick = async ev => {
-        note.tags.push(t);
-        await saveNote(note);
-        paintChips();
-        paintKnown();
-      };
-      known.appendChild(b);
-    }
-  };
-
-  const addTag = async (v, ev) => {
-    if (!v || note.tags.includes(v)) return;
-    note.tags.push(v);
-    await saveNote(note);
-    paintChips();
-    paintKnown();
-  };
-
-  const tagInput = $('#tag-input');
-  tagInput.onkeydown = async e => {
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
-    const v = tagInput.value.trim();
-    tagInput.value = '';
-    await addTag(v, e);
-  };
-  /*
-   * 外したタグを候補に戻せるよう、チップ側からも呼べるようにしておく。
-   * この代入が「候補を押したとき」の中に紛れ込んでいたため、一度も候補を
-   * 押していないうちはチップを外しても候補が出し直されなかった。
-   */
-  paintKnownRef = paintKnown;
-  paintKnown();
 
   const summary = $('#summary-input');
   summary.value = note.summary || '';
@@ -1015,7 +913,17 @@ async function saveNote(note) {
   const base = (old && isTomb(old)) ? vvMerge(note.version, old.version) : note.version;
   note.version = vvBump(base, deviceId);
 
-  const empty = !note.tags.length && !(note.memo || '').trim()
+  /*
+   * 空かどうか。tags は画面から外したが、判定には残す。
+   *
+   * 古い控えや同期で届いた記録にはタグが入っていることがある。判定から
+   * 外すと、メモを消したときにその記録を墓石にしてしまう。**見せなくなった
+   * だけで、持っているものは捨てない。**
+   *
+   * 無い場合に備える。noteProblem は tags が無い記録も通すので、
+   * note.tags.length だとそこで落ちる。
+   */
+  const empty = !(note.tags || []).length && !(note.memo || '').trim()
     && !(note.summary || '').trim() && !note.color;
   // 消した印を残す。本当に消すと、古いバックアップから復活する
   let out = empty ? noteTomb(note, note.updatedAt) : note;
