@@ -783,6 +783,13 @@ mark.hit.cur { background: #ffbf5e; box-shadow: 0 0 0 2px #ffbf5e; }
 
 .law-header { padding: 12px 28px 9px; border-bottom: 1px solid var(--line); flex: none; }
 .law-title { font-family: var(--font-body); font-size: 19px; font-weight: 700; }
+/*
+ * 題名と上段の法令名は、どちらも版の一覧の取っ手である。
+ * 押せると分からなければ、入口が無いのと同じ。
+ */
+.law-title { cursor: pointer; width: fit-content; }
+.topbar-law { cursor: pointer; }
+.law-title:hover, .topbar-law:hover .tl-name { text-decoration: underline; }
 .law-meta { font-size: 12px; color: var(--fg-dim); margin-top: 3px; }
 
 /* いま画面に出ている編・章・節と条。スクロールに追従する。 */
@@ -1449,3 +1456,37 @@ dialog::backdrop { background: rgba(16,24,40,.35); }
   display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;
 }
 .stale-picks button { white-space: nowrap; }
+
+/*
+ * 版移行の画面で、旧本文と新本文を並べる。
+ *
+ * 番号だけでは選べない。無関係な挿入条文が「同じ番号」として出ることが
+ * あるので、人が決める行には本文を開いて出す（機械が決めた行は折り畳む）。
+ */
+.vmig-cmp { display: grid; gap: 4px; margin: 5px 0 6px; }
+.vmig-body {
+  display: grid; grid-template-columns: auto 1fr; gap: 6px;
+  font-size: 12px; line-height: 1.55;
+  padding: 5px 7px; border-radius: 4px;
+  background: var(--bg-panel);
+}
+.vmig-body.new { background: var(--bg-hover); }
+.vmig-body-t {
+  white-space: nowrap; font-weight: 600;
+  color: var(--fg-dim);
+}
+.vmig-body-x { word-break: break-word; }
+/* 長い本文は3行で折る。押すと伸びる（title に出している） */
+.vmig-body.clip .vmig-body-x {
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden; cursor: pointer;
+}
+.vmig-see details > summary {
+  font-size: 12px; cursor: pointer; padding: 2px 0;
+  color: var(--fg-faint);
+}
+/* 人が決める行は、目に留まるようにする */
+.vmig-row.k-changed, .vmig-row.k-ambiguous, .vmig-row.k-gone, .vmig-row.k-unknown {
+  border-left: 3px solid var(--mk-orange-b);
+  padding-left: 7px;
+}

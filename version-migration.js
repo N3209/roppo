@@ -190,28 +190,73 @@ function matchLevel(fb, tb, depth, pairs) {
 }
 
 /*
- * アンカー → 画面に出る文字列。
+ * アンカー → 文字列。2通り作る。
  *
- * 文言注釈は「文言＋何番目の出現」で位置を持ち、描き直すときは画面に出ている
- * 文字列から探す（placeRange → textMapOf）。だから行き先を確かめるときも、
- * まったく同じ文字列で数えなければならない。
+ *   disp  その住所**自身**の文字。下位の項・号は入らない（textMapOf が
+ *         data-anchor を持つ部分木を飛ばす）
+ *   full  下位まで含めた文字
  *
- * 突き合わせ用の本文（bodies）は使えない。あちらは番号ラベルを除き空白も
- * 落としてある。号番号「一」を含むか含まないかで「何番目」の意味が変わり、
- * 第一号が第二号へ移る改正で別の文言に付いた（Codex が再現した）。
+ * **disp は「何番目」を数えるため、full は人に見せるため。** 取り違えると
+ * どちらも壊れる。
  *
- * 描いたHTMLに textMapOf を通す。描画時と同じ関数なので、数え方がずれる
- * 余地がない。会社法で数百msかかるが、求めに応じて一度走るだけである。
+ * disp がなぜ画面の文字でなければならないか。文言注釈は「文言＋何番目の
+ * 出現」で位置を持ち、描き直すときは画面に出ている文字列から探す
+ * （placeRange → textMapOf）。だから行き先を確かめるときも、まったく同じ
+ * 文字列で数えなければならない。突き合わせ用の本文（bodies）は使えない。
+ * あちらは番号ラベルを除き空白も落としてある。号番号「一」を含むか含まない
+ * かで「何番目」の意味が変わり、第一号が第二号へ移る改正で別の文言に付いた
+ * （Codex が再現した）。描いたHTMLに textMapOf を通せば、描画時と同じ関数な
+ * ので数え方がずれる余地がない。
+ *
+ * full がなぜ要るか。条（第30条）のように、自分の文字をほとんど持たず中身が
+ * 全部項に入っている住所は disp が空になる。版移行の画面で旧本文を出すのに
+ * disp を使っていたので、条に付けたメモの行が「（本文がありません）」に
+ * なっていた。**判断材料を置くための変更が、いちばん多い条で効いていなかった。**
+ *
+ * 会社法で数百msかかるが、求めに応じて一度走るだけである。
  */
-function dispByAnchor(html) {
+function textsByAnchor(html) {
   const host = document.createElement('div');
   host.innerHTML = html;
-  const out = new Map();
+  /*
+   * ルビは本文ではない。textMapOf も RT を飛ばすので、先に落としておけば
+   * disp と full が同じ文字の上で作られる。
+   */
+  for (const rt of host.querySelectorAll('rt')) rt.remove();
+  const disp = new Map();
+  const acc = new Map();          // 住所 → 自分と下位の文字（組み立て中）
+  /*
+   * **下位を含めた文字は、積み上げて作る。** el.textContent を住所ごとに
+   * 呼ぶと、条のところで項・号の文字をもう一度たどることになる。刑訴
+   * （1.3MB）で1秒ほど余計にかかった。先祖は必ず先に出てくるので、
+   * 自分の文字を自分と先祖の箱に積めば、たどり直さずに済む。
+   */
   for (const el of host.querySelectorAll('[data-anchor]')) {
     const a = el.dataset.anchor;
-    if (!out.has(a)) out.set(a, textMapOf(el).text);
+    if (disp.has(a)) continue;
+    const own = textMapOf(el).text;
+    disp.set(a, own);
+    if (!acc.has(a)) acc.set(a, []);
+    if (!own) continue;
+    acc.get(a).push(own);
+    for (let q = a; ; ) {
+      const up = upOf(q);
+      const sc = scopeOf(q);
+      // すぐ上が実在すればそれ。無ければ scope（附則直下の項 S1//3 がこれ）
+      const next = (up && acc.has(up)) ? up
+        : (sc !== q && acc.has(sc)) ? sc : '';
+      if (!next) break;
+      acc.get(next).push(own);
+      q = next;
+    }
   }
-  return out;
+  const full = new Map();
+  for (const [a, arr] of acc) full.set(a, arr.join(''));
+  return { disp, full };
+}
+
+function dispByAnchor(html) {
+  return textsByAnchor(html).disp;
 }
 
 /*

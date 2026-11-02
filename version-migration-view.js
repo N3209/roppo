@@ -84,17 +84,198 @@ const SWAP_LAST_KEY = 'roppo.lastVersionSwap';
  * auto が true のものは既定で選ぶ（defaultPicks と揃えてある）。
  * pickable が true のものは、利用者が選べば写せる。
  */
+/*
+ * 文言は**分かっていること以上を言わない。**
+ *
+ * 前は changed を「本文が変わっています」と書いていた。これは「同じ条文が
+ * 改正された」と読める。ところがこの判定は「同じ番号に何かある」だけで
+ * 出るので、**条が繰り下がって、空いた番号に無関係な条文が挿し込まれた
+ * ときも同じ言い方になる。**
+ *
+ *   旧 M/4(A) M/5(B)
+ *   新 M/4(A) M/5(無関係な新設) M/6(B は一語修正)
+ *   → 旧 M/5 の行き先として、無関係な M/5 が「本文が変わった」と出る
+ *
+ * 利用者は「改正で文言が変わったんだな」と受け取る。もっともらしいので
+ * 気づけない。推測を賢くしても直らないので、**言い方を根拠どおりにし、
+ * 旧本文と新本文を見せ、ほかの行き先も選べるようにした。**
+ *
+ * gone の「無くなった」も嘘だった。分かっているのは「見つけられなかった」
+ * だけで、条が削除されたとは言っていない。
+ *
+ * pickable は全部 true にした。gone と unknown も、人が本文を見て選べる。
+ * **機械が決められないことは、人が決められるようにする。**
+ */
 const VM_KINDS = {
-  same: { label: 'そのまま', why: '同じ位置にあります', auto: true, pickable: true },
-  moved: { label: '動いた', why: '番号が変わっています', auto: true, pickable: true },
-  ambiguous: { label: '要確認', why: '同じ本文が新しい版に複数あります。選んでください',
+  same: { label: 'そのまま', why: '同じ位置に、同じ本文があります', auto: true, pickable: true },
+  moved: { label: '動いた', why: '同じ本文が、別の番号にあります', auto: true, pickable: true },
+  ambiguous: { label: '要確認・候補あり', why: '', auto: false, pickable: true },
+  changed: { label: '要確認・同じ番号',
+    why: '同じ番号の条文はありますが、対応する条文かは確かめられません。'
+      + '旧本文と見比べてください', auto: false, pickable: true },
+  gone: { label: '見つからない',
+    why: '対応先を見つけられませんでした。旧本文を見て、ご自分で選べます',
     auto: false, pickable: true },
-  changed: { label: '本文が違う',
-    why: '同じ番号の条文はありますが、本文が変わっています', auto: false, pickable: true },
-  gone: { label: '無くなった', why: '新しい版に見つかりません', auto: false, pickable: false },
-  unknown: { label: '分からない', why: '附則や別表の対応が付きません',
-    auto: false, pickable: false },
+  unknown: { label: '辿れない',
+    why: '親（編・章・節や附則・別表）の対応が付かないため、ここから先を辿れませんでした',
+    auto: false, pickable: true },
 };
+
+/*
+ * ambiguous の言い方は候補の数で変える。
+ * 候補が1件でも ambiguous になる（旧版の側で一意でないとき）ので、
+ * 「複数あります」と言い切ると嘘になる（Codex の指摘8）。
+ */
+function vmWhy(it) {
+  const k = VM_KINDS[it.kind] || {};
+  if (it.kind !== 'ambiguous') return k.why || '';
+  const n = (it.cands || []).length;
+  if (n > 1) return '同じ本文が新しい版に ' + n + ' つあり、どれか決められません。選んでください';
+  return '同じ本文が旧い版にも複数あるため、移ったのか消えたのか決められません。'
+    + '旧本文と見比べてください';
+}
+
+/* 判定ごとに、人が決める行かどうか。決める行には本文を開いて出す */
+const vmNeedsEye = kind => kind !== 'same' && kind !== 'moved';
+
+/*
+ * 住所の末尾の番号。M/3_2 → [3, 2]。
+ * 新しい版に無い住所の差し込み位置を決めるのに使う。
+ */
+function vmNumKey(a) {
+  const seg = String(a || '').split('/').pop();
+  const out = [];
+  let n = '';
+  for (const ch of seg) {
+    if (ch >= '0' && ch <= '9') n += ch;
+    else if (n) { out.push(Number(n)); n = ''; }
+  }
+  if (n) out.push(Number(n));
+  return out;
+}
+
+function vmNumCmp(a, b) {
+  const x = vmNumKey(a), y = vmNumKey(b);
+  const len = Math.max(x.length, y.length);
+  for (let i = 0; i < len; i++) {
+    const p = x[i] == null ? -1 : x[i];
+    const q = y[i] == null ? -1 : y[i];
+    if (p !== q) return p < q ? -1 : 1;
+  }
+  return 0;
+}
+
+/*
+ * 新しい版で、同じ深さ・同じ親にある住所。本文の順に並ぶ。
+ *
+ * 条（深さ2）だけは親が編・章・節に散るので、scope で揃える。項・号は同じ
+ * 親の中に限る。深い方を法令全体から並べると数千件になる。
+ */
+function vmSiblings(it) {
+  const tb = vm.to.bodies;
+  const depth = depthOf(it.anchor);
+  const base = it.to || it.anchor;
+  const sc = scopeOf(base);
+  const up = upOf(base);
+  const out = [];
+  for (const a of tb.keys()) {
+    if (depthOf(a) !== depth) continue;
+    if (depth <= 2 ? scopeOf(a) !== sc : upOf(a) !== up) continue;
+    out.push(a);
+  }
+  return out;
+}
+
+/*
+ * 選べる行き先を並べる。
+ *
+ *   候補（cands）      機械が見つけた同文
+ *   同じ番号（to）     changed のときの相手
+ *   選んだ先           すでに選んであるもの（広げる前に落とさない）
+ *   近く               新しい版での前後5件
+ *   そのほか           「ほかの条文から選ぶ…」で広げたとき、同じ深さのもの全部
+ *
+ * **はじめから全部を並べてはいけない。** 条は法令1本で800件を超える
+ * （刑訴は834）。
+ * 487行それぞれに834件の option を置くと35万個になり、13MB の HTML を
+ * 作る。jsdom で 16秒・2.3GB を実測した。電話では開かない。
+ * それ以前に、834件並んだ select は人間にも使えない。
+ *
+ * 既定では手掛かりのあるものだけを出す。
+ *   機械が見つけた候補
+ *   同じ番号
+ *   新しい版での前後5件        ← **繰り下がりはここに入る**
+ * 足りなければ「ほかの条文から選ぶ…」で全部に広げる（押した行だけ）。
+ */
+const VM_NEAR = 5;
+const VM_MORE = '*more*';
+
+function vmTargets(it, all) {
+  const tb = vm.to.bodies;
+  const out = [];
+  const seen = new Set();
+  const add = (a, tag) => {
+    if (!a || !tb.has(a) || seen.has(a)) return;
+    seen.add(a);
+    out.push({ anchor: a, tag });
+  };
+  for (const a of it.cands || []) add(a, '候補');
+  add(it.to, it.kind === 'changed' ? '同じ番号' : '');
+  add(vm.picks.get(it.anchor), '選んだ先');   // 広げる前に選んだものを落とさない
+
+  const sib = vmSiblings(it);
+  if (all) {
+    for (const a of sib) add(a, '');
+    return { items: out, more: false };
+  }
+
+  /*
+   * 近いところだけ。繰り下がりは隣に落ちるので、ここで足りることが多い。
+   * 基準が新しい版に無い（gone）ときは、番号から差し込み位置を決める。
+   */
+  const base = it.to || it.anchor;
+  let i = sib.indexOf(base);
+  if (i < 0) {
+    i = sib.length;
+    for (let j = 0; j < sib.length; j++) {
+      if (vmNumCmp(sib[j], base) > 0) { i = j; break; }
+    }
+  }
+  const lo = Math.max(0, i - VM_NEAR);
+  const hi = Math.min(sib.length, i + VM_NEAR + 1);
+  for (let j = lo; j < hi; j++) add(sib[j], '近く');
+  return { items: out, more: sib.some(a => !seen.has(a)) };
+}
+
+/*
+ * 人に見せる本文。
+ *
+ * full（下位まで含めた文字）を使う。無ければ disp に落とす。
+ * **disp を使ってはいけない。** 条は自分の文字をほとんど持たないので、
+ * いちばん多い「条に付けたメモ」の行が空になる。
+ */
+function vmShowText(mats, anchor) {
+  if (!mats) return '';
+  const f = mats.full && mats.full.get(anchor);
+  if (f) return f;
+  return (mats.disp && mats.disp.get(anchor)) || '';
+}
+
+/* 本文を1つ出す。長いものは折り、押すと伸びる */
+function vmBodyBox(cls, title, text) {
+  const d = document.createElement('div');
+  d.className = 'vmig-body ' + cls;
+  const t = String(text == null ? '' : text).replace(/\s+/g, ' ').trim();
+  d.innerHTML = '<span class="vmig-body-t">' + esc(title) + '</span>'
+    + '<span class="vmig-body-x">' + esc(t || '（本文がありません）') + '</span>';
+  const x = d.querySelector('.vmig-body-x');
+  if (t.length > 120) {
+    d.classList.add('clip');
+    x.title = 'クリックで全文';
+    x.onclick = () => d.classList.toggle('clip');
+  }
+  return d;
+}
 
 /* ------------------------------------------------------------ 入口 */
 
@@ -292,7 +473,8 @@ async function paintVersionUndoBox() {
  *
  *   bodies  突き合わせ用の本文（番号ラベルを除き、空白を落としたもの）
  *   scopes  附則・別表の手掛かり（改正法令番号や題名）
- *   disp    画面に出るのと同じ文字列。文言注釈の「何番目」を数えるのに使う
+ *   disp    その住所自身の文字。文言注釈の「何番目」を数えるのに使う
+ *   full    下位の項・号まで含めた文字。人に見せるのはこちら
  *   savedAt この材料がいつの中身から作られたか。確定の直前に照合する
  *
  * 会社法で数百msかかる。開いたときと、書く直前の2回だけ走らせる。
@@ -302,7 +484,8 @@ function versionMaterialsFromXml(xml, what) {
   const lawEl = doc.querySelector('Law');
   if (!lawEl) throw new Error('法令本体が見つかりません: ' + (what || ''));
   const { html, bodies, scopes, index } = renderLaw(lawEl);
-  return { bodies, scopes, index, disp: dispByAnchor(html) };
+  const { disp, full } = textsByAnchor(html);
+  return { bodies, scopes, index, disp, full };
 }
 
 async function versionMaterials(lawId) {
@@ -453,10 +636,10 @@ function renderVersionSummary() {
  * 1件ぶんの行。
  *
  * 判定によって選び方が変わる。
- *   same / moved    写し先が決まっている。チェックで入れ外しする（既定は入る）
- *   changed         写し先はあるが本文が違う。チェックは外してある
- *   ambiguous       候補から選ぶ。選ぶまで写さない
- *   gone / unknown  写し先が無い。選べない
+ *   same / moved                   写し先が決まっている。チェックで入れ外しする
+ *                                  （既定は入る）。本文は折り畳む
+ *   changed / ambiguous /          機械は決められない。本文を開いて出し、
+ *   gone / unknown                 写し先を select で選ばせる（既定は写さない）
  */
 function vmRow(it) {
   const k = VM_KINDS[it.kind] || { label: it.kind, why: '', pickable: false };
@@ -486,31 +669,90 @@ function vmRow(it) {
   }
 
   li.innerHTML = head
-    + `<div class="vmig-why">${esc(k.why)}</div>`
+    + `<div class="vmig-why">${esc(vmWhy(it))}</div>`
     + body.join('')
+    + '<div class="vmig-see"></div>'
     + '<div class="vmig-pick"></div>'
     + '<div class="vmig-ranges"></div>';
 
   const pick = li.querySelector('.vmig-pick');
 
+  /*
+   * 本文を見せる。
+   *
+   * **番号だけでは選べない。** 旧 M/5 の行き先として新 M/5 が出ていても、
+   * それが無関係な挿入条文なのか、同じ条文が直されたものなのかは、本文を
+   * 見ないと分からない。見せなければ、利用者は間違いを承認し続ける。
+   *
+   * 人が決める行（same / moved 以外）は開いて出す。機械が決めた行は
+   * 折り畳む。**判断する行にだけ、判断材料を置く。**
+   */
+  const see = li.querySelector('.vmig-see');
+  // 見せるのは full。条は自分の文字を持たないので disp では空になる
+  const old = vmShowText(vm.from, it.anchor);
+  const paintSee = () => {
+    see.innerHTML = '';
+    const to2 = vm.picks.get(it.anchor) || '';
+    const inner = document.createElement('div');
+    inner.className = 'vmig-cmp';
+    inner.appendChild(vmBodyBox('old', '旧 ' + anchorLabel(it.anchor), old));
+    if (to2) {
+      inner.appendChild(vmBodyBox('new', '新 ' + anchorLabel(to2),
+        vmShowText(vm.to, to2)));
+    } else if (vmNeedsEye(it.kind)) {
+      const d = document.createElement('div');
+      d.className = 'vmig-body new';
+      d.innerHTML = '<span class="vmig-body-t">新</span>'
+        + '<span class="vmig-body-x">写し先を選ぶと、新しい本文が出ます</span>';
+      inner.appendChild(d);
+    }
+    if (vmNeedsEye(it.kind)) {
+      see.appendChild(inner);
+    } else {
+      const det = document.createElement('details');
+      det.innerHTML = '<summary>本文を見る</summary>';
+      det.appendChild(inner);
+      see.appendChild(det);
+    }
+  };
+  li.vmPaintSee = paintSee;
+
   if (!k.pickable) {
     pick.innerHTML = '<span class="vmig-none">写せません</span>';
+    paintSee();
     return li;
   }
 
-  if (it.kind === 'ambiguous') {
+  if (vmNeedsEye(it.kind)) {
     /*
-     * 候補から選ばせる。既定は「写さない」。
-     * 候補が多いときもあるので select にする。
+     * 人が決める行は、どこへでも選べるようにする。既定は「写さない」。
+     *
+     * 前は ambiguous だけが候補を選べて、changed は「同じ番号へ写すか・
+     * 写さないか」の2択だった。**繰り下がった正解を選ぶ手立てが無かった。**
+     * gone と unknown は選ぶ口すら無く、「写せません」と出るだけだった。
+     *
+     * 機械が見つけた候補を先に、同じ番号を次に、新しい版での前後5件を
+     * その後に並べる。**順番は手掛かりの強さの順で、どれを選んでも等しく
+     * 写せる。** それより遠くへ写すときは「ほかの条文から選ぶ…」で広げる。
+     * 最初から全部を並べない理由は vmTargets に書いた。
      */
     const sel = document.createElement('select');
-    sel.innerHTML = '<option value="">写さない</option>'
-      + it.cands.map(a => `<option value="${esc(a)}">${esc(anchorLabel(a))} へ写す</option>`).join('');
-    sel.value = to;
+    const opt = o => '<option value="' + esc(o.anchor) + '">'
+      + esc(anchorLabel(o.anchor) + (o.tag ? '（' + o.tag + '）' : '')) + '</option>';
+    const fill = all => {
+      const t = vmTargets(it, all);
+      sel.innerHTML = '<option value="">写さない</option>'
+        + t.items.map(opt).join('')
+        + (t.more ? '<option value="' + VM_MORE + '">ほかの条文から選ぶ…</option>' : '');
+      sel.value = vm.picks.get(it.anchor) || '';
+    };
+    fill(false);
     sel.onchange = () => {
+      if (sel.value === VM_MORE) { fill(true); return; }   // 広げるだけ。選ばない
       if (sel.value) vm.picks.set(it.anchor, sel.value);
       else vm.picks.delete(it.anchor);
       paintVmRanges(li, it);
+      paintSee();
       renderVersionSummary();
     };
     pick.appendChild(document.createTextNode('写し先: '));
@@ -531,12 +773,14 @@ function vmRow(it) {
       if (box.checked) vm.picks.set(it.anchor, it.to);
       else vm.picks.delete(it.anchor);
       paintVmRanges(li, it);
+      paintSee();
       renderVersionSummary();
     };
     pick.appendChild(label);
   }
 
   paintVmRanges(li, it);
+  paintSee();
   return li;
 }
 

@@ -908,10 +908,20 @@ function syncTopbarLaw() {
    * 施行日。e-Gov のものだけが持つ。
    * 自分で起こしたデータ（ファイル・パック）は「不明」と出す。空欄にすると
    * 「無い」のか「分からない」のか区別が付かない。
+   *
+   * **来歴があるなら、分かっていることを出す。** 広い画面ではこれを
+   * .law-meta が持っているが、狭い画面では .law-meta を隠している
+   * （style.css の @media (max-width: 800px)）。隠した側に移していなかった
+   * ので、規則パックの法令を電話で開くと「施行日不明」としか出なかった。
+   * 法令番号は本文末尾（packNoteHTML）にあるが、**いつ時点の本文かは
+   * 読み方に直結するので、ここに出す。**
    */
+  const prov = (rec && rec.provenance) || {};
   $('.tl-date', el).textContent = !rec ? ''
-    : lawOrigin(rec) !== 'egov' ? '施行日不明'
-    : rec.enforcementDate ? '施行 ' + rec.enforcementDate : '';
+    : lawOrigin(rec) === 'egov'
+      ? (rec.enforcementDate ? '施行 ' + rec.enforcementDate : '')
+    : prov['反映'] ? prov['反映'] + ' 反映'
+    : '施行日不明';
 
   const dot = $('.tl-dot', el);
   const a = rec && amendOf(rec);
@@ -2791,6 +2801,24 @@ function wire() {
 }
 
 function bindPaneEvents(pane) {
+  /*
+   * 題名を押したら版の一覧。狭い画面の上段（#topbar-law）と同じ役である。
+   *
+   * 広い画面では題名は本文の上にあり、上段には出ない（style.css の
+   * @media (max-width: 800px) で入れ替えている）。そちらの入口は改正の印
+   * （.amend-dot）しか無かったが、印は「新しい版が出ている」か「未施行の
+   * 改正が控えている」ときにしか出ない。**最新を持っていて控えも無い法令
+   * からは、版を選ぶ道がどこにも無かった。** 固定版を作りたいのは、まさに
+   * そういう落ち着いた法令である。
+   *
+   * 出どころの見分けは openRevisions が持っている（規則パックや取り込んだ
+   * ものは e-Gov に版が無いので、押しても断られる）。ここでは見ない。
+   */
+  pane.title.title = '押すと版を選べます';
+  pane.title.onclick = () => {
+    if (pane.current) openRevisions(pane.current.lawId);
+  };
+
   pane.el.addEventListener('click', e => {
     const ref = e.target.closest('a.ref[data-target]');
     const mk = e.target.closest('mark[data-range-id]');
