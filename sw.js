@@ -24,7 +24,7 @@
  * 抱えたまま読み込み直すことになるため、断りなしには行わない。
  */
 
-const VERSION = 'v119';
+const VERSION = 'v120';
 const CACHE = 'roppo-shell-' + VERSION;
 
 // 欠けると起動しないもの。全部そろって初めてこの版を入れる。
@@ -47,6 +47,12 @@ const REQUIRED = [
 
 // 無くても読める。取れなくてもこの版は入れる。
 const OPTIONAL = [
+  /*
+   * プライバシーポリシー。取れなくても起動する（アプリは読み込まない）。
+   * ただし圏外でも読めた方がよいので、入れておく。
+   */
+  './privacy.html',
+  './terms.html',
   './icons/icon-180.png',
   './icons/icon-192.png',
   './icons/icon-512.png',

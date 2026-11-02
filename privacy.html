@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--
+  プライバシーポリシー。
+
+  アプリ本体から独立させている。JSを読まないし、style.css にも依存しない。
+  Google の同意画面からここへ飛んでくるので、アプリが壊れていても読めなければ
+  意味がない。
+
+  **書いてあることは、実装から確かめたものだけにする。** 確かめ方を残しておく。
+
+    接続先        index.html の Content-Security-Policy（connect-src）
+    解析・広告    配布物に該当するコードが0件（analytics / gtag / sentry 等）
+    端末の保存    core.js の IndexedDB と、boot.js の localStorage
+    Drive の中身  core.js の buildSnapshot（records に法令XMLは無い）
+    スコープ      sync.js の G_SCOPE（drive.appdata の1本だけ）
+
+  実装を変えたら、ここも直す。
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>プライバシーポリシー — 六法</title>
+<style>
+  :root {
+    --bg: #fff; --fg: #1a1a1a; --dim: #555; --line: #e2e2e2;
+    --box: #f6f6f6; --link: #0b5ed7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181a; --fg: #e8e8e8; --dim: #a8a8a8; --line: #2e3236;
+      --box: #1e2124; --link: #7db3ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px 16px 72px;
+    background: var(--bg); color: var(--fg);
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 16px; line-height: 1.85;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 22px; line-height: 1.5; margin: 0 0 4px; }
+  h2 {
+    font-size: 17px; margin: 32px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 1.3em; }
+  .meta { color: var(--dim); font-size: 13px; margin: 0 0 24px; }
+  .box {
+    background: var(--box); border-radius: 6px;
+    padding: 12px 14px; margin: 0 0 14px;
+  }
+  .box p:last-child, .box ul:last-child, .box li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  a { color: var(--link); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em; word-break: break-all;
+  }
+  footer {
+    margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--dim); font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>プライバシーポリシー</h1>
+<p class="meta">
+  六法（個人制作）／最終更新 2026年11月2日
+</p>
+
+<p>
+  「六法」は、個人が作った法令ビューアです。法令の本文を端末の中に保存して、
+  通信がなくても読めるようにしてあります。会社や団体が運営するサービスではありません。
+</p>
+
+<div class="box">
+  <p><strong>要点</strong></p>
+  <ul>
+    <li>利用者の登録はありません。氏名・住所・電話番号を尋ねることはありません。</li>
+    <li>アクセス解析も広告も入れていません。第三者に渡すこともありません。</li>
+    <li>書いたメモは、既定では<strong>端末の中だけ</strong>にあります。</li>
+    <li>同期機能を使ったときだけ、メモの控えが<strong>利用者自身の
+      Google ドライブ</strong>に置かれます。作者の手元には送られません。</li>
+  </ul>
+</div>
+
+<h2>端末の中に保存するもの</h2>
+
+<p>
+  次のものを、ブラウザがその端末に用意する保存領域（IndexedDB と localStorage）に
+  入れています。作者はこれを読めません。
+</p>
+<ul>
+  <li>取り込んだ法令の本文（XML）と、その題名・法令番号・版・施行日</li>
+  <li>利用者が書いたメモ、条文に付けた印とその語句、色、タグ</li>
+  <li>法令の並び順、表示の設定（文字の大きさなど）、最後に読んでいた場所</li>
+  <li>端末を見分けるための符号（同期で、どの端末が置いた控えかを知るために使います）</li>
+</ul>
+<p>
+  これらは、ブラウザの「サイトデータを削除」や、アプリの「書き出しと復元」から
+  消せます。アプリを消せば一緒に消えます。
+</p>
+
+<h2>外部との通信</h2>
+
+<p>
+  アプリが通信する先は、次の3つに限っています。これは配布しているページ自身に
+  <code>Content-Security-Policy</code> として書き込んであり、ブラウザが
+  それ以外への送信を拒みます。
+</p>
+<ul>
+  <li><strong>アプリ自身の配信元</strong>（<code>n3209.github.io</code>）
+    — アプリのファイルと、最高裁判所規則のデータを取りに行きます。</li>
+  <li><strong>e-Gov法令検索</strong>（<code>laws.e-gov.go.jp</code>）
+    — 法令の検索、本文の取得、版の一覧の取得に使います。送るのは法令の番号や
+    検索語です。利用者を識別する情報は送りません。</li>
+  <li><strong>Google の API</strong>（<code>www.googleapis.com</code>）
+    — <strong>同期機能を使ったときだけ</strong>通信します。使わなければ
+    一度も通信しません。</li>
+</ul>
+<p>
+  配信は GitHub Pages を使っています。ページを読み込む時点で、GitHub が
+  接続元の記録を持つことがあります。これは作者が集めているものではなく、
+  作者が見ることもできません。
+</p>
+
+<h2>同期機能（Google ドライブ）</h2>
+
+<p>
+  複数の端末で同じメモを読めるようにするための機能です。<strong>使うかどうかは
+  利用者が選びます。</strong>使わなければ、Google との通信は一切起きません。
+</p>
+
+<p>
+  <strong>この機能は試作中で、いまは作者の環境でのみ動きます。</strong>
+  アプリの画面にも同じことを書いています。以下は、有効にしたときに何が
+  起きるかの説明です。
+</p>
+
+<div class="box">
+  <p><strong>求める権限は1つだけです。</strong></p>
+  <p>
+    <code>https://www.googleapis.com/auth/drive.appdata</code>
+  </p>
+  <p>
+    これは「このアプリ専用の隠し場所」だけを扱う権限です。ドライブにある
+    ほかのファイルを読むことも、書くことも、消すこともできません。
+    隠し場所はドライブの画面には出てきません。
+  </p>
+</div>
+
+<p><strong>置かれるもの。</strong></p>
+<ul>
+  <li>利用者が書いたメモの本文、タグ、色</li>
+  <li>条文に付けた印と、その語句（条文の一部の文字が含まれます）</li>
+  <li>法令の題名・法令番号・版の情報（どの法令を持っているかの目録）</li>
+  <li>法令の並び順、置いた端末の符号、置いた日時</li>
+</ul>
+
+<p><strong>置かれないもの。</strong></p>
+<ul>
+  <li>法令の本文そのもの（各端末が e-Gov から直接取ります）</li>
+  <li>閲覧の履歴、検索した語句、利用の統計</li>
+</ul>
+
+<p>
+  控えは新しいものから数世代だけ残し、古いものは自動で消します。
+  置き場所は利用者自身の Google アカウントの中なので、<strong>作者はその中身を
+  見られません。</strong>
+</p>
+
+<p>
+  アプリは、どのアカウントに繋がっているかを画面に出すために、
+  利用者のメールアドレスを Google から受け取って端末内に控えます。
+  これも外へは送りません。
+</p>
+
+<h2>権限の取り消しと、控えの削除</h2>
+
+<ul>
+  <li>アプリの同期の画面から、接続を切ることができます。</li>
+  <li>Google アカウントの
+    <a href="https://myaccount.google.com/connections" target="_blank"
+      rel="noopener">「アプリとサービスへの接続」</a>
+    から、このアプリの権限を取り消せます。</li>
+  <li>隠し場所に置いた控えは、Google ドライブの
+    <a href="https://drive.google.com/drive/settings" target="_blank"
+      rel="noopener">設定 → アプリの管理</a>
+    から削除できます。</li>
+</ul>
+
+<h2>子どもの利用について</h2>
+
+<p>
+  このアプリは法令を読むための道具で、年齢を尋ねることはありません。
+  利用者から個人情報を集めていないため、子どもから情報を取得することもありません。
+</p>
+
+<h2>このポリシーの変更</h2>
+
+<p>
+  実装を変えたときは、このページも直します。最終更新の日付は先頭に書いています。
+  変更の履歴は、配布しているリポジトリの記録に残ります。
+</p>
+
+<h2>お問い合わせ</h2>
+
+<p>
+  <a href="mailto:n3209-roppo-dev@googlegroups.com">n3209-roppo-dev@googlegroups.com</a>
+</p>
+<p>
+  個人で作っているものなので、返信にお時間をいただくことがあります。
+</p>
+
+<footer>
+  <p>
+    六法（個人制作）<br>
+    法令の本文は e-Gov法令検索（デジタル庁）から取得しています。
+    出典や加工について詳しくは、アプリ内の「このアプリについて」をご覧ください。
+  </p>
+  <p>
+    <a href="terms.html">利用規約</a>
+    ／
+    <a href="./">六法に戻る</a>
+  </p>
+</footer>
+
+</main>
+</body>
+</html>

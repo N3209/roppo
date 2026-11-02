@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!--
+  利用規約。
+
+  privacy.html と同じ作りにしてある。JSを読まないし、style.css にも依存しない。
+  同意画面から直接来るので、アプリが壊れていても読めなければ意味がない。
+
+  **約束しないことを、約束しないと書く。** 無償で個人が公開している道具なので、
+  可用性も正確性も保証できない。そこを曖昧にすると、読む人が実務で頼る。
+
+  出典と権利の節は、アプリ内の「このアプリについて」と同じ事実を書く。
+  片方だけ直すと食い違うので、直すときは両方を見る。
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<title>利用規約 — 六法</title>
+<style>
+  :root {
+    --bg: #fff; --fg: #1a1a1a; --dim: #555; --line: #e2e2e2;
+    --box: #f6f6f6; --link: #0b5ed7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181a; --fg: #e8e8e8; --dim: #a8a8a8; --line: #2e3236;
+      --box: #1e2124; --link: #7db3ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px 16px 72px;
+    background: var(--bg); color: var(--fg);
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 16px; line-height: 1.85;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+  h1 { font-size: 22px; line-height: 1.5; margin: 0 0 4px; }
+  h2 {
+    font-size: 17px; margin: 32px 0 8px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 1.3em; }
+  .meta { color: var(--dim); font-size: 13px; margin: 0 0 24px; }
+  .box {
+    background: var(--box); border-radius: 6px;
+    padding: 12px 14px; margin: 0 0 14px;
+  }
+  .box p:last-child, .box ul:last-child, .box li:last-child { margin-bottom: 0; }
+  strong { font-weight: 700; }
+  a { color: var(--link); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em; word-break: break-all;
+  }
+  footer {
+    margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line);
+    color: var(--dim); font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>利用規約</h1>
+<p class="meta">
+  六法（個人制作）／最終更新 2026年11月2日
+</p>
+
+<p>
+  「六法」は、個人が無償で公開している法令ビューアです。会社や団体が運営する
+  サービスではありません。利用する方は、以下をご承知ください。
+</p>
+
+<div class="box">
+  <p><strong>要点</strong></p>
+  <ul>
+    <li>登録も料金もありません。誰でも使えます。</li>
+    <li><strong>法令の内容が正しいことを保証できません。</strong>
+      実務で使うときは、官報または公式の法令集で確かめてください。</li>
+    <li>いつでも変更・停止することがあります。</li>
+    <li>このアプリは法的な助言をするものではありません。</li>
+  </ul>
+</div>
+
+<h2>使えること</h2>
+
+<p>
+  登録は要りません。個人でも仕事でも、自由にお使いいただけます。
+  端末に保存した法令やメモは、利用する方のものです。アプリの
+  「書き出しと復元」から、いつでも取り出せます。
+</p>
+
+<h2>保証しないこと</h2>
+
+<p>
+  <strong>個人が余暇で作っているものです。</strong>次のことを保証できません。
+</p>
+<ul>
+  <li><strong>法令の内容が、現に効力を有するものと一致していること。</strong>
+    表示されるのは、その法令をその端末へ取り込んだ時点の版です。
+    改正が出ていないかは、法令の一覧の ⟳ で確かめてください。</li>
+  <li>いつでも使えること。配信の停止、提供元（e-Gov など）の仕様変更、
+    不具合などで使えなくなることがあります。</li>
+  <li>メモが失われないこと。端末の故障、ブラウザのデータ削除、
+    同期の不具合などで失われることがあります。
+    <strong>大切なメモは「書き出しと復元」で控えを取ってください。</strong></li>
+</ul>
+
+<p>
+  法令データが官報の掲載内容と異なる場合は、官報が優先します（e-Gov の注記）。
+</p>
+
+<h2>責任の範囲</h2>
+
+<p>
+  このアプリの利用によって生じた損害について、作者は責任を負いません。
+  ただし、作者の故意または重大な過失による場合は、この限りではありません。
+</p>
+
+<p>
+  <strong>重要な判断の前には、必ず公式の資料で確かめてください。</strong>
+  条文の読み違い、改正の見落としによる不利益は、このアプリでは防げません。
+</p>
+
+<h2>法令データの出典と権利</h2>
+
+<p>
+  法令の本文は e-Gov法令検索（デジタル庁）から取得しています。<br>
+  出典：e-Gov法令検索（デジタル庁）
+  <a href="https://laws.e-gov.go.jp/" target="_blank" rel="noopener">https://laws.e-gov.go.jp/</a><br>
+  e-Gov のコンテンツは公共データ利用規約（第1.0版）に基づいて利用しています。
+</p>
+
+<p>
+  最高裁判所規則の一部は、裁判所ウェブサイトの掲載物をもとに作者が個人で
+  XML化したものです。<strong>裁判所による提供・検証ではありません。</strong>
+  各規則の出典・加工・照合の範囲は、本文の末尾に書いています。
+</p>
+
+<p>
+  条文の文字と並び順は、取り込んだデータのままです。このアプリがしているのは
+  画面に出すための組み立て（段落の分け方・項番号の体裁・括弧の見せ方・目次・
+  別表の表組み）で、加工したのは 六法（個人制作） です。
+</p>
+
+<h2>しないでほしいこと</h2>
+
+<ul>
+  <li>法令の提供元（e-Gov など）に負担をかける使い方。
+    短い間隔で大量に取得する、といったことはしないでください。</li>
+  <li>アプリや配信の仕組みを妨げる行為。</li>
+  <li>このアプリが公式の法令集であるかのように見せること。</li>
+</ul>
+
+<h2>変更と停止</h2>
+
+<p>
+  この規約と、アプリの内容は、予告なく変更することがあります。
+  提供を停止することもあります。最終更新の日付は先頭に書いています。
+  変更の履歴は、配布しているリポジトリの記録に残ります。
+</p>
+
+<h2>個人情報の扱い</h2>
+
+<p>
+  <a href="privacy.html">プライバシーポリシー</a>をご覧ください。
+</p>
+
+<h2>準拠法</h2>
+
+<p>
+  この規約は日本法に従って解釈します。
+</p>
+
+<h2>お問い合わせ</h2>
+
+<p>
+  <a href="mailto:n3209-roppo-dev@googlegroups.com">n3209-roppo-dev@googlegroups.com</a>
+</p>
+<p>
+  個人で作っているものなので、返信にお時間をいただくことがあります。
+</p>
+
+<footer>
+  <p>
+    六法（個人制作）<br>
+    出典や加工について詳しくは、アプリ内の「このアプリについて」をご覧ください。
+  </p>
+  <p><a href="./">六法に戻る</a></p>
+</footer>
+
+</main>
+</body>
+</html>
