@@ -640,7 +640,14 @@ async function openLaw(lawId, anchor, scrollTop, pane) {
     const behind = !!(am && am.kind === 'behind');
     paintVersionMigrationNote(note, rec, {
       quiet: !behind && !stale,
-      swap: lawOrigin(rec) === 'egov' ? rec.lawId : '',
+      /*
+       * 本文が古いと分かっているときは、入れ替えのボタンを出さない。
+       *
+       * 押しても openVersionSwap が断るが、**警告の隣に押せないボタンを
+       * 置かない。** ここで出す警告が「本文を取り直してください」なので、
+       * 道は1本だけ見せる。そろえれば staleBody から消えて、ボタンは戻る。
+       */
+      swap: !stale && lawOrigin(rec) === 'egov' ? rec.lawId : '',
       /*
        * 写す入口は出さない。
        *
