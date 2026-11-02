@@ -1016,12 +1016,15 @@ a.ref {
 .mk .memo-inline { border-left-color: var(--dot); }
 
 /*
- * 試作中の知らせ。
+ * 読み飛ばしてほしくない知らせ。
  *
- * 枠と地色を付けて、ただの説明文と見分けられるようにする。URLを渡した人が
- * 読み飛ばすと、押して Google の画面で弾かれ、アプリが壊れていると思われる。
+ * 枠と地色を付けて、ただの説明文と見分けられるようにする。
+ *
+ * もとは「同期は試作中」を出すための枠だった（.prototype-note）。本番公開で
+ * その文は要らなくなったが、代わりに「同意画面にアプリ名が出ない」を置いた。
+ * **読み飛ばすと、押した人が偽のページだと思う。** 枠が要る理由は変わっていない。
  */
-.prototype-note {
+.callout {
   border: 1px solid color-mix(in srgb, var(--fg) 18%, transparent);
   border-left: 3px solid color-mix(in srgb, var(--fg) 45%, transparent);
   background: color-mix(in srgb, var(--fg) 4%, transparent);
