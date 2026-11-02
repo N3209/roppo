@@ -205,6 +205,26 @@ function vmSiblings(it) {
 }
 
 /*
+ * 新しい版で、同じ深さにあるもの全部。本文の順に並ぶ。
+ *
+ * **「ほかの条文から選ぶ…」はここまで広げる。** vmSiblings は親（条・
+ * 附則）の中に限るので、条が繰り下がって旧 M/5/1 の正解が新 M/6/1 に
+ * ある場合、**広げても出てこなかった**（Codex の指摘 P2-2）。それどころか
+ * 旧 M/5 の項が1つなら候補も出尽くし、「ほかの条文から選ぶ…」自体が
+ * 現れなかった。
+ *
+ * 1行ぶんだけ広げるので、数は払える。刑訴（条834）でも項は数千で、
+ * 35万個を作っていた頃の話とは桁が違う。
+ */
+function vmWide(it) {
+  const tb = vm.to.bodies;
+  const depth = depthOf(it.anchor);
+  const out = [];
+  for (const a of tb.keys()) if (depthOf(a) === depth) out.push(a);
+  return out;
+}
+
+/*
  * 選べる行き先を並べる。
  *
  *   候補（cands）      機械が見つけた同文
@@ -241,11 +261,17 @@ function vmTargets(it, all) {
   add(it.to, it.kind === 'changed' ? '同じ番号' : '');
   add(vm.picks.get(it.anchor), '選んだ先');   // 広げる前に選んだものを落とさない
 
-  const sib = vmSiblings(it);
+  /*
+   * **広げられるかどうかは、深さで揃えた一覧で見る。**
+   * 親の中だけで見ると、親に1つしか無いときに入口が消える。
+   */
+  const wide = vmWide(it);
   if (all) {
-    for (const a of sib) add(a, '');
+    for (const a of wide) add(a, '');
     return { items: out, more: false };
   }
+
+  const sib = vmSiblings(it);
 
   /*
    * 近いところだけ。繰り下がりは隣に落ちるので、ここで足りることが多い。
@@ -262,7 +288,7 @@ function vmTargets(it, all) {
   const lo = Math.max(0, i - VM_NEAR);
   const hi = Math.min(sib.length, i + VM_NEAR + 1);
   for (let j = lo; j < hi; j++) add(sib[j], '近く');
-  return { items: out, more: sib.some(a => !seen.has(a)) };
+  return { items: out, more: wide.some(a => !seen.has(a)) };
 }
 
 /*
@@ -1124,6 +1150,30 @@ async function undoVersionCopy(last) {
  *   ・どの版に差し替えたかを記録する。次の改正で「新しい版が出ています」と
  *     言えるようになる（古い記録は版IDも施行日も持たないので言えなかった）
  */
+/*
+ * 本文が他の端末より古いなら、入れ替えを断る。断ったら true を返す。
+ *
+ * **一度見るだけでは足りない。** staleBody は同期が終わったあとの
+ * checkStaleBodies で入れ替わる。入口で見てから書き込むまでの間には
+ * 「新しい版の一覧を問い合わせる」「本文を落とす」「人が確認の窓を読む」
+ * という待ちがあり、その間に同期が終わりうる。終われば、別の端末で
+ * 移動済みの注釈だけがこちらへ届き、本文は旧いままになる。そのまま
+ * 入れ替えると二度動かす（Codex の指摘 P1-1）。
+ *
+ * **注釈の指紋では捕まらない。** 計画を作る時点で同期が済んでいれば、
+ * vmNoteStamp は移動後の注釈から作られ、doVersionSwap の読み直しとも
+ * 一致する。savedAt も変わらない（本文は触られていない）。だから
+ * ここで直に見る必要がある。
+ */
+function vmStaleStop(lawId) {
+  const stale = typeof staleBodyOf === 'function' ? staleBodyOf(lawId) : null;
+  if (!stale) return false;
+  toast('この本文は他の端末より古いので、入れ替えられません。'
+    + '「法令を追加」の「本文が他の端末と食い違う法令」で、'
+    + '先に本文を取り直してください');
+  return true;
+}
+
 async function openVersionSwap(lawId) {
   const rec = state.laws.find(l => l.lawId === lawId);
   if (!rec) { toast('法令が見つかりません'); return; }
@@ -1157,13 +1207,7 @@ async function openVersionSwap(lawId) {
    * 注釈に触らず本文だけを合わせる。そろえれば staleBody から消えるので、
    * そのあとは入れ替えも普通に押せる。
    */
-  const stale = typeof staleBodyOf === 'function' ? staleBodyOf(lawId) : null;
-  if (stale) {
-    toast('この本文は他の端末より古いので、入れ替えられません。'
-      + '「法令を追加」の「本文が他の端末と食い違う法令」で、'
-      + '先に本文を取り直してください');
-    return;
-  }
+  if (vmStaleStop(lawId)) return;
 
   vm = null;
   const token = ++vmToken;
@@ -1358,6 +1402,9 @@ async function showSwapPlan(lawId, xml, rev) {
   $('#vmig-list').innerHTML = '';
   $('#vmig-go').hidden = true;
 
+  /* 版を問い合わせている間に同期が終わっていないか。ここでも見る */
+  if (vmStaleStop(lawId)) { $('#dlg-vmig').close(); return; }
+
   let from, to;
   try {
     from = await versionMaterials(lawId);
@@ -1545,6 +1592,12 @@ async function doVersionSwap() {
       }
     }
     if (token !== vmToken || vm !== job) return;
+
+    /*
+     * **確認の窓を読んでいる間が、いちばん長い待ちである。**
+     * ここを抜けたら注釈を書き換えるので、最後にもう一度見る。
+     */
+    if (vmStaleStop(job.fromLawId)) return;
 
     if (!rec) { toast('法令が見つかりません（何も変えていません）'); return; }
     if ((rec.savedAt || 0) !== job.from.savedAt) {

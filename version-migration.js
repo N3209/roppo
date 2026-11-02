@@ -215,6 +215,12 @@ function matchLevel(fb, tb, depth, pairs) {
  *
  * 会社法で数百msかかるが、求めに応じて一度走るだけである。
  */
+/*
+ * 本文から除く塊。annot.js の textMapOf の SKIP_EL と同じでなければならない。
+ * ずれると、文言注釈の「何番目」を数える文字と、ここで作る文字が別になる。
+ */
+const VM_SKIP_EL = '.memo-inline, .inline-tags, .note-summary, .slash';
+
 function textsByAnchor(html) {
   const host = document.createElement('div');
   host.innerHTML = html;
@@ -223,33 +229,61 @@ function textsByAnchor(html) {
    * disp と full が同じ文字の上で作られる。
    */
   for (const rt of host.querySelectorAll('rt')) rt.remove();
-  const disp = new Map();
-  const acc = new Map();          // 住所 → 自分と下位の文字（組み立て中）
   /*
-   * **下位を含めた文字は、積み上げて作る。** el.textContent を住所ごとに
-   * 呼ぶと、条のところで項・号の文字をもう一度たどることになる。刑訴
-   * （1.3MB）で1秒ほど余計にかかった。先祖は必ず先に出てくるので、
-   * 自分の文字を自分と先祖の箱に積めば、たどり直さずに済む。
+   * 自分で書いた文字は本文ではない。textMapOf も同じものを飛ばす。
+   * ここでは部分木ごと落としておけば、下の一回りで気にしなくて済む。
+   * **綴りは annot.js の SKIP_EL と同じでなければならない**（test.js が検める）。
    */
-  for (const el of host.querySelectorAll('[data-anchor]')) {
-    const a = el.dataset.anchor;
-    if (disp.has(a)) continue;
-    const own = textMapOf(el).text;
-    disp.set(a, own);
-    if (!acc.has(a)) acc.set(a, []);
-    if (!own) continue;
-    acc.get(a).push(own);
-    for (let q = a; ; ) {
-      const up = upOf(q);
-      const sc = scopeOf(q);
-      // すぐ上が実在すればそれ。無ければ scope（附則直下の項 S1//3 がこれ）
-      const next = (up && acc.has(up)) ? up
-        : (sc !== q && acc.has(sc)) ? sc : '';
-      if (!next) break;
-      acc.get(next).push(own);
-      q = next;
+  for (const n of host.querySelectorAll(VM_SKIP_EL)) n.remove();
+
+  const own = new Map();          // 住所 → 自分の文字（組み立て中）
+  const acc = new Map();          // 住所 → 自分と下位の文字（組み立て中）
+
+  /*
+   * **一回りで、書類の順に積む。**
+   *
+   * 前は住所ごとに textMapOf を呼び、その文字を自分と先祖の箱に積んでいた。
+   * 速さは足りていたが、**器の文字が子の前後に分かれている場合に順序が
+   * 変わった**（項の文のあとに表が来る形。Codex の指摘 P2-5）。
+   *
+   *   入力   項「前半」→ 号1 → 号2 →「後半」
+   *   前     「前半後半」＋号1＋号2  ← 自分の文字を先に全部積むため
+   *   いま   「前半」＋号1＋号2＋「後半」
+   *
+   * 人に見せる文字なので、順序が狂うと見比べる材料にならない。
+   * そこで木を一度だけ下り、**文字の塊ごとに**自分と先祖の箱へ入れる。
+   * el.textContent を住所ごとに呼ぶのとは違い、たどるのは一度きりである
+   * （刑訴 1.3MB で、住所ごとに呼ぶと1秒ほど余計にかかった）。
+   */
+  const go = (el, chain, mine) => {
+    for (let ch = el.firstChild; ch; ch = ch.nextSibling) {
+      if (ch.nodeType === 3) {
+        const v = ch.nodeValue || '';
+        if (!v) continue;
+        if (mine) mine.push(v);
+        for (const box of chain) box.push(v);
+        continue;
+      }
+      if (ch.nodeType !== 1) continue;
+      const a = ch.dataset ? ch.dataset.anchor : '';
+      if (!a) { go(ch, chain, mine); continue; }
+      /*
+       * 同じ住所が二度出てきたら、箱は作らない（先に出た方を採る）。
+       * 文字は先祖の箱にだけ入る。器の中身が丸ごと消えるより、
+       * 順に並ぶ方が読める。
+       */
+      if (own.has(a)) { go(ch, chain, null); continue; }
+      const m = [];
+      const f = [];
+      own.set(a, m);
+      acc.set(a, f);
+      go(ch, chain.concat([f]), m);
     }
-  }
+  };
+  go(host, [], null);
+
+  const disp = new Map();
+  for (const [a, arr] of own) disp.set(a, arr.join(''));
   const full = new Map();
   for (const [a, arr] of acc) full.set(a, arr.join(''));
   return { disp, full };

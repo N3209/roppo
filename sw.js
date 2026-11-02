@@ -24,7 +24,7 @@
  * 抱えたまま読み込み直すことになるため、断りなしには行わない。
  */
 
-const VERSION = 'v123';
+const VERSION = 'v124';
 const CACHE = 'roppo-shell-' + VERSION;
 
 // 欠けると起動しないもの。全部そろって初めてこの版を入れる。
@@ -45,10 +45,29 @@ const REQUIRED = [
   './manifest.webmanifest',
 ];
 
+/*
+ * アプリとは別に立っているページ。同意画面から直接来る。
+ *
+ * **キャッシュに無ければ、網から取る。** 取れなくても起動させる（下の
+ * OPTIONAL に入れてある）ので、入れ損なうことがある。そのとき画面遷移の枝が
+ * index.html に落とすと、**網が繋がっていてもアプリの画面が出る**
+ * （Codex の指摘 P2-3）。ポリシーを読もうとした人に別のものを見せることに
+ * なるので、この2本だけは網を先に試す。
+ *
+ * **下の OPTIONAL にも同じものを並べてある。** 一本化して展開（spread）で
+ * 書いたら、manifest-check の listOf は綴りをそのまま拾う作りなので、
+ * **この2本が配布一覧との照合から外れた。** 二度書いて、揃っていることを
+ * test.js で検める方にした。
+ */
+const PAGES = [
+  './privacy.html',
+  './terms.html',
+];
+
 // 無くても読める。取れなくてもこの版は入れる。
 const OPTIONAL = [
   /*
-   * プライバシーポリシー。取れなくても起動する（アプリは読み込まない）。
+   * ポリシーと規約。取れなくても起動する（アプリは読み込まない）。
    * ただし圏外でも読めた方がよいので、入れておく。
    */
   './privacy.html',
@@ -121,6 +140,25 @@ self.addEventListener('fetch', e => {
     if (req.mode === 'navigate') {
       const here = await cache.match(req, { ignoreSearch: true });
       if (here) return here;
+
+      /*
+       * **独り立ちしたページは、アプリに落とさない。** 入れ損なっていても
+       * 網から取れるなら取る。取れなければ、アプリを出すより素直に断る。
+       */
+      const isPage = PAGES.some(u => url.pathname.endsWith(u.replace('./', '/')));
+      if (isPage) {
+        try {
+          const res = await fetch(req);
+          if (res && res.ok) {
+            try { await cache.put(req, res.clone()); } catch (err) { /* 置けなくても返す */ }
+            return res;
+          }
+        } catch (err) { /* 下で断る */ }
+        return new Response(
+          'このページをいま表示できません。オンラインでもう一度お試しください。',
+          { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+      }
+
       const hit = (await cache.match('./index.html')) || (await cache.match('./'));
       if (hit) return hit;
       try {
