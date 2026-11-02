@@ -24,7 +24,7 @@
  * 抱えたまま読み込み直すことになるため、断りなしには行わない。
  */
 
-const VERSION = 'v120';
+const VERSION = 'v121';
 const CACHE = 'roppo-shell-' + VERSION;
 
 // 欠けると起動しないもの。全部そろって初めてこの版を入れる。
@@ -107,8 +107,20 @@ self.addEventListener('fetch', e => {
   e.respondWith((async () => {
     const cache = await caches.open(CACHE);
 
-    // 画面遷移。この版の index.html を返す。
+    /*
+     * 画面遷移。
+     *
+     * **その住所そのものが殻に入っていれば、それを返す。** 以前は住所を見ずに
+     * 必ず index.html を返していたので、プライバシーポリシーと利用規約を開くと
+     * アプリの画面に飛ばされた。配信は正しいのに、端末の中で差し替えられていた
+     * （curl は Service Worker を通らないので、配信を見ても気づけない）。
+     *
+     * 見つからないときだけ index.html に落とす。打ち間違いで 404 を見せるより、
+     * アプリが開く方がよい。
+     */
     if (req.mode === 'navigate') {
+      const here = await cache.match(req, { ignoreSearch: true });
+      if (here) return here;
       const hit = (await cache.match('./index.html')) || (await cache.match('./'));
       if (hit) return hit;
       try {
