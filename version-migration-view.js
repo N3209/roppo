@@ -126,11 +126,29 @@ const VM_KINDS = {
  * 候補が1件でも ambiguous になる（旧版の側で一意でないとき）ので、
  * 「複数あります」と言い切ると嘘になる（Codex の指摘8）。
  */
+/*
+ * 行の説明。
+ *
+ * **親が候補どまりのときは、必ずそう言う。** 指紋は下位を入れ子で持つので、
+ * 号が1つ変われば条の指紋も変わり、条の対応が確定しない。それでも子を探せる
+ * ようにしたが（version-migration.js の guess）、**確定と同じ顔で出しては
+ * いけない。** 同じ本文でも、親が別の条なら別の条文である。
+ */
+const VM_GUESS_NOTE = '　※この条文が属する条じたいの対応も確かめられていません';
+
 function vmWhy(it) {
   const k = VM_KINDS[it.kind] || {};
-  if (it.kind !== 'ambiguous') return k.why || '';
+  const tail = it.viaGuess ? VM_GUESS_NOTE : '';
+  if (it.kind !== 'ambiguous') return (k.why || '') + tail;
   const n = (it.cands || []).length;
-  if (n > 1) return '同じ本文が新しい版に ' + n + ' つあり、どれか決められません。選んでください';
+  if (n > 1) {
+    return '同じ本文が新しい版に ' + n + ' つあり、どれか決められません。'
+      + '選んでください' + tail;
+  }
+  if (it.viaGuess) {
+    return '同じ本文の条文が1つありますが、この条文が属する条じたいの対応を'
+      + '確かめられていません。旧本文と見比べてください';
+  }
   return '同じ本文が旧い版にも複数あるため、移ったのか消えたのか決められません。'
     + '旧本文と見比べてください';
 }

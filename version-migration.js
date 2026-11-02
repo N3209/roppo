@@ -349,7 +349,11 @@ function planRangeMove(oldDisp, newDisp, r) {
  *   ambiguous 親は決まったが、同じ本文が新版の中に2か所以上ある
  *   changed   親は決まり、同じ番号の相手も居るが、本文が違う
  *   gone      親は決まったが、同じ番号の相手も、同じ本文も無い
- *   unknown   親の対応が決まらない（附則の対応が付かない、など）
+ *   unknown   親の対応も候補も無い（附則の対応が付かない、など）
+ *
+ * **viaGuess が立っているものは、親が候補どまりである。** 内容が一つに
+ * 決まっても moved にはしない（親が別の条なら、同じ本文でも別の条文）。
+ * 必ず人が決める側に落とす。
  */
 function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
   fromDisp, toDisp, notes, ranges, fromLawId, toLawId }) {
@@ -364,6 +368,33 @@ function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
   const pairs = new Map(scopePairs);
   for (const d of [2, 3, 4]) {
     for (const [a, b] of matchLevel(fb, tb, d, pairs)) pairs.set(a, b);
+  }
+
+  /*
+   * 親の候補。**確定（pairs）とは別の入れ物に持つ。**
+   *
+   * 指紋は下位を入れ子で持つので、号が1つ変われば条の指紋も変わる。すると
+   * その条は pairs に乗らず、**その中の変わっていない項・号まで「辿れない」**
+   * になっていた。刑法9条1項で実際に出た（第三者の指摘の本当の害はここ）。
+   *
+   * そこで「内容が一致する」と「子を探すためにここを親と見てよい」を分ける。
+   * 候補は同じ番号から作る。親が決まっていれば、その下の同じ番号は、
+   * 少なくとも**探す場所としては**筋が通る。
+   *
+   * **この表を same / moved の根拠にしてはいけない。** 入れると、親が未承認
+   * なのに子だけが完全一致で確定し、defaultPicks が自動で選ぶ（Codex の指摘5）。
+   * 下の判定では、候補経由のものを必ず「人が決める」側に落としている。
+   */
+  const guess = new Map();
+  for (const d of [2, 3, 4]) {
+    for (const a of fb.keys()) {
+      if (depthOf(a) !== d || pairs.has(a)) continue;
+      const up = parentFor(a, fb);
+      const toUp = pairs.has(up) ? pairs.get(up) : guess.get(up);
+      if (toUp === undefined) continue;
+      const sameNum = toUp + String(a).slice(up.length);
+      if (tb.has(sameNum)) guess.set(a, sameNum);
+    }
   }
 
   // 注釈の付いている住所を集める
@@ -386,7 +417,7 @@ function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
     const anchor = got.anchor;
     const from = fb.get(anchor);
     const decided = pairs.get(anchor);
-    let kind, target = '', cands = [];
+    let kind, target = '', cands = [], viaGuess = false;
 
     if (decided !== undefined) {
       /*
@@ -405,7 +436,14 @@ function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
        * 対応が決まらなかった。親が決まっているなら、その親の中で候補を探す。
        * 決まらなかった理由（同文が複数／本文が変わった／無い）を分ける。
        */
-      const toParent = pairs.get(parentFor(anchor, fb));
+      const up = parentFor(anchor, fb);
+      /*
+       * 親が確定していればそれを使う。していなければ候補を使う。
+       * 候補を使ったときは viaGuess を立て、下で「人が決める」側に落とす。
+       */
+      const sure = pairs.get(up);
+      const toParent = sure !== undefined ? sure : guess.get(up);
+      viaGuess = sure === undefined && toParent !== undefined;
       if (toParent === undefined) {
         kind = 'unknown';
       } else {
@@ -436,8 +474,14 @@ function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
         const sameNum = toParent + String(anchor).slice(parentFor(anchor, fb).length);
 
         if (found.length > 1) { kind = 'ambiguous'; cands = found.slice(); }
-        else if (found.length === 1 && mine === 1) { kind = 'moved'; target = found[0]; }
-        else if (found.length === 1) { kind = 'ambiguous'; cands = found.slice(); }
+        else if (found.length === 1 && mine === 1) {
+          /*
+           * 中身は一つに決まる。**ただし親が候補どまりなら確定にしない。**
+           * 親が別の条なら、同じ本文でも別の条文である。候補として見せる。
+           */
+          if (viaGuess) { kind = 'ambiguous'; cands = found.slice(); }
+          else { kind = 'moved'; target = found[0]; }
+        } else if (found.length === 1) { kind = 'ambiguous'; cands = found.slice(); }
         else if (tb.has(sameNum)) { kind = 'changed'; target = sameNum; }
         else kind = 'gone';
       }
@@ -456,7 +500,7 @@ function planVersionMigration({ fromBodies, toBodies, fromScopes, toScopes,
     }));
 
     items.push({
-      anchor, kind, to: target, cands,
+      anchor, kind, to: target, cands, viaGuess,
       oldBody: from || null,
       newBody,
       notes: got.notes, ranges,
