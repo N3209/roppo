@@ -915,13 +915,24 @@ function syncTopbarLaw() {
    * ので、規則パックの法令を電話で開くと「施行日不明」としか出なかった。
    * 法令番号は本文末尾（packNoteHTML）にあるが、**いつ時点の本文かは
    * 読み方に直結するので、ここに出す。**
+   *
+   * **ただし「反映」は日付ではない。** 刑事訴訟規則では100文字を超える
+   * 文章である（どの改正まで入っているかを、官報から足した分まで書く）。
+   * 広い画面の .law-meta は div なので折り返すが、ここは1行で nowrap なので
+   * 右へ流れて見切れた。短い日付の欄（取得）を使い、全文は title に入れる。
+   * 詳しいところは本文末尾（packNoteHTML）が持っている。
    */
   const prov = (rec && rec.provenance) || {};
-  $('.tl-date', el).textContent = !rec ? ''
+  const dt = $('.tl-date', el);
+  dt.textContent = !rec ? ''
     : lawOrigin(rec) === 'egov'
       ? (rec.enforcementDate ? '施行 ' + rec.enforcementDate : '')
-    : prov['反映'] ? prov['反映'] + ' 反映'
+    : prov['取得'] ? prov['取得'] + ' 取得'
+    : rec.importedAt ? rec.importedAt + ' 取り込み'
     : '施行日不明';
+  dt.title = !rec || lawOrigin(rec) === 'egov' ? ''
+    : [prov['反映'] ? '反映: ' + prov['反映'] : '',
+      prov['範囲'] ? '範囲: ' + prov['範囲'] : ''].filter(Boolean).join('\n');
 
   const dot = $('.tl-dot', el);
   const a = rec && amendOf(rec);

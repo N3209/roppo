@@ -94,8 +94,20 @@ body { display: flex; flex-direction: column; overflow: hidden; }
   font-size: 16px; font-weight: 700;
   overflow: hidden; text-overflow: ellipsis; min-width: 0;
 }
-/* 施行日は落とさない。いつの版を読んでいるかは、読み違いに直結する。 */
-.topbar-law .tl-date { flex: none; font-size: 13px; color: var(--fg-dim); }
+/*
+ * 施行日は落とさない。いつの版を読んでいるかは、読み違いに直結する。
+ *
+ * ただし flex: none のままにはできない。**縮まない要素に長い文字が入ると、
+ * 縮む側（題名）を 0 まで潰してから右へ流れて見切れる。** 規則パックの
+ * 「反映」は100文字を超える文章で、実際に見切れた。
+ * 題名を先に縮めたいので shrink は 0 にしておき、入りきらないときは
+ * 省略記号で切る。切れた分は title と本文末尾が持っている。
+ */
+.topbar-law .tl-date {
+  flex: 0 0 auto; min-width: 0; max-width: 55%;
+  overflow: hidden; text-overflow: ellipsis;
+  font-size: 13px; color: var(--fg-dim);
+}
 
 /*
  * 改正の印。
