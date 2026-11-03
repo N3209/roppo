@@ -1383,14 +1383,63 @@ async function goHistory(delta) {
 
 /* --------------------------------------------------------- 現在位置の表示 */
 
+/*
+ * 見出しと条の位置を控える。**送り量（scrollTop）と同じ原点で測る。**
+ *
+ * 前は el.offsetTop を控えていた。offsetTop の原点は offsetParent だが、
+ * 送りを受け持つ .content には position が無いので、**原点は body になる。**
+ * つまり控えた値は「ページ上端からの距離」で、上の帯と法令見出しの高さを
+ * まるごと含んでいた。一方 scrollTop は .content の中で 0 から始まる。
+ *
+ *   控え    上の帯 + 法令見出し + 余白 + 本文の中での位置
+ *   送り量                              本文の中での位置
+ *
+ * **別の原点で測った数を比べていた。** 差のぶんだけ、帯の条番号が本文より
+ * 遅れて変わる。lastAtOrBefore は「その位置以前の最後」を返すので、
+ * 画面の上に出ている条ではなく、その手前の条を指し続ける。
+ *
+ * **飛ぶ処理（scrollTopFor）は前から正しかった。** あちらは
+ * getBoundingClientRect で容器との差を取っている。同じ座標を2通りで
+ * 扱っていたのが根である。ここも容器との差で測る。
+ *
+ * base は「送り量0のときの容器の上端」。要素の画面上の位置からこれを引くと、
+ * 送り量と直に比べられる数になる。offsetParent がどこであっても狂わない。
+ */
 function measureHeadings(pane) {
   pane = pane || P();
+  const base = pane.el.getBoundingClientRect().top - pane.el.scrollTop;
+  const topOf = el => Math.round(el.getBoundingClientRect().top - base);
   pane.headOffsets = pane.toc.map(e => {
     const el = $('#' + e.id, pane.el);
-    return el ? { ...e, top: el.offsetTop } : null;
+    return el ? { ...e, top: topOf(el) } : null;
   }).filter(Boolean);
   pane.articleOffsets = $$('.article[data-anchor]', pane.el)
-    .map(el => ({ anchor: el.dataset.anchor, top: el.offsetTop }));
+    .map(el => ({ anchor: el.dataset.anchor, top: topOf(el) }));
+}
+
+/*
+ * 窓の大きさが変わったら、位置の表を作り直す。
+ *
+ * **控えているのは offsetTop である。** 幅が変われば行の折り返しが変わるので、
+ * 控えた値はその場で古くなる。PC で広く開いてから窓を狭めると、上の帯の
+ * 条番号が本文とずれた。狭い画面で開いた場合は測った幅のままなので起きない。
+ * **だから「スマホでは出ない不具合」になっていた。**
+ *
+ * 作り直す切っ掛けは、法令を描いたとき・2面の切り替え・仕切りのドラッグ・
+ * 畳んだときに置いてあった。**どれも「こちらが動かしたとき」である。**
+ * 窓の大きさは利用者が動かすので、そこだけ抜けていた。
+ *
+ * 測り直しは条の数だけ offsetTop を読むので、レイアウトを強いる（刑訴は
+ * 条834本）。動かしている間は測らず、止まってから一度だけ測る。
+ */
+let remeasureTimer = 0;
+
+function remeasureSoon() {
+  clearTimeout(remeasureTimer);
+  remeasureTimer = setTimeout(() => {
+    remeasureTimer = 0;
+    for (const pane of livePanes()) { measureHeadings(pane); updateCrumb(pane); }
+  }, 150);
 }
 
 function lastAtOrBefore(list, y) {
@@ -1405,12 +1454,20 @@ function lastAtOrBefore(list, y) {
 
 let tocCurrent = null;      // 目次でいま光っている項目
 
+/* 画面の上端から何 px 下を「いま読んでいる位置」と見るか */
+const CRUMB_PROBE = 24;
+
 function updateCrumb(pane) {
   pane = pane || P();
   const crumb = pane.crumb;
   const heads = pane.headOffsets;
   if (!pane.current || !heads.length) { crumb.hidden = true; return; }
-  const y = pane.el.scrollTop + 24;
+  /*
+   * 画面の上端から少し下を「いま読んでいる位置」とする。真上に取ると、
+   * 条の境目で行き来する。法令見出しは .content の外にあるので、
+   * 上端はそのまま見えている位置である（下駄を履かせる必要は無い）。
+   */
+  const y = pane.el.scrollTop + CRUMB_PROBE;
 
   const here = lastAtOrBefore(heads, y);
   if (!here) { crumb.hidden = true; return; }
@@ -3010,6 +3067,9 @@ function wireGlobal() {
     hideRefBar();
   }, { passive: true });
   window.addEventListener('resize', positionPopover);
+  /* 幅が変われば折り返しが変わる。控えた位置を作り直す（remeasureSoon の註） */
+  window.addEventListener('resize', remeasureSoon);
+  window.addEventListener('orientationchange', remeasureSoon);
 
   $('#btn-back').onclick = () => goHistory(-1);
   $('#btn-fwd').onclick = () => goHistory(1);
