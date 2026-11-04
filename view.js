@@ -1415,6 +1415,11 @@ function measureHeadings(pane) {
   }).filter(Boolean);
   pane.articleOffsets = $$('.article[data-anchor]', pane.el)
     .map(el => ({ anchor: el.dataset.anchor, top: topOf(el) }));
+  /*
+   * どの幅で測ったかを控える。折り返しは幅で決まるので、幅が同じなら
+   * この控えはまだ正しい。remeasureSoon がこれを見て、無駄な測り直しを省く。
+   */
+  pane.measuredWidth = pane.el.clientWidth;
 }
 
 /*
@@ -1438,7 +1443,21 @@ function remeasureSoon() {
   clearTimeout(remeasureTimer);
   remeasureTimer = setTimeout(() => {
     remeasureTimer = 0;
-    for (const pane of livePanes()) { measureHeadings(pane); updateCrumb(pane); }
+    for (const pane of livePanes()) {
+      /*
+       * 幅が変わっていなければ測り直さない。
+       *
+       * 折り返しは幅で決まるので、高さだけ変わっても控えは狂っていない。
+       * **スマホでは、キーボードや URL バーの出入りで高さだけが変わる。**
+       * 実ブラウザで測ったら、キーボード1往復あたり全条の測り直しが1回走り、
+       * 約40ms 使っていた（CPU を10分の1に絞った場合）。まるごと無駄である。
+       *
+       * 帯の更新は残す。送り量（scrollTop）は変わっているので、
+       * 測り直さなくても指している条はずれうる。
+       */
+      if (pane.el.clientWidth !== pane.measuredWidth) measureHeadings(pane);
+      updateCrumb(pane);
+    }
   }, 150);
 }
 

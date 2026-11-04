@@ -153,6 +153,72 @@ function runSave(p) {
   return job;
 }
 
+/*
+ * 本文に挟んだ札（.memo-inline / .note-summary）への書き込みは、
+ * 打っている間はやらない。**止まってから一度だけ書く。**
+ *
+ * 札は本文の流れの中にある block である（style.css の .memo-inline）。文字を
+ * 書き換えると行数が変わりうるので、その下に続く条を全部配置し直すことになる。
+ * 民法は本文の高さが 488,825px ある。
+ *
+ * **実ブラウザで測った**（Chrome をスマホに見立て、CPU を10分の1に絞った。
+ * 条1,050・住所4,200・要素11,386・文字311,581 の法令で、本物の打鍵を入れた）。
+ *
+ *   毎打、札へ書く    1打の体感 109ms   うち配置に 34.1ms
+ *   止まってから書く  1打の体感  51ms   うち配置に  2.7ms
+ *
+ * **配置がまるごと消える。** これが「長い法令だとメモが数秒遅れる」の正体で、
+ * 短い法令で軽いのも、PC で軽いのも、注釈0件でも重いのも、同じ理由で説明がつく。
+ *
+ * 遅らせるのは**本文の札だけ**である。打った文字はメモ欄にその場で出ているし、
+ * note への反映と保存の予約は従来どおり即座に行う（古い状態で上書きしないため）。
+ * 条文や法令を移る前・離脱の前は flushSave が流す（先頭で flushInline を呼ぶ）。
+ *
+ * **当てる前に、ほかの手も実測して落とした。**
+ *   contain: layout / paint（.content・.popover・条・項・号）
+ *     効かない、または悪化（.content では 236ms）。札の**高さ自体**が変わるので、
+ *     条を閉じ込めても後ろの条はずれる。閉じ込めが効く形になっていない
+ *   content-visibility: auto
+ *     速いが本文の高さが 14,090px 狂う。帯（measureHeadings）と
+ *     跳び先（scrollTopFor）が概算になる。v125 で直した所を壊す
+ *   [data-anchor] の position: relative を外す
+ *     2.3倍 悪化。条ごとの足場は害ではなく、配置と描画を条の中に閉じていた
+ *   番号の transition を切る／保存の予約を止める／アンカー検索を控えに替える
+ *     効果なし（検索は1回 0.68ms で、桁が違った）
+ */
+const INLINE_DELAY = 350;
+
+const pendingInline = new Map();      // 'memo' | 'summary' → { anchor, text, pane, timer }
+
+function applyInline(kind, rec) {
+  if (kind === 'memo') updateInlineMemo(rec.anchor, rec.text, rec.pane);
+  else updateInlineSummary(rec.anchor, rec.text, rec.pane);
+}
+
+function scheduleInline(kind, anchor, text, pane) {
+  const cur = pendingInline.get(kind);
+  if (cur) {
+    clearTimeout(cur.timer);
+    // 別の住所へ移ったなら、前の住所ぶんは先に書いておく（書きかけを捨てない）
+    if (cur.anchor !== anchor) applyInline(kind, cur);
+  }
+  const rec = { anchor, text, pane };
+  rec.timer = setTimeout(() => {
+    pendingInline.delete(kind);
+    applyInline(kind, rec);
+  }, INLINE_DELAY);
+  pendingInline.set(kind, rec);
+}
+
+/** 保留している本文への反映を、いますぐ書く。離れる前に必ず呼ぶ。 */
+function flushInline() {
+  for (const [kind, rec] of [...pendingInline]) {
+    clearTimeout(rec.timer);
+    pendingInline.delete(kind);
+    applyInline(kind, rec);
+  }
+}
+
 function scheduleSave(note) {
   if (pendingSave && pendingSave.note !== note) flushSave();
   if (pendingSave) clearTimeout(pendingSave.timer);
@@ -174,6 +240,7 @@ function scheduleRangeSave(rec) {
  * 片方だけ見ていると、見ていない側の書きかけが消える。
  */
 async function flushSave() {
+  flushInline();        // 本文の札を先に合わせる（遅らせてある。scheduleInline の註）
   if (pendingSave) {
     clearTimeout(pendingSave.timer);
     const note = pendingSave.note;
@@ -462,7 +529,10 @@ function applyNoteTo(el, n) {
    */
   const sum = String((n && n.summary) || '').trim();
   const had = el.querySelector(':scope > .note-summary');
-  if (sum) { if (had) had.textContent = sum; else insertSummary(el, sum); }
+  if (sum) {
+    if (had) { if (had.textContent !== sum) had.textContent = sum; }
+    else insertSummary(el, sum);
+  }
   else if (had) had.remove();
 
   const memo = String((n && n.memo) || '').trim();
@@ -593,7 +663,12 @@ function insertMemo(el, text) {
   if (div.parentNode !== parent || div.nextSibling !== before) {
     parent.insertBefore(div, before);
   }
-  div.textContent = text;
+  /*
+   * 同じ文字なら書かない。書けば本文を配置し直すことになる。
+   * 保存のあとの塗り直し（applyNoteTo → insertMemo）が、すでに合っている札を
+   * 書き直していた。遅延で1回に減らしても、ここで元に戻ってしまう。
+   */
+  if (div.textContent !== text) div.textContent = text;
   return div;
 }
 
@@ -862,18 +937,23 @@ function renderNotePane() {
   summary.value = note.summary || '';
   summary.oninput = () => {
     note.summary = summary.value;
-    updateInlineSummary(anchor, summary.value, pane);
+    scheduleInline('summary', anchor, summary.value, pane);
     scheduleSave(note);
   };
   summary.onblur = () => flushSave();
 
   const memo = $('#memo-input');
   memo.value = note.memo || '';
-  // 入力は即座に note へ反映し、DB 書き込みだけを遅らせる。
-  // こうしないと、500ms 以内に条文を切り替えたときに古い状態で上書きされる。
+  /*
+   * 入力は即座に note へ反映し、DB 書き込みだけを遅らせる。
+   * こうしないと、500ms 以内に条文を切り替えたときに古い状態で上書きされる。
+   *
+   * **本文のぶら下げ表示は、打っている間は触らない**（scheduleInline の註）。
+   * ここで毎打書いていたため、長い法令ほど指が止まっていた。
+   */
   memo.oninput = () => {
     note.memo = memo.value;
-    updateInlineMemo(anchor, memo.value, pane);   // 本文側のぶら下げ表示は即座に追従させる
+    scheduleInline('memo', anchor, memo.value, pane);
     scheduleSave(note);
   };
   memo.onblur = () => flushSave();
