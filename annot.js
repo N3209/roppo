@@ -195,6 +195,29 @@ function applyInline(kind, rec) {
   else updateInlineSummary(rec.anchor, rec.text, rec.pane);
 }
 
+/*
+ * 変換している間は、時計そのものを動かさない。
+ *
+ * **これは速さより正しさの話である。** 日本語入力では、確定するまで仮名が
+ * 入れ替わる。候補を選ぼうとして手が 350ms 止まると、そこで時計が落ちて
+ * **未確定の仮名が本文の札に書かれる**（「相手方」の代わりに「そうてほうが」）。
+ * 確定するとまた書き直すので、配置も2度やり直す。
+ *
+ * 実ブラウザで測ったら、変換を通すと20字で入力事象が 20 → 33 件に増えた。
+ * 変換のたびに札へ書いていれば、そのぶん配置をやり直すことになる。
+ *
+ * 時計は、確定したときに setComposing(false) が動かし直す。
+ */
+let composing = false;
+
+function armInline(kind, rec) {
+  clearTimeout(rec.timer);
+  rec.timer = setTimeout(() => {
+    pendingInline.delete(kind);
+    applyInline(kind, rec);
+  }, INLINE_DELAY);
+}
+
 function scheduleInline(kind, anchor, text, pane) {
   const cur = pendingInline.get(kind);
   if (cur) {
@@ -202,16 +225,77 @@ function scheduleInline(kind, anchor, text, pane) {
     // 別の住所へ移ったなら、前の住所ぶんは先に書いておく（書きかけを捨てない）
     if (cur.anchor !== anchor) applyInline(kind, cur);
   }
-  const rec = { anchor, text, pane };
-  rec.timer = setTimeout(() => {
-    pendingInline.delete(kind);
-    applyInline(kind, rec);
-  }, INLINE_DELAY);
+  const rec = { anchor, text, pane, timer: 0 };
   pendingInline.set(kind, rec);
+  if (!composing) armInline(kind, rec);
 }
 
-/** 保留している本文への反映を、いますぐ書く。離れる前に必ず呼ぶ。 */
+/**
+ * 変換が始まった／終わった。
+ *
+ * 終わったら、止めていた時計を動かし直す。**確定のときに input と
+ * compositionend のどちらが先に来るかはブラウザによる。** 先に input が
+ * 来ていた場合も、ここで動かし直せば取りこぼさない。
+ */
+function setComposing(on) {
+  composing = !!on;
+  if (composing) {
+    for (const rec of pendingInline.values()) clearTimeout(rec.timer);
+    return;
+  }
+  for (const [kind, rec] of pendingInline) armInline(kind, rec);
+}
+
+/*
+ * 変換の始まりと終わりは document で受ける。
+ *
+ * **要素の on… 属性では受けられない。** `oninput` や `onblur` は HTML が
+ * 定める event handler 属性だが、**composition 系はその一覧に無い。**
+ * 属性で付けたら jsdom では一度も呼ばれず、通し試験が
+ * 「あいうそうてほうが」で落ちた（＝未確定の仮名が本文に出た）。
+ * 実ブラウザで動いていても、仕様が約束していないものに頼るべきではない。
+ *
+ * composition 事象は泡立つ（bubbles）ので、document で1回受ければ足りる。
+ * renderNotePane は何度も呼ばれるから、欄に addEventListener を足すと
+ * 監視が積み上がる。document に1回だけ付ける形にしてある。
+ */
+const COMPOSE_FIELDS = ['memo-input', 'summary-input'];
+
+function wireComposition() {
+  const isField = e => !!e.target && COMPOSE_FIELDS.includes(e.target.id);
+  document.addEventListener('compositionstart', e => { if (isField(e)) setComposing(true); });
+  document.addEventListener('compositionend', e => { if (isField(e)) setComposing(false); });
+}
+
+/**
+ * その住所の本文の札は、いま scheduleInline が預かっているか。
+ *
+ * **預かっている間、本文の札の持ち主は scheduleInline だけである。**
+ * 保存のあとの塗り直し（saveNote → repaintNote → applyNoteTo → insertMemo）が
+ * ここで書くと、遅延も変換の旗も通らずに本文を配置し直してしまう。
+ *
+ * これは2つの道で現に起きていた。
+ *   ・変換中でも scheduleSave は 500ms で落ちる。候補を選ぶ間に手を止めると、
+ *     **未確定の仮名が本文に出た**（手元の通し試験が「あいうそうてほうが」で落ちた）
+ *   ・saveNote は編集中と同じ note を掴んだまま非同期の書き込みを待つので、
+ *     書き込みが終わった時点の中身——つまり**その後に打った文字まで**——を描く
+ *
+ * 遅延を長くしても、変換の監視を足しても、この2つは残る。**持ち主を1つにする。**
+ * 預かっている文字は常に最新なので、時計が落ちたときに正しい姿になる。
+ */
+function inlineHeld(anchor) {
+  for (const rec of pendingInline.values()) if (rec.anchor === anchor) return true;
+  return false;
+}
+
+/**
+ * 保留している本文への反映を、いますぐ書く。離れる前に必ず呼ぶ。
+ *
+ * 変換の旗も下ろす。変換の途中で欄が閉じられると compositionend が来ない
+ * ことがあり、旗が立ったままだと次に開いた欄で時計が動かなくなる。
+ */
 function flushInline() {
+  composing = false;
   for (const [kind, rec] of [...pendingInline]) {
     clearTimeout(rec.timer);
     pendingInline.delete(kind);
@@ -522,6 +606,13 @@ function applyNoteTo(el, n) {
    * 外すだけはやる。
    */
   dropOwned(el, '.inline-tags', anchor);
+
+  /*
+   * 編集中の住所は、本文の札を scheduleInline が預かっている。
+   * ここで書くと遅延を迂回する（inlineHeld の註）。色や印は上で当て終わって
+   * いるので、文字の面だけを譲る。
+   */
+  if (inlineHeld(anchor)) return;
 
   /*
    * 前メモは insertSummary が必ず新しく作るので、すでにあるものは中身だけ
@@ -956,6 +1047,7 @@ function renderNotePane() {
     scheduleInline('memo', anchor, memo.value, pane);
     scheduleSave(note);
   };
+  /* 変換中は本文に書かない。受けるのは document（wireComposition の註） */
   memo.onblur = () => flushSave();
 
   $('#saved-at').textContent = note.updatedAt
