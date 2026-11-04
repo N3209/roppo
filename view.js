@@ -3053,8 +3053,6 @@ function bindPaneEvents(pane) {
 
 /** 面によらず1回だけ掛ける配線 */
 function wireGlobal() {
-  /* 変換中は本文の札を触らない。受け手は annot.js（wireComposition の註） */
-  wireComposition();
   document.addEventListener('selectionchange', () => {
     const sel = window.getSelection();
     if (!sel || sel.isCollapsed) hideSelBar();

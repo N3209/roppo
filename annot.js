@@ -154,25 +154,38 @@ function runSave(p) {
 }
 
 /*
- * 本文に挟んだ札（.memo-inline / .note-summary）への書き込みは、
- * 打っている間はやらない。**止まってから一度だけ書く。**
+ * 本文に挟んだ札（.memo-inline / .note-summary）は、**編集している間は触らない。**
+ * 書くのは欄を閉じるとき・条文を移るとき・離れるときだけである。
  *
  * 札は本文の流れの中にある block である（style.css の .memo-inline）。文字を
  * 書き換えると行数が変わりうるので、その下に続く条を全部配置し直すことになる。
  * 民法は本文の高さが 488,825px ある。
  *
- * **実ブラウザで測った**（Chrome をスマホに見立て、CPU を10分の1に絞った。
- * 条1,050・住所4,200・要素11,386・文字311,581 の法令で、本物の打鍵を入れた）。
+ * **実ブラウザで測った**（Chrome をスマホに見立て、CPU を10分の1に絞り、
+ * 民法に近い法令に本物の打鍵を入れた。1件あたり）。
  *
- *   毎打、札へ書く    1打の体感 109ms   うち配置に 34.1ms
- *   止まってから書く  1打の体感  51ms   うち配置に  2.7ms
+ *   毎打、札へ書く（v125 まで）          体感 109ms   配置 34.1ms
+ *   350ms 止まったら書く（v126・v127）
+ *     速く打つ                           体感  51ms   配置  2.4ms
+ *     ゆっくり打つ                       体感  36ms   配置  3.9ms
+ *     **ゆっくり消す**                   体感  60ms   配置 11.9ms
+ *   閉じるまで書かない（いまの形）
+ *     ゆっくり消す                       体感  24ms   配置  1.3ms
+ *     ゆっくり打つ                       体感  29ms   配置  2.8ms
  *
- * **配置がまるごと消える。** これが「長い法令だとメモが数秒遅れる」の正体で、
- * 短い法令で軽いのも、PC で軽いのも、注釈0件でも重いのも、同じ理由で説明がつく。
+ * **遅延では足りなかった。** 350ms の時計は「次の打鍵がそれより早く来る」間しか
+ * 効かない。消すときは1文字消して、見て、また消す——毎回 350ms を越えるので、
+ * そのたびに全額払う。利用者の報告も「打つのは軽くなった。**消すと重い**」だった。
+ * **手が止まるたびに払う作りは、手が止まる操作で破れる。**
  *
- * 遅らせるのは**本文の札だけ**である。打った文字はメモ欄にその場で出ているし、
- * note への反映と保存の予約は従来どおり即座に行う（古い状態で上書きしないため）。
- * 条文や法令を移る前・離脱の前は flushSave が流す（先頭で flushInline を呼ぶ）。
+ * 時計をやめたので、変換中かを見る必要も無くなった。編集中は一度も書かないので、
+ * 未確定の仮名が本文に出る道が無い。v127 で入れた compositionstart の監視は、
+ * ここで要らなくなったので外した。
+ *
+ * 触らないのは**本文の札だけ**である。打った文字はメモ欄にその場で出ているし、
+ * note への反映と保存の予約は従来どおり即座に行う。
+ * 流すのは flushSave（その先頭で flushInline を呼ぶ）。欄を閉じるときも
+ * closePopoverKeepSelection が flushSave を通る。
  *
  * **当てる前に、ほかの手も実測して落とした。**
  *   contain: layout / paint（.content・.popover・条・項・号）
@@ -186,102 +199,36 @@ function runSave(p) {
  *   番号の transition を切る／保存の予約を止める／アンカー検索を控えに替える
  *     効果なし（検索は1回 0.68ms で、桁が違った）
  */
-const INLINE_DELAY = 350;
-
-const pendingInline = new Map();      // 'memo' | 'summary' → { anchor, text, pane, timer }
+const pendingInline = new Map();      // 'memo' | 'summary' → { anchor, text, pane }
 
 function applyInline(kind, rec) {
   if (kind === 'memo') updateInlineMemo(rec.anchor, rec.text, rec.pane);
   else updateInlineSummary(rec.anchor, rec.text, rec.pane);
 }
 
-/*
- * 変換している間は、時計そのものを動かさない。
- *
- * **これは速さより正しさの話である。** 日本語入力では、確定するまで仮名が
- * 入れ替わる。候補を選ぼうとして手が 350ms 止まると、そこで時計が落ちて
- * **未確定の仮名が本文の札に書かれる**（「相手方」の代わりに「そうてほうが」）。
- * 確定するとまた書き直すので、配置も2度やり直す。
- *
- * 実ブラウザで測ったら、変換を通すと20字で入力事象が 20 → 33 件に増えた。
- * 変換のたびに札へ書いていれば、そのぶん配置をやり直すことになる。
- *
- * 時計は、確定したときに setComposing(false) が動かし直す。
- */
-let composing = false;
-
-function armInline(kind, rec) {
-  clearTimeout(rec.timer);
-  rec.timer = setTimeout(() => {
-    pendingInline.delete(kind);
-    applyInline(kind, rec);
-  }, INLINE_DELAY);
-}
-
-function scheduleInline(kind, anchor, text, pane) {
+/** 編集中の文字を預かる。本文へは書かない。書くのは flushInline。 */
+function holdInline(kind, anchor, text, pane) {
   const cur = pendingInline.get(kind);
-  if (cur) {
-    clearTimeout(cur.timer);
-    // 別の住所へ移ったなら、前の住所ぶんは先に書いておく（書きかけを捨てない）
-    if (cur.anchor !== anchor) applyInline(kind, cur);
-  }
-  const rec = { anchor, text, pane, timer: 0 };
-  pendingInline.set(kind, rec);
-  if (!composing) armInline(kind, rec);
+  // 別の住所へ移ったなら、前の住所ぶんは先に書いておく（書きかけを捨てない）
+  if (cur && cur.anchor !== anchor) applyInline(kind, cur);
+  pendingInline.set(kind, { anchor, text, pane });
 }
 
 /**
- * 変換が始まった／終わった。
+ * その住所の本文の札は、いま holdInline が預かっているか。
  *
- * 終わったら、止めていた時計を動かし直す。**確定のときに input と
- * compositionend のどちらが先に来るかはブラウザによる。** 先に input が
- * 来ていた場合も、ここで動かし直せば取りこぼさない。
- */
-function setComposing(on) {
-  composing = !!on;
-  if (composing) {
-    for (const rec of pendingInline.values()) clearTimeout(rec.timer);
-    return;
-  }
-  for (const [kind, rec] of pendingInline) armInline(kind, rec);
-}
-
-/*
- * 変換の始まりと終わりは document で受ける。
- *
- * **要素の on… 属性では受けられない。** `oninput` や `onblur` は HTML が
- * 定める event handler 属性だが、**composition 系はその一覧に無い。**
- * 属性で付けたら jsdom では一度も呼ばれず、通し試験が
- * 「あいうそうてほうが」で落ちた（＝未確定の仮名が本文に出た）。
- * 実ブラウザで動いていても、仕様が約束していないものに頼るべきではない。
- *
- * composition 事象は泡立つ（bubbles）ので、document で1回受ければ足りる。
- * renderNotePane は何度も呼ばれるから、欄に addEventListener を足すと
- * 監視が積み上がる。document に1回だけ付ける形にしてある。
- */
-const COMPOSE_FIELDS = ['memo-input', 'summary-input'];
-
-function wireComposition() {
-  const isField = e => !!e.target && COMPOSE_FIELDS.includes(e.target.id);
-  document.addEventListener('compositionstart', e => { if (isField(e)) setComposing(true); });
-  document.addEventListener('compositionend', e => { if (isField(e)) setComposing(false); });
-}
-
-/**
- * その住所の本文の札は、いま scheduleInline が預かっているか。
- *
- * **預かっている間、本文の札の持ち主は scheduleInline だけである。**
+ * **預かっている間、本文の札の持ち主は holdInline だけである。**
  * 保存のあとの塗り直し（saveNote → repaintNote → applyNoteTo → insertMemo）が
- * ここで書くと、遅延も変換の旗も通らずに本文を配置し直してしまう。
+ * ここで書くと、編集中なのに本文を配置し直してしまう。
  *
  * これは2つの道で現に起きていた。
  *   ・変換中でも scheduleSave は 500ms で落ちる。候補を選ぶ間に手を止めると、
- *     **未確定の仮名が本文に出た**（手元の通し試験が「あいうそうてほうが」で落ちた）
+ *     **未確定の仮名が本文に出た**（通し試験が「あいうそうてほうが」で落ちた）
  *   ・saveNote は編集中と同じ note を掴んだまま非同期の書き込みを待つので、
  *     書き込みが終わった時点の中身——つまり**その後に打った文字まで**——を描く
  *
- * 遅延を長くしても、変換の監視を足しても、この2つは残る。**持ち主を1つにする。**
- * 預かっている文字は常に最新なので、時計が落ちたときに正しい姿になる。
+ * **持ち主を1つにする。** 預かっている文字は常に最新なので、流したときに
+ * 正しい姿になる。
  */
 function inlineHeld(anchor) {
   for (const rec of pendingInline.values()) if (rec.anchor === anchor) return true;
@@ -289,18 +236,25 @@ function inlineHeld(anchor) {
 }
 
 /**
- * 保留している本文への反映を、いますぐ書く。離れる前に必ず呼ぶ。
+ * 預かっている文字を、いま本文へ書く。離れる前に必ず呼ぶ。
  *
- * 変換の旗も下ろす。変換の途中で欄が閉じられると compositionend が来ない
- * ことがあり、旗が立ったままだと次に開いた欄で時計が動かなくなる。
+ * **書いたら、位置の控えを取り直す。** 札の高さが変わるので、その下に続く
+ * 条の位置がずれる。remeasureSoon は**幅の変化しか見ない**ので（v126 で
+ * そうした。キーボードの出入りで全条を測り直さないため）、ここは拾えない。
+ * 幅は変わっていないからである。取り直さないと、上の帯が本文より遅れたまま
+ * になる——**v125 で直した不具合が、こちらの道から戻ってくる。**
+ *
+ * 触った面だけ取り直す。何も預かっていなければ何もしない。
  */
 function flushInline() {
-  composing = false;
+  if (!pendingInline.size) return;
+  const panes = new Set();
   for (const [kind, rec] of [...pendingInline]) {
-    clearTimeout(rec.timer);
     pendingInline.delete(kind);
     applyInline(kind, rec);
+    if (rec.pane) panes.add(rec.pane);
   }
+  for (const pane of panes) { measureHeadings(pane); updateCrumb(pane); }
 }
 
 function scheduleSave(note) {
@@ -324,7 +278,7 @@ function scheduleRangeSave(rec) {
  * 片方だけ見ていると、見ていない側の書きかけが消える。
  */
 async function flushSave() {
-  flushInline();        // 本文の札を先に合わせる（遅らせてある。scheduleInline の註）
+  flushInline();        // 預かっている文字を本文へ書く（holdInline の註）
   if (pendingSave) {
     clearTimeout(pendingSave.timer);
     const note = pendingSave.note;
@@ -608,7 +562,7 @@ function applyNoteTo(el, n) {
   dropOwned(el, '.inline-tags', anchor);
 
   /*
-   * 編集中の住所は、本文の札を scheduleInline が預かっている。
+   * 編集中の住所は、本文の札を holdInline が預かっている。
    * ここで書くと遅延を迂回する（inlineHeld の註）。色や印は上で当て終わって
    * いるので、文字の面だけを譲る。
    */
@@ -1028,7 +982,7 @@ function renderNotePane() {
   summary.value = note.summary || '';
   summary.oninput = () => {
     note.summary = summary.value;
-    scheduleInline('summary', anchor, summary.value, pane);
+    holdInline('summary', anchor, summary.value, pane);
     scheduleSave(note);
   };
   summary.onblur = () => flushSave();
@@ -1039,15 +993,14 @@ function renderNotePane() {
    * 入力は即座に note へ反映し、DB 書き込みだけを遅らせる。
    * こうしないと、500ms 以内に条文を切り替えたときに古い状態で上書きされる。
    *
-   * **本文のぶら下げ表示は、打っている間は触らない**（scheduleInline の註）。
+   * **本文のぶら下げ表示は、閉じるまで触らない**（holdInline の註）。
    * ここで毎打書いていたため、長い法令ほど指が止まっていた。
    */
   memo.oninput = () => {
     note.memo = memo.value;
-    scheduleInline('memo', anchor, memo.value, pane);
+    holdInline('memo', anchor, memo.value, pane);
     scheduleSave(note);
   };
-  /* 変換中は本文に書かない。受けるのは document（wireComposition の註） */
   memo.onblur = () => flushSave();
 
   $('#saved-at').textContent = note.updatedAt
