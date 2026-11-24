@@ -514,7 +514,9 @@ async function gotoFindResult(i) {
     return;
   }
   paintFindHits();
-  const el = $(`[data-anchor="${CSS.escape(r.anchor)}"] mark.hit`, P().el);
+  // 索引で条項号まで絞ってから、その中だけを引く（findAnchorEl の註）
+  const host = findAnchorEl(r.anchor, P());
+  const el = host && host.querySelector('mark.hit');
   if (el) el.classList.add('cur');
   renderFindList();
   const li = $$('#find-list li')[i];

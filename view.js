@@ -1425,17 +1425,27 @@ function measureHeadings(pane) {
 /*
  * 窓の大きさが変わったら、位置の表を作り直す。
  *
- * **控えているのは offsetTop である。** 幅が変われば行の折り返しが変わるので、
- * 控えた値はその場で古くなる。PC で広く開いてから窓を狭めると、上の帯の
- * 条番号が本文とずれた。狭い画面で開いた場合は測った幅のままなので起きない。
+ * **控えているのは、上の measureHeadings が取った「容器との差」である。**
+ * v125 より前は offsetTop を控えていて、原点が body になるため送り量
+ * （scrollTop）と比べられなかった。**その話はもう上に書いてある。ここで
+ * 現在形で説明すると、直す前の作りが生きているように読める。**
+ *
+ * 幅が変われば行の折り返しが変わるので、控えた値はその場で古くなる。
+ * PC で広く開いてから窓を狭めると、上の帯の条番号が本文とずれた。狭い画面で
+ * 開いた場合は測った幅のままなので起きない。
  * **だから「スマホでは出ない不具合」になっていた。**
  *
  * 作り直す切っ掛けは、法令を描いたとき・2面の切り替え・仕切りのドラッグ・
  * 畳んだときに置いてあった。**どれも「こちらが動かしたとき」である。**
  * 窓の大きさは利用者が動かすので、そこだけ抜けていた。
  *
- * 測り直しは条の数だけ offsetTop を読むので、レイアウトを強いる（刑訴は
+ * 測り直しは条の数だけ要素の矩形を読むので、レイアウトを強いる（刑訴は
  * 条834本）。動かしている間は測らず、止まってから一度だけ測る。
+ *
+ * **ここは幅の変化しか拾わない。** 文字サイズ・行間・注釈の大きさ、本文に
+ * 挟んだ札の高さは、幅が同じままで位置を変える。それらをこの入口に相乗り
+ * させてはいけない（表示設定は scheduleViewGeometry、札は flushInline が
+ * 自分で測り直す）。
  */
 let remeasureTimer = 0;
 
@@ -1603,7 +1613,7 @@ function scrollPaneTo(top, pane) {
 
 function scrollToAnchor(anchor, edit, pane) {
   pane = pane || P();
-  const el = $(`[data-anchor="${CSS.escape(anchor)}"]`, pane.el);
+  const el = findAnchorEl(anchor, pane);
   if (!el) return false;
   // 絞り込みで隠れている先へ飛ぶときは、黙ってではなく全文に戻してから飛ぶ。
   // 隠れたままスクロールしても、画面は何も起きていないように見える。
@@ -1619,10 +1629,13 @@ function scrollToAnchor(anchor, edit, pane) {
 async function selectAnchor(anchor, edit, pane) {
   pane = pane || P();
   if (pane !== P()) setActivePane(pane.idx);
-  await flushSave();
-  $$('.sel').forEach(e => e.classList.remove('sel'));
-  const el = $(`[data-anchor="${CSS.escape(anchor)}"]`, pane.el);
-  if (el && selBoxOn()) el.classList.add('sel');
+  /*
+   * **書きかけは走らせるが、走っているものは待たない**（startPendingSaves の註）。
+   * flushSave に戻すと、印を1つ付けた直後に次の条文を押せなくなる。
+   * 外へ出す操作（同期・書き出し・読み込み直し）は flushSave のままでよい。
+   */
+  startPendingSaves();
+  markSelBox(findAnchorEl(anchor, pane));
   state.selected = anchor;
   if (edit) openPopover();
   else closePopoverKeepSelection();
@@ -2625,7 +2638,14 @@ function loadView() {
   } catch (e) { return { ...VIEW_DEFAULT }; }
 }
 
-function applyView(v) {
+/*
+ * 表示設定を画面に効かせる。
+ *
+ * defer を立てると、位置の測り直しだけを後回しにする（下の
+ * scheduleViewGeometry の註）。CSS・設定欄の見た目・localStorage への保存は
+ * **どちらの場合も即座に行う。** 遅らせるのは測る仕事だけである。
+ */
+function applyView(v, defer) {
   const root = document.documentElement;
   root.style.setProperty('--font-body', FONT_STACKS[v.font] || FONT_STACKS.mincho);
   root.style.setProperty('--text-size', v.size + 'px');
@@ -2637,7 +2657,7 @@ function applyView(v) {
   root.dataset.paren = v.paren || 'dim';
   root.dataset.selbox = v.selbox || 'on';
   // 出さない設定に変えたなら、いま出ている枠も外す
-  if (!selBoxOn()) $$('.sel').forEach(e => e.classList.remove('sel'));
+  if (!selBoxOn()) clearSelBox();
 
   for (const b of $$('#font-picker button')) b.classList.toggle('on', b.dataset.font === v.font);
   for (const b of $$('#measure-picker button')) b.classList.toggle('on', Number(b.dataset.measure) === v.measure);
@@ -2655,10 +2675,74 @@ function applyView(v) {
   $('#annot-val').textContent = (v.annotSize || VIEW_DEFAULT.annotSize) + 'px';
 
   try { localStorage.setItem('roppo.view', JSON.stringify(v)); } catch (e) { /* 任意 */ }
-  // 字組みが変われば要素の位置も変わる。現在位置の判定をやり直す。
-  measureHeadings();
-  updateCrumb();
+  /*
+   * 字組みが変われば要素の位置も変わるので、位置の表を作り直す。
+   *
+   * **ここで直に測ってはいけない場合がある。** つまみ（文字サイズ・行間・
+   * 注釈の大きさ）は1目盛りごとに input を投げるので、民法では1目盛りあたり
+   * 1,050条＋目次185件の矩形を読むことになる。しかも直前に CSS 変数を
+   * 書き換えているので、そのたびに本文全体の配置が確定するまで待つ。
+   * **本文に挟んだ札で同じ形の重さを踏んだ**（v126〜v128）。
+   *
+   * 押して決める設定（書体・字幅・注釈の出し方・色・括弧・枠）は1回で
+   * 終わるので即座に測る。遅らせても得がない。
+   */
+  if (defer) scheduleViewGeometry();
+  else { clearTimeout(viewGeomTimer); viewGeomTimer = 0; refreshViewGeometry(); }
+}
+
+/*
+ * 表示設定を変えたあとの、位置の測り直し。
+ *
+ * **表示中の面を全部測る。** applyView が書き換えるのは文書ルートの CSS 変数
+ * なので、2面表示なら両方の折り返しが変わる。前は引数なしの measureHeadings()
+ * だったので操作中の面しか測り直さず、**反対側の帯が本文より遅れた**
+ * （v125 で直した不具合が、こちらの道から出ていた。Codex の指摘）。
+ *
+ * 面は予約した時点ではなく**走る時点**で選ぶ。待っている間に2面を切り替え
+ * られても、そのとき見えている面を測ることになる。
+ *
+ * positionPopover は P() と選択状態を見るので、面ごとに呼ばない。最後に1回。
+ */
+function refreshViewGeometry() {
+  for (const pane of livePanes()) { measureHeadings(pane); updateCrumb(pane); }
   positionPopover();
+}
+
+/*
+ * つまみを動かしている間は測らず、止まってから一度だけ測る。
+ *
+ * **remeasureSoon には相乗りできない。** あちらは幅が変わった面だけを測る
+ * （スマホのキーボードが出入りするたびに全条を測り直すのを止めるため）。
+ * 文字サイズを変えても幅は変わらないので、呼んでも何も測り直されない。
+ * あちらに「幅を見ない」道を足すと、1つのタイマーが2つの役を兼ねる。
+ *
+ * **待ちを入れたら、それを迂回する道を数えること。** applyView の呼び出しは
+ * 11か所（つまみ3・押して決める設定6・初期値に戻す1・起動時1）。遅らせるのは
+ * つまみの3つだけで、残りは即座に測り、預かっている予約も取り消して吸収する。
+ * 離した瞬間（change）に flushViewGeometry で確定するので、止まったままに
+ * ならない。
+ */
+let viewGeomTimer = 0;
+let viewGeomPending = false;
+
+function scheduleViewGeometry() {
+  viewGeomPending = true;
+  clearTimeout(viewGeomTimer);
+  viewGeomTimer = setTimeout(() => {
+    viewGeomTimer = 0;
+    viewGeomPending = false;
+    refreshViewGeometry();
+  }, 150);
+}
+
+/** 預かっている測り直しを今すぐ。つまみを離したときに呼ぶ。 */
+function flushViewGeometry() {
+  clearTimeout(viewGeomTimer);
+  viewGeomTimer = 0;
+  if (!viewGeomPending) return;          // すでに測ってある
+  viewGeomPending = false;
+  refreshViewGeometry();
 }
 
 function wireView() {
@@ -2719,9 +2803,19 @@ function wireView() {
     view.measure = Number(b.dataset.measure);
     applyView(view);
   });
-  $('#size-range').oninput = e => { view.size = Number(e.target.value); applyView(view); };
-  $('#leading-range').oninput = e => { view.leading = Number(e.target.value); applyView(view); };
-  $('#annot-range').oninput = e => { view.annotSize = Number(e.target.value); applyView(view); };
+  /*
+   * つまみは1目盛りごとに input を投げる。**位置の測り直しだけを後回しにする**
+   * （applyView の第2引数。中身は scheduleViewGeometry の註）。
+   * 離した瞬間（change）に預かっている測り直しを確定させる。キーボードの
+   * 矢印でも change は来るので、触り方で取りこぼさない。
+   */
+  $('#size-range').oninput = e => { view.size = Number(e.target.value); applyView(view, true); };
+  $('#leading-range').oninput = e => { view.leading = Number(e.target.value); applyView(view, true); };
+  $('#annot-range').oninput = e => { view.annotSize = Number(e.target.value); applyView(view, true); };
+  for (const id of ['#size-range', '#leading-range', '#annot-range']) {
+    // applyView は呼ばない。設定はもう入っている。要るのは測り直しだけ
+    $(id).onchange = () => flushViewGeometry();
+  }
   $('#view-reset').onclick = () => { view = { ...VIEW_DEFAULT }; applyView(view); };
 
   applyView(view);

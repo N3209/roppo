@@ -260,7 +260,7 @@ function flushInline() {
 function scheduleSave(note) {
   if (pendingSave && pendingSave.note !== note) flushSave();
   if (pendingSave) clearTimeout(pendingSave.timer);
-  pendingSave = { note, timer: setTimeout(() => { const n = pendingSave.note; pendingSave = null; runSave(saveNote(n)); }, 500) };
+  pendingSave = { note, timer: setTimeout(() => { const n = pendingSave.note; pendingSave = null; queueNoteSave(n); }, 500) };
 }
 
 function scheduleRangeSave(rec) {
@@ -268,29 +268,56 @@ function scheduleRangeSave(rec) {
   if (pendingRange) clearTimeout(pendingRange.timer);
   pendingRange = {
     rec,
-    timer: setTimeout(() => { const r = pendingRange.rec; pendingRange = null; runSave(saveRange(r)); }, 500),
+    timer: setTimeout(() => { const r = pendingRange.rec; pendingRange = null; queueRangeSave(r); }, 500),
   };
 }
 
-/**
- * 保留中の保存を今すぐ行う。条文や法令を切り替える前、離脱の前に必ず呼ぶ。
- * 条項号のメモと文言メモは別々に遅延させているので、両方をここで面倒を見る。
- * 片方だけ見ていると、見ていない側の書きかけが消える。
+/*
+ * 書きかけを走らせるだけ。**走っているものは待たない。**
+ *
+ * flushSave との違いはそこだけである。あちらは「もう書き終わった」ことを
+ * 約束するので、外へ出す前（同期・書き出し・読み込み直し・離脱）に要る。
+ *
+ * **条文を移るだけなら、その約束は要らない。** 走っている保存は今いる住所の
+ * ものではないし、すでに走っているので失われない。待つと、印を1つ付けた
+ * 直後に次の条文を押せなくなる（iPhone の会社法で、その保存は数秒かかる）。
+ *
+ * これは印を先に見せるようにしたことで表に出た。**それまで印の保存は
+ * running に乗っていなかったので、ここは素通りしていた**——つまり待てて
+ * いなかった。穴を塞いだら、こちらが詰まった。両方を満たすには、強い確定と
+ * 「走らせるだけ」を分けるしかない。
+ *
+ * メモの方では前からこうなっていた。scheduleSave の時計は running に乗るので、
+ * 打ってすぐ次の条文を押すと、その保存を待っていた。
+ * **「タップしてから枠が出るまで遅い」の一因はこれだと思う。**
+ *
+ * selectAnchor をここから flushSave に戻してはいけない。戻すと「タグを
+ * 連続して付けられない」という形で返ってくる。
  */
-async function flushSave() {
+function startPendingSaves() {
   flushInline();        // 預かっている文字を本文へ書く（holdInline の註）
   if (pendingSave) {
     clearTimeout(pendingSave.timer);
     const note = pendingSave.note;
     pendingSave = null;
-    runSave(saveNote(note));
+    queueNoteSave(note);
   }
   if (pendingRange) {
     clearTimeout(pendingRange.timer);
     const rec = pendingRange.rec;
     pendingRange = null;
-    runSave(saveRange(rec));
+    queueRangeSave(rec);
   }
+}
+
+/**
+ * 保留中の保存を今すぐ行い、**書き終わるまで待つ**。
+ * 外へ出す前・離脱の前に必ず呼ぶ。条文を移るだけなら startPendingSaves でよい。
+ * 条項号のメモと文言メモは別々に遅延させているので、両方をここで面倒を見る。
+ * 片方だけ見ていると、見ていない側の書きかけが消える。
+ */
+async function flushSave() {
+  startPendingSaves();
 
   /*
    * 走り出している保存も待つ。待っている間に時計が別の保存を始めることが
@@ -358,6 +385,51 @@ async function okToReload() {
  */
 const selBoxOn = () => (document.documentElement.dataset.selbox || 'on') !== 'off';
 
+/*
+ * いま枠を出している要素を、1つだけ覚えておく。
+ *
+ * 外すのに $$('.sel') を引いていた。**根を渡していないので文書全体が対象で、
+ * 会社法は要素が2万ある。** しかも枠は常に1つしか出ない（付ける前に必ず
+ * 全部外していた）。覚えておけば走査そのものが消える。
+ *
+ * 通る道を3つともここに集める。選ぶ（selectAnchor）・閉じる（closePopover）・
+ * 設定で枠をやめる（applyView）。別々に書くと、片方だけ覚え忘れて
+ * 「外したのに枠が残る」という直しにくい形で壊れる。
+ */
+let selEl = null;
+
+/** 枠を外す。覚えていないなら何もしない。 */
+function clearSelBox() {
+  if (!selEl) return;
+  selEl.classList.remove('sel');
+  selEl = null;
+}
+
+/*
+ * 枠を付け替える。設定で切ってあるときは覚えない。
+ *
+ * 法令を開き直すと innerHTML ごと差し替わるので、覚えている要素は文書から
+ * 外れる。外れた要素の class を外しても害は無いので、見張らない。
+ */
+function markSelBox(el) {
+  /*
+   * **すでにその要素に出ているなら、何もしない。**
+   *
+   * 外して付け直すと、同じ見た目のためにスタイルの無効化を2回起こす。
+   * ここは「選んだとき」だけの道ではない。保存の最後で必ず通るので、
+   * **後メモを打っている間は 500ms ごとに通る。**
+   *
+   * これは走査を潰したときに作った劣化である。元の書き方は add だけで、
+   * すでに付いていれば何も起きなかった。外す処理を1か所に集めた拍子に、
+   * 「毎回外してから付ける」に変えてしまっていた（Codex の指摘）。
+   */
+  if (el && selEl === el && selBoxOn()) return;
+  clearSelBox();
+  if (!el || !selBoxOn()) return;
+  el.classList.add('sel');
+  selEl = el;
+}
+
 /** 枠を出している番号の要素。ポップアップはこれに寄せて開く。 */
 function numberElOf(el) {
   return el.querySelector(':scope > .para-num, :scope > .item-title, :scope > .article-title, :scope > .article-caption')
@@ -370,7 +442,7 @@ function positionPopover() {
   if (pop.hidden || !state.selected) return;
   if (window.innerWidth <= 640) { pop.style.left = ''; pop.style.top = ''; return; }
 
-  const block = $(`[data-anchor="${CSS.escape(state.selected)}"]`, P().el);
+  const block = findAnchorEl(state.selected, P());
   if (!block) return;
   const r = numberElOf(block).getBoundingClientRect();
   const w = pop.offsetWidth, h = pop.offsetHeight;
@@ -401,7 +473,7 @@ function openRangePopover(id) {
   const rec = state.ranges.get(typeof id === 'string' ? id : (id && id.id));
   if (!rec) return;
   state.selected = rec.anchor;
-  $$('.sel').forEach(e => e.classList.remove('sel'));
+  clearSelBox();
 
   const pop = $('#popover');
   $('#pop-anchor').textContent = anchorLabel(rec.anchor) + '　の文言';
@@ -422,16 +494,21 @@ function openRangePopover(id) {
   `;
 
   wireConflict(body, rec, async solved => {
+    // 決着も行列を通す（queueNoteWork の註）
     if (isTomb(solved)) {
-      await store.tombRange(solved);
-      state.ranges.delete(solved.id);
+      await queueRangeWork(async () => {
+        await store.tombRange(solved);
+        state.ranges.delete(solved.id);
+      });
       paintRanges();
       renderMarkList();
       closePopover();
       return;                          // 消したものの画面は開き直さない
     }
-    await store.putRange(solved);
-    state.ranges.set(solved.id, solved);
+    await queueRangeWork(async () => {
+      await store.putRange(solved);
+      state.ranges.set(solved.id, solved);
+    });
     paintRanges();
     renderMarkList();
     openRangePopover(solved.id);
@@ -448,7 +525,16 @@ function openRangePopover(id) {
       if (c.key === 'ul') b.className = 'ul';
       else b.style.background = `var(--mk-${c.key})`;
       if (rec.color === c.key) b.classList.add('on');
-      b.onclick = async () => { rec.color = c.key; await saveRange(rec); paint(); };
+      /*
+       * 文言の印も同じ形だった（上の色のボタンの註）。rec は state.ranges に
+       * 入っている物そのものなので、書き換えた時点で塗り直しは正しく映る。
+       */
+      b.onclick = () => {
+        rec.color = c.key;
+        paint();
+        repaintRangesAt(rec.lawId, rec.anchor);
+        queueRangeSave(rec);
+      };
       palette.appendChild(b);
     }
   };
@@ -481,7 +567,7 @@ function openRangePopover(id) {
 
 function closePopover() {
   closePopoverKeepSelection();
-  $$('.sel').forEach(e => e.classList.remove('sel'));
+  clearSelBox();
   state.selected = null;
 }
 
@@ -550,9 +636,30 @@ function dropOwned(el, cls, anchor) {
 function applyNoteTo(el, n) {
   const anchor = el.dataset.anchor || '';
 
-  el.classList.remove('mk');
-  for (const c of MARK_COLORS) el.classList.remove('mk-' + c.key);
-  if (n && n.color) el.classList.add('mk', 'mk-' + n.color);
+  /*
+   * **色は、変わっていなければ触らない。**
+   *
+   * 毎回「mk と色6つを外して、付け直す」をしていた。見た目が同じでも
+   * 7回 class を触るので、そのたびにブラウザは作り直しの必要を記録する。
+   *
+   * ここが効くのは、**mk-<色> が --dot という継承するカスタムプロパティを
+   * 置くからである**（style.css の .mk-yellow ほか）。継承する値を変えると、
+   * 無効化はその節の子孫に及ぶ。会社法2条は38号を抱えているので、
+   * 節として大きい。
+   *
+   * しかも後メモを打っている間は 500ms ごとに保存が走り、そのたびに
+   * 色は1度も変わらないのにここを通っていた（Codex の指摘）。
+   *
+   * mk の有無も一緒に見る。色の class だけ落ちた要素が残っていたら、
+   * 「どちらも空」と読んで素通りしてしまう。
+   */
+  const want = (n && n.color) || '';
+  const cur = MARK_COLORS.find(c => el.classList.contains('mk-' + c.key));
+  if ((cur ? cur.key : '') !== want || el.classList.contains('mk') !== !!want) {
+    el.classList.remove('mk');
+    for (const c of MARK_COLORS) el.classList.remove('mk-' + c.key);
+    if (want) el.classList.add('mk', 'mk-' + want);
+  }
 
   /*
    * 文字タグは画面から外した（使われていなかった。実データで0件）。
@@ -593,12 +700,95 @@ function applyNoteTo(el, n) {
  * 2万・文字が75万あり、iPhone では一手に数秒かかっていた。触ったところだけ
  * 触る。ほかの条項号の見た目は、そもそも変わっていない。
  */
-function repaintNote(lawId, anchor) {
+function repaintNote(lawId, anchor, rec) {
+  /*
+   * rec を渡せば、それで塗る。**まだ保存していない記録を先に見せるため。**
+   *
+   * 渡さなければ state.notes を見る（これまでの振る舞い）。
+   * 一度も保存していない住所は state.notes に載っていないので、
+   * 渡さずに呼ぶと「注釈が無い」と読んで印を消してしまう。
+   */
+  const use = rec !== undefined ? rec : state.notes.get(noteKey(lawId, anchor));
   for (const pane of livePanes()) {
     if (!pane.current || pane.current.lawId !== lawId) continue;
     const el = findAnchorEl(anchor, pane);
-    if (el) applyNoteTo(el, state.notes.get(noteKey(lawId, anchor)));
+    if (el) applyNoteTo(el, use);
   }
+}
+
+/*
+ * 保存は1本ずつ流す。
+ *
+ * 先に見せるようにすると、返事が速いので続けて押せる。重ねると、2本目の
+ * getNote が1本目の putNote より先に読み、**自分が書いたものを「他の端末の
+ * 編集」と読んで偽の衝突を作る**（saveNote は old と版を突き合わせる）。
+ * 押した順に1本ずつ流せば起きない。
+ *
+ * runSave に通すのも大事である。通さないと running に乗らないので、
+ * flushSave が待てない。印を押した直後に同期や書き出しへ進むと、
+ * 書きかけを置いて行くことになる（これは await していた頃からの穴）。
+ */
+/*
+ * **画面が持っている記録を、保存より先に state.notes へ載せる。**
+ *
+ * 載せないと、保存中に同じ条文を開き直したときに**別のオブジェクトができる**。
+ * renderNotePane は state.notes に無ければ空の記録を作るので、本文には●が
+ * 出ているのにパレットは「マークなし」になる。そこでメモを打つと、色を
+ * 持たない別のオブジェクトが後から保存され、●が消える。
+ *
+ * **しかも衝突にならない。** 新しいオブジェクトの版は空から数え直すので
+ * {この端末:1} になり、先の保存が書いた版と同じになる。vvDominates は
+ * 等しい版を「含んでいる」と見る（>= で比べる）ため、見ていない編集を
+ * 承知したものとして扱い、黙って上書きする（Codex の指摘1）。
+ *
+ * 同じオブジェクトを載せておけば、開き直しても同じものを掴む。行列で待って
+ * いる保存も、走り出す時点の最新の中身を見る。
+ *
+ * **空の記録を載せたままにしてよい。** saveNote が墓石にして state.notes から
+ * 消す。消す前に中身が書き足されたら墓石にならないが、それが正しい振る舞いで
+ * ある（書き足した人は、消えると思っていない）。
+ *
+ * これは先に見せるようにしたことで**作った穴ではなく、踏みやすくなった穴**
+ * である。以前も state.notes は保存完了まで更新されなかったが、4秒間画面が
+ * 無反応だったので、その間に別の条文を触る人がいなかった。
+ */
+function rememberNote(note) {
+  state.notes.set(note.key, note);
+}
+
+let noteSaveTail = Promise.resolve(true);
+
+/*
+ * 行列に仕事を1つ流す。
+ *
+ * **注釈を書き換える操作は、1つの例外もなくここを通すこと。** 保存だけを
+ * 通しても、削除や衝突の決着が直に書けば、行列で待っている保存が後から
+ * 走って、消したものが戻り、決着が覆る（Codex の指摘2）。
+ *
+ * runSave に通すのも大事である。通さないと running に乗らないので、
+ * flushSave が待てない。外へ出す操作が書きかけを置いて行くことになる。
+ */
+function queueNoteWork(fn) {
+  const job = noteSaveTail.catch(() => {}).then(fn);
+  noteSaveTail = job.catch(() => {});
+  return runSave(job);
+}
+
+function queueNoteSave(note) {
+  return queueNoteWork(() => saveNote(note));
+}
+
+let rangeSaveTail = Promise.resolve(true);
+
+/** 文言の方の行列。言うことは queueNoteWork の註と同じ。 */
+function queueRangeWork(fn) {
+  const job = rangeSaveTail.catch(() => {}).then(fn);
+  rangeSaveTail = job.catch(() => {});
+  return runSave(job);
+}
+
+function queueRangeSave(rec) {
+  return queueRangeWork(() => saveRange(rec));
 }
 
 /**
@@ -719,7 +909,7 @@ function insertMemo(el, text) {
 
 /** 要約の打ち込みを本文側へ即時反映する */
 function updateInlineSummary(anchor, text, pane) {
-  const el = $(`[data-anchor="${CSS.escape(anchor)}"]`, (pane || P()).el);
+  const el = findAnchorEl(anchor, pane || P());
   if (!el) return;
   const old = el.querySelector(':scope > .note-summary');
   if (!String(text).trim()) { if (old) old.remove(); return; }
@@ -729,7 +919,7 @@ function updateInlineSummary(anchor, text, pane) {
 
 /** 本文に置いているメモを、打ち込みに合わせて即時更新する */
 function updateInlineMemo(anchor, text, pane) {
-  const el = $(`[data-anchor="${CSS.escape(anchor)}"]`, (pane || P()).el);
+  const el = findAnchorEl(anchor, pane || P());
   if (!el) return;
   if (!String(text).trim()) {
     const old = el.querySelector('.memo-inline[data-for="'
@@ -936,15 +1126,24 @@ function renderNotePane() {
   `;
 
   wireConflict(body, note, async solved => {
-    // 選んだ中身で置き換える。版は resolveConflict が組んである
+    /*
+     * 選んだ中身で置き換える。版は resolveConflict が組んである。
+     *
+     * **決着も行列を通す**（queueNoteWork の註）。通さないと、待っている
+     * 保存が決着の後から走って、せっかく選んだ方を覆す。
+     */
     if (isTomb(solved)) {
       // 「消した方」を選んだ。消した印として書き、画面からは外す
-      await store.tombNote(solved);
-      state.notes.delete(solved.key);
+      await queueNoteWork(async () => {
+        await store.tombNote(solved);
+        state.notes.delete(solved.key);
+      });
       closePopover();
     } else {
-      await store.putNote(solved);
-      state.notes.set(solved.key, solved);
+      await queueNoteWork(async () => {
+        await store.putNote(solved);
+        state.notes.set(solved.key, solved);
+      });
     }
     paintNotes();
     renderMarkList();
@@ -960,10 +1159,25 @@ function renderNotePane() {
       b.title = c.label;
       b.style.background = `var(--mk-${c.key})`;
       if (note.color === c.key) b.classList.add('on');
-      b.onclick = async () => {
+      /*
+       * **先に見せて、それから保存する。**
+       *
+       * 以前は await saveNote(note) のあとで paintPalette() を呼んでいた。
+       * その await の前に目に見えるものが1つも無いので、保存が終わるまで
+       * 押した手応えが返らなかった。iPhone の会社法で4秒である。
+       *
+       * 比べるとよい。**メモの文字が速いのは、textarea の文字をブラウザが
+       * 描くからで、アプリが速いからではない。** 保存は scheduleSave が
+       * 500ms後に裏で走り、誰も待っていない。印だけが待たされていた。
+       */
+      b.onclick = () => {
         note.color = note.color === c.key ? '' : c.key;   // 同じ色を押したら外す
-        await saveNote(note);
         paintPalette();
+        // 開き直しても同じ記録を掴めるようにする（rememberNote の註）
+        rememberNote(note);
+        // state.notes に載せたが、手元の note も渡しておく（意図を残すため）
+        repaintNote(note.lawId, note.anchor, note);
+        queueNoteSave(note);
       };
       palette.appendChild(b);
     }
@@ -973,7 +1187,13 @@ function renderNotePane() {
     none.title = 'マークなし';
     none.textContent = '／';
     if (!note.color) none.classList.add('on');
-    none.onclick = async () => { note.color = ''; await saveNote(note); paintPalette(); };
+    none.onclick = () => {
+      note.color = '';
+      paintPalette();
+      rememberNote(note);
+      repaintNote(note.lawId, note.anchor, note);
+      queueNoteSave(note);
+    };
     palette.appendChild(none);
   };
   paintPalette();
@@ -982,6 +1202,7 @@ function renderNotePane() {
   summary.value = note.summary || '';
   summary.oninput = () => {
     note.summary = summary.value;
+    rememberNote(note);                 // 開き直しで別オブジェクトにしない
     holdInline('summary', anchor, summary.value, pane);
     scheduleSave(note);
   };
@@ -998,6 +1219,7 @@ function renderNotePane() {
    */
   memo.oninput = () => {
     note.memo = memo.value;
+    rememberNote(note);                 // 開き直しで別オブジェクトにしない
     holdInline('memo', anchor, memo.value, pane);
     scheduleSave(note);
   };
@@ -1115,10 +1337,8 @@ async function saveNote(note) {
     toast('別の端末でも直されていました。両方残しました');
     renderNotePane();
   }
-  if (state.selected) {
-    const el = $(`[data-anchor="${CSS.escape(state.selected)}"]`, P().el);
-    if (el && selBoxOn()) el.classList.add('sel');   // 設定で切れる（上の注記）
-  }
+  // 設定で切ってあれば markSelBox が何もしない（上の注記）
+  if (state.selected) markSelBox(findAnchorEl(state.selected, P()));
   const at = $('#saved-at');
   if (at && state.selected === note.anchor && P().current && P().current.lawId === note.lawId) {
     at.textContent = '最終更新 ' + new Date(note.updatedAt).toLocaleString('ja-JP');
@@ -1403,12 +1623,12 @@ async function applySlash(kind) {
     const rec = state.ranges.get(p.id);
     if (!rec) return;
     rec.kind = kind;
-    await saveRange(rec);
+    await queueRangeSave(rec);
     return;
   }
   if (kind === 'none') return;
 
-  await saveRange({
+  await queueRangeSave({
     id: newRangeId(),
     lawId: P().current.lawId,
     anchor: p.anchor,
@@ -1511,8 +1731,16 @@ async function saveRange(rec) {
 
 async function deleteRange(id) {
   const rec = state.ranges.get(id) || { id };
-  const now = Date.now();
-  await store.tombRange(rangeTomb(rec, now, vvBump(rec.version, deviceId)));
+  /*
+   * 墓石も行列を通す（queueRangeWork の註）。通さないと、色を押した直後に
+   * 消したときに、待っていた色の保存が墓石の後から走り、**消した線が本文と
+   * 一覧に戻る**（Codex の指摘2）。
+   *
+   * 版は行列の中で組む。外で組むと、待っている保存が rec.version を進める
+   * 前の値を見るので、墓石が古い版を持つ。
+   */
+  await queueRangeWork(() =>
+    store.tombRange(rangeTomb(rec, Date.now(), vvBump(rec.version, deviceId))));
   state.ranges.delete(id);
   if (rec.lawId && rec.anchor) repaintRangesAt(rec.lawId, rec.anchor);
   else paintRanges();                             // どこの印か分からないときは全部見る
@@ -1536,8 +1764,13 @@ function clearParens(pane) {
  * 法令の一文は括弧書きで長く伸びる。主文を追えるように、括弧の中を薄くする。
  * 括弧は入れ子になる（「（…（…）…）」）ので深さを数え、深いほど薄くする。
  *
- * 薄くするかどうかは CSS 側で切り替える。ここでは常に印を付けておき、
- * 設定を変えるたびに本文を組み直さなくて済むようにする。
+ * **薄くする設定のときだけ包みを作る。** 薄さの指定は CSS が持つが、
+ * 包み自体は作らない設定なら作らない（下の註。会社法で3千個になる）。
+ * 設定を切り替えたときに、表示中の面ぶんを包み直す（view.js の
+ * 括弧のピッカー）。
+ *
+ * **前はここに「常に印を付けておく」と書いてあった。** 実装を変えたのに
+ * 註が残っていたので、外側と内側の註が互いに矛盾していた（Codex の指摘）。
  */
 function paintParens(pane) {
   /*
@@ -1687,7 +1920,7 @@ async function createRangeFrom(color, openMemo) {
     color: color || 'yellow',
     memo: '',
   };
-  await saveRange(rec);
+  await queueRangeSave(rec);
   window.getSelection().removeAllRanges();
   hideSelBar();
   if (openMemo) openRangePopover(rec.id);

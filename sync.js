@@ -368,7 +368,18 @@ async function syncOnce(remote, opts) {
     const before = localWrites;
     const notes = await store.allNotes();
     const ranges = await store.allRanges();
-    if (localWrites !== before) continue;        // 読んでいる間に書かれた
+    /*
+     * **行列に入っただけの保存も「書かれた」と見る。**
+     *
+     * localWrites は store.putNote を呼んだときに増えるので、行列で
+     * getNote を待っている保存は捕まらない。そのまま進むと、applyBulk が
+     * 取り込んだ内容を、その保存が古い読み値で上書きする（Codex の指摘3）。
+     * savesArePending は running を見るので、投入の時点で捕まる。
+     *
+     * 空振りしても害はない。3回まで読み直し、諦めたら「編集中のため
+     * 取り込めませんでした」と言う。**取り込めないより、黙って消える方が悪い。**
+     */
+    if (localWrites !== before || savesArePending()) continue;
     const mine = buildSnapshot({
       notes, ranges, order: lawOrderRec,
       datasetId, writerId: deviceId, generation: 0,

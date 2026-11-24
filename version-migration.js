@@ -133,7 +133,7 @@ function matchScopes(fromScopes, toScopes) {
   return pairs;
 }
 
-/** その親の下にある、同じ深さの住所。 */
+/** その親の下にある、同じ深さの住所。1件だけ要るとき（候補を探す道）に使う。 */
 function kidsOf(bodies, parent, depth) {
   const out = [];
   for (const a of bodies.keys()) {
@@ -145,23 +145,44 @@ function kidsOf(bodies, parent, depth) {
 }
 
 /*
+ * その深さの住所を、親ごとにまとめた表。**一度の走査で作る。**
+ *
+ * 前は親ごとに kidsOf を呼んでいた。kidsOf は毎回 bodies.keys() を
+ * 全部なめるので、親の数 × 住所の数になる。民法は条が1,374・住所が約1万で、
+ * 1つの深さだけで1,500万回ほど鍵を見ていた。それを深さ2・3・4で繰り返す
+ * （Codex の指摘）。旧側は同じ表を一度で作っていたのに、新側だけが
+ * 毎回なめていた。**片側にある道具を、もう片側で使っていなかった。**
+ *
+ * **深さで絞った表を parentFor に渡してはいけない。** parentFor は
+ * bodies.has(up) で親が実在するかを見る（上の註）。絞った表を渡すと親が
+ * 居なくなり、条の下の項が「scope の直下」と判定される。渡すのは必ず
+ * 全体の bodies で、絞るのは入れる側だけにする。
+ */
+function childrenByParent(bodies, depth) {
+  const out = new Map();
+  for (const a of bodies.keys()) {
+    if (depthOf(a) !== depth) continue;
+    const p = parentFor(a, bodies);           // 全体を渡す（上の註）
+    if (!out.has(p)) out.set(p, []);
+    out.get(p).push(a);
+  }
+  return out;
+}
+
+/*
  * ある深さの対応を決める。親の対応が決まっているものだけを見る。
  * 本文が両側でただ一つのときに結ぶ。
  */
 function matchLevel(fb, tb, depth, pairs) {
   const got = new Map();
-  const byParent = new Map();
-  for (const a of fb.keys()) {
-    if (depthOf(a) !== depth) continue;
-    const p = parentFor(a, fb);
-    if (!byParent.has(p)) byParent.set(p, []);
-    byParent.get(p).push(a);
-  }
+  // 両側とも一度の走査で親別にまとめる（childrenByParent の註）
+  const byParent = childrenByParent(fb, depth);
+  const theirsByParent = childrenByParent(tb, depth);
 
   for (const [fromParent, kids] of byParent) {
     const toParent = pairs.get(fromParent);
     if (toParent === undefined) continue;        // 親が決まっていない
-    const theirs = kidsOf(tb, toParent, depth);
+    const theirs = theirsByParent.get(toParent) || [];
 
     const mine = new Map();
     for (const a of kids) {
