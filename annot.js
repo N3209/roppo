@@ -1623,12 +1623,23 @@ async function applySlash(kind) {
     const rec = state.ranges.get(p.id);
     if (!rec) return;
     rec.kind = kind;
-    await queueRangeSave(rec);
+    /*
+     * **先に塗ってから保存する**（色のボタンと同じ形）。
+     *
+     * v129 では色だけを直したので、ここは「保存が終わるまで線が変わらない」
+     * ままだった。線が出るのは saveRange の末尾の repaintRangesAt なので、
+     * IndexedDB の読み・書きとトランザクションの完了を待っていた。
+     *
+     * 待たない形にするだけで、費用は減っていない。減らしていないものを
+     * 減らしたと書かないこと（v129 の註と同じ）。
+     */
+    repaintRangesAt(rec.lawId, rec.anchor);
+    queueRangeSave(rec);
     return;
   }
   if (kind === 'none') return;
 
-  await queueRangeSave({
+  const rec = {
     id: newRangeId(),
     lawId: P().current.lawId,
     anchor: p.anchor,
@@ -1636,7 +1647,21 @@ async function applySlash(kind) {
     text: p.text,
     nth: p.nth,
     color: '', memo: '',
-  });
+  };
+  /*
+   * **state.ranges に先に載せる。**
+   *
+   * repaintRangesAt は state.ranges を見て置き直すので、載せないと塗るものが
+   * 無い。ここが rememberNote と同じ理由であり、同じ効きがある。
+   *
+   * 載せておくと、保存中に同じ条文を開き直しても同じ記録を掴む。載せないと
+   * 別のオブジェクトができ、版が 1 から数え直しになる。vvDominates は等しい
+   * 版を「含んでいる」と見るので、見ていない編集を承知したものとして扱い、
+   * 黙って上書きする（Codex の指摘1と同じ形）。
+   */
+  state.ranges.set(rec.id, rec);
+  repaintRangesAt(rec.lawId, rec.anchor);
+  queueRangeSave(rec);
 }
 
 /** 選択範囲から範囲注釈を作る。単一の条項号の中に収まっている場合だけ。 */
@@ -1739,14 +1764,41 @@ async function deleteRange(id) {
    * 版は行列の中で組む。外で組むと、待っている保存が rec.version を進める
    * 前の値を見るので、墓石が古い版を持つ。
    */
-  await queueRangeWork(() =>
-    store.tombRange(rangeTomb(rec, Date.now(), vvBump(rec.version, deviceId))));
+  /*
+   * **先に消して見せてから、墓石を書く。**
+   *
+   * rec は上で掴んである。state.ranges から外しても墓石の材料は残る。
+   * repaintRangesAt は「全部外してから state.ranges のぶんを置き直す」ので、
+   * 先に外しておけば線は消える。
+   */
   state.ranges.delete(id);
   if (rec.lawId && rec.anchor) repaintRangesAt(rec.lawId, rec.anchor);
   else paintRanges();                             // どこの印か分からないときは全部見る
   renderMarkList();
   renderFilterPicker();
+  /*
+   * **closePopover を墓石より前に置くのは、見た目のためだけではない。**
+   *
+   * closePopover は flushSave を呼ぶ（closePopoverKeepSelection）。flushSave の
+   * 頭の startPendingSaves は同期に走るので、預かっていた保存はここで行列に
+   * 入る。そのあとに墓石を入れれば、**墓石が最後に残る。**
+   *
+   * 逆だと、墓石を書いたあとに預かっていた保存が流れ込み、saveRange が墓石を
+   * 見て版を継いで生きた記録を書く。**消したはずの線が戻る。** 文言メモの
+   * 削除ボタンは pendingRange を手で捨てて避けていたが、applySlash の
+   * 「なし」と要確認の一覧の削除は捨てていないので、現に踏めた。
+   */
   closePopover();
+  /*
+   * 墓石も行列を通す（queueRangeWork の註）。通さないと、色を押した直後に
+   * 消したときに、待っていた色の保存が墓石の後から走り、**消した線が本文と
+   * 一覧に戻る**（Codex の指摘2）。
+   *
+   * 版は行列の中で組む。外で組むと、待っている保存が rec.version を進める
+   * 前の値を見るので、墓石が古い版を持つ。
+   */
+  await queueRangeWork(() =>
+    store.tombRange(rangeTomb(rec, Date.now(), vvBump(rec.version, deviceId))));
 }
 
 /* ----------------------------------------------------------- 括弧書き */
@@ -1919,10 +1971,31 @@ async function createRangeFrom(color, openMemo) {
     nth: pending.nth,
     color: color || 'yellow',
     memo: '',
+    /*
+     * 作った時刻をここで入れる。**保存を待たずに欄を開くので、入れないと
+     * 「最終更新」が空のままになる**（欄は開いたときの rec を見るだけで、
+     * 保存が終わっても描き直さない）。saveRange が同じ欄を上書きするので、
+     * 持たせても害はない。
+     */
+    updatedAt: Date.now(),
   };
-  await queueRangeSave(rec);
+  /*
+   * **先に載せて、先に塗る**（applySlash の註と同じ）。
+   *
+   * ここが「文言に色」の入口である。v129 では色のパレット（すでにある印の
+   * 色を変える方）だけを直したので、**新しく作る方は手つかずだった。**
+   * 選択を外すのもバーを隠すのも欄を開くのも保存のうしろにあったため、
+   * 押してから2秒ほど何も起きなかった。
+   *
+   * state.ranges に先に載せるのは、repaintRangesAt がそこを見て置き直す
+   * からである。開く欄も id から state.ranges を引くので、載せてあれば
+   * 保存を待たずに正しい記録を掴む。
+   */
+  state.ranges.set(rec.id, rec);
+  repaintRangesAt(rec.lawId, rec.anchor);
   window.getSelection().removeAllRanges();
   hideSelBar();
   if (openMemo) openRangePopover(rec.id);
+  queueRangeSave(rec);
 }
 
